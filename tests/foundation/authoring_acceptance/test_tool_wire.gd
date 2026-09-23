@@ -17,7 +17,66 @@ func run() -> void:
 	_source_uri_review()
 	_boundary()
 	_reader_precision()
+	_authoring_compatibility()
 	finish()
+
+func _authoring_compatibility() -> void:
+	# This follow-up consumes the registered A_SCHEMA checkout, never another
+	# worktree. All field ownership and validation remain in A.
+	var schema = load("res://foundation/authoring/authoring_schema.gd")
+	var projector = load("res://foundation/authoring/document_projector.gd")
+	var assembler = load("res://foundation/authoring/payload_assembler.gd")
+	var fixtures = load("res://tests/foundation/authoring/authoring_fixtures.gd")
+	check(schema.field_types("CUBE").cube_id == TYPE_STRING_NAME and schema.field_types("CUBE").transform == TYPE_TRANSFORM3D, "A owns real Cube field types")
+	var whitelist := {}
+	for kind in schema.SCRIPTS:
+		var path: String = schema.script_path(kind)
+		whitelist[path] = FileAccess.get_sha256(path)
+	var docs: Array[Dictionary] = []
+	var sources := ["level.tscn","surface.tscn","inner.tscn","intent.tres"]
+	for i in sources.size():
+		var uri: String = fixtures.BASE + sources[i]
+		var resource: Resource = ResourceLoader.load(uri, "", ResourceLoader.CACHE_MODE_IGNORE)
+		var source: Variant = resource.get_state() if resource is PackedScene else resource
+		var context := {"document_uri":uri,"document_authoring_id":fixtures.uuid(i+1),"origin":"SAVED","allowed_script_digests":whitelist,"instance_role":null}
+		var projected: Dictionary = projector.project_document(source, context)
+		check(projected.ok, "real A document projects: " + sources[i])
+		if projected.ok: docs.append(projected.value)
+	if docs.size() != 4: return
+	var level_ref: Dictionary = fixtures.payload("minimal").level_ref
+	var assembled: Dictionary = assembler.assemble_payload(docs, level_ref)
+	check(assembled.ok, "real A assembler validates saved source closure")
+	if not assembled.ok: return
+	var payload: Dictionary = assembled.value
+	var encoded: Dictionary = Wire.encode_wire("authoring", payload)
+	check(encoded.ok, "D registry consumes A authoring contract without copied fields")
+	if encoded.ok:
+		var decoded: Dictionary = Wire.decode_wire("authoring", encoded.value)
+		check(decoded.ok, "real authoring wire decodes")
+		if decoded.ok:
+			check(decoded.value == payload and schema.validate_authoring(decoded.value).ok, "roundtrip remains A-valid and unchanged")
+			for doc in decoded.value.documents:
+				for record in doc.records:
+					if record.kind == "CUBE":
+						check(typeof(record.fields.cube_id) == TYPE_STRING_NAME, "real Cube ID remains StringName")
+						check(typeof(record.fields.transform) == TYPE_TRANSFORM3D, "real Cube transform remains Transform3D")
+			check(Wire.encode_wire("authoring", decoded.value).value == encoded.value, "authoring canonical bytes stable")
+	for case_name in ["missing_face","duplicate_face","duplicate_id","shared_alias","resource_conflict","unsupported_override"]:
+		var invalid: Dictionary = fixtures.payload(case_name)
+		var formal: Dictionary = schema.validate_authoring(invalid)
+		var result: Dictionary = Wire.encode_wire("authoring", invalid)
+		check(not result.ok and result.value == null and result.issues == formal.issues, "A diagnostics preserved: " + case_name)
+	for offset in [0.00000049,0.00000051]:
+		var precise: Dictionary = fixtures.payload("minimal")
+		precise.documents[1].records[1].fields.transform.origin.x = offset
+		var wire: Dictionary = Wire.encode_wire("authoring", precise)
+		check(wire.ok, "A raw transform near Reader threshold encodes")
+		if wire.ok:
+			var recovered: Dictionary = Wire.decode_wire("authoring", wire.value)
+			check(recovered.ok and Wire._encode_value(recovered.value).value == Wire._encode_value(precise).value, "full author payload preserves exact transform bits")
+	check(not Wire.encode_wire("authoring", []).ok, "non-Dictionary authoring fails without invoking A on wrong type")
+	var pending: Dictionary = Wire.encode_wire("source_map", {})
+	check(not pending.ok and pending.issues[0].code == "DEPENDENCY_PENDING", "source_map remains A2-owned pending; no D substitute")
 
 func _policy(policy: Dictionary) -> void:
 	var expected := {"bake_options":{"max_configurations":4096,"max_checks":100000},
