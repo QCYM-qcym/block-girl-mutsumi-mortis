@@ -319,6 +319,11 @@ function Invoke-Case($Registration, [string]$Directory) {
         if ($Registration.entry -ceq 'SELF_CHECK') { $result = Invoke-SelfCheck $Directory }
         else {
             $project = "$Directory/project"; New-Project $project $Registration.mode $false
+            if ($Registration.entry -ceq 'EDITOR') {
+                # Editor filesystem scans must not execute unrelated test scripts.
+                # The real QA driver loads its registered case explicitly by res://.
+                [IO.File]::WriteAllText("$project/tests/.gdignore", '')
+            }
             $importExit = Invoke-Engine @('--headless','--path',$project,'--editor','--import') "$Directory/import" $Registration.mode
             Assert-CleanLogs "$Directory/import"
             if ($importExit -ne 0) { throw 'Resource import failed' }
@@ -327,7 +332,7 @@ function Invoke-Case($Registration, [string]$Directory) {
                 $qa = "$project/addons/foundation_authoring_qa"; New-Item -ItemType Directory -Path $qa | Out-Null
                 $cfg = [IO.File]::ReadAllText("$project/tests/foundation/editor/plugin.cfg")
                 if ($cfg -notmatch '(?m)^script=') { throw 'Invalid 4B QA plugin configuration' }
-                $cfg = [regex]::Replace($cfg, '(?m)^script=.*$', 'script="res://tests/foundation/editor/editor_test_driver.gd"')
+                $cfg = [regex]::Replace($cfg, '(?m)^script=.*$', 'script="../../tests/foundation/editor/editor_test_driver.gd"')
                 [IO.File]::WriteAllText("$qa/plugin.cfg", $cfg)
                 [IO.File]::AppendAllText("$project/project.godot", "`n[editor_plugins]`nenabled=PackedStringArray(`"res://addons/block_girl_level_tools/plugin.cfg`", `"res://addons/foundation_authoring_qa/plugin.cfg`")`n")
                 $engineArgs += '--editor'
