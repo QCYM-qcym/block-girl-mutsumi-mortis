@@ -10,8 +10,13 @@ const Search = preload("res://foundation/solver/search_records.gd")
 const SolverTypes = preload("res://foundation/solver/solver_types.gd")
 const Explorer = preload("res://foundation/solver/state_explorer.gd")
 const Softlock = preload("res://foundation/quality/softlock/softlock_analyzer.gd")
+const Intent = preload("res://foundation/quality/intent/intent_validation.gd")
+const Ablation = preload("res://foundation/quality/intent/ablation_analyzer.gd")
+const Trace = preload("res://foundation/solver/solution_trace.gd")
+const Milestones = preload("res://foundation/quality/intent/milestone_analyzer.gd")
+const Selected = preload("res://tools/foundation/authoring_quality/selected_trace_checks.gd")
 
-static func run_quality(level: Dictionary, _bound_intent: Dictionary, policy: Dictionary, identity: Dictionary, boundary_control: RefCounted) -> Dictionary:
+static func run_quality(level: Dictionary, bound_intent: Dictionary, policy: Dictionary, identity: Dictionary, boundary_control: RefCounted) -> Dictionary:
 	var output := {"run_identity":identity.duplicate(true),"selected_trace_ref":null,"stages":[],"issues":[]}
 	var checked := Schemas.validate("policy",policy)
 	if not checked.ok:
@@ -32,6 +37,16 @@ static func run_quality(level: Dictionary, _bound_intent: Dictionary, policy: Di
 		return output
 	var initial := Records.initial_state(level)
 	var inputs := {"level_hash":level.content_hash,"rule_version":level.rule_version,"initial_statekey":Key.build(level,initial).key}
+	var intent_valid := false
+	if "INTENT_VALIDATE" in policy.stages or "ABLATION" in policy.stages or "MILESTONES" in policy.stages:
+		if _before(output,"INTENT_VALIDATE",inputs,boundary_control):
+			if bound_intent.is_empty():
+				output.stages.append(Stages.not_run("INTENT_VALIDATE","MISSING_INPUT",inputs))
+			else:
+				var started := Time.get_datetime_string_from_system(true)
+				var valid := Intent.validate(level,bound_intent)
+				_after(output,"INTENT_VALIDATE",valid,inputs,{}, {},started,boundary_control)
+				intent_valid = valid.ok
 	var search_policy := Search.default_policy(policy.search_mode)
 	search_policy.validation_options = policy.bake_options.duplicate(true)
 	var original: Variant = null
@@ -49,7 +64,52 @@ static func run_quality(level: Dictionary, _bound_intent: Dictionary, policy: Di
 			# The very graph returned above, in this process. Never clone or restore it.
 			var locks := Softlock.analyze(level,original.graph,policy.softlock_budget)
 			_after(output,"SOFTLOCK",locks,inputs,search_policy,policy.softlock_budget,started,boundary_control)
+	if "ABLATION" in policy.stages and _before(output,"ABLATION",inputs,boundary_control):
+		if not intent_valid:
+			output.stages.append(Stages.not_run("ABLATION","INTENT_UNAVAILABLE",inputs))
+		elif bound_intent.required_mechanics.is_empty() and bound_intent.optional_mechanics.is_empty() and bound_intent.forbidden_bypasses.is_empty():
+			_not_applicable(output,"ABLATION",inputs)
+		else:
+			var ablation_policy := Search.default_policy(SolverTypes.SearchMode.FIRST_SHORTEST)
+			ablation_policy.validation_options = policy.bake_options.duplicate(true)
+			var started := Time.get_datetime_string_from_system(true)
+			# Public API runs its own baseline and filtered searches. No graph reuse.
+			var ablated := Ablation.analyze(level,initial,bound_intent,ablation_policy,policy.search_budget)
+			_after(output,"ABLATION",ablated,inputs,ablation_policy,policy.search_budget,started,boundary_control)
+	var semantic_ok := false
+	if "TRACE_SEMANTICS" in policy.stages or "MILESTONES" in policy.stages:
+		if _before(output,"TRACE_SEMANTICS",inputs,boundary_control):
+			if output.selected_trace_ref == null:
+				output.stages.append(Stages.not_run("TRACE_SEMANTICS","TRACE_UNAVAILABLE",inputs))
+			else:
+				var binding := Selected._binding(level,output.selected_trace_ref.trace,initial)
+				output.issues.append_array(binding.issues)
+				# Return boundary of Trace.validate and entry boundary for semantics.
+				if _before(output,"TRACE_SEMANTICS",inputs,boundary_control):
+					if not binding.trace_validation.ok or not binding.spawn_matches:
+						output.stages.append(Stages.not_run("TRACE_SEMANTICS","TRACE_BINDING_INVALID",inputs))
+					else:
+						var started := Time.get_datetime_string_from_system(true)
+						var semantic := Trace.validate_semantics(level,output.selected_trace_ref.trace)
+						_after(output,"TRACE_SEMANTICS",semantic,inputs,{}, {},started,boundary_control)
+						semantic_ok = semantic.ok
+	if "MILESTONES" in policy.stages and _before(output,"MILESTONES",inputs,boundary_control):
+		if not intent_valid:
+			output.stages.append(Stages.not_run("MILESTONES","INTENT_UNAVAILABLE",inputs))
+		elif bound_intent.expected_milestones.is_empty():
+			_not_applicable(output,"MILESTONES",inputs)
+		elif not semantic_ok:
+			output.stages.append(Stages.not_run("MILESTONES","TRACE_UNAVAILABLE",inputs))
+		else:
+			var started := Time.get_datetime_string_from_system(true)
+			var milestones := Milestones.analyze_trace(level,bound_intent,output.selected_trace_ref.trace)
+			_after(output,"MILESTONES",milestones,inputs,{}, {},started,boundary_control)
 	return output
+
+static func _not_applicable(output: Dictionary, id: String, inputs: Dictionary) -> void:
+	var stage := Stages.not_run(id,"NO_DECLARED_CONSTRAINTS",inputs)
+	stage.applicability = "NOT_APPLICABLE"
+	output.stages.append(stage)
 
 static func issue(code: String, stage_id: String, message: String, upstream: Array = []) -> Dictionary:
 	return {"code":code,"stage":stage_id,"path":"","message":message,"source_refs":[],"upstream":upstream}
