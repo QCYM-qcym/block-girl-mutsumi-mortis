@@ -1,0 +1,373 @@
+{
+  "manifest_version": "1",
+  "cases": [
+    {
+      "module": "4A",
+      "case_id": "4A-1",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring/test_authoring_documents.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4A",
+      "case_id": "4A-2",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring/test_authoring_bake.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4A",
+      "case_id": "4A-3",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring/test_authoring_edits.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4A",
+      "case_id": "4A-4",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring/test_intent_binding.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_BAKE"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4B",
+      "case_id": "4B-1",
+      "mode": "Unit",
+      "script": "res://tests/foundation/editor/test_editor_ports.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA",
+        "D_PROTOCOL"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4B",
+      "case_id": "4B-1",
+      "mode": "Editor",
+      "script": "res://tests/foundation/editor/test_editor_ports.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA",
+        "D_PROTOCOL",
+        "D_JOBS"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4B",
+      "case_id": "4B-2",
+      "mode": "Editor",
+      "script": "res://tests/foundation/editor/test_face_editing.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_EDIT",
+        "D_JOBS"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4B",
+      "case_id": "4B-3",
+      "mode": "Editor",
+      "script": "res://tests/foundation/editor/test_diagnostics.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_BAKE",
+        "D_FULL"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4B",
+      "case_id": "4B-4",
+      "mode": "Editor",
+      "script": "res://tests/foundation/editor/test_plugin_lifecycle.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_JOBS",
+        "D_FULL"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4C",
+      "case_id": "4C-1",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring_quality/test_quality_workflow.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4C",
+      "case_id": "4C-2",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring_quality/test_selected_trace.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4C",
+      "case_id": "4C-3",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring_quality/test_quality_failures.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-1",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring_acceptance/test_tool_wire.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-2",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring_acceptance/test_saved_snapshot.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA",
+        "A_BAKE",
+        "D_PROTOCOL"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-3",
+      "mode": "Graphical",
+      "script": "res://tests/foundation/authoring_acceptance/test_whitebox_host.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_SAVED",
+        "A_BAKE"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-4",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring_acceptance/test_task_lifecycle.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL",
+        "D_SAVED",
+        "D_HOST"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-4",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring_acceptance/test_task_lifecycle.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL",
+        "D_SAVED",
+        "D_HOST",
+        "C_QUALITY"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-4",
+      "mode": "Graphical",
+      "script": "res://tests/foundation/authoring_acceptance/test_task_lifecycle.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL",
+        "D_SAVED",
+        "D_HOST",
+        "C_QUALITY"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-5",
+      "mode": "Editor",
+      "script": "res://tests/foundation/authoring_acceptance/test_current_snapshot.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA",
+        "D_SAVED"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-6",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring_acceptance/test_reports_archive.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_PROTOCOL",
+        "D_JOBS",
+        "C_QUALITY"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-7",
+      "mode": "Graphical",
+      "script": "res://tests/foundation/authoring_acceptance/test_state_view.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "D_JOBS"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "Integration",
+      "case_id": "I0",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring_integration/test_suite.gd",
+      "entry": "SELF_CHECK",
+      "required_slots": [
+        "BASE"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "Integration",
+      "case_id": "I1",
+      "mode": "Graphical",
+      "script": "res://tests/foundation/authoring_integration/test_saved_vertical.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA",
+        "A_BAKE",
+        "D_SAVED",
+        "D_HOST"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "Integration",
+      "case_id": "I2",
+      "mode": "Graphical",
+      "script": "res://tests/foundation/authoring_integration/test_quality_replay.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_BAKE",
+        "A_EDIT",
+        "C_QUALITY",
+        "D_JOBS"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "Integration",
+      "case_id": "I3",
+      "mode": "Editor",
+      "script": "res://tests/foundation/authoring_integration/editor_workflow.gd",
+      "entry": "EDITOR",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_BAKE",
+        "A_EDIT",
+        "C_QUALITY",
+        "D_FULL",
+        "B_EDITOR"
+      ],
+      "allows_double": false
+    },
+    {
+      "module": "Integration",
+      "case_id": "I4",
+      "mode": "Real",
+      "script": "res://tests/foundation/authoring_integration/test_workflow_maps.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_BAKE",
+        "A_EDIT",
+        "C_QUALITY",
+        "D_FULL",
+        "B_EDITOR"
+      ],
+      "allows_double": false
+    }
+  ]
+}
