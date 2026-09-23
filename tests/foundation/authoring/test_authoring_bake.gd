@@ -17,6 +17,7 @@ func run() -> void:
 		finish()
 		return
 	var before := payload.duplicate(true)
+	_provenance_cases(payload)
 	node_added.connect(_on_node_added)
 	var orphan_count := int(Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT))
 	var one := Adapter.bake_authoring(payload, F.options(), F.identity())
@@ -59,6 +60,37 @@ func run() -> void:
 	check(added_nodes == 0, "all temporary trees remain detached")
 	node_added.disconnect(_on_node_added)
 	finish()
+
+func _provenance_cases(payload: Dictionary) -> void:
+	var identity := F.identity()
+	var baked := Adapter.bake_authoring(payload, F.options(), identity)
+	check(baked.ok and Schema.exact(baked, ["ok", "level", "issues", "validation", "source_map", "bake_provenance"]), "approved Bake wrapper has exactly six fields")
+	var proof: Variant = baked.get("bake_provenance")
+	check(Schema.exact(proof, ["run_id", "snapshot_id", "source_fingerprint"]), "BakeProvenance has exactly three fields")
+	var expected := {"run_id": identity.run_id, "snapshot_id": identity.snapshot_id, "source_fingerprint": identity.source_fingerprint}
+	check(proof == expected, "provenance copies validated input identity exactly")
+	check(Schema.exact(baked.source_map, ["map_version", "snapshot_id", "source_fingerprint", "level_hash", "entries"]), "SourceMap shape stays unchanged without run_id")
+	identity.run_id = "another-run"
+	var another := Adapter.bake_authoring(payload, F.options(), identity)
+	check(another.ok and baked.level == another.level, "run_id cannot change formal Level")
+	check(Codec.encode(baked.level).text == Codec.encode(another.level).text and baked.level.content_hash == another.level.content_hash, "run_id cannot change canonical bytes or hash")
+	check(proof == expected, "later input mutation cannot rewrite previous provenance")
+	check(proof != another.get("bake_provenance") and another.get("bake_provenance", {}).get("run_id") == identity.run_id, "same snapshot and source distinguish different runs")
+	var failures_to_test: Array[Dictionary] = []
+	var invalid := payload.duplicate(true)
+	invalid.authoring_version = "unknown"
+	failures_to_test.append(Adapter.bake_authoring(invalid, F.options(), F.identity()))
+	invalid = payload.duplicate(true)
+	_record(invalid, "CUBE").fields.transform.origin.x = 0.125
+	failures_to_test.append(Adapter.bake_authoring(invalid, F.options(), F.identity()))
+	failures_to_test.append(Adapter.bake_authoring(payload, {"max_configurations": 1, "max_checks": 1}, F.identity()))
+	failures_to_test.append(Adapter.bake_authoring(payload, {}, F.identity()))
+	var bad_identity := F.identity()
+	bad_identity.run_id = &"wrong-type"
+	failures_to_test.append(Adapter.bake_authoring(payload, F.options(), bad_identity))
+	for result in failures_to_test:
+		check(not result.ok and result.level == null and result.has("bake_provenance") and result.bake_provenance == null, "every failure has explicit null provenance and no cached level")
+		check(Schema.exact(result, ["ok", "level", "issues", "validation", "source_map", "bake_provenance"]), "failure wrapper remains exactly six fields")
 
 func _source_cases(map: Dictionary) -> void:
 	check(map.get("map_version") == "authoringsourcemap.v1" and map.get("level_hash") != null, "successful map binds formal hash")

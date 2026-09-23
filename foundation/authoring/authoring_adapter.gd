@@ -15,6 +15,9 @@ static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapsh
 		return _failure(checked.issues, map)
 	if not Schema.exact(snapshot_identity, ["run_id", "snapshot_id", "source_fingerprint", "source_intent_digest"]) or not snapshot_identity.run_id is String or snapshot_identity.run_id.is_empty() or not snapshot_identity.snapshot_id is String or snapshot_identity.snapshot_id.is_empty() or not _digest(snapshot_identity.source_fingerprint) or (snapshot_identity.source_intent_digest != null and not _digest(snapshot_identity.source_intent_digest)):
 		return _failure([Schema.issue("SNAPSHOT_IDENTITY_INVALID", "snapshot_identity", "Expected explicit snapshot provenance.")], map)
+	# Approved tool-only provenance: independent values from this validated call.
+	# Never enter SourceMap, formal Level, or the content identity calculation.
+	var provenance := {"run_id": snapshot_identity.run_id, "snapshot_id": snapshot_identity.snapshot_id, "source_fingerprint": snapshot_identity.source_fingerprint}
 	var resources := {}
 	var cube_layers := {}
 	var membership := {}
@@ -130,7 +133,7 @@ static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapsh
 	var baked := Baker.bake(read.authoring, bake_options)
 	if baked.ok:
 		Sources.complete(map, baked.level, payload)
-	return {"ok": baked.ok, "level": baked.level, "issues": baked.issues, "validation": baked.validation, "source_map": map}
+	return {"ok": baked.ok, "level": baked.level, "issues": baked.issues, "validation": baked.validation, "source_map": map, "bake_provenance": provenance if baked.ok else null}
 
 static func _digest(value: Variant) -> bool:
 	if not value is String or value.length() != 64:
@@ -141,4 +144,4 @@ static func _digest(value: Variant) -> bool:
 	return true
 
 static func _failure(issues: Array, map: Dictionary) -> Dictionary:
-	return {"ok": false, "level": null, "issues": issues, "validation": null, "source_map": map}
+	return {"ok": false, "level": null, "issues": issues, "validation": null, "source_map": map, "bake_provenance": null}
