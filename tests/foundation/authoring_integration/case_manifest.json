@@ -176,6 +176,20 @@
     {
       "module": "4D",
       "case_id": "4D-2",
+      "mode": "Unit",
+      "script": "res://tests/foundation/authoring_acceptance/test_saved_snapshot.gd",
+      "entry": "SCENE_TREE",
+      "required_slots": [
+        "BASE",
+        "I_HARNESS",
+        "A_SCHEMA",
+        "D_PROTOCOL"
+      ],
+      "allows_double": true
+    },
+    {
+      "module": "4D",
+      "case_id": "4D-2",
       "mode": "Real",
       "script": "res://tests/foundation/authoring_acceptance/test_saved_snapshot.gd",
       "entry": "SCENE_TREE",
