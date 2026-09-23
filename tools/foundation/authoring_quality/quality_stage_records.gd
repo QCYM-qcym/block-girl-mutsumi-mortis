@@ -19,7 +19,7 @@ static func from_native(stage_id: String, native_result: Dictionary, inputs: Dic
 	stage.actual_policy = policy.duplicate(true)
 	stage.actual_budget = budget.duplicate(true)
 	stage.execution = "COMPLETED"
-	if not native_result.get("issues") is Array:
+	if not _native_envelope(stage_id,native_result):
 		stage.execution = "ERROR"
 		stage.reason = "NATIVE_RESULT_INVALID"
 		return stage
@@ -48,6 +48,27 @@ static func from_native(stage_id: String, native_result: Dictionary, inputs: Dic
 			if typeof(native_result.get("ok")) != TYPE_BOOL or not native_result.ok: stage.execution = "ERROR"
 	if stage.execution != "COMPLETED": stage.reason = "NATIVE_" + stage.execution
 	return stage
+
+## Admission for this adapter's native return types, not a StageRecord schema
+## or another graph validator. Nested algorithm evidence stays with its owner.
+static func _native_envelope(id: String, value: Dictionary) -> bool:
+	var fields := {"issues":[TYPE_ARRAY]}
+	match id:
+		"ORIGINAL_GRAPH":
+			fields.merge({"status":[TYPE_INT],"graph":[TYPE_NIL,TYPE_DICTIONARY],"solution_trace":[TYPE_NIL,TYPE_DICTIONARY],"metrics":[TYPE_DICTIONARY],"budget_reason":[TYPE_INT],"validation":[TYPE_NIL,TYPE_DICTIONARY]})
+		"SOFTLOCK":
+			fields.merge({"status":[TYPE_INT],"initial_key":[TYPE_STRING],"reachable_states":[TYPE_ARRAY],"goal_reachable_states":[TYPE_ARRAY],"softlock_states":[TYPE_NIL,TYPE_ARRAY],"softlock_count":[TYPE_NIL,TYPE_INT],"unknown_states":[TYPE_ARRAY],"reset_classification":[TYPE_INT],"reset_recoverable_count":[TYPE_NIL,TYPE_INT],"witnesses":[TYPE_ARRAY],"metrics":[TYPE_DICTIONARY]})
+		"ABLATION":
+			fields.merge({"status":[TYPE_INT],"intent":[TYPE_DICTIONARY],"baseline":[TYPE_NIL,TYPE_DICTIONARY],"ablations":[TYPE_ARRAY],"milestone_analysis":[TYPE_NIL,TYPE_DICTIONARY],"advisories":[TYPE_ARRAY]})
+		"MILESTONES":
+			fields.merge({"status":[TYPE_INT],"scope":[TYPE_STRING],"matched_milestones":[TYPE_ARRAY],"missing_required":[TYPE_ARRAY],"sample_indices":[TYPE_DICTIONARY],"findings":[TYPE_ARRAY]})
+		"INTENT_VALIDATE": fields["ok"] = [TYPE_BOOL]
+		"TRACE_SEMANTICS": fields.merge({"ok":[TYPE_BOOL],"transitions":[TYPE_ARRAY]})
+		_: return false
+	if value.size() != fields.size(): return false
+	for key in value:
+		if typeof(key) != TYPE_STRING or not fields.has(key) or typeof(value[key]) not in fields[key]: return false
+	return true
 
 static func not_run(stage_id: String, reason: String, inputs: Dictionary) -> Dictionary:
 	if not MODULES.has(stage_id): return {}
