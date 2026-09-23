@@ -40,13 +40,13 @@ func _project(source: Variant, context: Dictionary) -> Dictionary:
 		_nodes(source, source)
 	elif source is Resource:
 		var kind := _trusted_kind(source.get_script(), ".")
-		if kind in ["INTENT", "MECHANISM_CONFIG"]:
+		if kind in Schema.RESOURCE_KINDS:
 			_document.kind = "INTENT" if kind == "INTENT" else "CONFIG"
 			var value: Variant = _resource(source, [], true)
 			if value == null or value.resource_ref != context.document_authoring_id:
 				_fail("INVALID_DOCUMENT", ".", "Resource root identity does not match context.")
 		else:
-			_fail("INVALID_DOCUMENT", ".", "Only Intent and config resources are document roots.")
+			_fail("INVALID_DOCUMENT", ".", "Resource root must belong to the semantic whitelist.")
 	else:
 		_fail("INVALID_DOCUMENT", ".", "Expected supported Node3D, frozen SceneState or semantic Resource.")
 	if _issues.is_empty():
@@ -228,7 +228,7 @@ func _scene(state: SceneState) -> void:
 			for key in properties:
 				if key == "transform" and properties[key] == Transform3D.IDENTITY:
 					continue
-				if key == "visible":
+				if _is_native_property(key) and key not in ["script", "transform", "position", "rotation", "rotation_degrees", "quaternion", "scale", "basis", "top_level"]:
 					continue
 				_fail("UNSUPPORTED_AUTHORING_OVERRIDE", path, "Instance gameplay overrides are unsupported.")
 			continue
@@ -264,6 +264,14 @@ func _scene(state: SceneState) -> void:
 		for key in properties:
 			if key == "authoring_id" or Schema.FIELDS[kind].has(key):
 				declared[key] = properties[key]
-			elif key not in ["script", "transform", "position", "visible", "top_level"]:
+			elif not _is_native_property(key):
 				_fail("INVALID_FIELD", path + "." + key, "Unsupported stored node property.")
 		_record(kind, declared, transform, path, String(state.get_node_name(index)))
+
+static func _is_native_property(property: String) -> bool:
+	if property == "script" or property.begins_with("metadata/"):
+		return true
+	for entry in ClassDB.class_get_property_list("Node3D"):
+		if String(entry.name) == property:
+			return true
+	return false

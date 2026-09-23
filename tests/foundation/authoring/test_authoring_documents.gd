@@ -26,6 +26,7 @@ func run() -> void:
 	_projection_boundaries()
 	_resource_ownership()
 	_scene_hierarchy_edges()
+	_native_properties_and_resource_roots()
 	finish()
 
 func _nested_cases() -> void:
@@ -234,6 +235,24 @@ func _projection_boundaries() -> void:
 	intent.set("expected_milestones", [Resource.new()])
 	check(not Projector.project_document(intent, context("intent.tres", 4)).ok, "unknown semantic Resource rejects")
 	intent.set("expected_milestones", [])
+
+func _native_properties_and_resource_roots() -> void:
+	var world := (load(F.BASE + "surface.tscn") as PackedScene).instantiate(PackedScene.GEN_EDIT_STATE_INSTANCE) as Node3D
+	world.process_mode = Node.PROCESS_MODE_DISABLED
+	world.set_meta("_edit_lock_", true)
+	var live: Dictionary = Projector.project_document(world, context("surface.tscn", 2))
+	var packed := PackedScene.new()
+	check(packed.pack(world) == OK, "native editor attributes pack")
+	var saved: Dictionary = Projector.project_document(packed.get_state(), context("surface.tscn", 2))
+	check(live.ok and saved.ok and live.value == saved.value, "native editor properties are not unknown author fields")
+	world.free()
+	var face: Resource = load(Schema.script_path("FACE")).new()
+	var original: Dictionary = F.documents("minimal")[1].resources[0]
+	face.set("authoring_id", original.authoring_id)
+	for field in original.fields:
+		face.set(field, original.fields[field])
+	var projected: Dictionary = Projector.project_document(face, context("face.tres", 100))
+	check(projected.ok and projected.value.kind == "CONFIG" and projected.value.records.is_empty(), "supported standalone semantic Resource uses nonspatial CONFIG document")
 
 func _resource_ownership() -> void:
 	var intent: Resource = load(Schema.script_path("INTENT")).new()
