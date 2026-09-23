@@ -18,8 +18,9 @@ static func identity_for(level: Dictionary, policy: Dictionary) -> Dictionary:
 	# explicitly fixture metadata, not a claim of an A/D captured authoring run.
 	var base := OS.get_environment("FOUNDATION_TEST_EVIDENCE").get_base_dir().get_base_dir()
 	var source: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(base.path_join("identity.json")))
+	var materialized: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(OS.get_environment("FOUNDATION_TEST_EVIDENCE").get_base_dir().path_join("source-copy.json")))
 	var modules: Array = []
-	for item in source.sources:
+	for item in materialized.files:
 		if item.path.ends_with(".gd") or item.path.ends_with(".uid"):
 			modules.append({"path":"res://" + item.path,"sha256":item.sha256,"version":null})
 	modules.sort_custom(func(a: Dictionary, b: Dictionary): return a.path < b.path)
@@ -43,6 +44,11 @@ static func stage(result: Dictionary, id: String) -> Dictionary:
 func execute(level: Dictionary, policy: Dictionary, label: String) -> Dictionary:
 	var identity := identity_for(level,policy)
 	check(not identity.is_empty(),label + ": formal identity constructed")
+	var materialized := true
+	for file in identity.versions.modules:
+		if not FileAccess.file_exists(file.path) or FileAccess.get_sha256(file.path) != file.sha256:
+			materialized = false
+	check(materialized,label + ": execution identity contains only materialized bytes")
 	var intent := Intents.empty_intent(level)
 	var before := [level.duplicate(true),policy.duplicate(true),intent.duplicate(true),identity.duplicate(true)]
 	var result := Workflow.run_quality(level,intent,policy,identity,control_for(identity))
