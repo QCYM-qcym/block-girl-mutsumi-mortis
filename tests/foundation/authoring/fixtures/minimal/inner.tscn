@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/world_authoring_root.gd" id="World"]
+[ext_resource type="Script" path="res://foundation/authoring/cube_authoring_node.gd" id="Cube"]
+[ext_resource type="Script" path="res://foundation/authoring/face_authoring_resource.gd" id="Face"]
+
+[sub_resource type="Resource" id="Face0"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000110"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face1"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000111"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face2"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000112"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face3"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000113"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face4"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000114"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face5"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000115"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[node name="Inner" type="Node3D"]
+script = ExtResource("World")
+authoring_id = "00000000-0000-4000-8000-000000000003"
+layer = 1
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
+
+[node name="Cube" type="Node3D" parent="."]
+script = ExtResource("Cube")
+authoring_id = "00000000-0000-4000-8000-000000000011"
+cube_id = &"inner_floor"
+occludes_light = true
+tags = []
+faces = [SubResource("Face0"), SubResource("Face1"), SubResource("Face2"), SubResource("Face3"), SubResource("Face4"), SubResource("Face5")]
