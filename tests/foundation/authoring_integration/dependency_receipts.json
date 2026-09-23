@@ -232,6 +232,98 @@
           "sha256": "4340c53fdb581fe031f4fc81807821bba5ee3462eda8249b8e96634f431603c5"
         }
       ]
+    },
+    {
+      "slot": "A_BAKE",
+      "commit": "03e581d2c3ec28a1b42074d88495ce7ef580411d",
+      "paths": [
+        {
+          "path": "foundation/authoring/authoring_adapter.gd",
+          "sha256": "b1b99c2f373e282d61cd2fcb46a98bb0edcd7b42a308f09ad740b9685caf0497"
+        },
+        {
+          "path": "foundation/authoring/authoring_adapter.gd.uid",
+          "sha256": "9c083c0a5725b5ababcd0b75fbad3a3845e02eb95fbcdb5152c270e44dad03c6"
+        },
+        {
+          "path": "foundation/authoring/source_map.gd",
+          "sha256": "b8cb5e31172edb5ac5d51fc950ee8882a88bae000ebdbc81a37417d30105af1c"
+        },
+        {
+          "path": "foundation/authoring/source_map.gd.uid",
+          "sha256": "548c14f470af10c1ab1fa2b89bdbfe817c549ec15a2268c35d8e29a96dbaf41b"
+        },
+        {
+          "path": "tests/foundation/authoring/test_authoring_bake.gd",
+          "sha256": "c60107e5dacf1e38cb862f478de02f98df61a2eb30603ab4cc04d11d4a5c8009"
+        },
+        {
+          "path": "tests/foundation/authoring/test_authoring_bake.gd.uid",
+          "sha256": "d7f4c3829325a3004a6d3abac17b960cc97037d9004bbf63c232e1e7372f9f50"
+        }
+      ]
+    },
+    {
+      "commit": "bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1",
+      "slot": "C_QUALITY",
+      "paths": [
+        {
+          "path": "tests/foundation/authoring_quality/boundary_control_double.gd",
+          "sha256": "04d56a708dcac51a0f32e3e63f36af3dfc69a2a698640790e381bc0f63bc8702"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/boundary_control_double.gd.uid",
+          "sha256": "1448d17454673cbc1d69de3195fbd8b16f741341b69294de4348e4d7bd0c300b"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/test_quality_failures.gd",
+          "sha256": "b68dc9ec3ca0e8f609f24ae3eca007a86085fe988c310f52e12132996345193f"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/test_quality_failures.gd.uid",
+          "sha256": "23093248851ffb55515e6109ae8a144c57491fa86f92f5d1413a54552ae16404"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/test_quality_workflow.gd",
+          "sha256": "86dc0ad3a281ba2d14503e96a33a8dbd5b17989c2db3f4db039c061667851cc3"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/test_quality_workflow.gd.uid",
+          "sha256": "8404fd63676b8557fc1397c19bb325863075c1bdff38757e5874798291c4d168"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/test_selected_trace.gd",
+          "sha256": "31a0218164229b5a84cf10359bd2e7caf059e69a803963b6417099db7490daeb"
+        },
+        {
+          "path": "tests/foundation/authoring_quality/test_selected_trace.gd.uid",
+          "sha256": "a9c8ae31795fc5c9f006974d1e328b8cd5abeea9021547f5baa328ffa70a7336"
+        },
+        {
+          "path": "tools/foundation/authoring_quality/quality_stage_records.gd",
+          "sha256": "a3ca5f9f3a7d23348c7b2c67f328d4fc3eb7e24204d25e7bc0a98a1871ab4a7e"
+        },
+        {
+          "path": "tools/foundation/authoring_quality/quality_stage_records.gd.uid",
+          "sha256": "2c5e22a26f4d29262db5c4226aa97b1addfaf79b2d005a6734df2970ed06cb13"
+        },
+        {
+          "path": "tools/foundation/authoring_quality/quality_workflow.gd",
+          "sha256": "76eb377e9c7c6dc3497b9ed578c69af3894d268164d69ceff7fe470e82894049"
+        },
+        {
+          "path": "tools/foundation/authoring_quality/quality_workflow.gd.uid",
+          "sha256": "cb78ce560e7e335e19450eff5fe666ae6022fb8f3a4f241623efb33356485cc9"
+        },
+        {
+          "path": "tools/foundation/authoring_quality/selected_trace_checks.gd",
+          "sha256": "1914929f829fe687f890b48da3f15ef271fb96e310f9c4ce0202414e4113a4f2"
+        },
+        {
+          "path": "tools/foundation/authoring_quality/selected_trace_checks.gd.uid",
+          "sha256": "0cdcaff5034278b3e28b91e9e332e3c2bb45baaedfbf8b75b45ad00f14a9f70b"
+        }
+      ]
     }
   ]
 }
