@@ -9,6 +9,17 @@ const POLICY_FIELDS = ["entry_kind","stages","bake_options","search_mode","searc
 
 static func validate(kind: String, value: Variant) -> Dictionary:
 	if kind not in KINDS: return failure("WIRE_SCHEMA_INVALID", "Unknown record kind")
+	if kind == "authoring":
+		# A owns the entire authoring schema, including nested field/ref rules.
+		# Resolve only from this controlled checkout; early D-only consumers keep
+		# their explicit dependency failure until the registered A delivery exists.
+		var path := "res://foundation/authoring/authoring_schema.gd"
+		if not ResourceLoader.exists(path): return failure("DEPENDENCY_PENDING", "A_SCHEMA is not installed")
+		if typeof(value) != TYPE_DICTIONARY: return failure("WIRE_SCHEMA_INVALID", "Authoring payload must be a Dictionary")
+		var schema = load(path)
+		if schema == null or not schema.has_method("validate_authoring"): return failure("CONTRACT_MISMATCH", "A_SCHEMA lacks validate_authoring(payload)")
+		var checked: Dictionary = schema.validate_authoring(value)
+		return success(value) if checked.ok else {"ok":false,"value":null,"issues":checked.issues}
 	if kind in ["versions","source_manifest","input_manifest","archive_manifest"]:
 		var valid := false
 		match kind:
