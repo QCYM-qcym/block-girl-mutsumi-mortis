@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/level_authoring_root.gd" id="Level"]
+[ext_resource type="PackedScene" path="res://tests/foundation/authoring_integration/maps/d3_action_capable/surface.tscn" id="Surface"]
+[ext_resource type="PackedScene" path="res://tests/foundation/authoring_integration/maps/d3_action_capable/inner.tscn" id="Inner"]
+[ext_resource type="Resource" path="res://tests/foundation/authoring_integration/maps/d3_action_capable/intent.tres" id="Intent"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("Level")
+authoring_id = "00000000-0000-4000-8000-000000000001"
+authoring_version = "levelauthoring.v1"
+level_id = &"d3_action_capable"
+schema_version = 1
+contract_version = "foundation.contract.v1"
+orientation_version = "cube24.v1"
+rule_version = "foundation.rules.v1"
+cell_size = 1
+shift_compatibilities = [0, 1]
+flag_definitions = []
+build_info = {}
+surface_source = "res://tests/foundation/authoring_integration/maps/d3_action_capable/surface.tscn"
+inner_source = "res://tests/foundation/authoring_integration/maps/d3_action_capable/inner.tscn"
+intent = ExtResource("Intent")
+spawn = {"face_ref": {"cube_id": &"floor", "face": 4}, "orientation": 0}
+goal = {"face_ref": {"cube_id": &"next", "face": 4}, "required_flags": []}
+celestial = {"slot_order": [&"sun"], "wrap": false, "initial_slot_id": &"sun", "edges": []}
+
+[node name="Surface" parent="." instance=ExtResource("Surface")]
+
+[node name="Inner" parent="." instance=ExtResource("Inner")]
