@@ -1,0 +1,66 @@
+# FOUNDATION-4 D3 Host Execution Binding Clarification Approval Record
+
+Status: APPROVED
+Clarification path: docs/development-records/FOUNDATION_4_D3_HOST_EXECUTION_BINDING_CLARIFICATION.md
+Clarification SHA-256: 9BC4CD3A348D35BF0839FD723C53504552E1B5040B77CDA2378DBDC0381ABBA4
+
+用户本轮明确授权APPROVE EXACT CURRENT CLARIFICATION。提交前核对SHA完全一致，澄清正文不修改任何字节。本记录绑定精确文本，并记录本轮明确实施边界，不将批准等同于Owner交付。
+
+## Selected model
+
+NEW_RUN_FROM_SAME_SAVED_SOURCE
+
+Old action run: 4286c860-a388-42c9-ab64-d892553e747a
+Old action run status: PREFLIGHT_ONLY
+
+最终D_HOST对同一saved authoring fixture重新capture，产生新run_id和新snapshot_id（均新UUID），从创建起封存完整最新execution closure，在同一新run正式发布BAKE并执行MANUAL_RUNTIME。旧run及其execution/project保持历史预检原状，不原地升级，不作最终产品run。
+
+## Source、canonical与执行身份
+
+新source_fingerprint必须重新计算且精确等于：
+45464787575bac5db6563352b21635910455cebaafe32a12e4a0cb77d342f8b5
+
+新run必须真实经过A_SCHEMA → A_BAKE → LevelCodec，formal content_hash必须精确等于：
+51aa7a4cf9b9328ed533434bf579b4ab9ae8393687f33fcc39a982f3f6d8a72e
+
+任一不等停链，不能解释为等价来源、改预期或用旧canonical回填。新run发布自己的artifacts/stages/BAKE/canonical.level与artifacts/stages/BAKE/stage_result.wire；不复制旧stage_result，不引用协调handoff作为产品产物。
+
+Cross-run ArtifactRef: FORBIDDEN
+
+所有ArtifactRef仅在所属run root内解释。MANUAL_RUNTIME绑定同run完整RunIdentity；input_refs绑定同run BAKE stage_result、其canonical ArtifactRef/content_hash以及snapshot/source身份。canonical ArtifactRef按澄清§7从已验证BAKE结果唯一取得，不在Approval中增设另一input_refs shape，不使用协调JSON或旧run路径传递产品证据。
+
+execution_digest按实际最新VersionsRecord重新计算，包含最新D_PROTOCOL、canonical_loader、whitebox_host、whitebox_entry、whitebox_host.tscn、RuntimeSession、PrototypePresenter、InputMapper及全部正式静态/显式动态依赖、必要资源/UID/有效配置。不复用旧e1882cf51fc2165bf5a809f9c7410c15c22b1049855c86d67a78669b25f4b5ea；只有实际规范计算相等才可报告相等，新增闭包正常应改变值，不能手填旧值。
+
+最终Graphical D3必须从新run的execution/project真实启动res://tools/foundation/authoring_acceptance/whitebox_entry.gd，不以主项目preload冒充。原BAKE/source provenance不追改。
+
+## 正式依赖与资源封存更新范围
+
+D_PROTOCOL: UPDATED_RECEIPT_REQUIRED / UPDATE_REQUIRED
+
+旧正式slot 6176a45c614f678c8b248d5289f9a672a971043b不能用于最终D_HOST正式stage publication。必须消费Stage Result批准后真实Owner更新并经Integration登记的receipt。
+
+D_SAVED: UPDATE_REQUIRED
+
+缺口为计划宿主场景whitebox_host.tscn及必要资源依赖的完整受控封存；SnapshotRef、input.ready shape和source schema均不变。不引入跨run身份模型或sealed input修改。
+
+更新仍为manifest-driven closure：新增非脚本依赖须由正式entry/module静态引用或execution_dependencies显式声明，位于批准res://范围，路径规范无逃逸，记录长度/hash，必要UID映射唯一，并参与VersionsRecord/modules/configuration及execution_digest。
+
+禁止复制整个仓库、美术目录或递归整个res://，禁止任意扩展名，禁止运行时从活动项目补缺。
+
+若现有execution_dependencies内部schema无法表达非gd资源且需要公共schema扩展，必须报告CONTRACT_MISMATCH并停止，不得自行发明公开协议。若仅为既有path manifest内部实现限制，则由4D按Owner计划实现。本批准不自动批准新的公共schema形状或版本。
+
+MANUAL_RUNTIME完整持久化native branch尚需按已批准注册机制冻结/实现；本批准不把执行绑定合同当作所有stage存储分支已交付。
+
+## 状态与本轮范围
+
+CONTRACT_MISMATCH: RESOLVED_AT_EXECUTION_BINDING_LEVEL
+D_HOST: BLOCKED_UNTIL_BOTH_UPDATES_REGISTERED
+D_HOST next state: WAIT_FOR_UPDATED_PROTOCOL_AND_SAVED_RECEIPTS
+I1: NOT_STARTED
+
+两项更新登记仍不是D_HOST通过；真实受控入口、Tween/自然完成/Session commit及Owner review仍须完成。4D内部SESSION_WRITE_EXPOSURE由Owner处理。
+
+本轮仅提交澄清原字节和本独立批准记录。未修改4D源码/九个WIP、receipts、case_manifest、D_PROTOCOL/D_SAVED实现、Spec/Plans或sealed run，未启动实现或I1。
+Push: NOT_RUN
+
+Recorded at: 2026-09-27T13:30:16.4014994+08:00
