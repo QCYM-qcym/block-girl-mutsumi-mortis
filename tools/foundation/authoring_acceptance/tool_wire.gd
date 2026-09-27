@@ -8,9 +8,10 @@ const MAX_DEPTH = 64
 static func encode_wire(kind: String, value: Variant) -> Dictionary:
 	var valid: Dictionary = Schemas.validate(kind, value)
 	if not valid.ok: return valid
-	if kind in ["input_manifest","archive_manifest"]:
-		var expected: Dictionary = digest("versions",value.identity.versions)
-		if not expected.ok or expected.value != value.identity.execution_digest:
+	if kind in ["input_manifest","archive_manifest","stage_result","worker_message"]:
+		var identity: Dictionary = value.run_identity if kind == "stage_result" else value.identity
+		var expected: Dictionary = digest("versions",identity.versions)
+		if not expected.ok or expected.value != identity.execution_digest:
 			return Schemas.failure("WIRE_SCHEMA_INVALID", "Execution digest does not bind versions")
 	var encoded: Dictionary = _encode_value(value)
 	if not encoded.ok: return encoded
@@ -40,6 +41,25 @@ static func digest(kind: String, value: Variant) -> Dictionary:
 	hash.start(HashingContext.HASH_SHA256)
 	hash.update(encoded.value)
 	return Schemas.success(hash.finish().hex_encode())
+
+## Stateless STAGE_RESULT binding, after the caller reads the exact ArtifactRef.
+## No filesystem fallback, IPC cursor, sequence start rule or lifecycle mutation.
+## The consumer must also verify run-root containment/links and all input/output
+## artifacts against input.ready, sealed policy and the formal LevelCodec.
+static func verify_stage_result(message: Variant, bytes: PackedByteArray) -> Dictionary:
+	var checked := encode_wire("worker_message",message)
+	if not checked.ok: return checked
+	var ref: Dictionary = message.payload_ref_or_inline
+	if bytes.size() != ref.byte_length: return Schemas.failure("WIRE_SCHEMA_INVALID", "stage_result byte_length mismatch")
+	var hash := HashingContext.new()
+	hash.start(HashingContext.HASH_SHA256)
+	hash.update(bytes)
+	if hash.finish().hex_encode() != ref.sha256: return Schemas.failure("WIRE_SCHEMA_INVALID", "stage_result SHA-256 mismatch")
+	var decoded := decode_wire("stage_result",bytes)
+	if not decoded.ok: return decoded
+	if decoded.value.run_identity != message.identity or decoded.value.stage_record.stage_id != message.stage_id:
+		return Schemas.failure("WIRE_SCHEMA_INVALID", "WorkerMessage/stage_result identity or stage mismatch")
+	return decoded
 
 ## Internal value codec. It does not bypass the public record schema boundary.
 static func _encode_value(value: Variant) -> Dictionary:
