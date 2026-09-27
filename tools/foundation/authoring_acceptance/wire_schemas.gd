@@ -6,9 +6,14 @@ const KINDS = ["authoring","snapshot","source_map","intent","trace","state_inspe
 const STAGES = ["AUTHORING","BAKE","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY","MANUAL_RUNTIME","ARCHIVE"]
 const ACCEPT_STAGES = ["AUTHORING","BAKE","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY","ARCHIVE"]
 const POLICY_FIELDS = ["entry_kind","stages","bake_options","search_mode","search_budget","softlock_budget","replay_options","stage_deadline_ms","lease_interval_ms","lease_timeout_ms","max_wire_bytes","max_wire_depth"]
+const WORKER_PROTOCOL_VERSION = "foundationworkeripc.v1"
+const WORKER_KINDS = ["HELLO","STAGE_STARTED","STAGE_RESULT","HEARTBEAT","EXIT","ERROR","CANCEL","LEASE"]
+const STORED_STAGE_FIELDS = ["stage_id","owner","module_ref","applicability","execution","reason","input_refs","actual_policy","actual_budget","native_result","evidence_refs","warnings","started_at","finished_at"]
 
 static func validate(kind: String, value: Variant) -> Dictionary:
 	if kind not in KINDS: return failure("WIRE_SCHEMA_INVALID", "Unknown record kind")
+	if kind == "worker_message": return _worker_message(value)
+	if kind == "stage_result": return _stage_result(value)
 	if kind == "authoring":
 		# A owns the entire authoring schema, including nested field/ref rules.
 		# Resolve only from this controlled checkout; early D-only consumers keep
@@ -69,10 +74,141 @@ static func failure(code: String, message: String, path: String = "") -> Diction
 
 # Hashes here are declarations. ToolWire checks canonical execution identity;
 # D2/D6 must verify actual bytes, links and cross-artifact capture/publication.
-const SCHEMA_VERSIONS = {"wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1"}
+const SCHEMA_VERSIONS = {"wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":WORKER_PROTOCOL_VERSION}
 const CONTRACT_VERSIONS = {"schema_version":1,"contract_version":"foundation.contract.v1","contract_revision":"v1.1","orientation_version":"cube24.v1","rule_version":"foundation.rules.v1","execution_version":"foundation.execution.v1","analysis_version":"foundation.analysis.v1","intent_version":"puzzleintent.v1","trace_version":"solutiontrace.v1"}
 const IDENTITY_FIELDS = ["editor_instance_id","run_id","generation","level_ref","snapshot_id","source_fingerprint","policy_digest","execution_digest","versions"]
-const ARTIFACT_FORMATS = ["rawbytes.v1","authoringpolicy.v1","foundationversions.v1","authoringrun.v1","foundationtoolwire.v1","levelauthoring.v1","puzzleintentauthoring.v1","authoringsnapshot.v1","authoringsourcemap.v1","levelacceptance.v1","authoringsourcemanifest.v1","authoringinputmanifest.v1","authoringarchivemanifest.v1","foundation.contract.v1","puzzleintent.v1","solutiontrace.v1"]
+const ARTIFACT_FORMATS = ["rawbytes.v1","authoringpolicy.v1","foundationversions.v1","authoringrun.v1","foundationtoolwire.v1","levelauthoring.v1","puzzleintentauthoring.v1","authoringsnapshot.v1","authoringsourcemap.v1","levelacceptance.v1","authoringsourcemanifest.v1","authoringinputmanifest.v1","authoringarchivemanifest.v1","foundation.contract.v1","puzzleintent.v1","solutiontrace.v1","levelcanonical.v1"]
+
+## Version-only check is deliberately not a certificate for a complete message.
+static func validate_worker_version(message: Variant) -> Dictionary:
+	if typeof(message) != TYPE_DICTIONARY or not message.has("protocol_version") or typeof(message.protocol_version) != TYPE_STRING or message.protocol_version != WORKER_PROTOCOL_VERSION:
+		return failure("WIRE_SCHEMA_INVALID", "Missing or unsupported protocol_version", "protocol_version")
+	return success(message.protocol_version)
+
+static func _worker_message(value: Variant) -> Dictionary:
+	var version := validate_worker_version(value)
+	if not version.ok: return version
+	if not _fields(value,["protocol_version","identity","sequence","kind","stage_id","payload_ref_or_inline"]):
+		return failure("WIRE_SCHEMA_INVALID", "Closed WorkerMessage fields required")
+	if not identity_shape(value.identity) or typeof(value.sequence) != TYPE_INT or not _string(value.kind) or value.kind not in WORKER_KINDS or not _string(value.stage_id,true):
+		return failure("WIRE_SCHEMA_INVALID", "Invalid WorkerMessage common fields")
+	# No sequence lower bound or non-stage sentinel is frozen. No payload is
+	# accepted for these branches, including null; D4 must freeze them first.
+	if value.kind != "STAGE_RESULT":
+		return failure("DEPENDENCY_PENDING", "WORKER_MESSAGE_" + value.kind + "_PAYLOAD_SCHEMA")
+	if value.stage_id not in STAGES or not _stage_ref(value.payload_ref_or_inline,"artifacts/stages/" + value.stage_id + "/stage_result.wire","foundationtoolwire.v1") or not _portable_tree(value):
+		return failure("WIRE_SCHEMA_INVALID", "STAGE_RESULT requires its exact run-relative ArtifactRef")
+	return success(value)
+
+static func _stage_ref(value: Variant, path: String, version: String) -> bool:
+	return _artifact(value) and value.relative_path == path and value.format_version == version
+
+static func _stage_result(value: Variant) -> Dictionary:
+	if not _fields(value,["run_identity","stage_record"]) or not identity_shape(value.run_identity) or not _portable_tree(value):
+		return failure("WIRE_SCHEMA_INVALID", "Invalid stage_result identity, fields or paths")
+	var stage: Variant = value.stage_record
+	if not _fields(stage,STORED_STAGE_FIELDS): return failure("WIRE_SCHEMA_INVALID", "Closed StoredStageRecord fields required")
+	for field in ["stage_id","owner","module_ref","applicability","execution","reason","started_at","finished_at"]:
+		if not _string(stage[field],field == "reason"): return failure("WIRE_SCHEMA_INVALID", "Invalid StoredStageRecord type",field)
+	if stage.stage_id not in STAGES: return failure("WIRE_SCHEMA_INVALID", "Unknown stage_id")
+	if stage.execution not in ["COMPLETED","INCOMPLETE","ERROR","CANCELLED"] or (stage.execution == "COMPLETED" and stage.native_result == null):
+		return failure("WIRE_SCHEMA_INVALID", "Only executed terminal stages may be stored")
+	if (stage.execution == "COMPLETED") != stage.reason.is_empty(): return failure("WIRE_SCHEMA_INVALID", "Terminal reason mismatch")
+	if not _utc_milliseconds(stage.started_at) or not _utc_milliseconds(stage.finished_at) or stage.finished_at < stage.started_at:
+		return failure("WIRE_SCHEMA_INVALID", "Invalid stage timestamps")
+	if stage.stage_id != "BAKE": return failure("DEPENDENCY_PENDING", "STAGE_RESULT_" + stage.stage_id + "_STORAGE_SCHEMA")
+	return _bake_storage(value)
+
+static func _bake_storage(value: Dictionary) -> Dictionary:
+	var stage: Dictionary = value.stage_record
+	var identity: Dictionary = value.run_identity
+	if stage.owner != "4A" or stage.module_ref != "res://foundation/authoring/authoring_adapter.gd" or stage.applicability != "APPLICABLE":
+		return failure("WIRE_SCHEMA_INVALID", "Invalid BAKE owner, module or applicability")
+	var module_found := false
+	for module in identity.versions.modules:
+		if module.path == stage.module_ref: module_found = true
+	if not module_found: return failure("WIRE_SCHEMA_INVALID", "BAKE module absent from execution versions")
+	if not _fields(stage.input_refs,["input_manifest","authoring_payload"]) or not _stage_ref(stage.input_refs.input_manifest,"input.ready","authoringinputmanifest.v1"):
+		return failure("WIRE_SCHEMA_INVALID", "Invalid BAKE input references")
+	if not _artifact(stage.input_refs.authoring_payload) or stage.input_refs.authoring_payload.format_version != "levelauthoring.v1" or not stage.input_refs.authoring_payload.relative_path.begins_with("input/"):
+		return failure("WIRE_SCHEMA_INVALID", "Invalid BAKE authoring reference")
+	if not _ints(stage.actual_policy,{"max_configurations":1,"max_checks":1}) or not _ints(stage.actual_budget,{"max_configurations":1,"max_checks":1}) or stage.actual_budget != stage.actual_policy:
+		return failure("WIRE_SCHEMA_INVALID", "Invalid BAKE policy/budget")
+	if not _fields(stage.evidence_refs,["canonical"]) or typeof(stage.warnings) != TYPE_ARRAY or not stage.warnings.is_empty():
+		return failure("WIRE_SCHEMA_INVALID", "Invalid BAKE evidence or unsupported warnings")
+	var native: Variant = stage.native_result
+	if native == null:
+		if stage.evidence_refs.canonical != null: return failure("WIRE_SCHEMA_INVALID", "No return cannot reference canonical")
+		return success(value)
+	if not _fields(native,["ok","level","issues","validation","source_map","bake_provenance"]) or typeof(native.ok) != TYPE_BOOL:
+		return failure("WIRE_SCHEMA_INVALID", "Unknown BAKE native_result branch or fields")
+	# The real failed/incomplete Baker return has no approved storage branch.
+	# Never erase it or manufacture a successful/null result to encode it.
+	if not native.ok: return failure("DEPENDENCY_PENDING", "BAKE_FAILURE_STORAGE_SCHEMA")
+	if not _stage_ref(native.level,"artifacts/stages/BAKE/canonical.level","levelcanonical.v1") or not _stage_ref(stage.evidence_refs.canonical,"artifacts/stages/BAKE/canonical.level","levelcanonical.v1") or native.level != stage.evidence_refs.canonical:
+		return failure("WIRE_SCHEMA_INVALID", "BAKE canonical references differ or are invalid")
+	if typeof(native.issues) != TYPE_ARRAY or not native.issues.is_empty() or not _fields(native.validation,["status","issues","configurations_checked","checks_performed"]):
+		return failure("WIRE_SCHEMA_INVALID", "Invalid successful BAKE validation")
+	var validation: Dictionary = native.validation
+	if typeof(validation.status) != TYPE_INT or validation.status != 0 or typeof(validation.issues) != TYPE_ARRAY or not validation.issues.is_empty() or typeof(validation.configurations_checked) != TYPE_INT or validation.configurations_checked < 0 or typeof(validation.checks_performed) != TYPE_INT or validation.checks_performed < 0:
+		return failure("WIRE_SCHEMA_INVALID", "Invalid successful BAKE validation values")
+	if not _fields(native.bake_provenance,["run_id","snapshot_id","source_fingerprint"]): return failure("WIRE_SCHEMA_INVALID", "Invalid BakeProvenance")
+	for key in native.bake_provenance:
+		if typeof(native.bake_provenance[key]) != TYPE_STRING or native.bake_provenance[key] != identity[key]: return failure("WIRE_SCHEMA_INVALID", "BakeProvenance identity mismatch")
+	if not _stored_source_map(native.source_map,identity): return failure("WIRE_SCHEMA_INVALID", "Invalid stored SourceMap")
+	return success(value)
+
+static func _stored_source_map(value: Variant, identity: Dictionary) -> bool:
+	if not _fields(value,["map_version","snapshot_id","source_fingerprint","level_hash","entries"]): return false
+	if not _string(value.map_version) or value.map_version != "authoringsourcemap.v1" or not _uuid(value.snapshot_id) or not _hex(value.source_fingerprint,64) or not _hex(value.level_hash,64): return false
+	if value.snapshot_id != identity.snapshot_id or value.source_fingerprint != identity.source_fingerprint or typeof(value.entries) != TYPE_ARRAY: return false
+	for entry in value.entries:
+		if not _fields(entry,["authoring_id","document_uri","node_path_at_capture","resource_uid","resource_subpath","local_face","entity_kind","entity_id","field","reader_path","canonical_path"]): return false
+		if not _uuid(entry.authoring_id) or not _stage_source_uri(entry.document_uri) or not _string(entry.entity_kind) or not _string(entry.field,true): return false
+		for field in ["node_path_at_capture","resource_uid","resource_subpath","reader_path","canonical_path"]:
+			if entry[field] != null and not _string(entry[field],true): return false
+		if entry.entity_id != null and typeof(entry.entity_id) != TYPE_STRING_NAME: return false
+		if entry.local_face != null and (typeof(entry.local_face) != TYPE_INT or entry.local_face not in range(6)): return false
+	return true
+
+static func _stage_source_uri(value: Variant) -> bool:
+	return _string(value) and (value.begins_with("res://") or value.begins_with("editor://")) and _source_uri(value)
+
+static func _utc_milliseconds(value: String) -> bool:
+	var pattern := RegEx.new()
+	pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$")
+	if pattern.search(value) == null: return false
+	var year := value.substr(0,4).to_int()
+	var month := value.substr(5,2).to_int()
+	var day := value.substr(8,2).to_int()
+	if month < 1 or month > 12: return false
+	var days := [31,29 if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else 28,31,30,31,30,31,31,30,31,30,31]
+	return day >= 1 and day <= days[month-1] and value.substr(11,2).to_int() < 24 and value.substr(14,2).to_int() < 60 and value.substr(17,2).to_int() < 60
+
+## Scan every key and value, including diagnostic text and StringName IDs.
+## This does not authorize filesystem reads; consumers still verify containment,
+## links, actual artifacts, source mode, canonical content and sealed policy.
+static func _portable_tree(value: Variant, depth: int = 1) -> bool:
+	if depth > 64: return false
+	if typeof(value) == TYPE_DICTIONARY:
+		for key in value:
+			if not _portable_tree(key,depth+1) or not _portable_tree(value[key],depth+1): return false
+	elif typeof(value) == TYPE_ARRAY:
+		for item in value:
+			if not _portable_tree(item,depth+1): return false
+	elif typeof(value) in [TYPE_STRING,TYPE_STRING_NAME]:
+		var text := String(value)
+		var uris := RegEx.new()
+		uris.compile("(?:res|editor)://[^\\s\"']+")
+		for found in uris.search_all(text):
+			if not _stage_source_uri(found.get_string()): return false
+		# Validate then mask logical URIs before identifying filesystem roots.
+		# Punctuation (including Unicode punctuation) is a path boundary too.
+		text = uris.sub(text,"logical_uri",true)
+		var absolute := RegEx.new()
+		absolute.compile("(?i)([a-z]:[/\\\\]|file://|\\\\\\\\|(^|[^\\p{L}\\p{N}_./-])[/\\\\]|(^|[/\\\\])\\.\\.([/\\\\]|$))")
+		if absolute.search(text) != null: return false
+	return true
 
 static func _string(value: Variant, allow_empty: bool = false) -> bool:
 	return typeof(value) == TYPE_STRING and (allow_empty or not value.is_empty())

@@ -4,6 +4,7 @@ const Wire = preload("res://tools/foundation/authoring_acceptance/tool_wire.gd")
 const Records = preload("res://tools/foundation/authoring_acceptance/run_records.gd")
 const Boundary = preload("res://tools/foundation/authoring_acceptance/boundary_control.gd")
 const Reader = preload("res://foundation/level/authoring_reader.gd")
+const Schemas = preload("res://tools/foundation/authoring_acceptance/wire_schemas.gd")
 
 func run() -> void:
 	var policy: Dictionary = Records.default_execution_policy("ACCEPT_SAVED")
@@ -18,7 +19,246 @@ func run() -> void:
 	_boundary()
 	_reader_precision()
 	_authoring_compatibility()
+	_stage_protocol()
+	_stage_protocol_edges()
 	finish()
+
+# Protocol fixtures are values, not substitute Bake/Session implementations.
+func _bake_stage() -> Dictionary:
+	var identity: Dictionary = _input().identity
+	identity.versions.modules.append({"path":"res://foundation/authoring/authoring_adapter.gd","sha256":"d".repeat(64),"version":null})
+	identity.versions.modules.sort_custom(func(a,b): return a.path < b.path)
+	identity.execution_digest = _raw_digest("versions",identity.versions)
+	var canonical := _ref("artifacts/stages/BAKE/canonical.level","b".repeat(64),"levelcanonical.v1")
+	var entry := {"authoring_id":"33333333-3333-4333-8333-333333333333","document_uri":"res://maps/test.tscn","node_path_at_capture":"Root/Cube","resource_uid":null,"resource_subpath":null,"local_face":0,"entity_kind":"CUBE","entity_id":&"cube","field":"transform","reader_path":"cubes[0].position","canonical_path":"cubes[0].center2"}
+	return {"run_identity":identity,"stage_record":{
+		"stage_id":"BAKE","owner":"4A","module_ref":"res://foundation/authoring/authoring_adapter.gd","applicability":"APPLICABLE",
+		"execution":"COMPLETED","reason":"","input_refs":{"input_manifest":_ref("input.ready","1".repeat(64),"authoringinputmanifest.v1"),"authoring_payload":_input().authoring_payload},
+		"actual_policy":{"max_configurations":4096,"max_checks":100000},"actual_budget":{"max_configurations":4096,"max_checks":100000},
+		"native_result":{"ok":true,"level":canonical,"issues":[],"validation":{"status":0,"issues":[],"configurations_checked":1,"checks_performed":2},
+			"source_map":{"map_version":"authoringsourcemap.v1","snapshot_id":identity.snapshot_id,"source_fingerprint":identity.source_fingerprint,"level_hash":"c".repeat(64),"entries":[entry]},
+			"bake_provenance":{"run_id":identity.run_id,"snapshot_id":identity.snapshot_id,"source_fingerprint":identity.source_fingerprint}},
+		"evidence_refs":{"canonical":canonical.duplicate(true)},"warnings":[],"started_at":"2026-09-27T05:00:00.000Z","finished_at":"2026-09-27T05:00:01.000Z"}}
+
+func _worker(stage: Dictionary) -> Dictionary:
+	# Legal message construction consumes the unique production version registry.
+	return {"protocol_version":Schemas.WORKER_PROTOCOL_VERSION,"identity":stage.run_identity.duplicate(true),"sequence":-9223372036854775807-1,"kind":"STAGE_RESULT","stage_id":"BAKE","payload_ref_or_inline":_ref("artifacts/stages/BAKE/stage_result.wire",_raw_digest("stage_result",stage),"foundationtoolwire.v1")}
+
+func _invalid_schema(kind: String, value: Dictionary, label: String) -> void:
+	for result in [Wire.encode_wire(kind,value),Wire.decode_wire(kind,_raw_wire(kind,value))]:
+		check(not result.ok and result.value == null and not result.issues.is_empty() and result.issues[0].code == "WIRE_SCHEMA_INVALID",label)
+
+func _stage_protocol() -> void:
+	var stage := _bake_stage()
+	var message := _worker(stage)
+	message.payload_ref_or_inline.byte_length = _raw_wire("stage_result",stage).size()
+	for kind in ["stage_result","worker_message"]:
+		var value: Dictionary = stage if kind == "stage_result" else message
+		var encoded := Wire.encode_wire(kind,value)
+		check(encoded.ok,kind + " approved branch encodes")
+		if encoded.ok:
+			var decoded := Wire.decode_wire(kind,encoded.value)
+			check(decoded.ok and decoded.value == value,kind + " exact roundtrip")
+			check(encoded.value == _raw_wire(kind,value),kind + " deterministic canonical bytes")
+			check(Wire.digest(kind,value).value == _raw_digest(kind,value),kind + " canonical digest")
+		for field in value:
+			var bad: Dictionary = value.duplicate(true)
+			bad.erase(field)
+			_invalid_schema(kind,bad,kind + " missing " + field)
+		var extra: Dictionary = value.duplicate(true)
+		extra.extra = true
+		_invalid_schema(kind,extra,kind + " unknown top field")
+	for field in stage.stage_record:
+		var bad := stage.duplicate(true)
+		bad.stage_record.erase(field)
+		_invalid_schema("stage_result",bad,"stored stage missing " + field)
+	for execution in ["INCOMPLETE","ERROR","CANCELLED"]:
+		var terminal := stage.duplicate(true)
+		terminal.stage_record.execution = execution
+		terminal.stage_record.reason = "formal call interrupted"
+		check(Wire.encode_wire("stage_result",terminal).ok,"terminal preserves real result " + execution)
+		terminal.stage_record.native_result = null
+		terminal.stage_record.evidence_refs.canonical = null
+		check(Wire.encode_wire("stage_result",terminal).ok,"terminal without return permits null " + execution)
+		terminal.stage_record.evidence_refs.canonical = stage.stage_record.evidence_refs.canonical
+		_invalid_schema("stage_result",terminal,"null cannot reference historic canonical")
+	for row in [["execution","RUNNING"],["execution","NOT_RUN"],["native_result",null],["stage_id","UNKNOWN"],["owner","4D"],["reason","unexpected"],["extra",true],["warnings",["lost warning"]],["finished_at","2026-09-27T04:59:59.999Z"],["started_at","2026-02-30T00:00:00.000Z"]]:
+		var bad := stage.duplicate(true)
+		bad.stage_record[row[0]] = row[1]
+		_invalid_schema("stage_result",bad,"invalid stored field " + row[0] + " " + str(row[1]))
+	for key in ["graph","live_graph","graph_archive_ref","unexpected"]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.native_result[key] = {}
+		_invalid_schema("stage_result",bad,"BAKE forbids " + key)
+	var wrong := stage.duplicate(true)
+	wrong.stage_record.native_result = {"kind":"invented"}
+	_invalid_schema("stage_result",wrong,"unknown native branch")
+	for path in ["../canonical.level","E:/secret/canonical.level","/tmp/canonical.level","artifacts/stages/bake/canonical.level","canonical.level"]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.native_result.level.relative_path = path
+		bad.stage_record.evidence_refs.canonical.relative_path = path
+		_invalid_schema("stage_result",bad,"canonical path rejected " + path)
+	for path in ["E:/temp/file","C:\\cache\\file","/tmp/file","failed reading E:/run/input.ready","failed at /tmp/file","res://../secret","res://E:/secret"]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.execution = "ERROR"
+		bad.stage_record.reason = path
+		_invalid_schema("stage_result",bad,"whole payload path " + path)
+	for key in ["snapshot_id","source_fingerprint","run_id"]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.native_result.bake_provenance[key] = "0".repeat(64)
+		_invalid_schema("stage_result",bad,"provenance mismatch " + key)
+	wrong = stage.duplicate(true)
+	wrong.run_identity.execution_digest = "0".repeat(64)
+	_invalid_schema("stage_result",wrong,"digest must bind actual versions")
+	for sequence in [-9223372036854775807-1,0,1,9223372036854775807]:
+		var good := message.duplicate(true)
+		good.sequence = sequence
+		var encoded := Wire.encode_wire("worker_message",good)
+		check(encoded.ok,"sequence wire integer, no invented start/range rule")
+		if encoded.ok: check(Wire.decode_wire("worker_message",encoded.value).value.sequence == sequence,"sequence int64 exact")
+	for key in ["sequence","stage_id","kind"]:
+		var bad := message.duplicate(true)
+		bad[key] = null
+		_invalid_schema("worker_message",bad,"worker type " + key)
+	for payload in [stage.stage_record,stage.stage_record.native_result,"canonical text",null,{"json":"sidecar"}]:
+		var bad := message.duplicate(true)
+		bad.payload_ref_or_inline = payload
+		_invalid_schema("worker_message",bad,"STAGE_RESULT inline payload rejected")
+	for path in ["../stage_result.wire","artifacts/stages/BAKE/other.wire","artifacts/stages/MANUAL_RUNTIME/stage_result.wire"]:
+		var bad := message.duplicate(true)
+		bad.payload_ref_or_inline.relative_path = path
+		_invalid_schema("worker_message",bad,"STAGE_RESULT exact path")
+	for kind in ["HELLO","STAGE_STARTED","STAGE_RESULT","HEARTBEAT","EXIT","ERROR","CANCEL","LEASE"]:
+		var candidate := message.duplicate(true)
+		candidate.kind = kind
+		for version in [null,"","foundationtoolwire.v1","foundationworkeripc.v2","unknown","Foundationworkeripc.v1"," foundationworkeripc.v1","foundationworkeripc.v1 ",&"foundationworkeripc.v1",1]:
+			var bad := candidate.duplicate(true)
+			bad.protocol_version = version
+			_invalid_schema("worker_message",bad,"strict version for " + kind + " " + str(version))
+		var missing := candidate.duplicate(true)
+		missing.erase("protocol_version")
+		_invalid_schema("worker_message",missing,"missing worker version " + kind)
+		if kind != "STAGE_RESULT":
+			for payload in [null,{},message.payload_ref_or_inline]:
+				candidate.payload_ref_or_inline = payload
+				var result := Wire.encode_wire("worker_message",candidate)
+				check(not result.ok and result.issues[0].code == "DEPENDENCY_PENDING" and result.issues[0].message == "WORKER_MESSAGE_" + kind + "_PAYLOAD_SCHEMA","unregistered payload remains pending " + kind)
+	var schema_api = Schemas.new()
+	var wire_api = Wire.new()
+	var has_version_validator: bool = schema_api.has_method("validate_worker_version")
+	check(has_version_validator,"public worker version validator available")
+	if has_version_validator:
+		check(schema_api.call("validate_worker_version",message).ok,"exact v1 accepted by version-only validator")
+		check(not schema_api.call("validate_worker_version",{}).ok,"version-only validator rejects missing version")
+	check(wire_api.has_method("verify_stage_result"),"stateless message/bytes binding verifier available")
+	if wire_api.has_method("verify_stage_result"):
+		var bytes := _raw_wire("stage_result",stage)
+		check(wire_api.call("verify_stage_result",message,bytes).ok,"full STAGE_RESULT byte binding succeeds")
+		for field in ["byte_length","sha256"]:
+			var bad := message.duplicate(true)
+			bad.payload_ref_or_inline[field] = 0 if field == "byte_length" else "0".repeat(64)
+			check(not wire_api.call("verify_stage_result",bad,bytes).ok,"binding rejects wrong " + field)
+		var stale := message.duplicate(true)
+		stale.identity.generation += 1
+		check(not wire_api.call("verify_stage_result",stale,bytes).ok,"binding rejects stale complete identity")
+		stale = message.duplicate(true)
+		stale.stage_id = "MANUAL_RUNTIME"
+		stale.payload_ref_or_inline.relative_path = "artifacts/stages/MANUAL_RUNTIME/stage_result.wire"
+		check(not wire_api.call("verify_stage_result",stale,bytes).ok,"binding rejects message/stored stage mismatch")
+		check(not wire_api.call("verify_stage_result",message,'{}'.to_utf8_buffer()).ok,"binding rejects sidecar bytes")
+
+func _stage_protocol_edges() -> void:
+	var stage := _bake_stage()
+	for text in ["failed:/tmp/file","错误：/tmp/file","[/tmp/file]","failed:E:/tmp/file","prefix；/tmp/file","path=/tmp/file"]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.execution = "ERROR"
+		bad.stage_record.reason = text
+		_invalid_schema("stage_result",bad,"diagnostic punctuation cannot hide absolute path " + text)
+	for field in ["node_path_at_capture","resource_subpath","reader_path","canonical_path","field","entity_id"]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.native_result.source_map.entries[0][field] = StringName("/tmp/file") if field == "entity_id" else "/tmp/file"
+		_invalid_schema("stage_result",bad,"SourceMap absolute path in " + field)
+	for row in [["entity_id","cube"],["local_face",6],["local_face",0.0],["resource_uid",1],["extra",true],["document_uri","file:///E:/maps/test.tscn"]]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.native_result.source_map.entries[0][row[0]] = row[1]
+		_invalid_schema("stage_result",bad,"SourceMap exact types/fields " + row[0])
+	for row in [["status",1],["status",0.0],["configurations_checked",-1],["checks_performed",-1],["issues",[{}]],["extra",true]]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.native_result.validation[row[0]] = row[1]
+		_invalid_schema("stage_result",bad,"Bake validation boundary " + row[0])
+	for row in [["max_checks",0],["max_configurations",1.0],["extra",true]]:
+		var bad := stage.duplicate(true)
+		bad.stage_record.actual_budget[row[0]] = row[1]
+		_invalid_schema("stage_result",bad,"Bake budget boundary " + row[0])
+	for field in ["stage_result","worker_message"]:
+		var old := _versions()
+		old.schemas.erase(field)
+		_invalid_schema("versions",old,"old versions registry missing " + field + " cannot certify new code")
+	for stage_id in ["AUTHORING","ORIGINAL_GRAPH","MANUAL_RUNTIME"]:
+		var other := stage.duplicate(true)
+		other.stage_record.stage_id = stage_id
+		var encoded := Wire.encode_wire("stage_result",other)
+		check(not encoded.ok and encoded.issues[0].code == "DEPENDENCY_PENDING","unregistered stage has no generic storage " + stage_id)
+	var graph := Wire.encode_wire("graph_archive",{"graph_archive_ref":{}})
+	check(not graph.ok and graph.issues[0].code == "DEPENDENCY_PENDING","no graph archive reconstruction or unregistered storage")
+	var failed := stage.duplicate(true)
+	failed.stage_record.execution = "ERROR"
+	failed.stage_record.reason = "Baker rejected input"
+	failed.stage_record.native_result.ok = false
+	failed.stage_record.native_result.level = null
+	var failure := Wire.encode_wire("stage_result",failed)
+	check(not failure.ok and failure.issues[0].code == "DEPENDENCY_PENDING" and failed.stage_record.native_result != null,"unsupported failure preserved, never rewritten to null")
+	var message := _worker(stage)
+	for kind in ["HELLO","STAGE_STARTED","HEARTBEAT","EXIT","ERROR","CANCEL","LEASE"]:
+		for stage_id in ["","IPC","not_a_stage"]:
+			var pending := message.duplicate(true)
+			pending.kind = kind
+			pending.stage_id = stage_id
+			check(Schemas.validate_worker_version(pending).ok,"version-only accepts exact v1 independently of payload " + kind)
+			var result := Wire.decode_wire("worker_message",_raw_wire("worker_message",pending))
+			check(not result.ok and result.issues[0].code == "DEPENDENCY_PENDING","non-stage sentinel semantics not invented " + kind)
+	var bytes := _raw_wire("stage_result",stage)
+	message.payload_ref_or_inline.byte_length = bytes.size()
+	var malformed := stage.duplicate(true)
+	malformed.stage_record.extra = true
+	var corrupt_bytes := _raw_wire("stage_result",malformed)
+	var corrupt_message := message.duplicate(true)
+	corrupt_message.payload_ref_or_inline.byte_length = corrupt_bytes.size()
+	corrupt_message.payload_ref_or_inline.sha256 = _raw_digest("stage_result",malformed)
+	check(not Wire.verify_stage_result(corrupt_message,corrupt_bytes).ok,"matching hash does not bypass decode schema")
+	var sidecar := '{}'.to_utf8_buffer()
+	corrupt_message.payload_ref_or_inline.byte_length = sidecar.size()
+	corrupt_message.payload_ref_or_inline.sha256 = '{}'.sha256_text()
+	check(not Wire.verify_stage_result(corrupt_message,sidecar).ok,"matching hash does not authorize JSON sidecar")
+	_real_bake_storage()
+
+func _real_bake_storage() -> void:
+	var fixtures = load("res://tests/foundation/authoring/authoring_fixtures.gd")
+	var adapter = load("res://foundation/authoring/authoring_adapter.gd")
+	var codec = load("res://foundation/level/level_codec.gd")
+	var stage := _bake_stage()
+	var payload: Dictionary = fixtures.payload("minimal")
+	stage.run_identity.level_ref = payload.level_ref.duplicate(true)
+	var id: Dictionary = stage.run_identity
+	var snapshot := {"run_id":id.run_id,"snapshot_id":id.snapshot_id,"source_fingerprint":id.source_fingerprint,"source_intent_digest":null}
+	var baked: Dictionary = adapter.bake_authoring(payload,stage.stage_record.actual_policy,snapshot)
+	check(baked.ok,"real A_BAKE result for storage compatibility")
+	if not baked.ok: return
+	var encoded_level: Dictionary = codec.encode(baked.level)
+	check(encoded_level.ok,"formal LevelCodec provides canonical bytes")
+	if not encoded_level.ok: return
+	var canonical := _ref("artifacts/stages/BAKE/canonical.level",encoded_level.text.sha256_text(),"levelcanonical.v1")
+	canonical.byte_length = encoded_level.text.to_utf8_buffer().size()
+	stage.stage_record.native_result = baked.duplicate(true)
+	stage.stage_record.native_result.level = canonical
+	stage.stage_record.evidence_refs.canonical = canonical.duplicate(true)
+	var encoded := Wire.encode_wire("stage_result",stage)
+	check(encoded.ok,"real SourceMap/provenance fits approved BAKE storage unchanged")
+	if encoded.ok:
+		var decoded := Wire.decode_wire("stage_result",encoded.value)
+		check(decoded.ok and decoded.value.stage_record.native_result.source_map == baked.source_map,"real SourceMap preserves all entries and exact types")
+		check(decoded.value.stage_record.native_result.bake_provenance == baked.bake_provenance,"real BakeProvenance preserved")
+		check(codec.decode(encoded_level.text).level.content_hash == baked.level.content_hash,"canonical content identity unchanged")
 
 func _authoring_compatibility() -> void:
 	# This follow-up consumes the registered A_SCHEMA checkout, never another
@@ -316,7 +556,7 @@ func _reader_precision() -> void:
 # Plain protocol values, not a real execution-project or package delivery.
 func _versions() -> Dictionary:
 	return {"record_version":"foundationversions.v1","tool_version":"authoringrun.v1",
-		"schemas":{"wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1"},
+		"schemas":{"wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":Schemas.WORKER_PROTOCOL_VERSION},
 		"contracts":{"schema_version":1,"contract_version":"foundation.contract.v1","contract_revision":"v1.1","orientation_version":"cube24.v1","rule_version":"foundation.rules.v1","execution_version":"foundation.execution.v1","analysis_version":"foundation.analysis.v1","intent_version":"puzzleintent.v1","trace_version":"solutiontrace.v1"},
 		"engine":{"version":"4.7.2.stable.steam.ed1daf0bf","executable_sha256":"e".repeat(64)},
 		"modules":[{"path":"res://foundation/a.gd","sha256":"a".repeat(64),"version":"foundation.contract.v1"},{"path":"res://foundation/b.gd.uid","sha256":"b".repeat(64),"version":null}],
