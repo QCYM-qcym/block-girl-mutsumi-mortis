@@ -1,0 +1,191 @@
+[gd_scene load_steps=23 format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/world_authoring_root.gd" id="World"]
+[ext_resource type="Script" path="res://foundation/authoring/cube_authoring_node.gd" id="Cube"]
+[ext_resource type="Script" path="res://foundation/authoring/face_authoring_resource.gd" id="Face"]
+[ext_resource type="Script" path="res://foundation/authoring/slot_authoring_node.gd" id="Slot"]
+
+[sub_resource type="Resource" id="Face0"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000100"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face1"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000101"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face2"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000102"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face3"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000103"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face4"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000104"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Face5"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000105"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="MiddleFace0"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000200"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="MiddleFace1"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000201"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="MiddleFace2"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000202"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="MiddleFace3"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000203"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="MiddleFace4"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000204"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="MiddleFace5"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000205"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="ExitFace0"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000300"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="ExitFace1"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000301"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="ExitFace2"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000302"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="ExitFace3"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000303"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="ExitFace4"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000304"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="ExitFace5"]
+script = ExtResource("Face")
+authoring_id = "00000000-0000-4000-8000-000000000305"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[node name="Surface" type="Node3D"]
+script = ExtResource("World")
+authoring_id = "00000000-0000-4000-8000-000000000002"
+layer = 0
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
+
+[node name="Cube" type="Node3D" parent="."]
+script = ExtResource("Cube")
+authoring_id = "00000000-0000-4000-8000-000000000010"
+cube_id = &"floor"
+occludes_light = true
+tags = []
+faces = [SubResource("Face0"), SubResource("Face1"), SubResource("Face2"), SubResource("Face3"), SubResource("Face4"), SubResource("Face5")]
+
+[node name="Sun" type="Node3D" parent="."]
+position = Vector3(0, 5, 0)
+script = ExtResource("Slot")
+authoring_id = "00000000-0000-4000-8000-000000000020"
+slot_id = &"sun"
+
+[node name="Middle" type="Node3D" parent="."]
+position = Vector3(1, 0, 0)
+script = ExtResource("Cube")
+authoring_id = "00000000-0000-4000-8000-000000000012"
+cube_id = &"middle"
+occludes_light = true
+tags = []
+faces = [SubResource("MiddleFace0"), SubResource("MiddleFace1"), SubResource("MiddleFace2"), SubResource("MiddleFace3"), SubResource("MiddleFace4"), SubResource("MiddleFace5")]
+[node name="Exit" type="Node3D" parent="."]
+position = Vector3(3, 0, 0)
+script = ExtResource("Cube")
+authoring_id = "00000000-0000-4000-8000-000000000013"
+cube_id = &"exit"
+occludes_light = true
+tags = []
+faces = [SubResource("ExitFace0"), SubResource("ExitFace1"), SubResource("ExitFace2"), SubResource("ExitFace3"), SubResource("ExitFace4"), SubResource("ExitFace5")]
