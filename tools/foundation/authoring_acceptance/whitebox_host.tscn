@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tools/foundation/authoring_acceptance/whitebox_host.gd" id="1_host"]
+
+[node name="WhiteboxHost" type="Node3D"]
+script = ExtResource("1_host")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 0, 12)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.785398, 0.610865, 0)
+shadow_enabled = true
