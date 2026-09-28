@@ -87,6 +87,9 @@ static func _valid_uid(text: String) -> bool:
 	var id := ResourceUID.text_to_id(text)
 	return id >= 0 and ResourceUID.id_to_text(id) == text
 
+static func _execution_resource_path(path: Variant) -> bool:
+	return typeof(path) == TYPE_STRING and S._resource_path(path) and (path.ends_with(".gd") or path.ends_with(".tscn"))
+
 static func prepare(source_root: String) -> Dictionary:
 	if not safe_path(source_root): return S.failure("PATH_INVALID", "An E-drive project root is required")
 	var declaration_path := source_root.path_join(DEPENDENCIES.substr(6))
@@ -95,13 +98,21 @@ static func prepare(source_root: String) -> Dictionary:
 	var config: Variant = JSON.parse_string(declared.value.get_string_from_utf8())
 	if not S._fields(config,["version","engine","modules","dynamic"]) or config.version != 1 or not config.modules is Array or not config.dynamic is Array or not S._fields(config.engine,["version","executable_sha256"]): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid dependency declaration")
 	if not _engine_matches(config.engine): return S.failure("EXECUTION_VERSION_MISMATCH", "Actual engine differs from approved engine")
-	var paths: Array = config.modules.duplicate()
-	for path in config.dynamic:
-		if path not in paths: return S.failure("DEPENDENCY_PENDING", "Dynamic dependency is not in whitelist", str(path))
-	paths.append(DEPENDENCIES)
+	var paths: Array = []
+	var unique_modules := {}
 	for path in config.modules:
-		if typeof(path) != TYPE_STRING or not S._resource_path(path) or not path.ends_with(".gd"): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid module path")
-		paths.append(path + ".uid")
+		if not _execution_resource_path(path): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid module path", str(path))
+		var folded: String = path.to_lower()
+		if unique_modules.has(folded): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Duplicate canonical module path", path)
+		unique_modules[folded] = path
+		paths.append(path)
+		if path.ends_with(".gd"):
+			paths.append(path + ".uid")
+		elif FileAccess.file_exists(source_root.path_join(path.substr(6) + ".uid")):
+			paths.append(path + ".uid")
+	paths.append(DEPENDENCIES)
+	for path in config.dynamic:
+		if typeof(path) != TYPE_STRING or path not in config.modules: return S.failure("DEPENDENCY_PENDING", "Dynamic dependency is not in whitelist", str(path))
 	paths.sort()
 	var files := {}
 	var modules: Array = []
@@ -126,23 +137,113 @@ static func prepare(source_root: String) -> Dictionary:
 	return S.success({"versions":versions,"execution_digest":digest.value,"files":files})
 
 static func _closure(files: Dictionary, declaration: Dictionary) -> Dictionary:
-	var declared: Array = declaration.modules.duplicate()
+	if not declaration.modules is Array or not declaration.dynamic is Array: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid module whitelist")
+	var declared: Array = []
+	var unique_modules := {}
+	for module in declaration.modules:
+		if not _execution_resource_path(module): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Unsupported module resource", str(module))
+		var folded: String = module.to_lower()
+		if unique_modules.has(folded): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Duplicate canonical module path", module)
+		unique_modules[folded] = module
+		declared.append(module)
+		if module.ends_with(".gd"):
+			declared.append(module + ".uid")
+		elif files.has(module + ".uid"):
+			declared.append(module + ".uid")
 	declared.append(DEPENDENCIES)
-	for module in declaration.modules: declared.append(module + ".uid")
 	for path in files:
 		if path != "res://project.godot" and path not in declared: return S.failure("EXECUTION_DEPENDENCY_INVALID", "File outside explicit whitelist", path)
 	for path in declared:
 		if not files.has(path): return S.failure("DEPENDENCY_PENDING", "Missing declared dependency", path)
 	for path in declaration.dynamic:
-		if path not in declaration.modules or not files.has(path): return S.failure("DEPENDENCY_PENDING", "Missing dynamic dependency", path)
+		if typeof(path) != TYPE_STRING or path not in declaration.modules or not files.has(path): return S.failure("DEPENDENCY_PENDING", "Missing dynamic dependency", str(path))
+	var uid_to_path := {}
+	for path in files:
+		if not path.ends_with(".uid"): continue
+		var uid: String = files[path].get_string_from_utf8().strip_edges()
+		var resource_path: String = path.trim_suffix(".uid")
+		if not _valid_uid(uid) or uid_to_path.has(uid): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Missing or ambiguous UID", path)
+		uid_to_path[uid] = resource_path
 	var pattern := RegEx.new()
 	pattern.compile('res://[A-Za-z0-9_./-]+\\.(?:gd|tscn|tres)')
 	for path in files:
-		if not path.ends_with(".gd"): continue
-		var text: String = files[path].get_string_from_utf8()
-		for found in pattern.search_all(text):
-			if not files.has(found.get_string()): return S.failure("DEPENDENCY_PENDING", "Static/literal dependency is not frozen", found.get_string())
+		if path.ends_with(".gd"):
+			var script_text: String = files[path].get_string_from_utf8()
+			for found in pattern.search_all(script_text):
+				var resource_path: String = found.get_string()
+				if not S._resource_path(resource_path): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid static resource path", resource_path)
+				if resource_path.ends_with(".tres"): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Unsupported static resource type", resource_path)
+				if not files.has(resource_path): return S.failure("DEPENDENCY_PENDING", "Static/literal dependency is not frozen", resource_path)
+	var scene_edges := {}
+	for path in files:
+		if not path.ends_with(".tscn"): continue
+		var parsed_scene := _scene_references(path, files[path].get_string_from_utf8(), files, uid_to_path)
+		if not parsed_scene.ok: return parsed_scene
+		scene_edges[path] = parsed_scene.value
+	var visit_states := {}
+	for path in scene_edges:
+		if _scene_has_cycle(path, scene_edges, visit_states): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Cyclic PackedScene dependency", path)
 	return S.success(null)
+
+static func _scene_references(scene_path: String, text: String, files: Dictionary, uid_to_path: Dictionary) -> Dictionary:
+	var attr_pattern := RegEx.new()
+	attr_pattern.compile('([A-Za-z_][A-Za-z0-9_]*)="([^"\\\\]*)"')
+	var resources := []
+	var ids := {}
+	for raw_line in text.split("\n"):
+		var line: String = raw_line.strip_edges()
+		# Embedded resources have no independently declared module/UID binding.
+		# This approved scene closure accepts external Script/PackedScene only.
+		if line.begins_with("[sub_resource") or line.contains("SubResource("):
+			return S.failure("EXECUTION_DEPENDENCY_INVALID", "Embedded scene resources are not approved", scene_path)
+		if not line.begins_with("[ext_resource"): continue
+		if not line.ends_with("]"): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Malformed ext_resource declaration", scene_path)
+		var body: String = line.substr("[ext_resource".length(), line.length() - "[ext_resource".length() - 1)
+		var attributes := {}
+		var cursor := 0
+		for match in attr_pattern.search_all(body):
+			if not body.substr(cursor, match.get_start() - cursor).strip_edges().is_empty(): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Malformed ext_resource attributes", scene_path)
+			var key: String = match.get_string(1)
+			if attributes.has(key): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Duplicate ext_resource attribute", scene_path)
+			attributes[key] = match.get_string(2)
+			cursor = match.get_end()
+		if not body.substr(cursor).strip_edges().is_empty(): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Malformed ext_resource attributes", scene_path)
+		for key in attributes:
+			if key not in ["type", "path", "id", "uid", "resource_name"]: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Unknown ext_resource attribute", scene_path)
+		if not attributes.has("type") or not attributes.has("path") or not attributes.has("id") or attributes.id.is_empty(): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Incomplete ext_resource declaration", scene_path)
+		if ids.has(attributes.id): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Duplicate ext_resource id", scene_path)
+		ids[attributes.id] = true
+		var resource_path: String = attributes.path
+		if not S._resource_path(resource_path) or not _execution_resource_path(resource_path): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Unsupported or unsafe ext_resource path", resource_path)
+		if not files.has(resource_path): return S.failure("DEPENDENCY_PENDING", "ext_resource is not explicitly frozen", resource_path)
+		var resource_type: String = attributes.type
+		if (resource_type == "Script" and not resource_path.ends_with(".gd")) or (resource_type == "PackedScene" and not resource_path.ends_with(".tscn")) or resource_type not in ["Script", "PackedScene"]:
+			return S.failure("EXECUTION_DEPENDENCY_INVALID", "Unsupported ext_resource type/path pair", resource_path)
+		if attributes.has("uid"):
+			var uid: String = attributes.uid
+			if not _valid_uid(uid) or not uid_to_path.has(uid) or uid_to_path[uid] != resource_path: return S.failure("EXECUTION_DEPENDENCY_INVALID", "ext_resource UID does not identify its declared path", resource_path)
+		resources.append(resource_path)
+	var use_pattern := RegEx.new()
+	use_pattern.compile('ExtResource\\(\"([^\"]+)\"\\)')
+	for found in use_pattern.search_all(text):
+		if not ids.has(found.get_string(1)): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Scene references an undeclared ext_resource id", scene_path)
+	var literal_pattern := RegEx.new()
+	literal_pattern.compile('res://[A-Za-z0-9_./-]+\\.[A-Za-z0-9_]+')
+	for found in literal_pattern.search_all(text):
+		var literal: String = found.get_string()
+		if literal.ends_with(".tres") or not _execution_resource_path(literal) or literal not in resources:
+			return S.failure("EXECUTION_DEPENDENCY_INVALID", "Scene contains an unapproved resource reference", literal)
+	return S.success(resources)
+
+static func _scene_has_cycle(path: String, edges: Dictionary, states: Dictionary) -> bool:
+	var state: int = states.get(path, 0)
+	if state == 1: return true
+	if state == 2: return false
+	states[path] = 1
+	for child in edges.get(path, []):
+		if _scene_has_cycle(child, edges, states): return true
+	states[path] = 2
+	return false
 
 static func snapshot_shape(value: Variant) -> bool:
 	if not S._fields(value,["identity","level_ref","input_mode","input_manifest","execution_digest","root_path"]): return false
