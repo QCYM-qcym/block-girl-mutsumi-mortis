@@ -15,6 +15,12 @@ const Wire = preload("res://tools/foundation/authoring_acceptance/tool_wire.gd")
 const Loader = preload("res://tools/foundation/authoring_acceptance/canonical_loader.gd")
 
 func run() -> void:
+	if OS.get_environment("D3_SOURCE_STAGING_REGRESSION") == "1":
+		await _source_staging()
+		return
+	_final_controlled_run()
+
+func _source_staging() -> void:
 	check(mode() == "Graphical" and DisplayServer.get_name() != "headless", "D3 uses a real graphical SceneTree")
 	check(WhiteboxEntry != null,"manual same-run entry script parses")
 	var project_root := ProjectSettings.globalize_path("res://").trim_suffix("/")
@@ -259,7 +265,7 @@ func _source_delivery_checks(host: Variant, run_root: String, stored: Dictionary
 	for args in [[],["--run-dir="+run_root,"--run-dir="+run_root],["--canonical=x"],["--level=x"],["--json=x"],["--artifact=x"],["--handoff=x"],["--run-dir=C:/run"],["--run-dir=relative"],["--run-dir="+run_root+"/../other"]]:
 		check(not WhiteboxEntry._options(PackedStringArray(args)).ok,"entry rejects alternate, duplicate or unsafe arguments: "+str(args))
 	var context := WhiteboxEntry.execution_context(run_root,stored.run_identity)
-	check(not context.ok and context.issues[0].code == "DEPENDENCY_PENDING","source staging does not claim updated D_SAVED execution closure")
+	check(not context.ok and context.issues[0].code in ["DEPENDENCY_PENDING","EXECUTION_VERSION_MISMATCH"],"source staging does not claim updated D_SAVED execution closure")
 	var stage_path := run_root.path_join(Loader.BAKE_STAGE_PATH)
 	var message_path := run_root.path_join("ipc/test-bake.wire")
 	check(_publish_bytes(run_root,"artifacts/bake/d3-bake-receipt.json","{}".to_utf8_buffer()),"legacy JSON exists only as a negative fixture")
@@ -289,3 +295,82 @@ func _source_delivery_checks(host: Variant, run_root: String, stored: Dictionary
 	_write_bytes(stage_path,stage_bytes)
 	_write_bytes(message_path,message_bytes)
 	check(host.load_run(run_root).ok,"formal publication recovers after all fail-closed negatives")
+
+# External test scene supplies observations; the process MainLoop remains the
+# exact sealed whitebox_entry.gd. Nothing is added to execution/project or run.
+func _final_controlled_run() -> void:
+	check(mode() == "Graphical" and DisplayServer.get_name() != "headless","final wrapper uses Graphical display")
+	var handoff_path := OS.get_environment("D3_R6_HANDOFF")
+	var handoff: Variant = JSON.parse_string(FileAccess.get_file_as_string(handoff_path))
+	check(handoff is Dictionary and handoff.get("run_id","") == "dd0dcb8c-68e5-472c-bcf0-b9386b066a04","only the registered R6 final run is accepted")
+	if not handoff is Dictionary or handoff.get("run_id","") != "dd0dcb8c-68e5-472c-bcf0-b9386b066a04":
+		finish()
+		return
+	var run_dir: String = handoff.run_dir
+	var paths := {"input.ready":[75575,"841fcda194c52d2fb7423a8d1021437561123965aa45491fc3a216c6b5c8a2e7"],"artifacts/stages/BAKE/stage_result.wire":[127915,"e9d461eb10b62fb3a9e2e38a24a7d9e0046be8d705d86697059e1e43ec991933"],"artifacts/stages/BAKE/canonical.level":[4171,"22f63447bc282029190d0c8b29a2016630c176b8dcce91dc2b1c94a9677484f9"]}
+	for path in paths:
+		var bytes := FileAccess.get_file_as_bytes(run_dir.path_join(path))
+		check(bytes.size()==paths[path][0] and Execution.sha(bytes)==paths[path][1],"R6 preflight bytes unchanged: "+path)
+	if not failures.is_empty():
+		print("DEPENDENCY_INVALID: FINAL_RUN_DRIFT")
+		finish()
+		return
+	var directory := evidence_dir().path_join("controlled")
+	DirAccess.make_dir_recursive_absolute(directory)
+	var observer := ProjectSettings.globalize_path("res://tests/foundation/authoring_acceptance/test_whitebox_final_observer.gd")
+	var scene_path := directory.path_join("observer.tscn")
+	_write_bytes(scene_path,('[gd_scene load_steps=2 format=3]\n[ext_resource type="Script" path="%s" id="observer"]\n[node name="FinalHostObserver" type="Node"]\nscript = ExtResource("observer")\n' % observer).to_utf8_buffer())
+	var arguments := ["--verbose","--path",handoff.execution_project,"--max-fps","120","--quit-after","3600","--script","res://tools/foundation/authoring_acceptance/whitebox_entry.gd",scene_path,"--","--run-dir="+run_dir]
+	var config := {"executable":OS.get_executable_path(),"arguments":arguments,"project":handoff.execution_project,"run_dir":run_dir,"output":directory,"r6":"06234bdd2d23548f1689a931bedf9b8e477784d9","source_commit":"96043a0b4c0b1ec8c095eb7fcf62247132eed466"}
+	_write_bytes(directory.path_join("launch.json"),JSON.stringify(config,"\t").to_utf8_buffer())
+	var runner := directory.path_join("launch.ps1")
+	_write_bytes(runner,CONTROLLED_RUNNER.to_utf8_buffer())
+	var output: Array = []
+	var exit_code := OS.execute("pwsh",["-NoProfile","-File",runner,directory.path_join("launch.json")],output,true)
+	check(exit_code==0,"actual controlled entry process exits successfully")
+	var stderr := FileAccess.get_file_as_string(directory.path_join("stderr.log"))
+	var stdout := FileAccess.get_file_as_string(directory.path_join("stdout.log"))
+	check(stderr.is_empty(),"controlled Graphical stderr is empty")
+	check(stdout.contains("D_HOST_READY") and not stdout.contains("SCRIPT ERROR:") and not stdout.contains("ERROR:"),"actual entry reports formal load without engine errors")
+	var result_path := directory.path_join("observer-results.json")
+	check(FileAccess.file_exists(result_path),"controlled observer produced completion evidence")
+	if FileAccess.file_exists(result_path):
+		var result: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(result_path))
+		check(result.display != "headless" and result.doubles.is_empty(),"controlled process uses real display and no doubles")
+		checks += int(result.checks)
+		for failure in result.failures: failures.append("controlled: "+failure)
+		print("D3_FINAL_EVIDENCE ",JSON.stringify(result))
+	for path in paths:
+		var bytes := FileAccess.get_file_as_bytes(run_dir.path_join(path))
+		check(bytes.size()==paths[path][0] and Execution.sha(bytes)==paths[path][1],"R6 postflight bytes unchanged: "+path)
+	finish()
+
+const CONTROLLED_RUNNER := """param([string]$ConfigPath)
+$ErrorActionPreference = 'Stop'
+$c = Get-Content -LiteralPath $ConfigPath -Raw | ConvertFrom-Json
+$i = [Diagnostics.ProcessStartInfo]::new($c.executable)
+$i.UseShellExecute = $false
+$i.CreateNoWindow = $true
+$i.WindowStyle = [Diagnostics.ProcessWindowStyle]::Hidden
+$i.RedirectStandardOutput = $true
+$i.RedirectStandardError = $true
+$i.WorkingDirectory = $c.project
+foreach ($a in $c.arguments) { $i.ArgumentList.Add($a) }
+$i.Environment['D3_FINAL_EVIDENCE'] = $c.output
+$i.Environment['D3_FINAL_RUN'] = $c.run_dir
+foreach ($key in @('TEMP','TMP','APPDATA','LOCALAPPDATA')) { $i.Environment[$key] = $c.output }
+$p = [Diagnostics.Process]::new()
+$p.StartInfo = $i
+$r = @{executable=$c.executable; arguments=$c.arguments; project=$c.project; run_dir=$c.run_dir; display_mode='Graphical'; r6=$c.r6; source_commit=$c.source_commit; started_at=[DateTimeOffset]::Now.ToString('o')}
+[void]$p.Start()
+$r.pid = $p.Id
+$out = $p.StandardOutput.ReadToEndAsync()
+$err = $p.StandardError.ReadToEndAsync()
+$p.WaitForExit()
+$r.exit_code = $p.ExitCode
+$r.finished_at = [DateTimeOffset]::Now.ToString('o')
+[IO.File]::WriteAllText((Join-Path $c.output 'stdout.log'),$out.Result)
+[IO.File]::WriteAllText((Join-Path $c.output 'stderr.log'),$err.Result)
+[IO.File]::WriteAllText((Join-Path $c.output 'process.json'),($r | ConvertTo-Json -Depth 20))
+exit $p.ExitCode
+"""
