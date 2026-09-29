@@ -7,6 +7,7 @@ func run() -> void:
 	_source_fingerprint_structure()
 	_package_structure()
 	_saved_package()
+	_saved_intent_digest()
 	finish()
 
 func _saved_package() -> void:
@@ -23,11 +24,21 @@ func _saved_package() -> void:
 	check(captured.ok, "saved disk source produces sealed SnapshotRef")
 	if not captured.ok: return
 	var sealed: Dictionary = captured.value
+	check(Schemas._hex(sealed.identity.source_intent_digest,64),"saved explicit empty Intent has nonnull digest")
+	check(Schemas._fields(sealed.identity,["run_id","snapshot_id","source_fingerprint","source_intent_digest"]),"SnapshotIdentity remains exact four fields")
+	for digest in [null,"0".repeat(64)]:
+		var tampered := sealed.duplicate(true)
+		tampered.identity.source_intent_digest = digest
+		check(not execution.verify(tampered).ok,"sealed present Intent rejects null or tampered digest")
+
+	var reconstructed: Dictionary = execution.snapshot_from_run(sealed.root_path)
+	check(reconstructed.ok and reconstructed.value == sealed,"D2 reconstructs exact SnapshotRef from sealed run")
 	var repeated: Dictionary = capture_service.capture_saved(request, source_root)
 	check(repeated.ok, "repeated saved capture succeeds")
 	if repeated.ok:
 		check(sealed.identity.run_id != repeated.value.identity.run_id, "each capture allocates unique run_id")
 		check(sealed.identity.source_fingerprint == repeated.value.identity.source_fingerprint, "same disk source fingerprint stable across runs")
+		check(sealed.identity.source_intent_digest != null and sealed.identity.source_intent_digest == repeated.value.identity.source_intent_digest,"empty Intent digest deterministic across captures")
 	check(sealed.keys().size() == 6, "SnapshotRef has exactly six fields")
 	check(sealed.root_path.begins_with("E:/"), "run package resides on E drive")
 	check(FileAccess.file_exists(sealed.root_path.path_join("input.ready")), "returned snapshot is sealed by input.ready")
@@ -570,3 +581,66 @@ func _formal_host_closure(execution, sealed: Dictionary, source_root: String) ->
 		if item.path == scene_uri: item.sha256 = "0".repeat(64)
 	check(Wire.digest("versions",altered).value != sealed.execution_digest,"execution digest binds the Host scene bytes")
 	check(modules.any(func(item): return item.path == scene_uri),"VersionsRecord covers the formal scene resource")
+
+# Actual saved files in the harness disposable project; restore every fixture.
+func _saved_intent_digest() -> void:
+	var capture_service = load("res://tools/foundation/authoring_acceptance/snapshot_capture.gd")
+	var execution = load("res://tools/foundation/authoring_acceptance/execution_project.gd")
+	var base := "res://tests/foundation/authoring/fixtures/minimal/"
+	var source_root := ProjectSettings.globalize_path("res://").trim_suffix("/")
+	var request := {"entry_kind":"ACCEPT_SAVED","level_ref":{"level_authoring_id":"00000000-0000-4000-8000-000000000001","level_id":&"authoring_minimal","root_source_uri":base+"level.tscn"},"policy":Records.default_execution_policy("ACCEPT_SAVED")}
+	var original := {}
+	for name in ["level.tscn","intent.tres","surface.tscn"]: original[name] = FileAccess.get_file_as_bytes(base+name)
+	var observations := {}
+	var source: String = original["intent.tres"].get_string_from_utf8()
+	var prefix := '[gd_resource type="Resource" load_steps=6 format=3]\n[ext_resource type="Script" path="res://foundation/authoring/intent_authoring_resource.gd" id="Intent"]\n[ext_resource type="Script" path="res://foundation/authoring/milestone_authoring_resource.gd" id="Milestone"]\n[ext_resource type="Script" path="res://foundation/authoring/bypass_authoring_resource.gd" id="Bypass"]\n'
+	prefix += '[sub_resource type="Resource" id="Milestone"]\nscript = ExtResource("Milestone")\nauthoring_id = "00000000-0000-4000-8000-000000000005"\nmilestone_id = &"goal"\nrequired = true\npredicate = {"kind": 4}\n'
+	prefix += '[sub_resource type="Resource" id="Bypass"]\nscript = ExtResource("Bypass")\nauthoring_id = "00000000-0000-4000-8000-000000000006"\nbypass_id = &"no_move"\ndisabled_mechanics = [0]\n'
+	var referenced: String = prefix + source.substr(source.find("[resource]")).replace("expected_milestones = []",'expected_milestones = [SubResource("Milestone")]').replace("forbidden_bypasses = []",'forbidden_bypasses = [SubResource("Bypass")]')
+	for variant in ["empty","missing","referenced","milestone_changed","bypass_changed","unrelated","missing_ref","wrong_kind","duplicate_id"]:
+		for name in original: _write_bytes(base+name,original[name])
+		var text: String = source if variant in ["empty","missing","unrelated"] else referenced
+		match variant:
+			"missing": _write_bytes(base+"level.tscn",original["level.tscn"].get_string_from_utf8().replace('intent = ExtResource("Intent")','intent = null').to_utf8_buffer())
+			"milestone_changed": text = referenced.replace("required = true","required = false")
+			"bypass_changed": text = referenced.replace("disabled_mechanics = [0]","disabled_mechanics = [1]")
+			"unrelated": _write_bytes(base+"surface.tscn",original["surface.tscn"].get_string_from_utf8().replace("walkable = true","walkable = false").to_utf8_buffer())
+			"missing_ref": text = source.replace("expected_milestones = []",'expected_milestones = [{"resource_ref":"00000000-0000-4000-8000-000000000099"}]')
+			"wrong_kind": text = referenced.replace('expected_milestones = [SubResource("Milestone")]', 'expected_milestones = [SubResource("Bypass")]')
+			"duplicate_id": text = referenced.replace('00000000-0000-4000-8000-000000000006','00000000-0000-4000-8000-000000000005')
+		_write_bytes(base+"intent.tres",text.to_utf8_buffer())
+		var runs := source_root.path_join(".godot/foundation-authoring/runs")
+		var before := DirAccess.get_directories_at(runs)
+		var captured: Dictionary = capture_service.capture_saved(request,source_root)
+		var invalid: bool = variant in ["missing_ref","wrong_kind","duplicate_id"]
+		check(captured.ok != invalid,"saved Intent capture " + variant)
+		if invalid:
+			check(captured.value == null,"invalid capture publishes no SnapshotRef " + variant)
+			for run_id in DirAccess.get_directories_at(runs):
+				if run_id not in before: check(not FileAccess.file_exists(runs.path_join(run_id).path_join("input.ready")),"invalid capture publishes no input.ready " + variant)
+		elif captured.ok:
+			observations[variant] = captured.value
+			var verified: Dictionary = execution.verify(captured.value)
+			check(verified.ok,"sealed captured Intent verifies " + variant)
+			if variant == "missing": check(captured.value.identity.source_intent_digest == null,"missing Intent alone has null digest")
+			else: check(Schemas._hex(captured.value.identity.source_intent_digest,64),"present saved Intent has 64 hex digest " + variant)
+			if verified.ok:
+				var closure := Schemas.project_source_intent(verified.value.authoring)
+				var expected: Variant = null if closure.value == null else Wire.digest("source_intent",closure.value).value
+				check(captured.value.identity.source_intent_digest == expected,"digest binds same sealed authoring " + variant)
+				check(verified.value.manifest.identity.versions.schemas.has("source_intent"),"current VersionsRecord has source_intent")
+				var old: Dictionary = verified.value.manifest.identity.versions.duplicate(true)
+				old.schemas.erase("source_intent")
+				check(not Wire.encode_wire("versions",old).ok,"old VersionsRecord rejected without fallback")
+	for name in original: _write_bytes(base+name,original[name])
+	for variant in ["milestone_changed","bypass_changed"]:
+		check(observations.has("referenced") and observations.has(variant) and observations.referenced.identity.source_intent_digest != null and observations.referenced.identity.source_intent_digest != observations[variant].identity.source_intent_digest,"referenced content changes saved digest " + variant)
+	check(observations.has("empty") and observations.has("unrelated") and observations.empty.identity.source_intent_digest != null and observations.empty.identity.source_intent_digest == observations.unrelated.identity.source_intent_digest,"unrelated Resource excluded from saved digest")
+	if observations.has("empty"):
+		var sealed: Dictionary = observations.empty
+		_write_bytes(base+"intent.tres",referenced.to_utf8_buffer())
+		check(execution.verify(sealed).ok,"sealed digest verification ignores changed active Intent source")
+		var reconstructed: Dictionary = execution.snapshot_from_run(sealed.root_path)
+		check(reconstructed.ok and reconstructed.value == sealed,"run reconstruction ignores active Intent source")
+		_write_bytes(base+"intent.tres",original["intent.tres"])
+	_write_bytes(evidence_dir().path_join("source-intent-evidence.json"),JSON.stringify(observations,"\t").to_utf8_buffer())

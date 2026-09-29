@@ -15,21 +15,10 @@ func load_artifact(snapshot_ref: Dictionary, canonical_ref: Dictionary) -> Dicti
 
 func load_run(run_root: String) -> Dictionary:
 	_clear()
-	if not Execution.safe_path(run_root): return S.failure("PATH_INVALID", "Expected a canonical absolute E-drive run directory")
-	var read: Dictionary = Execution.read_bytes(run_root.path_join("input.ready"))
-	if not read.ok: return read
-	var decoded: Dictionary = Wire.decode_wire("input_manifest",read.value)
-	if not decoded.ok: return decoded
-	var manifest: Dictionary = decoded.value
-	var identity: Dictionary = manifest.identity
-	# This is the registered D2 SnapshotRef projection. The legacy saved capture
-	# has no source_intent digest in input.ready; do not invent a new wire field.
-	var snapshot := {"identity":{"run_id":identity.run_id,"snapshot_id":identity.snapshot_id,
-		"source_fingerprint":identity.source_fingerprint,"source_intent_digest":null},
-		"level_ref":identity.level_ref.duplicate(true),"input_mode":manifest.input_mode,
-		"input_manifest":Execution.artifact("input.ready",read.value,"authoringinputmanifest.v1"),
-		"execution_digest":identity.execution_digest,"root_path":run_root}
-	return _load(snapshot,null)
+	# D2 reconstructs the full identity from validated sealed authoring bytes.
+	var snapshot := Execution.snapshot_from_run(run_root)
+	if not snapshot.ok: return snapshot
+	return _load(snapshot.value,null)
 
 func _load(snapshot_ref: Dictionary, expected_canonical: Variant) -> Dictionary:
 	_clear()

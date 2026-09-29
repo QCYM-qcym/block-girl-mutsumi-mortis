@@ -275,6 +275,9 @@ static func verify(snapshot_ref: Dictionary) -> Dictionary:
 	for result in [source,authoring,policy]:
 		if not result.ok: return result
 	if source.value.authoring_payload_digest != manifest.authoring_payload.sha256 or policy.value.entry_kind != manifest.input_mode or authoring.value.level_ref != id.level_ref: return S.failure("SNAPSHOT_IDENTITY_MISMATCH", "Input artifact bindings differ")
+	var intent_digest := source_intent_digest(authoring.value)
+	if not intent_digest.ok: return intent_digest
+	if snapshot_ref.identity.source_intent_digest != intent_digest.value: return S.failure("SNAPSHOT_IDENTITY_MISMATCH", "Source Intent digest differs from sealed authoring")
 	for attachment in manifest.attachments:
 		if attachment.byte_length > policy.value.max_wire_bytes: return S.failure("WIRE_SIZE_EXCEEDED", "Policy attachment limit exceeded")
 	for dependency in source.value.dependencies:
@@ -370,3 +373,36 @@ func _initialize() -> void:
 		return
 	var written := write_new(args[4],encoded.value)
 	quit(0 if written.ok else 1)
+
+## D_PROTOCOL owns closure validation/canonical bytes. D2 only binds its result.
+static func source_intent_digest(authoring: Variant) -> Dictionary:
+	var projected := S.project_source_intent(authoring)
+	if not projected.ok: return projected
+	if projected.value == null: return S.success(null)
+	return Wire.digest("source_intent",projected.value)
+
+## Reconstruct from sealed inputs when the caller has only a run directory.
+## This is separate from verify: an explicitly supplied null/wrong digest is
+## never upgraded or repaired. No active source or ResourceLoader is consulted.
+static func snapshot_from_run(run_root: String) -> Dictionary:
+	if not safe_path(run_root): return S.failure("PATH_INVALID", "Expected a canonical absolute E-drive run directory")
+	var read := read_bytes(run_root.path_join("input.ready"))
+	if not read.ok: return read
+	var decoded := Wire.decode_wire("input_manifest",read.value)
+	if not decoded.ok: return decoded
+	var manifest: Dictionary = decoded.value
+	var authoring_bytes := read_artifact(run_root,manifest.authoring_payload)
+	if not authoring_bytes.ok: return authoring_bytes
+	var authoring := Wire.decode_wire("authoring",authoring_bytes.value)
+	if not authoring.ok: return authoring
+	var intent_digest := source_intent_digest(authoring.value)
+	if not intent_digest.ok: return intent_digest
+	var identity: Dictionary = manifest.identity
+	var snapshot := {"identity":{"run_id":identity.run_id,"snapshot_id":identity.snapshot_id,
+		"source_fingerprint":identity.source_fingerprint,"source_intent_digest":intent_digest.value},
+		"level_ref":identity.level_ref.duplicate(true),"input_mode":manifest.input_mode,
+		"input_manifest":artifact("input.ready",read.value,"authoringinputmanifest.v1"),
+		"execution_digest":identity.execution_digest,"root_path":run_root}
+	var checked := verify(snapshot)
+	if not checked.ok: return checked
+	return S.success(snapshot)
