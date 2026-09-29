@@ -2,7 +2,7 @@ extends RefCounted
 ## Closed D-owned records. Unavailable record schemas fail closed, never use a
 ## generic Dictionary fallback. A owns authoring/source_map registration.
 
-const KINDS = ["authoring","snapshot","source_map","intent","trace","state_inspection","graph_archive","quality_result","stage_result","report","worker_message","versions","source_manifest","input_manifest","archive_manifest","policy"]
+const KINDS = ["source_intent","authoring","snapshot","source_map","intent","trace","state_inspection","graph_archive","quality_result","stage_result","report","worker_message","versions","source_manifest","input_manifest","archive_manifest","policy"]
 const STAGES = ["AUTHORING","BAKE","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY","MANUAL_RUNTIME","ARCHIVE"]
 const ACCEPT_STAGES = ["AUTHORING","BAKE","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY","ARCHIVE"]
 const POLICY_FIELDS = ["entry_kind","stages","bake_options","search_mode","search_budget","softlock_budget","replay_options","stage_deadline_ms","lease_interval_ms","lease_timeout_ms","max_wire_bytes","max_wire_depth"]
@@ -12,6 +12,7 @@ const STORED_STAGE_FIELDS = ["stage_id","owner","module_ref","applicability","ex
 
 static func validate(kind: String, value: Variant) -> Dictionary:
 	if kind not in KINDS: return failure("WIRE_SCHEMA_INVALID", "Unknown record kind")
+	if kind == "source_intent": return _source_intent(value)
 	if kind == "worker_message": return _worker_message(value)
 	if kind == "stage_result": return _stage_result(value)
 	if kind == "authoring":
@@ -74,7 +75,7 @@ static func failure(code: String, message: String, path: String = "") -> Diction
 
 # Hashes here are declarations. ToolWire checks canonical execution identity;
 # D2/D6 must verify actual bytes, links and cross-artifact capture/publication.
-const SCHEMA_VERSIONS = {"wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":WORKER_PROTOCOL_VERSION}
+const SCHEMA_VERSIONS = {"source_intent":"foundationtoolwire.v1","wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":WORKER_PROTOCOL_VERSION}
 const CONTRACT_VERSIONS = {"schema_version":1,"contract_version":"foundation.contract.v1","contract_revision":"v1.1","orientation_version":"cube24.v1","rule_version":"foundation.rules.v1","execution_version":"foundation.execution.v1","analysis_version":"foundation.analysis.v1","intent_version":"puzzleintent.v1","trace_version":"solutiontrace.v1"}
 const IDENTITY_FIELDS = ["editor_instance_id","run_id","generation","level_ref","snapshot_id","source_fingerprint","policy_digest","execution_digest","versions"]
 const ARTIFACT_FORMATS = ["rawbytes.v1","authoringpolicy.v1","foundationversions.v1","authoringrun.v1","foundationtoolwire.v1","levelauthoring.v1","puzzleintentauthoring.v1","authoringsnapshot.v1","authoringsourcemap.v1","levelacceptance.v1","authoringsourcemanifest.v1","authoringinputmanifest.v1","authoringarchivemanifest.v1","foundation.contract.v1","puzzleintent.v1","solutiontrace.v1","levelcanonical.v1"]
@@ -90,12 +91,11 @@ static func _worker_message(value: Variant) -> Dictionary:
 	if not version.ok: return version
 	if not _fields(value,["protocol_version","identity","sequence","kind","stage_id","payload_ref_or_inline"]):
 		return failure("WIRE_SCHEMA_INVALID", "Closed WorkerMessage fields required")
-	if not identity_shape(value.identity) or typeof(value.sequence) != TYPE_INT or not _string(value.kind) or value.kind not in WORKER_KINDS or not _string(value.stage_id,true):
+	if not identity_shape(value.identity) or not valid_worker_sequence(value.sequence) or not _string(value.kind) or value.kind not in WORKER_KINDS or not _string(value.stage_id,true):
 		return failure("WIRE_SCHEMA_INVALID", "Invalid WorkerMessage common fields")
-	# No sequence lower bound or non-stage sentinel is frozen. No payload is
-	# accepted for these branches, including null; D4 must freeze them first.
 	if value.kind != "STAGE_RESULT":
-		return failure("DEPENDENCY_PENDING", "WORKER_MESSAGE_" + value.kind + "_PAYLOAD_SCHEMA")
+		if not _inline_payload(value): return failure("WIRE_SCHEMA_INVALID", "Invalid closed inline payload or stage relation")
+		return success(value)
 	if value.stage_id not in STAGES or not _stage_ref(value.payload_ref_or_inline,"artifacts/stages/" + value.stage_id + "/stage_result.wire","foundationtoolwire.v1") or not _portable_tree(value):
 		return failure("WIRE_SCHEMA_INVALID", "STAGE_RESULT requires its exact run-relative ArtifactRef")
 	return success(value)
@@ -433,3 +433,118 @@ static func _archive_manifest(value: Variant) -> bool:
 	for field in ["input_manifest","report"]:
 		if not _artifact(value[field]) or not _has_ref(value.attachments,value[field]): return false
 	return value.input_manifest.format_version == "authoringinputmanifest.v1" and value.report.format_version == "levelacceptance.v1"
+
+# Stateless contract data. D4 owns cursors, process state, publication and effects.
+const WORKER_SEQUENCE_FIRST = 0
+const WORKER_SEQUENCE_LAST_INITIAL = -1
+const WORKER_SEQUENCE_MAX = 9223372036854775807
+const LEASE_VALID_FOR_MS = 30000
+const LEASE_RENEW_INTERVAL_MS = 1000
+const WORKER_ROLES = ["HEADLESS","GRAPHICAL"]
+const HEARTBEAT_PHASES = ["IDLE","CALLING","CANCELLING","FINALIZING"]
+const EXIT_REASONS = ["FINISHED","CANCELLED","FAILED","LEASE_EXPIRED"]
+const WORKER_ERROR_CODES = ["EXECUTION_IDENTITY_MISMATCH","IPC_PROTOCOL_ERROR","STAGE_CALL_ERROR","STORAGE_ERROR","RESOURCE_RELEASE_ERROR"]
+const CANCEL_REASONS = ["USER_CANCEL","PLUGIN_UNLOAD","EDITOR_SHUTDOWN","STAGE_TIMEOUT","PROTOCOL_ERROR"]
+const WORKER_DIRECTIONS = {"PARENT_TO_WORKER":["CANCEL","LEASE"],"WORKER_TO_PARENT":["HELLO","STAGE_STARTED","STAGE_RESULT","HEARTBEAT","EXIT","ERROR"]}
+const WORKER_FIRST_KINDS = {"PARENT_TO_WORKER":"LEASE","WORKER_TO_PARENT":"HELLO"}
+const WORKER_PROTOCOL_ERROR = "IPC_PROTOCOL_ERROR"
+const WORKER_PROTOCOL_ERROR_EFFECTS = {"advance_cursor":false,"stop_chain":true,"revoke_pass_eligibility":true}
+
+static func valid_worker_sequence(value: Variant) -> bool:
+	return typeof(value) == TYPE_INT and value >= WORKER_SEQUENCE_FIRST
+
+static func _enum_string(value: Variant, allowed: Array) -> bool:
+	return typeof(value) == TYPE_STRING and value in allowed
+
+static func _inline_payload(message: Dictionary) -> bool:
+	var p: Variant = message.payload_ref_or_inline
+	var stage: String = message.stage_id
+	match message.kind:
+		"HELLO":
+			return stage == "" and _fields(p,["launch_id","worker_role","engine"]) and _uuid(p.launch_id) and _enum_string(p.worker_role,WORKER_ROLES) and _fields(p.engine,["version","executable_sha256"]) and _string(p.engine.version) and _hex(p.engine.executable_sha256,64) and p.engine == message.identity.versions.engine
+		"STAGE_STARTED":
+			return stage in STAGES and _fields(p,["started_at"]) and typeof(p.started_at) == TYPE_STRING and _utc_milliseconds(p.started_at)
+		"HEARTBEAT":
+			if not _fields(p,["observed_at","phase"]) or typeof(p.observed_at) != TYPE_STRING or not _utc_milliseconds(p.observed_at) or not _enum_string(p.phase,HEARTBEAT_PHASES): return false
+			if p.phase == "CALLING": return stage in STAGES
+			if p.phase in ["IDLE","FINALIZING"]: return stage == ""
+			return stage == "" or stage in STAGES
+		"EXIT":
+			if stage != "" or not _fields(p,["reason","exit_code","file_handles_closed","callbacks_disconnected","preview_resources_released"]) or not _enum_string(p.reason,EXIT_REASONS) or typeof(p.exit_code) != TYPE_INT: return false
+			for field in ["file_handles_closed","callbacks_disconnected","preview_resources_released"]:
+				if typeof(p[field]) != TYPE_BOOL or not p[field]: return false
+			return p.exit_code == (0 if p.reason in ["FINISHED","CANCELLED"] else 1)
+		"ERROR":
+			return (stage == "" or stage in STAGES) and _fields(p,["code","message"]) and _enum_string(p.code,WORKER_ERROR_CODES) and typeof(p.message) == TYPE_STRING and not p.message.strip_edges().is_empty() and (p.code != "STAGE_CALL_ERROR" or stage in STAGES)
+		"CANCEL":
+			return stage == "" and _fields(p,["reason"]) and _enum_string(p.reason,CANCEL_REASONS)
+		"LEASE":
+			return stage == "" and _fields(p,["issued_at","valid_for_ms"]) and typeof(p.issued_at) == TYPE_STRING and _utc_milliseconds(p.issued_at) and typeof(p.valid_for_ms) == TYPE_INT and p.valid_for_ms == LEASE_VALID_FOR_MS
+	return false
+
+## Pure comparison against caller-owned context, never retains/advances a cursor.
+## D4 must additionally verify identity, artifacts, lifecycle and actual process.
+static func validate_worker_context(message: Variant, active_stage: Variant, direction: Variant, expected_sequence: Variant) -> Dictionary:
+	var checked := _worker_message(message)
+	if not checked.ok: return checked
+	if typeof(active_stage) != TYPE_STRING or (active_stage != "" and active_stage not in STAGES) or typeof(direction) != TYPE_STRING or not WORKER_DIRECTIONS.has(direction) or not valid_worker_sequence(expected_sequence):
+		return failure(WORKER_PROTOCOL_ERROR,"Invalid receive context")
+	if message.kind not in WORKER_DIRECTIONS[direction]: return failure(WORKER_PROTOCOL_ERROR,"Wrong direction")
+	if message.sequence != expected_sequence: return failure(WORKER_PROTOCOL_ERROR,"Duplicate" if message.sequence < expected_sequence else "Gap")
+	if expected_sequence == WORKER_SEQUENCE_FIRST and message.kind != WORKER_FIRST_KINDS[direction]: return failure(WORKER_PROTOCOL_ERROR,"Invalid first message")
+	if message.kind in ["HEARTBEAT","ERROR","STAGE_RESULT"] and message.stage_id != active_stage: return failure(WORKER_PROTOCOL_ERROR,"Active stage mismatch")
+	if message.kind == "STAGE_STARTED" and active_stage != "": return failure(WORKER_PROTOCOL_ERROR,"Overlapping stage")
+	return success(message)
+
+static func _source_intent(value: Variant) -> Dictionary:
+	var invalid := failure("WIRE_SCHEMA_INVALID","Invalid closed source_intent")
+	if not _fields(value,["root_authoring_id","resources"]) or not _uuid(value.root_authoring_id) or typeof(value.resources) != TYPE_ARRAY: return invalid
+	var schema = load("res://foundation/authoring/authoring_schema.gd")
+	var resources := {}
+	var previous := ""
+	var semantic_ids := {}
+	for entry in value.resources:
+		if not _fields(entry,schema.RESOURCE_FIELDS) or not _enum_string(entry.kind,["INTENT","MILESTONE","BYPASS"]) or not schema.valid_uuid(entry.authoring_id) or typeof(entry.document_uri) != TYPE_STRING or (entry.resource_uid != null and typeof(entry.resource_uid) != TYPE_STRING) or not schema.fields_valid(entry.kind,entry.fields): return invalid
+		# UUIDs are ASCII: lexical order is exactly UTF-8 byte order.
+		if entry.authoring_id <= previous: return invalid
+		previous = entry.authoring_id
+		resources[entry.authoring_id] = entry
+		var id_field: String = {"INTENT":"intent_id","MILESTONE":"milestone_id","BYPASS":"bypass_id"}[entry.kind]
+		var semantic_id: String = entry.kind + ":" + String(entry.fields[id_field])
+		if semantic_ids.has(semantic_id): return invalid
+		semantic_ids[semantic_id] = true
+	if not resources.has(value.root_authoring_id) or resources[value.root_authoring_id].kind != "INTENT": return invalid
+	var reached := {value.root_authoring_id:true}
+	var root: Dictionary = resources[value.root_authoring_id]
+	for field in ["expected_milestones","forbidden_bypasses"]:
+		var expected := "MILESTONE" if field == "expected_milestones" else "BYPASS"
+		var seen := {}
+		for ref in root.fields[field]:
+			if not _fields(ref,["resource_ref"]) or not _uuid(ref.resource_ref) or not resources.has(ref.resource_ref) or resources[ref.resource_ref].kind != expected or seen.has(ref.resource_ref): return invalid
+			seen[ref.resource_ref] = true
+			reached[ref.resource_ref] = true
+	if reached.size() != resources.size(): return invalid
+	return success(value)
+
+## Validate the entire captured authoring input before selecting its Level intent.
+## Missing returns a null value, never a synthetic source_intent record or digest.
+static func project_source_intent(payload: Variant) -> Dictionary:
+	var checked := validate("authoring",payload)
+	if not checked.ok: return checked
+	var intent_ref: Variant = null
+	for document in payload.documents:
+		for record in document.records:
+			if record.kind == "LEVEL" and record.authoring_id == payload.level_ref.level_authoring_id:
+				intent_ref = record.fields.intent
+	if intent_ref == null: return success(null)
+	var resources := {}
+	for entry in payload.resource_table: resources[entry.authoring_id] = entry
+	var root: Dictionary = resources[intent_ref.resource_ref]
+	var selected := {root.authoring_id:root}
+	for field in ["expected_milestones","forbidden_bypasses"]:
+		for ref in root.fields[field]: selected[ref.resource_ref] = resources[ref.resource_ref]
+	var ids: Array = selected.keys()
+	ids.sort()
+	var entries: Array = []
+	for id in ids: entries.append(selected[id].duplicate(true))
+	return _source_intent({"root_authoring_id":root.authoring_id,"resources":entries})
