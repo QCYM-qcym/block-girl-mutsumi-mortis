@@ -21,6 +21,7 @@ func run() -> void:
 	_authoring_compatibility()
 	_stage_protocol()
 	_stage_protocol_edges()
+	_consolidated()
 	finish()
 
 # Protocol fixtures are values, not substitute Bake/Session implementations.
@@ -42,7 +43,7 @@ func _bake_stage() -> Dictionary:
 
 func _worker(stage: Dictionary) -> Dictionary:
 	# Legal message construction consumes the unique production version registry.
-	return {"protocol_version":Schemas.WORKER_PROTOCOL_VERSION,"identity":stage.run_identity.duplicate(true),"sequence":-9223372036854775807-1,"kind":"STAGE_RESULT","stage_id":"BAKE","payload_ref_or_inline":_ref("artifacts/stages/BAKE/stage_result.wire",_raw_digest("stage_result",stage),"foundationtoolwire.v1")}
+	return {"protocol_version":Schemas.WORKER_PROTOCOL_VERSION,"identity":stage.run_identity.duplicate(true),"sequence":0,"kind":"STAGE_RESULT","stage_id":"BAKE","payload_ref_or_inline":_ref("artifacts/stages/BAKE/stage_result.wire",_raw_digest("stage_result",stage),"foundationtoolwire.v1")}
 
 func _invalid_schema(kind: String, value: Dictionary, label: String) -> void:
 	for result in [Wire.encode_wire(kind,value),Wire.decode_wire(kind,_raw_wire(kind,value))]:
@@ -114,8 +115,9 @@ func _stage_protocol() -> void:
 		var good := message.duplicate(true)
 		good.sequence = sequence
 		var encoded := Wire.encode_wire("worker_message",good)
-		check(encoded.ok,"sequence wire integer, no invented start/range rule")
-		if encoded.ok: check(Wire.decode_wire("worker_message",encoded.value).value.sequence == sequence,"sequence int64 exact")
+		check(encoded.ok == (sequence >= 0),"sequence approved nonnegative int64 contract")
+		var decoded := Wire.decode_wire("worker_message",_raw_wire("worker_message",good))
+		check((decoded.ok and decoded.value.sequence == sequence) if sequence >= 0 else not decoded.ok,"sequence int64 exact or rejected negative")
 	for key in ["sequence","stage_id","kind"]:
 		var bad := message.duplicate(true)
 		bad[key] = null
@@ -142,7 +144,7 @@ func _stage_protocol() -> void:
 			for payload in [null,{},message.payload_ref_or_inline]:
 				candidate.payload_ref_or_inline = payload
 				var result := Wire.encode_wire("worker_message",candidate)
-				check(not result.ok and result.issues[0].code == "DEPENDENCY_PENDING" and result.issues[0].message == "WORKER_MESSAGE_" + kind + "_PAYLOAD_SCHEMA","unregistered payload remains pending " + kind)
+				check(not result.ok and result.issues[0].code == "WIRE_SCHEMA_INVALID","closed inline rejects placeholder payload " + kind)
 	var schema_api = Schemas.new()
 	var wire_api = Wire.new()
 	var has_version_validator: bool = schema_api.has_method("validate_worker_version")
@@ -216,7 +218,7 @@ func _stage_protocol_edges() -> void:
 			pending.stage_id = stage_id
 			check(Schemas.validate_worker_version(pending).ok,"version-only accepts exact v1 independently of payload " + kind)
 			var result := Wire.decode_wire("worker_message",_raw_wire("worker_message",pending))
-			check(not result.ok and result.issues[0].code == "DEPENDENCY_PENDING","non-stage sentinel semantics not invented " + kind)
+			check(not result.ok and result.issues[0].code == "WIRE_SCHEMA_INVALID","closed inline rejects ArtifactRef/sentinel " + kind)
 	var bytes := _raw_wire("stage_result",stage)
 	message.payload_ref_or_inline.byte_length = bytes.size()
 	var malformed := stage.duplicate(true)
@@ -556,7 +558,7 @@ func _reader_precision() -> void:
 # Plain protocol values, not a real execution-project or package delivery.
 func _versions() -> Dictionary:
 	return {"record_version":"foundationversions.v1","tool_version":"authoringrun.v1",
-		"schemas":{"wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":Schemas.WORKER_PROTOCOL_VERSION},
+		"schemas":{"source_intent":"foundationtoolwire.v1","wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":Schemas.WORKER_PROTOCOL_VERSION},
 		"contracts":{"schema_version":1,"contract_version":"foundation.contract.v1","contract_revision":"v1.1","orientation_version":"cube24.v1","rule_version":"foundation.rules.v1","execution_version":"foundation.execution.v1","analysis_version":"foundation.analysis.v1","intent_version":"puzzleintent.v1","trace_version":"solutiontrace.v1"},
 		"engine":{"version":"4.7.2.stable.steam.ed1daf0bf","executable_sha256":"e".repeat(64)},
 		"modules":[{"path":"res://foundation/a.gd","sha256":"a".repeat(64),"version":"foundation.contract.v1"},{"path":"res://foundation/b.gd.uid","sha256":"b".repeat(64),"version":null}],
@@ -751,3 +753,181 @@ func _source_uri_review() -> void:
 		var encoded := Wire.encode_wire("source_manifest",good)
 		check(encoded.ok,"canonical external URI accepted " + uri)
 		if encoded.ok: check(Wire.decode_wire("source_manifest",encoded.value).ok,"external URI roundtrip " + uri)
+
+# Approved consolidated contracts: fixtures contain values, no algorithm doubles.
+func _inline(kind: String) -> Dictionary:
+	var message := _worker(_bake_stage())
+	message.kind = kind
+	message.stage_id = "BAKE" if kind == "STAGE_STARTED" else ""
+	var utc := "2026-09-29T00:00:00.000Z"
+	message.payload_ref_or_inline = {
+		"HELLO":{"launch_id":"11111111-1111-4111-8111-111111111111","worker_role":"HEADLESS","engine":message.identity.versions.engine.duplicate(true)},
+		"STAGE_STARTED":{"started_at":utc},
+		"HEARTBEAT":{"observed_at":utc,"phase":"IDLE"},
+		"EXIT":{"reason":"FINISHED","exit_code":0,"file_handles_closed":true,"callbacks_disconnected":true,"preview_resources_released":true},
+		"ERROR":{"code":"IPC_PROTOCOL_ERROR","message":"invalid sequence"},
+		"CANCEL":{"reason":"USER_CANCEL"},
+		"LEASE":{"issued_at":utc,"valid_for_ms":30000}
+	}[kind]
+	return message
+
+func _intent_value() -> Dictionary:
+	var f = load("res://tests/foundation/authoring/authoring_fixtures.gd")
+	var root: Dictionary = f.resource("INTENT","intent.tres",4,{"authoring_version":"puzzleintentauthoring.v1","intent_id":&"test_intent","required_mechanics":[],"optional_mechanics":[],"expected_milestones":[{"resource_ref":f.uuid(5)}],"forbidden_bypasses":[{"resource_ref":f.uuid(6)}]})
+	return {"root_authoring_id":f.uuid(4),"resources":[root,f.resource("MILESTONE","intent.tres",5,{"milestone_id":&"goal","required":true,"predicate":{"kind":4}}),f.resource("BYPASS","intent.tres",6,{"bypass_id":&"no_move","disabled_mechanics":[0]})]}
+
+func _consolidated() -> void:
+	for kind in ["HELLO","STAGE_STARTED","HEARTBEAT","EXIT","ERROR","CANCEL","LEASE"]:
+		var message := _inline(kind)
+		var encoded := Wire.encode_wire("worker_message",message)
+		check(encoded.ok,"Track D valid inline " + kind)
+		var decoded := Wire.decode_wire("worker_message",_raw_wire("worker_message",message))
+		check(decoded.ok and decoded.value == message,"Track D roundtrip " + kind)
+		for field in message.payload_ref_or_inline:
+			var missing := message.duplicate(true)
+			missing.payload_ref_or_inline.erase(field)
+			_invalid_schema("worker_message",missing,"Track D missing " + kind + "." + field)
+			for invalid in [null,[],&"wrong"]:
+				var bad := message.duplicate(true)
+				bad.payload_ref_or_inline[field] = invalid
+				_invalid_schema("worker_message",bad,"Track D null/type " + kind + "." + field)
+		var extra := message.duplicate(true)
+		extra.payload_ref_or_inline.extra = true
+		_invalid_schema("worker_message",extra,"Track D unknown " + kind)
+		for invalid in [null,"IPC","NONE","not_registered",&"",1]:
+			var bad := message.duplicate(true)
+			bad.stage_id = invalid
+			_invalid_schema("worker_message",bad,"Track D invalid stage " + kind)
+		for invalid in [-1,-9223372036854775807-1,0.0,null,"0"]:
+			var bad := message.duplicate(true)
+			bad.sequence = invalid
+			_invalid_schema("worker_message",bad,"Track D invalid sequence " + kind)
+		message.sequence = 9223372036854775807
+		check(Wire.encode_wire("worker_message",message).ok,"Track D signed int64 maximum " + kind)
+	for row in [["HELLO","worker_role","OTHER"],["HELLO","launch_id","not_uuid"],["STAGE_STARTED","started_at","2026-02-30T00:00:00.000Z"],["HEARTBEAT","phase","OTHER"],["HEARTBEAT","phase","CALLING"],["EXIT","reason","OTHER"],["EXIT","exit_code",1],["EXIT","file_handles_closed",false],["EXIT","callbacks_disconnected",false],["EXIT","preview_resources_released",false],["ERROR","code","OTHER"],["ERROR","message","  "],["CANCEL","reason","OTHER"],["LEASE","valid_for_ms",1000],["LEASE","valid_for_ms",30000.0]]:
+		var bad := _inline(row[0])
+		bad.payload_ref_or_inline[row[1]] = row[2]
+		_invalid_schema("worker_message",bad,"Track D domain " + str(row))
+	for kind in ["HELLO","EXIT","CANCEL","LEASE"]:
+		var bad := _inline(kind)
+		bad.stage_id = "BAKE"
+		_invalid_schema("worker_message",bad,"Track D empty stage required " + kind)
+	var api = Schemas.new()
+	check(api.has_method("validate_worker_context"),"pure worker context contract available")
+	if api.has_method("validate_worker_context"):
+		var calling := _inline("HEARTBEAT")
+		calling.sequence = 1
+		calling.stage_id = "BAKE"
+		calling.payload_ref_or_inline.phase = "CALLING"
+		check(api.call("validate_worker_context",calling,"BAKE","WORKER_TO_PARENT",1).ok,"context active and first sequence pure value")
+		for args in [["","WORKER_TO_PARENT",1],["BAKE","PARENT_TO_WORKER",1],["BAKE","WORKER_TO_PARENT",2]]:
+			check(not api.call("validate_worker_context",calling,args[0],args[1],args[2]).ok,"context rejects active/direction/duplicate mismatch")
+	var value := _intent_value()
+	var encoded := Wire.encode_wire("source_intent",value)
+	check(encoded.ok,"Track A valid source_intent")
+	var decoded := Wire.decode_wire("source_intent",_raw_wire("source_intent",value))
+	check(decoded.ok and decoded.value == value,"Track A exact roundtrip")
+	var digest := Wire.digest("source_intent",value)
+	check(digest.ok and typeof(digest.value) == TYPE_STRING and digest.value.length() == 64,"Track A digest valid")
+	check(digest.ok and digest.value == Wire.digest("source_intent",value.duplicate(true)).value,"Track A deterministic digest")
+	for index in [1,2]:
+		var changed := value.duplicate(true)
+		if index == 1: changed.resources[index].fields.required = false
+		else: changed.resources[index].fields.disabled_mechanics = [1]
+		var result := Wire.digest("source_intent",changed)
+		check(digest.ok and result.ok and result.value != digest.value,"Track A referenced content changes digest " + str(index))
+	var empty := value.duplicate(true)
+	empty.resources.resize(1)
+	empty.resources[0].fields.expected_milestones = []
+	empty.resources[0].fields.forbidden_bypasses = []
+	var empty_digest := Wire.digest("source_intent",empty)
+	check(empty_digest.ok and empty_digest.value != null,"Track A explicit empty nonnull")
+	for mutation in ["missing","duplicate","kind","top","entry","id","extra","order","cycle","predicate"]:
+		var bad := value.duplicate(true)
+		match mutation:
+			"missing": bad.resources.remove_at(1)
+			"duplicate": bad.resources.append(bad.resources[0].duplicate(true))
+			"kind": bad.resources[1].kind = "BYPASS"
+			"top": bad.extra = true
+			"entry": bad.resources[0].extra = true
+			"id": bad.resources[0].authoring_id = "bad"
+			"extra": bad.resources.append(empty.resources[0].merged({"authoring_id":"99999999-9999-4999-8999-999999999999"},true))
+			"order": bad.resources.reverse()
+			"cycle": bad.resources[0].fields.expected_milestones[0].resource_ref = bad.root_authoring_id
+			"predicate": bad.resources[1].fields.predicate.extra = 1
+		_invalid_schema("source_intent",bad,"Track A invalid closure " + mutation)
+	check(not Wire.digest("source_intent",null).ok,"Track A missing is not synthetic empty")
+	check(api.has_method("project_source_intent"),"Track A validated selected closure projection available")
+	if api.has_method("project_source_intent"):
+		var f = load("res://tests/foundation/authoring/authoring_fixtures.gd")
+		var payload: Dictionary = f.payload("minimal")
+		var projection: Dictionary = api.call("project_source_intent",payload)
+		check(projection.ok and projection.value.resources.size() == 1,"Track A selected explicit empty from full payload")
+		var before := Wire.digest("source_intent",projection.value)
+		payload.resource_table[0].fields.walkable = not payload.resource_table[0].fields.walkable
+		var after: Dictionary = api.call("project_source_intent",payload)
+		check(before.ok and after.ok and before.value == Wire.digest("source_intent",after.value).value,"Track A unrelated valid Resource does not affect digest")
+		payload.resource_table[0].extra = true
+		check(not api.call("project_source_intent",payload).ok,"Track A invalid unrelated Resource cannot be cropped away")
+
+		payload = f.payload("minimal")
+		payload.documents[0].records[0].fields.intent = null
+		var missing: Dictionary = api.call("project_source_intent",payload)
+		check(missing.ok and missing.value == null,"Track A missing Intent returns null without record")
+		payload = f.payload("minimal")
+		var selected := _intent_value()
+		payload.documents[3].resources = selected.resources
+		payload.resource_table = []
+		for doc in payload.documents: payload.resource_table.append_array(doc.resources)
+		var projected: Dictionary = api.call("project_source_intent",payload)
+		check(projected.ok and projected.value == selected,"Track A selected referenced full closure")
+		payload.resource_table.reverse()
+		var shuffled: Dictionary = api.call("project_source_intent",payload)
+		check(shuffled.ok and shuffled.value == selected,"Track A input table order does not affect sorted closure")
+		var unrelated: Dictionary = empty.resources[0].duplicate(true)
+		unrelated.authoring_id = f.uuid(7)
+		unrelated.fields.intent_id = &"unselected"
+		var other_document: Dictionary = f.document("INTENT","other_intent.tres",7)
+		unrelated.document_uri = other_document.document_uri
+		other_document.resources.append(unrelated)
+		payload.documents.append(other_document)
+		payload.resource_table.append(unrelated)
+		var multiple: Dictionary = api.call("project_source_intent",payload)
+		check(multiple.ok and multiple.value == selected,"Track A multiple Intents select Level reference only")
+	for role in ["HEADLESS","GRAPHICAL"]:
+		var hello := _inline("HELLO")
+		hello.payload_ref_or_inline.worker_role = role
+		check(Wire.encode_wire("worker_message",hello).ok,"Track D allowed role " + role)
+	for reason in ["FINISHED","CANCELLED","FAILED","LEASE_EXPIRED"]:
+		var exit_message := _inline("EXIT")
+		exit_message.payload_ref_or_inline.reason = reason
+		exit_message.payload_ref_or_inline.exit_code = 0 if reason in ["FINISHED","CANCELLED"] else 1
+		check(Wire.encode_wire("worker_message",exit_message).ok,"Track D allowed exit " + reason)
+	for reason in ["USER_CANCEL","PLUGIN_UNLOAD","EDITOR_SHUTDOWN","STAGE_TIMEOUT","PROTOCOL_ERROR"]:
+		var cancel := _inline("CANCEL")
+		cancel.payload_ref_or_inline.reason = reason
+		check(Wire.encode_wire("worker_message",cancel).ok,"Track D allowed cancellation " + reason)
+	for stage in Schemas.STAGES:
+		var started := _inline("STAGE_STARTED")
+		started.stage_id = stage
+		check(Wire.encode_wire("worker_message",started).ok,"Track D registered stage " + stage)
+		for phase in ["IDLE","CALLING","CANCELLING","FINALIZING"]:
+			var heartbeat := _inline("HEARTBEAT")
+			heartbeat.payload_ref_or_inline.phase = phase
+			heartbeat.stage_id = stage if phase in ["CALLING","CANCELLING"] else ""
+			check(Wire.encode_wire("worker_message",heartbeat).ok,"Track D allowed heartbeat phase " + phase + stage)
+	for code in ["EXECUTION_IDENTITY_MISMATCH","IPC_PROTOCOL_ERROR","STAGE_CALL_ERROR","STORAGE_ERROR","RESOURCE_RELEASE_ERROR"]:
+		var error_message := _inline("ERROR")
+		error_message.payload_ref_or_inline.code = code
+		error_message.stage_id = "BAKE" if code == "STAGE_CALL_ERROR" else ""
+		check(Wire.encode_wire("worker_message",error_message).ok,"Track D allowed error " + code)
+	if api.has_method("validate_worker_context"):
+		for direction in ["WORKER_TO_PARENT","PARENT_TO_WORKER"]:
+			var first := _inline("HELLO" if direction == "WORKER_TO_PARENT" else "LEASE")
+			check(api.call("validate_worker_context",first,"",direction,0).ok,"Track D exact first message " + direction)
+			first.sequence = 2
+			var gap: Dictionary = api.call("validate_worker_context",first,"",direction,1)
+			check(not gap.ok and gap.issues[0].code == "IPC_PROTOCOL_ERROR","Track D gap error " + direction)
+		var constants: Dictionary = api.get_script().get_script_constant_map()
+		check(constants.get("WORKER_SEQUENCE_FIRST") == 0 and constants.get("WORKER_SEQUENCE_LAST_INITIAL") == -1,"Track D initial sequence constants")
+		check(constants.get("LEASE_VALID_FOR_MS") == 30000 and constants.get("LEASE_RENEW_INTERVAL_MS") == 1000,"Track D lease policy constants")
