@@ -8,6 +8,9 @@ const MAX_DEPTH = 64
 static func encode_wire(kind: String, value: Variant) -> Dictionary:
 	var valid: Dictionary = Schemas.validate(kind, value)
 	if not valid.ok: return valid
+	if kind == "stage_result":
+		var attachments := _inline_stage_attachments(value.stage_record)
+		if not attachments.ok: return attachments
 	if kind in ["input_manifest","archive_manifest","stage_result","worker_message"]:
 		var identity: Dictionary = value.run_identity if kind == "stage_result" else value.identity
 		var expected: Dictionary = digest("versions",identity.versions)
@@ -49,6 +52,7 @@ static func digest(kind: String, value: Variant) -> Dictionary:
 static func verify_stage_result(message: Variant, bytes: PackedByteArray) -> Dictionary:
 	var checked := encode_wire("worker_message",message)
 	if not checked.ok: return checked
+	if message.kind != "STAGE_RESULT": return Schemas.failure("WIRE_SCHEMA_INVALID", "Expected STAGE_RESULT message")
 	var ref: Dictionary = message.payload_ref_or_inline
 	if bytes.size() != ref.byte_length: return Schemas.failure("WIRE_SCHEMA_INVALID", "stage_result byte_length mismatch")
 	var hash := HashingContext.new()
@@ -60,6 +64,26 @@ static func verify_stage_result(message: Variant, bytes: PackedByteArray) -> Dic
 	if decoded.value.run_identity != message.identity or decoded.value.stage_record.stage_id != message.stage_id:
 		return Schemas.failure("WIRE_SCHEMA_INVALID", "WorkerMessage/stage_result identity or stage mismatch")
 	return decoded
+
+## Inline formal values and their output references describe the same bytes.
+## External graph/canonical/input bytes still require consumer readback checks.
+static func _inline_stage_attachments(stage: Dictionary) -> Dictionary:
+	if stage.native_result == null: return Schemas.success(null)
+	if stage.stage_id == "INTENT_BIND" and stage.native_result.ok:
+		return _inline_artifact("intent",stage.native_result.bound_intent,stage.evidence_refs.bound_intent)
+	if stage.stage_id == "ORIGINAL_GRAPH" and stage.native_result.solution_trace != null:
+		return _inline_artifact("trace",stage.native_result.solution_trace,stage.evidence_refs.selected_trace_ref.trace)
+	return Schemas.success(null)
+
+static func _inline_artifact(kind: String, value: Dictionary, ref: Dictionary) -> Dictionary:
+	var encoded := encode_wire(kind,value)
+	if not encoded.ok: return encoded
+	var hash := HashingContext.new()
+	hash.start(HashingContext.HASH_SHA256)
+	hash.update(encoded.value)
+	if ref.byte_length != encoded.value.size() or ref.sha256 != hash.finish().hex_encode():
+		return Schemas.failure("WIRE_SCHEMA_INVALID", "Inline value differs from its " + kind + " ArtifactRef")
+	return Schemas.success(null)
 
 ## Internal value codec. It does not bypass the public record schema boundary.
 static func _encode_value(value: Variant) -> Dictionary:

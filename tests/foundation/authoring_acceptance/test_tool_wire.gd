@@ -22,6 +22,9 @@ func run() -> void:
 	_stage_protocol()
 	_stage_protocol_edges()
 	_consolidated()
+	_storage_protocol()
+	_storage_deep_contracts()
+	_storage_nonempty_contracts()
 	finish()
 
 # Protocol fixtures are values, not substitute Bake/Session implementations.
@@ -200,16 +203,16 @@ func _stage_protocol_edges() -> void:
 		var other := stage.duplicate(true)
 		other.stage_record.stage_id = stage_id
 		var encoded := Wire.encode_wire("stage_result",other)
-		check(not encoded.ok and encoded.issues[0].code == "DEPENDENCY_PENDING","unregistered stage has no generic storage " + stage_id)
+		check(not encoded.ok and encoded.issues[0].code == ("DEPENDENCY_PENDING" if stage_id == "MANUAL_RUNTIME" else "WIRE_SCHEMA_INVALID"),"unregistered or mismatched stage has no generic storage " + stage_id)
 	var graph := Wire.encode_wire("graph_archive",{"graph_archive_ref":{}})
-	check(not graph.ok and graph.issues[0].code == "DEPENDENCY_PENDING","no graph archive reconstruction or unregistered storage")
+	check(not graph.ok and graph.issues[0].code == "WIRE_SCHEMA_INVALID","no graph archive generic storage")
 	var failed := stage.duplicate(true)
 	failed.stage_record.execution = "ERROR"
 	failed.stage_record.reason = "Baker rejected input"
 	failed.stage_record.native_result.ok = false
 	failed.stage_record.native_result.level = null
 	var failure := Wire.encode_wire("stage_result",failed)
-	check(not failure.ok and failure.issues[0].code == "DEPENDENCY_PENDING" and failed.stage_record.native_result != null,"unsupported failure preserved, never rewritten to null")
+	check(not failure.ok and failure.issues[0].code == "WIRE_SCHEMA_INVALID" and failed.stage_record.native_result != null,"malformed failure rejected, never rewritten to null")
 	var message := _worker(stage)
 	for kind in ["HELLO","STAGE_STARTED","HEARTBEAT","EXIT","ERROR","CANCEL","LEASE"]:
 		for stage_id in ["","IPC","not_a_stage"]:
@@ -558,7 +561,7 @@ func _reader_precision() -> void:
 # Plain protocol values, not a real execution-project or package delivery.
 func _versions() -> Dictionary:
 	return {"record_version":"foundationversions.v1","tool_version":"authoringrun.v1",
-		"schemas":{"source_intent":"foundationtoolwire.v1","wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":Schemas.WORKER_PROTOCOL_VERSION},
+		"schemas":{"stage_storage":"foundationstagestorage.v1","graph_archive":"stategraph.v1","intent":"puzzleintent.v1","trace":"solutiontrace.v1","source_intent":"foundationtoolwire.v1","wire":"foundationtoolwire.v1","authoring":"levelauthoring.v1","intent_authoring":"puzzleintentauthoring.v1","snapshot":"authoringsnapshot.v1","source_map":"authoringsourcemap.v1","report":"levelacceptance.v1","source_manifest":"authoringsourcemanifest.v1","input_manifest":"authoringinputmanifest.v1","archive_manifest":"authoringarchivemanifest.v1","stage_result":"foundationtoolwire.v1","worker_message":Schemas.WORKER_PROTOCOL_VERSION},
 		"contracts":{"schema_version":1,"contract_version":"foundation.contract.v1","contract_revision":"v1.1","orientation_version":"cube24.v1","rule_version":"foundation.rules.v1","execution_version":"foundation.execution.v1","analysis_version":"foundation.analysis.v1","intent_version":"puzzleintent.v1","trace_version":"solutiontrace.v1"},
 		"engine":{"version":"4.7.2.stable.steam.ed1daf0bf","executable_sha256":"e".repeat(64)},
 		"modules":[{"path":"res://foundation/a.gd","sha256":"a".repeat(64),"version":"foundation.contract.v1"},{"path":"res://foundation/b.gd.uid","sha256":"b".repeat(64),"version":null}],
@@ -931,3 +934,495 @@ func _consolidated() -> void:
 		var constants: Dictionary = api.get_script().get_script_constant_map()
 		check(constants.get("WORKER_SEQUENCE_FIRST") == 0 and constants.get("WORKER_SEQUENCE_LAST_INITIAL") == -1,"Track D initial sequence constants")
 		check(constants.get("LEASE_VALID_FOR_MS") == 30000 and constants.get("LEASE_RENEW_INTERVAL_MS") == 1000,"Track D lease policy constants")
+
+# D87239...657E8 approved storage values; no solver/replayer substitute.
+func _storage_registry() -> Dictionary:
+	return {"stage_storage":"foundationstagestorage.v1","graph_archive":"stategraph.v1","intent":"puzzleintent.v1","trace":"solutiontrace.v1"}
+
+func _storage_policy(mode: int = 1) -> Dictionary:
+	return {"strategy":&"BFS","mode":mode,"validation_options":{"max_configurations":4096,"max_checks":100000},"filter_descriptor":{"filter_id":&"UNFILTERED","filter_version":"1","disabled_mechanics":[]}}
+
+func _storage_intent() -> Dictionary:
+	return {"intent_version":"puzzleintent.v1","intent_id":&"test","level_hash":"c".repeat(64),"rule_version":"foundation.rules.v1","required_mechanics":[],"optional_mechanics":[],"expected_milestones":[{"milestone_id":&"goal","required":true,"predicate":{"kind":4}}],"forbidden_bypasses":[]}
+
+func _storage_state() -> Dictionary:
+	return {"player":{"location":{"layer":0,"cube_id":&"cube","face":4},"orientation":0},"world_orientations":[0,0],"celestial":{"slot_id":&"sun"},"group_orientations":{},"mechanism_states":{},"level_flags":{}}
+
+func _storage_trace() -> Dictionary:
+	return {"trace_version":"solutiontrace.v1","level_hash":"c".repeat(64),"rule_version":"foundation.rules.v1","policy_descriptor":_storage_policy(),"initial_state":_storage_state(),"initial_statekey":"initial","steps":[],"goal_statekey":"initial","total_actions":0,"shortest":true}
+
+func _storage_graph() -> Dictionary:
+	return {"graph_version":"stategraph.v1","level_hash":"c".repeat(64),"rule_version":"foundation.rules.v1","initial_key":"initial","policy_descriptor":_storage_policy(),"nodes":{"initial":{"state_key":"initial","state":_storage_state(),"depth":0,"is_goal":true,"expanded":true,"predecessor_edge":null}},"edges":[],"forward":{"initial":[]},"reverse":{"initial":[]},"complete":true,"stop_reason":0}
+
+func _storage_metrics() -> Dictionary:
+	return {"explored_states":1,"visited_states":1,"generated_edges":0,"duplicate_states":0,"goal_states":1,"max_depth_reached":0,"solution_length":0,"action_evaluations":0,"rejected_actions":0,"no_op_actions":0,"filtered_edges":0,"safety_unproven_rejections":0,"elapsed_ms":0,"shortest_solution_count":null,"shortest_solution_count_complete":false}
+
+func _storage_search() -> Dictionary:
+	return {"status":0,"graph_archive_ref":null,"solution_trace":null,"metrics":_storage_metrics(),"budget_reason":0,"issues":[],"validation":null}
+
+func _storage_milestone() -> Dictionary:
+	return {"status":0,"scope":"SINGLE_TRACE","matched_milestones":[&"goal"],"missing_required":[],"sample_indices":{&"goal":0},"findings":[],"issues":[]}
+
+func _storage_stage(id: String) -> Dictionary:
+	var value := _bake_stage()
+	value.run_identity.versions.schemas.merge(_storage_registry(),true)
+	var owner_module: Array = {
+		"AUTHORING":["4A","foundation/authoring/authoring_schema.gd"],"BAKE":["4A","foundation/authoring/authoring_adapter.gd"],
+		"INTENT_BIND":["4A","foundation/authoring/intent_binder.gd"],"INTENT_VALIDATE":["3C","foundation/quality/intent/intent_validation.gd"],
+		"ORIGINAL_GRAPH":["3A","foundation/solver/state_explorer.gd"],"SOFTLOCK":["3B","foundation/quality/softlock/softlock_analyzer.gd"],
+		"ABLATION":["3C","foundation/quality/intent/ablation_analyzer.gd"],"TRACE_SEMANTICS":["3A","foundation/solver/solution_trace.gd"],
+		"MILESTONES":["3C","foundation/quality/intent/milestone_analyzer.gd"],"GRAPHICAL_REPLAY":["3D","foundation/parity/trace_replayer.gd"]}[id]
+	var stage: Dictionary = value.stage_record
+	stage.stage_id = id
+	stage.owner = owner_module[0]
+	stage.module_ref = "res://" + owner_module[1]
+	if id != "BAKE": value.run_identity.versions.modules.append({"path":stage.module_ref,"sha256":"d".repeat(64),"version":null})
+	value.run_identity.versions.modules.sort_custom(func(a,b): return a.path < b.path)
+	value.run_identity.execution_digest = _raw_digest("versions",value.run_identity.versions)
+	if id == "BAKE": return value
+	var canonical: Dictionary = stage.evidence_refs.canonical.duplicate(true)
+	var bake_ref := _ref("artifacts/stages/BAKE/stage_result.wire","d".repeat(64),"foundationtoolwire.v1")
+	var bound_ref := _ref("artifacts/stages/INTENT_BIND/bound_intent.wire",_raw_digest("intent",_storage_intent()),"puzzleintent.v1")
+	var trace_ref := _ref("artifacts/stages/ORIGINAL_GRAPH/selected_trace.wire",_raw_digest("trace",_storage_trace()),"solutiontrace.v1")
+	bound_ref.byte_length = _raw_wire("intent",_storage_intent()).size()
+	trace_ref.byte_length = _raw_wire("trace",_storage_trace()).size()
+	stage.actual_policy = {}
+	stage.actual_budget = {}
+	stage.evidence_refs = {}
+	if id not in ["AUTHORING","INTENT_BIND"]:
+		stage.input_refs = {"input_manifest":stage.input_refs.input_manifest,"bake_result":bake_ref,"canonical":canonical,"level_hash":"c".repeat(64),"rule_version":"foundation.rules.v1","initial_statekey":"initial"}
+	if id in ["INTENT_VALIDATE","ABLATION","MILESTONES"]: stage.input_refs["bound_intent"] = bound_ref
+	if id in ["TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"]:
+		stage.input_refs["selected_trace"] = trace_ref
+		stage.input_refs["selected_trace_digest"] = trace_ref.sha256
+	if id in ["ORIGINAL_GRAPH","SOFTLOCK","ABLATION"]:
+		stage.actual_policy = _storage_policy(0 if id == "ABLATION" else 1)
+		stage.actual_budget = {"max_states":10000,"max_edges":100000,"max_depth":-1,"max_runtime_ms":0,"max_action_evaluations":200000}
+	match id:
+		"AUTHORING","INTENT_VALIDATE": stage.native_result = {"ok":true,"issues":[]}
+		"INTENT_BIND":
+			stage.input_refs.merge({"bake_result":bake_ref,"canonical":canonical,"source_intent_digest":"f".repeat(64)})
+			stage.native_result = {"ok":true,"bound_intent":_storage_intent(),"source_intent_digest":"f".repeat(64),"issues":[]}
+			stage.evidence_refs = {"bound_intent":bound_ref}
+		"ORIGINAL_GRAPH":
+			stage.native_result = _storage_search()
+			stage.native_result.graph_archive_ref = _ref("artifacts/stages/ORIGINAL_GRAPH/graph.wire",_raw_digest("graph_archive",_storage_graph()),"foundationtoolwire.v1")
+			stage.native_result.solution_trace = _storage_trace()
+			stage.evidence_refs = {"graph_archive":stage.native_result.graph_archive_ref.duplicate(true),"selected_trace_ref":{"trace":trace_ref,"origin":"ORIGINAL_GRAPH"}}
+		"SOFTLOCK":
+			stage.input_refs["original_graph_result"] = _ref("artifacts/stages/ORIGINAL_GRAPH/stage_result.wire","a".repeat(64),"foundationtoolwire.v1")
+			stage.actual_budget = {"max_nodes":10000,"max_edges":100000,"max_runtime_ms":0}
+			stage.native_result = {"status":0,"initial_key":"initial","reachable_states":["initial"],"goal_reachable_states":["initial"],"softlock_states":[],"softlock_count":0,"unknown_states":[],"reset_classification":1,"reset_recoverable_count":0,"witnesses":[],"metrics":{"nodes_checked":1,"edges_checked":0,"elapsed_ms":0},"issues":[]}
+		"ABLATION":
+			var baseline := _storage_search()
+			baseline.solution_trace = _storage_trace()
+			baseline.solution_trace.policy_descriptor = _storage_policy(0)
+			baseline.graph_archive_ref = _ref("artifacts/stages/ABLATION/baseline_graph.wire","a".repeat(64),"foundationtoolwire.v1")
+			stage.native_result = {"status":0,"intent":_storage_intent(),"baseline":baseline,"ablations":[],"milestone_analysis":null,"advisories":[],"issues":[]}
+			stage.evidence_refs = {"baseline_graph_archive":baseline.graph_archive_ref.duplicate(true)}
+		"TRACE_SEMANTICS": stage.native_result = {"ok":true,"transitions":[],"issues":[]}
+		"MILESTONES": stage.native_result = _storage_milestone()
+		"GRAPHICAL_REPLAY":
+			stage.actual_policy = {"mode":1,"max_steps":10000,"max_runtime_ms":0,"step_timeout_ms":1000}
+			stage.actual_budget = {"max_steps":10000,"max_runtime_ms":0,"step_timeout_ms":1000,"validation_options":{"max_configurations":4096,"max_checks":100000}}
+			stage.native_result = {"status":0,"trace_length":0,"matched_steps":0,"divergence_step":null,"expected_statekey":"initial","actual_statekey":"initial","action":null,"issues":[]}
+	return value
+
+func _storage_error(id: String) -> Dictionary:
+	var value := _storage_stage(id)
+	var stage: Dictionary = value.stage_record
+	stage.execution = "ERROR"
+	stage.reason = "formal native error"
+	if id == "BAKE":
+		stage.native_result.ok = false
+		stage.native_result.level = null
+		stage.native_result.validation = null
+		stage.native_result.bake_provenance = null
+		stage.native_result.source_map.level_hash = null
+		stage.native_result.source_map.entries = []
+		stage.native_result.issues = [{"code":"AUTHORING_INVALID","stage":"BAKE","path":"input","message":"invalid input","source_refs":[],"upstream":[]}]
+		stage.evidence_refs.canonical = null
+	elif stage.native_result.has("ok"):
+		stage.native_result.ok = false
+		if id == "INTENT_BIND":
+			stage.native_result.bound_intent = null
+			stage.native_result.source_intent_digest = null
+			stage.evidence_refs.bound_intent = null
+	else:
+		stage.native_result.status = 3 if id in ["ORIGINAL_GRAPH","MILESTONES"] else 2
+		if id == "SOFTLOCK":
+			stage.native_result.merge({"softlock_states":null,"softlock_count":null,"reset_classification":2,"reset_recoverable_count":null},true)
+		stage.native_result.issues = [{"code":3000,"severity":0,"path":"input","message":"invalid input","details":{},"upstream":[]}]
+	return value
+
+func _storage_roundtrip(kind: String, value: Dictionary, label: String) -> void:
+	var encoded := Wire.encode_wire(kind,value)
+	check(encoded.ok,label + " encode")
+	var decoded := Wire.decode_wire(kind,_raw_wire(kind,value))
+	check(decoded.ok and decoded.value == value,label + " exact decode")
+	if encoded.ok: check(encoded.value == _raw_wire(kind,value),label + " canonical bytes")
+
+func _storage_protocol() -> void:
+	var versions := _versions()
+	versions.schemas.merge(_storage_registry(),true)
+	_storage_roundtrip("versions",versions,"storage current mandatory registry")
+	for key in _storage_registry():
+		var missing := versions.duplicate(true)
+		missing.schemas.erase(key)
+		_invalid_schema("versions",missing,"storage missing mandatory " + key)
+		for version in ["unknown.v1",_storage_registry()[key].replace(".v1",".v2"),null,1]:
+			var bad := versions.duplicate(true)
+			bad.schemas[key] = version
+			_invalid_schema("versions",bad,"storage wrong registry " + key + str(version))
+	var extra := versions.duplicate(true)
+	extra.schemas["unregistered_storage"] = "foundationtoolwire.v1"
+	_invalid_schema("versions",extra,"storage unknown registration")
+	for id in ["AUTHORING","BAKE","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"]:
+		var good := _storage_stage(id)
+		_storage_roundtrip("stage_result",good,"storage COMPLETED " + id)
+		_storage_roundtrip("stage_result",_storage_error(id),"storage ERROR " + id)
+		var cancelled := good.duplicate(true)
+		cancelled.stage_record.execution = "CANCELLED"
+		cancelled.stage_record.reason = "user cancellation after return"
+		_storage_roundtrip("stage_result",cancelled,"storage CANCELLED preserves return " + id)
+		for terminal in ["ERROR","INCOMPLETE","CANCELLED"]:
+			var absent := good.duplicate(true)
+			absent.stage_record.execution = terminal
+			absent.stage_record.reason = "call ended without return"
+			absent.stage_record.native_result = null
+			for key in absent.stage_record.evidence_refs: absent.stage_record.evidence_refs[key] = null
+			_storage_roundtrip("stage_result",absent,"storage no return " + id + terminal)
+		for field in good.stage_record.native_result:
+			var missing := good.duplicate(true)
+			missing.stage_record.native_result.erase(field)
+			_invalid_schema("stage_result",missing,"storage native missing " + id + field)
+			var wrong := good.duplicate(true)
+			wrong.stage_record.native_result[field] = "wrong type" if typeof(good.stage_record.native_result[field]) != TYPE_STRING else 42
+			_invalid_schema("stage_result",wrong,"storage native wrong type " + id + field)
+		for part in ["native_result","input_refs","actual_policy","actual_budget","evidence_refs"]:
+			var unknown := good.duplicate(true)
+			unknown.stage_record[part]["extra"] = true
+			_invalid_schema("stage_result",unknown,"storage closed " + id + part)
+		for field in ["native_result","input_refs","actual_policy","actual_budget","evidence_refs"]:
+			var nil := good.duplicate(true)
+			nil.stage_record[field] = null
+			_invalid_schema("stage_result",nil,"storage illegal null " + id + field)
+		for field in ["graph","live_graph","graph_handle","attachments"]:
+			var forbidden := good.duplicate(true)
+			forbidden.stage_record.native_result[field] = {}
+			_invalid_schema("stage_result",forbidden,"storage forbidden attachment " + id + field)
+		for format in ["rawbytes.v1","foundationtoolwire.v1","unknown.v1"]:
+			var bad := good.duplicate(true)
+			bad.stage_record.input_refs.input_manifest.format_version = format
+			_invalid_schema("stage_result",bad,"storage wrong input ArtifactRef " + id + format)
+		for path in ["E:/private/input.ready","/tmp/input.ready","../input.ready"]:
+			var bad := good.duplicate(true)
+			bad.stage_record.input_refs.input_manifest.relative_path = path
+			_invalid_schema("stage_result",bad,"storage absolute input " + id + path)
+		var failed := good.duplicate(true)
+		failed.stage_record.execution = "FAILED"
+		_invalid_schema("stage_result",failed,"storage has no task FAILED enum " + id)
+	var bake_error := _storage_error("BAKE")
+	for field in bake_error.stage_record.native_result:
+		var missing := bake_error.duplicate(true)
+		missing.stage_record.native_result.erase(field)
+		_invalid_schema("stage_result",missing,"BAKE ERROR missing " + field)
+	var bad_bake := bake_error.duplicate(true)
+	bad_bake.stage_record.native_result["extra"] = true
+	_invalid_schema("stage_result",bad_bake,"BAKE ERROR unknown")
+	bad_bake = bake_error.duplicate(true)
+	bad_bake.stage_record.native_result.level = _storage_stage("BAKE").stage_record.native_result.level
+	bad_bake.stage_record.evidence_refs.canonical = bad_bake.stage_record.native_result.level
+	_invalid_schema("stage_result",bad_bake,"BAKE ERROR cannot publish successful canonical")
+	bad_bake = bake_error.duplicate(true)
+	bad_bake.stage_record.evidence_refs["graph_archive"] = _ref("artifacts/stages/BAKE/graph.wire","a".repeat(64),"foundationtoolwire.v1")
+	_invalid_schema("stage_result",bad_bake,"BAKE ERROR graph forbidden")
+	var incomplete := bake_error.duplicate(true)
+	var issue := {"code":1601,"severity":0,"path":"validation","message":"validation budget reached","details":{},"entity_ids":[]}
+	incomplete.stage_record.execution = "INCOMPLETE"
+	incomplete.stage_record.native_result.issues = [issue]
+	incomplete.stage_record.native_result.validation = {"status":2,"issues":[issue.duplicate(true)],"configurations_checked":1,"checks_performed":1}
+	_storage_roundtrip("stage_result",incomplete,"Validator INCOMPLETE retained without IPC ERROR")
+	var worker_error := _inline("ERROR")
+	worker_error.identity = bake_error.run_identity.duplicate(true)
+	_invalid_schema("stage_result",worker_error,"Worker ERROR is not stage_result")
+	worker_error.payload_ref_or_inline = bake_error.stage_record
+	_invalid_schema("worker_message",worker_error,"stage execution ERROR is not Worker ERROR inline")
+	_storage_helpers()
+
+func _storage_helpers() -> void:
+	for kind in ["intent","trace","graph_archive"]:
+		var value: Dictionary = {"intent":_storage_intent(),"trace":_storage_trace(),"graph_archive":_storage_graph()}[kind]
+		_storage_roundtrip(kind,value,"storage helper " + kind)
+		for field in value:
+			var missing := value.duplicate(true)
+			missing.erase(field)
+			_invalid_schema(kind,missing,"storage helper missing " + kind + field)
+		var extra := value.duplicate(true)
+		extra["extra"] = true
+		_invalid_schema(kind,extra,"storage helper closed " + kind)
+		var version_field: String = {"intent":"intent_version","trace":"trace_version","graph_archive":"graph_version"}[kind]
+		for version in ["foundationtoolwire.v1","unknown.v1","unsupported.v2"]:
+			var bad := value.duplicate(true)
+			bad[version_field] = version
+			_invalid_schema(kind,bad,"storage helper wrong version " + kind)
+		var bad := value.duplicate(true)
+		bad.rule_version = "E:/private/rules"
+		_invalid_schema(kind,bad,"storage helper absolute path " + kind)
+	var bind := _storage_stage("INTENT_BIND")
+	bind.stage_record.evidence_refs.bound_intent.format_version = "foundationtoolwire.v1"
+	_invalid_schema("stage_result",bind,"intent ArtifactRef requires puzzleintent version")
+	var original := _storage_stage("ORIGINAL_GRAPH")
+	original.stage_record.evidence_refs.selected_trace_ref.origin = "ABLATION"
+	_invalid_schema("stage_result",original,"trace producer must be original graph")
+	original = _storage_stage("ORIGINAL_GRAPH")
+	original.stage_record.native_result.graph_archive_ref.format_version = "stategraph.v1"
+	original.stage_record.evidence_refs.graph_archive = original.stage_record.native_result.graph_archive_ref.duplicate(true)
+	_invalid_schema("stage_result",original,"graph semantic registry is not ArtifactRef format")
+	var ablation := _storage_stage("ABLATION")
+	ablation.stage_record.native_result.baseline.graph_archive_ref.relative_path = "artifacts/stages/ORIGINAL_GRAPH/graph.wire"
+	ablation.stage_record.evidence_refs.baseline_graph_archive = ablation.stage_record.native_result.baseline.graph_archive_ref.duplicate(true)
+	_invalid_schema("stage_result",ablation,"ablation cannot substitute original graph archive")
+	ablation = _storage_stage("ABLATION")
+	ablation.stage_record.native_result["graph_archive_ref"] = ablation.stage_record.native_result.baseline.graph_archive_ref
+	_invalid_schema("stage_result",ablation,"ablation archive only nested baseline")
+
+func _storage_deep_contracts() -> void:
+	for id in ["AUTHORING","BAKE","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"]:
+		var good := _storage_stage(id)
+		for part in ["input_refs","actual_policy","actual_budget","evidence_refs"]:
+			for field in good.stage_record[part]:
+				var missing := good.duplicate(true)
+				missing.stage_record[part].erase(field)
+				_invalid_schema("stage_result",missing,"storage branch missing " + id + part + field)
+		var leak := good.duplicate(true)
+		leak.stage_record.warnings = [{"code":"STORAGE_ERROR","stage":id,"path":"input","message":"failed at E:/private/run","source_refs":[],"upstream":[]}]
+		_invalid_schema("stage_result",leak,"storage nested warning machine path " + id)
+		var bad_owner := good.duplicate(true)
+		bad_owner.stage_record.owner = "4D"
+		_invalid_schema("stage_result",bad_owner,"storage exact producer owner " + id)
+		var bad_module := good.duplicate(true)
+		bad_module.stage_record.module_ref = "res://foundation/a.gd"
+		_invalid_schema("stage_result",bad_module,"storage exact producer module " + id)
+		var error := _storage_error(id)
+		error.stage_record.execution = "COMPLETED"
+		error.stage_record.reason = ""
+		_invalid_schema("stage_result",error,"native error cannot become completed " + id)
+		for terminal in ["CANCELLED","INCOMPLETE"]:
+			error = _storage_error(id)
+			error.stage_record.execution = terminal
+			_invalid_schema("stage_result",error,"native error priority " + id + terminal)
+	for id in ["ORIGINAL_GRAPH","SOFTLOCK","ABLATION","MILESTONES","GRAPHICAL_REPLAY"]:
+		var partial := _storage_stage(id)
+		partial.stage_record.execution = "INCOMPLETE"
+		partial.stage_record.reason = "native budget exhausted"
+		partial.stage_record.native_result.status = {"ORIGINAL_GRAPH":2,"SOFTLOCK":1,"ABLATION":1,"MILESTONES":2,"GRAPHICAL_REPLAY":3}[id]
+		if id == "ORIGINAL_GRAPH": partial.stage_record.native_result.budget_reason = 1
+		if id == "SOFTLOCK": partial.stage_record.native_result.merge({"softlock_states":null,"softlock_count":null,"reset_classification":2,"reset_recoverable_count":null},true)
+		_storage_roundtrip("stage_result",partial,"storage native INCOMPLETE " + id)
+	var bind := _storage_stage("INTENT_BIND")
+	for field in ["byte_length","sha256"]:
+		var bad := bind.duplicate(true)
+		bad.stage_record.evidence_refs.bound_intent[field] = 0 if field == "byte_length" else "0".repeat(64)
+		_invalid_schema("stage_result",bad,"bound intent exact inline bytes " + field)
+	var original := _storage_stage("ORIGINAL_GRAPH")
+	for field in ["byte_length","sha256"]:
+		var bad := original.duplicate(true)
+		bad.stage_record.evidence_refs.selected_trace_ref.trace[field] = 0 if field == "byte_length" else "0".repeat(64)
+		_invalid_schema("stage_result",bad,"selected trace exact inline bytes " + field)
+	for id in ["INTENT_BIND","ORIGINAL_GRAPH","ABLATION"]:
+		var good := _storage_stage(id)
+		for field in good.stage_record.evidence_refs:
+			var bad := good.duplicate(true)
+			bad.stage_record.evidence_refs[field] = null
+			_invalid_schema("stage_result",bad,"required output attachment " + id + field)
+		var absent := good.duplicate(true)
+		absent.stage_record.execution = "CANCELLED"
+		absent.stage_record.reason = "cancelled before return"
+		absent.stage_record.native_result = null
+		_invalid_schema("stage_result",absent,"no return forbids historical output " + id)
+	for id in ["INTENT_VALIDATE","ABLATION","MILESTONES"]:
+		var bad := _storage_stage(id)
+		bad.stage_record.input_refs.bound_intent.relative_path = "artifacts/stages/" + id + "/bound_intent.wire"
+		_invalid_schema("stage_result",bad,"intent input original producer path " + id)
+	for id in ["TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"]:
+		var bad := _storage_stage(id)
+		bad.stage_record.input_refs.selected_trace_digest = "0".repeat(64)
+		_invalid_schema("stage_result",bad,"selected trace digest exact " + id)
+		bad = _storage_stage(id)
+		bad.stage_record.input_refs.selected_trace.format_version = "puzzleintent.v1"
+		_invalid_schema("stage_result",bad,"selected trace format exact " + id)
+	var replay := _storage_stage("GRAPHICAL_REPLAY")
+	replay.stage_record.actual_policy.mode = 0
+	_invalid_schema("stage_result",replay,"logical replay cannot be graphical")
+	for kind in ["intent","trace","graph_archive"]:
+		var value: Dictionary = {"intent":_storage_intent(),"trace":_storage_trace(),"graph_archive":_storage_graph()}[kind]
+		for field in value:
+			var wrong := value.duplicate(true)
+			wrong[field] = null
+			_invalid_schema(kind,wrong,"storage helper forbidden null " + kind + field)
+	var intent := _storage_intent()
+	for field in ["extra","face_id"]:
+		var bad := intent.duplicate(true)
+		bad.expected_milestones[0].predicate[field] = &"face"
+		_invalid_schema("intent",bad,"intent exclusive predicate " + field)
+	var graph := _storage_graph()
+	graph.complete = false
+	graph.stop_reason = 2
+	_storage_roundtrip("graph_archive",graph,"partial graph remains archival")
+	graph.stop_reason = 3
+	_storage_roundtrip("graph_archive",graph,"error graph prefix remains archival")
+	for field in graph.nodes.initial:
+		var bad := graph.duplicate(true)
+		bad.nodes.initial.erase(field)
+		_invalid_schema("graph_archive",bad,"closed graph node missing " + field)
+	var bad_graph := graph.duplicate(true)
+	bad_graph.nodes.initial.state.player["extra"] = true
+	_invalid_schema("graph_archive",bad_graph,"closed graph nested PuzzleState")
+	var bad_trace := _storage_trace()
+	bad_trace.initial_state.player["extra"] = true
+	_invalid_schema("trace",bad_trace,"closed trace nested PuzzleState")
+	var bake := _storage_error("BAKE")
+	var validation_issue := {"code":1601,"severity":0,"path":"validation","message":"invalid captured geometry","details":{},"entity_ids":[]}
+	bake.stage_record.native_result.issues = [validation_issue]
+	bake.stage_record.native_result.validation = {"status":1,"issues":[validation_issue.duplicate(true)],"configurations_checked":1,"checks_performed":2}
+	var failed_entry: Dictionary = _storage_stage("BAKE").stage_record.native_result.source_map.entries[0].duplicate(true)
+	failed_entry.canonical_path = null
+	bake.stage_record.native_result.source_map.entries = [failed_entry]
+	_storage_roundtrip("stage_result",bake,"BAKE INVALID validation and captured reader entry retained")
+	for mutation in ["canonical_path","valid_status","issues_mismatch","empty_issues","provenance"]:
+		var bad := bake.duplicate(true)
+		match mutation:
+			"canonical_path": bad.stage_record.native_result.source_map.entries[0].canonical_path = "cubes[0].center2"
+			"valid_status": bad.stage_record.native_result.validation.status = 0
+			"issues_mismatch": bad.stage_record.native_result.validation.issues[0].message = "different failure"
+			"empty_issues": bad.stage_record.native_result.issues = []
+			"provenance": bad.stage_record.native_result.bake_provenance = _storage_stage("BAKE").stage_record.native_result.bake_provenance
+		_invalid_schema("stage_result",bad,"BAKE failure invariants " + mutation)
+	var trace_producer := _storage_stage("ORIGINAL_GRAPH")
+	trace_producer.stage_record.evidence_refs.selected_trace_ref.trace.format_version = "foundationtoolwire.v1"
+	_invalid_schema("stage_result",trace_producer,"trace output uses solutiontrace ArtifactRef")
+	for id in ["AUTHORING","INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"]:
+		var warned := _storage_stage(id)
+		warned.stage_record.warnings = [{"code":"STORAGE_DIAGNOSTIC","stage":id,"path":"input","message":"observed tool diagnostic","source_refs":[],"upstream":[]}]
+		_storage_roundtrip("stage_result",warned,"same-stage actual warning " + id)
+		warned.stage_record.warnings[0].stage = "BAKE"
+		_invalid_schema("stage_result",warned,"unassociated diagnostic belongs to parent " + id)
+	var changed_intent := _storage_stage("INTENT_BIND")
+	changed_intent.stage_record.native_result.bound_intent.intent_id = &"changed"
+	_invalid_schema("stage_result",changed_intent,"changed bound intent cannot retain stale attachment")
+	var changed_trace := _storage_stage("ORIGINAL_GRAPH")
+	changed_trace.stage_record.native_result.solution_trace.shortest = false
+	_invalid_schema("stage_result",changed_trace,"changed selected trace cannot retain stale attachment")
+	for detail_value in [1.25,Vector3(1,2,3),Basis.IDENTITY,Transform3D.IDENTITY]:
+		var diagnostic := _storage_stage("AUTHORING")
+		diagnostic.stage_record.warnings = [{"code":"STORAGE_DIAGNOSTIC","stage":"AUTHORING","path":"input","message":"observed formal detail","source_refs":[],"upstream":[{"code":3000,"severity":0,"path":"input","message":"formal detail","details":{"observed":detail_value},"upstream":[]}]}]
+		_storage_roundtrip("stage_result",diagnostic,"formal DiagnosticMap preserves wire scalar " + str(typeof(detail_value)))
+	var ipc_error := _inline("ERROR")
+	var not_stage := Wire.verify_stage_result(ipc_error,PackedByteArray())
+	check(not not_stage.ok and not_stage.value == null and not_stage.issues[0].code == "WIRE_SCHEMA_INVALID","Worker ERROR cannot enter STAGE_RESULT byte verifier")
+
+func _storage_nonempty_trace() -> Dictionary:
+	var trace := _storage_trace()
+	var middle := _storage_state()
+	middle.player.location.layer = 1
+	trace.steps = [{"index":1,"action":{"kind":1},"expected_state":middle,"resulting_statekey":"middle","global_kind":4},{"index":2,"action":{"kind":1},"expected_state":_storage_state(),"resulting_statekey":"initial","global_kind":4}]
+	trace.total_actions = 2
+	trace.shortest = false
+	return trace
+
+func _storage_nested_at(value: Dictionary, path: Array) -> Dictionary:
+	var current: Variant = value
+	for key in path: current = current[key]
+	return current
+
+func _storage_closed_nested(kind: String, value: Dictionary, path: Array, label: String) -> void:
+	var record := _storage_nested_at(value,path)
+	for field in record:
+		var missing := value.duplicate(true)
+		_storage_nested_at(missing,path).erase(field)
+		_invalid_schema(kind,missing,label + " missing " + str(field))
+		var wrong := value.duplicate(true)
+		_storage_nested_at(wrong,path)[field] = "wrong type" if typeof(record[field]) != TYPE_STRING else 42
+		_invalid_schema(kind,wrong,label + " wrong type " + str(field))
+	var unknown := value.duplicate(true)
+	_storage_nested_at(unknown,path)["unknown_field"] = true
+	_invalid_schema(kind,unknown,label + " unknown field")
+
+func _storage_nonempty_contracts() -> void:
+	var trace := _storage_nonempty_trace()
+	_storage_roundtrip("trace",trace,"nonempty TraceStep ordered array")
+	_storage_closed_nested("trace",trace,["steps",0],"TraceStep")
+	_storage_closed_nested("trace",trace,["steps",0,"action"],"TraceStep action union")
+	_storage_closed_nested("trace",trace,["steps",0,"expected_state"],"TraceStep expected state")
+	var graph := _storage_graph()
+	graph.nodes["middle"] = {"state_key":"middle","state":trace.steps[0].expected_state.duplicate(true),"depth":1,"is_goal":false,"expanded":true,"predecessor_edge":0}
+	graph.edges = [{"edge_id":0,"from_key":"initial","to_key":"middle","action":{"kind":1},"global_kind":4},{"edge_id":1,"from_key":"middle","to_key":"initial","action":{"kind":1},"global_kind":4}]
+	graph.forward = {"initial":[0],"middle":[1]}
+	graph.reverse = {"initial":[1],"middle":[0]}
+	_storage_roundtrip("graph_archive",graph,"nonempty GraphEdge and adjacency arrays")
+	_storage_closed_nested("graph_archive",graph,["edges",0],"GraphEdge")
+	_storage_closed_nested("graph_archive",graph,["nodes","middle"],"GraphNode nonnull predecessor")
+	_storage_closed_nested("graph_archive",graph,["edges",0,"action"],"GraphEdge action union")
+	var semantic := _storage_stage("TRACE_SEMANTICS")
+	semantic.stage_record.native_result.transitions = [{"status":0,"previous_state":_storage_state(),"next_state":trace.steps[0].expected_state.duplicate(true),"action":{"kind":1},"changed":true,"rejection_code":0,"issues":[],"global_kind":4},{"status":0,"previous_state":trace.steps[0].expected_state.duplicate(true),"next_state":_storage_state(),"action":{"kind":1},"changed":true,"rejection_code":0,"issues":[],"global_kind":4}]
+	_storage_roundtrip("stage_result",semantic,"nonempty TransitionResult ordered array")
+	_storage_closed_nested("stage_result",semantic,["stage_record","native_result","transitions",0],"TransitionResult")
+	_storage_closed_nested("stage_result",semantic,["stage_record","native_result","transitions",0,"action"],"TransitionResult action union")
+	var softlock := _storage_stage("SOFTLOCK")
+	softlock.stage_record.native_result.softlock_states = ["trap_b","trap_a"]
+	softlock.stage_record.native_result.softlock_count = 2
+	softlock.stage_record.native_result.witnesses = [{"target_key":"trap_b","edge_ids":[1,0]},{"target_key":"trap_a","edge_ids":[0]}]
+	_storage_roundtrip("stage_result",softlock,"nonempty GraphPath witness native order")
+	_storage_closed_nested("stage_result",softlock,["stage_record","native_result","witnesses",0],"GraphPath")
+	var ablation := _storage_stage("ABLATION")
+	var mechanic_finding := {"code":4000,"severity":0,"subject_ids":[&"bypass"],"scope":&"MECHANIC_ABLATION","trace":trace.duplicate(true),"details":{"disabled_mechanics":[0],"required_mechanics":[0],"bypass_ids":[&"bypass"]}}
+	var milestone_finding := {"code":4001,"severity":0,"subject_ids":[&"goal"],"scope":&"SINGLE_TRACE","trace":null,"details":{"sample_indices":{&"goal":null}}}
+	var unused_finding := {"code":4002,"severity":1,"subject_ids":[&"mechanism"],"scope":&"RETURNED_SHORTEST_TRACE","trace":null,"details":{"mechanism_id":&"mechanism","required_mechanics":[],"optional_mechanics":[1],"observed_used":false}}
+	var witness_trace := trace.duplicate(true)
+	witness_trace.policy_descriptor = _storage_policy(0)
+	witness_trace.policy_descriptor.filter_descriptor = {"filter_id":&"MECHANIC_ABLATION","filter_version":"1","disabled_mechanics":[0]}
+	mechanic_finding.trace = witness_trace.duplicate(true)
+	var ablated_metrics := _storage_metrics()
+	ablated_metrics.solution_length = 2
+	var item := {"status":0,"disabled_mechanics":[0],"baseline_status":0,"ablated_status":0,"essential":false,"bypass_detected":true,"findings":[mechanic_finding],"solution_trace_if_any":witness_trace,"metrics":{"baseline":_storage_metrics(),"ablated":ablated_metrics},"issues":[]}
+	ablation.stage_record.native_result.ablations = [item]
+	ablation.stage_record.native_result.milestone_analysis = {"status":1,"scope":"SINGLE_TRACE","matched_milestones":[],"missing_required":[&"goal"],"sample_indices":{&"goal":null},"findings":[milestone_finding],"issues":[]}
+	ablation.stage_record.native_result.advisories = [unused_finding]
+	_storage_roundtrip("stage_result",ablation,"nonempty AblationItem findings milestone and advisories")
+	for row in [["ablations",0],["ablations",0,"metrics"],["ablations",0,"metrics","baseline"],["ablations",0,"metrics","ablated"],["ablations",0,"findings",0],["ablations",0,"findings",0,"details"],["milestone_analysis"],["milestone_analysis","findings",0],["milestone_analysis","findings",0,"details"],["advisories",0],["advisories",0,"details"]]:
+		var path: Array = ["stage_record","native_result"]
+		path.append_array(row)
+		_storage_closed_nested("stage_result",ablation,path,"nested ablation " + str(row))
+	var milestones := _storage_stage("MILESTONES")
+	milestones.stage_record.native_result = ablation.stage_record.native_result.milestone_analysis.duplicate(true)
+	_storage_roundtrip("stage_result",milestones,"nonempty milestone bypass finding remains COMPLETED")
+	_storage_closed_nested("stage_result",milestones,["stage_record","native_result","findings",0],"Milestone QualityFinding")
+	for value in [semantic,softlock,ablation]:
+		var ordered: Dictionary = value.duplicate(true)
+		var native: Dictionary = ordered.stage_record.native_result
+		var field: String = {"TRACE_SEMANTICS":"transitions","SOFTLOCK":"witnesses","ABLATION":"advisories"}[ordered.stage_record.stage_id]
+		if field == "advisories":
+			var other: Dictionary = native.advisories[0].duplicate(true)
+			other.details.mechanism_id = &"second"
+			native.advisories.append(other)
+		var before := Wire.encode_wire("stage_result",ordered)
+		native[field].reverse()
+		var after := Wire.encode_wire("stage_result",ordered)
+		check(before.ok and after.ok and before.value != after.value,"native array order changes stored bytes " + field)
+		_storage_roundtrip("stage_result",ordered,"native reversed order preserved " + field)
+	for row in [["ablations",0,"findings",0],["milestone_analysis","findings",0],["advisories",0]]:
+		var wrong_severity := ablation.duplicate(true)
+		var path: Array = ["stage_record","native_result"]
+		path.append_array(row)
+		var finding := _storage_nested_at(wrong_severity,path)
+		finding.severity = 0 if finding.code == 4002 else 1
+		_invalid_schema("stage_result",wrong_severity,"formal QualityFinding severity " + str(finding.code))
+	var observed := ablation.duplicate(true)
+	observed.stage_record.native_result.advisories[0].details.observed_used = true
+	_invalid_schema("stage_result",observed,"UNUSED_MECHANISM cannot report observed use")
+	var no_op := semantic.duplicate(true)
+	no_op.stage_record.native_result.transitions[0].next_state = _storage_state()
+	no_op.stage_record.native_result.transitions[0].changed = false
+	no_op.stage_record.native_result.transitions[0].global_kind = 0
+	_invalid_schema("stage_result",no_op,"successful Trace semantics cannot contain no-op transition")
