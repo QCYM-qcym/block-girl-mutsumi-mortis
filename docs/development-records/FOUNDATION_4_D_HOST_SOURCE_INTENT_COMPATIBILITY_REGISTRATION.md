@@ -14,3 +14,10 @@ This reuses the documentary PHASE_EVIDENCE_ONLY registration mechanism establish
 The only test substitution permitted is this exact committed loader blob. It is not D_HOST final compatibility PASS or redelivery. Final 91-check compatibility remains NOT_RUN. D3 source-staging and frozen I1 regression may consume it after exact ancestry/blob/checkout verification; every other slot and file retains ordinary Harness checks. A test-only in-memory adapter records that substitution in evidence and does not edit the shared Harness or formal case registry.
 
 No D_JOBS, D_FULL, A_EDIT or Stage Storage protocol registration. Next protocol candidate 8f7fb52f029053bda10b965da840c6763fc13bf0 is not merged or registered here.
+
+## Current status after Stage Storage registration (2026-10-04)
+
+The paragraph above records the prior source-intent registration phase. Current D_PROTOCOL is 8f7fb52f029053bda10b965da840c6763fc13bf0, as registered in FOUNDATION_4_D_PROTOCOL_STAGE_STORAGE_REGISTRATION.md. Its four new mandatory registry keys require the latest formal D_SAVED 8289d804c3b5b42a2e6c2cf76e965679a0f83af8 (receipt dd3cc6db6a27b7d843bc87ca5d70dbef550656f2) to complete a registry follow-up.
+
+Current compatibility status: D_HOST_COMPATIBILITY_VALIDATION_WAITING_FOR_CURRENT_D_SAVED_REGISTRY.
+The exact candidate, file hash and historical phase evidence above remain retained. Formal D_HOST remains b9bf7d4a02398cd354fab6a18948babaa22c531e. No D_HOST PASS is registered and no D3/I1 graphical regression is run through an old-registry snapshot in this registration turn.
