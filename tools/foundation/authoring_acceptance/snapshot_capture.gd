@@ -37,6 +37,8 @@ func _saved(request: Dictionary, project_root: String) -> Dictionary:
 	var documents: Array = assembled.value.documents
 	var payload_wire := Wire.encode_wire("authoring",assembled.value)
 	if not payload_wire.ok: return payload_wire
+	var intent_digest := Execution.source_intent_digest(assembled.value)
+	if not intent_digest.ok: return intent_digest
 	var payload_digest := Execution.sha(payload_wire.value)
 	var source_manifest := {"authoring_payload_digest":payload_digest,"dependencies":[],"source_locations":[]}
 	for doc in documents:
@@ -61,7 +63,7 @@ func _saved(request: Dictionary, project_root: String) -> Dictionary:
 		return false)
 	var source_wire := Wire.encode_wire("source_manifest",source_manifest)
 	if not source_wire.ok: return source_wire
-	var snapshot := {"identity":{"run_id":run_id,"snapshot_id":Execution.uuid(),"source_fingerprint":Execution.sha(source_wire.value),"source_intent_digest":null},"level_ref":request.level_ref.duplicate(true),"input_mode":"ACCEPT_SAVED","input_manifest":{},"execution_digest":prepared.value.execution_digest,"root_path":root}
+	var snapshot := {"identity":{"run_id":run_id,"snapshot_id":Execution.uuid(),"source_fingerprint":Execution.sha(source_wire.value),"source_intent_digest":intent_digest.value},"level_ref":request.level_ref.duplicate(true),"input_mode":"ACCEPT_SAVED","input_manifest":{},"execution_digest":prepared.value.execution_digest,"root_path":root}
 	# Standalone saved capture is its own editor-instance equivalent, generation 0.
 	# D5/service will provide an actual editor identity for its capture path.
 	var identity := Records.make_identity(Execution.uuid(),0,request.level_ref,snapshot,Execution.sha(policy_wire.value),prepared.value.execution_digest,prepared.value.versions)
