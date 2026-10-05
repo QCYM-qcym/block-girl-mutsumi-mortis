@@ -3,6 +3,10 @@ extends SceneTree
 const S = preload("res://tools/foundation/authoring_acceptance/wire_schemas.gd")
 const Wire = preload("res://tools/foundation/authoring_acceptance/tool_wire.gd")
 const DEPENDENCIES := "res://tools/foundation/authoring_acceptance/execution_dependencies.json"
+## Approved saved-only capability, not a request's actual execution stage list.
+const CAPABILITIES := ["AUTHORING","BAKE","MANUAL_RUNTIME"]
+const BASE_PROTOCOL := ["res://foundation/contracts/contract_validation.gd","res://foundation/contracts/foundation_types.gd","res://foundation/solver/search_records.gd","res://foundation/solver/solver_types.gd","res://foundation/rules/rule_types.gd","res://tools/foundation/authoring_acceptance/tool_wire.gd","res://tools/foundation/authoring_acceptance/wire_schemas.gd"]
+const CAPABILITY_ROOTS := ["res://foundation/authoring/authoring_schema.gd","res://foundation/authoring/authoring_adapter.gd","res://foundation/runtime/runtime_session.gd","res://foundation/runtime/prototype_presenter.gd","res://foundation/runtime/input_mapper.gd","res://tools/foundation/authoring_acceptance/whitebox_entry.gd","res://tools/foundation/authoring_acceptance/whitebox_host.gd","res://tools/foundation/authoring_acceptance/whitebox_host.tscn","res://tools/foundation/authoring_acceptance/canonical_loader.gd"]
 const LIMIT := 134217728
 const CONFIG := 'config_version=5\n\n[application]\nconfig/name="Foundation Controlled Execution"\nconfig/features=PackedStringArray("4.7", "GL Compatibility")\nconfig/use_custom_user_dir=true\nconfig/custom_user_dir_name="foundation-authoring"\n\n[rendering]\nrenderer/rendering_method="gl_compatibility"\n'
 
@@ -138,6 +142,10 @@ static func prepare(source_root: String) -> Dictionary:
 
 static func _closure(files: Dictionary, declaration: Dictionary) -> Dictionary:
 	if not declaration.modules is Array or not declaration.dynamic is Array: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid module whitelist")
+	# Select from the fixed D2 capability and explicit declaration before testing
+	# existence. Registry identity strings never select an execution dependency.
+	for required in BASE_PROTOCOL + CAPABILITY_ROOTS:
+		if required not in declaration.modules: return S.failure("DEPENDENCY_PENDING", "Required D2 capability/base dependency is not declared", required)
 	var declared: Array = []
 	var unique_modules := {}
 	for module in declaration.modules:
@@ -168,7 +176,9 @@ static func _closure(files: Dictionary, declaration: Dictionary) -> Dictionary:
 	pattern.compile('res://[A-Za-z0-9_./-]+\\.(?:gd|tscn|tres)')
 	for path in files:
 		if path.ends_with(".gd"):
-			var script_text: String = files[path].get_string_from_utf8()
+			var classified := _execution_text(path,files[path].get_string_from_utf8())
+			if not classified.ok: return classified
+			var script_text: String = classified.value
 			for found in pattern.search_all(script_text):
 				var resource_path: String = found.get_string()
 				if not S._resource_path(resource_path): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid static resource path", resource_path)
@@ -184,6 +194,84 @@ static func _closure(files: Dictionary, declaration: Dictionary) -> Dictionary:
 	for path in scene_edges:
 		if _scene_has_cycle(path, scene_edges, visit_states): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Cyclic PackedScene dependency", path)
 	return S.success(null)
+
+## Only the exact formal schema's producer-identity declaration is metadata.
+## Every other literal keeps the conservative static/dynamic closure checks.
+## Registry selectors escaping the known identity comparisons are unresolved
+## execution edges: reject instead of guessing stage selection or loader targets.
+static func _execution_text(path: String, text: String) -> Dictionary:
+	var executable := text
+	if path == "res://tools/foundation/authoring_acceptance/wire_schemas.gd":
+		var declaration := RegEx.new()
+		declaration.compile('(?ms)^const STORAGE_OWNERS = (\\{.*?\\})[ \\t]*\\n')
+		var matches := declaration.search_all(text)
+		if matches.size() != 1: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Expected exact registry identity declaration", path)
+		var span: RegExMatch = matches[0]
+		var metadata: Variant = JSON.parse_string(span.get_string(1))
+		var schema_script: Script = S
+		var formal: Dictionary = schema_script.get_script_constant_map()["STORAGE_OWNERS"]
+		if typeof(metadata) != TYPE_DICTIONARY or metadata != formal: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Unknown registry stage/owner/module identity", path)
+		var entries := RegEx.new()
+		entries.compile('"[A-Z_]+"[ \\t]*:')
+		if entries.search_all(span.get_string(1)).size() != formal.size(): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Duplicate registry identity", path)
+		executable = text.substr(0,span.get_start()) + "\n" + text.substr(span.get_end())
+	# These two statements only compare identities; neither loads a producer.
+	var identity_checks := [
+		'if not STORAGE_OWNERS.has(id): return failure("DEPENDENCY_PENDING","STAGE_RESULT_" + id + "_STORAGE_SCHEMA")',
+		'if stage.owner != STORAGE_OWNERS[id][0] or stage.module_ref != STORAGE_OWNERS[id][1] or stage.applicability != "APPLICABLE": return invalid']
+	if path == "res://tools/foundation/authoring_acceptance/execution_project.gd":
+		# Bound to this validator's single declaration read. An identical read
+		# copied into any other function remains an unresolved execution edge.
+		var start := executable.find("static func _execution_text(path: String, text: String) -> Dictionary:\n")
+		var end := executable.find("\nstatic func ",start + 1)
+		if start < 0 or end < 0: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Missing closure validator boundary", path)
+		var read := RegEx.new()
+		read.compile('(?m)^\\t\\tvar formal: Dictionary = schema_script\\.get_script_constant_map\\(\\)\\["STORAGE_OWNERS"\\]$')
+		var reads := read.search_all(executable.substr(start,end - start))
+		if reads.size() != 1: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Ambiguous internal registry identity read", path)
+		var offset: int = start + reads[0].get_start()
+		executable = executable.substr(0,offset) + "\n" + executable.substr(start + reads[0].get_end())
+	var code := _code_without_strings(executable)
+	if path == "res://tools/foundation/authoring_acceptance/wire_schemas.gd":
+		for comparison in identity_checks:
+			code = code.replace(_code_without_strings(comparison),"")
+	var selector := RegEx.new()
+	selector.compile('\\b(?:STORAGE_OWNERS|get_script_constant_map)\\b')
+	if selector.search(code) != null: return S.failure("DEPENDENCY_PENDING", "Registry-derived execution edge requires a selected-stage closure", path)
+	return S.success(executable)
+
+static func _code_without_strings(text: String) -> String:
+	var result := ""
+	var quote := ""
+	var comment := false
+	var escaped := false
+	var literal := ""
+	for c in text:
+		if comment:
+			if c == "\n": comment = false
+			result += "\n" if c == "\n" else " "
+		elif not quote.is_empty():
+			if escaped:
+				literal += c
+				escaped = false
+			elif c == "\\":
+				escaped = true
+			elif c == quote:
+				# Reflection through Object.call or a string-indexed registry is
+				# still an execution edge; do not erase its identifying names.
+				if literal in ["STORAGE_" + "OWNERS","get_script_" + "constant_map"]: result += literal
+				quote = ""
+			else: literal += c
+			result += "\n" if c == "\n" else " "
+		elif c in ['"',"'"]:
+			quote = c
+			literal = ""
+			result += " "
+		elif c == "#":
+			comment = true
+			result += " "
+		else: result += c
+	return result
 
 static func _scene_references(scene_path: String, text: String, files: Dictionary, uid_to_path: Dictionary) -> Dictionary:
 	var attr_pattern := RegEx.new()

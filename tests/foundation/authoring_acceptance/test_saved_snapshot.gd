@@ -6,6 +6,8 @@ extends "res://tests/foundation/authoring_acceptance/test_tool_wire.gd"
 func run() -> void:
 	_source_fingerprint_structure()
 	_package_structure()
+	_stage_storage_registry()
+	_capability_closure()
 	_saved_package()
 	_saved_intent_digest()
 	finish()
@@ -24,6 +26,7 @@ func _saved_package() -> void:
 	check(captured.ok, "saved disk source produces sealed SnapshotRef")
 	if not captured.ok: return
 	var sealed: Dictionary = captured.value
+	_current_capture_registry(execution,sealed)
 	check(Schemas._hex(sealed.identity.source_intent_digest,64),"saved explicit empty Intent has nonnull digest")
 	check(Schemas._fields(sealed.identity,["run_id","snapshot_id","source_fingerprint","source_intent_digest"]),"SnapshotIdentity remains exact four fields")
 	for digest in [null,"0".repeat(64)]:
@@ -610,13 +613,14 @@ func _saved_intent_digest() -> void:
 			"duplicate_id": text = referenced.replace('00000000-0000-4000-8000-000000000006','00000000-0000-4000-8000-000000000005')
 		_write_bytes(base+"intent.tres",text.to_utf8_buffer())
 		var runs := source_root.path_join(".godot/foundation-authoring/runs")
-		var before := DirAccess.get_directories_at(runs)
+		var before := DirAccess.get_directories_at(runs) if DirAccess.dir_exists_absolute(runs) else PackedStringArray()
 		var captured: Dictionary = capture_service.capture_saved(request,source_root)
 		var invalid: bool = variant in ["missing_ref","wrong_kind","duplicate_id"]
 		check(captured.ok != invalid,"saved Intent capture " + variant)
 		if invalid:
 			check(captured.value == null,"invalid capture publishes no SnapshotRef " + variant)
-			for run_id in DirAccess.get_directories_at(runs):
+			var after := DirAccess.get_directories_at(runs) if DirAccess.dir_exists_absolute(runs) else PackedStringArray()
+			for run_id in after:
 				if run_id not in before: check(not FileAccess.file_exists(runs.path_join(run_id).path_join("input.ready")),"invalid capture publishes no input.ready " + variant)
 		elif captured.ok:
 			observations[variant] = captured.value
@@ -644,3 +648,142 @@ func _saved_intent_digest() -> void:
 		check(reconstructed.ok and reconstructed.value == sealed,"run reconstruction ignores active Intent source")
 		_write_bytes(base+"intent.tres",original["intent.tres"])
 	_write_bytes(evidence_dir().path_join("source-intent-evidence.json"),JSON.stringify(observations,"\t").to_utf8_buffer())
+
+# Current registry is consumed from D_PROTOCOL; expectations come from the
+# approved profile, never a second production version table.
+func _stage_storage_registry() -> void:
+	var execution = load("res://tools/foundation/authoring_acceptance/execution_project.gd")
+	var expected := {"stage_storage":"foundationstagestorage.v1","graph_archive":"stategraph.v1","intent":"puzzleintent.v1","trace":"solutiontrace.v1"}
+	var current := _versions()
+	check(Wire.encode_wire("versions",current).ok,"current Stage Storage VersionsRecord is accepted")
+	for key in expected:
+		for variant in ["missing","wrong","newer"]:
+			var altered := current.duplicate(true)
+			if variant == "missing": altered.schemas.erase(key)
+			else: altered.schemas[key] = expected[key].replace(".v1",".v2") if variant == "newer" else "wrong.v1"
+			check(not Wire.encode_wire("versions",altered).ok,"mandatory registry rejects " + variant + " " + key)
+			check(not Wire.decode_wire("versions",_raw_wire("versions",altered)).ok,"mandatory registry decode rejects " + variant + " " + key)
+	var old := current.duplicate(true)
+	for key in expected: old.schemas.erase(key)
+	check(not Wire.decode_wire("versions",_raw_wire("versions",old)).ok,"814a registry bytes rejected without migration")
+	_legacy_registry_negative(execution,expected)
+	var prepared: Dictionary = execution.prepare(ProjectSettings.globalize_path("res://").trim_suffix("/"))
+	check(prepared.ok,"current D_PROTOCOL registry can prepare the existing sealed execution closure")
+	if not prepared.ok:
+		print("REGISTRY_PREPARE_DIAGNOSTIC ",prepared.issues)
+		return
+	for key in expected: check(prepared.value.versions.schemas.get(key) == expected[key],"prepared registry contains " + key)
+	check(prepared.value.versions.schemas == Schemas.SCHEMA_VERSIONS,"D2 uses all current formal registry entries")
+
+func _legacy_registry_negative(execution, expected: Dictionary) -> void:
+	var legacy_root := OS.get_environment("FOUNDATION_D2_LEGACY_RUN")
+	check(not legacy_root.is_empty(),"actual 814a-era run supplied for read-only reconstruction negative")
+	if legacy_root.is_empty(): return
+	var ready := legacy_root.path_join("input.ready")
+	check(FileAccess.file_exists(ready),"historical input.ready evidence exists")
+	if not FileAccess.file_exists(ready): return
+	var before := FileAccess.get_file_as_bytes(ready)
+	var exact: bool = execution.sha(before) == "134c9495d5d38345c8b9ddf9f7b5cc06d84c5825fca07e22408ec354589cb2ed"
+	check(exact,"historical input.ready is exact 8289 delivery 814a-era evidence")
+	if not exact: return
+	var tree: Variant = JSON.parse_string(before.get_string_from_utf8())
+	var historical: Dictionary = Wire._read(tree[2],1)
+	check(historical.ok,"historical manifest typed values parse before schema rejection")
+	if not historical.ok: return
+	for key in expected: check(not historical.value.identity.versions.schemas.has(key),"actual historical registry lacks " + key)
+	var decoded: Dictionary = Wire.decode_wire("input_manifest",before)
+	var rejected: Dictionary = execution.snapshot_from_run(legacy_root)
+	check(not rejected.ok,"actual old 814a saved run rejected by current reconstruction")
+	check(not decoded.ok and rejected == decoded and not rejected.issues.is_empty() and rejected.issues[0].code == "WIRE_SCHEMA_INVALID","old run rejection occurs at formal manifest schema gate")
+	check(FileAccess.get_file_as_bytes(ready) == before,"reconstruction never upgrades old input.ready bytes")
+
+func _current_capture_registry(execution, sealed: Dictionary) -> void:
+	var before := FileAccess.get_file_as_bytes(sealed.root_path.path_join("input.ready"))
+	var manifest := Wire.decode_wire("input_manifest",before)
+	check(manifest.ok,"current saved input.ready decodes with complete registry")
+	if not manifest.ok: return
+	var expected := {"stage_storage":"foundationstagestorage.v1","graph_archive":"stategraph.v1","intent":"puzzleintent.v1","trace":"solutiontrace.v1"}
+	for key in expected: check(manifest.value.identity.versions.schemas.get(key) == expected[key],"saved run registry binds " + key)
+	check(manifest.value.identity.versions.schemas == Schemas.SCHEMA_VERSIONS,"saved run preserves complete protocol registry")
+	var paths := []
+	for item in manifest.value.identity.versions.modules: paths.append(item.path)
+	for path in _base_protocol_dependencies() + _capability_dependencies():
+		check(path in paths and path + ".uid" in paths,"sealed current capability and base dependency " + path)
+	check("res://foundation/authoring/intent_binder.gd" not in paths,"unrequested Binder absent from execution manifest/digest closure")
+	var reconstructed: Dictionary = execution.snapshot_from_run(sealed.root_path)
+	check(reconstructed.ok and reconstructed.value == sealed,"current-protocol saved run reconstructs exact SnapshotRef")
+	check(FileAccess.get_file_as_bytes(sealed.root_path.path_join("input.ready")) == before,"current reconstruction does not rewrite sealed input.ready")
+	_write_bytes(evidence_dir().path_join("stage-storage-registry-evidence.json"),JSON.stringify({"snapshot_ref":sealed,"versions":manifest.value.identity.versions,"input_ready_sha256":execution.sha(before)},"\t").to_utf8_buffer())
+
+func _base_protocol_dependencies() -> Array:
+	return ["res://foundation/contracts/contract_validation.gd","res://foundation/contracts/foundation_types.gd","res://foundation/solver/search_records.gd","res://foundation/solver/solver_types.gd","res://foundation/rules/rule_types.gd","res://tools/foundation/authoring_acceptance/tool_wire.gd","res://tools/foundation/authoring_acceptance/wire_schemas.gd"]
+
+func _capability_dependencies() -> Array:
+	return ["res://foundation/authoring/authoring_schema.gd","res://foundation/authoring/authoring_adapter.gd","res://foundation/runtime/runtime_session.gd","res://foundation/runtime/prototype_presenter.gd","res://foundation/runtime/input_mapper.gd","res://tools/foundation/authoring_acceptance/whitebox_entry.gd","res://tools/foundation/authoring_acceptance/whitebox_host.gd","res://tools/foundation/authoring_acceptance/canonical_loader.gd"]
+
+func _capability_closure() -> void:
+	var execution = load("res://tools/foundation/authoring_acceptance/execution_project.gd")
+	var source_root := ProjectSettings.globalize_path("res://").trim_suffix("/")
+	var config: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(execution.DEPENDENCIES))
+	var files := {execution.DEPENDENCIES:FileAccess.get_file_as_bytes(execution.DEPENDENCIES)}
+	for path in config.modules:
+		files[path] = FileAccess.get_file_as_bytes(path)
+		if path.ends_with(".gd"): files[path + ".uid"] = FileAccess.get_file_as_bytes(path + ".uid")
+	var binder := "res://foundation/authoring/intent_binder.gd"
+	var schema := "res://tools/foundation/authoring_acceptance/wire_schemas.gd"
+	check(Schemas.STORAGE_OWNERS.INTENT_BIND[1] == binder,"formal registry retains INTENT_BIND producer identity")
+	check(not FileAccess.file_exists(binder),"unrequested Binder is genuinely absent in current D2 source")
+	check(execution.get_script_constant_map().get("CAPABILITIES") == ["AUTHORING","BAKE","MANUAL_RUNTIME"],"D2 capability set fixed independently of full request policy")
+	check(Records.default_execution_policy("ACCEPT_SAVED").stages == Schemas.ACCEPT_STAGES,"D2 retains entire ACCEPT_SAVED policy; no execution downgrade")
+	check(execution._closure(files,config).ok,"approved identity-only stage table does not require unused producers")
+	for path in _base_protocol_dependencies() + _capability_dependencies():
+		var altered := files.duplicate(true)
+		altered.erase(path)
+		check(not execution._closure(altered,config).ok,"true current dependency missing remains strict " + path)
+		altered = files.duplicate(true)
+		altered.erase(path + ".uid")
+		check(not execution._closure(altered,config).ok,"true current UID missing remains strict " + path)
+		var reduced := config.duplicate(true)
+		reduced.modules.erase(path)
+		reduced.dynamic.erase(path)
+		altered.erase(path)
+		check(not execution._closure(altered,reduced).ok,"capability/base cannot be removed from declaration " + path)
+	var original: String = files[schema].get_string_from_utf8()
+	var mutations := {
+		"direct load":'\nstatic func _probe():\n\treturn load("' + binder + '")\n',
+		"preload":'\nconst _probe = preload("' + binder + '")\n',
+		"variable alias load":'\nstatic func _probe():\n\tvar path = "' + binder + '"\n\tvar alias = path\n\treturn ResourceLoader.load(alias)\n',
+		"registry-driven load":'\nstatic func _probe():\n\tvar alias = STORAGE_OWNERS["INTENT_BIND"][1]\n\treturn load(alias)\n',
+		"unknown indirect registry":'\nstatic func _probe(selector):\n\tvar alias = STORAGE_OWNERS[selector][1]\n\treturn load(alias)\n',
+		"reflected registry":'\nstatic func _probe(schema: Script):\n\tvar registry = schema.get_script_constant_map()\n\treturn load(registry["STORAGE_OWNERS"]["INTENT_BIND"][1])\n',
+		"string-dispatched reflection":'\nstatic func _probe(schema: Script):\n\tvar registry = schema.call("get_script_constant_map")\n\treturn load(registry["STORAGE_OWNERS"]["INTENT_BIND"][1])\n',
+		"unrelated same-name field":'\nconst _probe = {"module_ref":"' + binder + '"}\n'}
+	for name in mutations:
+		var altered := files.duplicate(true)
+		altered[schema] = (original + mutations[name]).to_utf8_buffer()
+		check(not execution._closure(altered,config).ok,"metadata exclusion cannot hide " + name)
+	var repeated_read := files.duplicate(true)
+	var execution_path := "res://tools/foundation/authoring_acceptance/execution_project.gd"
+	repeated_read[execution_path] = (files[execution_path].get_string_from_utf8() + '\nstatic func _probe():\n\tvar schema_script: Script = S\n\tvar formal: Dictionary = schema_script.get_script_constant_map()["STORAGE_OWNERS"]\n\treturn load(formal["INTENT_BIND"][1])\n').to_utf8_buffer()
+	check(not execution._closure(repeated_read,config).ok,"internal comparison exemption cannot hide a copied executable read")
+	for variant in ["unknown stage","case alias","wrong producer"]:
+		var changed := original.replace('"INTENT_BIND":[','"UNKNOWN":[ ') if variant == "unknown stage" else original.replace(binder,binder.to_upper() if variant == "case alias" else "res://foundation/authoring/wrong_binder.gd")
+		var altered := files.duplicate(true)
+		altered[schema] = changed.to_utf8_buffer()
+		check(not execution._closure(altered,config).ok,"metadata identity exactness " + variant)
+	var dynamic := config.duplicate(true)
+	dynamic.dynamic.append(binder)
+	check(not execution._closure(files,dynamic).ok,"requested dynamic Binder remains pending until frozen")
+	var scene := files.duplicate(true)
+	scene["res://tools/foundation/authoring_acceptance/whitebox_host.tscn"] = ('[gd_scene load_steps=2 format=3]\n[ext_resource type="Script" path="' + binder + '" id="1"]\n[node name="Probe" type="Node"]\nscript = ExtResource("1")\n').to_utf8_buffer()
+	check(not execution._closure(scene,config).ok,"real scene resource Binder still required")
+	var prepared: Dictionary = execution.prepare(source_root)
+	check(prepared.ok,"real prepare succeeds without unrequested Binder")
+	if not prepared.ok: return
+	# Presence changes no declared capability/closure. This disposable source is
+	# the isolated Harness project, never the Owner or 4A worktree.
+	_write_bytes(source_root.path_join(binder.substr(6)),"# tests-only unrequested presence probe\n".to_utf8_buffer())
+	var present: Dictionary = execution.prepare(source_root)
+	check(present.ok and present.value.execution_digest == prepared.value.execution_digest,"unrequested Binder presence never activates or changes closure")
+	check(present.ok and not present.value.files.has(binder),"unrequested Binder is not sealed when present")
+	DirAccess.remove_absolute(source_root.path_join(binder.substr(6)))
