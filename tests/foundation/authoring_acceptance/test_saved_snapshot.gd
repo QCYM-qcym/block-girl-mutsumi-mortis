@@ -48,6 +48,9 @@ func _saved_package() -> void:
 	var project: Dictionary = execution.materialize(sealed, source_root)
 	check(project.ok, "sealed snapshot materializes controlled project")
 	if not project.ok: return
+	check(FileAccess.file_exists("res://foundation/authoring/intent_binder.gd"), "real Binder exists in source checkout during current D2 capture")
+	check(not FileAccess.file_exists(project.value.project_root.path_join("foundation/authoring/intent_binder.gd")), "unrequested real Binder is not copied into execution project")
+	check(not FileAccess.file_exists(project.value.project_root.path_join("foundation/authoring/intent_binder.gd.uid")), "unrequested Binder UID is not copied into execution project")
 	check(project.value.execution_digest == sealed.execution_digest, "execution identity remains bound")
 	check(project.value.manifest == sealed.input_manifest, "materialize returns existing input.ready reference")
 	check(not FileAccess.file_exists(project.value.project_root.path_join("tests/foundation/authoring/fixtures/minimal/level.tscn")), "controlled project excludes authoring fixture and whole active project")
@@ -677,8 +680,9 @@ func _stage_storage_registry() -> void:
 
 func _legacy_registry_negative(execution, expected: Dictionary) -> void:
 	var legacy_root := OS.get_environment("FOUNDATION_D2_LEGACY_RUN")
-	check(not legacy_root.is_empty(),"actual 814a-era run supplied for read-only reconstruction negative")
-	if legacy_root.is_empty(): return
+	if legacy_root.is_empty():
+		legacy_root = ProjectSettings.globalize_path("res://tests/foundation/authoring_acceptance/fixtures/legacy_814a")
+	check(not legacy_root.is_empty(),"actual 814a-era sealed evidence supplied by explicit environment or archived fixture")
 	var ready := legacy_root.path_join("input.ready")
 	check(FileAccess.file_exists(ready),"historical input.ready evidence exists")
 	if not FileAccess.file_exists(ready): return
@@ -732,7 +736,8 @@ func _capability_closure() -> void:
 	var binder := "res://foundation/authoring/intent_binder.gd"
 	var schema := "res://tools/foundation/authoring_acceptance/wire_schemas.gd"
 	check(Schemas.STORAGE_OWNERS.INTENT_BIND[1] == binder,"formal registry retains INTENT_BIND producer identity")
-	check(not FileAccess.file_exists(binder),"unrequested Binder is genuinely absent in current D2 source")
+	check(FileAccess.file_exists(binder),"real Binder exists but current D2 does not request INTENT_BIND")
+	var binder_sha := FileAccess.get_sha256(binder)
 	check(execution.get_script_constant_map().get("CAPABILITIES") == ["AUTHORING","BAKE","MANUAL_RUNTIME"],"D2 capability set fixed independently of full request policy")
 	check(Records.default_execution_policy("ACCEPT_SAVED").stages == Schemas.ACCEPT_STAGES,"D2 retains entire ACCEPT_SAVED policy; no execution downgrade")
 	check(execution._closure(files,config).ok,"approved identity-only stage table does not require unused producers")
@@ -780,10 +785,12 @@ func _capability_closure() -> void:
 	var prepared: Dictionary = execution.prepare(source_root)
 	check(prepared.ok,"real prepare succeeds without unrequested Binder")
 	if not prepared.ok: return
-	# Presence changes no declared capability/closure. This disposable source is
-	# the isolated Harness project, never the Owner or 4A worktree.
-	_write_bytes(source_root.path_join(binder.substr(6)),"# tests-only unrequested presence probe\n".to_utf8_buffer())
 	var present: Dictionary = execution.prepare(source_root)
-	check(present.ok and present.value.execution_digest == prepared.value.execution_digest,"unrequested Binder presence never activates or changes closure")
-	check(present.ok and not present.value.files.has(binder),"unrequested Binder is not sealed when present")
-	DirAccess.remove_absolute(source_root.path_join(binder.substr(6)))
+	check(present.ok and present.value.execution_digest == prepared.value.execution_digest,"real unrequested Binder presence never activates or changes closure")
+	check(present.ok and not present.value.files.has(binder) and not present.value.files.has(binder + ".uid"),"real unrequested Binder and UID are not sealed when present")
+	if present.ok:
+		var modules := []
+		for item in present.value.versions.modules: modules.append(item.path)
+		check(binder not in modules and binder + ".uid" not in modules,"Binder bytes cannot participate in execution versions identity")
+		check(Wire.digest("versions",present.value.versions).value == present.value.execution_digest,"execution digest binds only the Binder-free sealed versions")
+	check(FileAccess.get_sha256(binder) == binder_sha,"real Binder source bytes remain unchanged throughout closure tests")
