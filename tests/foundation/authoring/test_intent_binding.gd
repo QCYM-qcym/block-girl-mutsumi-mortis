@@ -265,7 +265,8 @@ func _entry(table: Array, authoring_id: String) -> Dictionary:
 
 
 ## Real always consumes the D2-verified sealed payload and its actual identity.
-## Disposable saved sources live under this run's ignored evidence directory.
+## Saved RunRequest URIs must remain inside the active source project even when
+## the formal Harness keeps evidence outside its disposable project root.
 func _real_saved() -> void:
 	var capture = load("res://tools/foundation/authoring_acceptance/snapshot_capture.gd")
 	var execution = load("res://tools/foundation/authoring_acceptance/execution_project.gd")
@@ -275,8 +276,9 @@ func _real_saved() -> void:
 	for name in ["level.tscn", "surface.tscn", "inner.tscn", "intent.tres"]:
 		source_before[name] = FileAccess.get_file_as_bytes(F.BASE + name)
 	var observations := {}
+	var source_base := "res://.godot/foundation-authoring-tests/binder_sources/%s_%s/" % [OS.get_process_id(), Time.get_ticks_usec()]
 	for scenario in ["empty", "optional", "mixed", "missing"]:
-		var base: String = ProjectSettings.localize_path(evidence_dir()).trim_suffix("/") + "/saved_" + scenario + "/"
+		var base: String = source_base + scenario + "/"
 		check(DirAccess.make_dir_recursive_absolute(base) == OK, scenario + " disposable saved source directory")
 		for name in source_before:
 			var text: String = source_before[name].get_string_from_utf8().replace(F.BASE, base)
