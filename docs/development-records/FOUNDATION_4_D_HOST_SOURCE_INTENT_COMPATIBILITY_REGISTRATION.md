@@ -21,3 +21,10 @@ The paragraph above records the prior source-intent registration phase. Current 
 
 Current compatibility status: D_HOST_COMPATIBILITY_VALIDATION_WAITING_FOR_CURRENT_D_SAVED_REGISTRY.
 The exact candidate, file hash and historical phase evidence above remain retained. Formal D_HOST remains b9bf7d4a02398cd354fab6a18948babaa22c531e. No D_HOST PASS is registered and no D3/I1 graphical regression is run through an old-registry snapshot in this registration turn.
+
+## Current status after D_SAVED registry follow-up (2026-10-05T22:29:31.6067513+08:00)
+
+D_SAVED production is now 4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11; its exact validation support is 5749b932f947c44b35f21c62478bd76720e32969. Fresh Integration Unit361/361 and Real390/390 passed with exit0/stderr0/doubles[]. See FOUNDATION_4_D_SAVED_STAGE_STORAGE_REGISTRY_REGISTRATION.md. The prior waiting paragraph is historical.
+
+Current compatibility status: READY_FOR_FINAL_COMPATIBILITY_GRAPHICAL.
+The original candidate commit8289, loader SHA4f9b0785ae42fa726cd6053b1b1e475bab5c2216fd04011d0ca25d7922cfc904 and TEST_DEPENDENCY_ONLY registration remain unchanged on this newer D_SAVED lineage. Formal D_HOST is still b9bf7d4a02398cd354fab6a18948babaa22c531e. Final D_HOST Graphical remains NOT_RUN in this turn; this is readiness, not a D_HOST PASS or redelivery.
