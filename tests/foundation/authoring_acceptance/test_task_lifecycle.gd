@@ -29,7 +29,155 @@ func run() -> void:
 	_deadline_and_restart()
 	await _review_regressions()
 	await _lifecycle()
+	await _editor_rebind()
+	_worker_publication()
+	await _owned_process_ipc()
 	finish()
+
+func _owned_process_ipc() -> void:
+	var policy: Dictionary = F.request([]).policy
+	# Empty assigned stream is deliberately a transport fixture, not RunRequest.
+	policy.stages = ["BAKE"]
+	var identity: Dictionary = F.identity(policy)
+	var root: String = evidence_dir().replace("\\","/").path_join("owned_process")
+	var launch := E.uuid()
+	var parent = T.new()
+	check(parent.open_channels(identity,root,launch,"HEADLESS",[]).ok,"real owned-process Unit stream binds fixture identity")
+	check(parent.renew_lease().ok,"actual child receives initial durable lease")
+	var message := {"protocol_version":S.WORKER_PROTOCOL_VERSION,"identity":identity,"sequence":0,"kind":"HELLO","stage_id":"","payload_ref_or_inline":{"launch_id":launch,"worker_role":"HEADLESS","engine":identity.versions.engine}}
+	var wire := W.encode_wire("worker_message",message)
+	var context_path := root.path_join("fixture_identity.wire")
+	check(wire.ok and E.write_new(context_path,wire.value).ok,"test-only child identity is explicit wire evidence")
+	var script_path := root.path_join("owned_process_probe.gd")
+	check(E.write_new(script_path,F.process_probe_script().to_utf8_buffer()).ok,"owned process fixture contains no algorithm substitution")
+	var project_root := ProjectSettings.globalize_path("res://").replace("\\","/").trim_suffix("/")
+	var args := PackedStringArray(["--headless","--path",project_root,"--script",script_path,"--",root,launch,context_path])
+	var pid: int = parent._begin_owned_process(OS.get_executable_path(),args)
+	check(pid > 0,"transport observes its actually returned OS PID")
+	if pid <= 0: return
+	var hello := false
+	var deadline := Time.get_ticks_msec() + 15000
+	while Time.get_ticks_msec() < deadline and OS.is_process_running(pid) and not hello:
+		var polled: Dictionary = parent.poll(identity)
+		if not polled.ok: break
+		for item in polled.value:
+			if item.kind == "HELLO": hello = true
+		await process_frame
+	check(hello,"actual child publishes HELLO through real filesystem transport")
+	check(not parent.release_state(identity).process_exited,"HELLO cannot release a live owned process")
+	check(parent.send_cancel(identity).ok,"actual owned child receives durable cooperative cancel")
+	var exit_seen := false
+	while Time.get_ticks_msec() < deadline:
+		var polled: Dictionary = parent.poll(identity)
+		if polled.ok:
+			for item in polled.value:
+				if item.kind == "EXIT": exit_seen = true
+		if exit_seen and parent.release_state(identity).process_exited: break
+		await process_frame
+	check(exit_seen,"actual child acknowledges cancel through approved EXIT")
+	var released: Dictionary = parent.release_state(identity)
+	check(released.process_exited and released.file_handles_closed and released.callbacks_disconnected and released.preview_resources_released,"release gate observes actual OS exit and local ownership cleanup")
+	check(not parent.release_error(),"actual owned process exit code matches accepted EXIT")
+	check(not parent.pass_eligible(),"real process cancellation cannot publish successful run eligibility")
+
+func _worker_publication() -> void:
+	var path := "res://tools/foundation/authoring_acceptance/worker_entry.gd"
+	check(ResourceLoader.exists(path),"formal worker entry provides same-run stage publication")
+	if not ResourceLoader.exists(path): return
+	var entry = load(path)
+	check(entry.has_method("verify_execution_files"),"worker rechecks every frozen materialized module and configuration")
+	if entry.has_method("verify_execution_files"):
+		var project: String = evidence_dir().replace("\\","/").path_join("execution_drift")
+		var frozen := {"res://foundation/module.gd":"extends RefCounted\n".to_utf8_buffer(),"res://project.godot":"config_version=5\n".to_utf8_buffer()}
+		for uri in frozen: E.write_new(project.path_join(uri.substr(6)),frozen[uri])
+		check(entry.verify_execution_files(frozen,project).ok,"unchanged whole materialized closure accepted")
+		for uri in frozen:
+			var file := FileAccess.open(project.path_join(uri.substr(6)),FileAccess.WRITE)
+			file.store_string("altered after parent materialization")
+			file.close()
+			check(not entry.verify_execution_files(frozen,project).ok,"worker rejects post-materialization drift: " + uri)
+			file = FileAccess.open(project.path_join(uri.substr(6)),FileAccess.WRITE)
+			file.store_buffer(frozen[uri])
+			file.close()
+	check(not entry.options(PackedStringArray(["--run-dir=E:/x","--launch-id=bad"])).ok,"worker rejects malformed launch identity")
+	var bind: Dictionary = entry.supported_stages(["INTENT_BIND"])
+	check(not bind.ok and bind.issues[0].code == "DEPENDENCY_PENDING","unimplemented selected Binder is pending, never skipped")
+	check(entry.supported_stages(["AUTHORING","BAKE"]).ok,"available formal stages proceed without Binder/Replay")
+	var fixtures = load("res://tests/foundation/authoring/authoring_fixtures.gd")
+	var payload: Dictionary = fixtures.payload("minimal")
+	var policy: Dictionary = F.request(["AUTHORING","BAKE"]).policy
+	var identity: Dictionary = F.identity(policy)
+	for uri in [S.STORAGE_OWNERS.AUTHORING[1],"res://foundation/authoring/authoring_adapter.gd"]:
+		identity.versions.modules.append({"path":uri,"sha256":FileAccess.get_sha256(uri),"version":null})
+	identity.versions.modules.sort_custom(func(a,b): return a.path < b.path)
+	identity.execution_digest = W.digest("versions",identity.versions).value
+	var snap_id := {"run_id":identity.run_id,"snapshot_id":identity.snapshot_id,"source_fingerprint":identity.source_fingerprint,"source_intent_digest":null}
+	var authoring: Dictionary = entry.call_stage("AUTHORING",payload,snap_id,policy)
+	check(authoring.ok and authoring.value.ok,"worker invokes formal authoring schema")
+	var bake: Dictionary = entry.call_stage("BAKE",payload,snap_id,policy)
+	check(bake.ok and bake.value.ok and bake.value.level != null,"worker invokes formal Reader/Baker through sole adapter")
+	if not bake.ok or not bake.value.ok: return
+	var root: String = evidence_dir().replace("\\","/").path_join("worker_publication")
+	var bytes := W.encode_wire("authoring",payload).value as PackedByteArray
+	var input := E.artifact("input/authoring.wire",bytes,"levelauthoring.v1")
+	var ready := E.artifact("input.ready",bytes,"authoringinputmanifest.v1")
+	check(E.write_new(root.path_join(input.relative_path),bytes).ok,"Unit publication binds real frozen authoring bytes")
+	check(E.write_new(root.path_join(ready.relative_path),bytes).ok,"Unit publication supplies explicit input reference boundary only")
+	var time: String = T.new().utc_now()
+	var published: Dictionary = entry.publish_result(root,identity,"BAKE",bake.value,{"input_manifest":ready,"authoring_payload":input},policy,time,time,"COMPLETED","")
+	check(published.ok,"worker publishes canonical attachment then closed BAKE stage_result")
+	if not published.ok: return
+	var result := W.decode_wire("stage_result",E.read_artifact(root,published.value).value)
+	check(result.ok and result.value.stage_record.native_result.bake_provenance.run_id == identity.run_id,"published formal evidence preserves same-run provenance")
+	var canonical: Dictionary = result.value.stage_record.native_result.level
+	check(E.read_artifact(root,canonical).ok,"stage result never precedes its canonical attachment")
+	var changed: Dictionary = bake.value.duplicate(true)
+	changed.source_map.level_hash = "0".repeat(64)
+	check(not entry.publish_result(root,identity,"BAKE",changed,{"input_manifest":ready,"authoring_payload":input},policy,time,time,"COMPLETED","").ok,"immutable stage publication cannot replace historical bytes")
+
+func _editor_rebind() -> void:
+	var during_capture := F.new()
+	var captured_service = Service.new(during_capture.capture,during_capture)
+	get_root().add_child(captured_service)
+	captured_service.status_changed.connect(func(value):
+		if value.lifecycle == "CAPTURING": captured_service.cancel(value.identity))
+	var cancelled_start: Dictionary = captured_service.start(F.request())
+	check(not cancelled_start.ok,"capture-time cancellation cannot be reset by start completion")
+	check(during_capture.launch_count == 0,"capture-time cancellation never launches a new process")
+	check(captured_service.status(during_capture.id).value.lifecycle == "CANCELLED","completed capture cancellation releases only the unlaunched slot")
+	captured_service.queue_free()
+	await process_frame
+	var fixture := F.new()
+	var service = Service.new(fixture.capture,fixture)
+	get_root().add_child(service)
+	service._editor = "44444444-4444-4444-8444-444444444444"
+	var views: Array = []
+	service.status_changed.connect(func(value): views.append(value.duplicate(true)))
+	fixture.id = {"editor_instance_id":service._editor}
+	var bound: Dictionary = service.bind_editor_context(fixture)
+	check(bound.ok and bound.value == null,"editor bind preserves approved null Result value")
+	check(views.size() == 1 and views.back().lifecycle == "IDLE","bind emits current value observation without private service access")
+	views.clear()
+	var started: Dictionary = service.start(F.request())
+	check(started.ok and views.size() == 2,"start exposes capture and owned-running state through approved signal")
+	if not started.ok:
+		service.queue_free()
+		await process_frame
+		return
+	check(not views.is_empty() and views.back().identity == started.value.identity,"running observation supplies exact run identity")
+	service.unbind_editor_context(fixture)
+	var replacement := F.new()
+	replacement.id = {"editor_instance_id":service._editor}
+	views.clear()
+	check(service.bind_editor_context(replacement).ok,"fresh Dock can bind surviving cancelling service")
+	check(views.size() == 1 and views.back().identity == started.value.identity and views.back().lifecycle == "CANCELLING","re-enabled Dock recovers exact cancelling run via signal")
+	check(not service.start(F.request()).ok,"new Dock cannot bypass occupied release gate")
+	fixture.release_all()
+	service.status(started.value.identity)
+	check(views.back().release_confirmed and views.back().lifecycle == "CANCELLED","fresh Dock sees actual release completion")
+	service.unbind_editor_context(replacement)
+	service.queue_free()
+	await process_frame
 
 func _pair(stages: Array = ["BAKE"]) -> Dictionary:
 	_counter += 1

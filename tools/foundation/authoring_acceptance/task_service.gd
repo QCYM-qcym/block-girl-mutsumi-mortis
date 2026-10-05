@@ -42,6 +42,7 @@ func bind_editor_context(provider: RefCounted) -> Dictionary:
 	var desc: Variant = provider.describe()
 	if typeof(desc) != TYPE_DICTIONARY or desc.get("editor_instance_id","") != _editor: return S.failure("IDENTITY_MISMATCH","Editor context identity mismatch")
 	_provider = provider
+	status_changed.emit(_view())
 	return S.success(null)
 
 func unbind_editor_context(provider: RefCounted) -> void:
@@ -66,34 +67,49 @@ func start(request: Dictionary) -> Dictionary:
 	if not policy.ok: return policy
 	if _provider != null: _provider.set_capture_lock(true)
 	_released = false
-	_lifecycle = "CAPTURING"
-	var captured := _capture(request)
-	if _provider != null: _provider.set_capture_lock(false)
-	if not captured.ok:
-		_released = true
-		_lifecycle = "FAILED"
-		return captured
-	_identity = captured.value.identity.duplicate(true)
-	if _transport == null or not _capture_port.is_valid(): _transport = Transport.new()
 	_cancelled = false
 	_failed = false
 	_reason = ""
 	_stage = ""
 	_exit_received = false
+	_lifecycle = "CAPTURING"
+	_identity = {}
+	status_changed.emit(_view())
+	var captured := _capture(request)
+	if _provider != null: _provider.set_capture_lock(false)
+	if not captured.ok:
+		_released = true
+		_lifecycle = "FAILED"
+		status_changed.emit(_view())
+		return captured
+	_identity = captured.value.identity.duplicate(true)
+	if _cancelled:
+		_released = true # Capture returned; no process was launched for this run.
+		_lifecycle = "CANCELLED"
+		set_process(false)
+		status_changed.emit(_view())
+		return S.failure("CANCELLED","Capture completed after cancellation; worker not launched")
+	if _transport == null or not _capture_port.is_valid(): _transport = Transport.new()
 	var launched: Dictionary = _transport.launch(_identity,captured.value.project,"HEADLESS")
 	if not launched.ok:
 		# No owned PID exists on dependency rejection. Capture files remain evidence.
 		_released = true
 		_lifecycle = "FAILED"
+		status_changed.emit(_view())
 		return launched
 	_lifecycle = "RUNNING"
 	set_process(true)
+	status_changed.emit(_view())
 	return S.success(_view())
 
 func _request_cancel(reason: String) -> Dictionary:
+	var capture_pending := _lifecycle == "CAPTURING"
 	_cancelled = true
 	if _reason.is_empty(): _reason = reason
 	_lifecycle = "CANCELLING"
+	if capture_pending:
+		status_changed.emit(_view())
+		return S.success(null) # No owned launch/channel exists until capture returns.
 	var sent: Dictionary = _transport.send_cancel(_identity,reason)
 	if not sent.ok: _failed = true
 	status_changed.emit(_view())
@@ -117,6 +133,7 @@ func _process(_delta: float) -> void: _poll_owned()
 
 func _poll_owned() -> void:
 	if _released or _transport == null: return
+	var previous := _view()
 	var messages: Dictionary = _transport.poll(_identity)
 	if not messages.ok:
 		_failed = true
@@ -138,7 +155,9 @@ func _poll_owned() -> void:
 					if message.payload_ref_or_inline.reason in ["FAILED","LEASE_EXPIRED"]: _failed = true
 	var release: Dictionary = _transport.release_state(_identity)
 	for field in ["process_exited","file_handles_closed","callbacks_disconnected","preview_resources_released"]:
-		if release.get(field,false) != true: return
+		if release.get(field,false) != true:
+			if _view() != previous: status_changed.emit(_view())
+			return
 	if _transport.has_method("release_error") and _transport.release_error(): _failed = true
 	if not _exit_received and not _cancelled: _failed = true # Confirmed crash is not successful EXIT.
 	_released = true
