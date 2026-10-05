@@ -121,4 +121,3 @@ A_BAKE wrapper/SourceMap 自 e0940278 未改。未修改冻结 Spec/Plans、公�
 本轮后继提交仅包含 Owner Real fixture 路径修正及本验收报告；既有 Binder/4A-3 实现提交保留。交付 commit 的真实 SHA 在提交完成后的响应列出，不伪造预先 SHA。
 提交前 git diff --check 通过；只暂存上述测试和此报告，证据、缓存、stdout/stderr 均忽略。
 Push: NOT_RUN。I2: NOT_STARTED。无需等待其它 4A 功能，交付供协调者登记 A_EDIT。
-
