@@ -70,6 +70,7 @@ cd 'E:\godot\worktrees\block-girl-beta-game-content'
 
 - Owner：07 Game Shell / 00 Integration。
 - 最小内容：把 `game/levels/mutsumi/batch_01/level_order.json` 的三个稳定 id 与 Scene 路径加入 Owner 的选关/关卡目录，顺序 L-01 → L-02 → L-03。
+- 已只读核对 07 当前工作树：确切接入文件是 `game/shell/level_catalog.gd`，更新其 `DEFAULT_ENTRIES`；每项 `adapter` 使用现有 `"p01"`。三个内容 Scene 保留 `mover.committed`、`graph.complete`、`controls` 和 `reset_level()`，兼容当前 `level_adapter.gd`，无需修改适配器源码。原有 `p01` 目录项的保留/替换和进度处理由 07 决定，06 不迁移存档。
 - 如需改 `project.godot` 或主入口，只由 00/07 在其集成分支处理。06 无需新增 Autoload/InputMap，三关已能独立 F6。
 - 本批无需存档格式变更。Shell 若记录完成状态，使用上述稳定 id；具体保存/加载仍归 07。
 
