@@ -262,7 +262,7 @@ function Get-Missing($Registration) {
                 if ($evidence) {
                     $path = "$evidence/phase-test-dependencies.json"
                     $used = if (Test-Path -LiteralPath $path) { @(Read-Json $path) } else { @() }
-                    Write-Json $path @($used + $phase)
+                    Write-Json $path (@($used) + @($phase))
                 }
             }
         }
