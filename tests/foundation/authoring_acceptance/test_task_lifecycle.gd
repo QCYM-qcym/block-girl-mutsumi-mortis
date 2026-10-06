@@ -9,7 +9,10 @@ var _counter := 0
 
 func run() -> void:
 	if mode() == "Graphical":
-		failures.append("CASE_DEPENDENCY_PENDING:GRAPHICAL_REPLAY: same-run quality/trace chain and D4 graphical dispatcher not yet delivered")
+		T = load("res://tools/foundation/authoring_acceptance/process_transport.gd")
+		Service = load("res://tools/foundation/authoring_acceptance/task_service.gd")
+		check(DisplayServer.get_name() != "headless","Graphical parent has a real display")
+		await _real_pipeline(true)
 		finish()
 		return
 	if mode() == "Real":
@@ -31,6 +34,11 @@ func run() -> void:
 		return
 	T = load(transport_path)
 	Service = load(service_path)
+	_final_stage_admission()
+	await _replay_contract()
+	_quality_accounting()
+	_timeout_reason_regression()
+	_worker_deadline()
 	_job_capture()
 	_dependencies()
 	_streams()
@@ -78,6 +86,12 @@ func _job_capture() -> void:
 	var bad: Dictionary = F.request(["BAKE","AUTHORING"])
 	check(not builder.call("prepare_job",root,bad.policy).ok,"selection cannot reorder the existing formal stage plan")
 
+func _final_stage_admission() -> void:
+	var entry = load("res://tools/foundation/authoring_acceptance/worker_entry.gd")
+	check(entry.supported_stages(["AUTHORING","BAKE","INTENT_BIND"]).ok,"registered A_EDIT enables the formal Binder chain")
+	check(entry.supported_stages(S.ACCEPT_STAGES.slice(0,10)).ok,"all ten registered algorithm stages have a worker dispatcher")
+	check(ResourceLoader.exists("res://tools/foundation/authoring_acceptance/graphical_entry.gd"),"formal graphical controlled entry exists")
+
 func _real_jobs() -> void:
 	var capture = load("res://tools/foundation/authoring_acceptance/snapshot_capture.gd")
 	check(capture.has_method("capture_saved_job"),"Real jobs require formal pre-seal selected execution closure")
@@ -111,7 +125,9 @@ func _real_jobs() -> void:
 		check(status.ok and status.value.release_confirmed,"actual OS exit plus all three resource conditions release the real slot")
 		check(status.ok and status.value.lifecycle == "COMPLETED","real selected work completes without claiming whole-level acceptance PASS")
 		var stored: Array = transport.stored_results()
-		check(stored.size() == stages.size(),"one immutable stage result per selected formal call")
+		var omitted: Array = transport.omitted_stages()
+		var expected: Array = stages.filter(func(id):return omitted.filter(func(x):return x.stage_id==id).is_empty())
+		check(stored.size() == expected.size(),"one immutable stage result per selected formal call")
 		for index in stored.size():
 			check(stored[index].stage_record.stage_id == stages[index] and stored[index].stage_record.execution == "COMPLETED","stored result preserves formal stage and successful native execution")
 			check(stored[index].stage_record.native_result.ok,"native AUTHORING/BAKE result is successful")
@@ -135,6 +151,9 @@ func _real_jobs() -> void:
 		await process_frame
 	E.write_new(evidence_dir().path_join("real-jobs-evidence.json"),JSON.stringify(observations,"\t").to_utf8_buffer())
 	await _real_cancel_at_launch(records)
+	await _real_pipeline(false)
+	await _real_pipeline(false,"unconstrained")
+	await _real_pipeline(false,"budget")
 
 func _real_cancel_at_launch(records: Script) -> void:
 	var policy: Dictionary = records.default_execution_policy("ANALYZE_CURRENT")
@@ -231,7 +250,7 @@ func _worker_publication() -> void:
 			file.close()
 	check(not entry.options(PackedStringArray(["--run-dir=E:/x","--launch-id=bad"])).ok,"worker rejects malformed launch identity")
 	var bind: Dictionary = entry.supported_stages(["INTENT_BIND"])
-	check(not bind.ok and bind.issues[0].code == "DEPENDENCY_PENDING","unimplemented selected Binder is pending, never skipped")
+	check(not bind.ok and bind.issues[0].code == "DEPENDENCY_PENDING","selected Binder without its same-run Bake prerequisite is rejected, never skipped")
 	check(entry.supported_stages(["AUTHORING","BAKE"]).ok,"available formal stages proceed without Binder/Replay")
 	var fixtures = load("res://tests/foundation/authoring/authoring_fixtures.gd")
 	var payload: Dictionary = fixtures.payload("minimal")
@@ -688,3 +707,128 @@ func _completed_before_cancel() -> void:
 	check(p.parent.release_state(p.id).process_exited and not p.parent.release_error(),"queued FINISHED reconciles actual exit under parent cancellation")
 	p.clock.actual_exit_code = -1
 	check(p.parent.release_state(p.id).process_exited and not p.parent.release_error(),"reaped exit-code observation cannot overwrite the first actual OS result")
+
+func _real_pipeline(graphical: bool, variant: String = "") -> void:
+	var base := "res://tests/foundation/authoring_integration/maps/d3_action_capable/"
+	var fixture_root := evidence_dir().replace("\\","/").path_join("saved_pipeline" + variant)
+	check(DirAccess.make_dir_recursive_absolute(fixture_root) == OK,"test-only author source is saved before real D2 capture")
+	var uri_root := ProjectSettings.localize_path(fixture_root).trim_suffix("/") + "/"
+	for name in ["level.tscn","surface.tscn","inner.tscn","intent.tres"]:
+		var text := FileAccess.get_file_as_string(base + name).replace(base,uri_root)
+		if name == "intent.tres" and variant != "unconstrained":
+			text = '[gd_resource type="Resource" load_steps=4 format=3]\n[ext_resource type="Script" path="res://foundation/authoring/intent_authoring_resource.gd" id="Intent"]\n[ext_resource type="Script" path="res://foundation/authoring/milestone_authoring_resource.gd" id="Milestone"]\n[sub_resource type="Resource" id="Finish"]\nscript = ExtResource("Milestone")\nauthoring_id = "00000000-0000-4000-8000-000000000500"\nmilestone_id = &"finish"\nrequired = true\npredicate = {"kind": 4}\n' + text.substr(text.find("[resource]")).replace("required_mechanics = []","required_mechanics = [0]").replace("expected_milestones = []",'expected_milestones = [SubResource("Finish")]')
+		check(E.write_new(fixture_root.path_join(name),text.to_utf8_buffer()).ok,"saved author fixture remains real source: " + name)
+	var runs = load("res://tools/foundation/authoring_acceptance/run_records.gd")
+	var selections: Array = [S.ACCEPT_STAGES.slice(0,10)] if graphical else [["AUTHORING","BAKE","INTENT_BIND"],S.ACCEPT_STAGES.slice(0,9)]
+	if not variant.is_empty(): selections = [S.ACCEPT_STAGES.slice(0,9)]
+	var evidence: Array = []
+	for stages in selections:
+		var case_checks := checks
+		var policy: Dictionary = runs.default_execution_policy("ANALYZE_CURRENT")
+		policy.stages = stages.duplicate()
+		if variant == "budget": policy.search_budget.max_states = 1
+		var request := {"entry_kind":"ANALYZE_CURRENT","level_ref":{"level_authoring_id":"00000000-0000-4000-8000-000000000001","level_id":&"d3_action_capable","root_source_uri":uri_root + "level.tscn"},"policy":policy}
+		var service = Service.new()
+		get_root().add_child(service)
+		var started: Dictionary = service.start(request)
+		check(started.ok,"formal selected pipeline launches: " + str(stages))
+		if not started.ok:
+			print("D_JOBS_PIPELINE_START_REJECTED ",started.issues)
+			service.queue_free()
+			await process_frame
+			continue
+		var transport: RefCounted = service._transport
+		check(transport._pid > 0 and transport._pid != OS.get_process_id(),"pipeline has an actual owned Godot PID")
+		var deadline := Time.get_ticks_msec() + 180000
+		var final: Dictionary = service.status(started.value.identity)
+		while not final.value.release_confirmed and Time.get_ticks_msec() < deadline:
+			await process_frame
+			final = service.status(started.value.identity)
+		check(final.value.release_confirmed and final.value.lifecycle == "COMPLETED","formal full pipeline completes and releases")
+		if not final.value.release_confirmed:
+			service.cancel(started.value.identity)
+			while not final.value.release_confirmed:
+				await process_frame
+				final = service.status(started.value.identity) # Natural return; no kill.
+		var stored: Array = transport.stored_results()
+		var omitted: Array = transport.omitted_stages()
+		var expected: Array = stages.filter(func(id):return omitted.filter(func(x):return x.stage_id==id).is_empty())
+		check(stored.size() == expected.size(),"every selected algorithm publishes exactly one formal Stage Result")
+		for index in stored.size():
+			var stage: Dictionary = stored[index].stage_record
+			check(index < expected.size() and stage.stage_id == expected[index],"stored stage order follows the approved plan")
+			check(stage.execution in (["COMPLETED","INCOMPLETE"] if variant == "budget" else ["COMPLETED"]) and stage.native_result != null,"stage retains actual successful native return: " + stage.stage_id)
+			check(stage.module_ref == E.stage_module(stage.stage_id),"producer identity is the formal owner: " + stage.stage_id)
+			if stage.stage_id == "INTENT_BIND":
+				check(stage.native_result.ok and stage.native_result.source_intent_digest == stage.input_refs.source_intent_digest,"real Binder preserves captured authoritative digest")
+			if stage.stage_id == "ORIGINAL_GRAPH":
+				check(stage.native_result.status == (2 if variant == "budget" else 0) and stage.native_result.graph_archive_ref != null,"actual FULL_GRAPH search solved and produced archival graph")
+				var read := E.read_artifact(transport._root,stage.evidence_refs.graph_archive)
+				var graph := W.decode_wire("graph_archive",read.value) if read.ok else read
+				check(graph.ok and graph.value.complete == (variant != "budget"),"formal graph_archive wire is closed; never an algorithm input")
+			if stage.stage_id == "SOFTLOCK": check(stage.native_result.status == (1 if variant == "budget" else 0) and stage.native_result.softlock_count == (null if variant == "budget" else 0),"same live original graph proves the real Softlock conclusion")
+			if stage.stage_id == "ABLATION": check(stage.native_result.baseline != null and stage.evidence_refs.baseline_graph_archive != null,"actual Ablation baseline has its separate archival result")
+			if stage.stage_id == "TRACE_SEMANTICS": check(stage.native_result.ok,"actual formal Trace semantics succeeded")
+			if stage.stage_id == "MILESTONES": check(stage.native_result.status == 0 and stage.native_result.sample_indices.has(&"finish"),"actual required Goal milestone matches selected original trace")
+			if stage.stage_id == "GRAPHICAL_REPLAY":
+				check(stage.actual_policy.mode == 1 and stage.native_result.status == 0 and stage.native_result.matched_steps > 0,"formal real graphical Replayer matches through natural Presenter/Tween")
+				check(stage.native_result.matched_steps == stage.native_result.trace_length and stage.native_result.actual_statekey == stage.native_result.expected_statekey,"real Runtime endpoint StateKey agrees with same-run selected trace")
+		var kinds: Array = []
+		var sequence := 0
+		for name in DirAccess.get_files_at(transport._channel("worker_to_parent")):
+			var decoded := W.decode_wire("worker_message",E.read_bytes(transport._channel("worker_to_parent").path_join(name)).value)
+			check(decoded.ok,"pipeline filesystem IPC uses formal WorkerMessage")
+			if decoded.ok: kinds.append(decoded.value)
+		kinds.sort_custom(func(a,b): return a.sequence < b.sequence)
+		var starts: Array = []
+		var results: Array = []
+		for msg in kinds:
+			check(msg.sequence == sequence,"full pipeline worker sequence remains contiguous")
+			sequence += 1
+			if msg.kind == "STAGE_STARTED": starts.append(msg.stage_id)
+			if msg.kind == "STAGE_RESULT": results.append(msg.stage_id)
+		check(starts == expected and results == expected,"each selected formal call is accounted for by start and ArtifactRef result")
+		check(not kinds.is_empty() and kinds[0].kind == "HELLO" and kinds[0].payload_ref_or_inline.worker_role == ("GRAPHICAL" if graphical else "HEADLESS"),"actual HELLO role agrees with controlled entry")
+		check(not kinds.is_empty() and kinds.back().kind == "EXIT" and not transport.release_error(),"formal EXIT agrees with observed OS exit")
+		evidence.append({"checks":checks-case_checks,"stages":stages,"pid":transport._pid,"launch_id":transport._launch,"run_dir":transport._root,"status":final.value,"records":stored,"omitted":omitted,"messages":kinds,"release":transport.release_state(started.value.identity)})
+		service.queue_free()
+		await process_frame
+	check(E.write_new(evidence_dir().path_join("pipeline-evidence" + variant + ".json"),JSON.stringify(evidence,"\t").to_utf8_buffer()).ok,"test observations saved separately from formal product stage_result.wire")
+
+func _quality_accounting() -> void:
+	var p := _pair(["INTENT_BIND","INTENT_VALIDATE","ORIGINAL_GRAPH","SOFTLOCK","ABLATION","TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"])
+	check(p.parent.has_method("omitted_stages"),"parent accounts for genuinely unrun quality stages without fabricating IPC")
+	if not p.parent.has_method("omitted_stages"): return
+	# Unit protocol evidence only, not an algorithm execution claim.
+	p.parent._stage_results = [{"stage_record":{"stage_id":"INTENT_BIND","execution":"COMPLETED","native_result":{"ok":true,"bound_intent":{"required_mechanics":[],"optional_mechanics":[],"forbidden_bypasses":[],"expected_milestones":[]}}}}]
+	var omissions: Array = p.parent.omitted_stages()
+	check(omissions.filter(func(x):return x.stage_id == "ABLATION" and x.applicability == "NOT_APPLICABLE" and x.native_result == null).size() == 1,"empty constraints are parent NOT_APPLICABLE, not STAGE_CALL_ERROR")
+	check(omissions.filter(func(x):return x.stage_id == "MILESTONES" and x.applicability == "NOT_APPLICABLE").size() == 1,"empty milestones have no fabricated invocation")
+	p.parent._stage_results.append({"stage_record":{"stage_id":"ORIGINAL_GRAPH","execution":"INCOMPLETE","native_result":{"solution_trace":null,"graph_archive_ref":null}}})
+	omissions = p.parent.omitted_stages()
+	check(omissions.filter(func(x):return x.stage_id == "TRACE_SEMANTICS" and x.execution == "NOT_RUN").size() == 1,"budget-limited graph omits unsupported consumers and preserves domain outcome")
+	check(omissions.filter(func(x):return x.stage_id == "GRAPHICAL_REPLAY").size() == 1,"missing selected trace cannot start graphical work")
+func _timeout_reason_regression() -> void:
+	var p := _pair(["BAKE"])
+	_hello(p)
+	check(p.parent.send_cancel(p.id,"STAGE_TIMEOUT").ok,"approved scheduler timeout command is sent")
+	var stop: Dictionary = p.worker.checkpoint()
+	check(not stop.ok and stop.issues[0].code == "TIMEOUT","worker retains scheduling timeout as ERROR cause, never ordinary user cancellation")
+func _replay_contract() -> void:
+	var service = Service.new()
+	get_root().add_child(service)
+	check(service.has_method("replay_run"),"formal replay_run returns a StageRecord and uses the same heavy slot")
+	if service.has_method("replay_run"):
+		var rejected: Dictionary = await service.replay_run({}, {}, {}, {})
+		check(rejected.stage_id == "GRAPHICAL_REPLAY" and rejected.native_result == null and rejected.execution == "NOT_RUN","invalid replay does not invent native evidence or bypass a controlled entry")
+		check(service._released,"rejected replay does not take or leak the heavy slot")
+	service.queue_free()
+	await process_frame
+func _worker_deadline() -> void:
+	var p := _pair(["BAKE"])
+	_hello(p)
+	p.worker._stage_deadline_ms = 20
+	check(p.worker.send("STAGE_STARTED","BAKE",{"started_at":p.worker.utc_now()}).ok,"worker records actual native-call start")
+	p.clock.advance(20)
+	var observed: Dictionary = p.worker.checkpoint()
+	check(not observed.ok and observed.issues[0].code == "TIMEOUT","worker owns the per-call deadline even before parent's next frame")

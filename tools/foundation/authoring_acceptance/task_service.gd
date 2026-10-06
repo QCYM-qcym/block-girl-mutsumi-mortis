@@ -19,6 +19,7 @@ var _failed := false
 var _reason := ""
 var _stage := ""
 var _exit_received := false
+var _replay_owned: Node
 
 func _init(capture_port: Callable = Callable(), transport: RefCounted = null) -> void:
 	_capture_port = capture_port
@@ -90,7 +91,7 @@ func start(request: Dictionary) -> Dictionary:
 		status_changed.emit(_view())
 		return S.failure("CANCELLED","Capture completed after cancellation; worker not launched")
 	if _transport == null or not _capture_port.is_valid(): _transport = Transport.new()
-	var launched: Dictionary = _transport.launch(_identity,captured.value.project,"HEADLESS")
+	var launched: Dictionary = _transport.launch(_identity,captured.value.project,"GRAPHICAL" if "GRAPHICAL_REPLAY" in request.policy.stages else "HEADLESS")
 	if not launched.ok:
 		# No owned PID exists on dependency rejection. Capture files remain evidence.
 		_released = true
@@ -110,6 +111,7 @@ func _request_cancel(reason: String) -> Dictionary:
 	if capture_pending:
 		status_changed.emit(_view())
 		return S.success(null) # No owned launch/channel exists until capture returns.
+	if _replay_owned != null: return S.success(null) # No native cancel API; retain slot until natural return.
 	var sent: Dictionary = _transport.send_cancel(_identity,reason)
 	if not sent.ok: _failed = true
 	status_changed.emit(_view())
@@ -173,3 +175,73 @@ func _consume_messages(messages: Dictionary) -> void:
 						_cancelled = true
 						_lifecycle = "CANCELLING"
 					if message.payload_ref_or_inline.reason in ["FAILED","LEASE_EXPIRED"]: _failed = true
+
+## Worker-side whole graphical replay inside the current sealed execution entry.
+## Same service slot/lifecycle; no alternate stage selection or history restore.
+func replay_run(identity: Dictionary, canonical_ref: Dictionary, trace_ref: Dictionary, options: Dictionary) -> Dictionary:
+	var records: Script = load("res://tools/foundation/authoring_acceptance/run_records.gd")
+	var record: Dictionary = records.make_stage_record("GRAPHICAL_REPLAY",E.stage_owner("GRAPHICAL_REPLAY"),E.stage_module("GRAPHICAL_REPLAY"))
+	record.actual_policy = options.duplicate(true)
+	record.actual_budget = options.duplicate(true)
+	record.actual_budget.erase("mode")
+	record.actual_budget["validation_options"] = {"max_configurations":4096,"max_checks":100000}
+	record.evidence_refs = {}
+	record.reason = "CONTROLLED_ENTRY_REQUIRED"
+	if not _released:
+		record.reason = "BUSY"
+		return record
+	var project_root := ProjectSettings.globalize_path("res://").replace("\\","/").trim_suffix("/")
+	if not project_root.ends_with("/execution/project") or DisplayServer.get_name() == "headless": return record
+	var run_root := project_root.trim_suffix("/execution/project")
+	var snapshot := E.snapshot_from_run(run_root)
+	if not snapshot.ok: return record
+	var verified := E.verify(snapshot.value)
+	if not verified.ok or identity != verified.value.manifest.identity: return record
+	if "GRAPHICAL_REPLAY" not in verified.value.policy.stages or options != verified.value.policy.replay_options or options.mode != 1: return record
+	# Confirm this controlled process still uses every sealed byte, not active source.
+	for uri in verified.value.files:
+		var bytes := E.read_bytes(project_root.path_join(uri.substr(6)))
+		if not bytes.ok or bytes.value != verified.value.files[uri]: return record
+	var producers := {}
+	var producer_refs := {}
+	for id in ["BAKE","ORIGINAL_GRAPH"]:
+		var raw := E.read_bytes(run_root.path_join("artifacts/stages/" + id + "/stage_result.wire"))
+		if not raw.ok: return record
+		var decoded := W.decode_wire("stage_result",raw.value)
+		if not decoded.ok or decoded.value.run_identity != identity or decoded.value.stage_record.stage_id != id: return record
+		producers[id] = decoded.value.stage_record
+		producer_refs[id] = E.artifact("artifacts/stages/" + id + "/stage_result.wire",raw.value,"foundationtoolwire.v1")
+	if producers.BAKE.evidence_refs.canonical != canonical_ref or producers.ORIGINAL_GRAPH.evidence_refs.selected_trace_ref == null or producers.ORIGINAL_GRAPH.evidence_refs.selected_trace_ref.trace != trace_ref: return record
+	var canonical := E.read_artifact(run_root,canonical_ref)
+	var trace_bytes := E.read_artifact(run_root,trace_ref)
+	if not canonical.ok or not trace_bytes.ok: return record
+	var codec := "res://foundation/level/" + "level_codec.gd"
+	var level: Dictionary = load(codec).decode(canonical.value.get_string_from_utf8())
+	var trace := W.decode_wire("trace",trace_bytes.value)
+	if not level.ok or not trace.ok or trace.value != producers.ORIGINAL_GRAPH.native_result.solution_trace: return record
+	var states := "res://foundation/contracts/" + "contract_records.gd"
+	var key := "res://foundation/contracts/" + "state_key.gd"
+	record.input_refs = {"input_manifest":snapshot.value.input_manifest,"bake_result":producer_refs.BAKE,"canonical":canonical_ref,"level_hash":level.level.content_hash,"rule_version":level.level.rule_version,"initial_statekey":load(key).build(level.level,load(states).initial_state(level.level)).key,"selected_trace":trace_ref,"selected_trace_digest":trace_ref.sha256}
+	_identity = identity.duplicate(true)
+	_released = false
+	_cancelled = false
+	_failed = false
+	_lifecycle = "RUNNING"
+	_stage = "GRAPHICAL_REPLAY"
+	status_changed.emit(_view())
+	_replay_owned = load(E.stage_module("GRAPHICAL_REPLAY")).new()
+	add_child(_replay_owned)
+	var clock := Transport.new()
+	record.started_at = clock.utc_now()
+	record.native_result = await _replay_owned.replay(level.level,trace.value,options)
+	_replay_owned.queue_free()
+	await get_tree().process_frame # Natural owned SceneTree disposal, no sleep/seek.
+	_replay_owned = null
+	record.finished_at = clock.utc_now()
+	record.execution = "INCOMPLETE" if record.native_result.status == 3 else ("ERROR" if record.native_result.status == 2 else ("CANCELLED" if _cancelled else "COMPLETED"))
+	record.reason = "" if record.execution == "COMPLETED" else "NATIVE_" + record.execution
+	_released = true
+	_stage = ""
+	_lifecycle = "CANCELLED" if _cancelled else "COMPLETED"
+	status_changed.emit(_view())
+	return record

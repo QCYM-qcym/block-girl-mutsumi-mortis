@@ -113,6 +113,13 @@ static func stage_module(stage: String) -> String:
 	if not classified.ok or not registry.has(stage): return ""
 	return registry[stage][1]
 
+static func stage_owner(stage: String) -> String:
+	if stage == "BAKE": return "4A"
+	var schema: Script = S
+	var registry := {}
+	var classified := _execution_text(BASE_PROTOCOL.back(),schema.get_source_code(),registry)
+	if not classified.ok or not registry.has(stage): return ""
+	return registry[stage][0]
 static func _job_modules(policy: Dictionary) -> Dictionary:
 	var previous := -1
 	var modules: Array = []
@@ -124,8 +131,38 @@ static func _job_modules(policy: Dictionary) -> Dictionary:
 		if not uri.is_empty(): modules.append(uri)
 	var tools := "res://tools/foundation/authoring_acceptance/"
 	for entry in ["process_transport.gd","worker_entry.gd"]: modules.append(tools + entry)
-	if "GRAPHICAL_REPLAY" in policy.stages: modules.append(tools + "graphical_entry.gd")
+	for stage in policy.stages:
+		if stage in S.STAGES.slice(3,9):
+			modules.append("res://tools/foundation/" + "authoring_quality/quality_stage_records.gd")
+			modules.append(tools + "boundary_control.gd")
+			break
+	if "GRAPHICAL_REPLAY" in policy.stages:
+		modules.append(tools + "graphical_entry.gd")
+		modules.append(tools + "task_service.gd")
 	return S.success(modules)
+
+## The selected job's actual static/literal edges are frozen before publication.
+## The ordinary saved-only declaration is never expanded or changed on disk.
+static func _job_closure(source_root: String, config: Dictionary) -> Dictionary:
+	var cursor := 0
+	var pattern := RegEx.new()
+	pattern.compile('res://[A-Za-z0-9_./-]+\\.(?:gd|tscn|tres)')
+	while cursor < config.modules.size():
+		var uri: String = config.modules[cursor]
+		cursor += 1
+		var read := read_bytes(source_root.path_join(uri.substr(6)))
+		if not read.ok: return S.failure("DEPENDENCY_PENDING","Selected execution dependency unavailable",uri)
+		if not uri.ends_with(".gd"): continue
+		var classified := _execution_text(uri,read.value.get_string_from_utf8())
+		if not classified.ok: return classified
+		for edge in pattern.search_all(classified.value):
+			var path: String = edge.get_string()
+			if not _execution_resource_path(path): return S.failure("EXECUTION_DEPENDENCY_INVALID","Unsupported job dependency",path)
+			if path not in config.modules: config.modules.append(path)
+			if path not in config.dynamic: config.dynamic.append(path)
+	config.modules.sort()
+	config.dynamic.sort()
+	return S.success(null)
 
 static func _prepare(source_root: String, job_policy: Dictionary) -> Dictionary:
 	if not safe_path(source_root): return S.failure("PATH_INVALID", "An E-drive project root is required")
@@ -143,6 +180,8 @@ static func _prepare(source_root: String, job_policy: Dictionary) -> Dictionary:
 			if uri not in config.dynamic: config.dynamic.append(uri)
 		config.modules.sort()
 		config.dynamic.sort()
+		var expanded := _job_closure(source_root,config)
+		if not expanded.ok: return expanded
 	var paths: Array = []
 	var unique_modules := {}
 	for path in config.modules:
