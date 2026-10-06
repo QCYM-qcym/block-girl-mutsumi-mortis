@@ -16,6 +16,7 @@ var _tx := 0
 var _consumed := {}
 var _poison := false
 var _cancel := false
+var _stop_code := ""
 var _hello := false
 var _exit := false
 var _error := false
@@ -200,7 +201,7 @@ func _validate(msg: Dictionary, direction: String, cursor: int) -> Dictionary:
 			if direction == "WORKER_TO_PARENT" and _worker and not _lease_valid(): return S.failure("IPC_PROTOCOL_ERROR","HELLO requires verified unexpired initial lease")
 		"STAGE_STARTED":
 			if _error or msg.stage_id not in _assigned or msg.stage_id in _terminal: return S.failure("IPC_PROTOCOL_ERROR","Unassigned/repeated/failed stage")
-			if _terminal.size() >= _assigned.size() or msg.stage_id != _assigned[_terminal.size()]: return S.failure("IPC_PROTOCOL_ERROR","Stage order differs from assigned formal plan")
+			if _terminal.size() >= _assigned.size() or msg.stage_id != _next_assigned(): return S.failure("IPC_PROTOCOL_ERROR","Stage order differs from assigned formal plan")
 			if _worker and (_cancel or not _lease_valid()): return S.failure("IPC_PROTOCOL_ERROR","Boundary stop forbids a new call")
 		"STAGE_RESULT":
 			var stage := _read_stage(msg)
@@ -214,7 +215,7 @@ func _validate(msg: Dictionary, direction: String, cursor: int) -> Dictionary:
 		"EXIT":
 			# Parent cancellation cannot establish when the worker observed it.
 			# Keep a queued FINISHED as exit evidence without restoring eligibility.
-			if p.reason == "FINISHED" and (_active != "" or _terminal.size() != _assigned.size() or _error or (_worker and _cancel)): return S.failure("IPC_PROTOCOL_ERROR","FINISHED with unresolved/stopped work")
+			if p.reason == "FINISHED" and (_active != "" or not _next_assigned().is_empty() or _error or (_worker and _cancel)): return S.failure("IPC_PROTOCOL_ERROR","FINISHED with unresolved/stopped work")
 		"LEASE":
 			var issued := _utc_ms(p.issued_at)
 			if issued > _wall() or (_last_lease >= 0 and issued <= _last_lease): return S.failure("IPC_PROTOCOL_ERROR","Lease future/rollback/repeated timestamp")
@@ -241,7 +242,9 @@ func _apply(msg: Dictionary, verified: Dictionary) -> void:
 			if p.reason == "CANCELLED": _cancel = true
 			elif p.reason in ["FAILED","LEASE_EXPIRED"]: _error = true
 		"ERROR": _error = true
-		"CANCEL": _cancel = true
+		"CANCEL":
+			_cancel = true
+			if _stop_code.is_empty(): _stop_code = "TIMEOUT" if p.reason == "STAGE_TIMEOUT" else ("IPC_PROTOCOL_ERROR" if p.reason == "PROTOCOL_ERROR" else "CANCELLED")
 		"LEASE":
 			_last_lease = _utc_ms(p.issued_at)
 			_lease_deadline = _ticks() + maxi(0,_last_lease + 30000 - _wall())
@@ -338,12 +341,14 @@ func checkpoint() -> Dictionary:
 	if not _worker: return S.failure("IPC_PROTOCOL_ERROR","Worker boundary only")
 	var drained := poll(_identity)
 	if not drained.ok: return drained
+	var deadline := check_deadline()
+	if not deadline.ok: return deadline
 	if _last_wall >= 0 and _wall() < _last_wall: return _fail("Worker clock rollback")
 	_last_wall = _wall()
 	if not _lease_valid():
 		_cancel = true
 		return S.failure("LEASE_EXPIRED","Lease lost at cooperative boundary")
-	if _cancel or _poison or _error: return S.failure("CANCELLED","Stop chain at boundary")
+	if _cancel or _poison or _error: return S.failure(_stop_code if not _stop_code.is_empty() else "CANCELLED","Stop chain at boundary")
 	return S.success(null)
 
 ## These ownership ports are private to the transport/task implementation. Unit
@@ -401,3 +406,49 @@ func release_state(identity: Dictionary) -> Dictionary:
 	for observer in _preview_observers:
 		if observer.get_ref() != null: resources_released = false
 	return {"process_exited":exited,"file_handles_closed":handles_closed,"callbacks_disconnected":_cleanup_attempted and _owned_callbacks.is_empty(),"preview_resources_released":resources_released}
+
+# Scheduling metadata only. Native findings/verdict remain with their owners.
+# These uninvoked records stay in parent RunEvidence; never STAGE_RESULT wire.
+func _native_result(id: String) -> Variant:
+	for result in _stage_results:
+		if result.stage_record.stage_id == id: return result.stage_record.native_result
+	return null
+
+func _skip_reason(id: String) -> String:
+	var index: int = S.STAGES.find(id)
+	for result in _stage_results:
+		if S.STAGES.find(result.stage_record.stage_id) < index and result.stage_record.execution == "ERROR": return "UPSTREAM_ERROR"
+	var bake: Variant = _native_result("BAKE")
+	if index > 1 and bake is Dictionary and not bake.ok: return "BAKE_UNAVAILABLE"
+	var binding: Variant = _native_result("INTENT_BIND")
+	var validation: Variant = _native_result("INTENT_VALIDATE")
+	var original: Variant = _native_result("ORIGINAL_GRAPH")
+	var semantic: Variant = _native_result("TRACE_SEMANTICS")
+	if id in ["INTENT_VALIDATE","ABLATION","MILESTONES"] and binding is Dictionary and not binding.ok: return "INTENT_UNAVAILABLE"
+	if id in ["ABLATION","MILESTONES"] and validation is Dictionary and not validation.ok: return "INTENT_UNAVAILABLE"
+	if binding is Dictionary and binding.ok:
+		var intent: Dictionary = binding.bound_intent
+		if id == "ABLATION" and intent.required_mechanics.is_empty() and intent.optional_mechanics.is_empty() and intent.forbidden_bypasses.is_empty(): return "NO_DECLARED_CONSTRAINTS"
+		if id == "MILESTONES" and intent.expected_milestones.is_empty(): return "NO_DECLARED_CONSTRAINTS"
+	if id == "SOFTLOCK" and original is Dictionary and original.get("graph_archive_ref") == null: return "ORIGINAL_GRAPH_UNAVAILABLE"
+	if id in ["TRACE_SEMANTICS","MILESTONES","GRAPHICAL_REPLAY"] and original is Dictionary and original.get("solution_trace") == null: return "TRACE_UNAVAILABLE"
+	if id in ["MILESTONES","GRAPHICAL_REPLAY"] and semantic is Dictionary and not semantic.ok: return "TRACE_UNAVAILABLE"
+	return ""
+
+func _next_assigned() -> String:
+	for id in _assigned:
+		if id not in _terminal and _skip_reason(id).is_empty(): return id
+	return ""
+
+func omitted_stages() -> Array:
+	var omitted: Array = []
+	var records: Script = load("res://tools/foundation/authoring_acceptance/run_records.gd")
+	for id in _assigned:
+		var reason := _skip_reason(id)
+		if id in _terminal or reason.is_empty(): continue
+		var owner: Array = [E.stage_owner(id),E.stage_module(id)]
+		var record: Dictionary = records.make_stage_record(id,owner[0],owner[1])
+		record.applicability = "NOT_APPLICABLE" if reason == "NO_DECLARED_CONSTRAINTS" else "APPLICABLE"
+		record.reason = reason
+		omitted.append(record)
+	return omitted
