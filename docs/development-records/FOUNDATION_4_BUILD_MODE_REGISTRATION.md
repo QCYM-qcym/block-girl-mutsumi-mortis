@@ -144,3 +144,15 @@ The active test source is this exact finalization candidate. Earlier Core author
 The unchanged receipt and phase gate rejected jf_gate_red before execution, with checks=0. Formal Real/Graphical prerequisites now explicitly include A_BAKE and A_EDIT, so actual Binder sources must match their formal receipts as well as C_QUALITY. No candidate delivery slot exists. Formal D_JOBS and I2 remain unavailable until fresh shared Harness Unit/Real/Graphical passes.
 
 Finalization Harness layout correction: jf_u01 passed490; jf_r01 retained a genuine RunRequest rejection for all four new saved-fixture pipelines because shared Harness placed case/run outside case/project. ProjectSettings.localize_path therefore yielded an absolute E:/ URI. This is a test launch configuration problem, not a Runtime behavior handoff. Shared Harness now places only the SceneTree test run/evidence under its disposable project/.godot/harness-run, records run-location.json, and reads exactly those actual results/logs. Source URI validation, receipt ancestry/blob gates, candidate SHA and all Owner test/production bytes remain unchanged. Fresh Unit/Real/Graphical must all pass under this corrected layout before formal delivery.
+
+## Formal D_JOBS finalization after shared GREEN
+
+D_JOBS: 7836de52866255dd6f9684214b014d9703e7854d
+D_JOBS_DELIVERY_READY
+D_JOBS_RECEIPT_READY
+CONTRACT_MISMATCH: NONE
+Previous core: 2c1c4d1b5642c3060a013cabe836fefd9c9ced7e
+Fresh shared Unit jf_u02:490 PASS; Real jf_r02:395 PASS; Graphical jf_g02:117 PASS. All exit0/failures[]/stderr0; Real and Graphical doubles[]. Formal slot registered only after all three GREEN. See D_JOBS_FINALIZATION_RECEIPT_20261006.md.
+I2: READY_TO_RUN
+Foundation Freeze: WAITING_FOR_I2
+No further D_JOBS functionality work is authorized by this finalization. The earlier NOT_DELIVERED/I2 pending snapshots above are retained history.
