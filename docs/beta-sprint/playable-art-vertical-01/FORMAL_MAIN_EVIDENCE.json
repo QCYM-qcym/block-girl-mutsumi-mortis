@@ -1,0 +1,201 @@
+{
+  "task": "PLAYABLE-ART-VERTICAL-SLICE-01",
+  "status": "PLAYABLE_ART_VERTICAL_SLICE_01_READY",
+  "main_project": "E:\\godot\\若叶睦\\方块少女-若叶睦",
+  "level": "L-01《另一个世界》",
+  "tested_implementation": "7352002d7efc33318ee06c95231caea75b5cac50",
+  "started_utc": "2026-10-06T15:58:28.7774643Z",
+  "finished_utc": "2026-10-06T15:59:34.0424584Z",
+  "engine": "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "formal_checks": 6086,
+  "failures": [],
+  "stages": [
+    {
+      "name": "import",
+      "pid": 32528,
+      "exit_code": 0,
+      "started_utc": "2026-10-06T15:58:28.7827078Z",
+      "stdout": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\import.stdout.log",
+      "stderr": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\import.stderr.log",
+      "timed_out": false,
+      "finished_utc": "2026-10-06T15:58:35.8757693Z",
+      "stderr_empty": true,
+      "stdout_clean": true
+    },
+    {
+      "name": "entry",
+      "pid": 24952,
+      "exit_code": 0,
+      "started_utc": "2026-10-06T15:58:35.99703Z",
+      "stdout": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\entry.stdout.log",
+      "stderr": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\entry.stderr.log",
+      "timed_out": false,
+      "finished_utc": "2026-10-06T15:58:36.7333301Z",
+      "stderr_empty": true,
+      "stdout_clean": true,
+      "report": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\entry\\report.json",
+      "checks": 6,
+      "failures": [],
+      "actual_project": "E:/godot/若叶睦/方块少女-若叶睦/"
+    },
+    {
+      "name": "seed",
+      "pid": 37556,
+      "exit_code": 0,
+      "started_utc": "2026-10-06T15:58:36.7435969Z",
+      "stdout": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\seed.stdout.log",
+      "stderr": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\seed.stderr.log",
+      "timed_out": false,
+      "finished_utc": "2026-10-06T15:59:31.8165475Z",
+      "stderr_empty": true,
+      "stdout_clean": true,
+      "report": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\seed\\report.json",
+      "checks": 6062,
+      "failures": [],
+      "actual_project": "E:/godot/若叶睦/方块少女-若叶睦/",
+      "actual_display": "Windows"
+    },
+    {
+      "name": "restore",
+      "pid": 31812,
+      "exit_code": 0,
+      "started_utc": "2026-10-06T15:59:31.995291Z",
+      "stdout": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\restore.stdout.log",
+      "stderr": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\restore.stderr.log",
+      "timed_out": false,
+      "finished_utc": "2026-10-06T15:59:33.8336285Z",
+      "stderr_empty": true,
+      "stdout_clean": true,
+      "report": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\restore\\report.json",
+      "checks": 18,
+      "failures": [],
+      "actual_project": "E:/godot/若叶睦/方块少女-若叶睦/",
+      "actual_display": "Windows"
+    }
+  ],
+  "source_files_verified": 317,
+  "asset_bindings_verified": 121,
+  "frozen_gameplay_verified": 245,
+  "original_files_preserved": 84,
+  "parity": {
+    "status": "MATCH",
+    "scope": "P01 observation SHA256; not Foundation statekey.v1",
+    "pixel_commits": 17,
+    "art3d_commits": 17,
+    "pixel_final_observation": "0c2618ccdfe10b65fa4adef539260f24722f403f673c94aa356e1a6fbec898b9",
+    "art3d_final_observation": "0c2618ccdfe10b65fa4adef539260f24722f403f673c94aa356e1a6fbec898b9"
+  },
+  "physical_face_directions": [
+    "(0, 0, 1)",
+    "(0, 1, 0)",
+    "(0, 0, -1)",
+    "(0, -1, 0)",
+    "(1, 0, 0)",
+    "(-1, 0, 0)"
+  ],
+  "view_combinations": 16,
+  "seed_screenshots": 48,
+  "occlusion_observations": 84,
+  "completion_events": 2,
+  "performance": {
+    "adapter": "NVIDIA GeForce RTX 5060 Ti",
+    "frame_ms_p50": 16.665,
+    "frame_ms_p95": 16.769,
+    "memory_bytes": 125931476,
+    "renderer": "forward_plus",
+    "samples": 2324,
+    "scope": "Current device and actual L01 only; frame wall time includes real rendering/input. No universal hardware claim."
+  },
+  "scope": {
+    "L02_L03": "NOT_RUN",
+    "carriers_rotation_stairs": "NOT_RUN",
+    "death": "NOT_RUN",
+    "mechanism_semantics": "Existing L01 plate/gate state mapping; Area3D physics not part of this runtime",
+    "puzzle_state_save": "NOT_RUN; Shell progression Save/Continue tested",
+    "runtime": "Existing ContentLevel/P01 GridMovement/PerspectiveController",
+    "stairs_clearance": "PARTIAL_PASS preserved",
+    "stairs_traversal": "NOT_RUN",
+    "state_key": "P01 observation SHA256; not Foundation statekey.v1"
+  },
+  "art_source_changes": "NONE",
+  "foundation_production_changes": "NONE",
+  "main_project_qa": "READY",
+  "human_qa": "NOT_RUN",
+  "confirmed_issue_counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "scope": "Automated L01 and code/screenshot audit, not Human QA"
+  },
+  "main_project_integration_request": "NONE",
+  "working_tree": {
+    "integration": "CLEAN after receipt commit",
+    "main_tracked_task_changes": "CLEAN after receipt commit",
+    "main_preexisting_untracked": 77,
+    "main_overall": "NOT_CLEAN_PREEXISTING_UNTRACKED"
+  },
+  "push": "NOT_RUN",
+  "evidence_files": [
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\run_report.json",
+      "bytes": 63427,
+      "sha256": "cde6b327589b55381e657e1277e1695076df7621b4010e561829f7a7f6faf255"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\entry\\report.json",
+      "bytes": 331,
+      "sha256": "2ce135f8631867060ec673513e3bc9a012ddd036af8b3b1bd55b259a100864b1"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\seed\\report.json",
+      "bytes": 2173910,
+      "sha256": "dc954d2a7d3f629ccebb433135b7ffbef154c4eb05ca833bb97d8c3e70cf9818"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\restore\\report.json",
+      "bytes": 17206,
+      "sha256": "e2fbbf20142dc612883591247f0768a0d71ae0334445add13b78e68439cc6f1d"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\import.stdout.log",
+      "bytes": 56420,
+      "sha256": "3eddb066de8848d3f1cd1563542f7982fd314f2e21e394968f1989e47b45482a"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\import.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\entry.stdout.log",
+      "bytes": 110,
+      "sha256": "42d4a7bea21b62ea83ea417b546bbe94c73bebd9cbb4f29cdf8139bd1a32c0e6"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\entry.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\seed.stdout.log",
+      "bytes": 199,
+      "sha256": "0cfadce2e44ff002f0b248ef708bfea281d467d424644de04d7e30ac801b3481"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\seed.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\restore.stdout.log",
+      "bytes": 200,
+      "sha256": "5e6d3ff5be42425afdb467089466925c86e8233030dd0475f72aeab93a1e9abe"
+    },
+    {
+      "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\.godot\\beta-sprint\\art-vertical\\main_art01\\restore.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

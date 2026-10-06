@@ -1,6 +1,8 @@
 # 08 黑盒试玩交接 — L-01 正式 3D Vertical Slice
 
-状态：PENDING_MAIN_PROJECT_VERIFICATION。自动化完成后填写真实提交与证据，再改为 READY。本交接不包含解法或路线答案。
+状态：READY。主项目自动化验收 6086/6086 PASS，0 failures，所有进程 exit 0、stderr empty；Human QA 尚未执行。本交接不包含解法或路线答案。
+
+已验收实现提交：7352002d7efc33318ee06c95231caea75b5cac50。后续 receipt 提交只更新文档与哈希清单，运行文件保持验收字节。真实主项目证据：E:/godot/若叶睦/方块少女-若叶睦/.godot/beta-sprint/art-vertical/main_art01/run_report.json；设备为 RTX 5060 Ti / D3D12 Forward+。性能仅限当前设备及 L01：2324 帧，p50 16.665ms，p95 16.769ms。
 
 主项目：E:/godot/若叶睦/方块少女-若叶睦/project.godot。使用 Godot 4.7.2，F5 应进入实际 Game Shell。通过关卡选择进入 L-01《另一个世界》，不能通过 Art Gallery、技术验证场景或旧 P-01 F6 入口代替试玩。
 
