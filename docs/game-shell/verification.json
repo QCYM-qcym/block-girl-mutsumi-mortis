@@ -1,0 +1,94 @@
+{
+  "baseline": "8a77874cc18ceb654664c3e9aeb10a2ccd318048",
+  "branch": "feat/beta-game-shell",
+  "date": "2026-10-06",
+  "engine": "Godot 4.7.2 Steam",
+  "evidence": "tests/shell/evidence/shell_beta_final",
+  "assertions": 112,
+  "failures": 0,
+  "stages": [
+    {
+      "stage": "save",
+      "checks": 19,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "flow",
+      "checks": 20,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "goal_boundary",
+      "checks": 7,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "mute_restart",
+      "checks": 4,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "cold",
+      "checks": 4,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "seed",
+      "checks": 3,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "restore",
+      "checks": 6,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "restore_graphical",
+      "checks": 8,
+      "failures": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "stage": "graphical",
+      "checks": 41,
+      "failures": 0,
+      "stderr_bytes": 0
+    }
+  ],
+  "configured_main_scene_boot": "PASS",
+  "human_operated_manual": "NOT_RUN",
+  "regression_evidence": [
+    "tests/shell/evidence/shell_beta_01",
+    "tests/gameplay/evidence/shell_beta_01_regression"
+  ],
+  "protected_paths": [
+    "foundation",
+    "tools/foundation",
+    "tests/foundation",
+    "game/levels",
+    "prototype",
+    "game/player",
+    "game/polish",
+    "production",
+    "default_bus_layout.tres",
+    "tests/gameplay",
+    "tests/prototype",
+    "tests/visual"
+  ],
+  "protected_changes": [],
+  "shared_file_changes": {
+    "after": "res://game/shell/game_shell.tscn",
+    "file": "project.godot",
+    "key": "application/run/main_scene",
+    "before": "res://game/levels/mutsumi/p01_another_world.tscn"
+  },
+  "push": "NOT_RUN",
+  "merge": "NOT_RUN"
+}
