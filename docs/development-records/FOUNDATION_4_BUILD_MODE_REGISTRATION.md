@@ -131,3 +131,14 @@ I2: NOT_STARTED.
 Push: NOT_RUN.
 
 Evidence archive: E:/godot/foundation-4-build-registration-20261006/.
+## D_JOBS Finalization validation registration — 2026-10-06
+
+D_JOBS_FINALIZATION_CANDIDATE: 7836de52866255dd6f9684214b014d9703e7854d
+Registration: PHASE_EVIDENCE_ONLY / TEST_DEPENDENCY_ONLY
+Purpose: ALLOW_FORMAL_D_JOBS_FINAL_VALIDATION
+D_JOBS formal at validation registration: NOT_DELIVERED
+Previous core evidence: 2c1c4d1b5642c3060a013cabe836fefd9c9ced7e
+
+The active test source is this exact finalization candidate. Earlier Core authorization above is historical; it is not applied to the new checkout. All fourteen candidate closure paths retain exact committed SHA-256 authorization. The seven final delta paths match the Owner report. execution_project/snapshot_capture are job sealing dependencies; the original D_SAVED receipt and saved-only capability profile remain bound to 4f2. No protocol, Binder, Quality, Replayer implementation or lifecycle design was changed by Integration.
+
+The unchanged receipt and phase gate rejected jf_gate_red before execution, with checks=0. Formal Real/Graphical prerequisites now explicitly include A_BAKE and A_EDIT, so actual Binder sources must match their formal receipts as well as C_QUALITY. No candidate delivery slot exists. Formal D_JOBS and I2 remain unavailable until fresh shared Harness Unit/Real/Graphical passes.

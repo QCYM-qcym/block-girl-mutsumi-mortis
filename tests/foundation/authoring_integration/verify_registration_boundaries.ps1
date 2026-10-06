@@ -1,6 +1,6 @@
 #requires -Version 7.4
 [CmdletBinding()]
-param([Parameter(Mandatory)][string]$EvidenceName)
+param([Parameter(Mandatory)][string]$EvidenceName,[switch]$FinalDelivery)
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
 $root=[IO.Path]::GetFullPath("$PSScriptRoot/../../..").Replace('\','/')
@@ -37,10 +37,15 @@ Verify 'closed_receipts' {Assert-Receipts $receipts}
 Verify 'unknown_receipt_field_rejected' {$r=Read-Json $receiptPath; $r.bogus=$true; Must-Reject {Assert-Receipts $r}}
 Verify 'candidate_is_not_a_delivery_slot' {
     $r=Read-Json $receiptPath
-    $r.deliveries+=@{slot='D_JOBS_CORE_CANDIDATE';commit='2c1c4d1b5642c3060a013cabe836fefd9c9ced7e';paths=@(@{path='project.godot';sha256=Get-Sha "$root/project.godot"})}
+    $r.deliveries+=@{slot='D_JOBS_FINALIZATION_CANDIDATE';commit='7836de52866255dd6f9684214b014d9703e7854d';paths=@(@{path='project.godot';sha256=Get-Sha "$root/project.godot"})}
     Must-Reject {Assert-Receipts $r}
 }
-Verify 'no_early_formal_slots' {Must (@($receipts.deliveries | Where-Object {$_.slot -cin @('D_JOBS','D_FULL','B_EDITOR')}).Count -eq 0) 'Formal slot was prematurely registered'}
+Verify 'formal_delivery_state' {
+    Must (@($receipts.deliveries | Where-Object {$_.slot -cin @('D_FULL','B_EDITOR')}).Count -eq 0) 'Future slot was prematurely registered'
+    $jobs=@($receipts.deliveries | Where-Object slot -CEQ 'D_JOBS')
+    Must ($jobs.Count -eq [int][bool]$FinalDelivery) 'D_JOBS formal delivery state differs from this verification phase'
+    if($FinalDelivery){Must ($jobs[0].commit -ceq '7836de52866255dd6f9684214b014d9703e7854d' -and $jobs[0].paths.Count -eq 14) 'Final delivery differs from validated candidate'}
+}
 Verify 'original_blob_hashes_still_bound' {
     foreach($d in $receipts.deliveries){
         Must (Is-Ancestor $d.commit) "Unintegrated $($d.slot)"
@@ -54,7 +59,9 @@ Verify 'saved_production_receipt_preserved' {
 }
 Verify 'saved_validation_support_exact' {Assert-PhaseSource 'D_SAVED_VALIDATION_SUPPORT' | Out-Null}
 Verify 'host_validation_support_exact' {Assert-PhaseSource 'D_HOST_VALIDATION_SUPPORT' | Out-Null}
-Verify 'core_twelve_paths_exact' {$p=Assert-PhaseSource 'D_JOBS_CORE_CANDIDATE'; Must ($p.files.Count -eq 12 -and $p.status -ceq 'NOT_A_FORMAL_DELIVERY') 'Core scope/state changed'}
+Verify 'final_candidate_fourteen_paths_exact' {$p=Assert-PhaseSource 'D_JOBS_FINALIZATION_CANDIDATE'; Must ($p.files.Count -eq 14 -and $p.commit -ceq '7836de52866255dd6f9684214b014d9703e7854d' -and $p.purpose -ceq 'ALLOW_FORMAL_D_JOBS_FINAL_VALIDATION' -and $p.status -ceq 'NOT_A_FORMAL_DELIVERY') 'Candidate scope/state changed'}
+Verify 'historical_core_blob_retained' {Must ((Blob-Sha '2c1c4d1b5642c3060a013cabe836fefd9c9ced7e' 'tools/foundation/authoring_acceptance/task_service.gd') -ceq '638271ab7d9f9e8278297a61bd6b2a6ed082d4131cb3e0b97979565352551ad8') 'Historical Core lost'}
+Verify 'old_core_not_current_authorization' {Must-Reject {Assert-PhaseSource 'D_JOBS_CORE_CANDIDATE'}}
 Verify 'multiple_phase_dependencies_recorded_as_array' {
     $evidence="$directory/phase-recording"
     New-Item -ItemType Directory -Path $evidence -ErrorAction Stop | Out-Null
@@ -68,7 +75,7 @@ Verify 'wrong_formal_commit_rejected' {Must-Reject {Resolve-PhaseSource 'D_SAVED
 Verify 'wrong_phase_hash_rejected' {Must-Reject {Resolve-PhaseSource 'D_SAVED' '4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11' 'tools/foundation/authoring_acceptance/execution_project.gd' ('0'*64)}}
 Verify 'unrelated_production_override_rejected' {Must-Reject {Resolve-PhaseSource 'D_PROTOCOL' '8f7fb52f029053bda10b965da840c6763fc13bf0' 'tools/foundation/authoring_acceptance/wire_schemas.gd' ('0'*64)}}
 Verify 'obsolete_host_binding_rejected' {Must-Reject {Resolve-PhaseSource 'D_HOST' 'b9bf7d4a02398cd354fab6a18948babaa22c531e' 'tests/foundation/authoring_acceptance/test_whitebox_host.gd' 'ccbe1d7f33a6c00f634df2430d9d0aa0ade3ced47d896d1919704318713ee802'}}
-foreach($key in @('4A/4A-4/Real','4D/4D-3/Graphical','4D/4D-4/Unit','4D/4D-4/Real','Integration/I1/Graphical')){
+foreach($key in @('4A/4A-4/Real','4D/4D-3/Graphical','4D/4D-4/Unit','4D/4D-4/Real','4D/4D-4/Graphical','Integration/I1/Graphical')){
     $parts=$key.Split('/')
     $row=@($manifest.cases | Where-Object {$_.module -ceq $parts[0] -and $_.case_id -ceq $parts[1] -and $_.mode -ceq $parts[2]})[0]
     Verify "registered_dependencies:$key" {Must (@(Get-Missing $row).Count -eq 0) 'Receipt-qualified prerequisites not resolved'}
@@ -79,11 +86,12 @@ Verify 'a_edit_exact_formal_delivery' {
     $probe=@{module='Integration';case_id='Boundary';required_slots=@('BASE','A_EDIT');script='res://tests/foundation/authoring/test_intent_binding.gd';entry='SCENE_TREE'}
     Must (@(Get-Missing $probe).Count -eq 0) 'A_EDIT exact checkout not resolved'
 }
-Verify 'i2_only_formal_djobs_pending' {
+Verify 'i2_formal_dependency_gate' {
     $row=@($manifest.cases | Where-Object {$_.module -ceq 'Integration' -and $_.case_id -ceq 'I2' -and $_.mode -ceq 'Graphical'})[0]
     $missing=@(Get-Missing $row)
-    Must ($missing.Count -eq 1 -and $missing[0] -ceq 'slot:D_JOBS') ('Unexpected I2 classification: '+($missing -join ','))
-    Write-Json "$directory/i2-classification.json" @{status='DEPENDENCY_PENDING';missing=$missing;executed=$false}
+    if($FinalDelivery){Must ($missing.Count -eq 0) ('Unexpected I2 classification: '+($missing -join ','))}
+    else{Must ($missing.Count -eq 1 -and $missing[0] -ceq 'slot:D_JOBS') ('Unexpected I2 classification: '+($missing -join ','))}
+    Write-Json "$directory/i2-classification.json" @{status=$(if($FinalDelivery){'READY_TO_RUN'}else{'DEPENDENCY_PENDING'});missing=$missing;executed=$false}
 }
 Verify 'tampered_formal_blob_rejected_before_phase' {
     $receipts=Read-Json $receiptPath

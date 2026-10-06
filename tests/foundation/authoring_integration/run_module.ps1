@@ -196,22 +196,24 @@ function Get-PhaseSources {
             }
         },
         @{
-            name='D_JOBS_CORE_CANDIDATE'; commit='2c1c4d1b5642c3060a013cabe836fefd9c9ced7e'
+            name='D_JOBS_FINALIZATION_CANDIDATE'; commit='7836de52866255dd6f9684214b014d9703e7854d'
             slot='D_SAVED'; formal_commit='4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11'
-            purpose='ALLOW_REMAINING_D_JOBS_REAL_AND_ORCHESTRATION_VALIDATION'
+            purpose='ALLOW_FORMAL_D_JOBS_FINAL_VALIDATION'
             overrides=@('tools/foundation/authoring_acceptance/execution_project.gd','tools/foundation/authoring_acceptance/snapshot_capture.gd')
             files=@{
                 'tests/foundation/authoring_acceptance/owned_worker_fixture.gd' = 'cae63cc5819ca1dd08e30300fdb98ee119473669fb29998f316b9a4bd2b5846d'
                 'tests/foundation/authoring_acceptance/owned_worker_fixture.gd.uid' = 'c551d7557b66b88ae4962502a7acbd3b4f6125af93eca154bb24107eff1651d7'
-                'tests/foundation/authoring_acceptance/test_task_lifecycle.gd' = '916e51872dfc4d8f990a228ab2128bac41b290dee6c486a60b6a78e69e1f3dba'
+                'tests/foundation/authoring_acceptance/test_task_lifecycle.gd' = '21d1cc7d30180f366a090d8df6bea953da8768edfca1e129e3da4eaae542d415'
                 'tests/foundation/authoring_acceptance/test_task_lifecycle.gd.uid' = '5a86a81b86a846e1ff9b682352a20c7dced1e4453d042179cec1c9b88a7acc63'
-                'tools/foundation/authoring_acceptance/execution_project.gd' = '333c5a5da269b577f690f2d13df6ef429b10e283d697ee5d39f8f841406c7344'
-                'tools/foundation/authoring_acceptance/process_transport.gd' = 'fa8ab54d7d160aae952a94815bd30c73f2268cc55f1a89302a2139faa4ab7835'
+                'tools/foundation/authoring_acceptance/execution_project.gd' = '02d160f416a41da4d929d8a650a9e123e85eaa53a1b01755a7e6ded39e3f65ad'
+                'tools/foundation/authoring_acceptance/graphical_entry.gd' = '08472a35fd31e5e635ca85c759c1993efba8a37ab35294a0b0a4aec81e97f835'
+                'tools/foundation/authoring_acceptance/graphical_entry.gd.uid' = '309b21e39a138dedd205eab8436202724f0f40e174a0a93a525da392b83caf22'
+                'tools/foundation/authoring_acceptance/process_transport.gd' = '860c5cddf74b8842ad8edd2b8ac410ea122d1d3993ef80d2e391758291af452a'
                 'tools/foundation/authoring_acceptance/process_transport.gd.uid' = 'ca95dc8df4555bf81ac85f4fd906b0ed547d6760af492f3699aa99184e98c94b'
                 'tools/foundation/authoring_acceptance/snapshot_capture.gd' = '0573247db5907c4dc740aad8b9f72a236b459a389e3e2d916bfc46367f7d553f'
-                'tools/foundation/authoring_acceptance/task_service.gd' = '638271ab7d9f9e8278297a61bd6b2a6ed082d4131cb3e0b97979565352551ad8'
+                'tools/foundation/authoring_acceptance/task_service.gd' = 'b849431551b824bbb781cee89f99664e76bb3f09b0a6243b4293085390b9bcd2'
                 'tools/foundation/authoring_acceptance/task_service.gd.uid' = '672d41c742033d179cb2d1600dfdd7638659d9d77df79430eed0784890d79542'
-                'tools/foundation/authoring_acceptance/worker_entry.gd' = 'bd4cfc29aeb4680eafa9be1d0b43c5b47833a2ad1e2c05c71243600442c015a8'
+                'tools/foundation/authoring_acceptance/worker_entry.gd' = '759164017b2b66cd7f9f2721260df12ced01aab06c1c8a4c378150368f39f7cc'
                 'tools/foundation/authoring_acceptance/worker_entry.gd.uid' = 'feb95b493f2c571a16c0cebf44673bc41f5743df5ca7149c7ba57de3a19dbcd4'
             }
         }
@@ -268,8 +270,8 @@ function Get-Missing($Registration) {
         }
     }
     if ($Registration['module'] -ceq '4D' -and $Registration['case_id'] -ceq '4D-4') {
-        $phase = Assert-PhaseSource 'D_JOBS_CORE_CANDIDATE'
-        if ($evidence) { Write-Json "$evidence/djobs-core-test-dependency.json" $phase }
+        $phase = Assert-PhaseSource 'D_JOBS_FINALIZATION_CANDIDATE'
+        if ($evidence) { Write-Json "$evidence/djobs-finalization-test-dependency.json" $phase }
     }
     if ($Registration['module'] -ceq '4D' -and $Registration['case_id'] -ceq '4D-3') {
         # D3's producer case intentionally has no self D_HOST required slot.
