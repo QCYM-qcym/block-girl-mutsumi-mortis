@@ -95,6 +95,39 @@ static func _execution_resource_path(path: Variant) -> bool:
 	return typeof(path) == TYPE_STRING and S._resource_path(path) and (path.ends_with(".gd") or path.ends_with(".tscn"))
 
 static func prepare(source_root: String) -> Dictionary:
+	return _prepare(source_root,{})
+
+## Same sealer, new immutable run. The saved-only profile above is unchanged.
+static func prepare_job(source_root: String, policy: Dictionary) -> Dictionary:
+	var valid := Wire.encode_wire("policy",policy)
+	if not valid.ok: return valid
+	return _prepare(source_root,policy)
+
+## Read only the already-validated authoritative producer identity declaration.
+## Returning an identity does not load it; job closure then seals actual bytes.
+static func stage_module(stage: String) -> String:
+	if stage == "BAKE": return CAPABILITY_ROOTS[1]
+	var schema: Script = S
+	var registry := {}
+	var classified := _execution_text(BASE_PROTOCOL.back(),schema.get_source_code(),registry)
+	if not classified.ok or not registry.has(stage): return ""
+	return registry[stage][1]
+
+static func _job_modules(policy: Dictionary) -> Dictionary:
+	var previous := -1
+	var modules: Array = []
+	for stage in policy.stages:
+		var index: int = S.STAGES.find(stage)
+		if index <= previous: return S.failure("REQUEST_INVALID","Selection changes formal stage order",stage)
+		previous = index
+		var uri := stage_module(stage)
+		if not uri.is_empty(): modules.append(uri)
+	var tools := "res://tools/foundation/authoring_acceptance/"
+	for entry in ["process_transport.gd","worker_entry.gd"]: modules.append(tools + entry)
+	if "GRAPHICAL_REPLAY" in policy.stages: modules.append(tools + "graphical_entry.gd")
+	return S.success(modules)
+
+static func _prepare(source_root: String, job_policy: Dictionary) -> Dictionary:
 	if not safe_path(source_root): return S.failure("PATH_INVALID", "An E-drive project root is required")
 	var declaration_path := source_root.path_join(DEPENDENCIES.substr(6))
 	var declared := read_bytes(declaration_path)
@@ -102,6 +135,14 @@ static func prepare(source_root: String) -> Dictionary:
 	var config: Variant = JSON.parse_string(declared.value.get_string_from_utf8())
 	if not S._fields(config,["version","engine","modules","dynamic"]) or config.version != 1 or not config.modules is Array or not config.dynamic is Array or not S._fields(config.engine,["version","executable_sha256"]): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid dependency declaration")
 	if not _engine_matches(config.engine): return S.failure("EXECUTION_VERSION_MISMATCH", "Actual engine differs from approved engine")
+	if not job_policy.is_empty():
+		var selected := _job_modules(job_policy)
+		if not selected.ok: return selected
+		for uri in selected.value:
+			if uri not in config.modules: config.modules.append(uri)
+			if uri not in config.dynamic: config.dynamic.append(uri)
+		config.modules.sort()
+		config.dynamic.sort()
 	var paths: Array = []
 	var unique_modules := {}
 	for path in config.modules:
@@ -131,6 +172,12 @@ static func prepare(source_root: String) -> Dictionary:
 			if not _valid_uid(uid) or ids.has(uid): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Missing or ambiguous UID", path)
 			ids[uid] = path
 		modules.append({"path":path,"sha256":sha(read.value),"version":null})
+	var source_files := files.duplicate()
+	if not job_policy.is_empty():
+		# Generated job whitelist is sealed, never written over source declaration.
+		files[DEPENDENCIES] = JSON.stringify(config,"\t",true).to_utf8_buffer()
+		for item in modules:
+			if item.path == DEPENDENCIES: item.sha256 = sha(files[DEPENDENCIES])
 	var closure := _closure(files, config)
 	if not closure.ok: return closure
 	var bytes := CONFIG.to_utf8_buffer()
@@ -138,7 +185,7 @@ static func prepare(source_root: String) -> Dictionary:
 	var versions := {"record_version":"foundationversions.v1","tool_version":"authoringrun.v1","schemas":S.SCHEMA_VERSIONS.duplicate(),"contracts":S.CONTRACT_VERSIONS.duplicate(),"engine":config.engine,"modules":modules,"configuration":[{"path":"res://project.godot","sha256":sha(bytes),"version":null}]}
 	var digest := Wire.digest("versions", versions)
 	if not digest.ok: return digest
-	return S.success({"versions":versions,"execution_digest":digest.value,"files":files})
+	return S.success({"versions":versions,"execution_digest":digest.value,"files":files,"source_files":source_files})
 
 static func _closure(files: Dictionary, declaration: Dictionary) -> Dictionary:
 	if not declaration.modules is Array or not declaration.dynamic is Array: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid module whitelist")
@@ -199,7 +246,7 @@ static func _closure(files: Dictionary, declaration: Dictionary) -> Dictionary:
 ## Every other literal keeps the conservative static/dynamic closure checks.
 ## Registry selectors escaping the known identity comparisons are unresolved
 ## execution edges: reject instead of guessing stage selection or loader targets.
-static func _execution_text(path: String, text: String) -> Dictionary:
+static func _execution_text(path: String, text: String, registry: Dictionary = {}) -> Dictionary:
 	var executable := text
 	if path == "res://tools/foundation/authoring_acceptance/wire_schemas.gd":
 		var declaration := RegEx.new()
@@ -214,6 +261,7 @@ static func _execution_text(path: String, text: String) -> Dictionary:
 		var entries := RegEx.new()
 		entries.compile('"[A-Z_]+"[ \\t]*:')
 		if entries.search_all(span.get_string(1)).size() != formal.size(): return S.failure("EXECUTION_DEPENDENCY_INVALID", "Duplicate registry identity", path)
+		registry.merge(formal,true)
 		executable = text.substr(0,span.get_start()) + "\n" + text.substr(span.get_end())
 	# These two statements only compare identities; neither loads a producer.
 	var identity_checks := [
@@ -222,7 +270,7 @@ static func _execution_text(path: String, text: String) -> Dictionary:
 	if path == "res://tools/foundation/authoring_acceptance/execution_project.gd":
 		# Bound to this validator's single declaration read. An identical read
 		# copied into any other function remains an unresolved execution edge.
-		var start := executable.find("static func _execution_text(path: String, text: String) -> Dictionary:\n")
+		var start := executable.find("static func _execution_text(")
 		var end := executable.find("\nstatic func ",start + 1)
 		if start < 0 or end < 0: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Missing closure validator boundary", path)
 		var read := RegEx.new()
@@ -381,6 +429,13 @@ static func verify(snapshot_ref: Dictionary) -> Dictionary:
 	if not S._fields(declaration,["version","engine","modules","dynamic"]) or declaration.version != 1 or not declaration.modules is Array or not declaration.dynamic is Array or declaration.engine != id.versions.engine: return S.failure("EXECUTION_DEPENDENCY_INVALID", "Invalid frozen whitelist")
 	var closure := _closure(files,declaration)
 	if not closure.ok: return closure
+	var tools := "res://tools/foundation/authoring_acceptance/"
+	if files.has(tools + "worker_entry.gd"):
+		var selected := _job_modules(policy.value)
+		if not selected.ok: return selected
+		for uri in selected.value:
+			if not files.has(uri) or not files.has(uri + ".uid") or uri not in declaration.dynamic:
+				return S.failure("DEPENDENCY_PENDING","Selected job module/UID/dynamic edge not sealed",uri)
 	var uids := {}
 	for path in files:
 		if path.ends_with(".gd") and not files.has(path + ".uid"): return S.failure("DEPENDENCY_PENDING", "Script has no frozen UID", path)

@@ -14,14 +14,18 @@ static func capture(_request: Dictionary, _editor_context: Dictionary) -> Dictio
 static func capture_saved(request: Dictionary, project_root: String) -> Dictionary:
 	return new()._saved(request, project_root)
 
-func _saved(request: Dictionary, project_root: String) -> Dictionary:
-	if not S._fields(request,["entry_kind","level_ref","policy"]) or request.entry_kind != "ACCEPT_SAVED" or not S._level_ref(request.level_ref): return S.failure("REQUEST_INVALID", "Expected saved RunRequest")
+## Standalone saved-source job capture, not the D5 unsaved-buffer implementation.
+static func capture_saved_job(request: Dictionary, project_root: String) -> Dictionary:
+	return new()._saved(request,project_root,true)
+
+func _saved(request: Dictionary, project_root: String, job: bool = false) -> Dictionary:
+	if not S._fields(request,["entry_kind","level_ref","policy"]) or (request.entry_kind != "ACCEPT_SAVED" and not (job and request.entry_kind == "ANALYZE_CURRENT")) or not S._level_ref(request.level_ref): return S.failure("REQUEST_INVALID", "Expected saved RunRequest")
 	var policy_wire := Wire.encode_wire("policy",request.policy)
 	if not policy_wire.ok: return policy_wire
 	if request.policy.entry_kind != request.entry_kind: return S.failure("REQUEST_INVALID", "Policy mode differs")
 	var actual_root := ProjectSettings.globalize_path("res://").replace("\\","/").trim_suffix("/")
 	if project_root != actual_root or not Execution.safe_path(project_root): return S.failure("PATH_INVALID", "Capture must run inside the explicit E-drive source project")
-	var prepared := Execution.prepare(project_root)
+	var prepared := Execution.prepare_job(project_root,request.policy) if job else Execution.prepare(project_root)
 	if not prepared.ok: return prepared
 	var trusted := {}
 	for kind in Schema.SCRIPTS:
@@ -63,7 +67,7 @@ func _saved(request: Dictionary, project_root: String) -> Dictionary:
 		return false)
 	var source_wire := Wire.encode_wire("source_manifest",source_manifest)
 	if not source_wire.ok: return source_wire
-	var snapshot := {"identity":{"run_id":run_id,"snapshot_id":Execution.uuid(),"source_fingerprint":Execution.sha(source_wire.value),"source_intent_digest":intent_digest.value},"level_ref":request.level_ref.duplicate(true),"input_mode":"ACCEPT_SAVED","input_manifest":{},"execution_digest":prepared.value.execution_digest,"root_path":root}
+	var snapshot := {"identity":{"run_id":run_id,"snapshot_id":Execution.uuid(),"source_fingerprint":Execution.sha(source_wire.value),"source_intent_digest":intent_digest.value},"level_ref":request.level_ref.duplicate(true),"input_mode":request.entry_kind,"input_manifest":{},"execution_digest":prepared.value.execution_digest,"root_path":root}
 	# Standalone saved capture is its own editor-instance equivalent, generation 0.
 	# D5/service will provide an actual editor identity for its capture path.
 	var identity := Records.make_identity(Execution.uuid(),0,request.level_ref,snapshot,Execution.sha(policy_wire.value),prepared.value.execution_digest,prepared.value.versions)
@@ -82,7 +86,7 @@ func _saved(request: Dictionary, project_root: String) -> Dictionary:
 	for path in pending:
 		if path.ends_with(".blob"): attachments.append(Execution.artifact(path,pending[path],"rawbytes.v1"))
 	attachments.sort_custom(func(a,b): return a.relative_path < b.relative_path)
-	var manifest := {"manifest_version":"authoringinputmanifest.v1","identity":identity,"input_mode":"ACCEPT_SAVED","source_manifest":refs.source_manifest,"authoring_payload":refs.authoring_payload,"execution_policy":refs.execution_policy,"attachments":attachments,"source_metadata":{"git_head":null,"engine_path":OS.get_executable_path()}}
+	var manifest := {"manifest_version":"authoringinputmanifest.v1","identity":identity,"input_mode":request.entry_kind,"source_manifest":refs.source_manifest,"authoring_payload":refs.authoring_payload,"execution_policy":refs.execution_policy,"attachments":attachments,"source_metadata":{"git_head":null,"engine_path":OS.get_executable_path()}}
 	var ready := Wire.encode_wire("input_manifest",manifest)
 	if not ready.ok: return ready
 	for path in pending:
@@ -90,7 +94,7 @@ func _saved(request: Dictionary, project_root: String) -> Dictionary:
 		var written := Execution.write_new(root.path_join(path),pending[path])
 		if not written.ok: return written
 	# Last consistency boundary precedes publication. Never retry a changed source.
-	var stable := _unchanged(frozen.value,prepared.value.files,project_root)
+	var stable := _unchanged(frozen.value,prepared.value.source_files,project_root)
 	if not stable.ok: return stable
 	var sealed := Execution.write_new(root.path_join("input.ready"),ready.value)
 	if not sealed.ok: return sealed
