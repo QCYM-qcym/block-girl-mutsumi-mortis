@@ -18,6 +18,7 @@ func run() -> void:
 	if OS.get_environment("D3_SOURCE_STAGING_REGRESSION") == "1":
 		await _source_staging()
 		return
+	_source_intent_compatibility()
 	_final_controlled_run()
 
 func _source_staging() -> void:
@@ -296,21 +297,83 @@ func _source_delivery_checks(host: Variant, run_root: String, stored: Dictionary
 	_write_bytes(message_path,message_bytes)
 	check(host.load_run(run_root).ok,"formal publication recovers after all fail-closed negatives")
 
+func _source_intent_compatibility() -> void:
+	# Only this Harness-owned source copy is changed; input.ready is never edited.
+	var uri := "res://tests/foundation/authoring/fixtures/minimal/level.tscn"
+	var original := FileAccess.get_file_as_bytes(uri)
+	var text := original.get_string_from_utf8()
+	check(text.contains('intent = ExtResource("Intent")'),"missing-Intent probe starts from actual saved author source")
+	_write_bytes(ProjectSettings.globalize_path(uri),text.replace('intent = ExtResource("Intent")','intent = null').to_utf8_buffer())
+	var request := {"entry_kind":"ACCEPT_SAVED","level_ref":{"level_authoring_id":"00000000-0000-4000-8000-000000000001","level_id":&"authoring_minimal","root_source_uri":uri},"policy":Records.default_execution_policy("ACCEPT_SAVED")}
+	var captured := Capture.capture_saved(request,ProjectSettings.globalize_path("res://").trim_suffix("/"))
+	_write_bytes(ProjectSettings.globalize_path(uri),original)
+	check(FileAccess.get_file_as_bytes(uri)==original,"missing-Intent probe restores its disposable saved source")
+	check(captured.ok,"current D_SAVED captures actual missing Intent")
+	if not captured.ok: return
+	var snapshot: Dictionary = captured.value
+	check(snapshot.identity.source_intent_digest==null,"Missing Intent has null source_intent_digest")
+	var verified := Execution.verify(snapshot)
+	check(verified.ok,"missing-Intent sealed input formally verifies")
+	if not verified.ok: return
+	var started := _utc_now()
+	var baked := Adapter.bake_authoring(verified.value.authoring,request.policy.bake_options,snapshot.identity)
+	check(baked.ok,"missing-Intent canonical comes from actual formal A_BAKE")
+	if not baked.ok: return
+	var encoded := Codec.encode(baked.level)
+	check(encoded.ok,"missing-Intent formal LevelCodec canonical encoding succeeds")
+	if not encoded.ok: return
+	var bytes: PackedByteArray = encoded.text.to_utf8_buffer()
+	var canonical := Execution.artifact("artifacts/stages/BAKE/canonical.level",bytes,"levelcanonical.v1")
+	check(_publish_bytes(snapshot.root_path,canonical.relative_path,bytes),"missing-Intent canonical published in its own run")
+	var native := baked.duplicate(true)
+	native.level=canonical
+	var stored := {"run_identity":verified.value.manifest.identity.duplicate(true),"stage_record":{
+		"stage_id":"BAKE","owner":"4A","module_ref":"res://foundation/authoring/authoring_adapter.gd","applicability":"APPLICABLE","execution":"COMPLETED","reason":"",
+		"input_refs":{"input_manifest":snapshot.input_manifest.duplicate(true),"authoring_payload":verified.value.manifest.authoring_payload.duplicate(true)},
+		"actual_policy":request.policy.bake_options.duplicate(true),"actual_budget":request.policy.bake_options.duplicate(true),"native_result":native,
+		"evidence_refs":{"canonical":canonical},"warnings":[],"started_at":started,"finished_at":_utc_now()}}
+	var stage := Wire.encode_wire("stage_result",stored)
+	check(stage.ok,"missing-Intent BAKE uses closed formal stage storage")
+	if not stage.ok: return
+	var ref := Execution.artifact(Loader.BAKE_STAGE_PATH,stage.value,"foundationtoolwire.v1")
+	check(_publish_bytes(snapshot.root_path,ref.relative_path,stage.value),"missing-Intent stage published after canonical")
+	var message := Wire.encode_wire("worker_message",{"protocol_version":Wire.Schemas.WORKER_PROTOCOL_VERSION,"identity":stored.run_identity,"sequence":0,"kind":"STAGE_RESULT","stage_id":"BAKE","payload_ref_or_inline":ref})
+	check(message.ok,"missing-Intent publication uses formal WorkerMessage ArtifactRef")
+	if not message.ok: return
+	check(_publish_bytes(snapshot.root_path,"ipc/test-bake.wire",message.value),"missing-Intent publication message is last")
+	var ready := FileAccess.get_file_as_bytes(snapshot.root_path.path_join("input.ready"))
+	var loader := Loader.new()
+	var loaded := loader.load_run(snapshot.root_path)
+	check(loaded.ok and loader.snapshot_identity().source_intent_digest==null,"Missing Intent formal load_run succeeds and preserves exact null")
+	check(FileAccess.get_file_as_bytes(snapshot.root_path.path_join("input.ready"))==ready,"missing-Intent loader leaves sealed input.ready unchanged")
+	_write_bytes(evidence_dir().path_join("source-intent-compatibility.json"),JSON.stringify({"missing_snapshot":snapshot,"load_run_ok":loaded.ok,"input_ready_sha256":Execution.sha(ready)},"\t").to_utf8_buffer())
+
 # External test scene supplies observations; the process MainLoop remains the
 # exact sealed whitebox_entry.gd. Nothing is added to execution/project or run.
 func _final_controlled_run() -> void:
 	check(mode() == "Graphical" and DisplayServer.get_name() != "headless","final wrapper uses Graphical display")
-	var handoff_path := OS.get_environment("D3_R6_HANDOFF")
+	var handoff_path := OS.get_environment("D3_CURRENT_HANDOFF")
 	var handoff: Variant = JSON.parse_string(FileAccess.get_file_as_string(handoff_path))
-	check(handoff is Dictionary and handoff.get("run_id","") == "dd0dcb8c-68e5-472c-bcf0-b9386b066a04","only the registered R6 final run is accepted")
-	if not handoff is Dictionary or handoff.get("run_id","") != "dd0dcb8c-68e5-472c-bcf0-b9386b066a04":
+	var valid: bool = handoff is Dictionary and handoff.get("d_saved","") == "4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11" and handoff.get("receipt","") == "116538cb639791b01b9a5cf0bce18f2c006817b6" and handoff.get("d_protocol","") == "8f7fb52f029053bda10b965da840c6763fc13bf0"
+	check(valid,"only the current registered D_SAVED/protocol handoff is accepted")
+	if not valid:
 		finish()
 		return
 	var run_dir: String = handoff.run_dir
-	var paths := {"input.ready":[75575,"841fcda194c52d2fb7423a8d1021437561123965aa45491fc3a216c6b5c8a2e7"],"artifacts/stages/BAKE/stage_result.wire":[127915,"e9d461eb10b62fb3a9e2e38a24a7d9e0046be8d705d86697059e1e43ec991933"],"artifacts/stages/BAKE/canonical.level":[4171,"22f63447bc282029190d0c8b29a2016630c176b8dcce91dc2b1c94a9677484f9"]}
+	var paths: Dictionary = handoff.artifacts
+	check(paths.keys().size()==3 and paths.has("input.ready") and paths.has(Loader.BAKE_STAGE_PATH) and paths.has("artifacts/stages/BAKE/canonical.level"),"handoff pins exactly input.ready, formal stage and canonical bytes")
 	for path in paths:
 		var bytes := FileAccess.get_file_as_bytes(run_dir.path_join(path))
-		check(bytes.size()==paths[path][0] and Execution.sha(bytes)==paths[path][1],"R6 preflight bytes unchanged: "+path)
+		check(bytes.size()==paths[path][0] and Execution.sha(bytes)==paths[path][1],"current D_SAVED preflight bytes unchanged: "+path)
+	var snapshot := Execution.snapshot_from_run(run_dir)
+	check(snapshot.ok and snapshot.value.identity.run_id==handoff.run_id and snapshot.value.identity.snapshot_id==handoff.snapshot_id and snapshot.value.execution_digest==handoff.execution_digest,"handoff matches formally reconstructed current snapshot")
+	var loader := Loader.new()
+	var loaded := loader.load_run(run_dir)
+	check(loaded.ok and loader.snapshot_identity().source_intent_digest==handoff.source_intent_digest and handoff.source_intent_digest!=null,"explicit empty Intent nonnull digest preserved exactly by formal loader")
+	var invalid: Dictionary = snapshot.value.duplicate(true) if snapshot.ok else {}
+	if snapshot.ok:
+		invalid.identity.source_intent_digest=null
+		check(not Loader.new().load_artifact(invalid,handoff.canonical_ref).ok,"present Intent with null sealed SnapshotIdentity digest is rejected")
 	if not failures.is_empty():
 		print("DEPENDENCY_INVALID: FINAL_RUN_DRIFT")
 		finish()
@@ -321,7 +384,7 @@ func _final_controlled_run() -> void:
 	var scene_path := directory.path_join("observer.tscn")
 	_write_bytes(scene_path,('[gd_scene load_steps=2 format=3]\n[ext_resource type="Script" path="%s" id="observer"]\n[node name="FinalHostObserver" type="Node"]\nscript = ExtResource("observer")\n' % observer).to_utf8_buffer())
 	var arguments := ["--verbose","--path",handoff.execution_project,"--max-fps","120","--quit-after","3600","--script","res://tools/foundation/authoring_acceptance/whitebox_entry.gd",scene_path,"--","--run-dir="+run_dir]
-	var config := {"executable":OS.get_executable_path(),"arguments":arguments,"project":handoff.execution_project,"run_dir":run_dir,"output":directory,"r6":"06234bdd2d23548f1689a931bedf9b8e477784d9","source_commit":"96043a0b4c0b1ec8c095eb7fcf62247132eed466"}
+	var config := {"executable":OS.get_executable_path(),"arguments":arguments,"project":handoff.execution_project,"run_dir":run_dir,"output":directory,"handoff":handoff_path,"receipt":handoff.receipt,"source_commit":"8289d804c3b5b42a2e6c2cf76e965679a0f83af8"}
 	_write_bytes(directory.path_join("launch.json"),JSON.stringify(config,"\t").to_utf8_buffer())
 	var runner := directory.path_join("launch.ps1")
 	_write_bytes(runner,CONTROLLED_RUNNER.to_utf8_buffer())
@@ -342,7 +405,7 @@ func _final_controlled_run() -> void:
 		print("D3_FINAL_EVIDENCE ",JSON.stringify(result))
 	for path in paths:
 		var bytes := FileAccess.get_file_as_bytes(run_dir.path_join(path))
-		check(bytes.size()==paths[path][0] and Execution.sha(bytes)==paths[path][1],"R6 postflight bytes unchanged: "+path)
+		check(bytes.size()==paths[path][0] and Execution.sha(bytes)==paths[path][1],"current D_SAVED postflight bytes unchanged: "+path)
 	finish()
 
 const CONTROLLED_RUNNER := """param([string]$ConfigPath)
@@ -358,10 +421,11 @@ $i.WorkingDirectory = $c.project
 foreach ($a in $c.arguments) { $i.ArgumentList.Add($a) }
 $i.Environment['D3_FINAL_EVIDENCE'] = $c.output
 $i.Environment['D3_FINAL_RUN'] = $c.run_dir
+$i.Environment['D3_CURRENT_HANDOFF'] = $c.handoff
 foreach ($key in @('TEMP','TMP','APPDATA','LOCALAPPDATA')) { $i.Environment[$key] = $c.output }
 $p = [Diagnostics.Process]::new()
 $p.StartInfo = $i
-$r = @{executable=$c.executable; arguments=$c.arguments; project=$c.project; run_dir=$c.run_dir; display_mode='Graphical'; r6=$c.r6; source_commit=$c.source_commit; started_at=[DateTimeOffset]::Now.ToString('o')}
+$r = @{executable=$c.executable; arguments=$c.arguments; project=$c.project; run_dir=$c.run_dir; display_mode='Graphical'; receipt=$c.receipt; source_commit=$c.source_commit; started_at=[DateTimeOffset]::Now.ToString('o')}
 [void]$p.Start()
 $r.pid = $p.Id
 $out = $p.StandardOutput.ReadToEndAsync()
