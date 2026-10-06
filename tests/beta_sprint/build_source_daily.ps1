@@ -29,23 +29,41 @@ foreach ($dailyRelative in $dailyFiles) {
     if ($dailyHash -ne (Get-FileHash -LiteralPath $dailyTo -Algorithm SHA256).Hash) { throw "Source changed during snapshot: $dailyRelative. Preserve this failed build and rerun with a fresh name." }
     $dailyManifest.Add([pscustomobject]@{ path=$dailyRelative; sha256=$dailyHash.ToLowerInvariant(); bytes=(Get-Item -LiteralPath $dailyTo).Length })
 }
+$dailyMainMatch = [regex]::Match((Get-Content -LiteralPath (Join-Path $dailyProject 'project.godot') -Raw), '(?m)^run/main_scene="([^"]+)"\r?$')
+if (-not $dailyMainMatch.Success) { throw 'Copied project has no configured Main Scene.' }
+$dailyMainScene = $dailyMainMatch.Groups[1].Value
+if ($dailyMainScene -ne 'res://game/shell/game_shell.tscn') { throw 'Beta Slice snapshot must use the configured Beta Shell Main Scene.' }
+$dailyCatalogRelative = 'game/levels/mutsumi/batch_01/level_order.json'
+$dailyCatalogPath = Join-Path $dailyProject $dailyCatalogRelative
+$dailyCatalog = Get-Content -LiteralPath $dailyCatalogPath -Raw -Encoding utf8 | ConvertFrom-Json
+$dailyLevels = @($dailyCatalog.levels | Select-Object id,title,scene,adapter,quality)
+if ($dailyLevels.Count -ne 3) { throw 'Beta Slice requires the three entries from the delivered Content catalog.' }
+foreach ($dailyLevel in $dailyLevels) {
+    if ($dailyLevel.id -notmatch '^[a-zA-Z0-9_-]+$' -or $dailyLevel.scene -notmatch '^res://[^\s"\\]+\.tscn$') { throw 'Content catalog contains an invalid scene entry.' }
+    $dailyLevelPath = [IO.Path]::GetFullPath((Join-Path $dailyProject $dailyLevel.scene.Substring(6)))
+    if (-not $dailyLevelPath.StartsWith($dailyProject + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) -or -not (Test-Path -LiteralPath $dailyLevelPath -PathType Leaf)) { throw "Content scene is absent from this snapshot: $($dailyLevel.scene)" }
+}
 $dailyVersion = if (Test-Path -LiteralPath $Godot) { (& $Godot --version | Out-String).Trim() } else { 'UNAVAILABLE' }
 $dailyTemplates = Join-Path $env:APPDATA 'Godot/export_templates'
 $dailyInfo = [ordered]@{ package_kind='SOURCE_PLAYABLE_NOT_EXE'; created_at=(Get-Date -Format o); head=(& git -C $dailySource rev-parse HEAD); source_branch=(& git -C $dailySource branch --show-current); source_status=@(& git -C $dailySource status --porcelain); godot=$Godot; godot_version=$dailyVersion; engine_sha256=$(if(Test-Path -LiteralPath $Godot){(Get-FileHash -LiteralPath $Godot -Algorithm SHA256).Hash.ToLowerInvariant()}else{$null}); export_preset_present=(Test-Path -LiteralPath (Join-Path $dailySource 'export_presets.cfg')); export_template_root=$dailyTemplates; export_template_root_present=(Test-Path -LiteralPath $dailyTemplates); smoke_evidence_name=$SmokeEvidenceName; excludes='.git, .godot, evidence directories, receipt directories, logs and prior archives/executables'; files=@($dailyManifest.ToArray()); verification=@() }
+$dailyInfo.main_scene = $dailyMainScene
+$dailyInfo.game_catalog = [ordered]@{ source=('res://' + $dailyCatalogRelative); sha256=(Get-FileHash -LiteralPath $dailyCatalogPath -Algorithm SHA256).Hash.ToLowerInvariant(); levels=$dailyLevels }
 $dailyPlay = @'
 param([string]$Godot = 'D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe', [switch]$Foundation)
 $ErrorActionPreference = 'Stop'
 if (-not (Test-Path -LiteralPath $Godot)) { throw 'Install Godot 4.7.2 or pass -Godot with its executable path.' }
 $dailyPlayProject = Join-Path $PSScriptRoot 'project'
-& $Godot --headless --editor --import --path $dailyPlayProject
-if ($LASTEXITCODE -ne 0) { throw 'Godot asset import failed.' }
-if ($Foundation) { & $Godot --path $dailyPlayProject res://prototype/foundation/runtime/foundation_runtime.tscn }
-else { & $Godot --path $dailyPlayProject }
-exit $LASTEXITCODE
+$dailyImport = Start-Process -FilePath $Godot -ArgumentList @('--headless','--editor','--import','--path',('"'+$dailyPlayProject+'"')) -WindowStyle Hidden -PassThru -Wait
+if ($dailyImport.ExitCode -ne 0) { throw 'Godot asset import failed.' }
+$dailyPlayArgs = @('--path',('"'+$dailyPlayProject+'"'))
+if ($Foundation) { $dailyPlayArgs += 'res://prototype/foundation/runtime/foundation_runtime.tscn' }
+$dailyGame = Start-Process -FilePath $Godot -ArgumentList $dailyPlayArgs -WindowStyle Normal -PassThru -Wait
+exit $dailyGame.ExitCode
 '@
 $dailyPlay | Set-Content -LiteralPath (Join-Path $dailyBuild 'play.ps1') -Encoding utf8
+$dailyLevelText = ($dailyLevels | ForEach-Object { '- ' + $_.title + ' [' + $_.quality + ']' }) -join [Environment]::NewLine
 @"
-# Daily source playable package (NOT an exported executable)
+# Beta Slice source playable package (NOT an exported executable)
 
 Snapshot: $($dailyInfo.head), $($dailyInfo.created_at).
 Engine used: $dailyVersion. Godot is required separately.
@@ -53,25 +71,43 @@ Engine used: $dailyVersion. Godot is required separately.
 Run in PowerShell: ./play.ps1
 Custom engine: ./play.ps1 -Godot 'C:/path/to/godot.exe'
 Real Foundation owner-chain fixture: ./play.ps1 -Foundation
-Alternatively import project/project.godot into Godot and press F5 (P01).
+Alternatively import project/project.godot into Godot and press F5 (Beta Shell).
+Configured Main Scene: $dailyMainScene
 
-P01 controls: W/A/S/D move; Q/E or left mouse drag changes perspective;
-Space switches Surface/Inner; R resets; F3 toggles debug.
+Default entry: Beta Shell main menu, with New Game, Continue, Level Select and Settings.
+Continue restarts the most recently entered unlocked level at its authored spawn.
+Esc pauses/resumes gameplay. Pause offers Reset, Settings and return navigation.
+Menu controls: mouse, Tab/arrow-key focus and Enter confirmation.
+Gameplay controls: W/A/S/D move; Q/E or mouse drag changes perspective;
+Space switches Surface/Inner; R resets; M toggles mute.
+
+The three levels follow the delivered Content catalog, in this order:
+$dailyLevelText
+FORMAL is the formal playable level; GREYBOX levels retain their provisional art.
+Catalog source: $($dailyInfo.game_catalog.source)
+
+Legacy P01 development scene: res://game/levels/mutsumi/p01_another_world.tscn.
+Open that scene and press F6 for the original standalone development entry.
 Foundation fixture controls: D move, Q world rotation, Space shift, R reset.
-Foundation is a technical integration fixture; P01 is the default playable scene.
+Foundation is an optional technical integration fixture selected by -Foundation.
 
 This package includes source and assets, with no bundled engine or export templates.
 No project export settings were added. First launch imports assets and creates a local .godot cache.
 Daily smoke evidence is separate at $SmokeEvidenceName; see the repository .godot/beta-sprint/ directory.
-Independent process restart is checked by the daily smoke; Shell Restart-menu UI is not claimed.
+Copied-project checks verify import, the configured Main Scene and each catalog scene boot.
+Boot checks do not claim complete playthroughs or independent-process progress restoration.
 Do not run graphical smoke and build checks concurrently: focus changes can interrupt gameplay input.
 build-manifest.json records snapshot hashes and independent copied-project import/boot verification.
 "@ | Set-Content -LiteralPath (Join-Path $dailyBuild 'README.md') -Encoding utf8
-foreach ($dailyCheck in @(
+$dailyChecks = @(
     @{name='import';args=@('--headless','--editor','--import')},
-    @{name='p01_boot';args=@('--max-fps','60','--quit-after','120')},
+    @{name='main_scene_boot';args=@('--max-fps','60','--quit-after','120','--',"--shell-save=user://shell_tests/source_build/$BuildName/boot.json")},
     @{name='foundation_boot';args=@('--max-fps','60','--quit-after','120','res://prototype/foundation/runtime/foundation_runtime.tscn')}
-)) {
+)
+foreach ($dailyLevel in $dailyLevels) {
+    $dailyChecks += @{name=('content_' + $dailyLevel.id + '_boot');args=@('--max-fps','60','--quit-after','120',$dailyLevel.scene)}
+}
+foreach ($dailyCheck in $dailyChecks) {
     $dailyOut = Join-Path $dailyEvidence "$($dailyCheck.name).stdout.log"
     $dailyErr = Join-Path $dailyEvidence "$($dailyCheck.name).stderr.log"
     $dailyResult = [ordered]@{stage=$dailyCheck.name;status='PENDING';exit_code=$null;timed_out=$false;stdout=$dailyOut;stderr=$dailyErr}
