@@ -410,6 +410,10 @@ function Invoke-Case($Registration, [string]$Directory) {
         if ($Registration.entry -ceq 'SELF_CHECK') { $result = Invoke-SelfCheck $Directory }
         else {
             $project = "$Directory/project"; New-Project $project $Registration.mode $false
+            # Saved test source must localize to res:// inside this disposable
+            # project, just as in an Owner-local run. No product URI exception.
+            $runDirectory = "$project/.godot/harness-run"
+            Write-Json "$Directory/run-location.json" @{relative_path='project/.godot/harness-run';reason='PROJECT_LOCAL_SAVED_TEST_SOURCE';script=$Registration.script}
             if ($Registration.entry -ceq 'EDITOR') {
                 # Editor filesystem scans must not execute unrelated test scripts.
                 # The real QA driver loads its registered case explicitly by res://.
@@ -431,10 +435,10 @@ function Invoke-Case($Registration, [string]$Directory) {
                 if ($Registration.mode -cin @('Unit','Real')) { $engineArgs += '--headless' }
                 $engineArgs += @('--script',$Registration.script)
             }
-            $engineArgs += @('--','--case',$Registration.case_id,'--mode',$Registration.mode,'--evidence-dir',"$Directory/run")
+            $engineArgs += @('--','--case',$Registration.case_id,'--mode',$Registration.mode,'--evidence-dir',$runDirectory)
             Write-Json "$Directory/launch-project.json" @{sha256=(Get-Sha "$project/project.godot");entry=$Registration.entry;script=$Registration.script}
-            $raw = Invoke-Engine $engineArgs "$Directory/run" $Registration.mode
-            $result = Test-Result $raw "$Directory/run" $Registration.mode $Registration.allows_double
+            $raw = Invoke-Engine $engineArgs $runDirectory $Registration.mode
+            $result = Test-Result $raw $runDirectory $Registration.mode $Registration.allows_double
             if ($Registration.entry -ceq 'EDITOR' -and $result.display -ceq 'headless') { throw 'QA requires a graphical Editor, including Unit' }
         }
         $exit = if ($result.checks -gt 0 -and $result.failures.Count -eq 0) {0} else {1}
