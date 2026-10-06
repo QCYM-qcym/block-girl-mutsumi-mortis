@@ -28,3 +28,8 @@ D_SAVED production is now 4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11; its exact va
 
 Current compatibility status: READY_FOR_FINAL_COMPATIBILITY_GRAPHICAL.
 The original candidate commit8289, loader SHA4f9b0785ae42fa726cd6053b1b1e475bab5c2216fd04011d0ca25d7922cfc904 and TEST_DEPENDENCY_ONLY registration remain unchanged on this newer D_SAVED lineage. Formal D_HOST is still b9bf7d4a02398cd354fab6a18948babaa22c531e. Final D_HOST Graphical remains NOT_RUN in this turn; this is readiness, not a D_HOST PASS or redelivery.
+
+
+## Formal compatibility registration (2026-10-06)
+
+Current formal D_HOST: 8289d804c3b5b42a2e6c2cf76e965679a0f83af8. Validation support7493ab31cf6a71ca9b4778bfe871f33bba2e586d remains TEST_DEPENDENCY_ONLY. Prior NOT_A_D_HOST_PASS/NOT_RUN paragraphs above are historical phase facts. Final OwnerGraphical110 and fresh Integrationbr_h3p_06 Graphical110 bothpass; I1br_i1_06 88pass. See FOUNDATION_4_BUILD_MODE_REGISTRATION.md for the current exact closure/new-run identity, Corephase override, focused results and preserved failed attempts. No formal D_JOBS slot is created.

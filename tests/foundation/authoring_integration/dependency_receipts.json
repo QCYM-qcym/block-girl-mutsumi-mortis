@@ -9,11 +9,11 @@
   "deliveries": [
     {
       "slot": "I_HARNESS",
-      "commit": "a7e9a80a5542b184a2e06610d3e2f651fa4edfaf",
+      "commit": "c06065c8a471c31d866b9dd018cc01f00a18a0a7",
       "paths": [
         {
           "path": "tests/foundation/authoring_integration/run_module.ps1",
-          "sha256": "ffac1d4faa7b2c2d34ee87851ac8c346ee9255ae406eff9415ab2843a78dc87e"
+          "sha256": "c74bf6bc110712cbea8ed3222675ad74f2388be210c9da4a520527eeac3661d9"
         },
         {
           "path": "tests/foundation/authoring_integration/case_manifest.json",
@@ -361,7 +361,7 @@
     },
     {
       "slot": "D_HOST",
-      "commit": "b9bf7d4a02398cd354fab6a18948babaa22c531e",
+      "commit": "8289d804c3b5b42a2e6c2cf76e965679a0f83af8",
       "paths": [
         {
           "path": "tests/foundation/authoring_acceptance/test_whitebox_host.gd",
@@ -373,7 +373,7 @@
         },
         {
           "path": "tools/foundation/authoring_acceptance/canonical_loader.gd",
-          "sha256": "0cb4bca6ebe4ab668eb2408d9da0a8188acf36c2ead7c12939d293f139329292"
+          "sha256": "4f9b0785ae42fa726cd6053b1b1e475bab5c2216fd04011d0ca25d7922cfc904"
         },
         {
           "path": "tools/foundation/authoring_acceptance/canonical_loader.gd.uid",
@@ -406,6 +406,52 @@
         {
           "path": "tests/foundation/authoring_acceptance/test_whitebox_final_observer.gd.uid",
           "sha256": "51712bc009fe0176ba08ff8ddeb74bfb7ad448c2cdae3ad0aa80e99ece4a421e"
+        }
+      ]
+    },
+    {
+      "slot": "A_EDIT",
+      "commit": "8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2",
+      "paths": [
+        {
+          "path": "foundation/authoring/id_registry.gd",
+          "sha256": "d1f69acf0675a405efda5df5511e33f067a583ea4bce4a9a3e90524e5e476a11"
+        },
+        {
+          "path": "foundation/authoring/id_registry.gd.uid",
+          "sha256": "6202ee5e98cf071573e667ef3f6945471b79553f8bea6be76a1f7d4c012b07fd"
+        },
+        {
+          "path": "foundation/authoring/edit_operations.gd",
+          "sha256": "e2a02cdb7deee38162fc0d358c769e4f551314113fe89e5db082779087581cea"
+        },
+        {
+          "path": "foundation/authoring/edit_operations.gd.uid",
+          "sha256": "323b818448a1826cef50cf99d7badedb72cf44feab17cdb6fbe57b92fefa88ec"
+        },
+        {
+          "path": "tests/foundation/authoring/test_authoring_edits.gd",
+          "sha256": "0e470ded63c5a2de137cbe4db6ddae52fd7000166cefe28d62f7aa1ddb554eb1"
+        },
+        {
+          "path": "tests/foundation/authoring/test_authoring_edits.gd.uid",
+          "sha256": "a8c010f008551b7c9d9617f33999f945f96205e744831f1d976f61e233ce735e"
+        },
+        {
+          "path": "foundation/authoring/intent_binder.gd",
+          "sha256": "0d67b9c2c86e9bf59e7b29c84241136c0cde7e35bb4fc7e121e911958262cdce"
+        },
+        {
+          "path": "foundation/authoring/intent_binder.gd.uid",
+          "sha256": "e22a3cf54a73caaf0f67b0c81544ad1e97362da243c028a938dd78204068dae6"
+        },
+        {
+          "path": "tests/foundation/authoring/test_intent_binding.gd",
+          "sha256": "34fbab48db2f0f0c31a5d1d05b32cff19de0b4ad15d88318df9d0be54dae31cc"
+        },
+        {
+          "path": "tests/foundation/authoring/test_intent_binding.gd.uid",
+          "sha256": "244c23ff51e7596e170fb7dc51ac9bd177bdcf01e49eb0b228ea053dde989331"
         }
       ]
     }
