@@ -5,7 +5,6 @@ const W = preload("res://tools/foundation/authoring_acceptance/tool_wire.gd")
 const E = preload("res://tools/foundation/authoring_acceptance/execution_project.gd")
 const R = preload("res://tools/foundation/authoring_acceptance/run_records.gd")
 const T = preload("res://tools/foundation/authoring_acceptance/process_transport.gd")
-const BAKE_MODULE := "res://foundation/authoring/authoring_adapter.gd"
 const Codec = preload("res://foundation/level/level_codec.gd")
 var _transport: RefCounted
 var _job: Dictionary = {}
@@ -59,7 +58,7 @@ static func call_stage(stage: String, payload: Dictionary, snapshot_identity: Di
 	var supported := supported_stages([stage])
 	if not supported.ok: return supported
 	# The selected formal owner is the only interpreter of authoring values.
-	var uri: String = S.STORAGE_OWNERS.AUTHORING[1] if stage == "AUTHORING" else BAKE_MODULE
+	var uri: String = E.stage_module(stage)
 	if not ResourceLoader.exists(uri): return S.failure("DEPENDENCY_PENDING","Selected formal module missing",uri)
 	var module: Script = load(uri)
 	if module == null: return S.failure("DEPENDENCY_PENDING","Selected formal module cannot load",uri)
@@ -69,7 +68,7 @@ static func call_stage(stage: String, payload: Dictionary, snapshot_identity: Di
 static func publish_result(run_root: String, identity: Dictionary, stage_id: String, native: Dictionary, inputs: Dictionary, policy: Dictionary, started: String, finished: String, execution: String, reason: String) -> Dictionary:
 	var supported := supported_stages([stage_id])
 	if not supported.ok: return supported
-	var uri: String = S.STORAGE_OWNERS.AUTHORING[1] if stage_id == "AUTHORING" else BAKE_MODULE
+	var uri: String = E.stage_module(stage_id)
 	var record := R.make_stage_record(stage_id,"4A",uri)
 	record.execution = execution
 	record.reason = reason
@@ -113,9 +112,12 @@ func _start() -> void:
 	var bound: Dictionary = _transport.open_channels(_job.identity,args.value.run_root,args.value.launch_id,"HEADLESS",_job.policy.stages,true)
 	if not bound.ok: quit(2); return
 	var boundary: Dictionary = _transport.checkpoint()
-	if not boundary.ok: quit(2); return
+	if not boundary.ok and boundary.issues[0].code != "CANCELLED": quit(2); return
 	var hello: Dictionary = _transport.send("HELLO","",{"launch_id":args.value.launch_id,"worker_role":"HEADLESS","engine":_job.identity.versions.engine})
 	if not hello.ok: quit(2); return
+	if not boundary.ok:
+		_end("CANCELLED") # Valid initial lease plus queued cancel: no stage starts.
+		return
 	for stage in _job.policy.stages:
 		boundary = _transport.checkpoint()
 		if not boundary.ok:

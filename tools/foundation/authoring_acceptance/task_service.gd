@@ -53,8 +53,8 @@ func unbind_editor_context(provider: RefCounted) -> void:
 
 func _capture(request: Dictionary) -> Dictionary:
 	if _capture_port.is_valid(): return _capture_port.call(request)
-	if request.entry_kind != "ACCEPT_SAVED": return S.failure("DEPENDENCY_PENDING","D5 current-buffer capture not delivered")
-	var captured := Capture.capture_saved(request,ProjectSettings.globalize_path("res://").replace("\\","/").trim_suffix("/"))
+	if request.entry_kind == "ANALYZE_CURRENT" and _provider != null: return S.failure("DEPENDENCY_PENDING","D5 current-buffer capture not delivered")
+	var captured := Capture.capture_saved_job(request,ProjectSettings.globalize_path("res://").replace("\\","/").trim_suffix("/"))
 	if not captured.ok: return captured
 	var checked := E.verify(captured.value)
 	if not checked.ok: return checked
@@ -134,7 +134,27 @@ func _process(_delta: float) -> void: _poll_owned()
 func _poll_owned() -> void:
 	if _released or _transport == null: return
 	var previous := _view()
-	var messages: Dictionary = _transport.poll(_identity)
+	_consume_messages(_transport.poll(_identity))
+	var release: Dictionary = _transport.release_state(_identity)
+	if release.get("process_exited",false):
+		# EXIT can become durable after the first directory enumeration but before
+		# OS exit observation. With the writer gone, drain its final stream once
+		# more before deciding whether this was a crash or a graceful exit.
+		_consume_messages(_transport.poll(_identity))
+		release = _transport.release_state(_identity)
+	for field in ["process_exited","file_handles_closed","callbacks_disconnected","preview_resources_released"]:
+		if release.get(field,false) != true:
+			if _view() != previous: status_changed.emit(_view())
+			return
+	if _transport.has_method("release_error") and _transport.release_error(): _failed = true
+	if not _exit_received and not _cancelled: _failed = true # Confirmed crash is not successful EXIT.
+	_released = true
+	_lifecycle = "FAILED" if _failed else ("CANCELLED" if _cancelled else "COMPLETED")
+	_stage = ""
+	set_process(false)
+	status_changed.emit(_view())
+
+func _consume_messages(messages: Dictionary) -> void:
 	if not messages.ok:
 		_failed = true
 		if not _cancelled: _request_cancel("STAGE_TIMEOUT" if messages.issues[0].code == "TIMEOUT" else "PROTOCOL_ERROR")
@@ -153,15 +173,3 @@ func _poll_owned() -> void:
 						_cancelled = true
 						_lifecycle = "CANCELLING"
 					if message.payload_ref_or_inline.reason in ["FAILED","LEASE_EXPIRED"]: _failed = true
-	var release: Dictionary = _transport.release_state(_identity)
-	for field in ["process_exited","file_handles_closed","callbacks_disconnected","preview_resources_released"]:
-		if release.get(field,false) != true:
-			if _view() != previous: status_changed.emit(_view())
-			return
-	if _transport.has_method("release_error") and _transport.release_error(): _failed = true
-	if not _exit_received and not _cancelled: _failed = true # Confirmed crash is not successful EXIT.
-	_released = true
-	_lifecycle = "FAILED" if _failed else ("CANCELLED" if _cancelled else "COMPLETED")
-	_stage = ""
-	set_process(false)
-	status_changed.emit(_view())

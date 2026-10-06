@@ -13,6 +13,7 @@ var resources := false
 var capture_count := 0
 var launch_count := 0
 var messages: Array = []
+var messages_at_exit: Array = []
 var cancelled := false
 var root := ""
 var id: Dictionary = {}
@@ -56,6 +57,9 @@ func poll(_identity: Dictionary) -> Dictionary:
 	messages.clear()
 	return S.success(values)
 func release_state(_identity: Dictionary) -> Dictionary:
+	if not running and not messages_at_exit.is_empty():
+		messages.append_array(messages_at_exit)
+		messages_at_exit.clear()
 	return {"process_exited":not running,"file_handles_closed":handles,"callbacks_disconnected":callbacks,"preview_resources_released":resources}
 func pass_eligible() -> bool: return not cancelled
 func release_all() -> void:

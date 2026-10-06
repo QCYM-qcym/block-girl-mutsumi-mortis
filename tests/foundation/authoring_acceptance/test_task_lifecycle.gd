@@ -1,5 +1,5 @@
 extends "res://tests/foundation/authoring_integration/test_suite.gd"
-const F = preload("res://tests/foundation/authoring_acceptance/owned_worker_fixture.gd")
+var F: Script
 const S = preload("res://tools/foundation/authoring_acceptance/wire_schemas.gd")
 const W = preload("res://tools/foundation/authoring_acceptance/tool_wire.gd")
 const E = preload("res://tools/foundation/authoring_acceptance/execution_project.gd")
@@ -8,10 +8,19 @@ var Service: Script
 var _counter := 0
 
 func run() -> void:
-	if mode() != "Unit":
-		check(false,"DEPENDENCY_PENDING: current 8f7 D_SAVED closure receipt and Real stage/entry delivery required")
+	if mode() == "Graphical":
+		failures.append("CASE_DEPENDENCY_PENDING:GRAPHICAL_REPLAY: same-run quality/trace chain and D4 graphical dispatcher not yet delivered")
 		finish()
 		return
+	if mode() == "Real":
+		await _real_jobs()
+		finish()
+		return
+	if mode() != "Unit":
+		failures.append("NOT_RUN: unsupported D4 test mode")
+		finish()
+		return
+	F = load("res://tests/foundation/authoring_acceptance/owned_worker_fixture.gd")
 	doubles.append("res://tests/foundation/authoring_acceptance/owned_worker_fixture.gd")
 	var transport_path := "res://tools/foundation/authoring_acceptance/process_transport.gd"
 	var service_path := "res://tools/foundation/authoring_acceptance/task_service.gd"
@@ -22,6 +31,7 @@ func run() -> void:
 		return
 	T = load(transport_path)
 	Service = load(service_path)
+	_job_capture()
 	_dependencies()
 	_streams()
 	_lease()
@@ -29,10 +39,130 @@ func run() -> void:
 	_deadline_and_restart()
 	await _review_regressions()
 	await _lifecycle()
+	await _exit_visibility_race()
 	await _editor_rebind()
 	_worker_publication()
 	await _owned_process_ipc()
 	finish()
+
+func _exit_visibility_race() -> void:
+	var fixture = F.new()
+	var service = Service.new(fixture.capture,fixture)
+	get_root().add_child(service)
+	var started: Dictionary = service.start(F.request())
+	check(started.ok,"exit visibility race owns a launched job")
+	fixture.messages_at_exit = [{"kind":"EXIT","payload_ref_or_inline":{"reason":"FINISHED"}}]
+	fixture.release_all()
+	var final: Dictionary = service.status(started.value.identity)
+	check(final.value.lifecycle == "COMPLETED","final IPC is drained after OS exit before deciding crash versus FINISHED")
+	check(service._exit_received,"durable EXIT between initial enumeration and OS observation is consumed")
+	service.queue_free()
+	await process_frame
+
+func _job_capture() -> void:
+	var builder: Script = E
+	var capture = load("res://tools/foundation/authoring_acceptance/snapshot_capture.gd")
+	check(capture.has_method("capture_saved_job"),"job capture delegates saved-source sealing to the sole D2 capture service")
+	check(builder.has_method("prepare_job"),"execution builder freezes selected job entry and stage dependencies before input.ready")
+	if not builder.has_method("prepare_job"): return
+	var root := ProjectSettings.globalize_path("res://").replace("\\","/").trim_suffix("/")
+	for stages in [["AUTHORING"],["BAKE"],["AUTHORING","BAKE"]]:
+		var request: Dictionary = F.request(stages)
+		var prepared: Dictionary = builder.call("prepare_job",root,request.policy)
+		check(prepared.ok,"available selected job closure prepares: " + str(stages))
+		if not prepared.ok: continue
+		for uri in E.BASE_PROTOCOL + ["res://tools/foundation/authoring_acceptance/process_transport.gd","res://tools/foundation/authoring_acceptance/worker_entry.gd"]:
+			check(prepared.value.files.has(uri) and prepared.value.files.has(uri + ".uid"),"job strictly seals dependency and UID: " + uri)
+		check(not prepared.value.files.has("res://foundation/authoring/intent_binder.gd"),"unselected Binder stays outside job closure")
+		check(not prepared.value.files.has("res://tools/foundation/authoring_acceptance/graphical_entry.gd"),"unselected graphical worker stays outside job closure")
+	var bad: Dictionary = F.request(["BAKE","AUTHORING"])
+	check(not builder.call("prepare_job",root,bad.policy).ok,"selection cannot reorder the existing formal stage plan")
+
+func _real_jobs() -> void:
+	var capture = load("res://tools/foundation/authoring_acceptance/snapshot_capture.gd")
+	check(capture.has_method("capture_saved_job"),"Real jobs require formal pre-seal selected execution closure")
+	if not capture.has_method("capture_saved_job"): return
+	T = load("res://tools/foundation/authoring_acceptance/process_transport.gd")
+	Service = load("res://tools/foundation/authoring_acceptance/task_service.gd")
+	var records = load("res://tools/foundation/authoring_acceptance/run_records.gd")
+	var observations: Array = []
+	for stages in [["AUTHORING"],["BAKE"],["AUTHORING","BAKE"]]:
+		var policy: Dictionary = records.default_execution_policy("ANALYZE_CURRENT")
+		policy.stages = stages.duplicate()
+		var request := {"entry_kind":"ANALYZE_CURRENT","level_ref":{"level_authoring_id":"00000000-0000-4000-8000-000000000001","level_id":&"d3_action_capable","root_source_uri":"res://tests/foundation/authoring_integration/maps/d3_action_capable/level.tscn"},"policy":policy}
+		var service = Service.new()
+		get_root().add_child(service)
+		var started: Dictionary = service.start(request)
+		check(started.ok,"real selected job starts: " + str(stages))
+		if not started.ok:
+			print("D_JOBS_REAL_START_FAILURE ",started.issues)
+			service.queue_free()
+			await process_frame
+			continue
+		check(not service.start(request).ok,"BUSY does not enqueue a second real job")
+		var transport: RefCounted = service._transport
+		var pid: int = transport._pid
+		check(pid > 0 and pid != OS.get_process_id(),"real worker owns independent returned PID")
+		var deadline := Time.get_ticks_msec() + 60000
+		var status: Dictionary = service.status(started.value.identity)
+		while status.ok and not status.value.release_confirmed and Time.get_ticks_msec() < deadline:
+			await process_frame
+			status = service.status(started.value.identity)
+		check(status.ok and status.value.release_confirmed,"actual OS exit plus all three resource conditions release the real slot")
+		check(status.ok and status.value.lifecycle == "COMPLETED","real selected work completes without claiming whole-level acceptance PASS")
+		var stored: Array = transport.stored_results()
+		check(stored.size() == stages.size(),"one immutable stage result per selected formal call")
+		for index in stored.size():
+			check(stored[index].stage_record.stage_id == stages[index] and stored[index].stage_record.execution == "COMPLETED","stored result preserves formal stage and successful native execution")
+			check(stored[index].stage_record.native_result.ok,"native AUTHORING/BAKE result is successful")
+		var messages: Array = []
+		var files := DirAccess.get_files_at(transport._channel("worker_to_parent"))
+		for filename in files:
+			var decoded := W.decode_wire("worker_message",E.read_bytes(transport._channel("worker_to_parent").path_join(filename)).value)
+			check(decoded.ok,"real filesystem IPC only uses formal WorkerMessage wire")
+			if decoded.ok: messages.append(decoded.value)
+		messages.sort_custom(func(a,b): return a.sequence < b.sequence)
+		check(not messages.is_empty() and messages[0].kind == "HELLO" and messages[0].sequence == 0,"real worker sequence starts with HELLO zero")
+		check(not messages.is_empty() and messages.back().kind == "EXIT","real EXIT is durable before observed process exit")
+		var kinds: Array = []
+		for message in messages: kinds.append(message.kind)
+		check("STAGE_STARTED" in kinds and "HEARTBEAT" in kinds and "STAGE_RESULT" in kinds,"real stage lifecycle publishes all required worker evidence")
+		for index in messages.size(): check(messages[index].sequence == index,"real worker stream has no gap or duplicate")
+		var lease := W.decode_wire("worker_message",E.read_bytes(transport._channel("parent_to_worker").path_join("0.wire")).value)
+		check(lease.ok and lease.value.kind == "LEASE" and lease.value.sequence == 0,"parent independently starts at LEASE zero")
+		observations.append({"stages":stages,"identity":started.value.identity,"pid":pid,"launch_id":transport._launch,"status":status.value,"messages":messages,"lease":lease.value,"release":transport.release_state(started.value.identity),"exit_received":service._exit_received,"failed":service._failed,"reason":service._reason,"release_error":transport.release_error(),"exit_claim":transport._exit_claim,"transport_exit":transport._exit,"rx":transport._rx})
+		service.queue_free()
+		await process_frame
+	E.write_new(evidence_dir().path_join("real-jobs-evidence.json"),JSON.stringify(observations,"\t").to_utf8_buffer())
+	await _real_cancel_at_launch(records)
+
+func _real_cancel_at_launch(records: Script) -> void:
+	var policy: Dictionary = records.default_execution_policy("ANALYZE_CURRENT")
+	policy.stages = ["BAKE"]
+	var request := {"entry_kind":"ANALYZE_CURRENT","level_ref":{"level_authoring_id":"00000000-0000-4000-8000-000000000001","level_id":&"d3_action_capable","root_source_uri":"res://tests/foundation/authoring_integration/maps/d3_action_capable/level.tscn"},"policy":policy}
+	var service = Service.new()
+	get_root().add_child(service)
+	var started: Dictionary = service.start(request)
+	check(started.ok,"real cancellation owns a formal sealed BAKE worker")
+	if not started.ok:
+		service.queue_free()
+		await process_frame
+		return
+	var cancelled: Dictionary = service.cancel(started.value.identity)
+	check(cancelled.ok and cancelled.value.lifecycle == "CANCELLING","immediate real cancellation acknowledges without claiming release")
+	check(not service.start(request).ok,"real cancelled slot remains BUSY until four-condition release")
+	var deadline := Time.get_ticks_msec() + 60000
+	var final: Dictionary = service.status(started.value.identity)
+	while not final.value.release_confirmed and Time.get_ticks_msec() < deadline:
+		await process_frame
+		final = service.status(started.value.identity)
+	check(final.value.release_confirmed and final.value.lifecycle == "CANCELLED","cancel before initial checkpoint is cooperative CANCELLED, not a crash")
+	var transport: RefCounted = service._transport
+	check(transport._hello and service._exit_received,"real early cancellation still publishes HELLO and EXIT")
+	check(not transport.release_error(),"real cancelled EXIT claim agrees with actual OS exit")
+	E.write_new(evidence_dir().path_join("real-cancel-evidence.json"),JSON.stringify({"status":final.value,"pid":transport._pid,"hello":transport._hello,"exit":service._exit_received,"release":transport.release_state(started.value.identity),"release_error":transport.release_error()},"\t").to_utf8_buffer())
+	service.queue_free()
+	await process_frame
 
 func _owned_process_ipc() -> void:
 	var policy: Dictionary = F.request([]).policy
@@ -136,7 +266,7 @@ func _worker_publication() -> void:
 	check(not entry.publish_result(root,identity,"BAKE",changed,{"input_manifest":ready,"authoring_payload":input},policy,time,time,"COMPLETED","").ok,"immutable stage publication cannot replace historical bytes")
 
 func _editor_rebind() -> void:
-	var during_capture := F.new()
+	var during_capture = F.new()
 	var captured_service = Service.new(during_capture.capture,during_capture)
 	get_root().add_child(captured_service)
 	captured_service.status_changed.connect(func(value):
@@ -147,7 +277,7 @@ func _editor_rebind() -> void:
 	check(captured_service.status(during_capture.id).value.lifecycle == "CANCELLED","completed capture cancellation releases only the unlaunched slot")
 	captured_service.queue_free()
 	await process_frame
-	var fixture := F.new()
+	var fixture = F.new()
 	var service = Service.new(fixture.capture,fixture)
 	get_root().add_child(service)
 	service._editor = "44444444-4444-4444-8444-444444444444"
@@ -166,7 +296,7 @@ func _editor_rebind() -> void:
 		return
 	check(not views.is_empty() and views.back().identity == started.value.identity,"running observation supplies exact run identity")
 	service.unbind_editor_context(fixture)
-	var replacement := F.new()
+	var replacement = F.new()
 	replacement.id = {"editor_instance_id":service._editor}
 	views.clear()
 	check(service.bind_editor_context(replacement).ok,"fresh Dock can bind surviving cancelling service")
@@ -181,9 +311,9 @@ func _editor_rebind() -> void:
 
 func _pair(stages: Array = ["BAKE"]) -> Dictionary:
 	_counter += 1
-	var clock := F.new()
-	var req := F.request(stages)
-	var id := F.identity(req.policy)
+	var clock = F.new()
+	var req = F.request(stages)
+	var id = F.identity(req.policy)
 	var path := evidence_dir().replace("\\","/").path_join("channels_" + str(_counter))
 	var launch := E.uuid()
 	var parent = T.new(clock)
@@ -377,11 +507,11 @@ func _terminal_result() -> void:
 	check(not q.parent.accept_message(_message(q,"STAGE_RESULT",2,"BAKE",sr),q.launch).ok,"missing or foreign stage artifact rejected")
 
 func _lifecycle() -> void:
-	var port := F.new()
+	var port = F.new()
 	port.root = evidence_dir()
 	var service = Service.new(port.capture,port)
 	get_root().add_child(service)
-	var req := F.request()
+	var req = F.request()
 	var begun: Dictionary = service.start(req)
 	check(begun.ok,"Unit capture/owned launch starts task")
 	if not begun.ok:
@@ -440,10 +570,10 @@ func _deadline_and_restart() -> void:
 	var editor := "44444444-4444-4444-8444-444444444444"
 	var one = Service.get_or_create(root,editor)
 	check(one == Service.get_or_create(root,editor),"editor root owns unique service across plugin re-enable")
-	var provider := F.new()
+	var provider = F.new()
 	provider.id = {"editor_instance_id":editor}
 	check(one.bind_editor_context(provider).ok,"one valid provider binds")
-	var second := F.new()
+	var second = F.new()
 	second.id = provider.id
 	check(not one.bind_editor_context(second).ok,"second live provider rejected")
 	one.unbind_editor_context(provider)
@@ -457,7 +587,7 @@ func _review_regressions() -> void:
 	p.clock.advance(1000)
 	check(p.parent.poll(p.id).ok,"parent polls while worker is verifying startup")
 	check(p.parent.sent_sequence() == 2,"missing inbound directory does not stop renewal")
-	var port := F.new()
+	var port = F.new()
 	var transport = T.new(port)
 	check(transport.has_method("_begin_owned_process"),"transport keeps explicit owned process/resource ledger")
 	if transport.has_method("_begin_owned_process"):
@@ -484,7 +614,7 @@ func _review_regressions() -> void:
 		callback_owner.queue_free()
 		await process_frame
 	for reason in ["CANCELLED","FAILED","LEASE_EXPIRED"]:
-		var fixture := F.new()
+		var fixture = F.new()
 		fixture.root = evidence_dir()
 		var service = Service.new(fixture.capture,fixture)
 		get_root().add_child(service)
@@ -512,7 +642,7 @@ func _review_regressions() -> void:
 	p.clock.advance(300000)
 	check(p.parent.accept_message(_message(p,"STAGE_STARTED",1,"BAKE",{"started_at":actual_start}),p.launch).ok,"delayed start retains actual time evidence")
 	check(not p.parent.check_deadline().ok,"delayed delivery cannot restart 300000ms scheduling deadline")
-	var port_wait := F.new()
+	var port_wait = F.new()
 	var service_wait = Service.new(port_wait.capture,port_wait)
 	get_root().add_child(service_wait)
 	check(service_wait.start(F.request()).ok,"worker cancellation cleanup wait begins")
@@ -547,6 +677,14 @@ func _completed_before_cancel() -> void:
 	var ref := E.artifact("artifacts/stages/AUTHORING/stage_result.wire",wire.value,"foundationtoolwire.v1")
 	check(E.write_new(p.root.path_join(ref.relative_path),wire.value).ok,"returned evidence published before cancellation")
 	check(p.worker.send("STAGE_RESULT","AUTHORING",ref).ok,"returned message published before worker observed cancel")
+	check(p.worker.send("EXIT","",{"reason":"FINISHED","exit_code":0,"file_handles_closed":true,"callbacks_disconnected":true,"preview_resources_released":true}).ok,"worker finishes before it observes parent cancellation")
 	check(p.parent.send_cancel(p.id).ok,"parent cancels before polling completed message")
 	check(p.parent.poll(p.id).ok,"independent stream race retains legitimate completed evidence")
 	check(p.parent.stored_results().size() == 1 and not p.parent.pass_eligible(),"retained native result cannot restore PASS")
+	check(p.parent._exit,"queued FINISHED is retained while parent cancellation remains latched")
+	p.parent._process_port = p.clock
+	check(p.parent._begin_owned_process("Unit-owned-port",PackedStringArray()) > 0,"finished race observes only its owned process")
+	p.clock.running = false
+	check(p.parent.release_state(p.id).process_exited and not p.parent.release_error(),"queued FINISHED reconciles actual exit under parent cancellation")
+	p.clock.actual_exit_code = -1
+	check(p.parent.release_state(p.id).process_exited and not p.parent.release_error(),"reaped exit-code observation cannot overwrite the first actual OS result")

@@ -40,6 +40,8 @@ var _preview_observers: Array[WeakRef] = []
 var _cleanup_attempted := false
 var _exit_claim: Variant = null
 var _release_error := false
+var _os_exited := false
+var _os_exit_code: Variant = null
 
 func _init(clock: RefCounted = null) -> void: _clock = clock
 func _wall() -> int: return _clock.utc_msec() if _clock != null else int(Time.get_unix_time_from_system() * 1000)
@@ -58,8 +60,7 @@ static func required_dependencies(policy: Dictionary) -> Dictionary:
 	var modules: Array = []
 	for stage in policy.stages:
 		var uri := ""
-		if stage == "BAKE": uri = "res://foundation/authoring/authoring_adapter.gd"
-		elif S.STORAGE_OWNERS.has(stage): uri = S.STORAGE_OWNERS[stage][1]
+		uri = E.stage_module(stage)
 		# MANUAL_RUNTIME/ARCHIVE are capabilities, not new storage branches.
 		if not uri.is_empty() and uri not in modules: modules.append(uri)
 	return S.success({"base_modules":BASE_MODULES.duplicate(),"stage_modules":modules})
@@ -101,7 +102,7 @@ func launch(identity: Dictionary, project: Dictionary, entry: String) -> Diction
 	var dependencies := check_dependencies(project.policy,members)
 	if not dependencies.ok: return dependencies
 	_stage_deadline_ms = project.policy.stage_deadline_ms
-	var materialized := E.materialize(project.snapshot_ref,"")
+	var materialized := E.materialize(project.snapshot_ref,project.snapshot_ref.root_path)
 	if not materialized.ok: return materialized
 	var script: String = {"HEADLESS":"worker_entry.gd","GRAPHICAL":"graphical_entry.gd","MANUAL":"whitebox_entry.gd"}[entry]
 	var script_uri := "res://tools/foundation/authoring_acceptance/" + script
@@ -110,11 +111,15 @@ func launch(identity: Dictionary, project: Dictionary, entry: String) -> Diction
 	if entry == "MANUAL": return S.failure("DEPENDENCY_PENDING","Manual entry D4 launch-context integration not yet delivered")
 	var opened := open_channels(identity,project.snapshot_ref.root_path,E.uuid(),"HEADLESS" if entry == "HEADLESS" else "GRAPHICAL",project.policy.stages)
 	if not opened.ok: return opened
+	var engine: String = OS.get_executable_path()
+	if not E._engine_matches(identity.versions.engine): return _fail("Actual engine does not match sealed identity")
+	# Generated import cache is local to this already-sealed project. No source
+	# fallback and no PID takeover; launch lease is published after import.
+	var output: Array = []
+	var imported := OS.execute(engine,["--headless","--path",materialized.value.project_root,"--editor","--import"],output,true)
+	if imported != 0 or "\n".join(output).contains("ERROR:"): return _fail("Controlled worker import failed")
 	var initial := renew_lease()
 	if not initial.ok: return initial
-	var engine: String = OS.get_executable_path()
-	var engine_bytes := FileAccess.get_file_as_bytes(engine)
-	if E.sha(engine_bytes) != identity.versions.engine.executable_sha256 or Engine.get_version_info().string != identity.versions.engine.version: return _fail("Actual engine does not match sealed identity")
 	var args := PackedStringArray(["--path",materialized.value.project_root,"--script",script_uri])
 	if entry == "HEADLESS": args.insert(0,"--headless")
 	args.append_array(PackedStringArray(["--","--run-dir",_root,"--launch-id",_launch]))
@@ -207,7 +212,9 @@ func _validate(msg: Dictionary, direction: String, cursor: int) -> Dictionary:
 		"HEARTBEAT":
 			if _utc_ms(p.observed_at) < _last_hb: return S.failure("IPC_PROTOCOL_ERROR","Heartbeat clock rollback")
 		"EXIT":
-			if p.reason == "FINISHED" and (_active != "" or _terminal.size() != _assigned.size() or _error or _cancel): return S.failure("IPC_PROTOCOL_ERROR","FINISHED with unresolved/stopped work")
+			# Parent cancellation cannot establish when the worker observed it.
+			# Keep a queued FINISHED as exit evidence without restoring eligibility.
+			if p.reason == "FINISHED" and (_active != "" or _terminal.size() != _assigned.size() or _error or (_worker and _cancel)): return S.failure("IPC_PROTOCOL_ERROR","FINISHED with unresolved/stopped work")
 		"LEASE":
 			var issued := _utc_ms(p.issued_at)
 			if issued > _wall() or (_last_lease >= 0 and issued <= _last_lease): return S.failure("IPC_PROTOCOL_ERROR","Lease future/rollback/repeated timestamp")
@@ -379,12 +386,13 @@ func release_error() -> bool: return _release_error
 func release_state(identity: Dictionary) -> Dictionary:
 	var exited := false
 	if identity == _identity and _pid > 0:
-		exited = not (_process_port.is_process_running(_pid) if _process_port != null else OS.is_process_running(_pid))
+		exited = _os_exited or not (_process_port.is_process_running(_pid) if _process_port != null else OS.is_process_running(_pid))
 	if exited:
-		var code: Variant = null
-		if _process_port != null: code = _process_port.get_process_exit_code(_pid)
-		elif OS.has_method("get_process_exit_code"): code = OS.call("get_process_exit_code",_pid)
-		_release_error = _exit_claim == null or code == null or code != _exit_claim
+		if not _os_exited:
+			_os_exited = true
+			if _process_port != null: _os_exit_code = _process_port.get_process_exit_code(_pid)
+			elif OS.has_method("get_process_exit_code"): _os_exit_code = OS.call("get_process_exit_code",_pid)
+		_release_error = _exit_claim == null or _os_exit_code == null or _os_exit_code != _exit_claim
 		_cleanup_owned() # Actual local cleanup, not worker assertions or EXIT alone.
 	var handles_closed := _cleanup_attempted
 	for file in _owned_files:
