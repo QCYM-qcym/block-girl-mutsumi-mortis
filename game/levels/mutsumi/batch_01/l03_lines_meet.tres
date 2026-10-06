@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://game/levels/mutsumi/batch_01/content_level_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+level_id = "mutsumi_l03"
+display_title = "L-03  /  视线相接"
+intent = "走到连接标记前。转动视角，观察远处的平台如何与眼前的道路相接。"
+spawn = Vector2i(0,2)
+goal = Vector2i(11,2)
+surface_cells = Array[Vector2i]([Vector2i(0,2),Vector2i(1,2),Vector2i(2,2),Vector2i(3,2),Vector2i(9,2),Vector2i(10,2),Vector2i(11,2)])
+inner_cells = Array[Vector2i]([Vector2i(0,2),Vector2i(1,2),Vector2i(2,2),Vector2i(3,2),Vector2i(9,2),Vector2i(10,2),Vector2i(11,2)])
+platform_b_cells = Array[Vector2i]([Vector2i(9,2),Vector2i(10,2),Vector2i(11,2)])
+link_enabled = true
+link_a = Vector2i(3,2)
+link_b = Vector2i(9,2)
+link_worlds = Array[int]([0])
