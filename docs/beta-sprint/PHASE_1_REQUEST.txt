@@ -1,0 +1,637 @@
+PROJECT: Mutsumi Veilshift / 方块少女-若叶睦
+SPRINT: Beta Sprint
+PHASE: Phase 1 — Foundation Freeze + First Playable Slice
+TARGET: 2026-11-30 前形成完整可试玩 Beta
+
+TRACK: 00 Integration Coordinator
+MODE: BUILD / PARALLEL
+
+==================================================
+一、本阶段最高目标
+==================================================
+
+本阶段不是继续扩大 FOUNDATION-4。
+
+目标是同时完成两件事：
+
+A. FOUNDATION-4 强制收口
+
+B. 第一批真正玩家可玩的游戏内容进入主工程
+
+阶段结束时必须得到：
+
+1. FOUNDATION-4 核心能力冻结；
+2. D_JOBS 正式可用；
+3. I2 至少完成核心纵向验收；
+4. 第一关达到 FORMAL_PLAYABLE；
+5. 第二/第三关至少灰盒可玩；
+6. Surface World 正式美术开始进入主游戏；
+7. 角色3D翻滚/六面朝向开始进入实际玩法；
+8. Game Shell 第一版可运行；
+9. QA 能每天产出 playable build / smoke result。
+
+==================================================
+二、当前已知 Foundation 状态
+==================================================
+
+当前正式/Owner交付包括：
+
+D_PROTOCOL：
+8f7fb52f029053bda10b965da840c6763fc13bf0
+
+D_SAVED：
+4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11
+
+D_SAVED receipt：
+116538cb639791b01b9a5cf0bce18f2c006817b6
+
+A_EDIT Owner delivery：
+8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2
+
+D_HOST compatibility Owner delivery：
+8289d804c3b5b42a2e6c2cf76e965679a0f83af8
+
+D_HOST validation support：
+7493ab31cf6a71ca9b4778bfe871f33bba2e586d
+
+C_QUALITY：
+bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1
+
+I1：
+14936504ae4245cc1822786937f021afce4a7fd9
+FROZEN_PASS
+
+D_JOBS Core：
+2c1c4d1b5642c3060a013cabe836fefd9c9ced7e
+
+D_JOBS：
+CORE_READY
+FORMAL_DELIVERY_NOT_YET
+
+如果当前 Integration 历史已经更新了以上某项，
+以实际仓库为准，不重复登记。
+
+==================================================
+三、本阶段并发轨道
+==================================================
+
+同时维护：
+
+00 Integration Coordinator
+01 Runtime
+02 Authoring
+03 Quality
+04 Editor
+05 Art
+06 Game Content
+07 Game Shell
+08 QA & Build
+
+不得再采用：
+
+A完成
+→ 等
+→ B完成
+→ 等
+→ C完成
+
+的串行开发模式。
+
+==================================================
+四、00 Integration职责
+==================================================
+
+00只负责：
+
+- merge；
+- dependency状态；
+- focused regression；
+- I2；
+- playable build；
+- 主分支稳定；
+- Owner冲突协调；
+- Beta Sprint每日状态。
+
+00禁止：
+
+替Owner写大块生产功能。
+
+==================================================
+五、BUILD MODE新规则
+==================================================
+
+从现在开始：
+
+公共Contract真正冲突：
+STOP
+
+数据损坏风险：
+STOP
+
+Runtime正式玩法语义冲突：
+STOP
+
+其它问题：
+
+继续开发。
+
+以下问题不得停止整条开发线：
+
+- Harness少一个case；
+- 某个Owner Real case暂时缺依赖；
+- UI未最终美化；
+- Art尚未到位；
+- receipt尚未登记但SHA和行为已知；
+- 测试fixture需要修正；
+- Editor暂时只能消费部分TaskService；
+- 某个未来stage尚未完成。
+
+==================================================
+六、依赖处理方式
+==================================================
+
+允许：
+
+PROVISIONAL_DEPENDENCY
+
+条件：
+
+- 代码SHA明确；
+- 文件SHA明确；
+- 公共Contract已经批准；
+- 不涉及数据格式歧义；
+- 最终Freeze前必须收口。
+
+不允许：
+
+用provisional dependency修改：
+
+- Wire format；
+- Save format；
+- Runtime semantics；
+- Solver/Safety结果；
+- public API contract。
+
+==================================================
+七、01 Runtime 本阶段目标
+==================================================
+
+01只聚焦：
+
+D_JOBS Final
+
+现有Core：
+
+2c1c4d1b5642c3060a013cabe836fefd9c9ced7e
+
+已经证明：
+
+Unit 459/459
+AUTHORING / BAKE / combination / startup cancellation Real 81/81
+BUSY
+Sequence
+Lease
+Cancel
+Release
+Stage-scoped closure
+
+本阶段不再重写TaskService底座。
+
+目标：
+
+1. INTENT_BIND Real；
+2. Quality orchestration；
+3. Graphical Replay接入；
+4. 正式Stage Result；
+5. D_JOBS_DELIVERY_READY。
+
+如果某个单独Real stage依赖缺失：
+
+只pending该case。
+
+不要阻塞其它stage。
+
+==================================================
+八、02 Authoring 本阶段目标
+==================================================
+
+A_EDIT已经Owner交付：
+
+8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2
+
+本阶段原则：
+
+只做：
+
+- Integration登记；
+- 必要兼容Bug；
+- 关卡生产中真实发现的P0/P1 Authoring问题。
+
+禁止继续扩展：
+
+通用作者工具抽象。
+
+A_EDIT进入维护模式。
+
+==================================================
+九、03 Quality 本阶段目标
+==================================================
+
+现有：
+
+C_QUALITY =
+bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1
+
+目标：
+
+1. 配合D_JOBS完成Quality stage orchestration；
+2. I2；
+3. 对正式第一关做一次：
+   - Validator
+   - Search
+   - Softlock
+   - Intent
+   - Trace
+   等已有能力验证。
+
+禁止：
+
+增加新的Quality算法。
+
+==================================================
+十、04 Editor 本阶段目标
+==================================================
+
+现在允许04开始实际Editor工作，不再等待D_JOBS全量完成。
+
+优先：
+
+- Authoring Dock；
+- Analyze Current；
+- Accept Saved；
+- Job状态；
+- BUSY；
+- CANCELLING；
+- Cancel；
+- Report查看；
+- Error呈现。
+
+只消费当前稳定TaskService API。
+
+某个stage暂时不可运行：
+
+UI标记pending/unavailable。
+
+不得停止整个Editor开发。
+
+==================================================
+十一、05 Art 本阶段目标
+==================================================
+
+Surface World Runtime Baseline：
+
+已视觉批准。
+
+禁止继续：
+
+Surface Polish 02/03/04。
+
+立即转向：
+
+P0：
+3D角色真实翻滚 + 六面朝向
+
+P0：
+Inner World第一版视觉母版
+
+P1：
+Surface ↔ Inner切换VFX
+
+P1：
+Mortis 3D
+
+优先做：
+
+实际游戏画面中能看到的资产。
+
+==================================================
+十二、06 Game Content 本阶段目标
+==================================================
+
+立即开始正式内容生产。
+
+P0：
+
+第一关 FORMAL_PLAYABLE
+
+建议职责：
+
+翻滚
++
+四视角
++
+简单World Shift
+
+优先评估是否升级已有：
+
+《另一个世界》
+
+而不是无必要重做。
+
+P1：
+
+第二关：
+Surface / Inner World Shift
+
+第三关：
+Perspective Connection
+
+阶段目标：
+
+第1关正式可玩
+第2关灰盒
+第3关灰盒
+
+禁止：
+
+新增核心玩法机制。
+
+只组合现有正式机制。
+
+==================================================
+十三、07 Game Shell 本阶段目标
+==================================================
+
+同时开发：
+
+- Main Menu；
+- Continue；
+- Level Select；
+- Pause；
+- Reset；
+- Settings；
+- Save/Load；
+- Level Complete；
+- 基础Game Flow。
+
+允许占位美术。
+
+优先：
+
+流程闭环。
+
+不要等关卡全部完成才做Game Shell。
+
+==================================================
+十四、08 QA & Build 本阶段目标
+==================================================
+
+建立每天都可以执行的：
+
+QA smoke
+
+至少：
+
+BOOT
+LEVEL LOAD
+MOVE
+ROTATE
+WORLD SHIFT
+RESET
+GOAL
+RESTART
+ERROR CHECK
+
+Bug分类：
+
+P0
+P1
+P2
+P3
+
+08默认：
+
+发现
+→ 复现
+→ 分级
+→ 路由
+
+而不是跨Owner改代码。
+
+如果当前Export条件允许：
+
+建立Windows测试Build。
+
+==================================================
+十五、文件所有权
+==================================================
+
+每个Owner必须先报告：
+
+OWNER_ROOTS
+
+和：
+
+FORBIDDEN_ROOTS
+
+不得随意跨Owner修改。
+
+公共高冲突文件：
+
+project.godot
+Main Scene
+Autoload
+InputMap
+Audio Bus
+Export preset
+Global Resource Registry
+
+默认：
+
+Integration Owned
+
+Owner如需修改：
+
+提交：
+
+INTEGRATION_REQUEST
+
+由00统一处理。
+
+==================================================
+十六、Integration窗口
+==================================================
+
+每天最多两次批量Integration。
+
+建议：
+
+12:00
+
+22:00
+
+不要每收到一个commit就打断全部开发。
+
+Integration窗口做：
+
+- merge；
+- focused smoke；
+- dependency status；
+- playable build。
+
+其余时间Owner继续开发。
+
+==================================================
+十七、每日Build要求
+==================================================
+
+从现在开始：
+
+每天结束必须尽可能产生一个：
+
+PLAYABLE DAILY BUILD
+
+如果当天无法打包：
+
+至少保证主Integration branch：
+
+Godot可启动
+当前主关卡可进入
+核心玩法可执行。
+
+如果连续两天没有玩家可感知进展：
+
+输出：
+
+SPRINT_STALL_WARNING
+
+并说明是哪条基础设施线占用过多时间。
+
+==================================================
+十八、Foundation-4 Freeze条件
+==================================================
+
+FOUNDATION-4不要求所有工具达到完美。
+
+Freeze只要求：
+
+A_EDIT：
+PASS
+
+D_SAVED：
+PASS
+
+D_HOST：
+PASS
+
+D_PROTOCOL：
+PASS
+
+C_QUALITY：
+PASS
+
+D_JOBS：
+核心正式流程PASS
+
+I1：
+PASS
+
+I2：
+核心纵向PASS
+
+Editor：
+基本可用
+
+非P0问题：
+进入Backlog。
+
+==================================================
+十九、Foundation硬截止
+==================================================
+
+Foundation-4目标Freeze：
+
+2026-10-12 ~ 2026-10-15
+
+如果到截止时间仍有：
+
+非数据损坏
+非Runtime错误
+非核心关卡阻塞
+
+的问题：
+
+进入：
+
+POST_FREEZE_BACKLOG
+
+不得继续阻塞正式游戏开发。
+
+==================================================
+二十、第一阶段结束标准
+==================================================
+
+输出：
+
+BETA_SPRINT_PHASE_1_READY
+
+必须包含：
+
+Foundation-4:
+FROZEN / 剩余P0
+
+D_JOBS:
+<状态>
+
+I2:
+<状态>
+
+Editor:
+<状态>
+
+Art:
+角色翻滚=<状态>
+Inner World=<状态>
+
+Game Content:
+Level 1=<状态>
+Level 2=<状态>
+Level 3=<状态>
+
+Game Shell:
+<状态>
+
+QA:
+<状态>
+
+Daily Build:
+<路径/状态>
+
+P0 Bugs:
+<数量>
+
+P1 Bugs:
+<数量>
+
+POST_FREEZE_BACKLOG:
+<摘要>
+
+Next Phase:
+BETA CONTENT PRODUCTION
+
+==================================================
+二十一、STOP ONLY IF
+==================================================
+
+只在以下情况全线停下：
+
+1. 公共持久化格式冲突；
+2. 存档/关卡数据可能损坏；
+3. Runtime正式语义不一致；
+4. 主Integration不可恢复；
+5. 多Owner修改同一公共Contract且无法自动协调。
+
+其它问题：
+
+局部pending
+继续并发。

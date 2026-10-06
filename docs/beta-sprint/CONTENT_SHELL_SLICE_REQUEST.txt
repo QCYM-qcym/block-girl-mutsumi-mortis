@@ -1,0 +1,619 @@
+PROJECT: Mutsumi Veilshift / 方块少女-若叶睦
+SPRINT: Beta Sprint
+TRACK: 00 Integration Coordinator
+MODE: BUILD / PARALLEL
+
+==================================================
+CURRENT DELIVERIES
+==================================================
+
+06 Game Content:
+
+GAME_CONTENT_BATCH_01_READY
+
+branch:
+feat/beta-game-content
+
+delivery commit:
+608a18a
+（请在本地解析并记录完整40位SHA）
+
+Content:
+
+L-01《另一个世界》
+FORMAL_PLAYABLE_PASS
+
+L-02《两岸之间》
+GREYBOX_PLAYABLE
+
+L-03《视线相接》
+GREYBOX_PLAYABLE
+
+Foundation changes:
+NONE
+
+
+07 Game Shell:
+
+GAME_SHELL_BETA_BASELINE_READY
+
+branch:
+feat/beta-game-shell
+
+delivery commit:
+7abf98d
+（请在本地解析并记录完整40位SHA）
+
+Implemented:
+
+Main Menu
+Pause
+Level Select
+Save / Load
+Settings
+Level Complete
+Continue
+
+Shell checks:
+112 PASS
+
+Foundation changes:
+NONE
+
+Game Content changes:
+NONE
+
+Shared file change:
+Main Scene only
+
+Human playtest:
+NOT_RUN
+
+==================================================
+GOAL
+==================================================
+
+完成第一条真正的：
+
+CONTENT
+→ GAME SHELL
+→ SAVE
+→ QA
+→ DAILY BUILD
+
+产品链。
+
+本轮目标不是增加Shell功能，
+也不是设计新关卡。
+
+目标是：
+
+把06和07两个已经完成的Owner交付整合起来，
+形成第一个真正具有三关内容和游戏外壳的Beta Slice。
+
+==================================================
+一、受控接入06和07
+==================================================
+
+分别核验：
+
+608a18a
+
+7abf98d
+
+解析完整40位SHA。
+
+确认两者Owner边界：
+
+06：
+只修改Game Content
+
+07：
+只修改Game Shell
++
+必要Main Scene
+
+Foundation production：
+NONE
+
+如果两分支没有真正文件冲突：
+
+正常merge。
+
+如果Main Scene和Content入口存在接入冲突：
+
+由00负责最小Integration修改。
+
+禁止：
+
+rebase
+squash
+把Owner提交重写成一个大提交。
+
+==================================================
+二、正式关卡目录
+==================================================
+
+不要继续让Game Shell只认识：
+
+P-01
+
+接入实际：
+
+L-01
+L-02
+L-03
+
+必须使用稳定：
+
+level_id
+display_name
+entry scene/resource
+
+不得让Shell通过：
+
+E:/绝对路径
+文件名猜测
+SceneTree扫描
+
+识别关卡。
+
+优先复用现有正式Level metadata。
+
+==================================================
+三、Beta解锁链
+==================================================
+
+本阶段正式Beta顺序：
+
+L-01
+↓
+L-02
+↓
+L-03
+
+要求：
+
+首次启动：
+
+L-01 unlocked
+
+L-02 locked
+
+L-03 locked
+
+
+L-01 complete：
+
+unlock L-02
+
+
+L-02 complete：
+
+unlock L-03
+
+
+L-03 complete：
+
+保持completed状态
+
+后续L-04暂不存在，
+不要伪造Next Level。
+
+==================================================
+四、Continue
+==================================================
+
+当前07定义：
+
+Continue从最近关卡起点恢复。
+
+保持该语义。
+
+现在用真实L-01/L-02/L-03验证。
+
+至少：
+
+完成L-01
+→ 进入L-02
+→ 退出游戏
+→ 重启
+→ Continue
+→ 正确进入L-02起点
+
+不要求：
+
+关卡中途精确位置恢复。
+
+Beta当前只恢复：
+
+progress + recent level entry
+
+即可。
+
+==================================================
+五、Level Select
+==================================================
+
+必须实际显示三关：
+
+L-01《另一个世界》
+L-02《两岸之间》
+L-03《视线相接》
+
+至少能区分：
+
+LOCKED
+
+UNLOCKED
+
+COMPLETED
+
+不要等最终UI美术。
+
+允许占位按钮/文字。
+
+==================================================
+六、Pause / Reset
+==================================================
+
+在真实L-01上验证：
+
+进入L-01
+→ Pause
+→ Resume
+→ Pause
+→ Reset
+
+Reset必须调用正式游戏Reset路径。
+
+不得：
+
+重新实例化整个应用来假Reset。
+
+Reset后：
+
+Shell状态仍然正确，
+关卡可以继续通关。
+
+==================================================
+七、Level Complete
+==================================================
+
+L-01 Goal触发后：
+
+Gameplay进入完成状态
+→ Shell收到完成事件
+→ progress保存
+→ L-02解锁
+→ 显示Level Complete UI
+
+玩家可：
+
+Next Level
+或
+Level Select
+
+L-02同理。
+
+不得：
+
+通过QA测试脚本直接写存档
+冒充正常通关解锁。
+
+==================================================
+八、存档
+==================================================
+
+使用07已有正式Save系统。
+
+至少持久化：
+
+unlocked levels
+
+completed levels
+
+recent level
+
+settings
+
+测试：
+
+cold start
+
+progress update
+
+process restart
+
+continue
+
+corrupt/no save安全启动
+（如果07已有对应检查则复用）
+
+不要为三关增加第二套Content存档。
+
+==================================================
+九、P-01处理
+==================================================
+
+P-01 pixel baseline继续保留为：
+
+Regression / Development Reference
+
+但Beta玩家流程不应再默认只进入P-01。
+
+如果L-01本质上就是升级后的《另一个世界》：
+
+Beta flow优先进入正式L-01 entry。
+
+不要删除P-01旧基线。
+
+==================================================
+十、当前3D状态
+==================================================
+
+不要在本Integration任务中解决3D美术主工程接入。
+
+当前Game Content + Shell可以继续使用现有Gameplay表现。
+
+但是必须在Daily状态中明确：
+
+BETA_3D_MAIN_GAME_INTEGRATION:
+PENDING
+
+避免把当前可玩Beta误报成：
+
+3D正式视觉版本。
+
+05 Art / 后续3D Integration独立推进。
+
+==================================================
+十一、Focused Integration Smoke
+==================================================
+
+至少验证：
+
+CASE 1 — First Start
+
+无测试存档
+→ Main Menu
+→ Level Select
+→ only L-01 unlocked
+→ enter L-01
+
+PASS
+
+
+CASE 2 — L-01 completion
+
+L-01
+→ complete
+→ save
+→ L-02 unlocked
+
+PASS
+
+
+CASE 3 — L-02 completion
+
+L-02
+→ complete
+→ L-03 unlocked
+
+PASS
+
+
+CASE 4 — Continue
+
+进入L-02
+→ 退出
+→ 新Godot进程启动
+→ Continue
+→ L-02
+
+PASS
+
+
+CASE 5 — Reset
+
+L-01
+→ Pause
+→ Reset
+→ continue
+→ complete
+
+PASS
+
+
+CASE 6 — Level Select
+
+Main Menu
+→ Level Select
+→ L-01/L-02/L-03状态正确
+
+PASS
+
+==================================================
+十二、人工试玩
+==================================================
+
+07此前：
+
+Human playtest = NOT_RUN
+
+本轮Integration不冒充真人试玩。
+
+完成自动/脚本集成验证后：
+
+交给08 QA进行首次黑盒人工试玩。
+
+==================================================
+十三、产生新的Daily Build
+==================================================
+
+上一份：
+
+source_daily_20261006_qa02_final.zip
+
+仍是P-01 baseline源码包。
+
+本轮必须尝试产生新的：
+
+Beta Integrated Slice
+
+包含：
+
+Game Shell
++
+L-01
++
+L-02
++
+L-03
++
+当前Runtime
+
+目标名称可类似：
+
+beta_slice_20261006_content_shell_01.zip
+
+实际名称由现有build规则决定。
+
+不要覆盖旧Daily Build。
+
+==================================================
+十四、08 QA handoff
+==================================================
+
+完成Integration后立即输出：
+
+QA_HANDOFF_READY
+
+给08的信息只能包括：
+
+- build路径；
+- 控制方式；
+- 三关名称；
+- 当前已知P0/P1；
+- 哪些内容是greybox。
+
+不要给：
+
+L-02/L-03解法路线。
+
+让QA第一次盲玩。
+
+==================================================
+十五、BUILD MODE
+==================================================
+
+以下不阻塞：
+
+L-02/L-03最终Art未完成
+
+UI使用占位美术
+
+3D主工程接入未完成
+
+P2/P3视觉问题
+
+某些文本还没最终润色
+
+以下才阻塞：
+
+无法启动
+
+无法进入L-01
+
+L-01无法完成
+
+完成后不解锁L-02
+
+存档损坏
+
+Continue错误
+
+Reset破坏流程
+
+P0 softlock
+
+==================================================
+十六、成功输出
+==================================================
+
+输出：
+
+BETA_CONTENT_SHELL_SLICE_READY
+
+Game Content commit:
+<完整SHA>
+
+Game Shell commit:
+<完整SHA>
+
+Integration commit:
+<真实40位SHA>
+
+L-01:
+FORMAL_PLAYABLE / SHELL_INTEGRATED
+
+L-02:
+GREYBOX_PLAYABLE / SHELL_INTEGRATED
+
+L-03:
+GREYBOX_PLAYABLE / SHELL_INTEGRATED
+
+Main Menu:
+PASS
+
+Level Select:
+PASS
+
+Pause:
+PASS
+
+Reset:
+PASS
+
+Save:
+PASS
+
+Continue:
+PASS
+
+L-01 → L-02 unlock:
+PASS
+
+L-02 → L-03 unlock:
+PASS
+
+Cold restart:
+PASS
+
+Human QA:
+READY / NOT_RUN
+
+3D main-game integration:
+PENDING
+
+Daily Build:
+<实际路径>
+
+Foundation changes:
+NONE
+
+P0:
+<数量>
+
+P1:
+<数量>
+
+Working tree:
+CLEAN
+
+Push:
+NOT_RUN
+
+然后停止。
+
+不要开始L-04。
