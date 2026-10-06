@@ -1,0 +1,264 @@
+{
+	"checkpoints": [
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "01_start",
+			"phase": "idle",
+			"view": 0,
+			"world": 0
+		},
+		{
+			"cell": "(0, 2)",
+			"complete": false,
+			"door": false,
+			"name": "keyboard_02_surface_gap",
+			"phase": "idle",
+			"view": 0,
+			"world": 0
+		},
+		{
+			"cell": "(0, 1)",
+			"complete": false,
+			"door": false,
+			"name": "keyboard_03_inner_bridge",
+			"phase": "idle",
+			"view": 0,
+			"world": 1
+		},
+		{
+			"cell": "(3, 0)",
+			"complete": false,
+			"door": false,
+			"name": "keyboard_04_middle_gap",
+			"phase": "idle",
+			"view": 0,
+			"world": 1
+		},
+		{
+			"cell": "(3, 0)",
+			"complete": false,
+			"door": false,
+			"name": "keyboard_05_aligned",
+			"phase": "idle",
+			"view": 1,
+			"world": 1
+		},
+		{
+			"cell": "(3, 0)",
+			"complete": false,
+			"door": false,
+			"name": "keyboard_06_crossing",
+			"phase": "roll",
+			"view": 1,
+			"world": 1
+		},
+		{
+			"cell": "(11, 0)",
+			"complete": false,
+			"door": true,
+			"name": "keyboard_07_plate_open",
+			"phase": "idle",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(11, 0)",
+			"complete": false,
+			"door": true,
+			"name": "keyboard_08_gate_crossing",
+			"phase": "roll",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(13, 0)",
+			"complete": true,
+			"door": false,
+			"name": "keyboard_09_complete",
+			"phase": "complete",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(0, 2)",
+			"complete": false,
+			"door": false,
+			"name": "mouse_02_surface_gap",
+			"phase": "idle",
+			"view": 0,
+			"world": 0
+		},
+		{
+			"cell": "(0, 1)",
+			"complete": false,
+			"door": false,
+			"name": "mouse_03_inner_bridge",
+			"phase": "idle",
+			"view": 0,
+			"world": 1
+		},
+		{
+			"cell": "(3, 0)",
+			"complete": false,
+			"door": false,
+			"name": "mouse_04_middle_gap",
+			"phase": "idle",
+			"view": 0,
+			"world": 1
+		},
+		{
+			"cell": "(3, 0)",
+			"complete": false,
+			"door": false,
+			"name": "mouse_05_aligned",
+			"phase": "idle",
+			"view": 1,
+			"world": 1
+		},
+		{
+			"cell": "(3, 0)",
+			"complete": false,
+			"door": false,
+			"name": "mouse_06_crossing",
+			"phase": "roll",
+			"view": 1,
+			"world": 1
+		},
+		{
+			"cell": "(11, 0)",
+			"complete": false,
+			"door": true,
+			"name": "mouse_07_plate_open",
+			"phase": "idle",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(11, 0)",
+			"complete": false,
+			"door": true,
+			"name": "mouse_08_gate_crossing",
+			"phase": "roll",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(13, 0)",
+			"complete": true,
+			"door": false,
+			"name": "mouse_09_complete",
+			"phase": "complete",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_900_view_0",
+			"phase": "idle",
+			"view": 0,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_900_view_1",
+			"phase": "idle",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_900_view_2",
+			"phase": "idle",
+			"view": 2,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_900_view_3",
+			"phase": "idle",
+			"view": 3,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_700_view_0",
+			"phase": "idle",
+			"view": 0,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_700_view_1",
+			"phase": "idle",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_700_view_2",
+			"phase": "idle",
+			"view": 2,
+			"world": 0
+		},
+		{
+			"cell": "(0, 5)",
+			"complete": false,
+			"door": false,
+			"name": "layout_700_view_3",
+			"phase": "idle",
+			"view": 3,
+			"world": 0
+		}
+	],
+	"checks": 167,
+	"display": "Windows",
+	"failures": [],
+	"playthrough_states": [
+		[
+			"(13, 0)",
+			0,
+			1,
+			"(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+			13,
+			false,
+			true
+		],
+		[
+			"(13, 0)",
+			0,
+			1,
+			"(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+			13,
+			false,
+			true
+		]
+	],
+	"renderer": "forward_plus",
+	"version": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	}
+}
