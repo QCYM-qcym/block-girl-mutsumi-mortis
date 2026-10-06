@@ -15,20 +15,22 @@ Primary development integration: `integration/foundation-4-authoring`, worktree 
 
 `main` at `8a77874cc18ceb654664c3e9aeb10a2ccd318048` remains the P-01 playable snapshot. It is not evidence that Foundation-4 or Beta content is already shipped on main. Daily packages must identify their source branch, commit and any packaged local changes.
 
-Current receipt is the source of delivery facts: `tests/foundation/authoring_integration/dependency_receipts.json`. Already registered A_EDIT, D_HOST and D_JOBS Core phase evidence must not be registered again. Core is not formal D_JOBS.
+Current2026-10-06 finalization: D_JOBS7836 is formally registered by receipt96397ea5708e0e87dd05e3d1d4c682ca0a5478b8; actual I2 Graphical352 PASS. Both prerequisites for Freeze are satisfied; basic integrated Editor acceptance remains pending. See the latest daily record. Earlier handoff table/dependency snapshots below are historical kickoff context.
+
+Current receipt is the source of delivery facts: `tests/foundation/authoring_integration/dependency_receipts.json`. A_EDIT, D_HOST, C_QUALITY and D_JOBS are formally registered. Do not repeat delivery registration. Previous Core remains historical phase evidence; the formal D_JOBS commit is7836.
 
 ## Concurrent tracks and ownership
 
 | Track | Owner scope / existing worktree | Current handoff |
 | --- | --- | --- |
 | 00 Integration | This document's ownership; foundation-4-integration | Focused regression, I2, build, dependency/ownership coordination |
-| 01 Runtime | Exact 4D plan paths; foundation-authoring-runtime | Active D_JOBS WIP. Finish INTENT_BIND, Quality, Graphical Replay and Stage Result without replacing the Core |
+| 01 Runtime | Exact 4D plan paths; foundation-authoring-runtime | D_JOBS7836 formally delivered; maintenance for reproduced behavior failures, no finalization feature expansion |
 | 02 Authoring | Exact 4A plan paths; foundation-authoring-data | A_EDIT delivered. Maintenance for compatibility and content-discovered P0/P1 only |
 | 03 Quality | Exact 4C plan paths; foundation-authoring-quality | C_QUALITY delivered. Support orchestration/I2 and existing checks on Level 1 |
 | 04 Editor | `addons/block_girl_level_tools/`, `tests/foundation/editor/`, dedicated 4B documents; foundation-editor-tools | Existing partial plugin. Continue against stable TaskService ports; unavailable stages remain local UI pending |
 | 05 Art | Existing approved production scope in `E:/Study/方块娘项目/若叶睦/model/art/production/` | Roll/six-face assets and Inner baseline exist outside the main game. Runtime consumption and approval evidence remain separate |
-| 06 Content | `game/levels/mutsumi/`, `docs/game-content/`, `tests/playtest/`; beta-game-content | Active independent Owner. Preserve original P-01 files per its spec; three new level scenes are local pending |
-| 07 Shell | `game/shell/`, `tests/shell/`, `docs/game-shell/`; beta-game-shell | Active independent Owner. Shared Main Scene change is a 00 integration request |
+| 06 Content | `game/levels/mutsumi/`, `docs/game-content/`, `tests/playtest/`; beta-game-content | Content608a18 merged and accepted: L-01 formal, L-02/L-03 greybox; original P-01 preserved |
+| 07 Shell | `game/shell/`, `tests/shell/`, `docs/game-shell/`; beta-game-shell | Shell7abf98 integrated with actual Content catalog; Main Scene/Save/independent Continue accepted |
 | 08 QA & Build | New `tests/beta_sprint/` wrappers, separate evidence/output | Real smoke and source playable daily package. Route production defects to their Owner |
 
 04/05 scope above is an observed or proposed routing boundary, not a new Owner acknowledgement. Each Owner must report its own OWNER_ROOTS/FORBIDDEN_ROOTS before further writes. Existing exact Foundation plan manifests remain binding within their scopes.
@@ -37,7 +39,7 @@ Current receipt is the source of delivery facts: `tests/foundation/authoring_int
 
 1. Record local pending against the affected case or UI capability; keep other cases/tracks running.
 2. A provisional dependency requires an explicit commit SHA, file hashes, approved public contract and unambiguous data format. Resolve it before Freeze. It does not change wire/save formats, gameplay semantics, Solver/Safety conclusions or public API.
-3. I2 Graphical currently requires formal `D_JOBS`; Core phase evidence does not satisfy that slot. A direct local headless quality preflight may provide scoped progress evidence, but is neither D_JOBS delivery nor I2 core vertical PASS.
+3. I2 Graphical requires formal `D_JOBS`; the exact7836 receipt now satisfies it and shared i2_g01 passed352 checks. A direct local headless quality preflight is separate evidence and cannot replace formal delivery or I2 PASS.
 4. Integration's old preflight lists `replay_run` as a missing capability. Runtime WIP is using the existing `start` API to dispatch replay. Update I2 against the actual approved Owner delivery; do not demand a new public API merely to match an old test assumption.
 5. An absent future stage, an unregistered receipt with known qualified bytes, fixture/Harness work or pending art does not halt an Owner.
 
@@ -53,11 +55,11 @@ Before each batch: inspect worktree status, resolve exact delivery commits, chec
 
 ## Current next handoffs
 
-- 01 → 00: D_JOBS commit + exact owned files/hashes + actual stable entry + stage-scoped Real/Graphical evidence. 00 registers the formal delivery only when its core flow is proved, then runs I2 core vertical.
+- 01 → 00 completed: D_JOBS7836 exact files/hashes and fresh shared Unit/Real/Graphical accepted; receipt96397ea and immediate formal I2 PASS. Route any reproduced production behavior failures to01; finalization adds no further D_JOBS scope.
 - 04 → 00: reviewed Editor commit and real stable-service lifecycle checks; stages without support display pending/unavailable. Plugin activation is a shared-file integration request.
 - 05 → 01/06/00: approved runtime assets and their consumption contract; prove roll/six-face orientation in actual gameplay before marking integrated. Inner production validation does not imply visual approval.
-- 06 → 07/00: verified three-level catalog with stable IDs, scene paths and commit. Level 1 FORMAL_PLAYABLE and Levels 2/3 graybox require actual play/Reset/Goal evidence, not scene existence.
-- 07 → 00: Shell commit, exact Main Scene configuration request, menu/pause/complete/settings evidence and independent-process Save/Load/Continue check. Consume the real Content catalog once delivered.
+- 06 → 07/00 completed: actual three-level catalog, L-01 FORMAL_PLAYABLE, L-02/L-03 greybox with real play/Reset/Goal evidence. Follow-up level production stays Owner-local.
+- 07 → 00 completed: Shell/Main Scene/correct actual Content catalog, menu/pause/complete/settings and independent-process Save/Load/Continue accepted. Blind Human QA remains READY/NOT_RUN.
 - 08 → 00: smoke results with uncovered checks explicitly UNVERIFIED, build path/type/source identity, and prioritized Owner-routed bugs.
 
 ## Freeze and daily report

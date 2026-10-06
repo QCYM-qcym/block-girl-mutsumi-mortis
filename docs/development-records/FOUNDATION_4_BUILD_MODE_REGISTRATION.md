@@ -156,3 +156,12 @@ Fresh shared Unit jf_u02:490 PASS; Real jf_r02:395 PASS; Graphical jf_g02:117 PA
 I2: READY_TO_RUN
 Foundation Freeze: WAITING_FOR_I2
 No further D_JOBS functionality work is authorized by this finalization. The earlier NOT_DELIVERED/I2 pending snapshots above are retained history.
+
+## Immediate actual I2 completion
+
+D_JOBS integration receipt: 96397ea5708e0e87dd05e3d1d4c682ca0a5478b8
+I2: READY_TO_RUN -> CORE_VERTICAL_PASS
+I2 shared Graphical i2_g01:352 checks, failures[], exit0, stderr0, Windows, doubles[]. Real complete and budget workers, same-run canonical/Intent/OriginalGraph trace, formal Replayer MATCH, actual Runtime MOVE/Goal/rotation/Shift/Reset and natural Tween.finished. See I2_VERTICAL_RECEIPT_20261006.md.
+Foundation Freeze: NOT_FROZEN; I2 criterion satisfied, basic integrated Editor acceptance pending.
+D_JOBS functionality: no expansion.
+Push: NOT_RUN.
