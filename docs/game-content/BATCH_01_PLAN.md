@@ -38,18 +38,18 @@ Files: `tests/playtest/test_batch_01_runtime.gd`, `tests/playtest/run_batch_01.p
 
 Interfaces: consume independent scene paths and real input adapter. Produce input-driven state checkpoints and PNGs.
 
-- [ ] Exercise L-01 three playthroughs, continuous input, actual link crossing, unsafe shifts, Goal lock and all transition Reset cases.
-- [ ] Exercise L-02/L-03 normal and alternate-view playthroughs and Reset.
-- [ ] Verify graphical Windows rendering and all-view minimum-size layout; inspect screenshots.
-- [ ] Run pre-existing non-mutating gameplay/logic regression fixtures; record every failure.
+- [x] Exercise L-01 three playthroughs, continuous input, actual link crossing, unsafe shifts, Goal lock and all transition Reset cases.
+- [x] Exercise L-02/L-03 normal and alternate-view playthroughs and Reset.
+- [x] Verify graphical Windows rendering and all-view minimum-size layout; inspect screenshots.
+- [x] Run pre-existing non-mutating gameplay/logic regression fixtures; record every failure.
 
 ## Task 3: Delivery
 
 Files: `docs/game-content/BATCH_01_REPORT.md`, `docs/game-content/BATCH_01_FILES.json`, `docs/game-content/LEVEL_TEMPLATE.md`, `game/levels/mutsumi/batch_01/level_order.json`.
 
-- [ ] Document actual routes, resource template, owner requests, limitations and validation counts.
-- [ ] Hash modified delivery files and verify no prohibited tracked path changed.
-- [ ] Commit only owner-root changes; confirm clean isolated working tree and Push NOT_RUN.
+- [x] Document actual routes, resource template, owner requests, limitations and validation counts.
+- [x] Hash modified delivery files and verify no prohibited tracked path changed.
+- [x] Commit only owner-root changes; confirm clean isolated working tree and Push NOT_RUN.
 
 ## Execution ledger
 
@@ -59,4 +59,10 @@ Ruling: user direct BUILD instruction supersedes skill approval handoffs; no sec
 
 Task 1: complete. Initial baseline: P01 state 31 checks/108 solvable. RED: three independent scenes absent. GREEN: batch state 43 checks; 108/48/56 reachable states all solvable. Existing regression: perspective 66 checks, prototype state 50 checks, input PASS.
 
-Task 2: first graphical run completed all seven routes; failed only harness assertions. Ruling: check painted alpha bounds rather than transparent atlas padding, and use D to start L03's horizontal spawn route. No production change required. Preserve initial_harness_report.json and initial_harness.stderr.log as historical failed evidence; final runtime_report.json is authoritative. Corrected full rerun in progress.
+Task 2: first graphical run completed all seven routes; failed only harness assertions. Ruling: check painted alpha bounds rather than transparent atlas padding, and use D to start L03's horizontal spawn route. No production change required. Preserve initial_harness_report.json and initial_harness.stderr.log as historical failed evidence; final runtime_report.json is authoritative.
+
+Task 2: complete. Corrected full run: 429 checks, seven successful graphical playthroughs, zero failures. Original P01 graphical regression: 167 checks, zero failures. Editor import: exit 0 and empty error log. Added import to the repeatable wrapper so a fresh checkout can load PNG assets before runtime; complete wrapper run also exited 0 with 43 state and 429 runtime checks, seven routes, zero failures.
+
+Final review: independent read-only reviewer inspected adapters, all three maps and all 12 minimum-size view screenshots; no Critical, Important or Minor findings. Ruling: future arbitrary configurations, relocated gates, non-EAST links, Foundation migration, menu/catalog wiring, final art and first-player comprehension remain explicit owner/template/playtest boundaries; treating this batch as a general configuration guarantee would risk future unsolvable content, so the template and report record those limits.
+
+Task 3: complete. Delivery report, resource template, ordered stable ids, SHA-256 manifest and evidence are included in the delivery commit. Keeping branch/worktree for 00/07 integration, no merge and no push. Only owner-root files are committed. Original main checkout's seven untracked README imports are untouched; isolated auto-generated copies and tests/playtest check logs are removed as temporary validation outputs.
