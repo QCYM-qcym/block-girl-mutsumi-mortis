@@ -1,0 +1,523 @@
+{
+  "schema_version": "4.0.0",
+  "asset_id": "BG_MEC_INNER_GATE_001",
+  "revision": 3,
+  "type": "mechanism",
+  "module_kind": "gate",
+  "world": "inner",
+  "source_file": "BG_MEC_INNER_GATE_001/source/BG_MEC_INNER_GATE_001.blend",
+  "glb_file": "BG_MEC_INNER_GATE_001/export/BG_MEC_INNER_GATE_001.glb",
+  "godot_scene": "BG_MEC_INNER_GATE_001/godot/BG_MEC_INNER_GATE_001.tscn",
+  "logical_footprint": {
+    "unit": "meter",
+    "xz": [
+      3,
+      1
+    ],
+    "grid_reservation_cells": [
+      3,
+      1
+    ],
+    "grid_cell_size": 1
+  },
+  "visual_bounds": {
+    "coordinate_system": "Godot Y-up",
+    "min": [
+      -1.125,
+      0.0,
+      -0.28999999165534973
+    ],
+    "max": [
+      1.125,
+      2.512500047683716,
+      0.28999999165534973
+    ]
+  },
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "forward_axis": {
+    "blender": "-Y",
+    "godot": "+Z"
+  },
+  "walkable": false,
+  "collision_type": "mechanism_state_boxes",
+  "collision_definitions": [
+    {
+      "name": "FrameLeft",
+      "center": [
+        -0.91,
+        1.12,
+        0
+      ],
+      "size": [
+        0.4,
+        2.24,
+        0.58
+      ]
+    },
+    {
+      "name": "FrameRight",
+      "center": [
+        0.91,
+        1.12,
+        0
+      ],
+      "size": [
+        0.4,
+        2.24,
+        0.58
+      ]
+    },
+    {
+      "name": "Lintel",
+      "center": [
+        0,
+        2.18,
+        0
+      ],
+      "size": [
+        1.5,
+        0.3,
+        0.44
+      ]
+    }
+  ],
+  "material_slots": [
+    "Inner | restrained cold silver",
+    "Cold silver",
+    "Stone secondary",
+    "Stone main",
+    "Quiet accent"
+  ],
+  "texture_dependencies": [
+    "BG_MEC_INNER_GATE_001/textures/BG_MEC_INNER_GATE_001_stone.png"
+  ],
+  "surface_pair": "BG_MEC_SURFACE_GATE_001",
+  "inner_pair": null,
+  "pair_status": "PRODUCED",
+  "triangle_count": 5896,
+  "runtime_status": "PASS",
+  "showcase_status": "PASS",
+  "ART_ACCEPTANCE": "PASS",
+  "PRODUCTION_ACCEPTANCE": "PASS",
+  "GAMEPLAY_ACCEPTANCE": "PASS",
+  "art_acceptance_basis": "Explicit user ART Gate final confirmation; technical/gameplay conclusions unchanged.",
+  "provenance": {
+    "design": "Approved Surface / Inner material directions and user mechanism concept sheet; new production source"
+  },
+  "height": 2.512500047683716,
+  "connection_points": [
+    {
+      "name": "north",
+      "position": [
+        0,
+        0,
+        -0.5
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "name": "south",
+      "position": [
+        0,
+        0,
+        0.5
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "source_sha256": "57d6c0085e7dab9c29a966028a8b5098cb4f43b89810645f0df09ba8c69611fb",
+  "glb_sha256": "23022be5c8b6086ef7dfa149bb8afcf0c115731a92745a33ee90e64745b15c61",
+  "material_transfer": {
+    "strategy": "Portable PBR materials with local UV stone texture, packed into GLB",
+    "lighting_baked": false
+  },
+  "asset_class": "INTERACTIVE_MECHANISM",
+  "source": {
+    "file": "BG_MEC_INNER_GATE_001/source/BG_MEC_INNER_GATE_001.blend",
+    "sha256": "57d6c0085e7dab9c29a966028a8b5098cb4f43b89810645f0df09ba8c69611fb"
+  },
+  "export": {
+    "file": "BG_MEC_INNER_GATE_001/export/BG_MEC_INNER_GATE_001.glb",
+    "sha256": "23022be5c8b6086ef7dfa149bb8afcf0c115731a92745a33ee90e64745b15c61",
+    "format": "GLB"
+  },
+  "logical": {
+    "grid_unit": 1.0,
+    "footprint": [
+      3,
+      1
+    ],
+    "cell_origin_offset": [
+      -1,
+      0
+    ],
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "walkable_cells": [
+      [
+        1,
+        0
+      ]
+    ],
+    "clearance": {
+      "required_width": 1.0,
+      "required_height": 1.44,
+      "passage_cells": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "connection_points": [
+      {
+        "id": "north",
+        "name": "north",
+        "local_position": [
+          0,
+          0,
+          -0.5
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "height": 0,
+        "connection_type": "passage"
+      },
+      {
+        "id": "south",
+        "name": "south",
+        "local_position": [
+          0,
+          0,
+          0.5
+        ],
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "height": 0,
+        "connection_type": "passage"
+      }
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "forward_axis": "+Z",
+    "height_contract": {
+      "walk_surface": 0,
+      "passage_min_height": 1.65
+    },
+    "gameplay_meaning": "gate"
+  },
+  "visual": {
+    "bounds": {
+      "coordinate_system": "Godot Y-up",
+      "min": [
+        -1.125,
+        0.0,
+        -0.28999999165534973
+      ],
+      "max": [
+        1.125,
+        2.512500047683716,
+        0.28999999165534973
+      ]
+    },
+    "triangles": 5896,
+    "vertices": 8262,
+    "materials": [
+      "Inner | restrained cold silver",
+      "Cold silver",
+      "Stone secondary",
+      "Stone main",
+      "Quiet accent"
+    ],
+    "textures": [
+      {
+        "file": "BG_MEC_INNER_GATE_001/textures/BG_MEC_INNER_GATE_001_stone.png",
+        "width": 128,
+        "height": 128,
+        "estimated_rgba_bytes": 65536
+      }
+    ],
+    "draw_relevant_surfaces": 39
+  },
+  "physics": {
+    "collision_type": "mechanism_state_boxes",
+    "collision_bounds": [
+      {
+        "name": "FrameLeft",
+        "center": [
+          -0.91,
+          1.12,
+          0
+        ],
+        "size": [
+          0.4,
+          2.24,
+          0.58
+        ]
+      },
+      {
+        "name": "FrameRight",
+        "center": [
+          0.91,
+          1.12,
+          0
+        ],
+        "size": [
+          0.4,
+          2.24,
+          0.58
+        ]
+      },
+      {
+        "name": "Lintel",
+        "center": [
+          0,
+          2.18,
+          0
+        ],
+        "size": [
+          1.5,
+          0.3,
+          0.44
+        ]
+      }
+    ],
+    "blocking_volume": "state-controlled blocker plus frozen support",
+    "passage_cells": [
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "pairing": {
+    "surface_asset": "BG_MEC_SURFACE_GATE_001",
+    "inner_asset": "BG_MEC_INNER_GATE_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "acceptance": {
+    "art": "PASS",
+    "production": "PASS",
+    "gameplay": "PASS"
+  },
+  "warnings": [],
+  "contract_revision": 4,
+  "release": "batch_05",
+  "path_state": "walkable",
+  "clearance": {
+    "static_bounds": {
+      "min": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "roll_swept_required": true,
+    "min_width": 1.0,
+    "min_height": 1.65,
+    "tested_character_class": "UNIT_CUBE_1M",
+    "status": "PASS"
+  },
+  "occlusion": {
+    "fade_allowed": true,
+    "fade_group": "structural_foreground",
+    "priority": 10
+  },
+  "mechanism_type": "gate",
+  "stable_id": "BG_MEC_INNER_GATE_001",
+  "states": [
+    {
+      "id": "closed",
+      "visual_node": "StateViews/closed",
+      "collision_state": "closed_blocker",
+      "animation": "closed",
+      "interaction_enabled": true,
+      "activation_semantic": "gate.closed"
+    },
+    {
+      "id": "opening",
+      "visual_node": "StateViews/opening",
+      "collision_state": "closed_blocker",
+      "animation": "opening",
+      "interaction_enabled": false,
+      "activation_semantic": "gate.opening"
+    },
+    {
+      "id": "open",
+      "visual_node": "StateViews/open",
+      "collision_state": "open_passage",
+      "animation": "open",
+      "interaction_enabled": true,
+      "activation_semantic": "gate.open"
+    }
+  ],
+  "state_contract": {
+    "initial_state": "closed",
+    "state_ids": [
+      "closed",
+      "opening",
+      "open"
+    ],
+    "activation_semantics": "gate",
+    "runtime_owner": "MechanismRuntime + MechanismConfig Resource"
+  },
+  "interaction_anchor": [
+    0,
+    0.75,
+    0
+  ],
+  "target_slots": [],
+  "animation_anchor": {
+    "node": "Visual",
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ]
+  },
+  "config_resource": "mechanisms/configs/gate.tres",
+  "collision_profile": {
+    "fixed_shapes": [
+      {
+        "name": "FrameLeft",
+        "center": [
+          -0.91,
+          1.12,
+          0
+        ],
+        "size": [
+          0.4,
+          2.24,
+          0.58
+        ]
+      },
+      {
+        "name": "FrameRight",
+        "center": [
+          0.91,
+          1.12,
+          0
+        ],
+        "size": [
+          0.4,
+          2.24,
+          0.58
+        ]
+      },
+      {
+        "name": "Lintel",
+        "center": [
+          0,
+          2.18,
+          0
+        ],
+        "size": [
+          1.5,
+          0.3,
+          0.44
+        ]
+      }
+    ],
+    "gate_blocker": {
+      "center": [
+        0,
+        0.86,
+        0
+      ],
+      "size": [
+        1.36,
+        1.72,
+        0.18
+      ]
+    },
+    "trigger": {
+      "node": "InteractionArea",
+      "shape": "box",
+      "center": [
+        0,
+        0.75,
+        0
+      ],
+      "size": [
+        0.84,
+        1.05,
+        0.84
+      ]
+    },
+    "visual_fragments_non_blocking": true
+  },
+  "world_pair": {
+    "surface_asset": "BG_MEC_SURFACE_GATE_001",
+    "inner_asset": "BG_MEC_INNER_GATE_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "refinement": "Portable stone color encoding; Inner split return marker and layered twin-switch pedestal, contracts unchanged.",
+  "gameplay_evidence": {
+    "scope": "门叶/门框/阻挡分离；closed 阻挡，open 释放；两角色静态和完整滚动姿态净空通过。",
+    "not_run": [],
+    "state_runtime": "reports/mechanism_runtime.json",
+    "state_mapping": "reports/mechanism_clearance_states.json"
+  },
+  "showcase_provenance": {
+    "source": "Exact production Godot wrapper; viewport captures",
+    "separate_showcase_model": false
+  },
+  "production_validation_evidence": [
+    "reports/mechanism_exports.json",
+    "reports/gallery_runtime.json",
+    "reports/mechanism_clearance_states.json"
+  ],
+  "historical_gameplay_acceptance": "PASS",
+  "art_revision_note": "Offset rear frame and unequal silver inner jambs. Segmented leaves retained; open passage unchanged.",
+  "batch05_evidence": {
+    "source": "reports/source_contract_validation.json",
+    "runtime": "reports/gallery_runtime.json",
+    "pair_review": "reports/pair_art_review.json",
+    "gameplay": "reports/mechanism_runtime.json",
+    "gameplay_scope": "Existing scope preserved; no expanded traversal/carry/level logic claim"
+  }
+}

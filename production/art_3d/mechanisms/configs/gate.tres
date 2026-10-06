@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://production/art_3d/mechanisms/mechanism_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+transition_seconds = 0.35
+pressure_latched = false
+travel_distance = 2.0
+travel_axis = Vector3(1, 0, 0)
+rotation_degrees = 90.0
+activation_requirement = "external_condition"
+target_slots = Array[String]([])

@@ -1,0 +1,32 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://production/art_3d/BG_ENV_INNER_BRIDGE_001/export/BG_ENV_INNER_BRIDGE_001.glb" id="1_rx6il"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ic5qy"]
+size = Vector3(2, 0.24, 1)
+
+[node name="BG_ENV_INNER_BRIDGE_001" type="StaticBody3D" unique_id=1689051768]
+metadata/asset_id = "BG_ENV_INNER_BRIDGE_001"
+metadata/revision = 1.0
+
+[node name="Visual" type="Node3D" parent="." unique_id=405484217 instance=ExtResource("1_rx6il")]
+
+[node name="Collision_logical_bridge" type="CollisionShape3D" parent="." unique_id=1658052719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+shape = SubResource("BoxShape3D_ic5qy")
+
+[node name="ConnectionPoints" type="Node3D" parent="." unique_id=1828598680]
+
+[node name="west" type="Marker3D" parent="ConnectionPoints" unique_id=1479121785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.24, 0)
+metadata/normal = [-1.0, 0.0, 0.0]
+metadata/connection_id = "west"
+metadata/connection_type = "walkable_edge"
+metadata/height = 0.24
+
+[node name="east" type="Marker3D" parent="ConnectionPoints" unique_id=1343030312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.24, 0)
+metadata/normal = [1.0, 0.0, 0.0]
+metadata/connection_id = "east"
+metadata/connection_type = "walkable_edge"
+metadata/height = 0.24

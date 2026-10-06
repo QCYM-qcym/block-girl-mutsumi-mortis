@@ -1,0 +1,103 @@
+[
+  {
+    "surface": "BG_MEC_SURFACE_PRESSURE_PLATE_001",
+    "inner": "BG_MEC_INNER_PRESSURE_PLATE_001",
+    "mechanism_type": "pressure_plate",
+    "state_ids": [
+      "inactive",
+      "pressed",
+      "activated"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_GATE_001",
+    "inner": "BG_MEC_INNER_GATE_001",
+    "mechanism_type": "gate",
+    "state_ids": [
+      "closed",
+      "opening",
+      "open"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_MOVING_PLATFORM_001",
+    "inner": "BG_MEC_INNER_MOVING_PLATFORM_001",
+    "mechanism_type": "moving_platform",
+    "state_ids": [
+      "idle",
+      "moving",
+      "arrived"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_ROTATING_PLATFORM_001",
+    "inner": "BG_MEC_INNER_ROTATING_PLATFORM_001",
+    "mechanism_type": "rotating_platform",
+    "state_ids": [
+      "default",
+      "rotating",
+      "rotated_90",
+      "rotated_180",
+      "rotated_270"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_WORLD_SWITCH_001",
+    "inner": "BG_MEC_INNER_WORLD_SWITCH_001",
+    "mechanism_type": "world_switch",
+    "state_ids": [
+      "inactive",
+      "available",
+      "switching",
+      "completed"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_EXIT_001",
+    "inner": "BG_MEC_INNER_EXIT_001",
+    "mechanism_type": "exit",
+    "state_ids": [
+      "locked",
+      "available",
+      "activated",
+      "complete"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_PATH_MARKER_001",
+    "inner": "BG_MEC_INNER_PATH_MARKER_001",
+    "mechanism_type": "path_marker",
+    "state_ids": [
+      "surface_only",
+      "inner_only",
+      "shared",
+      "inactive"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  },
+  {
+    "surface": "BG_MEC_SURFACE_RESET_MARKER_001",
+    "inner": "BG_MEC_INNER_RESET_MARKER_001",
+    "mechanism_type": "reset_marker",
+    "state_ids": [
+      "idle",
+      "available",
+      "triggered"
+    ],
+    "PAIR_STATE_MAPPING": "PASS",
+    "PAIR_LOGICAL_COMPATIBILITY": "PASS"
+  }
+]

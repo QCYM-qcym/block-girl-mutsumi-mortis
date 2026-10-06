@@ -1,0 +1,151 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://production/art_3d/mechanisms/mechanism_visual.gd" id="1_vbiqk"]
+[ext_resource type="PackedScene" path="res://production/art_3d/BG_MEC_INNER_EXIT_001/export/BG_MEC_INNER_EXIT_001.glb" id="2_a8ruc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucupj"]
+size = Vector3(0.4, 2.24, 0.58)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jeesm"]
+size = Vector3(0.4, 2.24, 0.58)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cqsjp"]
+size = Vector3(1.5, 0.3, 0.44)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cq6ca"]
+size = Vector3(0.84, 1.05, 0.84)
+
+[sub_resource type="Animation" id="Animation_fk41p"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/activated:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_o8mwv"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/available:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ucrkl"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6iw7v"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/locked:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4855"]
+_data = {
+&"activated": SubResource("Animation_fk41p"),
+&"available": SubResource("Animation_o8mwv"),
+&"complete": SubResource("Animation_ucrkl"),
+&"locked": SubResource("Animation_6iw7v")
+}
+
+[node name="BG_MEC_INNER_EXIT_001" type="Node3D" unique_id=940392690]
+script = ExtResource("1_vbiqk")
+manifest_path = "res://production/art_3d/BG_MEC_INNER_EXIT_001/reports/asset_manifest.json"
+metadata/asset_id = "BG_MEC_INNER_EXIT_001"
+metadata/revision = 3.0
+
+[node name="Visual" type="Node3D" parent="." unique_id=681080304 instance=ExtResource("2_a8ruc")]
+
+[node name="LogicalCarrier" type="AnimatableBody3D" parent="." unique_id=945947044]
+collision_mask = 2
+sync_to_physics = false
+
+[node name="FrameLeft" type="CollisionShape3D" parent="LogicalCarrier" unique_id=136103633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.91, 1.12, 0)
+shape = SubResource("BoxShape3D_ucupj")
+
+[node name="FrameRight" type="CollisionShape3D" parent="LogicalCarrier" unique_id=555874872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91, 1.12, 0)
+shape = SubResource("BoxShape3D_jeesm")
+
+[node name="Lintel" type="CollisionShape3D" parent="LogicalCarrier" unique_id=78790878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18, 0)
+shape = SubResource("BoxShape3D_cqsjp")
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=1284982639]
+collision_layer = 0
+collision_mask = 2
+
+[node name="TriggerShape" type="CollisionShape3D" parent="InteractionArea" unique_id=1902017637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_cq6ca")
+
+[node name="ConnectionPoints" type="Node3D" parent="." unique_id=267411283]
+
+[node name="north" type="Marker3D" parent="ConnectionPoints" unique_id=1667691462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+metadata/connection_type = "passage"
+
+[node name="south" type="Marker3D" parent="ConnectionPoints" unique_id=1229868689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+metadata/connection_type = "passage"
+
+[node name="InteractionAnchor" type="Marker3D" parent="." unique_id=776059087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="AnimationAnchor" type="Marker3D" parent="." unique_id=1728829616]
+
+[node name="MotionStart" type="Marker3D" parent="." unique_id=656163703]
+
+[node name="MotionEnd" type="Marker3D" parent="." unique_id=1980515060]
+
+[node name="StateViews" type="Node3D" parent="." unique_id=2128672093]
+
+[node name="locked" type="Node3D" parent="StateViews" unique_id=967336561]
+metadata/state_id = "locked"
+
+[node name="available" type="Node3D" parent="StateViews" unique_id=2050907829]
+visible = false
+metadata/state_id = "available"
+
+[node name="activated" type="Node3D" parent="StateViews" unique_id=1165550163]
+visible = false
+metadata/state_id = "activated"
+
+[node name="complete" type="Node3D" parent="StateViews" unique_id=2034885933]
+visible = false
+metadata/state_id = "complete"
+
+[node name="StateAnimations" type="AnimationPlayer" parent="." unique_id=1118012853]
+libraries/ = SubResource("AnimationLibrary_g4855")

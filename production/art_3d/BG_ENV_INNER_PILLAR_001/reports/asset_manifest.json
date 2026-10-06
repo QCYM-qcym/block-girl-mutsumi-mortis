@@ -1,0 +1,384 @@
+{
+  "schema_version": "4.0.0",
+  "asset_id": "BG_ENV_INNER_PILLAR_001",
+  "revision": 3,
+  "type": "environment",
+  "module_kind": "pillar",
+  "world": "inner",
+  "source_file": "BG_ENV_INNER_PILLAR_001/source/BG_ENV_INNER_PILLAR_001.blend",
+  "glb_file": "BG_ENV_INNER_PILLAR_001/export/BG_ENV_INNER_PILLAR_001.glb",
+  "godot_scene": "BG_ENV_INNER_PILLAR_001/godot/BG_ENV_INNER_PILLAR_001.tscn",
+  "logical_footprint": {
+    "unit": "meter",
+    "xz": [
+      1,
+      1
+    ],
+    "grid_reservation_cells": [
+      1,
+      1
+    ],
+    "grid_cell_size": 1,
+    "note": "Schema 2 logical topology; visual bounds are separate."
+  },
+  "visual_bounds": {
+    "coordinate_system": "Godot Y-up",
+    "min": [
+      -0.23000000417232513,
+      0.0,
+      -0.23000000417232513
+    ],
+    "max": [
+      0.23000000417232513,
+      2.1600000858306885,
+      0.23000000417232513
+    ]
+  },
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "forward_axis": {
+    "blender": "-Y",
+    "godot": "+Z"
+  },
+  "walkable": false,
+  "collision_type": "static_boxes",
+  "collision_definitions": [
+    {
+      "name": "MID / independent bridge column",
+      "center": [
+        5.960464477539063e-08,
+        1.0800000429153442,
+        -0.0
+      ],
+      "size": [
+        0.30000001192092896,
+        2.1600000858306885,
+        0.30000001192092896
+      ]
+    },
+    {
+      "name": "MID / independent bridge column / foot",
+      "center": [
+        5.960464477539063e-08,
+        0.10000000149011612,
+        -0.0
+      ],
+      "size": [
+        0.46000000834465027,
+        0.20000000298023224,
+        0.46000000834465027
+      ]
+    },
+    {
+      "name": "MID / independent bridge column / capital",
+      "center": [
+        5.960464477539063e-08,
+        2.109999895095825,
+        -0.0
+      ],
+      "size": [
+        0.44999998807907104,
+        0.09999990463256836,
+        0.44999998807907104
+      ]
+    }
+  ],
+  "material_slots": [
+    "Inner slate | game baked",
+    "Inner | cold reflective insert"
+  ],
+  "texture_dependencies": [
+    "BG_ENV_INNER_PILLAR_001/textures/BG_ENV_INNER_PILLAR_001_basecolor.png",
+    "BG_ENV_INNER_PILLAR_001/textures/BG_ENV_INNER_PILLAR_001_normal.png"
+  ],
+  "surface_pair": "BG_ENV_SURFACE_PILLAR_001",
+  "inner_pair": null,
+  "pair_status": "PRODUCED",
+  "triangle_count": 2200,
+  "runtime_status": "PASS",
+  "showcase_status": "PASS",
+  "ART_ACCEPTANCE": "PASS",
+  "PRODUCTION_ACCEPTANCE": "PASS",
+  "GAMEPLAY_ACCEPTANCE": "PASS",
+  "art_acceptance_basis": "Explicit user ART Gate final confirmation; technical/gameplay conclusions unchanged.",
+  "provenance": {
+    "surface_logic_source": "BG_ENV_SURFACE_PILLAR_001",
+    "visual_direction": "User-supplied Inner World concept; designed geometry derivative, not recolor",
+    "source_baseline_hash": "cce91da4245262d1cdb6b58bb08bfe87ae06fb7ee1e465ee8df48ccef41a66e2"
+  },
+  "height": 2.1600000858306885,
+  "connection_points": [
+    {
+      "name": "lower",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "name": "upper",
+      "position": [
+        0,
+        2.16000008583069,
+        0
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "walkable_area": null,
+  "source_sha256": "9ab5b9f46f0b0216f22ef568046d78c529a2cb0bcb64bea76e6438d8beadde9f",
+  "glb_sha256": "41253326702e1a0554af75584697aef8a69842ed5905e8f9dc95d6068acbba04",
+  "material_transfer": {
+    "strategy": "unlit base-color bake and tangent normals for procedural stone; base-color bake for procedural hair; PBR for remaining slots",
+    "blender_source_kept_editable": true,
+    "lighting_baked": false,
+    "source_uv_preserved": true,
+    "export_uv": "GameBakeUV"
+  },
+  "showcase_provenance": {
+    "renderer": "Godot 4.7.2 actual Forward+ viewport",
+    "scene": "BG_ENV_INNER_PILLAR_001/godot/BG_ENV_INNER_PILLAR_001.tscn",
+    "glb_sha256": "009e66a2f4f1ff11985028135c895be874e633358bca2f4c33a3ef0cc38e0bd4",
+    "separate_display_model": false,
+    "neutral_clay": "Display-only material_override on same production mesh"
+  },
+  "asset_class": "STRUCTURAL_MODULE",
+  "source": {
+    "file": "BG_ENV_INNER_PILLAR_001/source/BG_ENV_INNER_PILLAR_001.blend",
+    "sha256": "9ab5b9f46f0b0216f22ef568046d78c529a2cb0bcb64bea76e6438d8beadde9f"
+  },
+  "export": {
+    "file": "BG_ENV_INNER_PILLAR_001/export/BG_ENV_INNER_PILLAR_001.glb",
+    "sha256": "41253326702e1a0554af75584697aef8a69842ed5905e8f9dc95d6068acbba04",
+    "format": "GLB"
+  },
+  "logical": {
+    "grid_unit": 1.0,
+    "footprint": [
+      1,
+      1
+    ],
+    "cell_origin_offset": [
+      0.0,
+      0
+    ],
+    "occupied_cells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "walkable_cells": [],
+    "clearance": {
+      "passage_cells": [],
+      "required_width": 1.0,
+      "required_height": 1.0,
+      "method": "approach_or_support"
+    },
+    "connection_points": [
+      {
+        "id": "lower",
+        "name": "lower",
+        "local_position": [
+          0,
+          0,
+          0
+        ],
+        "direction": [
+          0,
+          -1,
+          0
+        ],
+        "height": 0,
+        "connection_type": "structural_attachment"
+      },
+      {
+        "id": "upper",
+        "name": "upper",
+        "local_position": [
+          0,
+          2.16000008583069,
+          0
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "height": 2.16000008583069,
+        "connection_type": "structural_attachment"
+      }
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "forward_axis": "+Z",
+    "walkable_height": null,
+    "height_contract": {
+      "base": 0,
+      "attachment_top": 2.16
+    },
+    "gameplay_meaning": "reserved_obstacle"
+  },
+  "visual": {
+    "bounds": {
+      "coordinate_system": "Godot Y-up",
+      "min": [
+        -0.23000000417232513,
+        0.0,
+        -0.23000000417232513
+      ],
+      "max": [
+        0.23000000417232513,
+        2.1600000858306885,
+        0.23000000417232513
+      ]
+    },
+    "triangles": 2200,
+    "vertices": 2750,
+    "materials": [
+      "Inner slate | game baked",
+      "Inner | cold reflective insert"
+    ],
+    "textures": [
+      {
+        "file": "BG_ENV_INNER_PILLAR_001/textures/BG_ENV_INNER_PILLAR_001_basecolor.png",
+        "width": 1024,
+        "height": 1024,
+        "estimated_rgba_bytes": 4194304
+      },
+      {
+        "file": "BG_ENV_INNER_PILLAR_001/textures/BG_ENV_INNER_PILLAR_001_normal.png",
+        "width": 1024,
+        "height": 1024,
+        "estimated_rgba_bytes": 4194304
+      }
+    ],
+    "draw_relevant_surfaces": 4
+  },
+  "physics": {
+    "collision_type": "static_boxes",
+    "collision_bounds": [
+      {
+        "name": "MID / independent bridge column",
+        "center": [
+          5.960464477539063e-08,
+          1.0800000429153442,
+          -0.0
+        ],
+        "size": [
+          0.30000001192092896,
+          2.1600000858306885,
+          0.30000001192092896
+        ]
+      },
+      {
+        "name": "MID / independent bridge column / foot",
+        "center": [
+          5.960464477539063e-08,
+          0.10000000149011612,
+          -0.0
+        ],
+        "size": [
+          0.46000000834465027,
+          0.20000000298023224,
+          0.46000000834465027
+        ]
+      },
+      {
+        "name": "MID / independent bridge column / capital",
+        "center": [
+          5.960464477539063e-08,
+          2.109999895095825,
+          -0.0
+        ],
+        "size": [
+          0.44999998807907104,
+          0.09999990463256836,
+          0.44999998807907104
+        ]
+      }
+    ],
+    "blocking_volume": "boxes",
+    "passage_cells": [],
+    "collision_complexity": {
+      "box_shapes": 3,
+      "concave_shapes": 0,
+      "concave_triangles": 0,
+      "shape_count": 3
+    }
+  },
+  "pairing": {
+    "surface_asset": "BG_ENV_SURFACE_PILLAR_001",
+    "inner_asset": "BG_ENV_INNER_PILLAR_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "acceptance": {
+    "art": "PASS",
+    "production": "PASS",
+    "gameplay": "PASS"
+  },
+  "warnings": [
+    "NON_INTEGER_VISUAL_BOUNDS"
+  ],
+  "compatibility_fields": "Flat fields are generated migration adapters; logical/visual/physics/pairing/acceptance are canonical.",
+  "contract_revision": 3,
+  "release": "batch_05",
+  "path_state": "blocked",
+  "clearance": {
+    "static_bounds": {
+      "min": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "roll_swept_required": false,
+    "min_width": 1.0,
+    "min_height": 1.0,
+    "tested_character_class": "UNIT_CUBE_1M",
+    "status": "NOT_APPLICABLE",
+    "scope": "Obstacle blocking"
+  },
+  "occlusion": {
+    "fade_allowed": false,
+    "fade_group": "none",
+    "priority": 0
+  },
+  "visual_revision_note": "Wider visual suspension seam beneath the upper shaft and interrupted reflective face strips; original solid obstacle collision frozen.",
+  "production_revision_note": "Manifest/source/export revision updated; wrapper file intentionally reused byte-for-byte to freeze collision and anchors. Manifest is the revision authority.",
+  "historical_gameplay_acceptance": "PASS",
+  "art_revision_note": "Middle shaft offset 35mm; upper seam opened 15mm. Existing slender silhouette and solid obstacle contract retained.",
+  "batch05_evidence": {
+    "source": "reports/source_contract_validation.json",
+    "runtime": "reports/gallery_runtime.json",
+    "pair_review": "reports/pair_art_review.json",
+    "gameplay": "reports/gallery_runtime.json",
+    "gameplay_scope": "Existing scope preserved; no expanded traversal/carry/level logic claim"
+  }
+}

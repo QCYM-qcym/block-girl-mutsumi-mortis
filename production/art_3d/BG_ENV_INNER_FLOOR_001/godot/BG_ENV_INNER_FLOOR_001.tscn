@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://production/art_3d/BG_ENV_INNER_FLOOR_001/export/BG_ENV_INNER_FLOOR_001.glb" id="1_gnm8h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qyoh"]
+size = Vector3(1, 0.24, 1)
+
+[node name="BG_ENV_INNER_FLOOR_001" type="StaticBody3D" unique_id=122115612]
+metadata/asset_id = "BG_ENV_INNER_FLOOR_001"
+metadata/revision = 1.0
+
+[node name="Visual" type="Node3D" parent="." unique_id=1685919500 instance=ExtResource("1_gnm8h")]
+
+[node name="Collision_logical_floor" type="CollisionShape3D" parent="." unique_id=528987625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+shape = SubResource("BoxShape3D_2qyoh")
+
+[node name="ConnectionPoints" type="Node3D" parent="." unique_id=1773300856]
+
+[node name="west" type="Marker3D" parent="ConnectionPoints" unique_id=67618029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.24, 0)
+metadata/normal = [-1.0, 0.0, 0.0]
+metadata/connection_id = "west"
+metadata/connection_type = "walkable_edge"
+metadata/height = 0.24
+
+[node name="east" type="Marker3D" parent="ConnectionPoints" unique_id=218451146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.24, 0)
+metadata/normal = [1.0, 0.0, 0.0]
+metadata/connection_id = "east"
+metadata/connection_type = "walkable_edge"
+metadata/height = 0.24
+
+[node name="north" type="Marker3D" parent="ConnectionPoints" unique_id=26742852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, -0.5)
+metadata/normal = [0.0, 0.0, -1.0]
+metadata/connection_id = "north"
+metadata/connection_type = "walkable_edge"
+metadata/height = 0.24
+
+[node name="south" type="Marker3D" parent="ConnectionPoints" unique_id=53457213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, 0.5)
+metadata/normal = [0.0, 0.0, 1.0]
+metadata/connection_id = "south"
+metadata/connection_type = "walkable_edge"
+metadata/height = 0.24

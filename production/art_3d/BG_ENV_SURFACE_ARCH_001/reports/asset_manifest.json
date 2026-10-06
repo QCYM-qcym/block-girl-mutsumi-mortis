@@ -1,0 +1,1106 @@
+{
+  "schema_version": "4.0.0",
+  "asset_id": "BG_ENV_SURFACE_ARCH_001",
+  "revision": 3,
+  "type": "environment",
+  "module_kind": "arch",
+  "world": "surface",
+  "source_file": "BG_ENV_SURFACE_ARCH_001/source/BG_ENV_SURFACE_ARCH_001.blend",
+  "glb_file": "BG_ENV_SURFACE_ARCH_001/export/BG_ENV_SURFACE_ARCH_001.glb",
+  "godot_scene": "BG_ENV_SURFACE_ARCH_001/godot/BG_ENV_SURFACE_ARCH_001.tscn",
+  "logical_footprint": {
+    "unit": "meter",
+    "xz": [
+      3,
+      1
+    ],
+    "grid_reservation_cells": [
+      3,
+      1
+    ],
+    "grid_cell_size": 1,
+    "note": "Schema 2 logical topology; visual bounds are separate."
+  },
+  "visual_bounds": {
+    "coordinate_system": "Godot Y-up",
+    "min": [
+      -1.0800000429153442,
+      0.0,
+      -0.3449999988079071
+    ],
+    "max": [
+      1.0800000429153442,
+      2.1600000858306885,
+      0.3449999988079071
+    ]
+  },
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "forward_axis": {
+    "blender": "-Y",
+    "godot": "+Z"
+  },
+  "walkable": false,
+  "collision_type": "static_concave",
+  "collision_definitions": [
+    {
+      "name": "MID / arcade jamb",
+      "center": [
+        -0.8300000131130219,
+        1.0800000429153442,
+        -0.0
+      ],
+      "size": [
+        0.3399999737739563,
+        2.1600000858306885,
+        0.5299999713897705
+      ]
+    },
+    {
+      "name": "MID / arcade jamb / foot",
+      "center": [
+        -0.8300000429153442,
+        0.10000000149011612,
+        -0.0
+      ],
+      "size": [
+        0.5,
+        0.20000000298023224,
+        0.6899999976158142
+      ]
+    },
+    {
+      "name": "MID / arcade jamb / capital",
+      "center": [
+        -0.8300000429153442,
+        2.109999895095825,
+        -0.0
+      ],
+      "size": [
+        0.49000000953674316,
+        0.09999990463256836,
+        0.6800000071525574
+      ]
+    },
+    {
+      "name": "MID / arcade jamb.001",
+      "center": [
+        0.8300000131130219,
+        1.0800000429153442,
+        -0.0
+      ],
+      "size": [
+        0.3399999737739563,
+        2.1600000858306885,
+        0.5299999713897705
+      ]
+    },
+    {
+      "name": "MID / arcade jamb / foot.001",
+      "center": [
+        0.8300000429153442,
+        0.10000000149011612,
+        -0.0
+      ],
+      "size": [
+        0.5,
+        0.20000000298023224,
+        0.6899999976158142
+      ]
+    },
+    {
+      "name": "MID / arcade jamb / capital.001",
+      "center": [
+        0.8300000429153442,
+        2.109999895095825,
+        -0.0
+      ],
+      "size": [
+        0.49000000953674316,
+        0.09999990463256836,
+        0.6800000071525574
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 0",
+      "center": [
+        0.7359780073165894,
+        1.043073058128357,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.22382211685180664,
+        0.2753942012786865,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 1",
+      "center": [
+        0.6525469720363617,
+        1.285057246685028,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.2787575125694275,
+        0.3018378019332886,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 2",
+      "center": [
+        0.4898950457572937,
+        1.4803168773651123,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.30219733715057373,
+        0.29436755180358887,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 3",
+      "center": [
+        0.2683274745941162,
+        1.604949712753296,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.2926907539367676,
+        0.25467777252197266,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 4",
+      "center": [
+        5.960464477539063e-08,
+        1.6445549130439758,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.2778209447860718,
+        0.1873713731765747,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 5",
+      "center": [
+        -0.26832765340805054,
+        1.604949712753296,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.29269111156463623,
+        0.25467777252197266,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 6",
+      "center": [
+        -0.4898949861526489,
+        1.4803168177604675,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.3021974563598633,
+        0.2943676710128784,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 7",
+      "center": [
+        -0.6525471210479736,
+        1.285057246685028,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.27875781059265137,
+        0.3018378019332886,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / open arch / voussoir 8",
+      "center": [
+        -0.7359780073165894,
+        1.043073058128357,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.22382211685180664,
+        0.2753942012786865,
+        0.5380000472068787
+      ]
+    },
+    {
+      "name": "MID / arch shoulders0",
+      "center": [
+        -0.7892857789993286,
+        1.5761283040046692,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        1.1677435636520386,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders1",
+      "center": [
+        -0.6678570508956909,
+        1.7568944096565247,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.8062113523483276,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders2",
+      "center": [
+        -0.5464285612106323,
+        1.83342045545578,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.6531592607498169,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders3",
+      "center": [
+        -0.42500001192092896,
+        1.8840287923812866,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342871189117432,
+        0.5519425868988037,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders4",
+      "center": [
+        -0.3035714030265808,
+        1.9186140894889832,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342847347259521,
+        0.48277199268341064,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders5",
+      "center": [
+        -0.18214285373687744,
+        1.9412339329719543,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.43753230571746826,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders6",
+      "center": [
+        -0.0607142448425293,
+        1.9537110924720764,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.4125779867172241,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders7",
+      "center": [
+        0.06071430444717407,
+        1.9537110924720764,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342847347259521,
+        0.4125779867172241,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders8",
+      "center": [
+        0.18214285373687744,
+        1.9412339329719543,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.43753230571746826,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders9",
+      "center": [
+        0.3035714626312256,
+        1.9186140894889832,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.48277199268341064,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders10",
+      "center": [
+        0.42500007152557373,
+        1.8840287327766418,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.5519427061080933,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders11",
+      "center": [
+        0.5464285612106323,
+        1.8334203958511353,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.6531593799591064,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders12",
+      "center": [
+        0.6678571701049805,
+        1.7568944096565247,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        0.8062113523483276,
+        0.5300000309944153
+      ]
+    },
+    {
+      "name": "MID / arch shoulders13",
+      "center": [
+        0.7892857193946838,
+        1.5761283338069916,
+        -2.9802322387695312e-08
+      ],
+      "size": [
+        0.11342859268188477,
+        1.1677435040473938,
+        0.5300000309944153
+      ]
+    }
+  ],
+  "material_slots": [
+    "Approved ivory stone | game baked"
+  ],
+  "texture_dependencies": [
+    "BG_ENV_SURFACE_ARCH_001/textures/BG_ENV_SURFACE_ARCH_001_basecolor.png",
+    "BG_ENV_SURFACE_ARCH_001/textures/BG_ENV_SURFACE_ARCH_001_normal.png"
+  ],
+  "surface_pair": null,
+  "inner_pair": "BG_ENV_INNER_ARCH_001",
+  "pair_status": "PRODUCED",
+  "triangle_count": 5388,
+  "runtime_status": "PASS",
+  "showcase_status": "PASS",
+  "ART_ACCEPTANCE": "PASS",
+  "PRODUCTION_ACCEPTANCE": "PASS",
+  "GAMEPLAY_ACCEPTANCE": "PASS",
+  "art_acceptance_basis": "Explicit user ART Gate final confirmation; technical/gameplay conclusions unchanged.",
+  "provenance": {
+    "baseline_file": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\_environment_composition\\_01\\beauty\\blend\\beauty_v03.blend",
+    "sha256": "f21fd3f46a28d5db6960a59a977c987274fcba58ef115268b3c4b5a49a5690af",
+    "objects": [
+      "MID / arcade jamb",
+      "MID / arcade jamb / foot",
+      "MID / arcade jamb / capital",
+      "MID / arcade jamb.001",
+      "MID / arcade jamb / foot.001",
+      "MID / arcade jamb / capital.001",
+      "MID / open arch / voussoir 0",
+      "MID / open arch / voussoir 1",
+      "MID / open arch / voussoir 2",
+      "MID / open arch / voussoir 3",
+      "MID / open arch / voussoir 4",
+      "MID / open arch / voussoir 5",
+      "MID / open arch / voussoir 6",
+      "MID / open arch / voussoir 7",
+      "MID / open arch / voussoir 8",
+      "MID / arch shoulders0",
+      "MID / arch shoulders1",
+      "MID / arch shoulders2",
+      "MID / arch shoulders3",
+      "MID / arch shoulders4",
+      "MID / arch shoulders5",
+      "MID / arch shoulders6",
+      "MID / arch shoulders7",
+      "MID / arch shoulders8",
+      "MID / arch shoulders9",
+      "MID / arch shoulders10",
+      "MID / arch shoulders11",
+      "MID / arch shoulders12",
+      "MID / arch shoulders13"
+    ],
+    "normalization_translation_blender": [
+      1.600000023841858,
+      -0.6499999761581421,
+      -0.0
+    ]
+  },
+  "height": 2.1600000858306885,
+  "connection_points": [
+    {
+      "name": "north",
+      "position": [
+        0,
+        0,
+        -0.5
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "name": "south",
+      "position": [
+        0,
+        0,
+        0.5
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "walkable_area": null,
+  "source_sha256": "55b993d8100d8c6876599e62501fdc5179dcc6f88aa3d103695a0bbf2f180918",
+  "glb_sha256": "a64500dc0e3e7685cefb862c051e3f3a63f6d4a9b8e27436719f28494484b11a",
+  "material_transfer": {
+    "strategy": "unlit base-color bake and tangent normals for procedural stone; base-color bake for procedural hair; PBR for remaining slots",
+    "blender_source_kept_editable": true,
+    "lighting_baked": false,
+    "source_uv_preserved": true,
+    "export_uv": "GameBakeUV"
+  },
+  "showcase_provenance": {
+    "renderer": "Godot 4.7.2 actual Forward+ viewport",
+    "scene": "BG_ENV_SURFACE_ARCH_001/godot/BG_ENV_SURFACE_ARCH_001.tscn",
+    "glb_sha256": "a64500dc0e3e7685cefb862c051e3f3a63f6d4a9b8e27436719f28494484b11a",
+    "separate_display_model": false,
+    "neutral_clay": "Display-only material_override on same production mesh"
+  },
+  "asset_class": "STRUCTURAL_MODULE",
+  "source": {
+    "file": "BG_ENV_SURFACE_ARCH_001/source/BG_ENV_SURFACE_ARCH_001.blend",
+    "sha256": "55b993d8100d8c6876599e62501fdc5179dcc6f88aa3d103695a0bbf2f180918"
+  },
+  "export": {
+    "file": "BG_ENV_SURFACE_ARCH_001/export/BG_ENV_SURFACE_ARCH_001.glb",
+    "sha256": "a64500dc0e3e7685cefb862c051e3f3a63f6d4a9b8e27436719f28494484b11a",
+    "format": "GLB"
+  },
+  "logical": {
+    "grid_unit": 1.0,
+    "footprint": [
+      3,
+      1
+    ],
+    "cell_origin_offset": [
+      -1.0,
+      0
+    ],
+    "occupied_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "walkable_cells": [],
+    "clearance": {
+      "passage_cells": [
+        [
+          1,
+          0
+        ]
+      ],
+      "required_width": 1.0,
+      "required_height": 1.44,
+      "method": "0_to_90_sweep"
+    },
+    "connection_points": [
+      {
+        "id": "north",
+        "name": "north",
+        "local_position": [
+          0,
+          0,
+          -0.5
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "height": 0,
+        "connection_type": "passage"
+      },
+      {
+        "id": "south",
+        "name": "south",
+        "local_position": [
+          0,
+          0,
+          0.5
+        ],
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "height": 0,
+        "connection_type": "passage"
+      }
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "forward_axis": "+Z",
+    "walkable_height": null,
+    "height_contract": {
+      "passage_base": 0,
+      "required_clear_height": 1.44
+    },
+    "gameplay_meaning": "one_cell_roll_passage"
+  },
+  "visual": {
+    "bounds": {
+      "coordinate_system": "Godot Y-up",
+      "min": [
+        -1.0800000429153442,
+        0.0,
+        -0.3449999988079071
+      ],
+      "max": [
+        1.0800000429153442,
+        2.1600000858306885,
+        0.3449999988079071
+      ]
+    },
+    "triangles": 5388,
+    "vertices": 8403,
+    "materials": [
+      "Approved ivory stone | game baked"
+    ],
+    "textures": [
+      {
+        "file": "BG_ENV_SURFACE_ARCH_001/textures/BG_ENV_SURFACE_ARCH_001_basecolor.png",
+        "width": 1024,
+        "height": 1024,
+        "estimated_rgba_bytes": 4194304
+      },
+      {
+        "file": "BG_ENV_SURFACE_ARCH_001/textures/BG_ENV_SURFACE_ARCH_001_normal.png",
+        "width": 1024,
+        "height": 1024,
+        "estimated_rgba_bytes": 4194304
+      }
+    ],
+    "draw_relevant_surfaces": 1
+  },
+  "physics": {
+    "collision_type": "static_concave",
+    "collision_bounds": [
+      {
+        "name": "MID / arcade jamb",
+        "center": [
+          -0.8300000131130219,
+          1.0800000429153442,
+          -0.0
+        ],
+        "size": [
+          0.3399999737739563,
+          2.1600000858306885,
+          0.5299999713897705
+        ]
+      },
+      {
+        "name": "MID / arcade jamb / foot",
+        "center": [
+          -0.8300000429153442,
+          0.10000000149011612,
+          -0.0
+        ],
+        "size": [
+          0.5,
+          0.20000000298023224,
+          0.6899999976158142
+        ]
+      },
+      {
+        "name": "MID / arcade jamb / capital",
+        "center": [
+          -0.8300000429153442,
+          2.109999895095825,
+          -0.0
+        ],
+        "size": [
+          0.49000000953674316,
+          0.09999990463256836,
+          0.6800000071525574
+        ]
+      },
+      {
+        "name": "MID / arcade jamb.001",
+        "center": [
+          0.8300000131130219,
+          1.0800000429153442,
+          -0.0
+        ],
+        "size": [
+          0.3399999737739563,
+          2.1600000858306885,
+          0.5299999713897705
+        ]
+      },
+      {
+        "name": "MID / arcade jamb / foot.001",
+        "center": [
+          0.8300000429153442,
+          0.10000000149011612,
+          -0.0
+        ],
+        "size": [
+          0.5,
+          0.20000000298023224,
+          0.6899999976158142
+        ]
+      },
+      {
+        "name": "MID / arcade jamb / capital.001",
+        "center": [
+          0.8300000429153442,
+          2.109999895095825,
+          -0.0
+        ],
+        "size": [
+          0.49000000953674316,
+          0.09999990463256836,
+          0.6800000071525574
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 0",
+        "center": [
+          0.7359780073165894,
+          1.043073058128357,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.22382211685180664,
+          0.2753942012786865,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 1",
+        "center": [
+          0.6525469720363617,
+          1.285057246685028,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.2787575125694275,
+          0.3018378019332886,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 2",
+        "center": [
+          0.4898950457572937,
+          1.4803168773651123,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.30219733715057373,
+          0.29436755180358887,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 3",
+        "center": [
+          0.2683274745941162,
+          1.604949712753296,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.2926907539367676,
+          0.25467777252197266,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 4",
+        "center": [
+          5.960464477539063e-08,
+          1.6445549130439758,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.2778209447860718,
+          0.1873713731765747,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 5",
+        "center": [
+          -0.26832765340805054,
+          1.604949712753296,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.29269111156463623,
+          0.25467777252197266,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 6",
+        "center": [
+          -0.4898949861526489,
+          1.4803168177604675,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.3021974563598633,
+          0.2943676710128784,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 7",
+        "center": [
+          -0.6525471210479736,
+          1.285057246685028,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.27875781059265137,
+          0.3018378019332886,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / open arch / voussoir 8",
+        "center": [
+          -0.7359780073165894,
+          1.043073058128357,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.22382211685180664,
+          0.2753942012786865,
+          0.5380000472068787
+        ]
+      },
+      {
+        "name": "MID / arch shoulders0",
+        "center": [
+          -0.7892857789993286,
+          1.5761283040046692,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          1.1677435636520386,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders1",
+        "center": [
+          -0.6678570508956909,
+          1.7568944096565247,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.8062113523483276,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders2",
+        "center": [
+          -0.5464285612106323,
+          1.83342045545578,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.6531592607498169,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders3",
+        "center": [
+          -0.42500001192092896,
+          1.8840287923812866,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342871189117432,
+          0.5519425868988037,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders4",
+        "center": [
+          -0.3035714030265808,
+          1.9186140894889832,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342847347259521,
+          0.48277199268341064,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders5",
+        "center": [
+          -0.18214285373687744,
+          1.9412339329719543,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.43753230571746826,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders6",
+        "center": [
+          -0.0607142448425293,
+          1.9537110924720764,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.4125779867172241,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders7",
+        "center": [
+          0.06071430444717407,
+          1.9537110924720764,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342847347259521,
+          0.4125779867172241,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders8",
+        "center": [
+          0.18214285373687744,
+          1.9412339329719543,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.43753230571746826,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders9",
+        "center": [
+          0.3035714626312256,
+          1.9186140894889832,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.48277199268341064,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders10",
+        "center": [
+          0.42500007152557373,
+          1.8840287327766418,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.5519427061080933,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders11",
+        "center": [
+          0.5464285612106323,
+          1.8334203958511353,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.6531593799591064,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders12",
+        "center": [
+          0.6678571701049805,
+          1.7568944096565247,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          0.8062113523483276,
+          0.5300000309944153
+        ]
+      },
+      {
+        "name": "MID / arch shoulders13",
+        "center": [
+          0.7892857193946838,
+          1.5761283338069916,
+          -2.9802322387695312e-08
+        ],
+        "size": [
+          0.11342859268188477,
+          1.1677435040473938,
+          0.5300000309944153
+        ]
+      }
+    ],
+    "blocking_volume": "mesh_concave",
+    "passage_cells": [
+      [
+        1,
+        0
+      ]
+    ],
+    "collision_complexity": {
+      "box_shapes": 0,
+      "concave_shapes": 1,
+      "concave_triangles": 5388,
+      "shape_count": 1
+    }
+  },
+  "pairing": {
+    "surface_asset": "BG_ENV_SURFACE_ARCH_001",
+    "inner_asset": "BG_ENV_INNER_ARCH_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "acceptance": {
+    "art": "PASS",
+    "production": "PASS",
+    "gameplay": "PASS"
+  },
+  "warnings": [
+    "NON_INTEGER_VISUAL_BOUNDS"
+  ],
+  "compatibility_fields": "Flat fields are generated migration adapters; logical/visual/physics/pairing/acceptance are canonical.",
+  "contract_revision": 3,
+  "release": "batch_05",
+  "technical_change": "Lift arch voussoirs 0.16m, compress shoulder infill below unchanged top line. Feet, outer pillars and character envelope unchanged. Concave collision follows actual edited mesh.",
+  "path_state": "walkable",
+  "clearance": {
+    "static_bounds": {
+      "min": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "roll_swept_required": true,
+    "min_width": 1.0,
+    "min_height": 1.44,
+    "tested_character_class": "UNIT_CUBE_1M",
+    "status": "PASS",
+    "scope": "Full 1m cube; arch sweep 0..90 at 1 degree increments, entry/exit both directions"
+  },
+  "occlusion": {
+    "fade_allowed": true,
+    "fade_group": "structural_foreground",
+    "priority": 10
+  },
+  "art_acceptance_note": "Prior Surface material/design acceptance retained. This release raises aperture 0.16m for full-cube clearance; no new user visual approval is claimed.",
+  "production_revision_note": "Manifest/source/export revision updated; wrapper file intentionally reused byte-for-byte to freeze collision and anchors. Manifest is the revision authority.",
+  "batch05_evidence": {
+    "source": "reports/source_contract_validation.json",
+    "runtime": "reports/gallery_runtime.json",
+    "pair_review": "reports/pair_art_review.json",
+    "gameplay": "reports/roll_swept_clearance.json",
+    "gameplay_scope": "Existing scope preserved; no expanded traversal/carry/level logic claim"
+  }
+}

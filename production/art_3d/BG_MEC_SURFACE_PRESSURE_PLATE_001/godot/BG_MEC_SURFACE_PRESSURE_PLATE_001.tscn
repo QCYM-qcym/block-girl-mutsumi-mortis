@@ -1,0 +1,118 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://production/art_3d/mechanisms/mechanism_visual.gd" id="1_o3mp2"]
+[ext_resource type="PackedScene" path="res://production/art_3d/BG_MEC_SURFACE_PRESSURE_PLATE_001/export/BG_MEC_SURFACE_PRESSURE_PLATE_001.glb" id="2_3vvcd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8t7q"]
+size = Vector3(1, 0.24, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vd5h2"]
+size = Vector3(0.84, 1.05, 0.84)
+
+[sub_resource type="Animation" id="Animation_sy2ht"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/activated:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_jnpys"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/inactive:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_he7mw"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StateViews/pressed:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ck6kb"]
+_data = {
+&"activated": SubResource("Animation_sy2ht"),
+&"inactive": SubResource("Animation_jnpys"),
+&"pressed": SubResource("Animation_he7mw")
+}
+
+[node name="BG_MEC_SURFACE_PRESSURE_PLATE_001" type="Node3D" unique_id=424873828]
+script = ExtResource("1_o3mp2")
+manifest_path = "res://production/art_3d/BG_MEC_SURFACE_PRESSURE_PLATE_001/reports/asset_manifest.json"
+metadata/asset_id = "BG_MEC_SURFACE_PRESSURE_PLATE_001"
+metadata/revision = 2.0
+
+[node name="Visual" type="Node3D" parent="." unique_id=1567867561 instance=ExtResource("2_3vvcd")]
+
+[node name="LogicalCarrier" type="AnimatableBody3D" parent="." unique_id=726982237]
+collision_mask = 2
+sync_to_physics = false
+
+[node name="Support" type="CollisionShape3D" parent="LogicalCarrier" unique_id=949176818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+shape = SubResource("BoxShape3D_k8t7q")
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=211796584]
+collision_layer = 0
+collision_mask = 2
+
+[node name="TriggerShape" type="CollisionShape3D" parent="InteractionArea" unique_id=1627732076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("BoxShape3D_vd5h2")
+
+[node name="ConnectionPoints" type="Node3D" parent="." unique_id=663262461]
+
+[node name="north" type="Marker3D" parent="ConnectionPoints" unique_id=1696581142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, -0.5)
+metadata/connection_type = "walkable_edge"
+
+[node name="south" type="Marker3D" parent="ConnectionPoints" unique_id=1008315409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, 0.5)
+metadata/connection_type = "walkable_edge"
+
+[node name="InteractionAnchor" type="Marker3D" parent="." unique_id=377677525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+
+[node name="AnimationAnchor" type="Marker3D" parent="." unique_id=737122549]
+
+[node name="MotionStart" type="Marker3D" parent="." unique_id=1604927068]
+
+[node name="MotionEnd" type="Marker3D" parent="." unique_id=458710646]
+
+[node name="StateViews" type="Node3D" parent="." unique_id=817024795]
+
+[node name="inactive" type="Node3D" parent="StateViews" unique_id=1046633536]
+metadata/state_id = "inactive"
+
+[node name="pressed" type="Node3D" parent="StateViews" unique_id=1670748536]
+visible = false
+metadata/state_id = "pressed"
+
+[node name="activated" type="Node3D" parent="StateViews" unique_id=1319493759]
+visible = false
+metadata/state_id = "activated"
+
+[node name="StateAnimations" type="AnimationPlayer" parent="." unique_id=1611167443]
+libraries/ = SubResource("AnimationLibrary_ck6kb")

@@ -1,0 +1,432 @@
+{
+  "schema_version": "4.0.0",
+  "asset_id": "BG_MEC_INNER_WORLD_SWITCH_001",
+  "revision": 3,
+  "type": "mechanism",
+  "module_kind": "world_switch",
+  "world": "inner",
+  "source_file": "BG_MEC_INNER_WORLD_SWITCH_001/source/BG_MEC_INNER_WORLD_SWITCH_001.blend",
+  "glb_file": "BG_MEC_INNER_WORLD_SWITCH_001/export/BG_MEC_INNER_WORLD_SWITCH_001.glb",
+  "godot_scene": "BG_MEC_INNER_WORLD_SWITCH_001/godot/BG_MEC_INNER_WORLD_SWITCH_001.tscn",
+  "logical_footprint": {
+    "unit": "meter",
+    "xz": [
+      1,
+      1
+    ],
+    "grid_reservation_cells": [
+      1,
+      1
+    ],
+    "grid_cell_size": 1
+  },
+  "visual_bounds": {
+    "coordinate_system": "Godot Y-up",
+    "min": [
+      -0.40400001406669617,
+      0.014000002294778824,
+      -0.32499998807907104
+    ],
+    "max": [
+      0.40400001406669617,
+      1.1236636638641357,
+      0.32499998807907104
+    ]
+  },
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "forward_axis": {
+    "blender": "-Y",
+    "godot": "+Z"
+  },
+  "walkable": false,
+  "collision_type": "mechanism_state_boxes",
+  "collision_definitions": [
+    {
+      "name": "Pedestal",
+      "center": [
+        0,
+        0.15,
+        0
+      ],
+      "size": [
+        0.6,
+        0.3,
+        0.6
+      ]
+    }
+  ],
+  "material_slots": [
+    "State light",
+    "Stone main",
+    "Stone secondary",
+    "Quiet accent",
+    "Cold silver",
+    "Inner | restrained cold silver"
+  ],
+  "texture_dependencies": [
+    "BG_MEC_INNER_WORLD_SWITCH_001/textures/BG_MEC_INNER_WORLD_SWITCH_001_stone.png"
+  ],
+  "surface_pair": "BG_MEC_SURFACE_WORLD_SWITCH_001",
+  "inner_pair": null,
+  "pair_status": "PRODUCED",
+  "triangle_count": 1088,
+  "runtime_status": "PASS",
+  "showcase_status": "PASS",
+  "ART_ACCEPTANCE": "PASS",
+  "PRODUCTION_ACCEPTANCE": "PASS",
+  "GAMEPLAY_ACCEPTANCE": "PARTIAL_PASS",
+  "art_acceptance_basis": "Explicit user ART Gate final confirmation; technical/gameplay conclusions unchanged.",
+  "provenance": {
+    "design": "Approved Surface / Inner material directions and user mechanism concept sheet; new production source"
+  },
+  "height": 1.109663661569357,
+  "connection_points": [
+    {
+      "name": "north",
+      "position": [
+        0,
+        0,
+        -0.5
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "name": "south",
+      "position": [
+        0,
+        0,
+        0.5
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "source_sha256": "80180611fc981045a2b430d251db6877e1bc5e4fc02cfd3549802eea17b0038e",
+  "glb_sha256": "b440427cd786521b5704cc855d7243970ebb5ed807c1075daa9465ebb0136c01",
+  "material_transfer": {
+    "strategy": "Portable PBR materials with local UV stone texture, packed into GLB",
+    "lighting_baked": false
+  },
+  "asset_class": "INTERACTIVE_MECHANISM",
+  "source": {
+    "file": "BG_MEC_INNER_WORLD_SWITCH_001/source/BG_MEC_INNER_WORLD_SWITCH_001.blend",
+    "sha256": "80180611fc981045a2b430d251db6877e1bc5e4fc02cfd3549802eea17b0038e"
+  },
+  "export": {
+    "file": "BG_MEC_INNER_WORLD_SWITCH_001/export/BG_MEC_INNER_WORLD_SWITCH_001.glb",
+    "sha256": "b440427cd786521b5704cc855d7243970ebb5ed807c1075daa9465ebb0136c01",
+    "format": "GLB"
+  },
+  "logical": {
+    "grid_unit": 1.0,
+    "footprint": [
+      1,
+      1
+    ],
+    "cell_origin_offset": [
+      0,
+      0
+    ],
+    "occupied_cells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "walkable_cells": [],
+    "clearance": {
+      "required_width": 1.0,
+      "required_height": 1.0,
+      "passage_cells": []
+    },
+    "connection_points": [
+      {
+        "id": "north",
+        "name": "north",
+        "local_position": [
+          0,
+          0,
+          -0.5
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "height": 0,
+        "connection_type": "structural_attachment"
+      },
+      {
+        "id": "south",
+        "name": "south",
+        "local_position": [
+          0,
+          0,
+          0.5
+        ],
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "height": 0,
+        "connection_type": "structural_attachment"
+      }
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "forward_axis": "+Z",
+    "height_contract": {
+      "walk_surface": 0,
+      "passage_min_height": null
+    },
+    "gameplay_meaning": "world_switch"
+  },
+  "visual": {
+    "bounds": {
+      "coordinate_system": "Godot Y-up",
+      "min": [
+        -0.40400001406669617,
+        0.014000002294778824,
+        -0.32499998807907104
+      ],
+      "max": [
+        0.40400001406669617,
+        1.1236636638641357,
+        0.32499998807907104
+      ]
+    },
+    "triangles": 1088,
+    "vertices": 1487,
+    "materials": [
+      "State light",
+      "Stone main",
+      "Stone secondary",
+      "Quiet accent",
+      "Cold silver",
+      "Inner | restrained cold silver"
+    ],
+    "textures": [
+      {
+        "file": "BG_MEC_INNER_WORLD_SWITCH_001/textures/BG_MEC_INNER_WORLD_SWITCH_001_stone.png",
+        "width": 128,
+        "height": 128,
+        "estimated_rgba_bytes": 65536
+      }
+    ],
+    "draw_relevant_surfaces": 9
+  },
+  "physics": {
+    "collision_type": "mechanism_state_boxes",
+    "collision_bounds": [
+      {
+        "name": "Pedestal",
+        "center": [
+          0,
+          0.15,
+          0
+        ],
+        "size": [
+          0.6,
+          0.3,
+          0.6
+        ]
+      }
+    ],
+    "blocking_volume": "state-controlled blocker plus frozen support",
+    "passage_cells": []
+  },
+  "pairing": {
+    "surface_asset": "BG_MEC_SURFACE_WORLD_SWITCH_001",
+    "inner_asset": "BG_MEC_INNER_WORLD_SWITCH_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "acceptance": {
+    "art": "PASS",
+    "production": "PASS",
+    "gameplay": "PARTIAL_PASS"
+  },
+  "warnings": [
+    "NOT_RUN: FULL_WORLD_SWITCH",
+    "NOT_RUN: FINAL_WORLD_SWITCH_VFX"
+  ],
+  "contract_revision": 4,
+  "release": "batch_05",
+  "path_state": "blocked",
+  "clearance": {
+    "static_bounds": {
+      "min": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "roll_swept_required": false,
+    "min_width": 1.0,
+    "min_height": 1,
+    "tested_character_class": "UNIT_CUBE_1M",
+    "status": "NOT_APPLICABLE"
+  },
+  "occlusion": {
+    "fade_allowed": false,
+    "fade_group": "none",
+    "priority": 0
+  },
+  "mechanism_type": "world_switch",
+  "stable_id": "BG_MEC_INNER_WORLD_SWITCH_001",
+  "states": [
+    {
+      "id": "inactive",
+      "visual_node": "StateViews/inactive",
+      "collision_state": "pedestal",
+      "animation": "inactive",
+      "interaction_enabled": true,
+      "activation_semantic": "world_switch.inactive"
+    },
+    {
+      "id": "available",
+      "visual_node": "StateViews/available",
+      "collision_state": "pedestal",
+      "animation": "available",
+      "interaction_enabled": true,
+      "activation_semantic": "world_switch.available"
+    },
+    {
+      "id": "switching",
+      "visual_node": "StateViews/switching",
+      "collision_state": "pedestal",
+      "animation": "switching",
+      "interaction_enabled": false,
+      "activation_semantic": "world_switch.switching"
+    },
+    {
+      "id": "completed",
+      "visual_node": "StateViews/completed",
+      "collision_state": "pedestal",
+      "animation": "completed",
+      "interaction_enabled": true,
+      "activation_semantic": "world_switch.completed"
+    }
+  ],
+  "state_contract": {
+    "initial_state": "inactive",
+    "state_ids": [
+      "inactive",
+      "available",
+      "switching",
+      "completed"
+    ],
+    "activation_semantics": "world_switch",
+    "runtime_owner": "MechanismRuntime + MechanismConfig Resource"
+  },
+  "interaction_anchor": [
+    0,
+    0.45,
+    0
+  ],
+  "target_slots": [],
+  "animation_anchor": {
+    "node": "Visual",
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      0,
+      1,
+      0
+    ]
+  },
+  "config_resource": "mechanisms/configs/world_switch.tres",
+  "collision_profile": {
+    "fixed_shapes": [
+      {
+        "name": "Pedestal",
+        "center": [
+          0,
+          0.15,
+          0
+        ],
+        "size": [
+          0.6,
+          0.3,
+          0.6
+        ]
+      }
+    ],
+    "gate_blocker": null,
+    "trigger": {
+      "node": "InteractionArea",
+      "shape": "box",
+      "center": [
+        0,
+        0.45,
+        0
+      ],
+      "size": [
+        0.84,
+        1.05,
+        0.84
+      ]
+    },
+    "visual_fragments_non_blocking": true
+  },
+  "world_pair": {
+    "surface_asset": "BG_MEC_SURFACE_WORLD_SWITCH_001",
+    "inner_asset": "BG_MEC_INNER_WORLD_SWITCH_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "refinement": "Portable stone color encoding; Inner split return marker and layered twin-switch pedestal, contracts unchanged.",
+  "gameplay_evidence": {
+    "scope": "双半体状态动画及跨世界状态映射通过；未实现完整世界切换/VFX。",
+    "not_run": [
+      "FULL_WORLD_SWITCH",
+      "FINAL_WORLD_SWITCH_VFX"
+    ],
+    "state_runtime": "reports/mechanism_runtime.json",
+    "state_mapping": "reports/mechanism_clearance_states.json"
+  },
+  "showcase_provenance": {
+    "source": "Exact production Godot wrapper; viewport captures",
+    "separate_showcase_model": false
+  },
+  "production_validation_evidence": [
+    "reports/mechanism_exports.json",
+    "reports/gallery_runtime.json",
+    "reports/mechanism_clearance_states.json"
+  ],
+  "historical_gameplay_acceptance": "PARTIAL_PASS",
+  "art_revision_note": "One mirror half is split at two unequal corners; shared two-diamond identity retained, no portal/terminal motif.",
+  "batch05_evidence": {
+    "source": "reports/source_contract_validation.json",
+    "runtime": "reports/gallery_runtime.json",
+    "pair_review": "reports/pair_art_review.json",
+    "gameplay": "reports/mechanism_runtime.json",
+    "gameplay_scope": "Existing scope preserved; no expanded traversal/carry/level logic claim"
+  }
+}

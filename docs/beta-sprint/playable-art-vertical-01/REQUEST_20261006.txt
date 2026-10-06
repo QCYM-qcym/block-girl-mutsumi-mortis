@@ -1,0 +1,726 @@
+PROJECT: Mutsumi Veilshift / 方块少女-若叶睦
+SPRINT: Beta Sprint
+TASK: PLAYABLE-ART-VERTICAL-SLICE-01
+
+TRACK: 00 Integration Coordinator
+MODE: BUILD / MAIN-PROJECT-INTEGRATION
+
+==================================================
+CURRENT BASELINE
+==================================================
+
+Main project:
+
+E:\godot\若叶睦\方块少女-若叶睦
+
+当前主项目玩家启动后仍可能看到：
+
+Pixel / P-01 presentation
+
+当前正式产品内容：
+
+L-01《另一个世界》
+FORMAL_PLAYABLE
+
+L-02《两岸之间》
+GREYBOX_PLAYABLE
+
+L-03《视线相接》
+GREYBOX_PLAYABLE
+
+Game Shell:
+PASS
+
+Human QA:
+P0=0
+P1=0
+
+Foundation Core:
+已进入 Beta Freeze 收口阶段
+
+==================================================
+ART HANDOFF
+==================================================
+
+正式美术交接状态：
+
+VERTICAL_SLICE_ART_READY = YES
+
+ART_LINE_STATUS =
+FROZEN / GAME_PRODUCTION_SUPPORT
+
+已批准资产保持冻结。
+
+包括当前已经批准/可供主项目消费的：
+
+- 若叶睦 3D 角色资产
+- Surface World
+- Inner World
+- 机关资产
+- World Shift VFX
+- Game Shell UI 美术
+- 其它 Vertical Slice 已批准资产
+
+不得因为主项目接入而默认重新设计。
+
+当前保留：
+
+STAIR_CLEARANCE = PARTIAL_PASS
+
+STAIR_TRAVERSAL = NOT_RUN
+
+不得在本任务中把它们升级为 PASS，
+除非主项目真实运行产生新证据。
+
+==================================================
+GOAL
+==================================================
+
+本轮唯一核心目标：
+
+让主项目中的 L-01
+从“像素表现可玩关卡”
+
+升级为：
+
+“正式 3D 美术 + 现有正式 Gameplay Runtime”的
+可完整通关 Vertical Slice。
+
+最终玩家从主项目进入 L-01 时：
+
+必须看到正式 3D 世界，
+而不是旧 Pixel Presenter。
+
+同时：
+
+玩法结果不能改变。
+
+==================================================
+核心架构原则
+==================================================
+
+不要重写 Gameplay。
+
+目标架构：
+
+                 ┌→ Pixel Presenter
+Runtime State ───┤
+                 └→ 3D Presenter
+
+Pixel Presenter：
+
+保留，
+作为 regression reference。
+
+3D Presenter：
+
+成为 Beta 正式表现候选。
+
+两者必须消费同一套正式：
+
+RuntimeSession
+Puzzle State
+Cube orientation
+World Shift state
+Perspective state
+Goal state
+
+禁止：
+
+复制 Puzzle Kernel
+
+复制 RuntimeSession
+
+重写 Cube Roll 规则
+
+重写 World Shift
+
+重写 Perspective Connection
+
+用 3D Scene 自己维护第二套玩法状态。
+
+==================================================
+SCOPE
+==================================================
+
+本轮只做：
+
+L-01《另一个世界》
+
+不要同时迁移：
+
+L-02
+L-03
+L-04
+
+只有 L-01 3D Vertical Slice PASS 后，
+才能推广模板。
+
+==================================================
+OWNER PATHS
+==================================================
+
+路径由你拟定。
+
+先只读检查主工程，
+确定最小接入路径。
+
+允许修改范围只限：
+
+- 3D Presenter
+- L-01 3D presentation scene
+- 3D camera rig
+- 3D character visual binding
+- Surface / Inner visual binding
+- mechanism visual binding
+- World Shift VFX integration
+- presentation-only occlusion handling
+- 3D integration-specific tests
+- Integration-owned scene wiring
+
+第一次修改前输出：
+
+PLAYABLE_ART_OWNER_ROOTS:
+- <实际路径>
+- <实际路径>
+
+不要创建与已有项目结构重复的新顶层体系。
+
+==================================================
+FORBIDDEN PATHS
+==================================================
+
+禁止修改正式玩法核心：
+
+foundation/**
+tools/foundation/**
+
+Puzzle Kernel
+
+RuntimeSession
+
+Safety Queries
+
+Baker
+
+Validator
+
+Solver
+
+Softlock
+
+Intent Binder
+
+D_JOBS
+
+ToolWire
+
+Snapshot capture
+
+canonical loader
+
+正式 World Shift 算法
+
+正式 Perspective Connection 算法
+
+正式 Cube Roll 规则
+
+除非主项目接入暴露真实 P0/P1 Runtime bug，
+否则这些必须保持原字节。
+
+==================================================
+ART SOURCE BOUNDARY
+==================================================
+
+禁止修改：
+
+Blender 源文件
+
+已批准模型本体
+
+已批准材质设计
+
+已批准 Surface / Inner 视觉方向
+
+已批准机关造型
+
+已批准 Game Shell UI Art
+
+本轮是：
+
+INTEGRATION
+
+不是：
+
+ART REDESIGN。
+
+如果发现美术 P0/P1：
+
+输出：
+
+MAIN_PROJECT_INTEGRATION_REQUEST
+
+包含：
+
+- asset
+- scene
+- reproduction
+- expected
+- actual
+- screenshot
+- severity
+
+回交 05 Art。
+
+P2 不阻塞本轮。
+
+==================================================
+第一步：资产定位
+==================================================
+
+读取正式 Art handoff。
+
+不要从临时目录随便抓文件。
+
+必须识别：
+
+- Wakaba 3D final / approved asset
+- Surface World approved runtime asset
+- Inner World approved asset
+- mechanism approved assets
+- World Shift VFX
+- UI assets if needed
+
+记录：
+
+ART_ASSET_BINDING_MANIFEST
+
+包含：
+
+source asset
+main-project destination
+version/hash
+approval status
+
+不要复制未批准实验资产。
+
+==================================================
+第二步：L-01 3D Scene
+==================================================
+
+为 L-01 建立正式 3D presentation。
+
+要求：
+
+Gameplay geometry / logical state
+继续来自正式 L-01。
+
+3D Scene只负责：
+
+视觉呈现。
+
+不得通过 3D Mesh position
+反向决定正式Puzzle逻辑。
+
+==================================================
+第三步：若叶睦 3D Cube
+==================================================
+
+把正式 Wakaba 3D Cube
+绑定到 Runtime player state。
+
+必须支持：
+
+- 当前 Cube position；
+- 当前 orientation；
+- 六面身份；
+- 翻滚后正确朝向；
+- Camera Rotate 后不回正；
+- World Shift 后不回正；
+- Reset 后恢复正式初始姿态。
+
+==================================================
+第四步：3D Roll
+==================================================
+
+WASD / 当前正式Input：
+
+仍调用正式 Runtime action。
+
+当 Runtime 返回：
+
+APPLIED
+
+3D Presenter：
+
+播放对应自然 3D Roll。
+
+不得：
+
+先播放动画再决定玩法结果。
+
+不得：
+
+动画直接修改 Runtime state。
+
+正确顺序：
+
+Input
+→ Runtime Action
+→ APPLIED
+→ Presenter Tween
+→ formal finish/commit
+→ visual state settle
+
+保持 D_HOST 已验证语义。
+
+==================================================
+第五步：Camera
+==================================================
+
+严格：
+
+4 × 90°
+
+支持：
+
+Q / E
+及当前正式鼠标交互（若主项目已有）。
+
+禁止：
+
+自由相机。
+
+Camera必须服务：
+
+Perspective Connection
++
+Gameplay readability。
+
+高墙遮挡：
+
+优先沿已批准 Runtime Baseline 方式处理。
+
+不要创建新的全场景透明系统。
+
+==================================================
+第六步：Surface / Inner
+==================================================
+
+Space / 当前正式输入：
+
+继续调用正式 World Shift。
+
+视觉层负责：
+
+Surface Visual
+↔
+Inner Visual
+
+和已批准 VFX。
+
+必须保证：
+
+World Shift 前后
+
+Gameplay state
+Cube orientation
+camera direction
+
+均保持正式语义。
+
+==================================================
+第七步：机关视觉
+==================================================
+
+L-01实际使用的机关：
+
+用已批准 Batch 资产进行视觉绑定。
+
+机关视觉状态必须来自：
+
+正式 gameplay/mechanism state。
+
+不得让动画自己维护第二套：
+
+OPEN/CLOSED
+ACTIVE/INACTIVE
+ON/OFF
+
+逻辑状态。
+
+==================================================
+第八步：Goal / Exit
+==================================================
+
+正式 Goal 逻辑保持原样。
+
+3D出口只做视觉映射。
+
+验证：
+
+Goal trigger
+→ Level Complete
+→ Game Shell
+
+继续完整工作。
+
+==================================================
+第九步：Reset
+==================================================
+
+R Reset：
+
+必须正式恢复：
+
+Runtime state
+
+Cube position
+
+Cube orientation
+
+World state
+
+camera state（按正式语义）
+
+mechanism visuals
+
+VFX transient state
+
+不得出现：
+
+逻辑已Reset
+但3D角色/机关仍停在旧状态。
+
+==================================================
+第十步：重点主项目验证
+==================================================
+
+必须重新执行美术 handoff 所列：
+
+PLAYABLE-ART-VERTICAL-SLICE-01
+最小流程
++
+原 handoff 的 10 项重点。
+
+不要引用独立 Art validation project 的：
+
+Gameplay PASS
+
+作为主项目证据。
+
+本任务必须生成新的：
+
+MAIN PROJECT evidence。
+
+==================================================
+STAIR STATUS
+==================================================
+
+明确保留：
+
+STAIR_CLEARANCE =
+PARTIAL_PASS
+
+STAIR_TRAVERSAL =
+NOT_RUN
+
+如果 L-01 不需要真实楼梯 traversal：
+
+不要为了本任务扩 scope。
+
+如果 L-01 必须经过楼梯：
+
+则只测试实际关卡必需路径。
+
+没有新证据：
+
+不得升级状态。
+
+==================================================
+最低玩家流程
+==================================================
+
+至少完整跑：
+
+Main Menu
+→ Level Select
+→ L-01
+→ 3D Gameplay
+→ Move
+→ Camera Rotate
+→ World Shift
+→ Reset
+→ 再玩
+→ Goal
+→ Level Complete
+→ 返回 Shell
+
+必须是真实主项目流程。
+
+==================================================
+Pixel Regression
+==================================================
+
+旧 Pixel Presenter：
+
+保留。
+
+至少做一次逻辑对照：
+
+同一 L-01
+同一输入/路线
+
+Pixel runtime outcome
+==
+3D runtime outcome
+
+不要求逐帧视觉一致。
+
+要求：
+
+StateKey / Goal / mechanism结果一致。
+
+==================================================
+QA
+==================================================
+
+完成后交给 08 做黑盒试玩。
+
+QA重点：
+
+- 是否仍然像正式游戏，而不是Art Gallery；
+- 角色翻滚是否读得懂；
+- 六面方向是否可识别；
+- Camera遮挡；
+- Surface/Inner可读性；
+- VFX是否妨碍操作；
+- Reset；
+- Goal；
+- Shell回流；
+- 性能；
+- 资源/Shader错误。
+
+==================================================
+STOP ONLY IF
+==================================================
+
+只有以下情况停止：
+
+1. 必须修改正式 Gameplay Contract 才能接入；
+2. 3D资产无法表达正式 Runtime state；
+3. 主项目出现 P0 crash；
+4. Runtime / Presenter状态不可一致；
+5. Save / Reset 数据可能损坏；
+6. 已批准资产存在阻塞Gameplay的P0/P1美术问题。
+
+以下不停止：
+
+P2视觉问题
+
+小型材质差异
+
+UI polish
+
+高级水体
+
+环境微动画
+
+额外装饰。
+
+==================================================
+DELIVERABLE
+==================================================
+
+成功输出：
+
+PLAYABLE_ART_VERTICAL_SLICE_01_READY
+
+Main project:
+E:\godot\若叶睦\方块少女-若叶睦
+
+Level:
+L-01《另一个世界》
+
+3D Presenter:
+PASS
+
+Wakaba 3D:
+PASS
+
+Cube Roll:
+PASS
+
+Six-face orientation:
+PASS
+
+4×90 Camera:
+PASS
+
+Surface:
+PASS
+
+Inner:
+PASS
+
+World Shift VFX:
+PASS
+
+Mechanism visuals:
+PASS
+
+Reset:
+PASS
+
+Goal:
+PASS
+
+Shell flow:
+PASS
+
+Pixel gameplay regression:
+PASS
+
+Runtime StateKey parity:
+PASS
+
+Art source changes:
+NONE
+
+Foundation production changes:
+NONE
+或精确列出真实P0/P1修复
+
+STAIR_CLEARANCE:
+PARTIAL_PASS / 新实际状态
+
+STAIR_TRAVERSAL:
+NOT_RUN / 新实际状态
+
+Main-project QA:
+READY
+
+P0:
+<count>
+
+P1:
+<count>
+
+P2:
+<count>
+
+MAIN_PROJECT_INTEGRATION_REQUEST:
+<如有>
+
+Files/SHA:
+<精确清单>
+
+Working tree:
+CLEAN
+
+Push:
+NOT_RUN
+
+然后停止。
+
+不要开始 L-02 3D迁移。

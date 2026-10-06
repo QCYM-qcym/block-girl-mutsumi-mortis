@@ -1,0 +1,345 @@
+{
+  "schema_version": "4.0.0",
+  "asset_id": "BG_ENV_SURFACE_BRIDGE_001",
+  "revision": 2,
+  "type": "environment",
+  "module_kind": "bridge",
+  "world": "surface",
+  "source_file": "BG_ENV_SURFACE_BRIDGE_001/source/BG_ENV_SURFACE_BRIDGE_001.blend",
+  "glb_file": "BG_ENV_SURFACE_BRIDGE_001/export/BG_ENV_SURFACE_BRIDGE_001.glb",
+  "godot_scene": "BG_ENV_SURFACE_BRIDGE_001/godot/BG_ENV_SURFACE_BRIDGE_001.tscn",
+  "logical_footprint": {
+    "unit": "meter",
+    "xz": [
+      2,
+      1
+    ],
+    "grid_reservation_cells": [
+      2,
+      1
+    ],
+    "grid_cell_size": 1,
+    "note": "Schema 2 logical topology; visual bounds are separate."
+  },
+  "visual_bounds": {
+    "coordinate_system": "Godot Y-up",
+    "min": [
+      -1.0,
+      -1.1175870895385742e-07,
+      -0.550000011920929
+    ],
+    "max": [
+      1.0,
+      0.2399998903274536,
+      0.550000011920929
+    ]
+  },
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "forward_axis": {
+    "blender": "-Y",
+    "godot": "+Z"
+  },
+  "walkable": true,
+  "collision_type": "static_boxes",
+  "collision_definitions": [
+    {
+      "name": "logical_bridge",
+      "center": [
+        0,
+        0.12,
+        0
+      ],
+      "size": [
+        2,
+        0.24,
+        1
+      ]
+    }
+  ],
+  "material_slots": [
+    "Approved ivory stone | game baked"
+  ],
+  "texture_dependencies": [
+    "BG_ENV_SURFACE_BRIDGE_001/textures/BG_ENV_SURFACE_BRIDGE_001_basecolor.png",
+    "BG_ENV_SURFACE_BRIDGE_001/textures/BG_ENV_SURFACE_BRIDGE_001_normal.png"
+  ],
+  "surface_pair": null,
+  "inner_pair": "BG_ENV_INNER_BRIDGE_001",
+  "pair_status": "PRODUCED",
+  "triangle_count": 188,
+  "runtime_status": "PASS",
+  "showcase_status": "PASS",
+  "ART_ACCEPTANCE": "PASS",
+  "PRODUCTION_ACCEPTANCE": "PASS",
+  "GAMEPLAY_ACCEPTANCE": "PASS",
+  "art_acceptance_basis": "Explicit user ART Gate final confirmation; technical/gameplay conclusions unchanged.",
+  "provenance": {
+    "baseline_file": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\_environment_composition\\_01\\beauty\\blend\\beauty_v03.blend",
+    "sha256": "f21fd3f46a28d5db6960a59a977c987274fcba58ef115268b3c4b5a49a5690af",
+    "objects": [
+      "MID / narrow bridge"
+    ],
+    "normalization_translation_blender": [
+      -0.3999999761581421,
+      0.15000002086162567,
+      -2.1600000858306885
+    ]
+  },
+  "height": 0.24000000208616257,
+  "connection_points": [
+    {
+      "name": "west",
+      "position": [
+        -1.0,
+        0.24,
+        0
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "east",
+      "position": [
+        1.0,
+        0.24,
+        0
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "walkable_area": {
+    "kind": "top_rectangle",
+    "width_depth": [
+      2.0,
+      1.1
+    ],
+    "y": 0.24
+  },
+  "source_sha256": "2b1d0548b4a2a949c7d51994fecc4653180e7af054999c55b9c8b13d6d50be3b",
+  "glb_sha256": "7448e8845d0fea4e5b5f1b3a4646173926fc2e96c04bed0144531855166488fa",
+  "material_transfer": {
+    "strategy": "unlit base-color bake and tangent normals for procedural stone; base-color bake for procedural hair; PBR for remaining slots",
+    "blender_source_kept_editable": true,
+    "lighting_baked": false,
+    "source_uv_preserved": true,
+    "export_uv": "GameBakeUV"
+  },
+  "showcase_provenance": {
+    "renderer": "Godot 4.7.2 actual Forward+ viewport",
+    "scene": "BG_ENV_SURFACE_BRIDGE_001/godot/BG_ENV_SURFACE_BRIDGE_001.tscn",
+    "glb_sha256": "7448e8845d0fea4e5b5f1b3a4646173926fc2e96c04bed0144531855166488fa",
+    "separate_display_model": false,
+    "neutral_clay": "Display-only material_override on same production mesh"
+  },
+  "asset_class": "STRUCTURAL_MODULE",
+  "source": {
+    "file": "BG_ENV_SURFACE_BRIDGE_001/source/BG_ENV_SURFACE_BRIDGE_001.blend",
+    "sha256": "2b1d0548b4a2a949c7d51994fecc4653180e7af054999c55b9c8b13d6d50be3b"
+  },
+  "export": {
+    "file": "BG_ENV_SURFACE_BRIDGE_001/export/BG_ENV_SURFACE_BRIDGE_001.glb",
+    "sha256": "7448e8845d0fea4e5b5f1b3a4646173926fc2e96c04bed0144531855166488fa",
+    "format": "GLB"
+  },
+  "logical": {
+    "grid_unit": 1.0,
+    "footprint": [
+      2,
+      1
+    ],
+    "cell_origin_offset": [
+      -0.5,
+      0
+    ],
+    "occupied_cells": [],
+    "walkable_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "clearance": {
+      "passage_cells": [],
+      "required_width": 1.0,
+      "required_height": 1.0,
+      "method": "approach_or_support"
+    },
+    "connection_points": [
+      {
+        "id": "west",
+        "name": "west",
+        "local_position": [
+          -1.0,
+          0.24,
+          0
+        ],
+        "direction": [
+          -1,
+          0,
+          0
+        ],
+        "height": 0.24,
+        "connection_type": "walkable_edge"
+      },
+      {
+        "id": "east",
+        "name": "east",
+        "local_position": [
+          1.0,
+          0.24,
+          0
+        ],
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "height": 0.24,
+        "connection_type": "walkable_edge"
+      }
+    ],
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "pivot": [
+      0,
+      0,
+      0
+    ],
+    "forward_axis": "+Z",
+    "walkable_height": 0.24,
+    "height_contract": {
+      "walk_surface": 0.24,
+      "max_visual_height": "independent"
+    },
+    "gameplay_meaning": "two_cell_connection"
+  },
+  "visual": {
+    "bounds": {
+      "coordinate_system": "Godot Y-up",
+      "min": [
+        -1.0,
+        -1.1175870895385742e-07,
+        -0.550000011920929
+      ],
+      "max": [
+        1.0,
+        0.2399998903274536,
+        0.550000011920929
+      ]
+    },
+    "triangles": 188,
+    "vertices": 316,
+    "materials": [
+      "Approved ivory stone | game baked"
+    ],
+    "textures": [
+      {
+        "file": "BG_ENV_SURFACE_BRIDGE_001/textures/BG_ENV_SURFACE_BRIDGE_001_basecolor.png",
+        "width": 1024,
+        "height": 1024,
+        "estimated_rgba_bytes": 4194304
+      },
+      {
+        "file": "BG_ENV_SURFACE_BRIDGE_001/textures/BG_ENV_SURFACE_BRIDGE_001_normal.png",
+        "width": 1024,
+        "height": 1024,
+        "estimated_rgba_bytes": 4194304
+      }
+    ],
+    "draw_relevant_surfaces": 1
+  },
+  "physics": {
+    "collision_type": "static_boxes",
+    "collision_bounds": [
+      {
+        "name": "logical_bridge",
+        "center": [
+          0,
+          0.12,
+          0
+        ],
+        "size": [
+          2,
+          0.24,
+          1
+        ]
+      }
+    ],
+    "blocking_volume": "boxes",
+    "passage_cells": [],
+    "collision_complexity": {
+      "box_shapes": 1,
+      "concave_shapes": 0,
+      "concave_triangles": 0,
+      "shape_count": 1
+    }
+  },
+  "pairing": {
+    "surface_asset": "BG_ENV_SURFACE_BRIDGE_001",
+    "inner_asset": "BG_ENV_INNER_BRIDGE_001",
+    "counterpart_status": "PRODUCED"
+  },
+  "acceptance": {
+    "art": "PASS",
+    "production": "PASS",
+    "gameplay": "PASS"
+  },
+  "warnings": [
+    "NON_INTEGER_VISUAL_BOUNDS"
+  ],
+  "compatibility_fields": "Flat fields are generated migration adapters; logical/visual/physics/pairing/acceptance are canonical.",
+  "contract_revision": 3,
+  "release": "batch_05",
+  "path_state": "walkable",
+  "clearance": {
+    "static_bounds": {
+      "min": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "max": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "roll_swept_required": false,
+    "min_width": 1.0,
+    "min_height": 1.0,
+    "tested_character_class": "UNIT_CUBE_1M",
+    "status": "PASS",
+    "scope": "Actual full-body route rolls"
+  },
+  "occlusion": {
+    "fade_allowed": false,
+    "fade_group": "none",
+    "priority": 0
+  },
+  "production_revision_note": "Manifest/source/export revision updated; wrapper file intentionally reused byte-for-byte to freeze collision and anchors. Manifest is the revision authority.",
+  "batch05_evidence": {
+    "source": "reports/source_contract_validation.json",
+    "runtime": "reports/gallery_runtime.json",
+    "pair_review": "reports/pair_art_review.json",
+    "gameplay": "reports/gallery_runtime.json",
+    "gameplay_scope": "Existing scope preserved; no expanded traversal/carry/level logic claim"
+  }
+}
