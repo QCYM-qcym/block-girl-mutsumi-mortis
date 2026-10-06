@@ -1,5 +1,7 @@
 # FOUNDATION-4 BUILD MODE Registration
 
+Current scope authority: [Foundation Core Freeze for Beta](../beta-sprint/FOUNDATION_4_CORE_FREEZE_20261006.md), effective2026-10-06. Core PASS/FROZEN_FOR_BETA; Full deferred post-Beta. Historical registration evidence below remains intact.
+
 Current registration request: 2026-10-06 Asia/Shanghai.
 Status: FOUNDATION_4_A_EDIT_D_HOST_DJOBS_CORE_REGISTRATION_READY
 
@@ -164,4 +166,19 @@ I2: READY_TO_RUN -> CORE_VERTICAL_PASS
 I2 shared Graphical i2_g01:352 checks, failures[], exit0, stderr0, Windows, doubles[]. Real complete and budget workers, same-run canonical/Intent/OriginalGraph trace, formal Replayer MATCH, actual Runtime MOVE/Goal/rotation/Shift/Reset and natural Tween.finished. See I2_VERTICAL_RECEIPT_20261006.md.
 Foundation Freeze: NOT_FROZEN; I2 criterion satisfied, basic integrated Editor acceptance pending.
 D_JOBS functionality: no expansion.
+Push: NOT_RUN.
+
+## Beta Freeze scope registration — 2026-10-06
+
+FOUNDATION_4_CORE: FROZEN_FOR_BETA
+FOUNDATION_4_FULL: DEFERRED_POST_BETA
+I2 Core: PASS / 352
+EDITOR_CORE_PHASE_EVIDENCE: 5a70d13748989c40cf530b1b019e62264dc4b828
+Editor Beta: CORE_AVAILABLE / ADVANCED_AUTHORING_DEFERRED
+Editor full acceptance: NOT_ACHIEVED
+Original4B Unit69 PASS; RealEditor47 checks8failures, doubles[]. Plugin/Dock/realTaskService/BUSY/immediateCANCELLING/naturalrelease are scoped passed evidence. AnalyzeCurrent DEFERRED_D5; FullAcceptSaved DEFERRED_D6_ARCHIVE; Report DEFERRED_D6. No formal B_EDITOR/D_FULL slot or full acceptance claim.
+D5/D6: POST_FREEZE_BACKLOG / POST_BETA
+Confirmed Foundation P0/P1 blockers: 0/0 within accepted Core evidence.
+Next main milestone: BETA_3D_INTEGRATION_01
+This authoritative scope decision supersedes earlier WAITING_FOR_I2/Editor Freeze status, not the recorded raw results. See the linked Freeze Decision for guard evidence and exact reopening criteria.
 Push: NOT_RUN.

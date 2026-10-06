@@ -1,0 +1,305 @@
+PROJECT: Mutsumi Veilshift / 方块少女-若叶睦
+SPRINT: Beta Sprint
+TRACK: 00 Integration Coordinator
+MODE: BETA FREEZE DECISION
+
+==================================================
+CURRENT FOUNDATION STATUS
+==================================================
+
+D_PROTOCOL:
+PASS
+
+D_SAVED:
+PASS
+
+A_EDIT:
+PASS
+
+D_HOST:
+PASS
+
+C_QUALITY:
+PASS
+
+D_JOBS:
+PASS
+
+D_JOBS receipt:
+96397ea5708e0e87dd05e3d1d4c682ca0a5478b8
+
+I1:
+PASS / FROZEN
+
+I2:
+CORE_VERTICAL_PASS
+352 checks
+
+==================================================
+EDITOR ACTUAL RESULT
+==================================================
+
+4B scoped dependency sync:
+PASS
+
+4B commit:
+5a70d13748989c40cf530b1b019e62264dc4b828
+
+Unit:
+69 / 69 PASS
+
+Real Editor:
+47 checks / 8 failures
+
+Real doubles:
+NONE
+
+Passed:
+
+- Plugin load
+- Dock
+- real TaskService / worker launch
+- BUSY
+- immediate CANCELLING
+- saved changes do not absorb unsaved changes
+- rerun/new identity/fingerprint
+- natural task release
+
+Blocked by missing D_FULL:
+
+Analyze Current:
+D5 capture NOT_DELIVERED
+
+Accept Saved full end-to-end:
+ARCHIVE path rejected before HELLO
+
+Report / concrete error presentation:
+D6 NOT_DELIVERED
+
+==================================================
+BETA SCOPE DECISION
+==================================================
+
+Do NOT start D5 / D6 implementation now.
+
+For Beta Sprint:
+
+FOUNDATION_4_CORE =
+FROZEN_FOR_BETA
+
+FOUNDATION_4_FULL =
+DEFERRED_POST_BETA
+
+Editor full acceptance:
+NOT_ACHIEVED
+
+Editor Beta status:
+CORE_AVAILABLE / ADVANCED_AUTHORING_DEFERRED
+
+This is a scope decision,
+not a fake PASS.
+
+==================================================
+WHY
+==================================================
+
+Current playable Beta production does not require D5/D6.
+
+Already demonstrated:
+
+- formal gameplay runtime works;
+- saved authoring chain works;
+- Binder works;
+- Quality works;
+- Jobs works;
+- Replay works;
+- I2 core vertical works;
+- three playable levels already exist;
+- Content + Shell integrated;
+- Human QA has P0=0 / P1=0.
+
+Therefore D5/D6 are no longer allowed to block:
+
+- Level production;
+- 3D integration;
+- Game Shell;
+- QA;
+- Beta builds.
+
+==================================================
+4B TREATMENT
+==================================================
+
+Record commit:
+
+5a70d13748989c40cf530b1b019e62264dc4b828
+
+as:
+
+EDITOR_CORE_PHASE_EVIDENCE
+
+Do NOT register:
+
+EDITOR_BETA_BASELINE_READY
+
+Do NOT claim:
+
+Analyze Current PASS
+Full Accept Saved PASS
+Report PASS
+D_FULL PASS
+
+Instead record:
+
+Plugin/Dock:
+PASS
+
+Real TaskService:
+PASS
+
+BUSY/CANCELLING:
+PASS
+
+Analyze Current:
+DEFERRED_D5
+
+Full Accept Saved:
+DEFERRED_D6_ARCHIVE
+
+Report:
+DEFERRED_D6
+
+==================================================
+EDITOR UX SAFETY
+==================================================
+
+If the current Editor exposes buttons that are known to fail because
+D5/D6 are absent:
+
+do not implement D5/D6.
+
+Only if needed, allow a minimal 4B-local UX guard:
+
+- disable unavailable action;
+- label as "Not available in current Beta tools";
+- avoid letting users trigger a known broken path.
+
+Do not change public contracts.
+
+This guard must not become another multi-day task.
+
+==================================================
+POST_FREEZE_BACKLOG
+==================================================
+
+Add:
+
+F4-D5:
+Analyze Current live/unsaved capture
+
+F4-D6:
+Archive / formal report delivery
+
+F4-EDITOR:
+full report UI
+advanced error presentation
+authoring polish
+
+Priority:
+POST_BETA unless a real level-production blocker appears.
+
+==================================================
+FOUNDATION FREEZE RULE
+==================================================
+
+After this decision:
+
+Foundation production is frozen.
+
+Only reopen Foundation for:
+
+P0:
+- data corruption;
+- crash;
+- cannot load/play/save level;
+- unrecoverable softlock caused by foundation;
+
+P1:
+- formal Runtime behavior incorrect;
+- Saver/Baker/Binder/Quality/Jobs correctness regression;
+- Beta content cannot be produced or executed.
+
+Do NOT reopen for:
+
+- editor polish;
+- D5/D6 completeness;
+- better reports;
+- nicer Dock UX;
+- additional generic tooling.
+
+==================================================
+NEXT PRODUCT PRIORITIES
+==================================================
+
+P0:
+
+1. BETA-3D-INTEGRATION-01
+   L-01 3D Gameplay Vertical Slice
+
+2. Fix QA P2 feedback:
+   - L-03 stale hint
+   - Inner readability handoff
+
+3. Integrate current Art into main game
+
+4. Continue Beta daily builds
+
+5. Focused QA after each product slice
+
+Do not start L-04 until:
+
+- L-01 3D integration reaches playable;
+- L-03 hint fix retested.
+
+==================================================
+OUTPUT
+==================================================
+
+FOUNDATION_4_CORE_FROZEN_FOR_BETA
+
+Core Foundation:
+PASS
+
+I2 Core:
+PASS
+
+Full Foundation:
+DEFERRED
+
+Editor:
+CORE_AVAILABLE
+FULL_ACCEPTANCE_NOT_ACHIEVED
+
+D5:
+POST_FREEZE_BACKLOG
+
+D6:
+POST_FREEZE_BACKLOG
+
+4B evidence commit:
+5a70d13748989c40cf530b1b019e62264dc4b828
+
+P0 Foundation blockers:
+0 / actual
+
+P1 Foundation blockers:
+0 / actual
+
+Next main milestone:
+BETA_3D_INTEGRATION_01
+
+Working tree:
+CLEAN
+
+Push:
+NOT_RUN
