@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+[ext_resource type="Script" path="res://foundation/authoring/intent_authoring_resource.gd" id="Intent"]
+[ext_resource type="Script" path="res://foundation/authoring/milestone_authoring_resource.gd" id="Milestone"]
+[sub_resource type="Resource" id="Finish"]
+script = ExtResource("Milestone")
+authoring_id = "00000000-0000-4000-8000-000000000500"
+milestone_id = &"finish"
+required = true
+predicate = {"kind": 4}
+[resource]
+script = ExtResource("Intent")
+authoring_id = "00000000-0000-4000-8000-000000000004"
+authoring_version = "puzzleintentauthoring.v1"
+intent_id = &"empty_intent"
+required_mechanics = [0]
+optional_mechanics = []
+expected_milestones = [SubResource("Finish")]
+forbidden_bypasses = []
