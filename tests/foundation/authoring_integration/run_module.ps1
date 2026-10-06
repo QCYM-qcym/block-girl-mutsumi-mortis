@@ -170,6 +170,79 @@ function Assert-Receipts($Value) {
         }
     }
 }
+function Get-PhaseSources {
+    # Exact documentary PHASE_EVIDENCE_ONLY / TEST_DEPENDENCY_ONLY sources.
+    # These are not delivery slots and never satisfy slot:D_JOBS.
+    return @(
+        @{
+            name='D_SAVED_VALIDATION_SUPPORT'; commit='5749b932f947c44b35f21c62478bd76720e32969'
+            slot='D_SAVED'; formal_commit='4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11'
+            purpose='HISTORICAL_REGISTRY_AND_STAGE_SELECTION_TESTS'
+            overrides=@('tests/foundation/authoring_acceptance/test_saved_snapshot.gd')
+            files=@{
+                'tests/foundation/authoring_acceptance/test_saved_snapshot.gd'='be6b8e6040cbfdb5d1b9201ba54d7bdc5477e1c79685e138ba459b69f7d2167e'
+                'tests/foundation/authoring_acceptance/fixtures/legacy_814a/input.ready'='134c9495d5d38345c8b9ddf9f7b5cc06d84c5825fca07e22408ec354589cb2ed'
+                'tests/foundation/authoring_acceptance/fixtures/legacy_814a/README.md'='85d6e068f6127407f925ef5b3fceb0527792b6feffad3e77b68045facd599839'
+            }
+        },
+        @{
+            name='D_HOST_VALIDATION_SUPPORT'; commit='7493ab31cf6a71ca9b4778bfe871f33bba2e586d'
+            slot='D_HOST'; formal_commit='8289d804c3b5b42a2e6c2cf76e965679a0f83af8'
+            purpose='CURRENT_SOURCE_INTENT_GRAPHICAL_COMPATIBILITY_TESTS'
+            overrides=@('tests/foundation/authoring_acceptance/test_whitebox_host.gd','tests/foundation/authoring_acceptance/test_whitebox_final_observer.gd')
+            files=@{
+                'tests/foundation/authoring_acceptance/test_whitebox_host.gd'='ccbe1d7f33a6c00f634df2430d9d0aa0ade3ced47d896d1919704318713ee802'
+                'tests/foundation/authoring_acceptance/test_whitebox_final_observer.gd'='fe156a42d5631472e5d1dee2413ca2d1961d9177c608a05c73e636582b1d00c7'
+            }
+        },
+        @{
+            name='D_JOBS_CORE_CANDIDATE'; commit='2c1c4d1b5642c3060a013cabe836fefd9c9ced7e'
+            slot='D_SAVED'; formal_commit='4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11'
+            purpose='ALLOW_REMAINING_D_JOBS_REAL_AND_ORCHESTRATION_VALIDATION'
+            overrides=@('tools/foundation/authoring_acceptance/execution_project.gd','tools/foundation/authoring_acceptance/snapshot_capture.gd')
+            files=@{
+                'tests/foundation/authoring_acceptance/owned_worker_fixture.gd' = 'cae63cc5819ca1dd08e30300fdb98ee119473669fb29998f316b9a4bd2b5846d'
+                'tests/foundation/authoring_acceptance/owned_worker_fixture.gd.uid' = 'c551d7557b66b88ae4962502a7acbd3b4f6125af93eca154bb24107eff1651d7'
+                'tests/foundation/authoring_acceptance/test_task_lifecycle.gd' = '916e51872dfc4d8f990a228ab2128bac41b290dee6c486a60b6a78e69e1f3dba'
+                'tests/foundation/authoring_acceptance/test_task_lifecycle.gd.uid' = '5a86a81b86a846e1ff9b682352a20c7dced1e4453d042179cec1c9b88a7acc63'
+                'tools/foundation/authoring_acceptance/execution_project.gd' = '333c5a5da269b577f690f2d13df6ef429b10e283d697ee5d39f8f841406c7344'
+                'tools/foundation/authoring_acceptance/process_transport.gd' = 'fa8ab54d7d160aae952a94815bd30c73f2268cc55f1a89302a2139faa4ab7835'
+                'tools/foundation/authoring_acceptance/process_transport.gd.uid' = 'ca95dc8df4555bf81ac85f4fd906b0ed547d6760af492f3699aa99184e98c94b'
+                'tools/foundation/authoring_acceptance/snapshot_capture.gd' = '0573247db5907c4dc740aad8b9f72a236b459a389e3e2d916bfc46367f7d553f'
+                'tools/foundation/authoring_acceptance/task_service.gd' = '638271ab7d9f9e8278297a61bd6b2a6ed082d4131cb3e0b97979565352551ad8'
+                'tools/foundation/authoring_acceptance/task_service.gd.uid' = '672d41c742033d179cb2d1600dfdd7638659d9d77df79430eed0784890d79542'
+                'tools/foundation/authoring_acceptance/worker_entry.gd' = 'bd4cfc29aeb4680eafa9be1d0b43c5b47833a2ad1e2c05c71243600442c015a8'
+                'tools/foundation/authoring_acceptance/worker_entry.gd.uid' = 'feb95b493f2c571a16c0cebf44673bc41f5743df5ca7149c7ba57de3a19dbcd4'
+            }
+        }
+    )
+}
+function Assert-PhaseSource([string]$Name) {
+    $matches = @(Get-PhaseSources | Where-Object { $_.name -ceq $Name })
+    if ($matches.Count -ne 1) { throw 'CONTRACT_MISMATCH: unknown phase source' }
+    $p = $matches[0]
+    $recordPath = "$root/docs/development-records/FOUNDATION_4_BUILD_MODE_REGISTRATION.md"
+    Assert-NoLink $recordPath
+    $record = [IO.File]::ReadAllText($recordPath)
+    foreach ($line in @("$($p.name): $($p.commit)",'Registration: PHASE_EVIDENCE_ONLY / TEST_DEPENDENCY_ONLY',"Purpose: $($p.purpose)")) {
+        if (-not $record.Contains($line)) { throw 'CONTRACT_MISMATCH: exact phase registration absent' }
+    }
+    if (-not (Is-Ancestor $p.commit)) { throw 'DEPENDENCY_PENDING: exact phase source not integrated' }
+    foreach ($path in $p.files.Keys) {
+        Assert-Path $path; Assert-NoLink "$root/$path"
+        if ((Blob-Sha $p.commit $path) -cne $p.files[$path] -or (Get-Sha "$root/$path") -cne $p.files[$path]) {
+            throw "CONTRACT_MISMATCH: phase source blob/checkout differs: $path"
+        }
+    }
+    return @{name=$p.name;commit=$p.commit;purpose=$p.purpose;registration='PHASE_EVIDENCE_ONLY / TEST_DEPENDENCY_ONLY';status='NOT_A_FORMAL_DELIVERY';files=$p.files}
+}
+function Resolve-PhaseSource([string]$Slot,[string]$FormalCommit,[string]$Path,[string]$ActualSha) {
+    $matches = @(Get-PhaseSources | Where-Object { $_.slot -ceq $Slot -and $_.formal_commit -ceq $FormalCommit -and $_.overrides -ccontains $Path -and $_.files[$Path] -ceq $ActualSha })
+    if ($matches.Count -ne 1) { throw "CONTRACT_MISMATCH: $Slot checkout differs: $Path (outside exact phase authorization)" }
+    $phase = Assert-PhaseSource $matches[0].name
+    $phase.formal_slot=$Slot; $phase.formal_commit=$FormalCommit; $phase.path=$Path; $phase.sha256=$ActualSha
+    return $phase
+}
 function Get-Missing($Registration) {
     $missing = [Collections.Generic.List[string]]::new()
     foreach ($slot in $Registration.required_slots) {
@@ -184,8 +257,24 @@ function Get-Missing($Registration) {
             if ((Blob-Sha $d.commit $item.path) -cne $item.sha256) { throw "CONTRACT_MISMATCH: $slot committed blob $($item.path)" }
             $file = "$root/$($item.path)"; Assert-NoLink $file
             if (-not (Test-Path -LiteralPath $file -PathType Leaf)) { $missing.Add("file:$($item.path)"); continue }
-            if ((Get-Sha $file) -cne $item.sha256) { throw "CONTRACT_MISMATCH: $slot checkout differs: $($item.path)" }
+            if ((Get-Sha $file) -cne $item.sha256) {
+                $phase = Resolve-PhaseSource $slot $d.commit $item.path (Get-Sha $file)
+                if ($evidence) {
+                    $path = "$evidence/phase-test-dependencies.json"
+                    $used = if (Test-Path -LiteralPath $path) { @(Read-Json $path) } else { @() }
+                    Write-Json $path @($used + $phase)
+                }
+            }
         }
+    }
+    if ($Registration['module'] -ceq '4D' -and $Registration['case_id'] -ceq '4D-4') {
+        $phase = Assert-PhaseSource 'D_JOBS_CORE_CANDIDATE'
+        if ($evidence) { Write-Json "$evidence/djobs-core-test-dependency.json" $phase }
+    }
+    if ($Registration['module'] -ceq '4D' -and $Registration['case_id'] -ceq '4D-3') {
+        # D3's producer case intentionally has no self D_HOST required slot.
+        $phase = Assert-PhaseSource 'D_HOST_VALIDATION_SUPPORT'
+        if ($evidence) { Write-Json "$evidence/dhost-validation-support.json" $phase }
     }
     if (-not (Test-Path -LiteralPath "$root/$($Registration.script.Substring(6))" -PathType Leaf)) { $missing.Add("script:$($Registration.script)") }
     if ($Registration.entry -ceq 'EDITOR') {
