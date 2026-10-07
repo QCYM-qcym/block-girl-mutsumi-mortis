@@ -16,3 +16,5 @@ Fix scope: 00 sets Shell CONTENT_SCALE_MODE_DISABLED after the existing Window s
 Final acceptance evidence and exact tested commit are recorded separately after fresh strict runs. P01 parity remains observational gameplay state parity, not Foundation statekey.v1.
 
 Packaging byte preservation: upstream NotoSansSC OFL line 21 contains a trailing space. The official license remains byte-for-byte intact; a license-only whitespace attribute documents that imported-file exception. The test runner's extra blank EOF is removed and its local attributes preserve recorded source bytes. These are packaging/formatting changes, not gameplay behavior.
+
+Daily Build visual_daily_20261007_01 stopped before Godot launch: Windows Hidden .editorconfig was copied and its SHA matched, but Get-Item without -Force could not return its Length. 00 adds -Force only to this copied-file metadata read in existing build_source_daily.ps1; preserve the failed build/evidence directory and run a fresh named build. This is a packaging Harness defect, not an Owner production failure.

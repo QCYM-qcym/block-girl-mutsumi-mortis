@@ -33,3 +33,5 @@ Main身份背景为批准原始Surface hero，不包含扁平UI；Source_manifes
 6. 签发精确receipt/files SHA与BLACK_BOX_3D_UI_QA_01交接。Human QA READY而非自动填PASS。主工程预存77个untrackedUI文件保留并如实报告。Push NOT_RUN。
 
 Foundation保持FROZEN_FOR_BETA；楼梯STAIR_CLEARANCE PARTIAL_PASS、STAIR_TRAVERSAL NOT_RUN；不纳入载客/旋转平台/死亡/任意PuzzleStateSave。非阻塞P2/P3进入POST_INTEGRATION_POLISH_BACKLOG。完成后停止。
+
+00共享Harness补充边界：现有tests/beta_sprint/build_source_daily.ps1仅将复制文件大小的Get-Item加-Force。visual_daily_20261007_01真实打包在已复制/哈希一致的Hidden .editorconfig处读取Length失败，尚未启动Godot；保留该失败目录，另用新BuildName。此修复不改变包内容、验证门槛或Runtime，正式375个Runtime/Test/Asset源码哈希仍必须一致。

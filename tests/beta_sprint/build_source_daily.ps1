@@ -27,7 +27,7 @@ foreach ($dailyRelative in $dailyFiles) {
     Copy-Item -LiteralPath $dailyFrom -Destination $dailyTo
     $dailyHash = (Get-FileHash -LiteralPath $dailyFrom -Algorithm SHA256).Hash
     if ($dailyHash -ne (Get-FileHash -LiteralPath $dailyTo -Algorithm SHA256).Hash) { throw "Source changed during snapshot: $dailyRelative. Preserve this failed build and rerun with a fresh name." }
-    $dailyManifest.Add([pscustomobject]@{ path=$dailyRelative; sha256=$dailyHash.ToLowerInvariant(); bytes=(Get-Item -LiteralPath $dailyTo).Length })
+    $dailyManifest.Add([pscustomobject]@{ path=$dailyRelative; sha256=$dailyHash.ToLowerInvariant(); bytes=(Get-Item -LiteralPath $dailyTo -Force).Length })
 }
 $dailyMainMatch = [regex]::Match((Get-Content -LiteralPath (Join-Path $dailyProject 'project.godot') -Raw), '(?m)^run/main_scene="([^"]+)"\r?$')
 if (-not $dailyMainMatch.Success) { throw 'Copied project has no configured Main Scene.' }
