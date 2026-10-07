@@ -1,0 +1,76 @@
+{
+  "status": "PASS_WITH_KNOWN_BASELINE_BOOT_WARNINGS",
+  "source_head": "8a7d339994f68cf15727bf7dc5b75c36110184b5",
+  "formal_tested_head": "22dc7281a54250db93f6d70e607fa0a00e206f78",
+  "build": "E:/godot/beta-sprint-builds/visual_daily_20261007_02",
+  "package_kind": "SOURCE_PLAYABLE_NOT_EXE",
+  "copied_files": 1206,
+  "copied_sha_mismatches": 0,
+  "formal_runtime_source_files": 375,
+  "formal_runtime_source_mismatches": 0,
+  "checks": [
+    {
+      "stage": "import",
+      "exit_code": 0,
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_prior_boot_warning": null,
+      "stdout_errors": 0
+    },
+    {
+      "stage": "main_scene_boot",
+      "exit_code": 0,
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_prior_boot_warning": null,
+      "stdout_errors": 0
+    },
+    {
+      "stage": "foundation_boot",
+      "exit_code": 0,
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_prior_boot_warning": null,
+      "stdout_errors": 0
+    },
+    {
+      "stage": "content_mutsumi_l01_boot",
+      "exit_code": 0,
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_prior_boot_warning": null,
+      "stdout_errors": 0
+    },
+    {
+      "stage": "content_mutsumi_l02_boot",
+      "exit_code": 0,
+      "status": "PASS",
+      "stderr_bytes": 133,
+      "stderr_sha256": "bf8149e7a4c220bbef9c5eac13cd97f17ae895e5fff5a7befa152e30319f4d9d",
+      "matches_prior_boot_warning": true,
+      "stdout_errors": 0
+    },
+    {
+      "stage": "content_mutsumi_l03_boot",
+      "exit_code": 0,
+      "status": "PASS",
+      "stderr_bytes": 133,
+      "stderr_sha256": "bf8149e7a4c220bbef9c5eac13cd97f17ae895e5fff5a7befa152e30319f4d9d",
+      "matches_prior_boot_warning": true,
+      "stdout_errors": 0
+    }
+  ],
+  "prior_warning_baseline_head": "e22d0255e8a974c1f87445516b16ddcb71af465e",
+  "prior_warning_baseline": "E:/godot/beta-sprint-builds/beta_slice_20261006_content_shell_01/build-manifest.json",
+  "warning_scope": "Standalone frozen greybox L02/L03 --quit-after120 exit cleanup warns four ObjectDB instances; identical stderr bytes in previous Beta Slice. No new Runtime/UI failure. Main formal UI and L01 parity processes have empty stderr.",
+  "archive": {
+    "zip": "E:\\godot\\beta-sprint-builds\\visual_daily_20261007_02.zip",
+    "sha256": "562a824cdea42985077f99677fd3a5bc982676748470d843dafc7992c1b57164",
+    "bytes": 84649034,
+    "package_kind": "SOURCE_PLAYABLE_NOT_EXE"
+  }
+}

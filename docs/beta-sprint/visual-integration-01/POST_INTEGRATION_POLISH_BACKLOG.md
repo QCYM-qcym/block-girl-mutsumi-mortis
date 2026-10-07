@@ -5,3 +5,5 @@
 已确认P2：VIS01-P2-001，compact panel底部辅助文字按Window而非panel bottom定位。ui_graph03/seed/pause_1280x720.png中导航footnote稍越过石板边；contract_complete_960x720_false_false.png中人工注入长存档错误的最后一句次要说明跨到较深背景。主要动作、真实键鼠导航、错误原因、原档安全说明和Retry均可读/可操作。独立审查确认不阻塞，按用户冻结规则仅进入Backlog，不修改已批准Art，不重开工具/美术线。位置：game/shell/visual_01/approved_shell_view.gd的status/footnote定位。Human QA尚未执行，不能据此声称完整QA无问题。
 
 保留范围：高级水体、可选环境微动画/次要装饰、非阻塞字体微调均不属于本轮接入必需交付；没有真实缺陷证据时不计为已发现P2。
+
+已有工具问题（不计新增UI P2）：Daily Build L02/L03单场景--quit-after120退出各报4 ObjectDB实例WARNING，stderr133bytes/SHA bf8149e7a4c220bbef9c5eac13cd97f17ae895e5fff5a7befa152e30319f4d9d，逐字节匹配20261006旧Beta Slice e22d0255e8a974c1f87445516b16ddcb71af465e。复制工程boot exit0，正式MAIN UI/L01流程及冷Continue stderr空。沿用既有Boot门槛，保留警告到工具Backlog；不退回Owner、不改冻结Core。详情见DAILY_BUILD_VERIFICATION.json。
