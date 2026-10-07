@@ -5,7 +5,7 @@ const SaveStore = preload("res://game/shell/save_store.gd")
 const Catalog = preload("res://game/shell/level_catalog.gd")
 const Settings = preload("res://game/shell/settings.gd")
 const Adapter = preload("res://game/shell/level_adapter.gd")
-const View = preload("res://game/shell/shell_view.gd")
+const View = preload("res://game/shell/visual_01/approved_shell_view.gd")
 const InputGate = preload("res://game/shell/shell_input.gd")
 enum State { BOOT, MAIN_MENU, LEVEL_SELECT, PLAYING, PAUSED, LEVEL_COMPLETE }
 @export var save_path := SaveStore.DEFAULT_PATH
@@ -26,6 +26,7 @@ func _ready() -> void:
 	get_window().title = "Mutsumi Veilshift · 方块少女 · Beta"
 	get_window().size = Vector2i(1280, 900)
 	get_window().min_size = Vector2i(900, 700)
+	get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--shell-save=user://"):
 			save_path = arg.trim_prefix("--shell-save=")

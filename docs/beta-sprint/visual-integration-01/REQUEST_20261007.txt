@@ -1,0 +1,767 @@
+PROJECT: Mutsumi Veilshift / 方块少女-若叶睦
+SPRINT: Beta Sprint
+
+PHASE:
+MAIN PROJECT VISUAL INTEGRATION 01
+
+MODE:
+BUILD / PARALLEL
+
+==================================================
+CURRENT ART HANDOFF
+==================================================
+
+Gameplay Art：
+
+VERTICAL_SLICE_ART_READY = YES
+
+ART_LINE_STATUS =
+FROZEN / GAME_PRODUCTION_SUPPORT
+
+保留：
+
+STAIR_CLEARANCE = PARTIAL_PASS
+STAIR_TRAVERSAL = NOT_RUN
+
+
+Game Shell UI：
+
+BETA_UI_ART_BASELINE = APPROVED
+BETA_UI_EXTENSION_SET_01 = APPROVED
+
+GAME_SHELL_UI_HANDOFF = READY
+GAME_SHELL_UI_DOCUMENTATION = COMPLETE
+
+GAME_SHELL_INTEGRATION = NOT_RUN
+
+==================================================
+ART FREEZE RULE
+==================================================
+
+当前批准的：
+
+- 若叶睦3D角色；
+- Surface；
+- Inner；
+- 机关；
+- World Shift VFX；
+- Game Shell UI；
+- UI tokens；
+- UI icon / typography / layout language；
+
+全部保持冻结。
+
+Main Project Integration阶段：
+
+不得默认重新设计。
+
+只有主项目真实运行暴露：
+
+P0 / P1
+
+才允许：
+
+MAIN_PROJECT_INTEGRATION_REQUEST
+→ 回交05 Art。
+
+P2 / P3：
+
+进入Backlog，
+不重新打开美术线。
+
+==================================================
+GOAL
+==================================================
+
+完成第一份：
+
+VISUALLY_INTEGRATED_BETA_SLICE
+
+即玩家能够：
+
+启动正式主工程
+→ 看到正式Game Shell UI
+→ 进入L-01
+→ 看到正式3D若叶睦和3D世界
+→ 完整游玩
+→ 暂停
+→ Reset
+→ World Shift
+→ Goal
+→ Level Complete
+→ 返回正式UI
+→ Save / Continue仍正常
+
+本阶段不增加：
+
+L-04
+新玩法机制
+新Foundation能力
+新Art Direction
+
+==================================================
+PARALLEL TRACK A
+PLAYABLE-ART-VERTICAL-SLICE-01
+==================================================
+
+目标：
+
+把L-01从Pixel presentation
+迁移到正式3D presentation。
+
+要求保留：
+
+同一RuntimeSession
+同一Puzzle State
+同一Cube orientation
+同一World Shift state
+同一Goal
+同一Save/Game Shell flow。
+
+Pixel Presenter：
+
+PRESERVE AS REGRESSION REFERENCE
+
+不得删除。
+
+
+必须验证：
+
+Wakaba 3D:
+PASS
+
+3D roll:
+PASS
+
+six-face orientation:
+PASS
+
+4×90 camera:
+PASS
+
+Surface:
+PASS
+
+Inner:
+PASS
+
+World Shift VFX:
+PASS
+
+mechanism visuals:
+PASS
+
+Reset:
+PASS
+
+Goal:
+PASS
+
+StateKey parity:
+PASS
+
+Pixel vs 3D gameplay outcome:
+MATCH
+
+==================================================
+PARALLEL TRACK B
+GAME-SHELL-UI-INTEGRATION-01
+==================================================
+
+使用正式UI handoff文档：
+
+GAME_SHELL_UI_HANDOFF.md
+
+UI_SCREEN_MANIFEST.md
+
+UI_TOKEN_EXPORT_SUMMARY.md
+
+UI_INTEGRATION_CHECKLIST.md
+
+
+现有Game Shell业务逻辑：
+
+KEEP
+
+包括：
+
+Main Menu
+Level Select
+Pause
+Settings
+Level Complete
+Hint
+Save
+Continue
+Unlock flow
+
+
+禁止重新实现：
+
+Save logic
+Game Flow state machine
+关卡解锁逻辑
+
+只替换/接入：
+
+正式视觉层。
+
+==================================================
+UI SIX SCREEN TARGET
+==================================================
+
+按UI_SCREEN_MANIFEST实际定义接入六个页面。
+
+必须保持：
+
+screen state contract
+action contract
+save-dependent state
+world-state binding
+hint lifecycle
+
+不得为了视觉效果：
+
+改变业务逻辑。
+
+==================================================
+UI TOKEN RULE
+==================================================
+
+正式视觉参数必须来自：
+
+UI_TOKEN_EXPORT_SUMMARY.md
+
+包括实际冻结的：
+
+color
+typography
+spacing
+icon
+panel
+button
+state
+motion
+
+不要在Godot实现阶段：
+
+凭感觉重新调一套颜色
+增加新渐变
+改圆角体系
+增加AI感装饰。
+
+如果Godot实现和设计图存在技术差异：
+
+优先保持Design System，
+再做最小Runtime adaptation。
+
+==================================================
+UI ART DIRECTION
+==================================================
+
+正式UI必须延续：
+
+3D Surface World视觉语言。
+
+核心：
+
+象牙白
+低饱和蓝
+鼠尾草绿
+克制
+建筑式几何
+留白
+细结构线
+统一图标语言
+
+禁止重新引入：
+
+霓虹蓝紫
+随机渐变
+玻璃拟态堆叠
+大量胶囊按钮
+无来源发光描边
+手游模板UI
+明显AI生成视觉语言。
+
+==================================================
+UI MAIN PROJECT VALIDATION
+==================================================
+
+必须在真实Godot主项目重新验证：
+
+focus navigation
+
+keyboard navigation
+
+controller navigation
+（仅当前项目正式支持时）
+
+save-state dependent UI
+
+long-text overflow
+
+1920×1080
+
+1280×720
+
+960×720
+
+pause/resume flow
+
+level-complete flow
+
+hint lifecycle
+
+world-state binding
+
+不得引用：
+
+Art验证工程截图
+
+作为主项目PASS。
+
+==================================================
+SHARED FILE POLICY
+==================================================
+
+本阶段预计可能需要修改高冲突文件：
+
+Main Scene
+Theme
+Autoload wiring
+UI scene entry
+L-01 presentation entry
+
+这些由：
+
+00 Integration
+
+统一处理。
+
+Owner不要各自在独立worktree抢改：
+
+project.godot
+
+InputMap
+
+Main Scene
+
+Global Autoload
+
+Global Theme registry
+
+==================================================
+FOUNDATION RULE
+==================================================
+
+Foundation Core保持：
+
+FROZEN_FOR_BETA
+
+禁止修改：
+
+Puzzle Kernel
+RuntimeSession
+Baker
+Validator
+Solver
+Safety
+Binder
+D_JOBS
+Wire schema
+Snapshot
+Canonical loader
+
+除非出现真实P0/P1 Runtime regression。
+
+==================================================
+GAME CONTENT RULE
+==================================================
+
+L-01逻辑：
+
+UNCHANGED
+
+L-02 / L-03：
+
+本阶段不做3D迁移。
+
+不得：
+
+调整谜题布局
+改Spawn
+改Goal
+改变解法
+新增机制。
+
+==================================================
+SAVE / SHELL RULE
+==================================================
+
+必须继续通过：
+
+Main Menu
+
+Level Select
+
+L-01 entry
+
+Pause
+
+Reset
+
+Level Complete
+
+Save
+
+Continue
+
+Cold Restart
+
+
+特别验证：
+
+3D presentation接入后：
+
+Save progression
+不能发生变化。
+
+==================================================
+HINT QA FEEDBACK
+==================================================
+
+当前已知QA反馈：
+
+L-03 stale hint
+Inner readability
+Perspective Connection理解
+
+其中：
+
+L-03内容提示修复
+由06/07独立处理。
+
+本任务不扩到L-03。
+
+但是正式UI Hint系统接入后必须保证：
+
+hint lifecycle能力本身正确。
+
+==================================================
+MAIN PROJECT QA FLOW
+==================================================
+
+至少完整执行：
+
+CASE A
+
+Cold Start
+→ Main Menu
+→ Level Select
+→ L-01
+
+PASS
+
+
+CASE B
+
+L-01
+→ 3D Move
+→ Camera Rotate
+→ World Shift
+→ Reset
+→ Continue Playing
+
+PASS
+
+
+CASE C
+
+L-01 Complete
+→ Level Complete UI
+→ L-02 unlock
+
+PASS
+
+
+CASE D
+
+Exit process
+→ Restart
+→ Continue
+
+PASS
+
+
+CASE E
+
+Pause
+→ Settings
+→ Resume
+
+PASS
+
+
+CASE F
+
+三个目标分辨率：
+
+1920×1080
+1280×720
+960×720
+
+核心UI无：
+
+重叠
+裁切
+不可操作
+关键文字溢出。
+
+==================================================
+ART INTEGRATION FAILURE POLICY
+==================================================
+
+发现：
+
+美术 P0 / P1
+
+输出：
+
+MAIN_PROJECT_INTEGRATION_REQUEST
+
+格式：
+
+Asset:
+<资产>
+
+Severity:
+P0 / P1
+
+Main project scene:
+<场景>
+
+Steps:
+<复现>
+
+Expected:
+<预期>
+
+Actual:
+<实际>
+
+Screenshot:
+<证据>
+
+Gameplay impact:
+<影响>
+
+
+交回05 Art。
+
+不要主项目自行重做资产。
+
+==================================================
+P2 POLICY
+==================================================
+
+以下不阻塞：
+
+轻微材质差异
+
+高级水体问题
+
+微动画缺失
+
+次要装饰
+
+局部UI polish
+
+非阻塞字体微调
+
+这些全部：
+
+POST_INTEGRATION_POLISH_BACKLOG
+
+==================================================
+QA HANDOFF
+==================================================
+
+完成后立即交：
+
+08 QA & Build
+
+进行：
+
+BLACK_BOX_3D_UI_QA_01
+
+QA不得只验证截图。
+
+必须真实：
+
+玩L-01
+操作菜单
+Pause
+Reset
+完成
+重启
+Continue。
+
+==================================================
+SUCCESS OUTPUT
+==================================================
+
+MAIN_PROJECT_VISUAL_INTEGRATION_01_READY
+
+Gameplay Art:
+
+L-01 3D:
+PASS
+
+Wakaba:
+PASS
+
+Roll:
+PASS
+
+Orientation:
+PASS
+
+Surface:
+PASS
+
+Inner:
+PASS
+
+World Shift VFX:
+PASS
+
+Mechanisms:
+PASS
+
+
+Game Shell UI:
+
+UI handoff integrated:
+PASS
+
+Main Menu:
+PASS
+
+Level Select:
+PASS
+
+Pause:
+PASS
+
+Settings:
+PASS
+
+Level Complete:
+PASS
+
+Hint:
+PASS
+
+
+Resolution:
+
+1920×1080:
+PASS
+
+1280×720:
+PASS
+
+960×720:
+PASS
+
+
+Navigation:
+
+Mouse:
+PASS
+
+Keyboard:
+PASS
+
+Controller:
+<实际>
+
+
+Game Flow:
+
+Save:
+PASS
+
+Continue:
+PASS
+
+Reset:
+PASS
+
+Cold Restart:
+PASS
+
+L-01 → L-02:
+PASS
+
+
+Gameplay parity:
+
+Pixel reference:
+PRESERVED
+
+3D StateKey parity:
+PASS
+
+
+Art status:
+
+ART_SOURCE_CHANGES:
+NONE
+
+UI_ART_SOURCE_CHANGES:
+NONE
+
+MAIN_PROJECT_INTEGRATION_REQUEST:
+NONE / <实际>
+
+
+STAIR_CLEARANCE:
+PARTIAL_PASS
+
+STAIR_TRAVERSAL:
+NOT_RUN
+
+
+Foundation changes:
+NONE
+
+P0:
+<count>
+
+P1:
+<count>
+
+P2:
+<count>
+
+QA:
+READY
+
+Daily Build:
+<实际路径>
+
+Working tree:
+CLEAN
+
+Push:
+NOT_RUN
+
+然后停止。
+
+不要开始：
+L-02 3D迁移
+L-04
+新Art设计
+新Foundation开发
