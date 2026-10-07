@@ -97,4 +97,3 @@ try {
     Save-ArtSummary
     throw
 }
-
