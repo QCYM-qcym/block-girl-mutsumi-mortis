@@ -1,0 +1,10 @@
+PROJECT: Mutsumi Veilshift
+TRACK: 00 Integration Coordinator
+MODE: BUILD / FOCUSED INTEGRATION
+TASK: UI-08-001_INTEGRATION
+Fix source: 07 Game Shell
+Fix commit: 81d9470c174bd67a73e7e8fedf4b92240ddfc2fd
+Goal: Integrate L-02 pause text visibility fix into current Beta Integration branch and generate a new QA test build.
+Audit exact differences; only expected Game Shell UI scope. Prefer normal merge; if unrelated branch changes exist, allow one controlled cherry-pick of exact fix commit. Do not modify frozen UI Art, Save, Foundation, Gameplay, level geometry or puzzle content.
+Focused regression: Main Menu, L-02 Pause, Pause -> Resume, Esc -> Resume, Level Select, Settings, Hint presentation. No repeated full three-level playthrough, unlock or Cold Continue unless new regression evidence appears. New QA build must not overwrite old builds.
+Output: UI_08_001_INTEGRATED_READY; real Integration commit; original Fix commit; actual focused regression; real New QA build; UI-08-001 OPEN / READY_FOR_08_RECHECK; Human QA NOT_RUN; Foundation changes NONE; Art changes NONE; Working tree CLEAN; Push NOT_RUN.

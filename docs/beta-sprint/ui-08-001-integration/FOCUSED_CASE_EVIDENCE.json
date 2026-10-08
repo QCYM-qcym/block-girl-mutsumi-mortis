@@ -1,0 +1,533 @@
+{
+	"cases": [
+		{
+			"backing_visible": false,
+			"case": "level_select",
+			"screen": "select",
+			"screenshot": "level_select_1280x900.png",
+			"settings_open": false,
+			"state": 2,
+			"window": "(1280, 900)"
+		},
+		{
+			"backing_visible": false,
+			"case": "pause",
+			"screen": "pause",
+			"screenshot": "pause_1920x1080.png",
+			"settings_open": false,
+			"state": 4,
+			"window": "(1920, 1080)"
+		},
+		{
+			"backing_visible": false,
+			"case": "settings",
+			"screen": "settings",
+			"screenshot": "settings_1920x1080.png",
+			"settings_open": true,
+			"state": 4,
+			"window": "(1920, 1080)"
+		},
+		{
+			"backing_visible": true,
+			"case": "hint_and_resumed",
+			"screen": "playing",
+			"screenshot": "hint_and_resumed_1920x1080.png",
+			"settings_open": false,
+			"state": 3,
+			"window": "(1920, 1080)"
+		},
+		{
+			"backing_visible": false,
+			"case": "pause",
+			"screen": "pause",
+			"screenshot": "pause_1280x720.png",
+			"settings_open": false,
+			"state": 4,
+			"window": "(1280, 720)"
+		},
+		{
+			"backing_visible": false,
+			"case": "settings",
+			"screen": "settings",
+			"screenshot": "settings_1280x720.png",
+			"settings_open": true,
+			"state": 4,
+			"window": "(1280, 720)"
+		},
+		{
+			"backing_visible": true,
+			"case": "hint_and_resumed",
+			"screen": "playing",
+			"screenshot": "hint_and_resumed_1280x720.png",
+			"settings_open": false,
+			"state": 3,
+			"window": "(1280, 720)"
+		},
+		{
+			"backing_visible": false,
+			"case": "pause",
+			"screen": "pause",
+			"screenshot": "pause_960x720.png",
+			"settings_open": false,
+			"state": 4,
+			"window": "(960, 720)"
+		},
+		{
+			"backing_visible": false,
+			"case": "settings",
+			"screen": "settings",
+			"screenshot": "settings_960x720.png",
+			"settings_open": true,
+			"state": 4,
+			"window": "(960, 720)"
+		},
+		{
+			"backing_visible": true,
+			"case": "hint_and_resumed",
+			"screen": "playing",
+			"screenshot": "hint_and_resumed_960x720.png",
+			"settings_open": false,
+			"state": 3,
+			"window": "(960, 720)"
+		},
+		{
+			"backing_visible": false,
+			"case": "main_menu_return",
+			"screen": "main",
+			"screenshot": "main_menu_return_960x720.png",
+			"settings_open": false,
+			"state": 1,
+			"window": "(960, 720)"
+		}
+	],
+	"checks": 127,
+	"completion_events": 0,
+	"device": "NVIDIA GeForce RTX 5060 Ti",
+	"display": "Windows",
+	"failures": [],
+	"head": "81d9470c174bd67a73e7e8fedf4b92240ddfc2fd",
+	"human_qa": "NOT_RUN",
+	"issue": "UI-08-001",
+	"issue_status": "OPEN / READY_FOR_08_RECHECK",
+	"pause_observations": [
+		{
+			"ancestors": [
+				{
+					"class": "Label",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Label@23",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@22",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Button",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Button@21",
+					"self_modulate": "(1.0, 1.0, 1.0, 0.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@4",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "CanvasLayer",
+					"layer": 100,
+					"name": "@CanvasLayer@3"
+				},
+				{
+					"class": "Node",
+					"name": "GameShell"
+				},
+				{
+					"class": "Window",
+					"name": "root"
+				}
+			],
+			"backing_color": "e0e3dbff",
+			"button_rect": "[P: (1648.0, 32.0), S: (240.0, 64.0)]",
+			"contrast": 12.2359622414105,
+			"display_text": "暂停  Esc",
+			"drawn_ink_pixels": 467,
+			"font_color": "162333ff",
+			"font_resource": "",
+			"font_size": 32,
+			"label_rect": "[P: (1712.0, 32.0), S: (136.0, 64.0)]",
+			"label_text": "暂停  Esc",
+			"level": "mutsumi_l02",
+			"render_target": "(1920, 1080)",
+			"requested": "(1920, 1080)",
+			"screen": "playing",
+			"screenshot": "1920x1080_focused_playing.png",
+			"state": 3,
+			"text": "暂停  [Esc]",
+			"viewport": "(1920.0, 1080.0)",
+			"visible_in_tree": true,
+			"window": "(1920, 1080)"
+		},
+		{
+			"ancestors": [
+				{
+					"class": "Label",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Label@23",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@22",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Button",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Button@21",
+					"self_modulate": "(1.0, 1.0, 1.0, 0.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@4",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "CanvasLayer",
+					"layer": 100,
+					"name": "@CanvasLayer@3"
+				},
+				{
+					"class": "Node",
+					"name": "GameShell"
+				},
+				{
+					"class": "Window",
+					"name": "root"
+				}
+			],
+			"backing_color": "e0e3dbff",
+			"button_rect": "[P: (1648.0, 32.0), S: (240.0, 64.0)]",
+			"contrast": 12.2359622414105,
+			"display_text": "暂停  Esc",
+			"drawn_ink_pixels": 467,
+			"font_color": "162333ff",
+			"font_resource": "",
+			"font_size": 32,
+			"label_rect": "[P: (1712.0, 32.0), S: (136.0, 64.0)]",
+			"label_text": "暂停  Esc",
+			"level": "mutsumi_l02",
+			"render_target": "(1920, 1080)",
+			"requested": "(1920, 1080)",
+			"screen": "playing",
+			"screenshot": "1920x1080_focused_resumed.png",
+			"state": 3,
+			"text": "暂停  [Esc]",
+			"viewport": "(1920.0, 1080.0)",
+			"visible_in_tree": true,
+			"window": "(1920, 1080)"
+		},
+		{
+			"ancestors": [
+				{
+					"class": "Label",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Label@23",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@22",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Button",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Button@21",
+					"self_modulate": "(1.0, 1.0, 1.0, 0.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@4",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "CanvasLayer",
+					"layer": 100,
+					"name": "@CanvasLayer@3"
+				},
+				{
+					"class": "Node",
+					"name": "GameShell"
+				},
+				{
+					"class": "Window",
+					"name": "root"
+				}
+			],
+			"backing_color": "e0e3dbff",
+			"button_rect": "[P: (1098.667, 21.33333), S: (160.0, 44.0)]",
+			"contrast": 12.2359622414105,
+			"display_text": "暂停  Esc",
+			"drawn_ink_pixels": 266,
+			"font_color": "162333ff",
+			"font_resource": "",
+			"font_size": 22,
+			"label_rect": "[P: (1141.333, 21.33333), S: (90.66666, 44.0)]",
+			"label_text": "暂停  Esc",
+			"level": "mutsumi_l02",
+			"render_target": "(1280, 720)",
+			"requested": "(1280, 720)",
+			"screen": "playing",
+			"screenshot": "1280x720_focused_playing.png",
+			"state": 3,
+			"text": "暂停  [Esc]",
+			"viewport": "(1280.0, 720.0)",
+			"visible_in_tree": true,
+			"window": "(1280, 720)"
+		},
+		{
+			"ancestors": [
+				{
+					"class": "Label",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Label@23",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@22",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Button",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Button@21",
+					"self_modulate": "(1.0, 1.0, 1.0, 0.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@4",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "CanvasLayer",
+					"layer": 100,
+					"name": "@CanvasLayer@3"
+				},
+				{
+					"class": "Node",
+					"name": "GameShell"
+				},
+				{
+					"class": "Window",
+					"name": "root"
+				}
+			],
+			"backing_color": "e0e3dbff",
+			"button_rect": "[P: (1098.667, 21.33333), S: (160.0, 44.0)]",
+			"contrast": 12.2359622414105,
+			"display_text": "暂停  Esc",
+			"drawn_ink_pixels": 266,
+			"font_color": "162333ff",
+			"font_resource": "",
+			"font_size": 22,
+			"label_rect": "[P: (1141.333, 21.33333), S: (90.66666, 44.0)]",
+			"label_text": "暂停  Esc",
+			"level": "mutsumi_l02",
+			"render_target": "(1280, 720)",
+			"requested": "(1280, 720)",
+			"screen": "playing",
+			"screenshot": "1280x720_focused_resumed.png",
+			"state": 3,
+			"text": "暂停  [Esc]",
+			"viewport": "(1280.0, 720.0)",
+			"visible_in_tree": true,
+			"window": "(1280, 720)"
+		},
+		{
+			"ancestors": [
+				{
+					"class": "Label",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Label@23",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@22",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Button",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Button@21",
+					"self_modulate": "(1.0, 1.0, 1.0, 0.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@4",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "CanvasLayer",
+					"layer": 100,
+					"name": "@CanvasLayer@3"
+				},
+				{
+					"class": "Node",
+					"name": "GameShell"
+				},
+				{
+					"class": "Window",
+					"name": "root"
+				}
+			],
+			"backing_color": "e0e3dbff",
+			"button_rect": "[P: (784.0, 16.0), S: (160.0, 44.0)]",
+			"contrast": 12.2359622414105,
+			"display_text": "暂停  Esc",
+			"drawn_ink_pixels": 266,
+			"font_color": "162333ff",
+			"font_resource": "",
+			"font_size": 22,
+			"label_rect": "[P: (816.0, 16.0), S: (108.0, 44.0)]",
+			"label_text": "暂停  Esc",
+			"level": "mutsumi_l02",
+			"render_target": "(960, 720)",
+			"requested": "(960, 720)",
+			"screen": "playing",
+			"screenshot": "960x720_focused_playing.png",
+			"state": 3,
+			"text": "暂停  [Esc]",
+			"viewport": "(960.0, 720.0)",
+			"visible_in_tree": true,
+			"window": "(960, 720)"
+		},
+		{
+			"ancestors": [
+				{
+					"class": "Label",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Label@23",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@22",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Button",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Button@21",
+					"self_modulate": "(1.0, 1.0, 1.0, 0.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "Control",
+					"modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"name": "@Control@4",
+					"self_modulate": "(1.0, 1.0, 1.0, 1.0)",
+					"visible": true,
+					"z_index": 0
+				},
+				{
+					"class": "CanvasLayer",
+					"layer": 100,
+					"name": "@CanvasLayer@3"
+				},
+				{
+					"class": "Node",
+					"name": "GameShell"
+				},
+				{
+					"class": "Window",
+					"name": "root"
+				}
+			],
+			"backing_color": "e0e3dbff",
+			"button_rect": "[P: (784.0, 16.0), S: (160.0, 44.0)]",
+			"contrast": 12.2359622414105,
+			"display_text": "暂停  Esc",
+			"drawn_ink_pixels": 266,
+			"font_color": "162333ff",
+			"font_resource": "",
+			"font_size": 22,
+			"label_rect": "[P: (816.0, 16.0), S: (108.0, 44.0)]",
+			"label_text": "暂停  Esc",
+			"level": "mutsumi_l02",
+			"render_target": "(960, 720)",
+			"requested": "(960, 720)",
+			"screen": "playing",
+			"screenshot": "960x720_focused_resumed.png",
+			"state": 3,
+			"text": "暂停  [Esc]",
+			"viewport": "(960.0, 720.0)",
+			"visible_in_tree": true,
+			"window": "(960, 720)"
+		}
+	],
+	"pid": 48452,
+	"project": "E:/godot/worktrees/block-girl-foundation-4-integration/",
+	"renderer": "forward_plus",
+	"save_path": "user://beta_sprint/ui_08_001_focused_618825/progress.json",
+	"scope": "Seven focused interactions only; explicit unlocked L02 fixture; no full playthrough/unlock/Cold Continue"
+}

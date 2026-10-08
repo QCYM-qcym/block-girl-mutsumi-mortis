@@ -1,0 +1,11 @@
+# UI-08-001 focused validation history
+
+Exact source fix 81d9470c174bd67a73e7e8fedf4b92240ddfc2fd was normally fast-forward merged from Integration baseline 4c505e03f71f7269581078fc586cd8c43cd2701e. No cherry-pick, no owner branch's later report commit, no MAIN change.
+
+- int_focus01: import PID16108 PASS; unchanged Owner case PID35716 40/40 PASS, stderr empty. New coordinator script PID36876 failed before execution because its first line accidentally contained a plus before the comment. That test-only formatting error was corrected; production source did not change. Whole run is FAIL and remains preserved.
+- int_focus02: import PID21756 PASS; Owner case PID28776 reached40 checks but had3 failures at 960×720, where actual state was PAUSED before label inspection. It resumed through Escape and then measured12.236:1. Existing game_shell.gd:303 automatically pauses on Window focus loss; the hidden graphical resize triggered that unchanged behavior. This is a PLAYING precondition failure, not a failed fix. Preserve all observations; do not modify 07's exact source test or the existing lifecycle.
+- int_focus03: coordinator harness records any existing focus-loss Pause after resize and uses the original Escape action to establish PLAYING before the case. Run with -Mode focused: import PID13428, focused PID48452,127/127 PASS, exit0, stderr empty, stdout clean. Actual seven requested interaction groups executed; Goal events0. Six actual rendered pause measurements across three resolutions showed12.235962:1, with467 visible stroke pixels at1920×1080 and266 at the smaller sizes. No three-level playthrough, unlock or Cold Continue rerun.
+
+Formal command: tests/beta_sprint/ui_08_001_integration/run_focused_ui.ps1 -EvidenceName <fresh-name> -Mode focused. Earlier evidence remains under Integration/.godot/ui-08-001/. This is automated engine rendering/Input.parse_input_event, never Human acceptance or a claim that native-window activation has been fixed.
+
+07's production file is untouched after merge. 660 protected files and77 approved UI source files remain byte-identical; all668 captured focused source files match. Existing compact-panel auxiliary text/greybox presentation limitations are outside this eight-line fix; no redesign or additional production polish is included.
