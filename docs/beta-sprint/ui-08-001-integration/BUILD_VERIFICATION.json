@@ -1,0 +1,75 @@
+{
+  "status": "PASS_WITH_KNOWN_BASELINE_BOOT_WARNINGS",
+  "build": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01",
+  "source_head": "ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3",
+  "package_kind": "SOURCE_PLAYABLE_NOT_EXE",
+  "copied_files": 1148,
+  "copied_hash_mismatches": 0,
+  "focused_source_files": 668,
+  "focused_source_hash_mismatches": 0,
+  "boot_checks": [
+    {
+      "stage": "import",
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "known_warning_match": null,
+      "stderr": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\import.stderr.log",
+      "stdout": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\import.stdout.log"
+    },
+    {
+      "stage": "main_scene_boot",
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "known_warning_match": null,
+      "stderr": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\main_scene_boot.stderr.log",
+      "stdout": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\main_scene_boot.stdout.log"
+    },
+    {
+      "stage": "foundation_boot",
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "known_warning_match": null,
+      "stderr": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\foundation_boot.stderr.log",
+      "stdout": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\foundation_boot.stdout.log"
+    },
+    {
+      "stage": "content_mutsumi_l01_boot",
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "known_warning_match": null,
+      "stderr": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\content_mutsumi_l01_boot.stderr.log",
+      "stdout": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\content_mutsumi_l01_boot.stdout.log"
+    },
+    {
+      "stage": "content_mutsumi_l02_boot",
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "known_warning_match": null,
+      "stderr": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\content_mutsumi_l02_boot.stderr.log",
+      "stdout": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\content_mutsumi_l02_boot.stdout.log"
+    },
+    {
+      "stage": "content_mutsumi_l03_boot",
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 133,
+      "known_warning_match": true,
+      "stderr": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\content_mutsumi_l03_boot.stderr.log",
+      "stdout": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\.godot\\beta-sprint\\visual_ui08001_20261009_01\\content_mutsumi_l03_boot.stdout.log"
+    }
+  ],
+  "archive": {
+    "zip": "E:\\godot\\beta-sprint-builds\\visual_ui08001_20261009_01.zip",
+    "sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1",
+    "bytes": 59716624,
+    "package_kind": "SOURCE_PLAYABLE_NOT_EXE"
+  },
+  "old_build_preserved": true,
+  "old_build_archive_sha256": "562a824cdea42985077f99677fd3a5bc982676748470d843dafc7992c1b57164",
+  "scope": "Six import/boot checks only; no full playthrough/unlock/Cold Continue rerun. L02/L03 existing exit-only ObjectDB warnings byte-match old build. No Human acceptance."
+}
