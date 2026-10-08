@@ -14,6 +14,7 @@ var overlay: Control
 var body: VBoxContainer
 var status: Label
 var pause_button: Button
+var _pause_surface: ColorRect
 var heading: Label
 var ui_theme: Theme
 var focus_order: Array[Control] = []
@@ -80,6 +81,10 @@ func _ready() -> void:
 	_preview_caption = _label(overlay, "", 24)
 	status = _label(root, "", 24)
 	status.visible = false
+	# The approved Row draws ink over its parent's surface. Gameplay backgrounds
+	# can be dark (L-02 greybox), so this entry must carry its own approved stone.
+	_pause_surface = _rect(root, Tokens.COLORS.face)
+	_pause_surface.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	pause_button = Row.new()
 	pause_button.text = "暂停  [Esc]"
 	pause_button.display_text = "暂停  Esc"
@@ -119,6 +124,7 @@ func show_screen(name: String, data: Dictionary = {}) -> void:
 		child.queue_free()
 	overlay.visible = name != "playing"
 	pause_button.visible = name == "playing"
+	_pause_surface.visible = name == "playing"
 	_preview_caption.visible = name == "select"
 	_world_label.visible = name != "playing"
 	if name == "playing":
@@ -444,6 +450,8 @@ func _layout() -> void:
 	pause_button.position = Vector2(area.x - maxf(160, 240 * unit) - 32 * unit, 32 * unit)
 	pause_button.size = Vector2(maxf(160, 240 * unit), maxf(44, 64 * unit))
 	pause_button.configure(unit)
+	_pause_surface.position = pause_button.position
+	_pause_surface.size = pause_button.size
 
 func _text_height(label: Label, width: float) -> float:
 	return label.get_theme_font("font").get_multiline_string_size(label.text, HORIZONTAL_ALIGNMENT_LEFT,
