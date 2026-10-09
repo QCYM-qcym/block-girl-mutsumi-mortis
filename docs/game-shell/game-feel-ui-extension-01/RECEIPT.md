@@ -2,7 +2,7 @@
 
 GAME_FEEL_UI_EXTENSION_READY: **NOT_READY — required shared integration cases pending**.
 
-Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Production UI implementation commit:8724dbc13c6e1852d2020be2f05eb638162e373d. Formal11 Audio dependency4afbd068fae74a826dae4db04c2c612af23fa861 was normally merged in fd29aeeb644bd8098ca3d641dcb80fc2802c5b27. Latest tested-source commit/binding is recorded in DELIVERY_BINDING.json after the Audio test handoff commit; prior104-file binding is retained in evidence/ui_only_104_binding.json.
+Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Production UI implementation commit:8724dbc13c6e1852d2020be2f05eb638162e373d. Formal11 Audio dependency4afbd068fae74a826dae4db04c2c612af23fa861 was normally merged in fd29aeeb644bd8098ca3d641dcb80fc2802c5b27. Latest source/test/evidence commit: **27ff384dbde90be9432086904b2a5cc470e24852**. Exact172-file binding is in DELIVERY_BINDING.json; the following commit contains binding/receipt metadata only. Earlier104-file binding remains in evidence/ui_only_104_binding.json.
 
 ## Requested output
 
