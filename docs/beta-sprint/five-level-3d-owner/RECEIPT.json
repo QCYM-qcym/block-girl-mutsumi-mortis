@@ -1,0 +1,559 @@
+{
+  "task": "BETA_PHASE3_3D_PRESENTATION_OWNER",
+  "baseline": "9e2e9c29a73272d431795f12db1fefaff2433b05",
+  "source_candidate_commit": "4ffc5b9e2d6a8dd125b8354a29f7a97e00414cf8",
+  "delivery_commit_identity": "Resolve the Git commit containing this receipt; verified full SHA and CLEAN are returned in handoff.",
+  "branch": "feat/beta-five-level-3d",
+  "worktree": "E:/godot/worktrees/block-girl-five-level-3d",
+  "status": "VERIFIED_CANDIDATE",
+  "implementation": "Batch02-local presentation factory/Generic subclass only; no gameplay state copy or rule changes",
+  "production_files": [
+    "game/levels/mutsumi/batch_02/l04_borrowed_path.tscn",
+    "game/levels/mutsumi/batch_02/l05_gate_home.tscn",
+    "game/levels/mutsumi/batch_02/levels_3d/presented_level.gd",
+    "game/levels/mutsumi/batch_02/levels_3d/presenter.gd"
+  ],
+  "primary_cases": [
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "current_recorded_source_sha_mismatches": 0,
+      "report_sha256": "8f1ad8bcb1191d43105c1b786231279473d1f7a37706f5559b84ae0a2f3c2f87",
+      "actual_run_head": "4ffc5b9e2d6a8dd125b8354a29f7a97e00414cf8",
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "recorded_source_files": 359,
+      "checks": 101,
+      "source_changes_during_run": [],
+      "doubles": [],
+      "renderer": null,
+      "failures": [],
+      "pid": 27796,
+      "display": "headless",
+      "case": "gr03_committed",
+      "process_sha256": "82e484426a621005b2665782f8c868ee2dfa0de2899e134056c554e16f06dcfd"
+    },
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "current_recorded_source_sha_mismatches": 0,
+      "report_sha256": "14ade6198fc42b3d0363891f32e7143926f8db89dd051d3e7cbc39c66c53ecc4",
+      "actual_run_head": "9e2e9c29a73272d431795f12db1fefaff2433b05",
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "recorded_source_files": 358,
+      "checks": 2276,
+      "source_changes_during_run": [],
+      "doubles": [],
+      "renderer": "forward_plus",
+      "failures": [],
+      "pid": 22616,
+      "display": "Windows",
+      "case": "gfx03_default",
+      "process_sha256": "0780af2dfec36cf1252e4dade7b85d5922e373db2538f0e4ad7290b56ba4105d"
+    },
+    {
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "current_recorded_source_sha_mismatches": 0,
+      "report_sha256": "4dff01bc49ab49362e3659da30adc8cf0960217f5a52f1328a329c986b1df1f1",
+      "actual_run_head": "4ffc5b9e2d6a8dd125b8354a29f7a97e00414cf8",
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "recorded_source_files": 359,
+      "checks": 27,
+      "source_changes_during_run": [],
+      "doubles": [],
+      "renderer": "forward_plus",
+      "failures": [],
+      "pid": 50820,
+      "display": "Windows",
+      "case": "cold02_committed",
+      "process_sha256": "aece129ab915a84e18f460e4bdb2dab3b9abe8ad8d7f95e85c5b3daf6507752f"
+    }
+  ],
+  "primary_checks": 2404.0,
+  "actual_route_goals": 12,
+  "actual_completion_callbacks": 12,
+  "strict_parity_matches": 6,
+  "routes": [
+    {
+      "commits": 15,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l04",
+      "mode": "normal",
+      "presentation": "pixel",
+      "state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 15,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l04",
+      "mode": "normal",
+      "presentation": "3d",
+      "state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 17,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l04",
+      "mode": "reset_replay",
+      "presentation": "pixel",
+      "state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 17,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l04",
+      "mode": "reset_replay",
+      "presentation": "3d",
+      "state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 15,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l04",
+      "mode": "alternate_camera",
+      "presentation": "pixel",
+      "state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 15,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l04",
+      "mode": "alternate_camera",
+      "presentation": "3d",
+      "state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 17,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l05",
+      "mode": "normal",
+      "presentation": "pixel",
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 17,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l05",
+      "mode": "normal",
+      "presentation": "3d",
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 19,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l05",
+      "mode": "reset_replay",
+      "presentation": "pixel",
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 19,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l05",
+      "mode": "reset_replay",
+      "presentation": "3d",
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 17,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l05",
+      "mode": "alternate_camera",
+      "presentation": "pixel",
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "commits": 17,
+      "formal_events": 1,
+      "goal": true,
+      "id": "mutsumi_l05",
+      "mode": "alternate_camera",
+      "presentation": "3d",
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    }
+  ],
+  "parity": [
+    {
+      "id": "mutsumi_l04",
+      "mode": "normal",
+      "matched": true
+    },
+    {
+      "id": "mutsumi_l04",
+      "mode": "reset_replay",
+      "matched": true
+    },
+    {
+      "id": "mutsumi_l04",
+      "mode": "alternate_camera",
+      "matched": true
+    },
+    {
+      "id": "mutsumi_l05",
+      "mode": "normal",
+      "matched": true
+    },
+    {
+      "id": "mutsumi_l05",
+      "mode": "reset_replay",
+      "matched": true
+    },
+    {
+      "id": "mutsumi_l05",
+      "mode": "alternate_camera",
+      "matched": true
+    }
+  ],
+  "serialization": "Actual deterministic JSON from native P01 state/world/orientation/mechanisms/Goal observations at each commit and settled action; explicitly not Foundation statekey.v1.",
+  "input": "Real Input.parse_input_event keys/mouse, native GridInput and native menu buttons; no graph/mover/view injection.",
+  "natural_samples": [
+    {
+      "Name": "authorized_gate_roll",
+      "Count": 6
+    },
+    {
+      "Name": "camera_preview",
+      "Count": 32
+    },
+    {
+      "Name": "roll",
+      "Count": 18
+    },
+    {
+      "Name": "world_shift",
+      "Count": 8
+    }
+  ],
+  "screenshots": 112,
+  "visually_inspected_screenshots": 9,
+  "visual_inspection": "evidence/visual-inspection01.json",
+  "progression": "Explicit prior L01-L03 fixture; L05 initially locked; actual L04 Goal unlocks L05; native menu enters L05; native completion Save/menu return/same-process Continue/new-PID Cold Continue",
+  "isolated_native_save": "user://beta_sprint/five_level_3d_owner/gfx03_default_e26fcd604f0b4d97b2c1e6c82b2be4c7/progress.json",
+  "frozen_inventory": "evidence/scope03_delivery.json",
+  "owner_files_sha_inventory": "evidence/scope03_delivery.json -> owner_files (inventory excludes only its own newly created file; receipt itself included)",
+  "frozen_baseline_files": 3961,
+  "approved_assets": 18,
+  "approved_source_project_files": 121,
+  "protected_default_saves": {
+    "user://mutsumi_veilshift/beta_progress.json": "ABSENT",
+    "user://mutsumi_veilshift/beta_progress.json.bak": "ABSENT"
+  },
+  "review": {
+    "minor": 0,
+    "file": "REVIEW.md",
+    "declined": "Final receipt/commit/CLEAN not available during independent code review; Owner verifies and 00 retains final integration review.",
+    "critical": 0,
+    "important": 0
+  },
+  "historical_cases": "Preserved unchanged; red01 six bridge assertions were false test failures; gr01/verbose Audio teardown warnings not PASS; red02 teardown and gfx02 parse errors harness-only; gfx01 real 10Goals/10callbacks with two L05 alternate route failures from fixed Qx3 test starting-view assumption. See LEDGER.md.",
+  "byte_preservation": "Owner docs .gitattributes disables text normalization for exact native Windows evidence bytes; final index blob SHA equals original local evidence SHA.",
+  "remaining_issues": [],
+  "qualifications": {
+    "stairs_clearance": "PARTIAL_PASS preserved",
+    "build": "00 OWNER / NOT_RUN HERE",
+    "stairs_traversal": "NOT_RUN",
+    "push": "NOT_RUN",
+    "Foundation": "NOT_RUN / unchanged",
+    "new_package_HumanQA": "NOT_RUN",
+    "existing_P2_backlog": "UNCHANGED"
+  }
+}
