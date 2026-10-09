@@ -41,5 +41,19 @@
     "safety_status": "UNPROVEN",
     "path_design": "clear source edge, then continuous screen-space descent, then exact target support; canonical path authored/validated by 01",
     "runtime_schema": "PENDING_OWNER01"
+  },
+  "exit_center2": [
+    -6,
+    0,
+    8
+  ],
+  "post_landing_route": {
+    "move": "MOVE",
+    "face_axis": "U_POS",
+    "face_axis_value": 0,
+    "source_face_id": "target/TOP",
+    "target_face_id": "exit/TOP",
+    "goal_face_id": "exit/TOP",
+    "requires_fall_before_route": true
   }
 }
