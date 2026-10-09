@@ -1,0 +1,41 @@
+{
+  "contract_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+  "registration_status": "TEST_DEPENDENCY_ONLY",
+  "notes": "Unexecuted example. 00 must supply actual integrated Build identity, timing and native map-B UI coordinates. Not a receipt or Real PASS.",
+  "cases": {
+    "CORE_A_NATURAL_FALL": {
+      "host_scene": "res://experiments/game_feel_01/host/core_lab.tscn",
+      "runtime_node": ".",
+      "runtime_property": "runtime",
+      "body_node": "AuthoritativeCubePose",
+      "camera_node": ".",
+      "camera_property": "camera",
+      "canonical_root": ".",
+      "delivery_commits": {
+        "00_host": "61ac470983d41ebd8a81ee44b01996ca185ae305",
+        "01_runtime": null,
+        "09_author": "54ea24cd50c4bd45b083dc26487ff2b7afd2a703",
+        "09_exit": "82a8a7dc85205e9391551f24267f35f5abe53393",
+        "10A_animation": null
+      },
+      "settle_seconds": 0.5,
+      "native_inputs": [
+        {"kind": "key", "key": "E", "pressed": true},
+        {"kind": "key", "key": "E", "pressed": false},
+        {"kind": "wait", "seconds": 0.5},
+        {"kind": "key", "key": "F", "pressed": true},
+        {"kind": "key", "key": "F", "pressed": false},
+        {"kind": "wait", "seconds": 2.0},
+        {"kind": "checkpoint", "label": "Landing before ordinary Roll", "center2": [-8, 2, 8], "preserve_initial_basis": true}
+      ],
+      "expected": {
+        "fall_count": 1,
+        "connection_id": "pfall_a",
+        "camera_quadrant": 1,
+        "source_center2": [0, 6, 0],
+        "target_center2": [-8, 2, 8],
+        "preserve_final_basis": true
+      }
+    }
+  }
+}

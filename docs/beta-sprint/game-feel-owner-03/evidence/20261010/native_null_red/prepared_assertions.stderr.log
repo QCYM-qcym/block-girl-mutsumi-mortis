@@ -1,0 +1,21 @@
+.......F....................
+======================================================================
+FAIL: test_refusals_preserve_entire_native_state_without_authorized_motion (test_event_assertions.EventAssertions.test_refusals_preserve_entire_native_state_without_authorized_motion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 67, in test_refusals_preserve_entire_native_state_without_authorized_motion
+    self.assertEqual(event_failures(good, semantic, reason, before, deepcopy(before)), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['refusal_changed_native_state'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'refusal_changed_native_state'
+
+- ['refusal_changed_native_state']
++ []
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.016s
+
+FAILED (failures=1)

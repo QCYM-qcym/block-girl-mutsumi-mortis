@@ -1,0 +1,46 @@
+....FF..F...................
+======================================================================
+FAIL: test_missing_path_and_unproven_safety_are_not_evidence (test_event_assertions.EventAssertions.test_missing_path_and_unproven_safety_are_not_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 141, in test_missing_path_and_unproven_safety_are_not_evidence
+    self.assertTrue(event_failures(bad, "PERSPECTIVE_FALL_APPLIED", "NONE"), key)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true : safety_verdict
+
+======================================================================
+FAIL: test_no_render_orientation_or_height_permission_invention (test_event_assertions.EventAssertions.test_no_render_orientation_or_height_permission_invention)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 123, in test_no_render_orientation_or_height_permission_invention
+    self.assertEqual(event_failures(good, "PERSPECTIVE_FALL_APPLIED", "NONE"), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['missing_authorized_path_evidence'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'missing_authorized_path_evidence'
+
+- ['missing_authorized_path_evidence']
++ []
+
+======================================================================
+FAIL: test_valid_snapshot_and_fixture_has_no_authority (test_event_assertions.EventAssertions.test_valid_snapshot_and_fixture_has_no_authority)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 101, in test_valid_snapshot_and_fixture_has_no_authority
+    self.assertEqual(event_failures(event(), "PERSPECTIVE_FALL_APPLIED", "NONE"), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['missing_authorized_path_evidence'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'missing_authorized_path_evidence'
+
+- ['missing_authorized_path_evidence']
++ []
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.016s
+
+FAILED (failures=3)
