@@ -36,12 +36,16 @@ if ($dailyMainScene -ne 'res://game/shell/game_shell.tscn') { throw 'Beta Slice 
 $dailyCatalogRelative = 'game/levels/mutsumi/batch_01/level_order.json'
 $dailyCatalogPath = Join-Path $dailyProject $dailyCatalogRelative
 $dailyCatalog = Get-Content -LiteralPath $dailyCatalogPath -Raw -Encoding utf8 | ConvertFrom-Json
-$dailyLevels = @($dailyCatalog.levels | Select-Object id,title,scene,adapter,quality)
-if ($dailyLevels.Count -ne 3) { throw 'Beta Slice requires the three entries from the delivered Content catalog.' }
+$dailyLevels = @($dailyCatalog.levels | Select-Object id,title,scene,resource,adapter,quality)
+$dailyRequiredIds = @('mutsumi_l01','mutsumi_l02','mutsumi_l03')
+if ($dailyLevels.Count -lt 3 -or (@($dailyLevels | Select-Object -First 3 -ExpandProperty id) -join ',') -ne ($dailyRequiredIds -join ',')) { throw 'Beta catalog must retain the three approved levels in their original order.' }
+if (@($dailyLevels.id | Sort-Object -Unique).Count -ne $dailyLevels.Count) { throw 'Beta catalog contains duplicate stable IDs.' }
 foreach ($dailyLevel in $dailyLevels) {
-    if ($dailyLevel.id -notmatch '^[a-zA-Z0-9_-]+$' -or $dailyLevel.scene -notmatch '^res://[^\s"\\]+\.tscn$') { throw 'Content catalog contains an invalid scene entry.' }
-    $dailyLevelPath = [IO.Path]::GetFullPath((Join-Path $dailyProject $dailyLevel.scene.Substring(6)))
-    if (-not $dailyLevelPath.StartsWith($dailyProject + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) -or -not (Test-Path -LiteralPath $dailyLevelPath -PathType Leaf)) { throw "Content scene is absent from this snapshot: $($dailyLevel.scene)" }
+    if ($dailyLevel.id -notmatch '^[a-zA-Z0-9_-]+$' -or $dailyLevel.scene -notmatch '^res://[^\s"\\]+\.tscn$' -or $dailyLevel.resource -notmatch '^res://[^\s"\\]+\.tres$') { throw 'Content catalog contains an invalid scene or resource entry.' }
+    foreach ($dailyReference in @($dailyLevel.scene,$dailyLevel.resource)) {
+        $dailyLevelPath = [IO.Path]::GetFullPath((Join-Path $dailyProject $dailyReference.Substring(6)))
+        if (-not $dailyLevelPath.StartsWith($dailyProject + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) -or -not (Test-Path -LiteralPath $dailyLevelPath -PathType Leaf)) { throw "Content dependency is absent from this snapshot: $dailyReference" }
+    }
 }
 $dailyVersion = if (Test-Path -LiteralPath $Godot) { (& $Godot --version | Out-String).Trim() } else { 'UNAVAILABLE' }
 $dailyTemplates = Join-Path $env:APPDATA 'Godot/export_templates'
@@ -81,7 +85,7 @@ Menu controls: mouse, Tab/arrow-key focus and Enter confirmation.
 Gameplay controls: W/A/S/D move; Q/E or mouse drag changes perspective;
 Space switches Surface/Inner; R resets; M toggles mute.
 
-The three levels follow the delivered Content catalog, in this order:
+The $($dailyLevels.Count) registered levels follow the delivered Content catalog, in this order:
 $dailyLevelText
 FORMAL is the formal playable level; GREYBOX levels retain their provisional art.
 Catalog source: $($dailyInfo.game_catalog.source)
@@ -94,13 +98,14 @@ Foundation is an optional technical integration fixture selected by -Foundation.
 This package includes source and assets, with no bundled engine or export templates.
 No project export settings were added. First launch imports assets and creates a local .godot cache.
 Daily smoke evidence is separate at $SmokeEvidenceName; see the repository .godot/beta-sprint/ directory.
-Copied-project checks verify import, the configured Main Scene and each catalog scene boot.
+Copied-project checks verify import, the runtime catalog, the configured Main Scene and each catalog scene boot.
 Boot checks do not claim complete playthroughs or independent-process progress restoration.
 Do not run graphical smoke and build checks concurrently: focus changes can interrupt gameplay input.
 build-manifest.json records snapshot hashes and independent copied-project import/boot verification.
 "@ | Set-Content -LiteralPath (Join-Path $dailyBuild 'README.md') -Encoding utf8
 $dailyChecks = @(
     @{name='import';args=@('--headless','--editor','--import')},
+    @{name='catalog';args=@('--headless','--script','res://tests/beta_sprint/test_beta_catalog.gd')},
     @{name='main_scene_boot';args=@('--max-fps','60','--quit-after','120','--',"--shell-save=user://shell_tests/source_build/$BuildName/boot.json")},
     @{name='foundation_boot';args=@('--max-fps','60','--quit-after','120','res://prototype/foundation/runtime/foundation_runtime.tscn')}
 )
@@ -110,16 +115,22 @@ foreach ($dailyLevel in $dailyLevels) {
 foreach ($dailyCheck in $dailyChecks) {
     $dailyOut = Join-Path $dailyEvidence "$($dailyCheck.name).stdout.log"
     $dailyErr = Join-Path $dailyEvidence "$($dailyCheck.name).stderr.log"
-    $dailyResult = [ordered]@{stage=$dailyCheck.name;status='PENDING';exit_code=$null;timed_out=$false;stdout=$dailyOut;stderr=$dailyErr}
+$dailyResult = [ordered]@{stage=$dailyCheck.name;status='PENDING';pid=$null;checks=$null;exit_code=$null;timed_out=$false;stdout=$dailyOut;stderr=$dailyErr}
     $dailyChild = $null
     try {
         if (Test-Path -LiteralPath $Godot) {
             $dailyChild = Start-Process -FilePath $Godot -ArgumentList (@('--path',('"'+$dailyProject+'"')) + $dailyCheck.args) -WindowStyle Hidden -PassThru -RedirectStandardOutput $dailyOut -RedirectStandardError $dailyErr
+            $dailyResult.pid=$dailyChild.Id
             if (-not $dailyChild.WaitForExit(120000)) { $dailyResult.timed_out=$true; $dailyChild.Kill(); $dailyChild.WaitForExit() }
             $dailyChild.WaitForExit()
             $dailyResult.exit_code=$dailyChild.ExitCode
             $dailyLog = (Get-Content -LiteralPath $dailyOut -Raw) + (Get-Content -LiteralPath $dailyErr -Raw)
             $dailyResult.status=if (-not $dailyResult.timed_out -and $dailyChild.ExitCode -eq 0 -and $dailyLog -notmatch 'SCRIPT ERROR:|ERROR:|FAIL:') { 'PASS' } else { 'FAIL' }
+            if ($dailyCheck.name -eq 'catalog') {
+                $dailyCatalogReport = @(Get-Content -LiteralPath $dailyOut | Where-Object { $_.TrimStart().StartsWith('{') } | ForEach-Object { $_ | ConvertFrom-Json })
+                if ($dailyCatalogReport.Count -ne 1 -or $dailyCatalogReport[0].checks -le 0 -or @($dailyCatalogReport[0].failures).Count -ne 0 -or (Get-Item -LiteralPath $dailyErr).Length -ne 0) { $dailyResult.status='FAIL' }
+                else { $dailyResult.checks=$dailyCatalogReport[0].checks }
+            }
         }
     } catch { $dailyResult.status='FAIL'; $dailyResult.error=$_.Exception.Message }
     finally { if ($null -ne $dailyChild -and -not $dailyChild.HasExited) { $dailyChild.Kill(); $dailyChild.WaitForExit() } }

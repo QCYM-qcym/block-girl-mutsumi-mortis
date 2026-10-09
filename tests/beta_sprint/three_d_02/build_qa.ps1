@@ -1,6 +1,7 @@
 param(
     [string]$BuildName = ('beta_3d02_' + (Get-Date -Format 'yyyyMMdd_HHmmss')),
     [string]$EvidenceName = 'b3d02_final',
+    [ValidateSet('3D02','CONTENT02')][string]$QaProfile = '3D02',
     [string]$Godot = 'D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe'
 )
 $ErrorActionPreference = 'Stop'
@@ -16,6 +17,7 @@ $qaBaseExit = $LASTEXITCODE
 $qaManifestPath = Join-Path $qaBuild 'build-manifest.json'
 if (-not (Test-Path -LiteralPath $qaManifestPath)) { throw 'Base source builder did not produce a manifest.' }
 $qaManifest = Get-Content -LiteralPath $qaManifestPath -Raw | ConvertFrom-Json
+if ($QaProfile -eq 'CONTENT02' -and 'mutsumi_l04' -notin @($qaManifest.game_catalog.levels.id)) { throw 'Content Batch02 build requires the delivered playable L04 in the formal catalog.' }
 $qaEvidence = Join-Path $qaSource ".godot/beta-sprint/$BuildName"
 $qaKnown = [Collections.Generic.List[string]]::new()
 foreach ($qaStage in $qaManifest.verification) {
@@ -59,7 +61,7 @@ $qaGame = Start-Process -FilePath $Godot -ArgumentList @('--path',('"'+$qaPlayPr
 exit $qaGame.ExitCode
 '@
 $qaPlay.Replace('BUILD_PLACEHOLDER', $BuildName) | Set-Content -LiteralPath (Join-Path $qaBuild 'play.ps1') -Encoding utf8
-@"
+$qaReadme = @"
 # BETA-3D-INTEGRATION-02 QA candidate
 
 Source snapshot: $($qaManifest.head). SOURCE_PLAYABLE_NOT_EXE; Godot 4.7.2 required.
@@ -74,8 +76,30 @@ L02 first, then L03 Perspective Connection (Surface EAST only). Human/08 QA for 
 Known baseline import/exit notes: $($qaKnown -join '; ')
 STAIR_CLEARANCE=PARTIAL_PASS; STAIR_TRAVERSAL=NOT_RUN. L03 hint P2 stays with06.
 The original base builder stage records remain in build-manifest.json; QA_BUILD_VERIFICATION.json classifies only named baseline issues and verifies all copied sources.
-"@ | Set-Content -LiteralPath (Join-Path $qaBuild 'README.md') -Encoding utf8
-$qaResult = [ordered]@{status=$(if ($qaKnown.Count) {'PASS_WITH_KNOWN_BASELINE_P2'} else {'PASS'});base_builder_exit=$qaBaseExit;head=$qaManifest.head;source=$qaSource;build=$qaBuild;copied_files=$qaManifest.files.Count;copied_hash_mismatches=@();known_baseline_notes=@($qaKnown.ToArray());restored_generated_import_metadata=@($qaRestored.ToArray());save="user://beta_sprint/$BuildName/qa_progress.json";human_qa='NOT_RUN';stairs_clearance='PARTIAL_PASS';stairs_traversal='NOT_RUN';finished_utc=[DateTime]::UtcNow.ToString('o')}
+"@
+if ($QaProfile -eq 'CONTENT02') {
+    $qaLevelList = ($qaManifest.game_catalog.levels | ForEach-Object { '- ' + $_.id + ': ' + $_.title + ' (' + $_.quality + ')' }) -join [Environment]::NewLine
+    $qaReadme = @"
+# Beta Sprint Phase2 — Content Batch02 Daily Build
+
+Source snapshot: $($qaManifest.head). SOURCE_PLAYABLE_NOT_EXE; Godot 4.7.2 required.
+Run ./play.ps1. Isolated save: user://beta_sprint/$BuildName/qa_progress.json.
+All registered levels enter through the formal Main Menu / Level Select, using normal completion to unlock the next level:
+$qaLevelList
+
+L01/L02/L03 reuse approved3D presentation; delivered Batch02 levels use greybox presentation and the original Content/P01 Runtime.
+Continue restores the most recently entered unlocked level at its authored spawn. Save/Continue algorithms are unchanged.
+WASD move; Q/E four90-degree views; Space world; R Reset; Esc Pause/Resume.
+
+Copied-source, catalog and boot checks are recorded in build-manifest.json and QA_BUILD_VERIFICATION.json.
+Smoke evidence reference: $EvidenceName (see the separate Integration receipt for actual route results).
+Independent Human QA for this new Daily Build: NOT_RUN. Previous fixed3D02 matrix/Cold Continue evidence belongs to that earlier Build only.
+Known baseline import/exit notes: $($qaKnown -join '; ')
+STAIR_CLEARANCE=PARTIAL_PASS; STAIR_TRAVERSAL=NOT_RUN. Frozen Art and Foundation remain unchanged.
+"@
+}
+$qaReadme | Set-Content -LiteralPath (Join-Path $qaBuild 'README.md') -Encoding utf8
+$qaResult = [ordered]@{status=$(if ($qaKnown.Count) {'PASS_WITH_KNOWN_BASELINE_P2'} else {'PASS'});profile=$QaProfile;base_builder_exit=$qaBaseExit;head=$qaManifest.head;source=$qaSource;build=$qaBuild;copied_files=$qaManifest.files.Count;copied_hash_mismatches=@();known_baseline_notes=@($qaKnown.ToArray());restored_generated_import_metadata=@($qaRestored.ToArray());save="user://beta_sprint/$BuildName/qa_progress.json";human_qa='NOT_RUN';stairs_clearance='PARTIAL_PASS';stairs_traversal='NOT_RUN';finished_utc=[DateTime]::UtcNow.ToString('o')}
 $qaResult | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $qaBuild 'QA_BUILD_VERIFICATION.json') -Encoding utf8
 $qaResult | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $qaEvidence 'QA_BUILD_VERIFICATION.json') -Encoding utf8
 $qaZip = $qaBuild + '.zip'
