@@ -1,0 +1,5 @@
+# New Quality sources retain the physical bytes recorded in execution receipts.
+run_v2.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+v2_reports.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+test_v2_reports.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+build_v2_matrix_report.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
