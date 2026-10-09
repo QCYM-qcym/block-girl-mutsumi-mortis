@@ -33,6 +33,15 @@ func run() -> void:
 	check(OS.get_user_data_dir().replace("\\","/").begins_with(profile.replace("\\","/")+"/"),"isolated user data directory")
 	for letter in ["a","b"]:
 		var spec: Dictionary = Factory.read_spec(letter)
+		# Author-data type/shape checks only, not formal v2 acceptance or Safety.
+		var candidate: Dictionary = Factory.opt_in_authoring_candidate(spec)
+		var fall: Dictionary = candidate.perspective_falls[0]
+		check(candidate.schema_version==2 and candidate.goal.face_id==&"exit/TOP" and candidate.cubes.size()==3,"candidate retains opt-in schema and exit route")
+		check(fall.path_points2[0]==Factory.vector(spec.source_center2)+Vector3i(0,2,0) and fall.path_points2[-1]==Factory.vector(spec.target_center2)+Vector3i(0,2,0),"candidate canonical actor-center endpoints")
+		check(typeof(fall.source_edge)==TYPE_INT and typeof(fall.path_points2[1])==TYPE_VECTOR3I and fall.source_face_id==&"source/TOP" and fall.target_face_id==&"target/TOP","candidate native field conversion")
+		check(Factory.authoring(spec).schema_version==1 and not Factory.authoring(spec).has("perspective_falls"),"baseline never auto-activates candidate")
+		var opt_in_bake: Dictionary = Factory.bake_game_feel(spec)
+		check(not opt_in_bake.ok and not opt_in_bake.issues.is_empty(),"baseline Baker honestly rejects undelivered v2; reclassify this case after 01 merge")
 		var delta: int = spec.target_center2[1]-spec.source_center2[1]
 		check(delta==(-4 if letter=="a" else 4),letter+" real height sign and magnitude")
 		var connection: Dictionary = spec.connection

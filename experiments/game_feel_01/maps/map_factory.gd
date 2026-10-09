@@ -32,3 +32,29 @@ static func bake(data: Dictionary) -> Dictionary:
 
 static func read_spec(letter: String) -> Dictionary:
 	return spec("res://experiments/game_feel_01/maps/map_"+letter+".json")
+
+static func opt_in_authoring_candidate(data: Dictionary) -> Dictionary:
+	# Explicit opt-in only. Baseline authoring/bake never activate the WIP ABI.
+	# Caller must validate with delivered Owner01 DATA/Baker/Safety before use.
+	var level := authoring(data)
+	var candidate: Dictionary = data.opt_in_candidate
+	level.schema_version = int(candidate.schema_version)
+	level.contract_version = String(candidate.contract_version)
+	level.rule_version = String(candidate.rule_version)
+	level["camera_initial_quadrant"] = int(candidate.camera_initial_quadrant)
+	var raw: Dictionary = candidate.connection
+	var points: Array[Vector3i] = []
+	for p in raw.path_points2: points.append(vector(p))
+	var quadrants: Array[int] = []
+	for q in raw.allowed_camera_quadrants: quadrants.append(int(q))
+	var orientations: Array[int] = []
+	for o in raw.allowed_world_orientations: orientations.append(int(o))
+	var flags: Array[StringName] = []
+	for flag in raw.required_flags: flags.append(StringName(flag))
+	level["perspective_falls"] = [{"connection_id":StringName(raw.connection_id),"source_face_id":StringName(raw.source_face_id),"source_edge":int(raw.source_edge),"target_face_id":StringName(raw.target_face_id),"allowed_camera_quadrants":quadrants,"allowed_world_orientations":orientations,"required_flags":flags,"path_points2":points,"orientation_policy":StringName(raw.orientation_policy),"motion_profile_id":StringName(raw.motion_profile_id),"presentation_duration_ms":int(raw.presentation_duration_ms)}]
+	return level
+
+static func bake_game_feel(data: Dictionary) -> Dictionary:
+	# Public host seam: real Baker result, including rejection before v2 arrives.
+	# Successful baking alone never authorizes a Fall or proves its swept path.
+	return Baker.bake(opt_in_authoring_candidate(data), {"max_configurations":4096,"max_checks":100000})
