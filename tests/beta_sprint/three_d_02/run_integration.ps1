@@ -4,6 +4,7 @@ param(
     [string]$EvidenceName = ('b3d02_' + (Get-Date -Format 'yyyyMMdd_HHmmss') + '_' + [guid]::NewGuid().ToString('N').Substring(0,6)),
     [ValidateSet('import','entry','l02','l03','l01','all')][string]$Mode = 'entry',
     [ValidateSet('mutsumi_l01','mutsumi_l02','mutsumi_l03')][string]$Level = 'mutsumi_l02',
+    [switch]$TraceProgress,
     [int]$StageTimeoutSeconds = 180
 )
 $ErrorActionPreference = 'Stop'
@@ -17,11 +18,12 @@ $b3dHead = (& git -C $b3dProject rev-parse HEAD).Trim()
 if ($LASTEXITCODE -ne 0) { throw 'Cannot identify source HEAD.' }
 $b3dPaths = @('project.godot','default_bus_layout.tres')
 $b3dPaths += @(& git -C $b3dProject ls-files --cached --others --exclude-standard -- game prototype/perspective production/art_3d production/audio/p01 production/ui/beta_shell_01 tests/playtest/test_batch_01_runtime.gd tests/beta_sprint/three_d_02)
+if ($TraceProgress) { $b3dPaths += 'tests/beta_sprint/content_expansion_02/trace_3d_regression.gd' }
 $b3dSources = @($b3dPaths | Sort-Object -Unique | Where-Object { Test-Path -LiteralPath (Join-Path $b3dProject $_) -PathType Leaf } | ForEach-Object {
     [ordered]@{path=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $b3dProject $_) -Algorithm SHA256).Hash.ToLowerInvariant()}
 })
 $b3dStages = [System.Collections.Generic.List[object]]::new()
-$b3dSummary = [ordered]@{status='RUNNING';project=$b3dProject;head=$b3dHead;mode=$Mode;level=$Level;working_tree=@(& git -C $b3dProject status --porcelain);engine=$Godot;engine_sha256=(Get-FileHash -LiteralPath $Godot -Algorithm SHA256).Hash.ToLowerInvariant();sources=$b3dSources;stages=@();started_utc=[DateTime]::UtcNow.ToString('o');scope='Native Content/P01 Runtime; observation SHA256 explicitly not Foundation statekey.v1; no Cold Continue or new unlock matrix'}
+$b3dSummary = [ordered]@{status='RUNNING';project=$b3dProject;head=$b3dHead;mode=$Mode;level=$Level;trace_progress=[bool]$TraceProgress;working_tree=@(& git -C $b3dProject status --porcelain);engine=$Godot;engine_sha256=(Get-FileHash -LiteralPath $Godot -Algorithm SHA256).Hash.ToLowerInvariant();sources=$b3dSources;stages=@();started_utc=[DateTime]::UtcNow.ToString('o');scope='Native Content/P01 Runtime; observation SHA256 explicitly not Foundation statekey.v1; no Cold Continue or new unlock matrix'}
 function Save-B3DReport {
     $b3dSummary.stages = @($b3dStages.ToArray())
     $b3dSummary | ConvertTo-Json -Depth 16 | Set-Content -LiteralPath (Join-Path $b3dEvidence 'run_report.json') -Encoding utf8
@@ -74,7 +76,8 @@ function Invoke-B3DEntry([string]$Id) {
 function Invoke-B3DGameplay([string]$Id) {
     $caseEvidence = Join-Path $b3dEvidence "gameplay_$Id"
     $save = "user://beta_sprint/b3d02_$EvidenceName/$Id.json"
-    Invoke-B3DStage "gameplay_$Id" @('--max-fps','60','--script','res://tests/beta_sprint/three_d_02/test_gameplay.gd','--',"--level=$Id",('--evidence-dir="' + $caseEvidence + '"'),"--shell-save=$save","--head=$b3dHead") $caseEvidence $true
+    $gameplayScript = if ($TraceProgress) { 'res://tests/beta_sprint/content_expansion_02/trace_3d_regression.gd' } else { 'res://tests/beta_sprint/three_d_02/test_gameplay.gd' }
+    Invoke-B3DStage "gameplay_$Id" @('--max-fps','60','--script',$gameplayScript,'--',"--level=$Id",('--evidence-dir="' + $caseEvidence + '"'),"--shell-save=$save","--head=$b3dHead") $caseEvidence $true
 }
 try {
     if ($Mode -in @('import','all')) { Invoke-B3DStage 'import' @('--headless','--editor','--import') }
