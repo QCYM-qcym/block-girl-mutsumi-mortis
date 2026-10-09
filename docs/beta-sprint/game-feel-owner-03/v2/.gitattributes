@@ -1,0 +1,4 @@
+# Preserve captured bytes and hashes across checkout; raw evidence is not source code.
+*.json -text
+evidence/** -text -diff
+verification/** -text -diff

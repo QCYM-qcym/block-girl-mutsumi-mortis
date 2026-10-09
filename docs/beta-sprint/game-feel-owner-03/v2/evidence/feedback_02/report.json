@@ -1,0 +1,1366 @@
+{
+	"authority": "real Map Baker/default Facade/native RuleResult/event; malformed public caller input only; no logical completion, Presenter or graphical replay claim",
+	"checks": 42,
+	"display": "headless",
+	"doubles": [],
+	"failures": [],
+	"rows": [
+		{
+			"action": {},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 1,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "3a6a58b7798fddef5aaf7636babdd414",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "INVALID_ACTION",
+				"result": {
+					"action": {},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1002,
+							"details": {},
+							"entity_ids": [],
+							"message": "Required field is missing.",
+							"path": "kind",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 2
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "0dcd140aa663ec4cf423fed8d7c8b761",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"map": "a",
+			"result": {
+				"action": {},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1002,
+						"details": {},
+						"entity_ids": [],
+						"message": "Required field is missing.",
+						"path": "kind",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 2
+			}
+		},
+		{
+			"action": {
+				"kind": 999
+			},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 2,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 2,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "3a6a58b7798fddef5aaf7636babdd414",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "INVALID_ACTION",
+				"result": {
+					"action": {
+						"kind": 999
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1003,
+							"details": {},
+							"entity_ids": [],
+							"message": "Value is outside the frozen enumeration.",
+							"path": "kind",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 2
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "0dcd140aa663ec4cf423fed8d7c8b761",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"map": "a",
+			"result": {
+				"action": {
+					"kind": 999
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1003,
+						"details": {},
+						"entity_ids": [],
+						"message": "Value is outside the frozen enumeration.",
+						"path": "kind",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 2
+			}
+		},
+		{
+			"action": {
+				"face_axis": 999,
+				"kind": 0
+			},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 3,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 3,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "3a6a58b7798fddef5aaf7636babdd414",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "INVALID_ACTION",
+				"result": {
+					"action": {
+						"face_axis": 999,
+						"kind": 0
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1003,
+							"details": {},
+							"entity_ids": [],
+							"message": "Value is outside the frozen enumeration.",
+							"path": "face_axis",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 2
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "0dcd140aa663ec4cf423fed8d7c8b761",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"map": "a",
+			"result": {
+				"action": {
+					"face_axis": 999,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1003,
+						"details": {},
+						"entity_ids": [],
+						"message": "Value is outside the frozen enumeration.",
+						"path": "face_axis",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 2
+			}
+		},
+		{
+			"action": {
+				"connection_id": "pfall_a",
+				"kind": 8
+			},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {
+					"open": false
+				},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {
+					"open": false
+				},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 4,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 4,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "c0f56b28ddf1be37b7f70b9d1b09383e",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "MECHANISM_LOCKED",
+				"result": {
+					"action": {
+						"connection_id": "pfall_a",
+						"kind": 8
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1502,
+							"details": {
+								"reason_category": "MECHANISM_LOCKED"
+							},
+							"entity_ids": [],
+							"message": "Connection is locked by its authored flag.",
+							"path": "perspective_fall",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {
+							"open": false
+						},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 1503,
+					"status": 1
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "0dcd140aa663ec4cf423fed8d7c8b761",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"expected_reason": "MECHANISM_LOCKED",
+			"level_hash": "d5bdd08f6f05c97d006ef7c2561973b6e94b520a2cf95810405d212b1f27df1f",
+			"map": "a",
+			"result": {
+				"action": {
+					"connection_id": "pfall_a",
+					"kind": 8
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "MECHANISM_LOCKED"
+						},
+						"entity_ids": [],
+						"message": "Connection is locked by its authored flag.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {
+						"open": false
+					},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 1503,
+				"status": 1
+			},
+			"scope": "controlled locked-flag canonical DATA variant; not registered 09 Map A/B artifact"
+		},
+		{
+			"action": {},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 1,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "aeab8b37693f447aaa4f31cc103b7db9",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "INVALID_ACTION",
+				"result": {
+					"action": {},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1002,
+							"details": {},
+							"entity_ids": [],
+							"message": "Required field is missing.",
+							"path": "kind",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 2
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "17eeab7e796fa30a9dfa0382bea41cae",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"map": "b",
+			"result": {
+				"action": {},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1002,
+						"details": {},
+						"entity_ids": [],
+						"message": "Required field is missing.",
+						"path": "kind",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 2
+			}
+		},
+		{
+			"action": {
+				"kind": 999
+			},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 2,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 2,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "aeab8b37693f447aaa4f31cc103b7db9",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "INVALID_ACTION",
+				"result": {
+					"action": {
+						"kind": 999
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1003,
+							"details": {},
+							"entity_ids": [],
+							"message": "Value is outside the frozen enumeration.",
+							"path": "kind",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 2
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "17eeab7e796fa30a9dfa0382bea41cae",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"map": "b",
+			"result": {
+				"action": {
+					"kind": 999
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1003,
+						"details": {},
+						"entity_ids": [],
+						"message": "Value is outside the frozen enumeration.",
+						"path": "kind",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 2
+			}
+		},
+		{
+			"action": {
+				"face_axis": 999,
+				"kind": 0
+			},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 3,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 3,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "aeab8b37693f447aaa4f31cc103b7db9",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "INVALID_ACTION",
+				"result": {
+					"action": {
+						"face_axis": 999,
+						"kind": 0
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1003,
+							"details": {},
+							"entity_ids": [],
+							"message": "Value is outside the frozen enumeration.",
+							"path": "face_axis",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 2
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "17eeab7e796fa30a9dfa0382bea41cae",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"map": "b",
+			"result": {
+				"action": {
+					"face_axis": 999,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1003,
+						"details": {},
+						"entity_ids": [],
+						"message": "Value is outside the frozen enumeration.",
+						"path": "face_axis",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 2
+			}
+		},
+		{
+			"action": {
+				"connection_id": "pfall_b",
+				"kind": 8
+			},
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {
+					"open": false
+				},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {
+					"open": false
+				},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"event": {
+				"attempt_id": 4,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 4,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "8b34d55612c97f829c6c19959ee706de",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "MECHANISM_LOCKED",
+				"result": {
+					"action": {
+						"connection_id": "pfall_b",
+						"kind": 8
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1502,
+							"details": {
+								"reason_category": "MECHANISM_LOCKED"
+							},
+							"entity_ids": [],
+							"message": "Connection is locked by its authored flag.",
+							"path": "perspective_fall",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {
+							"open": false
+						},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 1503,
+					"status": 1
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "17eeab7e796fa30a9dfa0382bea41cae",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"expected_reason": "MECHANISM_LOCKED",
+			"level_hash": "6d6a70576059d4f9a4ea69fb75acf07f43bc6b3c7bc07fbcb324cf9e211b461b",
+			"map": "b",
+			"result": {
+				"action": {
+					"connection_id": "pfall_b",
+					"kind": 8
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "MECHANISM_LOCKED"
+						},
+						"entity_ids": [],
+						"message": "Connection is locked by its authored flag.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {
+						"open": false
+					},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 1503,
+				"status": 1
+			},
+			"scope": "controlled locked-flag canonical DATA variant; not registered 09 Map A/B artifact"
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/v2/evidence/feedback_02/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}
