@@ -1,0 +1,104 @@
+{
+  "status": "L04_INNER_MOVEMENT_P1_FIXED",
+  "date": "2026-10-09",
+  "owner": "06 Game Content",
+  "branch": "fix/l04-inner-movement-p1",
+  "baseline": "991140292ac67e87d1751a062e7e96c7b9fee553",
+  "production_candidate_commit": "2a2fd7ad06b5c139b51b77c8dae1a9289b0530e8",
+  "root_cause": "Inner Spawn (1,5) was authored as an isolated supported cell; existing native neighbor guard rejected every adjacent move after valid Shift",
+  "production_change": "Only add Inner (0,5) in L04 Resource, joining Spawn to original (0,4) shore",
+  "resource_path": "game/levels/mutsumi/batch_02/l04_borrowed_path.tres",
+  "resource_sha256": "10f7a6a69a5e42c3796a6d0546938c7378be10f705fff3e40baf27db24efa18a",
+  "before": {
+    "transition_started": false,
+    "published_foundation_fields": "NOT_APPLICABLE_TO_SHIPPED_P01_ADAPTER",
+    "view": "NORTH",
+    "standalone_pid": 18004,
+    "graph_world": 1,
+    "native_neighbor": "(1,5)",
+    "phase": "idle",
+    "shell_pid": 32572,
+    "world": 1,
+    "commits": 0,
+    "input_entered_runtime": true
+  },
+  "after": {
+    "standalone_pid": 29152,
+    "native_neighbor": "(0,5)",
+    "transition_started": true,
+    "pose": "native orientation roll",
+    "action": "same short A",
+    "commits": 1,
+    "cell": "(0,5)",
+    "shell_pid": 28988
+  },
+  "l04_full_playthrough": "PASS",
+  "reset_replay": "PASS",
+  "alternate_camera_replay": "PASS",
+  "goal": "PASS",
+  "headless": {
+    "failures": 0,
+    "natural_routes": 3,
+    "pid": 13392,
+    "checks": 201,
+    "formal_goals": 3,
+    "exit_code": 0
+  },
+  "graphical": {
+    "failures": 0,
+    "natural_routes": 3,
+    "screenshots": 18,
+    "pid": 30536,
+    "checks": 219,
+    "formal_goals": 3,
+    "exit_code": 0
+  },
+  "unit": {
+    "minimum_shifts_l04": 2,
+    "reachable_l04": 72,
+    "solvable_l04": 72,
+    "pid": 43860,
+    "checks": 45,
+    "exit_code": 0
+  },
+  "l01_l03_regression": {
+    "source_modifications": "NONE",
+    "status": "LIMITED_INPUT_REGRESSION_PASS",
+    "after_fix_pid": 19592,
+    "checks": 259,
+    "actions": 48,
+    "exit_code": 0,
+    "full_playthrough_regression": "NOT_RUN_THIS_HOTFIX"
+  },
+  "protection": {
+    "directory_membership": "EXACT",
+    "old_screenshots_logs": "PRESERVED_BYTES_VERIFIED",
+    "original_process_log_runs": 11,
+    "source_build": "IMMUTABLE_BYTES_VERIFIED",
+    "inventory_entries": 3073,
+    "qa_save": "UNCHANGED_BYTES_VERIFIED"
+  },
+  "review": {
+    "important": 0,
+    "minor": 1,
+    "minor_status": "FIXED_CLI_GUARD_VERIFIED",
+    "critical": 0
+  },
+  "notes": [
+    "P01 actual state serialization is not Foundation StateKey; no published Kernel/Safety verdict fabricated",
+    "Original runtime-loaded GDScript unchanged after final natural validation; runner CLI guard hardened with historical wrapper copies retained",
+    "Standalone diagnostic before/after and post-fix old controls show 4 ObjectDB instances exit warning, cause not identified; final L04 Shell natural runs stderr empty",
+    "Unused frozen SVG import error preserved; only changed import metadata restored and generated untracked test UIDs recorded then cleaned"
+  ],
+  "foundation_modifications": "NONE",
+  "art_modifications": "NONE",
+  "shared_runtime_presenter_shell_save_modifications": "NONE",
+  "other_level_modifications": "NONE",
+  "working_tree_on_delivery": "CLEAN",
+  "push": "NOT_RUN",
+  "integration_merge": "NOT_RUN",
+  "qa": "READY_FOR_08_RECHECK",
+  "human_qa": "PENDING_08_RECHECK",
+  "files_sha256": "FILES_SHA256.json",
+  "receipt_commit_note": "Docs-only commit containing this receipt; final delivery HEAD supplied by actual git rev-parse after commit"
+}
