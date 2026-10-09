@@ -33,8 +33,8 @@
 - [x] Resolve commits/ancestry, inspect uniqueproductiondiff, verify84 Ownerdelivery bytehashes and original201/219/259case process/log/result identities.
 - [x] Captured636currentproduction bytehashes;3073Ownerprotectedentries/directorymembers exact. Scopedpreflightcommit a175a5f.
 - [x] Normalmerge f059d7c17ad016a88cfac96a6f62715f44d13574 retains deliverya80a28b; no conflicts.84Ownerdelivery bytehashes exact.
-- [ ] Add00fixture subclass and minimalrunner; run freshheadless and graphical cases. Require positivechecks,failures=[],exit0,stderr0,sourcehash unchanged. Seal newevidence separately; preserve originalOwnercases.
-- [ ] Run bounded currentcatalog/layout gates, then independently review hotfix/test/buildscope. Existingold3Owner259case is source-bound limitedevidence; do not rerun full oldthreeplaythroughs.
+- [x]00subclass reuses unchangedOwnerfixture. Finalsource0f1bea9d633f6446fd3ef93551bb637f39045197: headless247/PID17528 and graphical267/PID20036,3naturalroutes/3formalGoals,20graphicalscreens. Allfailures=[]/exit0/stderr0;641sources stable. Originalfalse-positivecase and newbyteevidence separatelysealed.
+- [x] Freshcases verify actualfivecatalog, nativeGUIrowreachability/L05entry, Pause/Resume/Esc/SettingsCancel/sameprocessContinue and real checksum/unlock. SeparatefreshReviewer0Critical/0Important/0unresolvedMinor. Oldthree259limitedcase and bytebound unchangedsource retained; no fullold3retest. CopiedBuildcataloggate follows in nextstep.
 - [ ] Commit source/harness/docs clean; run existingthree_d_02/build_qa.ps1 -QaProfile CONTENT02 -BuildName beta_l04_p1_20261009_01 with fresh evidence reference. Inspect actual9stages,copiedhashes and ZIPidentity; never replace a failed or previouspackage.
 - [ ] Seal formalreceipt/FILES_SHA and actualBuildmetadata, verify frozenproduction/oldQA/profiles; docs-onlyreceiptcommit followed by actualCLEANcheck.
 - [ ] Handoff exactnewpackage/source/ZIP/integrationreceipt to08; retainP1pending and L05firstHumanQA pending. No futureQA completionclaim.

@@ -1,0 +1,320 @@
+{
+	"Cold_Continue": "NOT_RUN_THIS_FOCUSED_CASE",
+	"Human_QA": "NOT_RUN",
+	"L04_resource_sha256": "10f7a6a69a5e42c3796a6d0546938c7378be10f705fff3e40baf27db24efa18a",
+	"L05": "READY_FOR_FIRST_HUMAN_QA",
+	"P1": "OPEN_PENDING_08_RECHECK",
+	"doubles": [],
+	"observations": [
+		{
+			"case": "initial_profile",
+			"progress": {
+				"completed": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l04",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04"
+				]
+			},
+			"qualification": "explicit newPID prior L01-L03 completion fixture only"
+		},
+		{
+			"case": "pause_resume_settings_cancel",
+			"settings": {
+				"fullscreen": false,
+				"master": 1.0,
+				"music": 1.0,
+				"muted": false,
+				"sfx": 1.0
+			},
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"case": "real_goal_unlock",
+			"native_completion_count": 1,
+			"progress": {
+				"completed": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l04",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04",
+					"mutsumi_l05"
+				]
+			},
+			"route": "normal",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"case": "real_goal_unlock",
+			"native_completion_count": 2,
+			"progress": {
+				"completed": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l04",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04",
+					"mutsumi_l05"
+				]
+			},
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"case": "real_goal_unlock",
+			"native_completion_count": 3,
+			"progress": {
+				"completed": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l04",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04",
+					"mutsumi_l05"
+				]
+			},
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"case": "formal_l05_entry",
+			"progress": {
+				"completed": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l05",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04",
+					"mutsumi_l05"
+				]
+			},
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"case": "same_process_continue_NOT_COLD_CONTINUE",
+			"progress": {
+				"completed": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l05",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l01",
+					"mutsumi_l02",
+					"mutsumi_l03",
+					"mutsumi_l04",
+					"mutsumi_l05"
+				]
+			},
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		}
+	],
+	"pid": 20036
+}

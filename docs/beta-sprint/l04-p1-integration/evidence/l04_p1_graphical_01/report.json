@@ -1,0 +1,2347 @@
+{
+	"case": "playthrough",
+	"checks": 267,
+	"display": "Windows",
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"entry": "shell",
+	"failures": [],
+	"formal_completions": 3,
+	"graphical": true,
+	"native_commits": [
+		{
+			"event": "native mover.committed",
+			"route": "diagnosis",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"destination": [
+					0,
+					4
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"moving": false,
+				"orientation": "(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"destination": [
+					0,
+					3
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 3,
+				"moving": false,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"destination": [
+					0,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 4,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"destination": [
+					1,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 5,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					2,
+					2
+				],
+				"destination": [
+					2,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 6,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"destination": [
+					9,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"destination": [
+					10,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 9,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"destination": [
+					10,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					11,
+					2
+				],
+				"destination": [
+					11,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 10,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "normal",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"destination": [
+					0,
+					4
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"moving": false,
+				"orientation": "(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"destination": [
+					0,
+					3
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 3,
+				"moving": false,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"destination": [
+					0,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 4,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"destination": [
+					1,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 5,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					2,
+					2
+				],
+				"destination": [
+					2,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 6,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"destination": [
+					9,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"destination": [
+					10,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 9,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"destination": [
+					10,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					11,
+					2
+				],
+				"destination": [
+					11,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 10,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "reset_replay",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"destination": [
+					0,
+					4
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"moving": false,
+				"orientation": "(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"destination": [
+					0,
+					3
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 3,
+				"moving": false,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"destination": [
+					0,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 4,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"destination": [
+					1,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 5,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					2,
+					2
+				],
+				"destination": [
+					2,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 6,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"destination": [
+					9,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"destination": [
+					10,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"destination": [
+					10,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(-1, 0, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					11,
+					2
+				],
+				"destination": [
+					11,
+					2
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 10,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 1, 0)",
+				"view": 2,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"event": "native mover.committed",
+			"route": "alternate_camera",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 0
+			}
+		}
+	],
+	"pid": 20036,
+	"profiles": [
+		{
+			"absolute": "C:/Users/QCYM/AppData/Roaming/Godot/app_userdata/方块少女-若叶睦/l04_inner_movement_p1/20036_playthrough_mutsumi_l04/progress.json",
+			"path": "user://l04_inner_movement_p1/20036_playthrough_mutsumi_l04/progress.json",
+			"setup": "seeded test profile, not human progression QA"
+		}
+	],
+	"routes": [
+		{
+			"cell": "(11, 1)",
+			"formal_completion_events": 1,
+			"goal": true,
+			"kind": "natural_InputEvent_from_Spawn_Shift",
+			"mode": "normal",
+			"moves": 11,
+			"state_key": "p01|mutsumi_l04|cell=[11, 1]|world=0|view=1|pose=(0, 1, 0)|(1, 0, 0)|(0, 0, -1)|phase=complete",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(11, 1)",
+			"formal_completion_events": 1,
+			"goal": true,
+			"kind": "natural_InputEvent_from_Spawn_Shift",
+			"mode": "reset_replay",
+			"moves": 11,
+			"state_key": "p01|mutsumi_l04|cell=[11, 1]|world=0|view=1|pose=(0, 1, 0)|(1, 0, 0)|(0, 0, -1)|phase=complete",
+			"view": 1,
+			"world": 0
+		},
+		{
+			"cell": "(11, 1)",
+			"formal_completion_events": 1,
+			"goal": true,
+			"kind": "natural_InputEvent_from_Spawn_Shift",
+			"mode": "alternate_camera",
+			"moves": 11,
+			"state_key": "p01|mutsumi_l04|cell=[11, 1]|world=0|view=2|pose=(0, 1, 0)|(1, 0, 0)|(0, 0, -1)|phase=complete",
+			"view": 2,
+			"world": 0
+		}
+	],
+	"rows": [
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 5]|world=1|view=0|pose=(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[1, 5]|world=1|view=0|pose=(1, 0, 0)|(0, 1, 0)|(0, 0, 1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 4]|world=1|view=0|pose=(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 5]|world=1|view=0|pose=(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 3]|world=1|view=0|pose=(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 4]|world=1|view=0|pose=(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 2]|world=1|view=0|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 3]|world=1|view=0|pose=(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[1, 2]|world=1|view=0|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 2]|world=1|view=0|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[2, 2]|world=1|view=0|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[1, 2]|world=1|view=0|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[3, 2]|world=1|view=0|pose=(0, 0, 1)|(0, -1, 0)|(1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[2, 2]|world=1|view=0|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[10, 2]|world=1|view=1|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[9, 2]|world=1|view=1|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[11, 2]|world=0|view=1|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[10, 2]|world=0|view=1|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[11, 1]|world=0|view=1|pose=(0, 1, 0)|(1, 0, 0)|(0, 0, -1)|phase=complete",
+			"before_state_key": "p01|mutsumi_l04|cell=[11, 2]|world=0|view=1|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 5]|world=1|view=0|pose=(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[1, 5]|world=1|view=0|pose=(1, 0, 0)|(0, 1, 0)|(0, 0, 1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 4]|world=1|view=0|pose=(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 5]|world=1|view=0|pose=(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 3]|world=1|view=0|pose=(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 4]|world=1|view=0|pose=(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 2]|world=1|view=0|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 3]|world=1|view=0|pose=(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[1, 2]|world=1|view=0|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 2]|world=1|view=0|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[2, 2]|world=1|view=0|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[1, 2]|world=1|view=0|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[3, 2]|world=1|view=0|pose=(0, 0, 1)|(0, -1, 0)|(1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[2, 2]|world=1|view=0|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[10, 2]|world=1|view=1|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[9, 2]|world=1|view=1|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route W",
+			"after_state_key": "p01|mutsumi_l04|cell=[11, 2]|world=0|view=1|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[10, 2]|world=0|view=1|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[11, 1]|world=0|view=1|pose=(0, 1, 0)|(1, 0, 0)|(0, 0, -1)|phase=complete",
+			"before_state_key": "p01|mutsumi_l04|cell=[11, 2]|world=0|view=1|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route D",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 5]|world=1|view=2|pose=(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[1, 5]|world=1|view=2|pose=(1, 0, 0)|(0, 1, 0)|(0, 0, 1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route S",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 4]|world=1|view=2|pose=(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 5]|world=1|view=2|pose=(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route S",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 3]|world=1|view=2|pose=(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 4]|world=1|view=2|pose=(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route S",
+			"after_state_key": "p01|mutsumi_l04|cell=[0, 2]|world=1|view=2|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 3]|world=1|view=2|pose=(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[1, 2]|world=1|view=2|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[0, 2]|world=1|view=2|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[2, 2]|world=1|view=2|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[1, 2]|world=1|view=2|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[3, 2]|world=1|view=2|pose=(0, 0, 1)|(0, -1, 0)|(1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[2, 2]|world=1|view=2|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[10, 2]|world=1|view=2|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[9, 2]|world=1|view=2|pose=(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route A",
+			"after_state_key": "p01|mutsumi_l04|cell=[11, 2]|world=0|view=2|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"before_state_key": "p01|mutsumi_l04|cell=[10, 2]|world=0|view=2|pose=(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		},
+		{
+			"action": "route S",
+			"after_state_key": "p01|mutsumi_l04|cell=[11, 1]|world=0|view=2|pose=(0, 1, 0)|(1, 0, 0)|(0, 0, -1)|phase=complete",
+			"before_state_key": "p01|mutsumi_l04|cell=[11, 2]|world=0|view=2|pose=(0, 0, 1)|(1, 0, 0)|(0, 1, 0)|phase=idle",
+			"commit_count": 1,
+			"input_entered_runtime": true,
+			"kind": "actual short InputEvent roll",
+			"press_seconds": 0.05,
+			"transition_started": true
+		}
+	],
+	"runtime_contract": "shipped catalog p01 -> GridInput -> GridMovement.try_held -> ContentState.neighbor",
+	"screenshots": [
+		{
+			"path": "screenshots/01_normal_surface_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-5.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "235e72f6b93797968ac61857283a75d92a853a94f774214e34a0798399555d16",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/02_normal_inner_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-5.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "a1432441f045366b3e071dc68cc35a1b8b1646f2fa1280355304f0ec2343b0d8",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/03_normal_first_inner_move.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-6.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "d0826b4fc4f202d4d8a3e5df475ef3b3a57a47de361f971a4b6f58c6528d0375",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/04_normal_inner_east_connection.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 0.0, 1.0), Y: (0.0, -1.0, 0.0), Z: (1.0, 0.0, 0.0)]",
+				"actor_position": "(-3.5, 0.74, -0.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 0.0, 1.0), Y: (0.0, -1.0, 0.0), Z: (1.0, 0.0, 0.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "9c86009d4bc7f17601c5fb1eceb177889cde7606886b1b32461f1d2a9d7b640b",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/05_normal_connection_landed.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 0.0, 1.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, -1.0, 0.0)]",
+				"actor_position": "(-2.5, 0.74, -0.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 0.0, 1.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, -1.0, 0.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "80a699178442090453376d2637d870b5d97d0251b44dd2e88772969ea9bd8088",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"destination": [
+					9,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/06_normal_goal.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 1.0, 0.0), Y: (1.0, 0.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+				"actor_position": "(-0.5, 0.74, -1.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "complete",
+				"physical_basis": "[X: (0.0, 1.0, 0.0), Y: (1.0, 0.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "37f577400412012a584713df8bbe83335874548e238132bd530a9061ea52db26",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/07_reset_replay_surface_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-5.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "235e72f6b93797968ac61857283a75d92a853a94f774214e34a0798399555d16",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/08_reset_replay_inner_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-5.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "a1432441f045366b3e071dc68cc35a1b8b1646f2fa1280355304f0ec2343b0d8",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/09_reset_replay_first_inner_move.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-6.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "d0826b4fc4f202d4d8a3e5df475ef3b3a57a47de361f971a4b6f58c6528d0375",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/10_reset_replay_inner_east_connection.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 0.0, 1.0), Y: (0.0, -1.0, 0.0), Z: (1.0, 0.0, 0.0)]",
+				"actor_position": "(-3.5, 0.74, -0.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 0.0, 1.0), Y: (0.0, -1.0, 0.0), Z: (1.0, 0.0, 0.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "9c86009d4bc7f17601c5fb1eceb177889cde7606886b1b32461f1d2a9d7b640b",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/11_reset_replay_connection_landed.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 0.0, 1.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, -1.0, 0.0)]",
+				"actor_position": "(-2.5, 0.74, -0.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 0.0, 1.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, -1.0, 0.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "80a699178442090453376d2637d870b5d97d0251b44dd2e88772969ea9bd8088",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"destination": [
+					9,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/12_reset_replay_goal.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 1.0, 0.0), Y: (1.0, 0.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+				"actor_position": "(-0.5, 0.74, -1.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "complete",
+				"physical_basis": "[X: (0.0, 1.0, 0.0), Y: (1.0, 0.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "37f577400412012a584713df8bbe83335874548e238132bd530a9061ea52db26",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 1,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/13_alternate_camera_surface_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-5.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "800663a689845937f0994e6bb7dc13f94df0b71942bca81ffbc8dcf3427d841a",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/14_alternate_camera_inner_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-5.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "405881921100277f051b479aaf0446d857c8218df4d7d5d831ba716395a4516a",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"destination": [
+					1,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/15_alternate_camera_first_inner_move.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-6.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "e2dd9c54f52e31007c6bb6a226601ead9ba665fce9ebc7bcb2e15524a3be7781",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/16_alternate_camera_inner_east_connection.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 0.0, 1.0), Y: (0.0, -1.0, 0.0), Z: (1.0, 0.0, 0.0)]",
+				"actor_position": "(-3.5, 0.74, -0.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 0.0, 1.0), Y: (0.0, -1.0, 0.0), Z: (1.0, 0.0, 0.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "9c86009d4bc7f17601c5fb1eceb177889cde7606886b1b32461f1d2a9d7b640b",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"destination": [
+					3,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(0, -1, 0)|(1, 0, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(1, 0, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/17_alternate_camera_connection_landed.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 0.0, 1.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, -1.0, 0.0)]",
+				"actor_position": "(-2.5, 0.74, -0.5)",
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (0.0, 0.0, 1.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, -1.0, 0.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 1
+			},
+			"sha256": "80a699178442090453376d2637d870b5d97d0251b44dd2e88772969ea9bd8088",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"destination": [
+					9,
+					2
+				],
+				"goal": false,
+				"graph_world": 1,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"moving": false,
+				"orientation": "(0, 0, 1)|(-1, 0, 0)|(0, -1, 0)",
+				"phase": "idle",
+				"physical_face_direction": "(0, -1, 0)",
+				"view": 1,
+				"view_busy": false,
+				"world": 1
+			}
+		},
+		{
+			"path": "screenshots/18_alternate_camera_goal.png",
+			"presenter": {
+				"actor_basis": "[X: (0.0, 1.0, 0.0), Y: (1.0, 0.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+				"actor_position": "(4.5, 0.74, -1.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "complete",
+				"physical_basis": "[X: (0.0, 1.0, 0.0), Y: (1.0, 0.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "0c7b9c3e826dfc7fb9f2181ec07b507b4736037c9237e5016db4919536efc311",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"destination": [
+					11,
+					1
+				],
+				"goal": true,
+				"graph_world": 0,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"moving": false,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "complete",
+				"physical_face_direction": "(0, 0, -1)",
+				"view": 2,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/19_l05_unlocked_entry_authored_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-6.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "d595b02ece45f62533b003274a6ab67995215bbc03980ff8bb0dc94d0d42b8fe",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		},
+		{
+			"path": "screenshots/20_l05_unlocked_entry_continue_authored_spawn.png",
+			"presenter": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"actor_position": "(-6.5, 0.74, 2.5)",
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"world": 0
+			},
+			"sha256": "b9cb607c0ecda4cc7c463531c5c77f5da5ca56612df81e07681db3d9adab6273",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"destination": [
+					0,
+					5
+				],
+				"goal": false,
+				"graph_world": 0,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"moving": false,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"physical_face_direction": "(0, 0, 1)",
+				"view": 0,
+				"view_busy": false,
+				"world": 0
+			}
+		}
+	],
+	"state_key_kind": "serialization of actual P01 observable fields; NOT Foundation StateKey"
+}

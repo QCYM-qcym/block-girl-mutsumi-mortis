@@ -1,0 +1,81 @@
+{
+  "status": "L04_P1_FOCUSED_PASS",
+  "integration_parent": "ed180958dd9eb4b0d2c560074066eb92a5f9d139",
+  "production_candidate": "2a2fd7ad06b5c139b51b77c8dae1a9289b0530e8",
+  "owner_delivery": "a80a28b4edafda1faa5be4e890e0b61447afc716",
+  "normal_merge": "f059d7c17ad016a88cfac96a6f62715f44d13574",
+  "focused_source_head": "0f1bea9d633f6446fd3ef93551bb637f39045197",
+  "L04_resource_sha256": "10f7a6a69a5e42c3796a6d0546938c7378be10f705fff3e40baf27db24efa18a",
+  "actual_production_files": [
+    "game/levels/mutsumi/batch_02/l04_borrowed_path.tres"
+  ],
+  "Owner_delivery_files_verified": 84,
+  "protected_source_count": 636,
+  "protected_sources_changed": [],
+  "Owner_headless": {
+    "checks": 201,
+    "pid": 13392,
+    "exit0": true,
+    "stderr0": true,
+    "source_head": "991140292ac67e87d1751a062e7e96c7b9fee553",
+    "binding": "ActualprecommitconsumedbyteSHA; not relabeledas2a2fd7a"
+  },
+  "Owner_graphical": {
+    "checks": 219,
+    "pid": 30536,
+    "screenshots": 18,
+    "exit0": true,
+    "stderr0": true,
+    "source_head": "991140292ac67e87d1751a062e7e96c7b9fee553",
+    "binding": "ActualprecommitconsumedbyteSHA"
+  },
+  "Owner_old_three": {
+    "checks": 259,
+    "pid": 19592,
+    "actions": 48,
+    "scope": "LIMITED_INPUT_REGRESSION_PASS",
+    "exit_code": 0,
+    "stderr_bytes": 133,
+    "warning": "Original4ObjectDBinstancesexitwarning preserved; not stderr-empty; no fullold3claim"
+  },
+  "fresh_00_headless": {
+    "checks": 247,
+    "pid": 17528,
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "source_changed": []
+  },
+  "fresh_00_graphical": {
+    "checks": 267,
+    "pid": 20036,
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "source_changed": [],
+    "screenshots": 20
+  },
+  "natural_routes": 3,
+  "formal_goals": 3,
+  "L05_unlock": "OriginalShellGoalcallback; fixtureonlypriorL01-L03completionandL04qualification; L05initiallylocked",
+  "L05_entry": "NativeGUI formalLevelSelect; authoredSpawn confirmed",
+  "UI_Save": "NativePause/Resume/Esc/SettingsCancel/Menu/Main/sameprocessContinue PASS; savechecksum/progress/settings PASS; noColdContinueclaim",
+  "doubles": [],
+  "old_QA_preflight": {
+    "entries": 3073,
+    "directory_membership": "EXACT",
+    "absent_profiles": 4
+  },
+  "first_00_wrapper_case": "Actual247checksGREEN; wrapperFAIL due literal failures=[] false-positive. Originalrunner/logs/sourceHEADpreserved; not finalwrapperPASS.",
+  "first_wrapper_gate_fix": "00onlyFAILwordboundary; productionNONE",
+  "review": {
+    "reviewer": "/root/l04_p1_review",
+    "Critical": 0,
+    "Important": 0,
+    "unresolved_Minor": 0,
+    "corrected_Minor": 1
+  },
+  "P1": "OPEN_PENDING_08_RECHECK",
+  "L05": "READY_FOR_FIRST_HUMAN_QA",
+  "Human_QA": "NOT_RUN",
+  "Foundation_changes": "NONE",
+  "Art_changes": "NONE"
+}
