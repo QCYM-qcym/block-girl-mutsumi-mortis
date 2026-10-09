@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://game/levels/mutsumi/batch_01/content_level_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+level_id = "mutsumi_l05"
+display_title = "L-05  /  归途的门"
+quality = "GREYBOX"
+intent = "两段道路分别属于不同世界。找到连接，再用表世界的踏板打开归途的门。"
+spawn = Vector2i(2,4)
+goal = Vector2i(13,0)
+surface_cells = Array[Vector2i]([Vector2i(2,4),Vector2i(2,3),Vector2i(1,3),Vector2i(0,3),Vector2i(1,1),Vector2i(2,1),Vector2i(3,1),Vector2i(3,0),Vector2i(9,0),Vector2i(10,0),Vector2i(11,0),Vector2i(12,0),Vector2i(13,0)])
+inner_cells = Array[Vector2i]([Vector2i(2,4),Vector2i(0,3),Vector2i(0,2),Vector2i(0,1),Vector2i(1,1),Vector2i(3,0),Vector2i(9,0),Vector2i(10,0),Vector2i(11,0),Vector2i(12,0),Vector2i(13,0)])
+platform_b_cells = Array[Vector2i]([Vector2i(9,0),Vector2i(10,0),Vector2i(11,0),Vector2i(12,0),Vector2i(13,0)])
+link_enabled = true
+link_a = Vector2i(3,0)
+link_b = Vector2i(9,0)
+link_worlds = Array[int]([1])
+gate_enabled = true
