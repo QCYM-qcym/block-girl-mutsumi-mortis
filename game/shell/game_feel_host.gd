@@ -70,6 +70,7 @@ func _build_extra_controls() -> void:
 	var notice:=Tokens.label("减少动态用于界面与下一次坠落。\n边缘反馈尚未启用；连接准备提示暂不可用。",16)
 	ui.settings_panel.get_child(0).get_child(0).add_child(notice)
 	lab_entry=Row.new();lab_entry.display_text="错视实验";lab_entry.configure(0.5)
+	lab_entry.theme=Tokens.theme()
 	lab_entry.custom_minimum_size=Vector2(220,56)
 	ui.add_child(lab_entry)
 	lab_entry.pressed.connect(launch_lab.bind("a"))
@@ -157,9 +158,8 @@ func _route_options(value: Dictionary) -> void:
 		level.presenter.set_reduced_motion(options.reduced_motion)
 	for label in ui.find_children("*","Label",true,false):
 		if options.contrast:
-			label.add_theme_color_override("font_color",Color.WHITE)
-			label.add_theme_color_override("font_outline_color",Color.BLACK)
-			label.add_theme_constant_override("outline_size",2)
+			label.add_theme_color_override("font_color",Color.BLACK)
+			label.add_theme_constant_override("outline_size",0)
 		else:
 			label.remove_theme_color_override("font_color");label.remove_theme_color_override("font_outline_color");label.remove_theme_constant_override("outline_size")
 	ui.input_label.visible=options.input_hints and options.hint_strength>0 and not ui.input_label.text.is_empty()
