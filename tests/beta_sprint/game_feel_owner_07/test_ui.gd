@@ -4,6 +4,7 @@ const UI_PATH := "res://game/feel/ui/game_feel_ui.gd"
 const Store = preload("res://game/shell/save_store.gd")
 const AudioDirector = preload("res://game/feel/audio/audio_director.gd")
 const AUDIO_COMMIT := "4afbd068fae74a826dae4db04c2c612af23fa861"
+const RUNTIME_DTO_REFERENCE := "26387d6c34a869ad7035ee13ee77d8d5c24d796a"
 var checks := 0
 var failures: Array[String] = []
 var evidence := ""
@@ -61,6 +62,7 @@ func run() -> void:
 		await settings_case()
 		await event_case()
 		feedback_contract_case()
+		safety_contract_case()
 	else: await restore_case()
 	await finish()
 
@@ -164,7 +166,8 @@ func cue(event_id: int, semantic: String, phase_name: String, reason := "NONE", 
 		"source_face":source.location,"target_face":null if rejected else target.location,"world_id":0,"camera_quadrant":1,
 		"authoritative_final_orientation":null if rejected else 0,"intended_move_direction":0,"interruption_reason":null,
 		"connection_id":"fixture_connection","authorized_path_points2":[Vector3i(0,1,0),Vector3i(4,-1,0)],
-		"motion_profile_id":"fixture_only","motion_profile_hash":"fixture_only","safety_verdict":"SAFE",
+		"motion_profile_id":"fixture_only","motion_profile_hash":"fixture_only",
+		"safety_verdict":{"status":"SAFE","issues":[],"evidence_ref":{"kind":"PRESENTATION_CONTRACT_UNIT","query":"fixture_only","before_statekey":"unit_only_before","after_statekey":"unit_only_after","level_hash":"fixture_only_level","connection_id":"fixture_connection","profile_hash":"fixture_only","authoritative_runtime":false}},
 		"orientation_policy":"PRESERVE","presentation_duration_seconds":0.6,"source_frame":{}}
 
 func event_case() -> void:
@@ -244,6 +247,35 @@ func feedback_contract_case() -> void:
 	ui.set_accessibility({"hint_strength":1,"reduced_motion":false})
 	check(not ui.feedback_panel.visible, "formal mechanism feedback stays quiet at default hint strength")
 
+func safety_contract_case() -> void:
+	# Shape follows01's delivered DTO. Evidence is explicitly synthetic, never real Safety proof.
+	ui.bind_context("unit_session","unit_run")
+	var start := cue(1,"PERSPECTIVE_FALL_APPLIED","STARTED")
+	var before := start.duplicate(true)
+	ui.consume_event(start)
+	check(ui.feedback_panel.visible, "Runtime-shaped structured SAFE verdict displays the passive Fall status")
+	check(start == before, "structured verdict/issues/evidence_ref remain immutable during UI consumption")
+	ui.consume_event(cue(2,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+	check(not ui.feedback_panel.visible, "structured SAFE start retains matching completion cleanup")
+	var negatives := [
+		{"name":"legacy scalar SAFE","value":"SAFE"},
+		{"name":"UNSAFE","value":{"status":"UNSAFE","issues":[],"evidence_ref":{"kind":"fixture_only"}}},
+		{"name":"UNPROVEN","value":{"status":"UNPROVEN","issues":[],"evidence_ref":{"kind":"fixture_only"}}},
+		{"name":"unresolved issues","value":{"status":"SAFE","issues":[{"code":"fixture_issue"}],"evidence_ref":{"kind":"fixture_only"}}},
+		{"name":"missing issues","value":{"status":"SAFE","evidence_ref":{"kind":"fixture_only"}}},
+		{"name":"missing evidence","value":{"status":"SAFE","issues":[]}},
+		{"name":"empty evidence","value":{"status":"SAFE","issues":[],"evidence_ref":{}}},
+		{"name":"wrong evidence type","value":{"status":"SAFE","issues":[],"evidence_ref":"fixture_only"}}]
+	var id := 3
+	for negative in negatives:
+		var event := cue(id,"PERSPECTIVE_FALL_APPLIED","STARTED")
+		event.safety_verdict = negative.value
+		ui.consume_event(event)
+		check(not ui.feedback_panel.visible, "invalid/unproven safety DTO cannot display Fall status: " + negative.name)
+		# Isolate negative cases even when the previous implementation incorrectly displayed one.
+		ui.consume_event(cue(id+1,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+		id += 2
+
 func restore_case() -> void:
 	check(FileAccess.file_exists(save_path) and AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "independent cold process loads actual saved Master mute")
 	ui.open_settings(progress.settings)
@@ -256,7 +288,7 @@ func finish() -> void:
 	var api_status := "NOT_RUN"
 	if is_instance_valid(audio): api_status = "ACTUAL_API_OWNER_PASS" if failures.is_empty() else "ACTUAL_API_OWNER_FAIL"
 	var fault_exercises := ["injected host write failure","deferred host acknowledgement","external programmatic slider mutation during deferred host acknowledgement"] if phase == "seed" else []
-	var report := {"phase":phase,"pid":OS.get_process_id(),"checks":checks,"failures":failures,"fixture_kind":"PRESENTATION_CONTRACT_UNIT","authoritative_runtime":false,"doubles":["immutable cue DTO fixtures","test-only00 host Save/Audio routing bridge"],"fault_exercises":fault_exercises,"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"input":"Control interaction signals; actual storage and AudioDirector bus queries","human_acceptance":"NOT_RUN","formal_runtime":"PENDING_01","audio_dependency_sha":AUDIO_COMMIT,"formal_audio":api_status,"production_audio_host":"PENDING_00","save_path":save_path,"user_data_dir":OS.get_user_data_dir()}
+	var report := {"phase":phase,"pid":OS.get_process_id(),"checks":checks,"failures":failures,"fixture_kind":"PRESENTATION_CONTRACT_UNIT","authoritative_runtime":false,"doubles":["immutable cue DTO fixtures with explicitly synthetic structured Safety evidence","test-only00 host Save/Audio routing bridge"],"fault_exercises":fault_exercises,"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"input":"Control interaction signals; actual storage and AudioDirector bus queries","human_acceptance":"NOT_RUN","formal_runtime":"NOT_IN_THIS_OWNER_CHECKOUT; Real wiring PENDING_00","runtime_dto_reference_sha":RUNTIME_DTO_REFERENCE,"audio_dependency_sha":AUDIO_COMMIT,"formal_audio":api_status,"production_audio_host":"PENDING_00","save_path":save_path,"user_data_dir":OS.get_user_data_dir()}
 	DirAccess.make_dir_recursive_absolute(evidence)
 	var file := FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify(report,"\t")); file.close()

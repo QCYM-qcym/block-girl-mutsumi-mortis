@@ -2,9 +2,11 @@
 
 GAME_FEEL_UI_EXTENSION_READY: **NOT_READY — required shared integration cases pending**.
 
+Latest increment: structured01 safety_verdict consumption, aligned with Runtime candidate26387d6c34a869ad7035ee13ee77d8d5c24d796a. See STRUCTURED_SAFETY_FIX.md. Current full Owner evidence owner07_structured_safety_green_01 passes180 checks with172 source files; scalar-fixture and previous169-check evidence remain historical. Current incremental source commit/binding is recorded after commit in DELIVERY_BINDING.json. No overall Real/Build/Human READY claim.
+
 Incremental public-contract correction: ACTION_FEEDBACK now consumes phase FEEDBACK, while typed Edge retains REJECTED. Source/fix commit: **e7641bd280ce82f46db88d7f28940f24168528a6**. See FEEDBACK_CONTRACT_FIX.md. Latest full Owner evidence is owner07_feedback_contract_green_01:169 checks,172 source files, all checked against actual committed blobs/physical/tested bytes. Earlier165-check Audio delivery remains history. Current binding is DELIVERY_BINDING.json; the following commit contains binding/receipt metadata only. Overall integration/Human pending state is unchanged.
 
-Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Production UI implementation commit:8724dbc13c6e1852d2020be2f05eb638162e373d. Formal11 Audio dependency4afbd068fae74a826dae4db04c2c612af23fa861 was normally merged in fd29aeeb644bd8098ca3d641dcb80fc2802c5b27. Latest source/test/evidence commit: **27ff384dbde90be9432086904b2a5cc470e24852**. Exact172-file binding is in DELIVERY_BINDING.json; the following commit contains binding/receipt metadata only. Earlier104-file binding remains in evidence/ui_only_104_binding.json.
+Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Original UI implementation:8724dbc13c6e1852d2020be2f05eb638162e373d. Formal11 Audio dependency4afbd068fae74a826dae4db04c2c612af23fa861 was normally merged in fd29aeeb644bd8098ca3d641dcb80fc2802c5b27; earlier Audio lifecycle source:27ff384dbde90be9432086904b2a5cc470e24852. The current incremental source/binding is DELIVERY_BINDING.json. Original104-file and previous172-file bindings remain in immutable evidence history.
 
 ## Requested output
 
@@ -26,17 +28,17 @@ Push: **NOT_RUN**. No messages sent to other chats. Review subagent messages sta
 
 ## Actual verification
 
-Latest evidence: evidence/owner07_audio_final_02. Actual WIP execution HEADfd29aeeb644bd8098ca3d641dcb80fc2802c5b27; original dirty inventory retained. Five separate processes, isolated APPDATA/LOCALAPPDATA profile, engine4.7.2.stable.steam.ed1daf0bf:
+Latest evidence: evidence/owner07_structured_safety_green_01. Actual WIP execution HEADd9dd3317e558f0d8380a2e6635452308d49240f1; original dirty inventory retained. Five separate processes, isolated APPDATA/LOCALAPPDATA profile, engine4.7.2.stable.steam.ed1daf0bf:
 
 | Stage | Checks | Exit | stderr |
 | --- | ---: | ---: | ---: |
 | Existing Save regression |19|0|0 bytes|
 | Existing Shell flow regression |20|0|0 bytes|
-| Owner Settings/actual Audio API/event/fault cases |45|0|0 bytes|
+| Owner Settings/actual Audio API/event/Safety DTO/fault cases |60|0|0 bytes|
 | Cold process restore/actual Audio API |5|0|0 bytes|
 | Three logical viewports/native input |76|0|0 bytes|
 
-Total165 positive checks, failures=[], source_drift=false. Cue tests explicitly PRESENTATION_CONTRACT_UNIT, authoritative_runtime=false; report declares Unit00 host routing/DTO doubles and actual executed injected/deferred/programmatic faults. AudioDirector and SaveStore are actual delivered services. These tests are not legal Runtime/natural Fall or production host proof. Save profile is fresh beneath recorded .godot evidence; original saves/QA untouched.
+Total180 positive checks, failures=[], source_drift=false. Cue tests explicitly PRESENTATION_CONTRACT_UNIT, authoritative_runtime=false; structured Safety evidence is visibly synthetic. Report declares Unit00 host routing/DTO doubles and actual executed faults. AudioDirector and SaveStore are actual delivered services. Runtime26387d6c is a read-only DTO reference, not imported/legal Runtime/natural Fall or production host proof. Save profile is fresh beneath recorded .godot evidence; original saves/QA untouched.
 
 The earlier UI-only stage used158 checks with104 sources bound to8724dbc. Its binding remains history. Latest evidence includes172 actual UI/Audio/approved dependency files, bound after commit via native git cat-file byte streams against original tested and physical SHA256. Frozen approved paths remain unchanged; Audio11 scripts/assets are unchanged from4afbd06. WIP identity remains exact; source binding never relabels the original run as a clean-commit execution.
 

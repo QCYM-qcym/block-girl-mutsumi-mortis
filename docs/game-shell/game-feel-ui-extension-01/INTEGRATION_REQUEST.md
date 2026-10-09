@@ -8,6 +8,8 @@ Instantiate the CanvasLayer only in `experiments/game_feel_01/host/**`, leaving 
 
 Phase pairing follows the committed contract: non-edge ACTION_FEEDBACK uses FEEDBACK (including MECHANISM_LOCKED); only typed MOVE_REJECTED_EDGE uses REJECTED. Native rejected status/code remains inside the copied result, separate from delivery phase. See FEEDBACK_CONTRACT_FIX.md for the corrected consumer and RED/GREEN.
 
+Fall STARTED consumes01's structured safety_verdict: dictionary status=SAFE, empty issues Array and nonempty opaque evidence_ref Dictionary. Scalar SAFE is rejected. The UI does not evaluate Safety or reinterpret proof references. See STRUCTURED_SAFETY_FIX.md; Owner tests are synthetic DTO compatibility, while00's real Facade delivery remains the source of authority.
+
 Open with open_settings(actual_saved_settings). Connect:
 
 - settings_preview(values) → delivered11 AudioDirector.apply_settings(values) and existing fullscreen lifecycle. Audio ignores fullscreen. Preview must not write Save.

@@ -284,7 +284,7 @@ func consume_event(event: Dictionary) -> void:
 	if semantic == "PERSPECTIVE_FALL_APPLIED" and phase == "STARTED" and event.get("reason_category") == "NONE":
 		if not identity is Dictionary or not _valid_identity(identity): return
 		var result: Variant = event.get("result")
-		if not result is Dictionary or result.get("status") != 0 or event.get("safety_verdict") != "SAFE" or not event.get("target_pose") is Dictionary: return
+		if not result is Dictionary or result.get("status") != 0 or not _has_safe_verdict(event.get("safety_verdict")) or not event.get("target_pose") is Dictionary: return
 		_active_identity = identity.duplicate(true)
 		_mechanism_hint = false
 		status_label.text = "错视坠落中 · 操作暂锁"
@@ -300,3 +300,12 @@ func consume_event(event: Dictionary) -> void:
 
 func _valid_identity(identity: Dictionary) -> bool:
 	return identity.size() == 4 and identity.get("session_id") == _session and identity.get("level_run_id") == _run and identity.get("generation") is int and identity.get("attempt_id") is int
+
+func _has_safe_verdict(verdict: Variant) -> bool:
+	#01 owns Safety truth; the UI only reads its structured status and opaque evidence reference.
+	if not verdict is Dictionary: return false
+	var status: Variant = verdict.get("status")
+	if not status is String or status != "SAFE": return false
+	var issues: Variant = verdict.get("issues")
+	var evidence_ref: Variant = verdict.get("evidence_ref")
+	return issues is Array and issues.is_empty() and evidence_ref is Dictionary and not evidence_ref.is_empty()
