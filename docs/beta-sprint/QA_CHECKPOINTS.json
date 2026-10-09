@@ -29,7 +29,7 @@
     "L04_full": "PASS",
     "L04_Reset": "PASS",
     "L05_unlock": "PASS_NATIVE_GOAL",
-    "new_Phase3_QA": "NOT_RUN_NOT_YET_PUBLISHED",
+    "new_Phase3_QA": "NOT_RUN_NEW_PACKAGE_PUBLISHED",
     "fixed_hotfix_cold_continue": "PASS",
     "L03_first_time": "RETEST_PENDING",
     "five_level_progression": "PASS_PRIOR_THREE_HISTORY_PLUS_REAL_L04_L05"
@@ -106,7 +106,7 @@
   "release_recommendation": "CONTINUE_BETA",
   "whole_game_beta_qa_complete": false,
   "next": "BETA_PHASE3_FIVE_LEVEL_3D_UNIFICATION",
-  "next_development": "ALLOWED_TO_CONTINUE",
+  "next_development": "BETA_PHASE_3_FIVE_LEVEL_3D_UNIFICATION",
   "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
   "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE",
   "history": [
@@ -248,5 +248,20 @@
       "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
       "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE"
     }
-  ]
+  ],
+  "current_development_candidate": {
+    "status": "BETA_FIVE_LEVEL_3D_SLICE_READY",
+    "build": "E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01",
+    "source": "942b6d4e0b3e30dc26fa4c276948fb68b548244e",
+    "zip_sha256": "409cb38c4b43a1847ed0857e019265fb7ed26eec90fea4691760e2905a1c27c1",
+    "receipt": "docs/beta-sprint/five-level-3d-slice/RECEIPT.json",
+    "L04": "3D_FORMAL_PLAYABLE",
+    "L05": "3D_FORMAL_PLAYABLE",
+    "L06": "DESIGN_READY_NOT_PLAYABLE",
+    "human_QA": "NOT_RUN",
+    "old_Human_QA_PASS_transferred": false,
+    "L03_first_time": "RETEST_PENDING",
+    "stairs_clearance": "PARTIAL_PASS",
+    "stairs_traversal": "NOT_RUN"
+  }
 }

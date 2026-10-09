@@ -59,6 +59,6 @@
 
 - [x] AuditOwnerunique diff and normalbatchmerge within thisintegrationwindow. Keep mainintegration runnable.
 - [x] Focused currentL01/L02/L03 3D regressions, newL04/L05 formalmenu smokes, realunlock/Save/Continue; avoid unchangedUIresolutionmatrix repetition.
-- [ ] Use existing sourcebuilder through a new00wrapper to create the namedfive-level3D QA candidate; preserve underlyingknownbaseline logs and originalpre-handoff archives. Record actualsource,1270+/actualcopiedSHA,engine,ZIP,stages and startup.
-- [ ] Verify exactoldQA/frozenproduction/sourcepayload preservation, finalReview and fileSHA; commitdocs-onlyreceipt and verifyrealHEAD/CLEAN.
-- [ ] Handoff exactnewsource/ZIP/receipt to08 for changed3D routes,Reset,normalprogression,ColdContinue and necessaryUIfocusedchecks. HumanQA NOT_RUN until actual08result.
+- [x] Use existing sourcebuilder through a new00wrapper to create the namedfive-level3D QA candidate; preserve underlyingknownbaseline logs and originalpre-handoff archives. Record actualsource,1270+/actualcopiedSHA,engine,ZIP,stages and startup.
+- [x] Verify exactoldQA/frozenproduction/sourcepayload preservation, finalReview and fileSHA; commitdocs-onlyreceipt and verifyrealHEAD/CLEAN.
+- [x] Prepare exactnewsource/ZIP/receipt handoff for08 changed3D routes,Reset,normalprogression,ColdContinue and necessaryUIfocusedchecks. Dispatch after final receipt commit; the 00 task records the actual tool result. HumanQA NOT_RUN until actual08result.

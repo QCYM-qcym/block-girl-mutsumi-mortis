@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "build": "E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01",
+  "zip": {
+    "zip": "E:\\godot\\beta-sprint-builds\\beta_five_level_3d_20261009_01.zip",
+    "sha256": "409cb38c4b43a1847ed0857e019265fb7ed26eec90fea4691760e2905a1c27c1",
+    "bytes": 61125565,
+    "source_commit": "942b6d4e0b3e30dc26fa4c276948fb68b548244e",
+    "version_id": "beta_five_level_3d_20261009_01"
+  },
+  "build_source": "942b6d4e0b3e30dc26fa4c276948fb68b548244e",
+  "engine": "4.7.2.stable.steam.ed1daf0bf",
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "package_kind": "SOURCE_PLAYABLE_NOT_EXE",
+  "copied_source_files": 1309,
+  "all_package_files": 1324,
+  "zip_member_count": 1324,
+  "actual_stages": [
+    {
+      "stage": "import",
+      "pid": 51252,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "40d9e167eae313f02adc809d2f0eb11b25938d924035655a7350bfb5e215593a",
+      "classification": "PASS"
+    },
+    {
+      "stage": "catalog",
+      "pid": 27568,
+      "exit_code": 0,
+      "checks": 68,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7b3daba301557fc3d43ff6e0dc0c6bcd5e685b1dc5d497b841d49ff99b808ff0",
+      "classification": "PASS"
+    },
+    {
+      "stage": "main_scene_boot",
+      "pid": 50008,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "PASS"
+    },
+    {
+      "stage": "foundation_boot",
+      "pid": 14880,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "PASS"
+    },
+    {
+      "stage": "content_mutsumi_l01_boot",
+      "pid": 22432,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "PASS"
+    },
+    {
+      "stage": "content_mutsumi_l02_boot",
+      "pid": 52180,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "PASS"
+    },
+    {
+      "stage": "content_mutsumi_l03_boot",
+      "pid": 48292,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "PASS"
+    },
+    {
+      "stage": "content_mutsumi_l04_boot",
+      "pid": 3140,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 133,
+      "stderr_sha256": "bf8149e7a4c220bbef9c5eac13cd97f17ae895e5fff5a7befa152e30319f4d9d",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "KNOWN_UNCHANGED_QUIT_AFTER_EXIT_WARNING"
+    },
+    {
+      "stage": "content_mutsumi_l05_boot",
+      "pid": 36640,
+      "exit_code": 0,
+      "checks": null,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692",
+      "classification": "PASS"
+    }
+  ],
+  "formal_catalog_checks": 68,
+  "CONTENT02_classification": "PASS_WITH_KNOWN_BASELINE_P2",
+  "known_baseline_notes": [
+    "Existing standalone --quit-after ObjectDB exit warning: content_mutsumi_l04_boot"
+  ],
+  "isolated_save": "user://beta_sprint/beta_five_level_3d_20261009_01/qa_progress.json",
+  "new_profile_initial_status": "ABSENT_NO_PREPARED_PROGRESS",
+  "old_QA_pass_transferred": false,
+  "new_package_human_qa": "NOT_RUN",
+  "default_renderer_focused": "Windows_D3D12_Forward+_RTX5060Ti",
+  "retained_archives": [
+    {
+      "path": ".godot/beta-sprint/beta_five_level_3d_20261009_01/pre_handoff_source_archive.zip",
+      "bytes": 61124355,
+      "sha256": "e1928a8fbf4b6eaa903e001808c75c166b53264ba590b19fc33e4e80e507e8dc"
+    },
+    {
+      "path": ".godot/beta-sprint/beta_five_level_3d_20261009_01/content02_qa_archive_before_phase3.zip",
+      "bytes": 61124672,
+      "sha256": "9ac4e050915bebf003fca5ab9e3df7c5f71accac37d6a6448faf212d5f292aa5"
+    }
+  ],
+  "captured_utc": "2026-10-09T11:13:46.588442+00:00",
+  "failures": []
+}

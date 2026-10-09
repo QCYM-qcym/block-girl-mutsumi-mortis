@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "captured_utc": "2026-10-09T11:23:23.678745+00:00",
+  "build_source": "942b6d4e0b3e30dc26fa4c276948fb68b548244e",
+  "frozen_production_files": 635,
+  "old_QA_entries": 6146,
+  "old_QA_roots": 5,
+  "approved_art_assets": 18,
+  "approved_art_source_project_pairs": 121,
+  "merged_owner_files": 283,
+  "evidence_source_files": 658,
+  "source_copy_count": 1309,
+  "package_files": 1324,
+  "zip_unchanged": true,
+  "old_default_profiles": "ABSENT_PRESERVED",
+  "failures": [],
+  "post_build_coordination_document_differences": [
+    {
+      "path": "docs/beta-sprint/five-level-3d-slice/FOCUSED_VERIFICATION.json",
+      "build_snapshot_sha256": "2ecb7a25a04f49eb16c7ace93afea5a0aa401318bb3757473a9e79dc4544114a",
+      "current_receipt_checkout_sha256": "05d2ec9bd59701708bae4afda272f1f6ccc0f2caeaec8812ab39f24a9712ad7e",
+      "reason": "00 JSON CRLF normalized to repository LF; semantic equality verified"
+    },
+    {
+      "path": "docs/beta-sprint/five-level-3d-slice/PREBUILD_PROTECTION.json",
+      "build_snapshot_sha256": "1bbc496d9d8408b21cad09229e384a58b9f46f6421ba764f21ef6b322beff950",
+      "current_receipt_checkout_sha256": "fdbc348b828a6c7072203c53cae0b12e401ff75a01911b3c6d343d6e32ff8c9c",
+      "reason": "00 JSON CRLF normalized to repository LF; semantic equality verified"
+    },
+    {
+      "path": "docs/beta-sprint/QA_CHECKPOINTS.json",
+      "build_snapshot_sha256": "497060688f783114d43dec031266c55fb6d834d6acbbf9caccb77f30cd3eba47",
+      "current_receipt_checkout_sha256": "d0b61be3966701c213177c6eef688fc7969aedb55d68040c7615254f95371f6d",
+      "reason": "00 checkpoint/plan update"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-09-five-level-3d-slice.md",
+      "build_snapshot_sha256": "93505c64cda4442c2b380d36023364cf868952a8ea21db695441ecc28f6f22ac",
+      "current_receipt_checkout_sha256": "8fedfd0b35b7818b5073ca8cce6cd919ed57e9aee682ed4c2a9a49c924f4dc60",
+      "reason": "00 checkpoint/plan update"
+    }
+  ],
+  "post_build_production_source_drift": [],
+  "frozen_package_1309_source_manifest": "MATCH"
+}
