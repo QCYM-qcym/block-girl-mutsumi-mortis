@@ -22,7 +22,14 @@ var _seen: Dictionary = {}
 var _scope: Dictionary = {}
 var _roll_pivot := Vector3.ZERO
 var _roll_axis := Vector3.ZERO
+var _reduced_motion := false
 const ROLL_DURATION := 0.24
+
+func set_reduced_motion(value: bool) -> void:
+	# Select the next accepted motion; never mutate the active frozen sampler.
+	_reduced_motion=value
+
+func reduced_motion_enabled() -> bool: return _reduced_motion
 
 func bind(actor: Node3D, fall: RefCounted, landing: RefCounted, projection: Callable, finish_transition: Callable) -> void:
 	clear()
@@ -81,6 +88,7 @@ func consume_event(event: Dictionary) -> Dictionary:
 		# Validate with the same Owner sampler before projecting/replacing motion.
 		var staged: RefCounted = _fall.get_script().new()
 		staged.parameters = _fall.parameters.duplicate(true)
+		staged.parameters.reduced_motion = _reduced_motion
 		var begin: Dictionary = staged.begin(event)
 		if not begin.ok: return begin
 		var source_result: Dictionary=_project(event.source_pose)
@@ -108,6 +116,7 @@ func consume_event(event: Dictionary) -> Dictionary:
 		if _phase != "FALL" or identity != _presentation or event.get("transition_identity") != _token:
 			return {"ok":true,"ignored":true,"issues":[]}
 		if event.get("source_pose")!=_started.source_pose or event.get("target_pose")!=_started.target_pose: return _failure("Committed Fall endpoints differ from captured STARTED.")
+		_landing.parameters.reduced_motion = _fall.parameters.reduced_motion
 		var target_result: Dictionary=_project(event.target_pose)
 		if not target_result.ok: return target_result
 		var committed := event.duplicate(true)

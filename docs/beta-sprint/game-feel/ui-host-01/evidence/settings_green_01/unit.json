@@ -1,0 +1,58 @@
+{
+	"checks": 28,
+	"display": "headless",
+	"doubles": [],
+	"failures": [
+		"same actual SaveStore restores full payload"
+	],
+	"observations": {
+		"audio": {
+			"bus_gains": {
+				"Ambience": -19.1309471130371,
+				"Master": -8.87395000457764,
+				"SFX": -11.6799335479736
+			},
+			"context": "menu",
+			"cue_counts": {
+				"fall_start": 1,
+				"fall_whoosh": 1,
+				"landing_impact": 1
+			},
+			"issues": [],
+			"master_muted": false,
+			"paused": false,
+			"playing": [
+				"music:menu"
+			],
+			"positions": {
+				"complete": 0.0,
+				"discovery": 0.0,
+				"inner": 0.0,
+				"menu": 0.188662126660347,
+				"surface": 0.0
+			},
+			"target_world": 0,
+			"voice_count": 18,
+			"world_blend": 0.0
+		},
+		"runtime_readiness": "PENDING_RUNTIME_INTERFACE",
+		"settings": {
+			"fullscreen": false,
+			"game_feel": {
+				"contrast": true,
+				"hint_strength": 2,
+				"input_hints": false,
+				"reduced_motion": true,
+				"version": 1
+			},
+			"master": 0.36,
+			"music": 0.44,
+			"muted": false,
+			"sfx": 0.52
+		},
+		"state": 1
+	},
+	"pid": 40380,
+	"scope": "Actual shared Shell/SaveStore/Audio/Runtime API; no Human result",
+	"user_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/settings_green_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}
