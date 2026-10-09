@@ -7,6 +7,7 @@ Contract SHA-256: `6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f2
 
 Module: `game/feel/animation/edge_recoil/edge_lean.gd` + `recoil_motion.gd`, with `edge_event.gd`/`edge_admission.gd`.
 Integration request: [INTEGRATION_REQUEST.md](INTEGRATION_REQUEST.md).
+Code commit: `746ffb3531cb5c9f4c7ebf74f4cfa905f71183d8` (tested physical module/harness bytes bound in DELIVERY_BINDING.json).
 Push: NOT_RUN.
 
 ## Actual final verification
