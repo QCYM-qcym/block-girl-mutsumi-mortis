@@ -1,0 +1,249 @@
+{
+  "task": "PFALL_FIRST_VERTICAL_SLICE_INTEGRATION_01",
+  "contract_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+  "registration_status": "TEST_DEPENDENCY_ONLY",
+  "purpose": "Independent03 native input observations; formal receipt after actual closed loop review",
+  "cases": {
+    "CORE_A_NATURAL_FALL": {
+      "host_scene": "res://experiments/game_feel_01/host/core_lab.tscn",
+      "runtime_node": ".",
+      "runtime_property": "runtime",
+      "body_node": "AuthoritativeCubePose",
+      "camera_node": ".",
+      "camera_property": "camera",
+      "canonical_root": ".",
+      "delivery_commits": {
+        "01_runtime": "26387d6c34a869ad7035ee13ee77d8d5c24d796a",
+        "09_author": "54ea24cd50c4bd45b083dc26487ff2b7afd2a703",
+        "09_exit": "82a8a7dc85205e9391551f24267f35f5abe53393",
+        "09_optin": "e4bcdfc6459f587cb26c25494dd5b57b76ccdca4",
+        "10A_motion": "4781dfcf16757ccbde13e54ee449f1cf00174944",
+        "00_host": "61ac470983d41ebd8a81ee44b01996ca185ae305",
+        "03_quality": "9f378d0f29694686f41eb605640dcd35e09de26a"
+      },
+      "settle_seconds": 0.5,
+      "native_inputs": [
+        {
+          "kind": "wait",
+          "seconds": 0.3
+        },
+        {
+          "kind": "key",
+          "key": "F",
+          "pressed": true
+        },
+        {
+          "kind": "key",
+          "key": "F",
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 2.0
+        },
+        {
+          "kind": "checkpoint",
+          "label": "Landing",
+          "center2": [
+            -8,
+            2,
+            8
+          ],
+          "preserve_initial_basis": true
+        },
+        {
+          "kind": "key",
+          "key": "D",
+          "pressed": true
+        },
+        {
+          "kind": "key",
+          "key": "D",
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 0.6
+        }
+      ],
+      "expected": {
+        "fall_count": 1,
+        "connection_id": "pfall_a",
+        "camera_quadrant": 1,
+        "source_center2": [
+          0,
+          6,
+          0
+        ],
+        "target_center2": [
+          -8,
+          2,
+          8
+        ],
+        "final_center2": [
+          -6,
+          2,
+          8
+        ],
+        "preserve_final_basis": false
+      }
+    },
+    "CORE_B_NATURAL_FALL": {
+      "host_scene": "res://experiments/game_feel_01/host/core_lab.tscn",
+      "runtime_node": ".",
+      "runtime_property": "runtime",
+      "body_node": "AuthoritativeCubePose",
+      "camera_node": ".",
+      "camera_property": "camera",
+      "canonical_root": ".",
+      "delivery_commits": {
+        "01_runtime": "26387d6c34a869ad7035ee13ee77d8d5c24d796a",
+        "09_author": "54ea24cd50c4bd45b083dc26487ff2b7afd2a703",
+        "09_exit": "82a8a7dc85205e9391551f24267f35f5abe53393",
+        "09_optin": "e4bcdfc6459f587cb26c25494dd5b57b76ccdca4",
+        "10A_motion": "4781dfcf16757ccbde13e54ee449f1cf00174944",
+        "00_host": "61ac470983d41ebd8a81ee44b01996ca185ae305",
+        "03_quality": "9f378d0f29694686f41eb605640dcd35e09de26a"
+      },
+      "settle_seconds": 0.5,
+      "native_inputs": [
+        {
+          "kind": "wait",
+          "seconds": 0.3
+        },
+        {
+          "kind": "mouse_button",
+          "x": 60,
+          "y": 150,
+          "pressed": true
+        },
+        {
+          "kind": "mouse_button",
+          "x": 60,
+          "y": 150,
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 0.3
+        },
+        {
+          "kind": "key",
+          "key": "F",
+          "pressed": true
+        },
+        {
+          "kind": "key",
+          "key": "F",
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 2.0
+        },
+        {
+          "kind": "checkpoint",
+          "label": "Landing",
+          "center2": [
+            -8,
+            10,
+            8
+          ],
+          "preserve_initial_basis": true
+        },
+        {
+          "kind": "key",
+          "key": "D",
+          "pressed": true
+        },
+        {
+          "kind": "key",
+          "key": "D",
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 0.6
+        }
+      ],
+      "expected": {
+        "fall_count": 1,
+        "connection_id": "pfall_b",
+        "camera_quadrant": 1,
+        "source_center2": [
+          0,
+          6,
+          0
+        ],
+        "target_center2": [
+          -8,
+          10,
+          8
+        ],
+        "final_center2": [
+          -6,
+          10,
+          8
+        ],
+        "preserve_final_basis": false
+      }
+    },
+    "CORE_CAMERA_REJECT": {
+      "host_scene": "res://experiments/game_feel_01/host/core_lab.tscn",
+      "runtime_node": ".",
+      "runtime_property": "runtime",
+      "body_node": "AuthoritativeCubePose",
+      "camera_node": ".",
+      "camera_property": "camera",
+      "canonical_root": ".",
+      "delivery_commits": {
+        "01_runtime": "26387d6c34a869ad7035ee13ee77d8d5c24d796a",
+        "09_author": "54ea24cd50c4bd45b083dc26487ff2b7afd2a703",
+        "09_exit": "82a8a7dc85205e9391551f24267f35f5abe53393",
+        "09_optin": "e4bcdfc6459f587cb26c25494dd5b57b76ccdca4",
+        "10A_motion": "4781dfcf16757ccbde13e54ee449f1cf00174944",
+        "00_host": "61ac470983d41ebd8a81ee44b01996ca185ae305",
+        "03_quality": "9f378d0f29694686f41eb605640dcd35e09de26a"
+      },
+      "settle_seconds": 0.5,
+      "native_inputs": [
+        {
+          "kind": "wait",
+          "seconds": 0.3
+        },
+        {
+          "kind": "key",
+          "key": "Q",
+          "pressed": true
+        },
+        {
+          "kind": "key",
+          "key": "Q",
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 0.5
+        },
+        {
+          "kind": "key",
+          "key": "F",
+          "pressed": true
+        },
+        {
+          "kind": "key",
+          "key": "F",
+          "pressed": false
+        },
+        {
+          "kind": "wait",
+          "seconds": 0.5
+        }
+      ],
+      "expected": {
+        "fall_count": 0,
+        "required_reason": "CAMERA_NOT_ALLOWED"
+      }
+    }
+  }
+}
