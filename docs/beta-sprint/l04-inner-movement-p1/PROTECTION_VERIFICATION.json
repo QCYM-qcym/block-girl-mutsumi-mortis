@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "baseline": "991140292ac67e87d1751a062e7e96c7b9fee553",
+  "verified_utc": "2026-10-09T06:54:04.1124740Z",
+  "protected_file_entries": 3073,
+  "protected_directory_membership": "EXACT",
+  "qa_build": "IMMUTABLE_BYTES_VERIFIED",
+  "qa_save": "UNCHANGED_BYTES_VERIFIED",
+  "old_screenshots_logs": "PRESERVED_BYTES_VERIFIED",
+  "mismatches": [],
+  "process_evidence": [
+    {
+      "run": "after_shell",
+      "pid": 28988,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "after_standalone",
+      "pid": 29152,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "before_shell",
+      "pid": 32572,
+      "exit_code": 1,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "before_standalone",
+      "pid": 18004,
+      "exit_code": 1,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "existing_unit_after",
+      "pid": 43860,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "import_baseline",
+      "pid": 43984,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "old_three_controls",
+      "pid": 6748,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "old_three_controls_after",
+      "pid": 19592,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "playthrough_final_headless",
+      "pid": 13392,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "playthrough_graphical",
+      "pid": 30536,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    },
+    {
+      "run": "playthrough_headless",
+      "pid": 23384,
+      "exit_code": 0,
+      "log_byte_sha256_verified": true,
+      "source_stable_during_run": true
+    }
+  ],
+  "graphical_screenshots_verified": 18,
+  "tested_source_byte_hashes_match": 32,
+  "historical_wrapper_source_copy_matches": true,
+  "only_after_validation_fixture_change": "runner CLI guard limiting standalone to probe; original runtime-loaded GDScript unchanged",
+  "l04_resource_after_sha256": "10f7a6a69a5e42c3796a6d0546938c7378be10f705fff3e40baf27db24efa18a"
+}

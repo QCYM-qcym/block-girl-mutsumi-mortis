@@ -1,0 +1,8 @@
+{
+  "case": "controls",
+  "entry": "standalone",
+  "result": "REJECTED_BEFORE_PROCESS_OR_EVIDENCE_CREATION",
+  "pass": true,
+  "reason": "Prevent accidentally presenting three L04 standalone repetitions as old-three controls",
+  "post_playthrough_change": "CLI-only validation; accepted shell playthrough/probe code unchanged; historical runner copies retained"
+}
