@@ -1,0 +1,4 @@
+# Evidence hashes refer to the original process output bytes.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# A failed startup's stdout ends with Godot's original banner blank line.
+evidence/**/stdout.log whitespace=-blank-at-eof,cr-at-eol

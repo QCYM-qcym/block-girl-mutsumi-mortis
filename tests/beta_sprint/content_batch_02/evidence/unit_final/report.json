@@ -1,0 +1,49 @@
+{
+	"checks": 45,
+	"display": "headless",
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"pid": 32756,
+	"routes": [
+		{
+			"cell": "(11, 1)",
+			"complete": true,
+			"id": "mutsumi_l04",
+			"moves": 11,
+			"world": 0
+		},
+		{
+			"cell": "(13, 0)",
+			"complete": true,
+			"id": "mutsumi_l05",
+			"moves": 13,
+			"world": 0
+		}
+	],
+	"topology": [
+		{
+			"id": "mutsumi_l04",
+			"kind": "query_only_not_input_playthrough",
+			"minimum_shifts_to_goal": 2,
+			"reachable": 68,
+			"solvable": 68
+		},
+		{
+			"id": "mutsumi_l05",
+			"kind": "query_only_not_input_playthrough",
+			"minimum_shifts_to_goal": 4,
+			"reachable": 100,
+			"solvable": 100
+		}
+	]
+}

@@ -1,0 +1,2537 @@
+{
+	"checks": 206,
+	"completion_events": 6,
+	"completion_observations": [
+		{
+			"cell": "(11, 1)",
+			"goal": true,
+			"id": "mutsumi_l04",
+			"phase": "complete",
+			"world": 0
+		},
+		{
+			"cell": "(11, 1)",
+			"goal": true,
+			"id": "mutsumi_l04",
+			"phase": "complete",
+			"world": 0
+		},
+		{
+			"cell": "(11, 1)",
+			"goal": true,
+			"id": "mutsumi_l04",
+			"phase": "complete",
+			"world": 0
+		},
+		{
+			"cell": "(13, 0)",
+			"goal": true,
+			"id": "mutsumi_l05",
+			"phase": "complete",
+			"world": 0
+		},
+		{
+			"cell": "(13, 0)",
+			"goal": true,
+			"id": "mutsumi_l05",
+			"phase": "complete",
+			"world": 0
+		},
+		{
+			"cell": "(13, 0)",
+			"goal": true,
+			"id": "mutsumi_l05",
+			"phase": "complete",
+			"world": 0
+		}
+	],
+	"display": "headless",
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"graphical": false,
+	"pid": 48780,
+	"profiles": [
+		{
+			"absolute": "C:/Users/QCYM/AppData/Roaming/Godot/app_userdata/方块少女-若叶睦/beta_sprint/content_batch_02/48780_mutsumi_l04/progress.json",
+			"checksum_valid": true,
+			"id": "mutsumi_l04",
+			"path": "user://beta_sprint/content_batch_02/48780_mutsumi_l04/progress.json",
+			"progress": {
+				"completed": [
+					"mutsumi_l04"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l04",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l04"
+				]
+			}
+		},
+		{
+			"absolute": "C:/Users/QCYM/AppData/Roaming/Godot/app_userdata/方块少女-若叶睦/beta_sprint/content_batch_02/48780_mutsumi_l05/progress.json",
+			"checksum_valid": true,
+			"id": "mutsumi_l05",
+			"path": "user://beta_sprint/content_batch_02/48780_mutsumi_l05/progress.json",
+			"progress": {
+				"completed": [
+					"mutsumi_l05"
+				],
+				"has_progress": true,
+				"recent": "mutsumi_l05",
+				"settings": {
+					"fullscreen": false,
+					"master": 1.0,
+					"music": 1.0,
+					"muted": false,
+					"sfx": 1.0
+				},
+				"unlocked": [
+					"mutsumi_l05"
+				]
+			}
+		}
+	],
+	"protected_default_save_hashes": {
+		"user://mutsumi_veilshift/beta_progress.json": "ABSENT",
+		"user://mutsumi_veilshift/beta_progress.json.bak": "ABSENT"
+	},
+	"renderer": "forward_plus",
+	"routes": [
+		{
+			"adapter_completion_events": 1,
+			"cell": "(11, 1)",
+			"complete": true,
+			"id": "mutsumi_l04",
+			"kind": "natural_InputEvent_route",
+			"mode": "normal",
+			"moves": 11,
+			"view": 1,
+			"world": 0
+		},
+		{
+			"adapter_completion_events": 1,
+			"cell": "(11, 1)",
+			"complete": true,
+			"id": "mutsumi_l04",
+			"kind": "natural_InputEvent_route",
+			"mode": "reset_replay",
+			"moves": 11,
+			"view": 1,
+			"world": 0
+		},
+		{
+			"adapter_completion_events": 1,
+			"cell": "(11, 1)",
+			"complete": true,
+			"id": "mutsumi_l04",
+			"kind": "natural_InputEvent_route",
+			"mode": "alternate_views",
+			"moves": 11,
+			"view": 2,
+			"world": 0
+		},
+		{
+			"adapter_completion_events": 1,
+			"cell": "(13, 0)",
+			"complete": true,
+			"id": "mutsumi_l05",
+			"kind": "natural_InputEvent_route",
+			"mode": "normal",
+			"moves": 13,
+			"view": 1,
+			"world": 0
+		},
+		{
+			"adapter_completion_events": 1,
+			"cell": "(13, 0)",
+			"complete": true,
+			"id": "mutsumi_l05",
+			"kind": "natural_InputEvent_route",
+			"mode": "reset_replay",
+			"moves": 13,
+			"view": 1,
+			"world": 0
+		},
+		{
+			"adapter_completion_events": 1,
+			"cell": "(13, 0)",
+			"complete": true,
+			"id": "mutsumi_l05",
+			"kind": "natural_InputEvent_route",
+			"mode": "alternate_views",
+			"moves": 13,
+			"view": 2,
+			"world": 0
+		}
+	],
+	"scope": {
+		"Foundation": "NOT_RUN / unchanged",
+		"graphical": "PASS only when explicitly --graphical and non-headless",
+		"input": "real Input.parse_input_event -> native GridInput; no forced gameplay state",
+		"profile": "unique PID-isolated native SaveStore only, no save migration",
+		"runtime": "existing ContentLevel/ContentState/GridMovement/PerspectiveController"
+	},
+	"screenshots": [],
+	"source_hashes": {
+		"game/levels/mutsumi/batch_01/content_hints.gd": "9a24b93acdb75b7ff3f9806147427402fc1777770e37c65f871576100663e5ba",
+		"game/levels/mutsumi/batch_01/content_level.gd": "a3e30362c1c47d304a02a52022adb73fbfa2c245687ac837c6897ff777ec56da",
+		"game/levels/mutsumi/batch_01/content_level_data.gd": "749760957f675b80745082d77434b1ebfea24a341e68800b1607f1fc352b150e",
+		"game/levels/mutsumi/batch_01/content_state.gd": "9549f1720ca8b0f3ebba8fd9cf2e48ab1313539ebc1154301eb9e0ca00b6d57c",
+		"game/levels/mutsumi/batch_01/l01_3d/l01_presented.gd": "a72dfde4c7b69294c887d1cebc8c29dce49f0b0d2f3b2b74694efc1d0e113b0e",
+		"game/levels/mutsumi/batch_01/l01_3d/presenter.gd": "0bb1c430b5ce078b3ff811ba2e42e7edb375f7056378f6f2ceceb1c6dce54a23",
+		"game/levels/mutsumi/batch_01/level_order.json": "8f910ba32ac7c9307d472f0de5f2e0a8221f2be613b2e19019af19152928ef45",
+		"game/levels/mutsumi/batch_01/levels_3d/presenter.gd": "e3cf9fbfbc5e7049eeaa67e15578a12219c76d96792a3390e2b370771a2ff7e4",
+		"game/levels/mutsumi/batch_02/batch_02_hints.gd": "1541f3939586da12b967cbe21aaf4aaa79b4e8608ad1f87451823d77def5cce2",
+		"game/levels/mutsumi/batch_02/batch_02_level.gd": "9a07b1a7160a5fc398ebcdf6695a7565865f8c5f6abe2cd3aa3f2d65c1b4ad3e",
+		"game/levels/mutsumi/batch_02/l04_borrowed_path.tres": "d679ad843428f2de42c655295d84ea9ee8c9ac032d835fecf02897668535155a",
+		"game/levels/mutsumi/batch_02/l04_borrowed_path.tscn": "c63538cca67d022f68d4a24d1981d00bd5044ff141319a8fe1a5c8fe09072093",
+		"game/levels/mutsumi/batch_02/l05_gate_home.tres": "b44258c1f5bb932956876eec83625d4c1f9be9596174ad75b8e1640c8ea209a6",
+		"game/levels/mutsumi/batch_02/l05_gate_home.tscn": "a5fb22f6a751713bc9268f6da709857245cff3f4be744e77b86817bf0af60385",
+		"game/player/grid_input.gd": "2c307df3487df65c2c328b271dd151a69a43859e4bd67e4bda764df4cd89e008",
+		"game/shell/game_shell.gd": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb",
+		"game/shell/level_adapter.gd": "4c0f17c61136aa00674feccdbe00fff6a9b46402d65bd728b82863d538ff011d",
+		"game/shell/save_store.gd": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f",
+		"prototype/perspective/grid_movement.gd": "a8cdcc72b079a0a48ddc9fcdadb289871653ede6d8405deb18da3a2be7ba3c28",
+		"prototype/perspective/perspective_controller.gd": "b1db0eae6f74434404fbd38127dd89eb3e8a2730d2c0097bc54b5c14cdd775d7",
+		"prototype/perspective/perspective_link.gd": "821bb22212ba7d0e53526096bf3088bc11efe517f986f7238663769950903396"
+	},
+	"trace": [
+		{
+			"event": "native_mover.committed",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "setup",
+			"state": {
+				"cell": [
+					1,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					1,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 3,
+				"orientation": "(0, 0, -1)|(0, -1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					2,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 6,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					11,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 10,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_normal",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"gate": false,
+				"goal": true,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"orientation": "(0, 0, -1)|(0, 1, 0)|(1, 0, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					1,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 3,
+				"orientation": "(0, 0, -1)|(0, -1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					2,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 6,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					11,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 10,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_reset_replay",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"gate": false,
+				"goal": true,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"orientation": "(0, 0, -1)|(0, 1, 0)|(1, 0, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					1,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 2,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 3,
+				"orientation": "(0, 0, -1)|(0, -1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					2,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 6,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					3,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					9,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": true,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					10,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					11,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 10,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					11,
+					1
+				],
+				"gate": false,
+				"goal": true,
+				"id": "mutsumi_l04",
+				"link": false,
+				"moves": 11,
+				"orientation": "(0, 0, -1)|(0, 1, 0)|(1, 0, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "settled_view",
+			"route": "mutsumi_l04_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					1,
+					1
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 5,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					1,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 6,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					2,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					3,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					3,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					9,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					10,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 10,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					11,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					11,
+					0
+				],
+				"gate": true,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					12,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_normal",
+			"state": {
+				"cell": [
+					13,
+					0
+				],
+				"gate": false,
+				"goal": true,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					1,
+					1
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 5,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					1,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 6,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					2,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					3,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					3,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					9,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					10,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 10,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					11,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					11,
+					0
+				],
+				"gate": true,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					12,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_reset_replay",
+			"state": {
+				"cell": [
+					13,
+					0
+				],
+				"gate": false,
+				"goal": true,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					4
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					3
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					1,
+					2
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 4,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					1,
+					1
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 5,
+				"orientation": "(0, 0, 1)|(0, 1, 0)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					1,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 6,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					2,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					3,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					3,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 8,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					9,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": true,
+				"moves": 9,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					10,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 10,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					11,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					11,
+					0
+				],
+				"gate": true,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					12,
+					0
+				],
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"event": "native_mover.committed",
+			"route": "mutsumi_l05_alternate_views",
+			"state": {
+				"cell": [
+					13,
+					0
+				],
+				"gate": false,
+				"goal": true,
+				"id": "mutsumi_l05",
+				"link": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		}
+	]
+}
