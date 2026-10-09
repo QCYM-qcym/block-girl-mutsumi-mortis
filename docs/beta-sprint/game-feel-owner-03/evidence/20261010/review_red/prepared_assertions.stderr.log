@@ -1,0 +1,44 @@
+.F.E...F.....F..............
+======================================================================
+ERROR: test_malformed_snapshots_fail_closed (test_event_assertions.EventAssertions.test_malformed_snapshots_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 58, in test_malformed_snapshots_fail_closed
+    self.assertTrue(event_failures(bad, "PERSPECTIVE_FALL_APPLIED", "NONE"), field)
+                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\event_assertions.py", line 52, in event_failures
+    event["semantic"] not in semantics or event["reason_category"] not in reasons):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot use 'list' as a set element (unhashable type: 'list')
+
+======================================================================
+FAIL: test_fall_cannot_change_world_or_use_bool_orientation (test_event_assertions.EventAssertions.test_fall_cannot_change_world_or_use_bool_orientation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 83, in test_fall_cannot_change_world_or_use_bool_orientation
+    self.assertTrue(event_failures(bad, "PERSPECTIVE_FALL_APPLIED", "NONE"))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true
+
+======================================================================
+FAIL: test_refusals_preserve_entire_native_state_without_authorized_motion (test_event_assertions.EventAssertions.test_refusals_preserve_entire_native_state_without_authorized_motion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_event_assertions.py", line 72, in test_refusals_preserve_entire_native_state_without_authorized_motion
+    self.assertTrue(event_failures(bad, semantic, reason), field)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true : authorized_path_points2
+
+======================================================================
+FAIL: test_core_execution_does_not_wait_for_its_own_final_receipt (test_matrix.MatrixCoverage.test_core_execution_does_not_wait_for_its_own_final_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_matrix.py", line 44, in test_core_execution_does_not_wait_for_its_own_final_receipt
+    self.assertNotIn("CORE_PLAYABLE_RECEIPT", row["dependencies"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CORE_PLAYABLE_RECEIPT' unexpectedly found in ['RUNTIME_FALL', 'AUTHOR_CONNECTION', 'FALL_LANDING', 'HOST_NATIVE_INPUT', 'CORE_PLAYABLE_RECEIPT']
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.016s
+
+FAILED (failures=3, errors=1)
