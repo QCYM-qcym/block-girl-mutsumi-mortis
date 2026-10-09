@@ -1,0 +1,908 @@
+{
+  "status": "SEALED",
+  "sealed_at": "2026-10-09T05:02:22.124Z",
+  "build": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
+  "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+  "files": [
+    {
+      "path": "BETA_3D02_FOCUSED_QA_PARTIAL.json",
+      "bytes": 80753,
+      "sha256": "3d6855d0ce420865019890e767cbfc98cb2c73146e0fab386e6727e7cd893753"
+    },
+    {
+      "path": "BETA_3D02_FOCUSED_QA_PARTIAL.md",
+      "bytes": 11705,
+      "sha256": "73feef0f87e4fc79f04a32dc1eeaaf849dd3887b50e320a1577a69459c7f3957"
+    },
+    {
+      "path": "FOCUS-3D02-P2-001.json",
+      "bytes": 1130,
+      "sha256": "2779a6b5ccd3f71cfda699d73eb55f54eb496b70e796842b7b4dbc003ab7982a"
+    },
+    {
+      "path": "FOCUSED_QA_PREPARATION.md",
+      "bytes": 1858,
+      "sha256": "0c56db88486004bda44717469611b9cfcab937ac088ff8da62b458c05aea14bf"
+    },
+    {
+      "path": "GRAPHICAL_SLOT_RELEASED.json",
+      "bytes": 369,
+      "sha256": "399fcb24be2a2985eec077feb4e64ad647f4a0a57cca1d016e37a355c6c855d2"
+    },
+    {
+      "path": "OFFLINE_PREPARATION_PARTIAL_SNAPSHOT.md",
+      "bytes": 1530,
+      "sha256": "22dfc799e6a799eb8a5f7cf1414cd7044811cee6539c805b6f3fd91aed6f6c5c"
+    },
+    {
+      "path": "QA_HANDOFF_00_07_FOCUSED.md",
+      "bytes": 1230,
+      "sha256": "86faa32fbc6626aaae42d4d05762d6bb19eaef3041d46badcaaf5f762bd8c4ea"
+    },
+    {
+      "path": "actual_input_trace.json",
+      "bytes": 19784,
+      "sha256": "79becc34dd9ebf30a5703d6af08e1d3e82cf953bfd2616803b6ac24480ef8aa0"
+    },
+    {
+      "path": "cold_continue_evidence.json",
+      "bytes": 5474,
+      "sha256": "f4fc14bc40c64c9e2932df950b2e24d46b6ced8b7883066897d9021da9d6277b"
+    },
+    {
+      "path": "cold_process_boundary.json",
+      "bytes": 176,
+      "sha256": "4553a735ecc7f059ed30d4e2cbc2494151aeca6e006c1d7c0f1eecd14fc8980d"
+    },
+    {
+      "path": "cold_progress_after_continue.json",
+      "bytes": 374,
+      "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+    },
+    {
+      "path": "cold_progress_after_quit.json",
+      "bytes": 374,
+      "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+    },
+    {
+      "path": "cold_progress_before_quit.json",
+      "bytes": 374,
+      "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+    },
+    {
+      "path": "cold_restart_process.json",
+      "bytes": 836,
+      "sha256": "91e62f9d1e14fdfd8a639936ef2b7508aeb8101f1c86c56b202043a9c3a364d4"
+    },
+    {
+      "path": "cold_restart_runtime.log",
+      "bytes": 147,
+      "sha256": "c6851b1a38ad4b82705409274d55c5fe998dbb9a484316300937c3d4e92450d4"
+    },
+    {
+      "path": "cold_restart_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cold_restart_stdout.log",
+      "bytes": 150,
+      "sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692"
+    },
+    {
+      "path": "cold_save_verification_before_restart.json",
+      "bytes": 1173,
+      "sha256": "c68a936d11d5a4f964fccd8dc7bf5b37e4c64035d0035ed8bb41d4dddfae39cd"
+    },
+    {
+      "path": "final_quit_windows.json",
+      "bytes": 2272,
+      "sha256": "6ba2c9c8a02492ed5c95a3edf046bb50bf40a37b63267d97b1e3ac07b881f8b8"
+    },
+    {
+      "path": "focus_status.json",
+      "bytes": 577,
+      "sha256": "432e85701b6e105bdbbdbb8c727d7fcacd5a5db6f3109c5d6d26980b379c3212"
+    },
+    {
+      "path": "geometry.json",
+      "bytes": 328,
+      "sha256": "6a1d50423cb0d8712389d51797ce80864602b207f74b4c05482fb6916f6cad78"
+    },
+    {
+      "path": "geometry_history.jsonl",
+      "bytes": 1014466,
+      "sha256": "2b07cc407392358d771ab9fd08357bd19f0960480aa758cdf9d6b6a580ca45ca"
+    },
+    {
+      "path": "interaction_log.jsonl",
+      "bytes": 34447,
+      "sha256": "565f94d8dc7f63481da2ed744422040dae5d4fd465e3c391879510d6a0ed1ee5"
+    },
+    {
+      "path": "launch_qa.ps1",
+      "bytes": 1417,
+      "sha256": "1f39fdbe050534771e1a8f78b7c90f737cead22e9d4225865de8ebd25b3e82c7"
+    },
+    {
+      "path": "matrix_process.json",
+      "bytes": 824,
+      "sha256": "cac8df94577bb632f11b5a87ca9648c014ff97b12b42d06082984fd2461d1147"
+    },
+    {
+      "path": "matrix_quit_windows.json",
+      "bytes": 2272,
+      "sha256": "6ba2c9c8a02492ed5c95a3edf046bb50bf40a37b63267d97b1e3ac07b881f8b8"
+    },
+    {
+      "path": "matrix_runtime.log",
+      "bytes": 147,
+      "sha256": "c6851b1a38ad4b82705409274d55c5fe998dbb9a484316300937c3d4e92450d4"
+    },
+    {
+      "path": "matrix_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "matrix_stdout.log",
+      "bytes": 150,
+      "sha256": "96a48ff6d7982f382f6a3383177476a949bbd15024c2c1697ac377110a336692"
+    },
+    {
+      "path": "preservation_after.json",
+      "bytes": 231,
+      "sha256": "c6556144dd379f31ed1236a9a94b9d47fa4c1d6f0c7cff8f5aa7273a727bd138"
+    },
+    {
+      "path": "preservation_before.json",
+      "bytes": 231,
+      "sha256": "c6556144dd379f31ed1236a9a94b9d47fa4c1d6f0c7cff8f5aa7273a727bd138"
+    },
+    {
+      "path": "production_files_after.json",
+      "bytes": 194825,
+      "sha256": "308863de23768e159955a8ec5adc42e0c80937a4a6fb6977fa511b5d38e20dec"
+    },
+    {
+      "path": "production_files_before.json",
+      "bytes": 194825,
+      "sha256": "308863de23768e159955a8ec5adc42e0c80937a4a6fb6977fa511b5d38e20dec"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/beta_sprint/beta_3d02_focused_qa_20261009_01/qa_progress.json",
+      "bytes": 374,
+      "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/beta_sprint/beta_3d02_focused_qa_20261009_01/qa_progress.json.bak",
+      "bytes": 374,
+      "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/BestFitNormalShaderRD/c4b1d2e5a1d6f84559f49734aae94706b402e2be89eae7753b8b413800d96d42/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 1780,
+      "sha256": "44bf819776bd80915b53c2a85640b6b8a26816a62da248cc28bb58ed43110d39"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/BlitShaderRD/ae4daaa7a60bb17ebd7e9de5db9422fb448b52ad89776ae7aa53fee442f7cc60/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 18844,
+      "sha256": "4e91f09f2bbbc1ef6b4d5c7775bab505b524cf00bc693516fb066473cea9d655"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/BokehDofShaderRD/8c692c9cd2f46f54f2c82d9a4a12be5f889d873a3c9698546a6eb5ec0c263647/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 14044,
+      "sha256": "81e7b5c4352a7539245abab237352d62126e217fee5e9613a108074bae6cff10"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasOcclusionShaderRD/606df5c981910bc4bc719cf497719273e80d1f314f65e68820bf8e2111368cdb/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 10252,
+      "sha256": "8b5c0656d03d48cd7a31ca3cf7fa8ea61c0951423e4f7c214cb766dc5e9cf16c"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasSdfShaderRD/a4f6d732dba9a4cc0c37a1ca52936369e2ee148e9d03efe1b81bfed822adb1eb/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 13768,
+      "sha256": "8811b5853fb7b704410d061ba6a933e4da09d1fb2e41ae7f4a05566488059e29"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasShaderRD/5454ca85157b6953b76bf324ebe90594c466e36301bf1b3e6adcce117d705c79/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 96056,
+      "sha256": "5906f48abf7128ba29bc61b42ed18cfde4272ab554d3406863b9223561ed5bce"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasShaderRD/5454ca85157b6953b76bf324ebe90594c466e36301bf1b3e6adcce117d705c79/89e0c5a264d1558e7bc2ca0dc3d0afd834fbe7b6.d3d12.cache",
+      "bytes": 51056,
+      "sha256": "7fb296d37dcfde25e363fe76a08cda7aecc2138d92cbe54fb2d7f75426af36ee"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasShaderRD/5454ca85157b6953b76bf324ebe90594c466e36301bf1b3e6adcce117d705c79/8f9335de72e837eeead40640cc01fddc5baf5a7c.d3d12.cache",
+      "bytes": 50392,
+      "sha256": "aee65726b29daffdaa9cb20804d28ddf3735df85989764644c43990150ba3ad7"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasShaderRD/5454ca85157b6953b76bf324ebe90594c466e36301bf1b3e6adcce117d705c79/8ff7cd836ee5198fe4b0804c409e5e888691c6cf.d3d12.cache",
+      "bytes": 96496,
+      "sha256": "481a1d3f0e9ba119e50bf1e585f6bdba5f18c0009ce7acd075ce3f8ff371081b"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CanvasShaderRD/5454ca85157b6953b76bf324ebe90594c466e36301bf1b3e6adcce117d705c79/c2f7efc3419efdd79fabd056897820a83f2ac2c9.d3d12.cache",
+      "bytes": 93320,
+      "sha256": "9a273e3b0b9acce60330d70b96512699e633967be2c240fe5fa83fda6d57ab70"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ClusterDebugShaderRD/25eb5280da03a5dfefcf122ab21c9f6184c2a0d8edfb398d0b9e784c99ede8d6/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 4120,
+      "sha256": "25d5f8fd658dde5a2904805f977fc6ec2c4c2d08f5a493c520ffd3e021b5f2a0"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ClusterRenderShaderRD/092c9f39b8c42523662d45db394a8d4f7f068d617876866d55d9fd69e5afb357/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 10424,
+      "sha256": "bb4bccb4445b981f164646771627a76dd4ebf6bfc8ba64122e68415e6a53267e"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ClusterStoreShaderRD/77e74456f71eccced2f4bd06086f33d4ae56a013ce717690f960759226272eb4/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 2564,
+      "sha256": "e8d94bfea8e1910525bfe8202668c5fee2c09669dadb093aeacbb2b8d0426f84"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CopyShaderRD/c374588e7ae9bf64919d0186bea3104b4f721cc0691d284a9998e1e7d06c5eb8/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 39800,
+      "sha256": "9525b65e011e9eecacab32b48cbbb36359bcf9e17cf6e443c0f05731e7f086b1"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CopyToFbShaderRD/72456b3a82af4da12c412275d4c8ffa4a6a5447d9daffeeef86bc16965803813/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 17708,
+      "sha256": "fe94a5730937b422319516caca166c135e26d058a9ceeb7133bcf604ba20f544"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CubeToDpShaderRD/da14e2c9b701a4bd7336b87667bf4f3b4f645de09781824763d2bbceead56c83/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 3744,
+      "sha256": "d36b53c42cba51bcac3beac13d33f39cbd2cb85579b9c09f812789370f3d1ff5"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/CubeToOctmapShaderRD/7a5a6871c4fae131d3fef2e125ac23cbe81a1a042028f8c294461282de463c9a/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 3668,
+      "sha256": "3f6b70af75466ec0830d2a963f5df9400e9ef833bd158eebbd0cc8a920cf1a4d"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/FsrUpscaleShaderRD/a8da3dfed3e309742ca78c4162d15f2ab08af4f694a51407089ecec1d1be54be/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 30656,
+      "sha256": "762c3e5558f71d368a2d934993c5caf488dfb33094a317d4215fdb3c8bf10602"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/GiShaderRD/3fa2391092c717dea4bdf7f4f65ccf42ffd4018c158c431a4e234d9fa17737a6/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 57920,
+      "sha256": "e1f7a0544862fecc8ce1d90f79abd1bc4b6ac3aa311b19d66980bf23ddb0d7a0"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/GiShaderRD/87dc8f2e3eb0653ed625d759392e8a08fcd79fe90d61dcc8f6ce34a8cfe35f7f/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 63420,
+      "sha256": "fb43c7d58edfbbe4bf4d7f0d479fdaaadd908d6d3f043b99d6c3952ca5b36143"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/IntegrateDfgShaderRD/4d699e26d43b88b86cb33c2b829767ea8e935055bb48dea880f66eb29760577a/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 2240,
+      "sha256": "586c507b0f58fbf215d4506b3ece847ab9cfe60199a6acad157ac1e97dcc7594"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/LuminanceReduceShaderRD/c759f2761a12e9ff1fa625818963f94aa0ff511eb314a313ea89c615c37dd078/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 8256,
+      "sha256": "1fde18e6ca8f16e9df81e0dd700c9b97f63cb137119fdec5a70ca9ad88af2f9a"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/MotionVectorsShaderRD/4d3ba0c01e8b64c74a0f2f0fd20ddc8099d56cfbb3ee9e7dbe6dc3c54c174725/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 4300,
+      "sha256": "077a557bde1dfb345bb8372e7871a8087ffbe978fe4faeb78f84f8c11eddd456"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/OctmapDownsamplerShaderRD/17404978f453a0a0388dfb81b2d08f173476d2c3b680e2e6aa35bcf438e24f11/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7044,
+      "sha256": "b187ec9926477279b58b6a1476ec6f927a4b18f111978df0862e6162c8f30e95"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/OctmapFilterShaderRD/cd03c4ea34362e2724f4d4536156039ee5ca21c31167b8840dfc65dad2d6bb11/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 42564,
+      "sha256": "57e12ef6fadf9abfdf6e288326a841de1f4e7e419403003cfa802ecefd525c41"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/OctmapRoughnessShaderRD/8470960c68b74292e24251e3b7e41d28e9a5054dce0cd1d77c2a2a865a10af43/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7868,
+      "sha256": "7df73c5e2a7c65c4fc083043b2c5bc3b0d9d0376a4c75eb7a161c7ecaf7de69e"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ParticlesCopyShaderRD/ce2b95c8a6b9e21f14c989c3ca095de77d9bb5e86213ae4180fb97cbd2c02a10/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 103532,
+      "sha256": "9e070950ab9b16cc812aa9d4ab70ec73b9a6cc3c06704f8723b2a616f7c2882e"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ParticlesShaderRD/f645828ab356b17f1478c77373935ecd2417e1c227a96b62417396293d13970e/07b5904b662900d90454c39c46885098de79aa4c.d3d12.cache",
+      "bytes": 7672,
+      "sha256": "cfec0798072b671650fba020ce0385a124465f8918e5b99f0b2e37e65f0dac92"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ResolveShaderRD/58e536c56eaff31a31ef93f224579af7b242a06469b7b0a7736cdeb7e16898b6/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 9712,
+      "sha256": "7ed30feb5a33e09a281f738aee62ff9381fa6e07c313e087e70f9118b16f9df5"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/10d6bd78f699ee5c66d98bcae1af3dc8f600ba10.d3d12.cache",
+      "bytes": 108776,
+      "sha256": "749d9c7ec7010dafa9bbf2081a547c050cb06e5ee97fe2c5a2c17c559561719b"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/347259af253e6bbec7ad5c69332af5ca731015aa.d3d12.cache",
+      "bytes": 96876,
+      "sha256": "0b01ae095e3a3d153132a057498ed37c7f02b960a17ce7e928ec9c0352cdf841"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/3861f9f4008974cc2a1d5369a88bfd1cf528dc6c.d3d12.cache",
+      "bytes": 219652,
+      "sha256": "8f18bdafc601abc10848b635d1ad71792aadefe40bed209b44d328a09acb00dd"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/77e28fea868f1d640cf581ded2e966295b75d2d8.d3d12.cache",
+      "bytes": 212156,
+      "sha256": "87dcf313a61a060835f58568d88028c22bbc296250fc3f7b50a8eb9b2c32b3be"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/95f6034d24825b79113ee41731c1116a0c4ee94e.d3d12.cache",
+      "bytes": 220708,
+      "sha256": "bd8ffa2c1fbd5895859b0bf3812f95fb1dfd4532bd5b8692904da147e331a448"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/a108158d1a145ea996cac5b7f02478b69e74c614.d3d12.cache",
+      "bytes": 227032,
+      "sha256": "56975c49f026c96e03b924855552a4fa3ece44646cfd6b21beee9d9d3dd6e34e"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/a784797763b72ce058effad41b273eb697df9814.d3d12.cache",
+      "bytes": 201316,
+      "sha256": "eb1fa27d7344beaafae8fbe373aec71c6a530eaacf4c463cf4c7db973f4b82df"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/ae3c8e31f908e0df600cc24ef1a7ea00e2995926.d3d12.cache",
+      "bytes": 212972,
+      "sha256": "c57e5e37f4a0db5425a56de4e1fae116d6b07a3e0554149d4dfb0a6d6e5a8173"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SceneForwardClusteredShaderRD/cdfe2a8d86deff48154b1cd0d6e857301f5e37f0d8930754f63ff9c2c85045a6/b600e18e20b53d8932999d48838b29553c586934.d3d12.cache",
+      "bytes": 205172,
+      "sha256": "2f1929f9ef9bd0b5c5b297ce925fe2ac79488daf63e9d5feb3a517481df94186"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ScreenSpaceReflectionDownsampleShaderRD/f6b46656954490c0153a8a5200455cc0834ec5881821ec7bf328b4c688fc4f6f/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 10244,
+      "sha256": "6d9293ec2406a80248e651e560588293936b0e039752a610d2c62c77bb0000b0"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ScreenSpaceReflectionFilterShaderRD/fda60a18cb83e7ff26ce7ee2f43dce1d37326b2767d06922b0e5f9356abd1a1e/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 4440,
+      "sha256": "5b5b1c65241e070d68a8371633499e657850c38b3dd7c63a549f1fb592d68d01"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ScreenSpaceReflectionHizShaderRD/4c407c9b5cd4f954c012a0de78629e18a5e9268536eb1d78853c8a247ef0a772/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 8664,
+      "sha256": "b0e1b79aca097deff5ac9d99c0a450e46b4d9bf912f019bc1a49874120073c52"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ScreenSpaceReflectionResolveShaderRD/b29422945b4d1600883d0fcf89124633e34efb678505e5bcb9fdb6623fbfb8d4/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 4476,
+      "sha256": "93fbed64e0974d3d0b4877ea3d827634d97eca6cdcf6fdcf1cf299437c0061e8"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ScreenSpaceReflectionShaderRD/a2d0cb08973e8562ed3b82d74b6f0f1ecf1dbd2ac788049eaa06925ad6c28bed/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 6564,
+      "sha256": "434641fa337a41d7b5e521083c9bb6638828bbee2355f01abb6a93acc58a1f71"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SdfgiDebugProbesShaderRD/05e9a03efe957bf14f0a60730a97ab25e037f5a3f347b3427feb9723fd82fb1c/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 19508,
+      "sha256": "655183f47f66437bf5e469dea4966612195507ce65e1ada5cc97b5034ee4bf34"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SdfgiDebugShaderRD/365142e07e83cbbda433d4ed971a1c8413d3a400e8646e2ed2a0f7dda127068a/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 4352,
+      "sha256": "13ca745b478780abb6a2fbb01ce453df5b563a21bbbc7949dab0c12f86b47265"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SdfgiDirectLightShaderRD/59245d18d90efd79551ef5eda25bbda9867cb893341a1d23b0f75db5d4490716/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 31668,
+      "sha256": "592fa52b735308837907448157f0d1ea304c0e605add1e5a9bd2b6489c8be5ea"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SdfgiIntegrateShaderRD/f20a6d93247c8e2db82979d4e6477fa070ed91e03db2b1320e32dffabdb4ff23/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 23888,
+      "sha256": "9c1a658c77c82b25515261e816e9b3c5bdccb45edecdb01f3139cee123d70d2e"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SdfgiPreprocessShaderRD/548b5bca0563ad9662e1e9577ac4921dfc156154487ba331733b0283ce26fcb9/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 34544,
+      "sha256": "487ae22affa7ae62b22a4324e738b5975f70ccddb5f643515047a50f521ae529"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/ShadowFrustumShaderRD/248bc9deb54d10af912f2da1bd4b006bc43cfe08659a206fa573baf48e4050e0/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 2932,
+      "sha256": "b62be800b78bbb3a7e3dba539c6306c31f446e3a28f8bb7064051a0cb1a3e4d3"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SkeletonShaderRD/e6bc641e2a094416c99b1294ac5e453c55d24e0b62c1da47c8f7f93ae7877bfa/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 9964,
+      "sha256": "bd64062de54b84710354cb63d762d1c509418cb6eb8654f681239e895a8214eb"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SkyShaderRD/25c4162ba5ed1f15e722f73bf07201837a6ae7b301288dd32ff9f71634118d9c/0fa1946a11e1cca806ebfe4b3b4ac7f723d8b701.d3d12.cache",
+      "bytes": 31512,
+      "sha256": "19fef1df430180db051b47bcd8227840983d6ad7716137933e7701c9308b4d81"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SkyShaderRD/25c4162ba5ed1f15e722f73bf07201837a6ae7b301288dd32ff9f71634118d9c/ff1961ca0c4c55a79eb12f819a7b6345801bbbaf.d3d12.cache",
+      "bytes": 33300,
+      "sha256": "d0464fb08c742d1d55bd5c715119a68f5ff7e4d76e7636e5efb7d41771262cbe"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SmaaBlendingShaderRD/d7b7c8cec00f24f9aa8db356b4df88c5fe032d38ce38673bd520c280c936fb80/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 5176,
+      "sha256": "6c6ea49289ca44fc79aabc518205a44de7b10cb60da35c249c0ee9704ae64465"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SmaaEdgeDetectionShaderRD/8879d099a2601bd01d4582b1e86a091c5f89a7bc46aecc9e805410f75bcda245/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 4692,
+      "sha256": "695d5e0c91db2a81c483b630bfe304fabdd27dcf80f6056556a8e3cdc3e4d4c8"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SmaaWeightCalculationShaderRD/de1d49d5ff947e8b8382f43a79f57c4cceb02eed6f86d5175093ca63e94052bf/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7852,
+      "sha256": "8729d9d2d485f8d4ff4d348a760ff921a16727706842ab2fa2cba408dcdcd421"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SortShaderRD/d8d77897b86870d358bf870233e14233981c2db9ff06641cd8f405379ac8872f/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 6504,
+      "sha256": "15bc81435db88cc933f398c79322506094308713ff79ddfbf3d90f81e9758b40"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SpecularMergeShaderRD/70920fc883de48dd253fbc2503dd8f4e65941df0da07e074541df12df090de98/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 13748,
+      "sha256": "a0401d4c4a6f92d508a9a0372501d6cc0ba4f549eeec5485055ed6f4b9e72989"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsEffectsDownsampleShaderRD/d2ccd37f99a0b00eca4ba6f53cddf8d03f02119a69a0b02dc777026129561703/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 20632,
+      "sha256": "0b50e64d0dca583f01d87c2e2393011d46566cb49996649de8f7e89440018cf5"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsaoBlurShaderRD/379e714dbee2f412e6657f0557a56dd9f4a00c93ed1aef7af78b047b59ef4bcb/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7392,
+      "sha256": "17fa06b92d515fc3a36c3d1305a5cddb59b1278c8b37f99516521b5ae500045b"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsaoImportanceMapShaderRD/72382d26e5b22e99ee9ed29670565e78ff7ee01c960072119a5be86db2ee0fc8/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7256,
+      "sha256": "9c004af3dc68226dc5b8565a4c369464e2ec36847da23b55236f1556878f7069"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsaoInterleaveShaderRD/cb27e637ffea15e2c6c4ae1b2c90deac962dae9481ef866601d8ecb863d6a9b6/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7148,
+      "sha256": "b3ac45674fe8ff2e94b6d95d10843c48c0531537b7fef3dd1dde8852d2724328"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsaoShaderRD/40091d5cef6924b0632dfb92dbf5a6c61f97edd6dd653d20e2c7662009912eed/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 24996,
+      "sha256": "1878eb7750e020f0d69b60f9340b94a25db628fe141436985a785ee454b3f38c"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsilBlurShaderRD/4f0d60ba5581090f5efc9941b040e46832bf6864d77d52e8631cea227b5d8279/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 8472,
+      "sha256": "ef26f7512db035492be717f2506428ae00e98b8999c202bb781c9e380f63879e"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsilImportanceMapShaderRD/bf370911d6b5be81e5fbf6014d236deb74697ee1b3e2eeb870f5140913d9bee6/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7228,
+      "sha256": "66ce0982911e5cb1050506418d974f47bc61a4331bfbcf7704e65f45573e6094"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsilInterleaveShaderRD/0f78dde6bc33a0264706f9a466ae77f41b24641381aa171c2b1ee40923f6547c/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 7944,
+      "sha256": "738a1c8402adaede75590b611fddbb093def4675c4655c9d85d617938258d699"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SsilShaderRD/17c51ec55574b54c0834b41688f478d19599eb3f90a1230981e06d74d89473e1/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 28696,
+      "sha256": "4240234da71d979dd1728713ca2cc0d96ae32d5130bdf93d4da24cd7e294ef08"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/SubsurfaceScatteringShaderRD/4870fb4fc36514a7031473d566046fc2841628db992f9421056a8dfbc0830d97/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 14560,
+      "sha256": "738d23e2aeada4050be1be2a7f3ca867e291856e3c2653aa9e7727858f461dea"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/TaaResolveShaderRD/a1ca2d745847530de0720910ad5bfa2466e0ab33647b7a631f2900d7b4617a60/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 6344,
+      "sha256": "fd627d84c981cc9979d73bc4685818c37feda4c0ba57ff188e5d6d79fafb1a35"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/TexBlitShaderRD/fd9c885eab1da0d330a04ebfd7796019cde57f82208202f3bfc96cae74155212/1e8995c9eb0e9b0b053035999de68595c521a33e.d3d12.cache",
+      "bytes": 21804,
+      "sha256": "459ab71e0d57c978339b8b4f6d5751a28a5d9ba9d324cb44839da0e2952325ac"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/TonemapShaderRD/1b9049fef136690ef56085339cc9ad699de6d63e5d3afa1677201c6dedd6f2a8/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 61828,
+      "sha256": "f1b1bbadeb152ec11385305fa8f9c7f3fcb2a41ad364070949d0c6b10ee38ef6"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/VolumetricFogProcessShaderRD/ee9496dfb3b0e489158503ab6e3539129bf5f78706cdb7c9ed4d8701f17f14ec/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 55776,
+      "sha256": "7fca42ef92d1260f147ec6118fad40ffb30d87dfbe31149c255f69272ad760d1"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/VolumetricFogShaderRD/69e78fd970058cf62da4f8df24a6d7f3acd2d0effbade0dc171226be830ee241/3377d4ca9d0fc2e16f62596ee37d619e8e7e3f54.d3d12.cache",
+      "bytes": 5844,
+      "sha256": "f4e81385c1be19c55210079012e62940246635014e590f28b6a1227c5f747b03"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/VoxelGiDebugShaderRD/e7afc074bea566006e261dd7312ae8e5c1a6a22e1eab6aa29b590ca925df679b/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 19560,
+      "sha256": "fab48b5bb1d85f9fc76234bb8b7e414e2d1ff3c752547b477fc7231c594269bf"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/VoxelGiShaderRD/cf478b2dd85c8c4b0519274ac94659b26ee34e27a1714122915056a7010b4b7c/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 45708,
+      "sha256": "359da86a52239c0f587bf3eaaba108ed2496f00c6e677166eb94785b8b5fbffb"
+    },
+    {
+      "path": "profile/Roaming/Godot/app_userdata/方块少女-若叶睦/shader_cache/VrsShaderRD/fa59a74699f8241cd3f8174eaef045dc8d40f3b29bf36af5414713c289f82717/8305c75c1294a9f00656f0f14344bb8bedcfe4e7.d3d12.cache",
+      "bytes": 10100,
+      "sha256": "db816d0bd1a1b8de0b024d5ae0b07aaa436d4d7b9fff2b69db2df01f5f9a27db"
+    },
+    {
+      "path": "screenshots/001_1920x1080_main_1920_size_verified_0.png",
+      "bytes": 91850,
+      "sha256": "8dba62629b8a993ddb822ee5844ccf10735b71c9b863c90ab30be4573aba1b16"
+    },
+    {
+      "path": "screenshots/002_1920x1080_navigation_1920_main_select_0.png",
+      "bytes": 72226,
+      "sha256": "96cab550976b8b08b19eed33ddd0348a176ff00c21a879a991945ffd065bc4ea"
+    },
+    {
+      "path": "screenshots/003_1920x1080_focus_1920_select_l02_0.png",
+      "bytes": 63907,
+      "sha256": "85c881fb8778604d78a5817302cc357835484e1b70f4ea55bce260f7299e65db"
+    },
+    {
+      "path": "screenshots/004_1920x1080_select_1920_l02_preview_after_wait_0.png",
+      "bytes": 63907,
+      "sha256": "85c881fb8778604d78a5817302cc357835484e1b70f4ea55bce260f7299e65db"
+    },
+    {
+      "path": "screenshots/005_1920x1080_l02_1920_entry_3d_actual_0.png",
+      "bytes": 80373,
+      "sha256": "88f0767ef088c52108b436190a797f14e92c59347f66badea9605678da77d683"
+    },
+    {
+      "path": "screenshots/006_1920x1080_l02_1920_hint_move1_0.png",
+      "bytes": 76465,
+      "sha256": "081685e507578bd747ab937a3b82380c9bafca3d77c113a4270baa9971be8a50"
+    },
+    {
+      "path": "screenshots/007_1920x1080_l02_1920_hint_edge_0.png",
+      "bytes": 79038,
+      "sha256": "4d198f24b23fabcecc9262b4ff4523aa2f3c59a3fa8a2c704ce9af35c832cc74"
+    },
+    {
+      "path": "screenshots/008_1920x1080_l02_1920_inner_hint_0.png",
+      "bytes": 73033,
+      "sha256": "b72646642bec48221cb73f1296fe5ac07b7f17dd959cc842fade410fc1252f18"
+    },
+    {
+      "path": "screenshots/009_1920x1080_pause_1920_mouse_entry_0.png",
+      "bytes": 75458,
+      "sha256": "02aebf815baac11de72fbb466bc412005d1fd7515ab288d396fece6611e65adb"
+    },
+    {
+      "path": "screenshots/010_1920x1080_settings_1920_mouse_open_0.png",
+      "bytes": 68612,
+      "sha256": "8b5a7c9f4e3580a77db184591b913464ac56d00b8a07951f6cf2ea922b7e2df4"
+    },
+    {
+      "path": "screenshots/011_1920x1080_settings_1920_volume_preview_0.png",
+      "bytes": 68655,
+      "sha256": "ffa5b95f60028c9e7ae98a71df2d3db0a1d47bdf7b1c847209572c1209f02e0b"
+    },
+    {
+      "path": "screenshots/012_1920x1080_settings_1920_cancel_0.png",
+      "bytes": 75048,
+      "sha256": "f76206a9c48d919d3f00910f0c956d9f543e250b57b285644b25d0b161269818"
+    },
+    {
+      "path": "screenshots/013_1920x1080_pause_1920_esc_resume_same_state_0.png",
+      "bytes": 73235,
+      "sha256": "8cbed27736563e1bfeea05188380f26cb153088f52aaa7c89434343d2cdb7bb2"
+    },
+    {
+      "path": "screenshots/014_1920x1080_pause_1920_mouse_resume_setup_0.png",
+      "bytes": 75129,
+      "sha256": "da247f8a663fa64b7ee5cd43a0e60dfb2931b728acfa9d584ac511a8e1078908"
+    },
+    {
+      "path": "screenshots/015_1920x1080_pause_1920_mouse_resume_0.png",
+      "bytes": 73306,
+      "sha256": "1f2e7d230d456c28be26328d1797853abf1339eb1536ed3358c67502ae35cda0"
+    },
+    {
+      "path": "screenshots/016_1920x1080_navigation_1920_l03_setup_0.png",
+      "bytes": 75987,
+      "sha256": "c2627478d5e24386d5716573724012e3d3df30a31612875e2ecd4dafee8f10d5"
+    },
+    {
+      "path": "screenshots/017_1920x1080_navigation_1920_return_select_0.png",
+      "bytes": 73805,
+      "sha256": "292c4087a7e9268f85a60b605792c3671260ed9f070862852f0b2f9b89bb370d"
+    },
+    {
+      "path": "screenshots/018_1920x1080_l03_1920_entry_3d_actual_0.png",
+      "bytes": 77482,
+      "sha256": "ad59c0a41e9da5eaa1b6cd615a80a7345711e60ff5a36499e871e5a084b7b3d9"
+    },
+    {
+      "path": "screenshots/019_1280x720_l03_1280_size_verified_0.png",
+      "bytes": 42623,
+      "sha256": "579a9b32c84fc662c6ec6b499c0392cedccaa043c54bebbb8c5026186274f7b5"
+    },
+    {
+      "path": "screenshots/020_1280x720_pause_1280_mouse_entry_0.png",
+      "bytes": 45554,
+      "sha256": "19270e61df0e0de19689599d971e1159359589e184bdfc43af2f0d7b35622230"
+    },
+    {
+      "path": "screenshots/021_1280x720_settings_1280_mouse_open_0.png",
+      "bytes": 42858,
+      "sha256": "d6dcf1dda91ce056e0ffe3b6e0d26a0740efc53c69b4c61944c36003ab0292c6"
+    },
+    {
+      "path": "screenshots/022_1280x720_focus_1280_settings_music_0.png",
+      "bytes": 42934,
+      "sha256": "7105dfd60ad81642878e62253dfe35482ade11833368f7829e220ed051b2126b"
+    },
+    {
+      "path": "screenshots/023_1280x720_settings_1280_music_preview_0.png",
+      "bytes": 42828,
+      "sha256": "85309942321cc0a917b5e29cf9a3a4fe78ed39851cc4076fe0f0c9c650382956"
+    },
+    {
+      "path": "screenshots/024_1280x720_settings_1280_music_restored_0.png",
+      "bytes": 42934,
+      "sha256": "7105dfd60ad81642878e62253dfe35482ade11833368f7829e220ed051b2126b"
+    },
+    {
+      "path": "screenshots/025_1280x720_settings_1280_apply_return_0.png",
+      "bytes": 46316,
+      "sha256": "9553d53f6337d05486c2d793ef6ba4679a07c7acf1178b5b8f68b125339899dc"
+    },
+    {
+      "path": "screenshots/026_1280x720_pause_1280_esc_resume_0.png",
+      "bytes": 43024,
+      "sha256": "88fd9082f6513b096deeff807788157066070045ba421a148cdaf120808b2af8"
+    },
+    {
+      "path": "screenshots/027_1280x720_pause_1280_mouse_resume_setup_0.png",
+      "bytes": 45505,
+      "sha256": "ecdd597ba8a97506a8627038f5f03d36906dc192678ce2371caef1352063b5dd"
+    },
+    {
+      "path": "screenshots/028_1280x720_pause_1280_mouse_resume_0.png",
+      "bytes": 43134,
+      "sha256": "dec9e2496b843acc146e79389fed43fe1a7f43b59547d1d5bcc653c47b613de2"
+    },
+    {
+      "path": "screenshots/029_1280x720_navigation_1280_main_setup_0.png",
+      "bytes": 45620,
+      "sha256": "59ede60ed900e80a49a3efb06031dfb3be1b1b7d1c5f8437c21edd692372064c"
+    },
+    {
+      "path": "screenshots/030_1280x720_navigation_1280_return_main_0.png",
+      "bytes": 52971,
+      "sha256": "189854e727fe125c92885343ce0226d4c9c6762622347ddd106c6b6e5dc124b7"
+    },
+    {
+      "path": "screenshots/031_1280x720_navigation_1280_main_select_0.png",
+      "bytes": 41643,
+      "sha256": "6b1f32018c8a30862350e3a80e9c4ce3e20677df0703aa7925b81bd08a9ea467"
+    },
+    {
+      "path": "screenshots/032_1280x720_focus_1280_select_l02_0.png",
+      "bytes": 36875,
+      "sha256": "2386e8fe67ebee24b2e2371a37d641df52cdefe85511a5faab69f58f91112366"
+    },
+    {
+      "path": "screenshots/033_1280x720_l02_1280_entry_3d_actual_0.png",
+      "bytes": 44841,
+      "sha256": "d9053176b79ea5800106f1cc06d74fe35e19a943312539ce2883f63b8cf2822e"
+    },
+    {
+      "path": "screenshots/034_960x720_l02_960_size_verified_0.png",
+      "bytes": 39670,
+      "sha256": "dbb71fa3a12e7e9edb546226b174d4c0cc8fb9f0949cab3bff1178fede668fcc"
+    },
+    {
+      "path": "screenshots/035_960x720_pause_960_mouse_entry_0.png",
+      "bytes": 37548,
+      "sha256": "3b482c052e6f01b3d9887c775ac986750f4fadc51d74275179e5ca775dc394ed"
+    },
+    {
+      "path": "screenshots/036_960x720_settings_960_mouse_open_0.png",
+      "bytes": 37772,
+      "sha256": "8feb2b680c34f93cf7c39719c7863f0663e6c7ad0df2ada7f1e0d71d9d3de422"
+    },
+    {
+      "path": "screenshots/037_960x720_focus_960_settings_music_0.png",
+      "bytes": 37402,
+      "sha256": "079378fc7552785c71c7ab0adf203c16aaad6f4c9afa46e5f51c4a32ab2d6c36"
+    },
+    {
+      "path": "screenshots/038_960x720_focus_960_settings_master_reverse_0.png",
+      "bytes": 37786,
+      "sha256": "bd1069bf31591ac601d9d9edc4b4f699876eac30d159f0bdde293f3235c1903b"
+    },
+    {
+      "path": "screenshots/039_960x720_settings_960_master_preview_0.png",
+      "bytes": 37773,
+      "sha256": "ef72a4f480148a9686cc5f3cf6bf6bac27dc3267d8f93a53b240efd0706b6669"
+    },
+    {
+      "path": "screenshots/040_960x720_settings_960_cancel_0.png",
+      "bytes": 36963,
+      "sha256": "24f3341bbbc310aec766ab5d8a9dacc4f6f774cc311d9505b6aca7080e060913"
+    },
+    {
+      "path": "screenshots/041_960x720_pause_960_mouse_resume_0.png",
+      "bytes": 40054,
+      "sha256": "6a083b6ab997e5677ec43241c6137816400bf9a8d3202a63dec935fd17a6dd8f"
+    },
+    {
+      "path": "screenshots/042_960x720_pause_960_esc_entry_0.png",
+      "bytes": 38165,
+      "sha256": "a0a8c460c6fae73708a54f6150ede1bb31e4749f7a50ef69c9bcf104b74b2029"
+    },
+    {
+      "path": "screenshots/043_960x720_pause_960_esc_resume_0.png",
+      "bytes": 40078,
+      "sha256": "32438164521338646dd0b13a8ccb6a9aec0250f7f4768cf8c9feeb6af390b7d3"
+    },
+    {
+      "path": "screenshots/044_960x720_navigation_960_main_setup_0.png",
+      "bytes": 37546,
+      "sha256": "cd82d948d269d71f0ddc59f318323370cdc53f58b3d6f908cb049a39350262fc"
+    },
+    {
+      "path": "screenshots/045_960x720_navigation_960_return_main_0.png",
+      "bytes": 45877,
+      "sha256": "7ac0cdd1d63cfc714da396c4a3381b55bc044e7b3069100bf825a40e0dec34cf"
+    },
+    {
+      "path": "screenshots/046_960x720_navigation_960_main_select_0.png",
+      "bytes": 37217,
+      "sha256": "87f805da0f635fcfc05864eb967af48ad6cb3f71efe4860350c59f1e4b01f260"
+    },
+    {
+      "path": "screenshots/047_960x720_focus_960_select_l02_0.png",
+      "bytes": 35905,
+      "sha256": "dfd4bd10a8e35936ab3b6a0cbf7540176039dbb27aa81efc2f6e1d8c6b9a336d"
+    },
+    {
+      "path": "screenshots/048_960x720_focus_960_select_l03_0.png",
+      "bytes": 36542,
+      "sha256": "d0238f0d76e599413177a4e894d9ebaed97ec6881337f52097922f734693b719"
+    },
+    {
+      "path": "screenshots/049_960x720_cold_l03_authored_spawn_before_change_0.png",
+      "bytes": 38339,
+      "sha256": "8fcade57fdb567f8ac75372980c7036504420660d76646c67a952d9abf51cdb7"
+    },
+    {
+      "path": "screenshots/050_960x720_cold_l03_midlevel_move_0.png",
+      "bytes": 35166,
+      "sha256": "1cab636af1fbad2ba0c60b697524cc0183bb61b362f345b5542de2f871d3050b"
+    },
+    {
+      "path": "screenshots/051_960x720_cold_l03_midlevel_inner_0.png",
+      "bytes": 37116,
+      "sha256": "2e3f7e28c0db4b1e92f5ba214ab6c27247105fb1dde0651e47fc9fbb7b89b052"
+    },
+    {
+      "path": "screenshots/052_960x720_cold_l03_midlevel_inner_east_before_quit_0.png",
+      "bytes": 37520,
+      "sha256": "111d8a7b9492003c7d9ba3d9d92d33eaddcb62f31e2d8c1dc7ff3d22a7a29da8"
+    },
+    {
+      "path": "screenshots/053_960x720_cold_pause_before_normal_quit_0.png",
+      "bytes": 38275,
+      "sha256": "bfa99306ff46ea33ef314401e63c13e3e16ce537aecb8b0970688225093b84fa"
+    },
+    {
+      "path": "screenshots/054_960x720_cold_main_before_normal_quit_0.png",
+      "bytes": 45885,
+      "sha256": "30a24a263e8b418bf54c9f3464deb8d751e92233cd53e915b9664c61593fdf34"
+    },
+    {
+      "path": "screenshots/055_960x720_cold_new_process_main_continue_available_0.png",
+      "bytes": 45656,
+      "sha256": "7f85b5be333c80c70ce68d62a048a84ff99bd204de589bf28b1d5318f600d2dc"
+    },
+    {
+      "path": "screenshots/056_960x720_cold_continue_actual_l03_authored_spawn_0.png",
+      "bytes": 38189,
+      "sha256": "94a49df1b92e5c42eb0cefa988c6fd708d4b2acaa90469b37c9f464405c382e9"
+    },
+    {
+      "path": "screenshots/057_960x720_cold_continue_input_responsive_0.png",
+      "bytes": 35049,
+      "sha256": "e40f49ee4fb12066dde63c0ac4639657bb1230646ef55b1ae79cc1286805a582"
+    },
+    {
+      "path": "screenshots/058_960x720_p2_l03_select_evidence_setup_0.png",
+      "bytes": 34987,
+      "sha256": "41b8c6632806833b544c166a019e2f81b5549483a172ae8363fbd84d6bc9d9dd"
+    },
+    {
+      "path": "screenshots/059_960x720_p2_l03_return_select_0.png",
+      "bytes": 37774,
+      "sha256": "7ca810a2d7c2be2219c6fbbbd20afa20b9eadd6f780bab1d82baae67e78b3646"
+    },
+    {
+      "path": "screenshots/060_1280x720_p2_l03_select_1280_measured_0.png",
+      "bytes": 41736,
+      "sha256": "ab237746046d97c5e4938b6a5b95a3a85e8da20ef5492ff482be89b6ca451025"
+    },
+    {
+      "path": "screenshots/061_1280x720_p2_l02_select_preview_1280_0.png",
+      "bytes": 36940,
+      "sha256": "2d32cabbe2ba6f175eee03474fdc1f341f8ba9637961c26d5c0c77f36cbcbc90"
+    },
+    {
+      "path": "screenshots/062_1280x720_p2_l03_select_preview_1280_0.png",
+      "bytes": 36710,
+      "sha256": "49314ae32741efc3b3bd8276d04a16c05476d98deacd6f59d7605f7519b1d545"
+    },
+    {
+      "path": "screenshots/063_1280x720_l03_1280_entry_after_metadata_check_0.png",
+      "bytes": 43049,
+      "sha256": "68866fbe10608ffd2dae27d491751484eb85a095d6bf9a0dad23e84705ab972d"
+    },
+    {
+      "path": "screenshots/064_1280x720_final_pause_before_slot_release_0.png",
+      "bytes": 45544,
+      "sha256": "9d7f8246baf8ba0f57d7d3633759b6972807fd70eff3a2460d7713c679cf668e"
+    },
+    {
+      "path": "screenshots/065_1280x720_final_main_before_slot_release_0.png",
+      "bytes": 52964,
+      "sha256": "6506293c6edc1a2d294155a925d11560e2289228e525dc95a33b5710d30a60ea"
+    },
+    {
+      "path": "setup.json",
+      "bytes": 836,
+      "sha256": "348b6132680af54f503e00108d49539645d3eb8e073e65c3cbdc67f7e0e8c799"
+    },
+    {
+      "path": "source_progress.json",
+      "bytes": 374,
+      "sha256": "a90f426688509a684de370f47ed8ea5342da82633d0208ad29fd28d62bd442fc"
+    },
+    {
+      "path": "verification_audit.json",
+      "bytes": 2315,
+      "sha256": "6b81053dd2202ad391744cf3ccf6a0d0cc9bda1fc34e077827a8d08277bb2a1c"
+    },
+    {
+      "path": "window_config.json",
+      "bytes": 27,
+      "sha256": "29b18170e2024abefdae821774568f9c709c45ea5203344f5020ba33e219a358"
+    },
+    {
+      "path": "window_matrix.gd",
+      "bytes": 2406,
+      "sha256": "9cf70777b0cc3f636b0f2a2a9c000b916d2671cdfc240f700efabfba13b7f11d"
+    }
+  ]
+}

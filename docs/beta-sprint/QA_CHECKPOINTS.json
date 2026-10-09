@@ -1,16 +1,15 @@
 {
   "schema": 1,
-  "latest_checkpoint": "BETA_3D_UI_QA_01_CLOSEOUT",
-  "receipt": "docs/beta-sprint/qa-checkpoint-01/CHECKPOINT.json",
-  "status": "BETA_3D_UI_QA_CHECKPOINT_ACCEPTED",
+  "latest_checkpoint": "BETA_3D02_FOCUSED_QA_01_CLOSEOUT",
+  "receipt": "docs/beta-sprint/content-expansion-02/QA_STATUS.json",
+  "status": "BETA_3D02_FOCUSED_QA_PARTIAL_ACCEPTED",
   "build_identity": {
-    "path": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01",
-    "project": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01/project/project.godot",
-    "zip": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01.zip",
-    "zip_sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1",
-    "source_snapshot": "ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3",
-    "integration_receipt": "dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916",
-    "fix": "81d9470c174bd67a73e7e8fedf4b92240ddfc2fd"
+    "path": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
+    "zip": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01.zip",
+    "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+    "runtime_source": "7a95b28b155f5d32c4b559bdf90e0ea9beaad4ac",
+    "delivery": "b910167becee2194c0cfc724d8f0fe47578836a9",
+    "bind_results_to_fixed_package_only": true
   },
   "bugs": {
     "UI-08-001": {
@@ -19,24 +18,123 @@
       "result": "docs/beta-sprint/qa-checkpoint-01/evidence/UI_08_001_RECHECK_COMPLETE.json"
     }
   },
+  "focused_cases": {
+    "L03_first_time": "RETEST_PENDING",
+    "current_3d02_matrix": "3/3 PASS_WITH_NONBLOCKING_P2",
+    "current_3d02_cold_continue": "PASS"
+  },
   "backlog": {
-    "open_P2_count": 1,
-    "new_P2_count": 0,
+    "open_P2_count": 3,
+    "new_P2_count": 1,
     "issues": [
       {
         "id": "VIS01-P2-001 / UI-08-K01",
         "severity": "P2",
         "owner": "07 Game Shell",
-        "existing": true,
-        "description": "Pause 板底辅助文字贴底；960×720 与底部操作说明重叠；主要按钮仍可操作。保留原问题，不重复计数。"
+        "status": "OPEN",
+        "observed_this_run": true,
+        "evidence": [
+          9,
+          20,
+          35,
+          40
+        ],
+        "description": "Pause板底辅助文字贴边；960与底部操作说明重叠；关键控件仍能使用。"
+      },
+      {
+        "id": "L03_STALE_HINT_EXISTING",
+        "severity": "P2",
+        "owner": "06 Game Content",
+        "status": "OPEN",
+        "observed_this_run": false,
+        "reference": "E:/godot/beta-sprint-builds/beta_3d02_qa_20261009_01/BETA_3D02_HUMAN_QA_01_COMPLETE.json",
+        "description": "保留上轮真实跨越后过期提示；本轮未重跑完整跨越路线，不关闭或漏计。"
+      },
+      {
+        "id": "FOCUS-3D02-P2-001",
+        "severity": "P2",
+        "owner": "07 Game Shell (关联06菜单内容)",
+        "status": "OPEN",
+        "newly_found": true,
+        "title": "L02/L03选关仍显示灰盒/无正式环境预览，和实际3D入关不一致",
+        "steps": "Main→LevelSelect；用Down聚焦L02/L03；观察预览文字；Enter实际入关",
+        "expected": "选关状态文案准确表达当前关卡已是正式3D；若仅预览待补，应明确仅预览待补，避免称整关灰盒。",
+        "actual": "L02与L03显示灰盒试玩·尚无正式环境预览，预览区域为空；实际进入已有完整3D画面。",
+        "impact": "可能令玩家以为新关仍处于旧灰盒阶段；Enter入关正常，非P1。",
+        "confirmed_scope": {
+          "L02": [
+            "1920x1080",
+            "1280x720"
+          ],
+          "L03": [
+            "1280x720"
+          ],
+          "compact960": "L02/L03预览区为空，caption在该布局未展示，不将未显示的文字作为960复现证据"
+        },
+        "evidence": [
+          4,
+          32,
+          61,
+          62
+        ],
+        "actual_3d_comparison": [
+          5,
+          33,
+          63
+        ],
+        "production_fix": "NONE; fixed package left unchanged; Art FROZEN"
       }
     ],
-    "document": "docs/beta-sprint/visual-integration-01/POST_INTEGRATION_POLISH_BACKLOG.md"
+    "document": "docs/beta-sprint/content-expansion-02/BACKLOG.json"
   },
-  "scope": "Authorized focused UI recheck only",
+  "scope": "Current fixed3D02 matrix and two-process ColdContinue; first-time comprehension pending",
   "whole_game_beta_qa_complete": false,
-  "next": "BETA-3D-INTEGRATION-02",
+  "next": "BETA_CONTENT_BATCH_02_NEXT_QA",
   "next_development": "ALLOWED_TO_CONTINUE",
   "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
-  "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE"
+  "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE",
+  "history": [
+    {
+      "schema": 1,
+      "latest_checkpoint": "BETA_3D_UI_QA_01_CLOSEOUT",
+      "receipt": "docs/beta-sprint/qa-checkpoint-01/CHECKPOINT.json",
+      "status": "BETA_3D_UI_QA_CHECKPOINT_ACCEPTED",
+      "build_identity": {
+        "path": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01",
+        "project": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01/project/project.godot",
+        "zip": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01.zip",
+        "zip_sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1",
+        "source_snapshot": "ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3",
+        "integration_receipt": "dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916",
+        "fix": "81d9470c174bd67a73e7e8fedf4b92240ddfc2fd"
+      },
+      "bugs": {
+        "UI-08-001": {
+          "status": "CLOSED",
+          "basis": "08 independent mouse/keyboard recheck and 50 viewport-linked screenshots",
+          "result": "docs/beta-sprint/qa-checkpoint-01/evidence/UI_08_001_RECHECK_COMPLETE.json"
+        }
+      },
+      "backlog": {
+        "open_P2_count": 1,
+        "new_P2_count": 0,
+        "issues": [
+          {
+            "id": "VIS01-P2-001 / UI-08-K01",
+            "severity": "P2",
+            "owner": "07 Game Shell",
+            "existing": true,
+            "description": "Pause 板底辅助文字贴底；960×720 与底部操作说明重叠；主要按钮仍可操作。保留原问题，不重复计数。"
+          }
+        ],
+        "document": "docs/beta-sprint/visual-integration-01/POST_INTEGRATION_POLISH_BACKLOG.md"
+      },
+      "scope": "Authorized focused UI recheck only",
+      "whole_game_beta_qa_complete": false,
+      "next": "BETA-3D-INTEGRATION-02",
+      "next_development": "ALLOWED_TO_CONTINUE",
+      "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
+      "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE"
+    }
+  ]
 }

@@ -1,0 +1,34 @@
+{
+  "id": "FOCUS-3D02-P2-001",
+  "severity": "P2",
+  "owner": "07 Game Shell (关联06菜单内容)",
+  "status": "OPEN",
+  "newly_found": true,
+  "title": "L02/L03选关仍显示灰盒/无正式环境预览，和实际3D入关不一致",
+  "steps": "Main→LevelSelect；用Down聚焦L02/L03；观察预览文字；Enter实际入关",
+  "expected": "选关状态文案准确表达当前关卡已是正式3D；若仅预览待补，应明确仅预览待补，避免称整关灰盒。",
+  "actual": "L02与L03显示灰盒试玩·尚无正式环境预览，预览区域为空；实际进入已有完整3D画面。",
+  "impact": "可能令玩家以为新关仍处于旧灰盒阶段；Enter入关正常，非P1。",
+  "confirmed_scope": {
+    "L02": [
+      "1920x1080",
+      "1280x720"
+    ],
+    "L03": [
+      "1280x720"
+    ],
+    "compact960": "L02/L03预览区为空，caption在该布局未展示，不将未显示的文字作为960复现证据"
+  },
+  "evidence": [
+    4,
+    32,
+    61,
+    62
+  ],
+  "actual_3d_comparison": [
+    5,
+    33,
+    63
+  ],
+  "production_fix": "NONE; fixed package left unchanged; Art FROZEN"
+}

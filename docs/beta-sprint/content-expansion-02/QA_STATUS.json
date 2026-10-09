@@ -1,0 +1,125 @@
+{
+  "status": "BETA_3D02_FOCUSED_QA_PARTIAL_ACCEPTED",
+  "registered_utc": "2026-10-09T05:06:54.9844833Z",
+  "build": {
+    "path": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
+    "zip": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01.zip",
+    "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+    "runtime_source": "7a95b28b155f5d32c4b559bdf90e0ea9beaad4ac",
+    "delivery": "b910167becee2194c0cfc724d8f0fe47578836a9",
+    "bind_results_to_fixed_package_only": true
+  },
+  "source_report": "E:/godot/beta-sprint-builds/beta_3d02_focused_qa_20261009_01/BETA_3D02_FOCUSED_QA_PARTIAL.json",
+  "source_report_sha256": "3d6855d0ce420865019890e767cbfc98cb2c73146e0fab386e6727e7cd893753",
+  "sealed_report": "docs/beta-sprint/content-expansion-02/evidence/fixed_3d02_focused_qa/BETA_3D02_FOCUSED_QA_PARTIAL.json",
+  "UI_08_001": "CLOSED",
+  "A_first_time": {
+    "case": "L03 First-time Comprehension",
+    "status": "RETEST_PENDING",
+    "reason": "当前测试者及00均已有路线/解法经验，没有符合条件的新测试者；未使用重玩或AI子代理代替。",
+    "blocks_B_C_or_content_production": false
+  },
+  "B_matrix_status": "PASS_WITH_NONBLOCKING_P2",
+  "B_matrix_passed": 3,
+  "B_matrix_total": 3,
+  "C_cold_continue_status": "PASS",
+  "C_old_pid": 40064,
+  "C_new_pid": 34448,
+  "counts": {
+    "P0": 0,
+    "P1": 0,
+    "new_P2": 1,
+    "retained_P2": 2,
+    "total_open_P2": 3,
+    "new_P3": 0
+  },
+  "screenshots": 65,
+  "verification": {
+    "before_count": 1173,
+    "after_count": 1173,
+    "changed": [],
+    "added": [],
+    "removed": [],
+    "screenshots": 65,
+    "missing_screenshots": [],
+    "geometry_mismatches": [],
+    "source_profile_unchanged": true,
+    "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+    "qa_pids_running": [],
+    "matrix_stderr_bytes": 0,
+    "cold_stderr_bytes": 0,
+    "old_objects": [
+      {
+        "root": "E:/godot/beta-sprint-builds/beta_3d02_qa_20261009_01",
+        "files": 99,
+        "changed": []
+      },
+      {
+        "root": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01",
+        "files": 60,
+        "changed": []
+      }
+    ],
+    "cold_save_checksum_all_valid": true,
+    "process_boundary_valid": true,
+    "final_offline_check": {
+      "checked_at": "2026-10-09T05:01:57.6Z",
+      "fixed_project_files": 1173,
+      "changed": [],
+      "added": [],
+      "old_objects": [
+        {
+          "root": "E:/godot/beta-sprint-builds/beta_3d02_qa_20261009_01",
+          "files": 99,
+          "changed": []
+        },
+        {
+          "root": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01",
+          "files": 60,
+          "changed": []
+        }
+      ],
+      "save_checksums": [
+        {
+          "file": "source_progress.json",
+          "checksum_valid": true,
+          "sha256": "a90f426688509a684de370f47ed8ea5342da82633d0208ad29fd28d62bd442fc"
+        },
+        {
+          "file": "cold_progress_before_quit.json",
+          "checksum_valid": true,
+          "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+        },
+        {
+          "file": "cold_progress_after_quit.json",
+          "checksum_valid": true,
+          "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+        },
+        {
+          "file": "cold_progress_after_continue.json",
+          "checksum_valid": true,
+          "sha256": "a91046633aafb2ee602b3b73f44c72b8a26408db55b2c3ff63a2a09ba7abe856"
+        }
+      ],
+      "geometry_mismatches": [],
+      "missing_screenshots": [],
+      "broken_markdown_links": [],
+      "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+      "zip_matches": true,
+      "source_progress_sha256": "a90f426688509a684de370f47ed8ea5342da82633d0208ad29fd28d62bd442fc",
+      "source_unchanged": true,
+      "input_trace_rows": 65,
+      "normal_quit_actions": 2
+    }
+  },
+  "review": {
+    "reviewer": "/root/phase2_qa_evidence_review",
+    "new_integrity_or_scope_issues": 0,
+    "independent_old_objects_verified": 324,
+    "independent_new_evidence_files_verified": 180
+  },
+  "new_daily_human_qa": "NOT_RUN",
+  "results_transfer_to_new_daily": false,
+  "whole_game_beta_qa_complete": false,
+  "Foundation_4_full": "DEFERRED_CURRENT_BETA_SCOPE"
+}

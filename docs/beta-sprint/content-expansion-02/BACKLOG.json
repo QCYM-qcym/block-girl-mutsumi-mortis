@@ -1,0 +1,72 @@
+{
+  "P0": 0,
+  "P1": 0,
+  "retained_P2": 2,
+  "new_P2": 1,
+  "total_open_P2": 3,
+  "issues": [
+    {
+      "id": "VIS01-P2-001 / UI-08-K01",
+      "severity": "P2",
+      "owner": "07 Game Shell",
+      "status": "OPEN",
+      "observed_this_run": true,
+      "evidence": [
+        9,
+        20,
+        35,
+        40
+      ],
+      "description": "Pause板底辅助文字贴边；960与底部操作说明重叠；关键控件仍能使用。"
+    },
+    {
+      "id": "L03_STALE_HINT_EXISTING",
+      "severity": "P2",
+      "owner": "06 Game Content",
+      "status": "OPEN",
+      "observed_this_run": false,
+      "reference": "E:/godot/beta-sprint-builds/beta_3d02_qa_20261009_01/BETA_3D02_HUMAN_QA_01_COMPLETE.json",
+      "description": "保留上轮真实跨越后过期提示；本轮未重跑完整跨越路线，不关闭或漏计。"
+    },
+    {
+      "id": "FOCUS-3D02-P2-001",
+      "severity": "P2",
+      "owner": "07 Game Shell (关联06菜单内容)",
+      "status": "OPEN",
+      "newly_found": true,
+      "title": "L02/L03选关仍显示灰盒/无正式环境预览，和实际3D入关不一致",
+      "steps": "Main→LevelSelect；用Down聚焦L02/L03；观察预览文字；Enter实际入关",
+      "expected": "选关状态文案准确表达当前关卡已是正式3D；若仅预览待补，应明确仅预览待补，避免称整关灰盒。",
+      "actual": "L02与L03显示灰盒试玩·尚无正式环境预览，预览区域为空；实际进入已有完整3D画面。",
+      "impact": "可能令玩家以为新关仍处于旧灰盒阶段；Enter入关正常，非P1。",
+      "confirmed_scope": {
+        "L02": [
+          "1920x1080",
+          "1280x720"
+        ],
+        "L03": [
+          "1280x720"
+        ],
+        "compact960": "L02/L03预览区为空，caption在该布局未展示，不将未显示的文字作为960复现证据"
+      },
+      "evidence": [
+        4,
+        32,
+        61,
+        62
+      ],
+      "actual_3d_comparison": [
+        5,
+        33,
+        63
+      ],
+      "production_fix": "NONE; fixed package left unchanged; Art FROZEN"
+    }
+  ],
+  "policy": "P2 remains backlog; no frozen Art Direction, legacy hints or Shell captions modified in this expansion",
+  "Foundation_D5_D6": "POST_FREEZE_BACKLOG",
+  "stairs": {
+    "STAIR_CLEARANCE": "PARTIAL_PASS",
+    "STAIR_TRAVERSAL": "NOT_RUN"
+  }
+}
