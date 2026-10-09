@@ -1,0 +1,755 @@
+{
+  "task": "GAME_FEEL_UI_EXTENSION_01",
+  "owner_ready": true,
+  "overall_ready": false,
+  "source_commit": "8724dbc13c6e1852d2020be2f05eb638162e373d",
+  "contract_baseline": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "original_wip_execution_head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "original_wip_dirty_preserved": true,
+  "evidence": "docs/game-shell/game-feel-ui-extension-01/evidence/owner07_final_03/run_report.json",
+  "evidence_sha256": "5477444df5ed24271420e21d1b6351be76883e219925ae49b044fa64e9d19561",
+  "behavioral_checks": 158,
+  "all_stages_exit_zero": true,
+  "all_stages_stderr_zero": true,
+  "source_drift": false,
+  "verified_source_files": 104,
+  "verifier": "git cat-file blob at exact commit via native stdout byte stream; SHA256 compared with physical and original tested bytes",
+  "frozen_diff": [],
+  "approved_ui_tokens_preserved": true,
+  "formal_audio": "case_pending",
+  "formal_presenter": "case_pending",
+  "readiness": "case_pending",
+  "fresh_integrated_graphics": "case_pending",
+  "human_acceptance": "NOT_RUN",
+  "push": "NOT_RUN",
+  "sources": [
+    {
+      "path": "docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md",
+      "tested_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+      "git_blob_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+      "physical_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+      "match": true
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd",
+      "tested_sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28",
+      "git_blob_sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28",
+      "physical_sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28",
+      "match": true
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd.uid",
+      "tested_sha256": "93c41a0768005f61a8f3b879bc7ccd1d77b4d6958652b8f6f14b6a27691749ee",
+      "git_blob_sha256": "93c41a0768005f61a8f3b879bc7ccd1d77b4d6958652b8f6f14b6a27691749ee",
+      "physical_sha256": "93c41a0768005f61a8f3b879bc7ccd1d77b4d6958652b8f6f14b6a27691749ee",
+      "match": true
+    },
+    {
+      "path": "game/feel/ui/motion_row.gd",
+      "tested_sha256": "d24422f1e0fe87f8d9c430f19f5db0113871d8e8e439234b22b03a2babd9523a",
+      "git_blob_sha256": "d24422f1e0fe87f8d9c430f19f5db0113871d8e8e439234b22b03a2babd9523a",
+      "physical_sha256": "d24422f1e0fe87f8d9c430f19f5db0113871d8e8e439234b22b03a2babd9523a",
+      "match": true
+    },
+    {
+      "path": "game/feel/ui/motion_row.gd.uid",
+      "tested_sha256": "7ff96c79889ae17b37fdb301ee303c99d85541f4d4dcf5bbff038b871a5a0135",
+      "git_blob_sha256": "7ff96c79889ae17b37fdb301ee303c99d85541f4d4dcf5bbff038b871a5a0135",
+      "physical_sha256": "7ff96c79889ae17b37fdb301ee303c99d85541f4d4dcf5bbff038b871a5a0135",
+      "match": true
+    },
+    {
+      "path": "game/shell/game_shell.gd",
+      "tested_sha256": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb",
+      "git_blob_sha256": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb",
+      "physical_sha256": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb",
+      "match": true
+    },
+    {
+      "path": "game/shell/game_shell.gd.uid",
+      "tested_sha256": "275446e9c92663fd457b69607f552fa832f8927e3c201b160764133f2eccbf2f",
+      "git_blob_sha256": "275446e9c92663fd457b69607f552fa832f8927e3c201b160764133f2eccbf2f",
+      "physical_sha256": "275446e9c92663fd457b69607f552fa832f8927e3c201b160764133f2eccbf2f",
+      "match": true
+    },
+    {
+      "path": "game/shell/game_shell.tscn",
+      "tested_sha256": "25e16dfe9f9818bdbacbd50e06cbfe8401cf03c65206cf75792a167887d8d4af",
+      "git_blob_sha256": "25e16dfe9f9818bdbacbd50e06cbfe8401cf03c65206cf75792a167887d8d4af",
+      "physical_sha256": "25e16dfe9f9818bdbacbd50e06cbfe8401cf03c65206cf75792a167887d8d4af",
+      "match": true
+    },
+    {
+      "path": "game/shell/level_adapter.gd",
+      "tested_sha256": "4c0f17c61136aa00674feccdbe00fff6a9b46402d65bd728b82863d538ff011d",
+      "git_blob_sha256": "4c0f17c61136aa00674feccdbe00fff6a9b46402d65bd728b82863d538ff011d",
+      "physical_sha256": "4c0f17c61136aa00674feccdbe00fff6a9b46402d65bd728b82863d538ff011d",
+      "match": true
+    },
+    {
+      "path": "game/shell/level_adapter.gd.uid",
+      "tested_sha256": "baf6ab891a73a8ca8df6f3979486e1c04147708647988c6c48bdcc1b816512e2",
+      "git_blob_sha256": "baf6ab891a73a8ca8df6f3979486e1c04147708647988c6c48bdcc1b816512e2",
+      "physical_sha256": "baf6ab891a73a8ca8df6f3979486e1c04147708647988c6c48bdcc1b816512e2",
+      "match": true
+    },
+    {
+      "path": "game/shell/level_catalog.gd",
+      "tested_sha256": "ed16d8e75efa3b8a5cee132c83402909dd6ecfb1dade4689e5cac702ef408a09",
+      "git_blob_sha256": "ed16d8e75efa3b8a5cee132c83402909dd6ecfb1dade4689e5cac702ef408a09",
+      "physical_sha256": "ed16d8e75efa3b8a5cee132c83402909dd6ecfb1dade4689e5cac702ef408a09",
+      "match": true
+    },
+    {
+      "path": "game/shell/level_catalog.gd.uid",
+      "tested_sha256": "5e4c518b4e896a4a6f9d1dca0e0ae3bae27934ac0538d7beecdded524a9b0bf4",
+      "git_blob_sha256": "5e4c518b4e896a4a6f9d1dca0e0ae3bae27934ac0538d7beecdded524a9b0bf4",
+      "physical_sha256": "5e4c518b4e896a4a6f9d1dca0e0ae3bae27934ac0538d7beecdded524a9b0bf4",
+      "match": true
+    },
+    {
+      "path": "game/shell/save_store.gd",
+      "tested_sha256": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f",
+      "git_blob_sha256": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f",
+      "physical_sha256": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f",
+      "match": true
+    },
+    {
+      "path": "game/shell/save_store.gd.uid",
+      "tested_sha256": "41d1acdd0bd1b14a42ce220f7040c5f588e246526372f113ecacf61386f6d7a0",
+      "git_blob_sha256": "41d1acdd0bd1b14a42ce220f7040c5f588e246526372f113ecacf61386f6d7a0",
+      "physical_sha256": "41d1acdd0bd1b14a42ce220f7040c5f588e246526372f113ecacf61386f6d7a0",
+      "match": true
+    },
+    {
+      "path": "game/shell/settings.gd",
+      "tested_sha256": "3b4dcfa09a0a6f932ee76ab3394d70fb144253790710846953139a69a0502d4a",
+      "git_blob_sha256": "3b4dcfa09a0a6f932ee76ab3394d70fb144253790710846953139a69a0502d4a",
+      "physical_sha256": "3b4dcfa09a0a6f932ee76ab3394d70fb144253790710846953139a69a0502d4a",
+      "match": true
+    },
+    {
+      "path": "game/shell/settings.gd.uid",
+      "tested_sha256": "4b4ba7740eb6a1f286af20d7ad3a43dfef64256732d12532dc2d68c9cf5cdd3c",
+      "git_blob_sha256": "4b4ba7740eb6a1f286af20d7ad3a43dfef64256732d12532dc2d68c9cf5cdd3c",
+      "physical_sha256": "4b4ba7740eb6a1f286af20d7ad3a43dfef64256732d12532dc2d68c9cf5cdd3c",
+      "match": true
+    },
+    {
+      "path": "game/shell/shell_input.gd",
+      "tested_sha256": "20c5b92a40d5dfc49534dc5f64e29486c39e6be13ff501480687208252d5f69c",
+      "git_blob_sha256": "20c5b92a40d5dfc49534dc5f64e29486c39e6be13ff501480687208252d5f69c",
+      "physical_sha256": "20c5b92a40d5dfc49534dc5f64e29486c39e6be13ff501480687208252d5f69c",
+      "match": true
+    },
+    {
+      "path": "game/shell/shell_input.gd.uid",
+      "tested_sha256": "0856582c4ae95a10b81766dba6f5b4a11b0bf8d4fac40d33f80d7c914d0933a8",
+      "git_blob_sha256": "0856582c4ae95a10b81766dba6f5b4a11b0bf8d4fac40d33f80d7c914d0933a8",
+      "physical_sha256": "0856582c4ae95a10b81766dba6f5b4a11b0bf8d4fac40d33f80d7c914d0933a8",
+      "match": true
+    },
+    {
+      "path": "game/shell/shell_view.gd",
+      "tested_sha256": "44e262e47a4b3c2c9892fff270a1b3cf35387c80dff5098506d0256a108427f2",
+      "git_blob_sha256": "44e262e47a4b3c2c9892fff270a1b3cf35387c80dff5098506d0256a108427f2",
+      "physical_sha256": "44e262e47a4b3c2c9892fff270a1b3cf35387c80dff5098506d0256a108427f2",
+      "match": true
+    },
+    {
+      "path": "game/shell/shell_view.gd.uid",
+      "tested_sha256": "eb577ea991fd1d3879adaf8047d63a26426a49aacd3e5bac271f46dd26c0c0c4",
+      "git_blob_sha256": "eb577ea991fd1d3879adaf8047d63a26426a49aacd3e5bac271f46dd26c0c0c4",
+      "physical_sha256": "eb577ea991fd1d3879adaf8047d63a26426a49aacd3e5bac271f46dd26c0c0c4",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd",
+      "tested_sha256": "4f4cfde859cf504e8e4ebde611ea51c95e837845b719f51cdaab3f8c332f6ddc",
+      "git_blob_sha256": "4f4cfde859cf504e8e4ebde611ea51c95e837845b719f51cdaab3f8c332f6ddc",
+      "physical_sha256": "4f4cfde859cf504e8e4ebde611ea51c95e837845b719f51cdaab3f8c332f6ddc",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd.uid",
+      "tested_sha256": "50f575e147dde210730dcef8119a50653296b3a3c217ba1dd418430b52846b9f",
+      "git_blob_sha256": "50f575e147dde210730dcef8119a50653296b3a3c217ba1dd418430b52846b9f",
+      "physical_sha256": "50f575e147dde210730dcef8119a50653296b3a3c217ba1dd418430b52846b9f",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/hint_strip.gd",
+      "tested_sha256": "5c9e5405805b401a135ff8985fd69c56622ce35819c1ef162c853fed77268ef6",
+      "git_blob_sha256": "5c9e5405805b401a135ff8985fd69c56622ce35819c1ef162c853fed77268ef6",
+      "physical_sha256": "5c9e5405805b401a135ff8985fd69c56622ce35819c1ef162c853fed77268ef6",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/hint_strip.gd.uid",
+      "tested_sha256": "fb8b593c865900660b9ed6a51c99b65bc23722bf433d5f368dc7c380a0e7d68a",
+      "git_blob_sha256": "fb8b593c865900660b9ed6a51c99b65bc23722bf433d5f368dc7c380a0e7d68a",
+      "physical_sha256": "fb8b593c865900660b9ed6a51c99b65bc23722bf433d5f368dc7c380a0e7d68a",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/hud.gd",
+      "tested_sha256": "ab70e68b2b017ab49549257d1eadc205ab2e53924acb98203dd3f2b2c816f5be",
+      "git_blob_sha256": "ab70e68b2b017ab49549257d1eadc205ab2e53924acb98203dd3f2b2c816f5be",
+      "physical_sha256": "ab70e68b2b017ab49549257d1eadc205ab2e53924acb98203dd3f2b2c816f5be",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/hud.gd.uid",
+      "tested_sha256": "9d58af1e7d3a2ee62aec61f33c3ff3ce26138b2abf31437cdd6c30222bc4f1b5",
+      "git_blob_sha256": "9d58af1e7d3a2ee62aec61f33c3ff3ce26138b2abf31437cdd6c30222bc4f1b5",
+      "physical_sha256": "9d58af1e7d3a2ee62aec61f33c3ff3ce26138b2abf31437cdd6c30222bc4f1b5",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd",
+      "tested_sha256": "783818f4f94142e2f3da712998b737cf7ebce91db1e43790c268e1b02b8874ad",
+      "git_blob_sha256": "783818f4f94142e2f3da712998b737cf7ebce91db1e43790c268e1b02b8874ad",
+      "physical_sha256": "783818f4f94142e2f3da712998b737cf7ebce91db1e43790c268e1b02b8874ad",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd.uid",
+      "tested_sha256": "bed206373f0e6fcadad3c444c0d22a0fc98bae47300d4776975cf6235c8f852d",
+      "git_blob_sha256": "bed206373f0e6fcadad3c444c0d22a0fc98bae47300d4776975cf6235c8f852d",
+      "physical_sha256": "bed206373f0e6fcadad3c444c0d22a0fc98bae47300d4776975cf6235c8f852d",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/stone_row.gd",
+      "tested_sha256": "2d1f1d69549dd0dc7c9d34fc78296e217858aa506631efd0cbe7e4894fda5e44",
+      "git_blob_sha256": "2d1f1d69549dd0dc7c9d34fc78296e217858aa506631efd0cbe7e4894fda5e44",
+      "physical_sha256": "2d1f1d69549dd0dc7c9d34fc78296e217858aa506631efd0cbe7e4894fda5e44",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/stone_row.gd.uid",
+      "tested_sha256": "781aa50b3e5a8186047d0d01249c45c09942e1c05f584d4db67f6f2ac5247c6d",
+      "git_blob_sha256": "781aa50b3e5a8186047d0d01249c45c09942e1c05f584d4db67f6f2ac5247c6d",
+      "physical_sha256": "781aa50b3e5a8186047d0d01249c45c09942e1c05f584d4db67f6f2ac5247c6d",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd",
+      "tested_sha256": "575e0fd3aa5ca83d445733584fe276cee4c7556186bc754455860ad4b1be4138",
+      "git_blob_sha256": "575e0fd3aa5ca83d445733584fe276cee4c7556186bc754455860ad4b1be4138",
+      "physical_sha256": "575e0fd3aa5ca83d445733584fe276cee4c7556186bc754455860ad4b1be4138",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd.uid",
+      "tested_sha256": "df8cd98e3e79a6711f2076768b4be0231679d76a019121a08db04420fd14b7da",
+      "git_blob_sha256": "df8cd98e3e79a6711f2076768b4be0231679d76a019121a08db04420fd14b7da",
+      "physical_sha256": "df8cd98e3e79a6711f2076768b4be0231679d76a019121a08db04420fd14b7da",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/tokens.gd",
+      "tested_sha256": "6be129dd2d3eda6a6294242fa1c3defe7a171eda09599656574e6c11c6b24fd4",
+      "git_blob_sha256": "6be129dd2d3eda6a6294242fa1c3defe7a171eda09599656574e6c11c6b24fd4",
+      "physical_sha256": "6be129dd2d3eda6a6294242fa1c3defe7a171eda09599656574e6c11c6b24fd4",
+      "match": true
+    },
+    {
+      "path": "game/shell/visual_01/tokens.gd.uid",
+      "tested_sha256": "c721d34a72d92b272f7bf29a88ff05c7ee64a6d75d1e331a0138fe800839a842",
+      "git_blob_sha256": "c721d34a72d92b272f7bf29a88ff05c7ee64a6d75d1e331a0138fe800839a842",
+      "physical_sha256": "c721d34a72d92b272f7bf29a88ff05c7ee64a6d75d1e331a0138fe800839a842",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/.gitattributes",
+      "tested_sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+      "git_blob_sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+      "physical_sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/ASSET_BINDING_MANIFEST.json",
+      "tested_sha256": "6bfb9213846f053ed1ac195b062b967af07d5657d0df894b1bd5e1492e8cca55",
+      "git_blob_sha256": "6bfb9213846f053ed1ac195b062b967af07d5657d0df894b1bd5e1492e8cca55",
+      "physical_sha256": "6bfb9213846f053ed1ac195b062b967af07d5657d0df894b1bd5e1492e8cca55",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/.gitattributes",
+      "tested_sha256": "896bd8cc13003b78bd5918baebfa252f058c43fc4daca538fa87344719a86a5e",
+      "git_blob_sha256": "896bd8cc13003b78bd5918baebfa252f058c43fc4daca538fa87344719a86a5e",
+      "physical_sha256": "896bd8cc13003b78bd5918baebfa252f058c43fc4daca538fa87344719a86a5e",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/font_manifest.json",
+      "tested_sha256": "446b4c7fb07f8296ecba522f913519b68d1cf28c9bfc65aa2b6cacdc9bdfc247",
+      "git_blob_sha256": "446b4c7fb07f8296ecba522f913519b68d1cf28c9bfc65aa2b6cacdc9bdfc247",
+      "physical_sha256": "446b4c7fb07f8296ecba522f913519b68d1cf28c9bfc65aa2b6cacdc9bdfc247",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC-OFL.txt",
+      "tested_sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "git_blob_sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "physical_sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+      "tested_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "git_blob_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "physical_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf.import",
+      "tested_sha256": "860729bd98b30a1868d939922d475056e6f498570f31faf97cb72e38399b77a9",
+      "git_blob_sha256": "860729bd98b30a1868d939922d475056e6f498570f31faf97cb72e38399b77a9",
+      "physical_sha256": "860729bd98b30a1868d939922d475056e6f498570f31faf97cb72e38399b77a9",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC-OFL.txt",
+      "tested_sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+      "git_blob_sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+      "physical_sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC.ttf",
+      "tested_sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280",
+      "git_blob_sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280",
+      "physical_sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC.ttf.import",
+      "tested_sha256": "f7540a45c8165b52b3ca9b14232eba7218513df90436f94511359a641a60c7f3",
+      "git_blob_sha256": "f7540a45c8165b52b3ca9b14232eba7218513df90436f94511359a641a60c7f3",
+      "physical_sha256": "f7540a45c8165b52b3ca9b14232eba7218513df90436f94511359a641a60c7f3",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons_source.svg",
+      "tested_sha256": "1f4217a34bc404884dfe7676120f9da77cb6abb640d7657393412061c0f6ab45",
+      "git_blob_sha256": "1f4217a34bc404884dfe7676120f9da77cb6abb640d7657393412061c0f6ab45",
+      "physical_sha256": "1f4217a34bc404884dfe7676120f9da77cb6abb640d7657393412061c0f6ab45",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons_source.svg.import",
+      "tested_sha256": "c7911c2c43b002f31f1f245405f17fa1c6f086d342f831f4f643fb9b91af7b05",
+      "git_blob_sha256": "c7911c2c43b002f31f1f245405f17fa1c6f086d342f831f4f643fb9b91af7b05",
+      "physical_sha256": "c7911c2c43b002f31f1f245405f17fa1c6f086d342f831f4f643fb9b91af7b05",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arch.svg",
+      "tested_sha256": "25f495586be7ac3f7a9252eaee66947a4b75a98f0a6dfe0a7082e5443de6db7d",
+      "git_blob_sha256": "25f495586be7ac3f7a9252eaee66947a4b75a98f0a6dfe0a7082e5443de6db7d",
+      "physical_sha256": "25f495586be7ac3f7a9252eaee66947a4b75a98f0a6dfe0a7082e5443de6db7d",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arch.svg.import",
+      "tested_sha256": "94ad64616cf06fbf1b104bd480ca767381b8790a64f383d1989363209082e0bf",
+      "git_blob_sha256": "94ad64616cf06fbf1b104bd480ca767381b8790a64f383d1989363209082e0bf",
+      "physical_sha256": "94ad64616cf06fbf1b104bd480ca767381b8790a64f383d1989363209082e0bf",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arrow.svg",
+      "tested_sha256": "dee8052daf6925a0c2a0ba375e914640e12dd61fc17eed40df15bf4146892e4f",
+      "git_blob_sha256": "dee8052daf6925a0c2a0ba375e914640e12dd61fc17eed40df15bf4146892e4f",
+      "physical_sha256": "dee8052daf6925a0c2a0ba375e914640e12dd61fc17eed40df15bf4146892e4f",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arrow.svg.import",
+      "tested_sha256": "8eaff712ef5d5c079db6ddf5d9d41f8e6bbfcb6c97a6226d53f10e0cf2c53e5e",
+      "git_blob_sha256": "8eaff712ef5d5c079db6ddf5d9d41f8e6bbfcb6c97a6226d53f10e0cf2c53e5e",
+      "physical_sha256": "8eaff712ef5d5c079db6ddf5d9d41f8e6bbfcb6c97a6226d53f10e0cf2c53e5e",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/check.svg",
+      "tested_sha256": "bc3d9135fb0c3302ae35a787bfcf4ccf2d0aed1363af9e3b13dbc46a138db303",
+      "git_blob_sha256": "bc3d9135fb0c3302ae35a787bfcf4ccf2d0aed1363af9e3b13dbc46a138db303",
+      "physical_sha256": "bc3d9135fb0c3302ae35a787bfcf4ccf2d0aed1363af9e3b13dbc46a138db303",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/check.svg.import",
+      "tested_sha256": "9d5bcd42340192bb89e63fafec8845778289d3fc7a0d3b927b488de57171021b",
+      "git_blob_sha256": "9d5bcd42340192bb89e63fafec8845778289d3fc7a0d3b927b488de57171021b",
+      "physical_sha256": "9d5bcd42340192bb89e63fafec8845778289d3fc7a0d3b927b488de57171021b",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/checked.svg",
+      "tested_sha256": "a6c98b78a2134519863a844650bfd2f12cddb3b487a01491d1a15350497feec0",
+      "git_blob_sha256": "a6c98b78a2134519863a844650bfd2f12cddb3b487a01491d1a15350497feec0",
+      "physical_sha256": "a6c98b78a2134519863a844650bfd2f12cddb3b487a01491d1a15350497feec0",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/checked.svg.import",
+      "tested_sha256": "10495d8a85d603971a59114657e41b8e3140f70b1a42574d0c3fc43f8670db9a",
+      "git_blob_sha256": "10495d8a85d603971a59114657e41b8e3140f70b1a42574d0c3fc43f8670db9a",
+      "physical_sha256": "10495d8a85d603971a59114657e41b8e3140f70b1a42574d0c3fc43f8670db9a",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/lock.svg",
+      "tested_sha256": "d4e0e581aa41388129b82eb4700e3a13e29edbb406c6fbae26882b583789a420",
+      "git_blob_sha256": "d4e0e581aa41388129b82eb4700e3a13e29edbb406c6fbae26882b583789a420",
+      "physical_sha256": "d4e0e581aa41388129b82eb4700e3a13e29edbb406c6fbae26882b583789a420",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/lock.svg.import",
+      "tested_sha256": "6873f586108024684f052bb9fc3504064683d8840f6631cc7f49d37661fa84b0",
+      "git_blob_sha256": "6873f586108024684f052bb9fc3504064683d8840f6631cc7f49d37661fa84b0",
+      "physical_sha256": "6873f586108024684f052bb9fc3504064683d8840f6631cc7f49d37661fa84b0",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/pause.svg",
+      "tested_sha256": "59e9017cdb3dbbdf213127a73a20f65c9a571685e2eab5acd0c2d6bc7965f7c8",
+      "git_blob_sha256": "59e9017cdb3dbbdf213127a73a20f65c9a571685e2eab5acd0c2d6bc7965f7c8",
+      "physical_sha256": "59e9017cdb3dbbdf213127a73a20f65c9a571685e2eab5acd0c2d6bc7965f7c8",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/pause.svg.import",
+      "tested_sha256": "06abd1671802baa9b21f61b5b6cd688524911386a385f72a2977b64f95648e1d",
+      "git_blob_sha256": "06abd1671802baa9b21f61b5b6cd688524911386a385f72a2977b64f95648e1d",
+      "physical_sha256": "06abd1671802baa9b21f61b5b6cd688524911386a385f72a2977b64f95648e1d",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/quit.svg",
+      "tested_sha256": "e2ccf015ae6450c1262c542ceb05710761a318f48fe03c4d784db6d4be99ba11",
+      "git_blob_sha256": "e2ccf015ae6450c1262c542ceb05710761a318f48fe03c4d784db6d4be99ba11",
+      "physical_sha256": "e2ccf015ae6450c1262c542ceb05710761a318f48fe03c4d784db6d4be99ba11",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/quit.svg.import",
+      "tested_sha256": "ac2ee96b003ac443fd4406cdec40b46c4487188c37ccbb5048152fa6fa7a683a",
+      "git_blob_sha256": "ac2ee96b003ac443fd4406cdec40b46c4487188c37ccbb5048152fa6fa7a683a",
+      "physical_sha256": "ac2ee96b003ac443fd4406cdec40b46c4487188c37ccbb5048152fa6fa7a683a",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/reset.svg",
+      "tested_sha256": "fa8c97192f030e61d547eaed6cc41965cc41f761a46726382f2db34210f415ff",
+      "git_blob_sha256": "fa8c97192f030e61d547eaed6cc41965cc41f761a46726382f2db34210f415ff",
+      "physical_sha256": "fa8c97192f030e61d547eaed6cc41965cc41f761a46726382f2db34210f415ff",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/reset.svg.import",
+      "tested_sha256": "d443df068d8a1079635943f9152de46c1ef529575e851aad7f9edd34893357be",
+      "git_blob_sha256": "d443df068d8a1079635943f9152de46c1ef529575e851aad7f9edd34893357be",
+      "physical_sha256": "d443df068d8a1079635943f9152de46c1ef529575e851aad7f9edd34893357be",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/return.svg",
+      "tested_sha256": "0f091fc587080252dd1077d872606009737a15ec190971ab34d6aafd286e8a3f",
+      "git_blob_sha256": "0f091fc587080252dd1077d872606009737a15ec190971ab34d6aafd286e8a3f",
+      "physical_sha256": "0f091fc587080252dd1077d872606009737a15ec190971ab34d6aafd286e8a3f",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/return.svg.import",
+      "tested_sha256": "3ea39ee322987f976ef76129de695b94d43bde4e64f3066bcc70bdae62830db7",
+      "git_blob_sha256": "3ea39ee322987f976ef76129de695b94d43bde4e64f3066bcc70bdae62830db7",
+      "physical_sha256": "3ea39ee322987f976ef76129de695b94d43bde4e64f3066bcc70bdae62830db7",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/settings.svg",
+      "tested_sha256": "b930398e6163aaadf08fe26b7728ad48cc099d1ffa3b21a50782cc2ea5d8c4c0",
+      "git_blob_sha256": "b930398e6163aaadf08fe26b7728ad48cc099d1ffa3b21a50782cc2ea5d8c4c0",
+      "physical_sha256": "b930398e6163aaadf08fe26b7728ad48cc099d1ffa3b21a50782cc2ea5d8c4c0",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/settings.svg.import",
+      "tested_sha256": "b65db68c24590aec4637b2794ac97faca7978ee01a47462125e30dd2b4ee2537",
+      "git_blob_sha256": "b65db68c24590aec4637b2794ac97faca7978ee01a47462125e30dd2b4ee2537",
+      "physical_sha256": "b65db68c24590aec4637b2794ac97faca7978ee01a47462125e30dd2b4ee2537",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/slider_grab.svg",
+      "tested_sha256": "8b1bcfdcd27b9089d0a501f411b13b322bc3e1a52a28a72ec54e8b4602807dd5",
+      "git_blob_sha256": "8b1bcfdcd27b9089d0a501f411b13b322bc3e1a52a28a72ec54e8b4602807dd5",
+      "physical_sha256": "8b1bcfdcd27b9089d0a501f411b13b322bc3e1a52a28a72ec54e8b4602807dd5",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/slider_grab.svg.import",
+      "tested_sha256": "7029f04112ac67690daa08ebf1a08ef0cdd8ecea03df2a35152fe3e1220469b1",
+      "git_blob_sha256": "7029f04112ac67690daa08ebf1a08ef0cdd8ecea03df2a35152fe3e1220469b1",
+      "physical_sha256": "7029f04112ac67690daa08ebf1a08ef0cdd8ecea03df2a35152fe3e1220469b1",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/steps.svg",
+      "tested_sha256": "4cffcac08912ce186cf9fcf2d8b7ad8c01299b48b1b5be62082ee0e61ce2b5ea",
+      "git_blob_sha256": "4cffcac08912ce186cf9fcf2d8b7ad8c01299b48b1b5be62082ee0e61ce2b5ea",
+      "physical_sha256": "4cffcac08912ce186cf9fcf2d8b7ad8c01299b48b1b5be62082ee0e61ce2b5ea",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/steps.svg.import",
+      "tested_sha256": "443cbc0f868edd0a85c5f86c37ea1886dd2be8a546be10c6801439dcb7eec5da",
+      "git_blob_sha256": "443cbc0f868edd0a85c5f86c37ea1886dd2be8a546be10c6801439dcb7eec5da",
+      "physical_sha256": "443cbc0f868edd0a85c5f86c37ea1886dd2be8a546be10c6801439dcb7eec5da",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/unchecked.svg",
+      "tested_sha256": "1a47ead9ebad9f8835ee5826b57c9729c646c75bcc3692114603550d5510f359",
+      "git_blob_sha256": "1a47ead9ebad9f8835ee5826b57c9729c646c75bcc3692114603550d5510f359",
+      "physical_sha256": "1a47ead9ebad9f8835ee5826b57c9729c646c75bcc3692114603550d5510f359",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/unchecked.svg.import",
+      "tested_sha256": "9abf7486429c44721c4e0f51758d873a3f8f93048eedabae005b1fa625603005",
+      "git_blob_sha256": "9abf7486429c44721c4e0f51758d873a3f8f93048eedabae005b1fa625603005",
+      "physical_sha256": "9abf7486429c44721c4e0f51758d873a3f8f93048eedabae005b1fa625603005",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/previews/l01.png",
+      "tested_sha256": "9a2b50f448ffeae560c90e012f99108135b1f746e847943667f3d4bc708fecc7",
+      "git_blob_sha256": "9a2b50f448ffeae560c90e012f99108135b1f746e847943667f3d4bc708fecc7",
+      "physical_sha256": "9a2b50f448ffeae560c90e012f99108135b1f746e847943667f3d4bc708fecc7",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/previews/l01.png.import",
+      "tested_sha256": "a6e99628dbdd75268ac4e82747552a3f3a3956f09e6c9a53a5b8450ad7748699",
+      "git_blob_sha256": "a6e99628dbdd75268ac4e82747552a3f3a3956f09e6c9a53a5b8450ad7748699",
+      "physical_sha256": "a6e99628dbdd75268ac4e82747552a3f3a3956f09e6c9a53a5b8450ad7748699",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/surface_identity.png",
+      "tested_sha256": "f70f92ad5615e2ab5cd75927671c63ae8be526a2c29d638ac06ae86475cbf0cc",
+      "git_blob_sha256": "f70f92ad5615e2ab5cd75927671c63ae8be526a2c29d638ac06ae86475cbf0cc",
+      "physical_sha256": "f70f92ad5615e2ab5cd75927671c63ae8be526a2c29d638ac06ae86475cbf0cc",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/surface_identity.png.import",
+      "tested_sha256": "74846878b836696bee637110144932b607695dc28120e80585158fb7fb425f1d",
+      "git_blob_sha256": "74846878b836696bee637110144932b607695dc28120e80585158fb7fb425f1d",
+      "physical_sha256": "74846878b836696bee637110144932b607695dc28120e80585158fb7fb425f1d",
+      "match": true
+    },
+    {
+      "path": "production/ui/beta_shell_01/tokens.json",
+      "tested_sha256": "5f342f44dca86436659ce39b6bca45c8a4ab9a9cc94b3f68d879fed3e32b12a5",
+      "git_blob_sha256": "5f342f44dca86436659ce39b6bca45c8a4ab9a9cc94b3f68d879fed3e32b12a5",
+      "physical_sha256": "5f342f44dca86436659ce39b6bca45c8a4ab9a9cc94b3f68d879fed3e32b12a5",
+      "match": true
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/run.ps1",
+      "tested_sha256": "ed1f32f820cd6e8b0f8b33652923331d28b2c466ec244986f494f6385770634a",
+      "git_blob_sha256": "ed1f32f820cd6e8b0f8b33652923331d28b2c466ec244986f494f6385770634a",
+      "physical_sha256": "ed1f32f820cd6e8b0f8b33652923331d28b2c466ec244986f494f6385770634a",
+      "match": true
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_layout.gd",
+      "tested_sha256": "548c54a5afd92f053858665b490479243d13b66fb8ea736b2cd21ec1ffcb6524",
+      "git_blob_sha256": "548c54a5afd92f053858665b490479243d13b66fb8ea736b2cd21ec1ffcb6524",
+      "physical_sha256": "548c54a5afd92f053858665b490479243d13b66fb8ea736b2cd21ec1ffcb6524",
+      "match": true
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_layout.gd.uid",
+      "tested_sha256": "10ebe86c46cfc8818a49f804e80808d4917b45304c472db9469077fd13538be8",
+      "git_blob_sha256": "10ebe86c46cfc8818a49f804e80808d4917b45304c472db9469077fd13538be8",
+      "physical_sha256": "10ebe86c46cfc8818a49f804e80808d4917b45304c472db9469077fd13538be8",
+      "match": true
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd",
+      "tested_sha256": "93bf84923d7c3b969c82f5672fee50be7326cce0ee6621e65e3a7ce32f0785a6",
+      "git_blob_sha256": "93bf84923d7c3b969c82f5672fee50be7326cce0ee6621e65e3a7ce32f0785a6",
+      "physical_sha256": "93bf84923d7c3b969c82f5672fee50be7326cce0ee6621e65e3a7ce32f0785a6",
+      "match": true
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd.uid",
+      "tested_sha256": "0f7d4009639bdb8e2fa9dffd0d873c18d5a3570669ee21c2149058aa2aef418c",
+      "git_blob_sha256": "0f7d4009639bdb8e2fa9dffd0d873c18d5a3570669ee21c2149058aa2aef418c",
+      "physical_sha256": "0f7d4009639bdb8e2fa9dffd0d873c18d5a3570669ee21c2149058aa2aef418c",
+      "match": true
+    },
+    {
+      "path": "tests/shell/.gitignore",
+      "tested_sha256": "fece5e911fee0763510b0e59e9e2f22c724ce923e49f05b3f45713d9eba7f408",
+      "git_blob_sha256": "fece5e911fee0763510b0e59e9e2f22c724ce923e49f05b3f45713d9eba7f408",
+      "physical_sha256": "fece5e911fee0763510b0e59e9e2f22c724ce923e49f05b3f45713d9eba7f408",
+      "match": true
+    },
+    {
+      "path": "tests/shell/fixture_level.gd",
+      "tested_sha256": "4140dd19883fa4232a1e8f956b25d3bf72cc2171c041bf6c9d62f2205daa42b3",
+      "git_blob_sha256": "4140dd19883fa4232a1e8f956b25d3bf72cc2171c041bf6c9d62f2205daa42b3",
+      "physical_sha256": "4140dd19883fa4232a1e8f956b25d3bf72cc2171c041bf6c9d62f2205daa42b3",
+      "match": true
+    },
+    {
+      "path": "tests/shell/fixture_level.gd.uid",
+      "tested_sha256": "226be2f2b332de6cbda6525e583e66f02d8a9fdc6f89be3d9f612f2a5baf16f0",
+      "git_blob_sha256": "226be2f2b332de6cbda6525e583e66f02d8a9fdc6f89be3d9f612f2a5baf16f0",
+      "physical_sha256": "226be2f2b332de6cbda6525e583e66f02d8a9fdc6f89be3d9f612f2a5baf16f0",
+      "match": true
+    },
+    {
+      "path": "tests/shell/fixture_level.tscn",
+      "tested_sha256": "11728a0f27accdf10b21c7fccbf712f1952b8ea797966b9252a68c9364a3263b",
+      "git_blob_sha256": "11728a0f27accdf10b21c7fccbf712f1952b8ea797966b9252a68c9364a3263b",
+      "physical_sha256": "11728a0f27accdf10b21c7fccbf712f1952b8ea797966b9252a68c9364a3263b",
+      "match": true
+    },
+    {
+      "path": "tests/shell/pause_text/run_pause_text.ps1",
+      "tested_sha256": "b432fe998a08972bc3d1f87b62f47609ec30360711969137ed4f3c9c197a1c96",
+      "git_blob_sha256": "b432fe998a08972bc3d1f87b62f47609ec30360711969137ed4f3c9c197a1c96",
+      "physical_sha256": "b432fe998a08972bc3d1f87b62f47609ec30360711969137ed4f3c9c197a1c96",
+      "match": true
+    },
+    {
+      "path": "tests/shell/pause_text/test_pause_text.gd",
+      "tested_sha256": "fddcb3b4e85e8c2d1a7e526b46dfb48ec3a075d330acb3f63a8ef9336f136683",
+      "git_blob_sha256": "fddcb3b4e85e8c2d1a7e526b46dfb48ec3a075d330acb3f63a8ef9336f136683",
+      "physical_sha256": "fddcb3b4e85e8c2d1a7e526b46dfb48ec3a075d330acb3f63a8ef9336f136683",
+      "match": true
+    },
+    {
+      "path": "tests/shell/pause_text/test_pause_text.gd.uid",
+      "tested_sha256": "702be78f48ee094e2e7645532e2b284b9e9bd9f51754d632783ea7a8a47a484b",
+      "git_blob_sha256": "702be78f48ee094e2e7645532e2b284b9e9bd9f51754d632783ea7a8a47a484b",
+      "physical_sha256": "702be78f48ee094e2e7645532e2b284b9e9bd9f51754d632783ea7a8a47a484b",
+      "match": true
+    },
+    {
+      "path": "tests/shell/run_validation.ps1",
+      "tested_sha256": "e72ade8ff37fee7c938be75ab18907063ef789222fbbe8827fff6bafeaa9948c",
+      "git_blob_sha256": "e72ade8ff37fee7c938be75ab18907063ef789222fbbe8827fff6bafeaa9948c",
+      "physical_sha256": "e72ade8ff37fee7c938be75ab18907063ef789222fbbe8827fff6bafeaa9948c",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_flow.gd",
+      "tested_sha256": "35010dd46cf30ef39d601d006274fd69f73e92eae3dd5afd7e99f11217eb6e2d",
+      "git_blob_sha256": "35010dd46cf30ef39d601d006274fd69f73e92eae3dd5afd7e99f11217eb6e2d",
+      "physical_sha256": "35010dd46cf30ef39d601d006274fd69f73e92eae3dd5afd7e99f11217eb6e2d",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_flow.gd.uid",
+      "tested_sha256": "b545c9c836c8a617dd81d52c268699298f931f49a1c04cf6b8563969b461268f",
+      "git_blob_sha256": "b545c9c836c8a617dd81d52c268699298f931f49a1c04cf6b8563969b461268f",
+      "physical_sha256": "b545c9c836c8a617dd81d52c268699298f931f49a1c04cf6b8563969b461268f",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_goal_boundary.gd",
+      "tested_sha256": "f938368db2c316975523473d92d1e6ef6f980ef4fb60d32476d418da60e3fa08",
+      "git_blob_sha256": "f938368db2c316975523473d92d1e6ef6f980ef4fb60d32476d418da60e3fa08",
+      "physical_sha256": "f938368db2c316975523473d92d1e6ef6f980ef4fb60d32476d418da60e3fa08",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_goal_boundary.gd.uid",
+      "tested_sha256": "04dcbf4ba75e83cd00d6849f115342315740b2d2dea178f02db0d96c0205cbb7",
+      "git_blob_sha256": "04dcbf4ba75e83cd00d6849f115342315740b2d2dea178f02db0d96c0205cbb7",
+      "physical_sha256": "04dcbf4ba75e83cd00d6849f115342315740b2d2dea178f02db0d96c0205cbb7",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_mute_restart.gd",
+      "tested_sha256": "adcdc403e548c3b863f88786a04aa6fd3f0e76f0dea9e0201878281b4047805c",
+      "git_blob_sha256": "adcdc403e548c3b863f88786a04aa6fd3f0e76f0dea9e0201878281b4047805c",
+      "physical_sha256": "adcdc403e548c3b863f88786a04aa6fd3f0e76f0dea9e0201878281b4047805c",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_mute_restart.gd.uid",
+      "tested_sha256": "0617c284788fbda20613abc7b67cae2c9d9c4897e4555c320383ed4a27491a43",
+      "git_blob_sha256": "0617c284788fbda20613abc7b67cae2c9d9c4897e4555c320383ed4a27491a43",
+      "physical_sha256": "0617c284788fbda20613abc7b67cae2c9d9c4897e4555c320383ed4a27491a43",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_p01_legacy_entry.gd",
+      "tested_sha256": "6c86e773556d68bee71bdffbccc618b40c038cb5733211b3c65d966a0e2f64d5",
+      "git_blob_sha256": "6c86e773556d68bee71bdffbccc618b40c038cb5733211b3c65d966a0e2f64d5",
+      "physical_sha256": "6c86e773556d68bee71bdffbccc618b40c038cb5733211b3c65d966a0e2f64d5",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_p01_legacy_entry.gd.uid",
+      "tested_sha256": "46d6990da27a878a16cbee85f622fbb909e6123411133d2ae21de53d2e8ec34b",
+      "git_blob_sha256": "46d6990da27a878a16cbee85f622fbb909e6123411133d2ae21de53d2e8ec34b",
+      "physical_sha256": "46d6990da27a878a16cbee85f622fbb909e6123411133d2ae21de53d2e8ec34b",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_playthrough.gd",
+      "tested_sha256": "283b34c197fc64e7e118794d79bf59b9959798f18da1ab4655b592de82c4c0f0",
+      "git_blob_sha256": "283b34c197fc64e7e118794d79bf59b9959798f18da1ab4655b592de82c4c0f0",
+      "physical_sha256": "283b34c197fc64e7e118794d79bf59b9959798f18da1ab4655b592de82c4c0f0",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_playthrough.gd.uid",
+      "tested_sha256": "dd47ec513447b9e0c60822153f96e37b1f3a5749bffce26078e3b02240fd5cce",
+      "git_blob_sha256": "dd47ec513447b9e0c60822153f96e37b1f3a5749bffce26078e3b02240fd5cce",
+      "physical_sha256": "dd47ec513447b9e0c60822153f96e37b1f3a5749bffce26078e3b02240fd5cce",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_restart.gd",
+      "tested_sha256": "a5073715705be1f7f52666d329204fdcfc4f16cfb65308a90cf8cdbe61bb6aa3",
+      "git_blob_sha256": "a5073715705be1f7f52666d329204fdcfc4f16cfb65308a90cf8cdbe61bb6aa3",
+      "physical_sha256": "a5073715705be1f7f52666d329204fdcfc4f16cfb65308a90cf8cdbe61bb6aa3",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_restart.gd.uid",
+      "tested_sha256": "6b7f1c5e967730da1caa83dd3ad0a12ae4cd156bdb8c504ca32546431e6c46ee",
+      "git_blob_sha256": "6b7f1c5e967730da1caa83dd3ad0a12ae4cd156bdb8c504ca32546431e6c46ee",
+      "physical_sha256": "6b7f1c5e967730da1caa83dd3ad0a12ae4cd156bdb8c504ca32546431e6c46ee",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_save.gd",
+      "tested_sha256": "387337b9227a99128c400ed1b467fc92dc315934308fcd65dbfcc615c8db78de",
+      "git_blob_sha256": "387337b9227a99128c400ed1b467fc92dc315934308fcd65dbfcc615c8db78de",
+      "physical_sha256": "387337b9227a99128c400ed1b467fc92dc315934308fcd65dbfcc615c8db78de",
+      "match": true
+    },
+    {
+      "path": "tests/shell/test_save.gd.uid",
+      "tested_sha256": "1cafe0a187a967927271f633b00b38f3d19c01422da7ca0b409df73f9bd080d5",
+      "git_blob_sha256": "1cafe0a187a967927271f633b00b38f3d19c01422da7ca0b409df73f9bd080d5",
+      "physical_sha256": "1cafe0a187a967927271f633b00b38f3d19c01422da7ca0b409df73f9bd080d5",
+      "match": true
+    }
+  ]
+}

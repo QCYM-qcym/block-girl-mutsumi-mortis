@@ -2,7 +2,7 @@
 
 GAME_FEEL_UI_EXTENSION_READY: **NOT_READY — required shared integration cases pending**.
 
-Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Actual delivery SHA and tested-source binding are recorded after commit in DELIVERY_BINDING.json.
+Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Actual implementation/evidence commit: **8724dbc13c6e1852d2020be2f05eb638162e373d**. Exact source binding: DELIVERY_BINDING.json; subsequent commit contains this binding/receipt metadata only.
 
 ## Requested output
 
@@ -35,6 +35,8 @@ Evidence: evidence/owner07_final_03. WIP execution HEAD2938d6e; original dirty i
 | Three logical viewports/native input |76|0|0 bytes|
 
 Total158 positive checks, failures=[], source_drift=false. Cue tests explicitly PRESENTATION_CONTRACT_UNIT, authoritative_runtime=false; report declares Unit host/legacy bus/DTO doubles and injected/deferred/programmatic faults. These are not legal Runtime or natural Fall proof. Save profile is fresh and located beneath the recorded .godot evidence path. Original saves/QA untouched.
+
+After implementation commit, native `git cat-file blob` byte streams were independently SHA256 checked: all104 tested files equal both committed blobs and actual physical bytes. Frozen approved paths have an empty diff from2938d6e. WIP execution identity is retained; the later source binding does not relabel the original run as a clean-commit execution.
 
 TDD history preserves expected lifecycle/pending/Hint-removal failures; old empty-run false green is retained as a known harness bug, never counted. owner07_final_01 retains a harness aggregate-accounting failure despite five successful stages; final_02 passes after repair. A trailing blank EOF was then removed from motion_row.gd, and final_03 repeats all158 checks against the exact delivery bytes. First parser/import and pre-contract Shell exploration remain in preserved exploratory/local history and do not supply final PASS.
 
