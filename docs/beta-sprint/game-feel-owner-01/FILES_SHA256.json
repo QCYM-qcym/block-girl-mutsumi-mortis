@@ -1,0 +1,192 @@
+{
+  "task": "PFALL_RUNTIME_AND_EDGE_FEEDBACK_01",
+  "owner": "01",
+  "baseline": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "hash": "SHA-256 of exact file bytes",
+  "excludes_self": "docs/beta-sprint/game-feel-owner-01/FILES_SHA256.json",
+  "delivery_file_count_including_self": 37,
+  "shared_contract_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+  "final_verification_sha256": "07a0228d254472e046a4d852989f2290d5e2f10ed85738f5fa1b1a0d2d880270",
+  "files": [
+    {
+      "path": "docs/beta-sprint/game-feel-owner-01/CORE_DELIVERY.md",
+      "sha256": "6cf8594b0362e2508dd0a8cd1f2e8b0ae92c02574bf9f3b827a875bd233118c7",
+      "bytes": 10680
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-01/IMPLEMENTATION_PLAN.md",
+      "sha256": "f7d68ce0e44de2ca8bbf2c33460cc3728aa1983bb82abce24ae115699fda82fe",
+      "bytes": 2841
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-01/RUNTIME_INTERFACE.md",
+      "sha256": "39f52b99c36b904d22baa57722adf53d10e4c4172ac6bb1c52af42ae756df9bd",
+      "bytes": 9647
+    },
+    {
+      "path": "foundation/contracts/contract_records.gd",
+      "sha256": "bb6ab6bf5aa6d045b16a3e3247ffcccf4b4326d0c89b0c6ac77c33277940f5eb",
+      "bytes": 1682
+    },
+    {
+      "path": "foundation/contracts/contract_validation.gd",
+      "sha256": "ceacd741dc78c683f6073876e62473a0e765df4256f12660090fe633c8b9ba4b",
+      "bytes": 26910
+    },
+    {
+      "path": "foundation/contracts/foundation_types.gd",
+      "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e",
+      "bytes": 2293
+    },
+    {
+      "path": "foundation/contracts/state_key.gd",
+      "sha256": "af7a1283a4b4710036f45c4440029513592404841e30a4877d3e1f76ccc7462f",
+      "bytes": 5137
+    },
+    {
+      "path": "foundation/game_feel/fall_permission.gd",
+      "sha256": "cd40f08f2bd3f9b9303178d7aaef78523999063d0fdb209bacd17c4717b3aeed",
+      "bytes": 10474
+    },
+    {
+      "path": "foundation/game_feel/fall_permission.gd.uid",
+      "sha256": "a2f5b1def2556c78cf4d415a0238dc67cbe1a767b9cd3a8f5c4b47076a1e4210",
+      "bytes": 20
+    },
+    {
+      "path": "foundation/game_feel/runtime_facade.gd",
+      "sha256": "5b0a7aeee36cbbfdc226fc01f98dc9c02ff3a5cd006d62bf95ea25164b5c56cb",
+      "bytes": 11692
+    },
+    {
+      "path": "foundation/game_feel/runtime_facade.gd.uid",
+      "sha256": "eb61fde269ba94edd9a838bf820007ad261ee3b0ecd0c445d245ee0053c0ce4e",
+      "bytes": 20
+    },
+    {
+      "path": "foundation/game_feel/schema.gd",
+      "sha256": "a3a23284cfb94d2bfec727c2e3385f82361a2e15b5d760e53226b03dbb79a5e4",
+      "bytes": 1678
+    },
+    {
+      "path": "foundation/game_feel/schema.gd.uid",
+      "sha256": "be0198f363f4eb424ba39edea11f792090c35e2c25ea3caf1848d758cd3327db",
+      "bytes": 20
+    },
+    {
+      "path": "foundation/game_feel/view_contract.gd",
+      "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231",
+      "bytes": 1187
+    },
+    {
+      "path": "foundation/game_feel/view_contract.gd.uid",
+      "sha256": "640bd34e29a8adc2c5d24b823f1c21be97e5563bbf40d840002324a770e6e4a0",
+      "bytes": 20
+    },
+    {
+      "path": "foundation/level/level_codec.gd",
+      "sha256": "6d08335cde342a64a813ff40b541e5a20b678f54871ebc1a9bbf6359e1ff77f7",
+      "bytes": 16738
+    },
+    {
+      "path": "foundation/parity/trace_replayer.gd",
+      "sha256": "2bfbc8bfad283fac9fda22ba6c5b076e8f3f668374e73d7ef631f28ea760969f",
+      "bytes": 17528
+    },
+    {
+      "path": "foundation/rules/puzzle_rule_kernel.gd",
+      "sha256": "14c98da0bbb18504ca428d4b1c50af757466e60db144bb13bda513f8e43a4116",
+      "bytes": 17725
+    },
+    {
+      "path": "foundation/runtime/kernel_port.gd",
+      "sha256": "8ea4da0b46d5fb590c3b64dd7f47474e54474e112d51ba5af125968ba9355b74",
+      "bytes": 3576
+    },
+    {
+      "path": "foundation/runtime/runtime_session.gd",
+      "sha256": "c5cccdf14b2c247ce16c112a13fed902129cd9e499d6807623ac72474020d0ab",
+      "bytes": 8546
+    },
+    {
+      "path": "foundation/solver/action_generator.gd",
+      "sha256": "49c9c39ef2545d4fd0c6b00c9e512e4b331c1a3d6c73459db68161dae891141a",
+      "bytes": 2574
+    },
+    {
+      "path": "foundation/solver/solution_trace.gd",
+      "sha256": "bc24867d0ee464a1eef98586df18a3d9de67910ac5ff00db246e35686cddd046",
+      "bytes": 6597
+    },
+    {
+      "path": "foundation/validation/safety_queries.gd",
+      "sha256": "9d745d6864f2f780aa2ed75b6c676270f3cc2e3feac4d881bf93f13e02e94961",
+      "bytes": 22118
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/fixtures.gd",
+      "sha256": "8d86b4d7592237d667f42807bf0d0579d27da2b943319af8132cd04fa8ef5d81",
+      "bytes": 2651
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/fixtures.gd.uid",
+      "sha256": "f23c742fe0dd602b065dbf5046aea0c5713be2d24a815b31b8252d936214cd9e",
+      "bytes": 19
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/run.ps1",
+      "sha256": "c5971290612f63bac90ac99b2c030314873a947801da270046034650f5477d18",
+      "bytes": 3801
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_contracts.gd",
+      "sha256": "45810bdcc190f8ac45d83a6d27938077496535af331f7a090d010055447fe769",
+      "bytes": 4107
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_contracts.gd.uid",
+      "sha256": "3d9c4cbf8623ffc032829fad8bee48eb805d1451b69d04494b838ab191bd773b",
+      "bytes": 19
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_maps.gd",
+      "sha256": "777a1bc232f3ac1ae1d9c77298631aa3b99469dbeb608cdd4822950f63a0b9ca",
+      "bytes": 5161
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_maps.gd.uid",
+      "sha256": "bb93c60bf5e9b48dc9a6743bdc6bcf184e2629a1fa9d957e53f86e5cab1c1cab",
+      "bytes": 19
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_rules.gd",
+      "sha256": "d6e1ce7cda589e16729d5f6d50331120b49e2cd75068cd8176532163052674bd",
+      "bytes": 7755
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_rules.gd.uid",
+      "sha256": "846719478161b478cb262593092574f595e4d5615e46e417adfa2ce0ff67d197",
+      "bytes": 20
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_runtime.gd",
+      "sha256": "82f8ccfa29651899ab404e0cd4f3d32eeff2b7943d6244a4a8c1f73cdacf410c",
+      "bytes": 11975
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_runtime.gd.uid",
+      "sha256": "0486c7949d8ebdbbb9aa892a6b2685e692773b6bc5442d059ede25ddb6fbf0dd",
+      "bytes": 20
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_solver_replay.gd",
+      "sha256": "0129b47032dd4743909965067643a26221ba133060ccd599d6b31b7f223064e9",
+      "bytes": 4359
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_01/test_solver_replay.gd.uid",
+      "sha256": "fc11a7f503508f59b355d026803e7e255ca1a700afda9096234b7597b5edc9b5",
+      "bytes": 20
+    }
+  ]
+}

@@ -34,6 +34,8 @@ enum PuzzleActionKind {
 	LOCAL_GROUP_ROTATE = 6,
 	MOVE_CELESTIAL = 7,
 }
+## Explicit opt-in ABI; the legacy PuzzleActionKind enumeration is frozen.
+enum GameFeelActionKind { PERSPECTIVE_FALL = 8, SET_CAMERA_QUADRANT = 9 }
 enum CelestialOp { SET_SLOT = 0, NEXT_SLOT = 1, PREVIOUS_SLOT = 2, TOGGLE_BETWEEN = 3 }
 enum ValidationSeverity { ERROR = 0, WARNING = 1, INFO = 2 }
 enum ValidationCode {

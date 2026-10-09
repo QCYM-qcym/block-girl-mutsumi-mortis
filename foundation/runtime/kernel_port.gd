@@ -58,3 +58,7 @@ static func _real(path: String) -> Variant:
 	return script if script != null and script.can_instantiate() else null
 
 
+
+func game_feel_description(level: Dictionary, state: Dictionary, action: Dictionary, result: Dictionary) -> Dictionary:
+	if _kernel == null or not _kernel.has_method("game_feel_description"): return {}
+	return _kernel.game_feel_description(level.duplicate(true),state.duplicate(true),action.duplicate(true),result.duplicate(true)).duplicate(true)

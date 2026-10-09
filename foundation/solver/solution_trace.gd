@@ -7,6 +7,7 @@ const Codec = preload("res://foundation/level/level_codec.gd")
 const Goal = preload("res://foundation/rules/goal_evaluator.gd")
 const Kernel = preload("res://foundation/rules/puzzle_rule_kernel.gd")
 const Rules = preload("res://foundation/rules/rule_records.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const Code = preload("res://foundation/solver/solver_types.gd").AnalysisCode
 
 static func from_graph(level: Dictionary, graph: Dictionary, goal_key: String) -> Dictionary:
@@ -35,7 +36,7 @@ static func _from_graph(level: Dictionary, graph: Dictionary, goal_key: String, 
 	for node in graph.nodes.values():
 		if node.is_goal and node.depth < steps.size():
 			shortest = false
-	var trace := {"trace_version":"solutiontrace.v1","level_hash":graph.level_hash,"rule_version":graph.rule_version,
+	var trace := {"trace_version":Feel.TRACE if Feel.enabled(level) else "solutiontrace.v1","level_hash":graph.level_hash,"rule_version":graph.rule_version,
 		"policy_descriptor":graph.policy_descriptor.duplicate(true),"initial_state":graph.nodes[graph.initial_key].state.duplicate(true),
 		"initial_statekey":graph.initial_key,"steps":steps,"goal_statekey":goal_key,"total_actions":steps.size(),"shortest":shortest}
 	return {"ok":true,"trace":trace,"issues":[]}
@@ -47,7 +48,7 @@ static func validate(level: Dictionary, trace: Dictionary) -> Dictionary:
 	if not Search._fields(trace,{"trace_version":TYPE_STRING,"level_hash":TYPE_STRING,"rule_version":TYPE_STRING,"policy_descriptor":TYPE_DICTIONARY,
 		"initial_state":TYPE_DICTIONARY,"initial_statekey":TYPE_STRING,"steps":TYPE_ARRAY,"goal_statekey":TYPE_STRING,"total_actions":TYPE_INT,"shortest":TYPE_BOOL}):
 		return _bad("trace","Invalid trace schema.")
-	if trace.trace_version != "solutiontrace.v1" or trace.level_hash != level.content_hash or trace.rule_version != level.rule_version:
+	if trace.trace_version != (Feel.TRACE if Feel.enabled(level) else "solutiontrace.v1") or trace.level_hash != level.content_hash or trace.rule_version != level.rule_version:
 		return _bad("trace","Trace version/level mismatch.")
 	if not Search._valid_descriptor(trace.policy_descriptor) or trace.total_actions != trace.steps.size():
 		return _bad("trace","Invalid descriptor or total actions.")

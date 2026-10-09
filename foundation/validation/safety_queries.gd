@@ -30,6 +30,8 @@ static func validate_motion(level: Dictionary, before: Dictionary, after: Dictio
 	if not issues.is_empty():
 		return _result(Status.ERROR,issues)
 	match action.kind:
+		Types.GameFeelActionKind.PERSPECTIVE_FALL:
+			return validate_perspective_motion(level,before,after,action.connection_id)
 		Types.PuzzleActionKind.MOVE:
 			return _roll(level,before,after,action,a,b).result
 		Types.PuzzleActionKind.ROTATE_SURFACE, Types.PuzzleActionKind.ROTATE_INNER, Types.PuzzleActionKind.LOCAL_GROUP_ROTATE:
@@ -341,3 +343,61 @@ static func _error(code: int, path: String, ids: Array[StringName], message: Str
 	return _result(status,issues)
 static func _unproven(ids: Array[StringName], message: String) -> Dictionary:
 	return _error(Code.VALIDATION_INCOMPLETE,"safety.motion",ids,message,Status.UNPROVEN)
+
+
+static func validate_perspective_motion(level: Dictionary, before: Dictionary, after: Dictionary, connection_id: StringName) -> Dictionary:
+	# Constant cube24 pose makes the actor a translating axis-aligned unit cube.
+	# Every path segment is tested exactly; source/target bodies are NOT exempt.
+	var a := _context(level,before)
+	if a.status != Status.SAFE: return _result(a.status,a.issues)
+	var b := _context(level,after)
+	if b.status != Status.SAFE: return _result(b.status,b.issues)
+	if level.get("schema_version") != 2: return _error(Code.INVALID_ACTION,"fall",[],"Not an opt-in level.")
+	var c := _find(level.perspective_falls,"connection_id",connection_id)
+	if c.is_empty(): return _error(Code.INVALID_REFERENCE,"fall.connection_id",[connection_id],"No authored motion profile.")
+	var expected := before.duplicate(true)
+	expected.player = after.player.duplicate(true)
+	if expected != after or before.player.orientation != after.player.orientation or before.player.location.layer != after.player.location.layer or a.snapshot != b.snapshot:
+		return _error(Code.INVALID_ACTION,"fall",[connection_id],"Fall only translates player within the same committed World/pose.")
+	if a.anchor.face_id != c.source_face_id or b.anchor.face_id != c.target_face_id or a.anchor.frame.normal != Vector3i.UP or b.anchor.frame.normal != Vector3i.UP:
+		return _error(Code.INVALID_FACE,"fall",[connection_id],"Profile requires its exact upward TOP anchors.")
+	var points: Array = c.path_points2
+	if _components(points[0]) != a.center or _components(points[-1]) != b.center:
+		return _error(Code.INVALID_ACTION,"fall.path_points2",[connection_id],"Actor-center endpoints do not equal real support poses.")
+	var d := _direction(a.anchor.frame,c.source_edge)
+	var exit_delta: Vector3i = points[1]-points[0]
+	if _dot_i(exit_delta,d) < 2 or _dot_i(exit_delta,a.anchor.frame.normal) != 0:
+		return _error(Code.INVALID_ACTION,"fall.source_edge",[connection_id],"First segment must clear the declared edge on its support plane.")
+	for i in range(1,points.size()):
+		if points[i] == points[i-1]: return _error(Code.INVALID_ACTION,"fall.path_points2",[connection_id],"Zero-length path segment.")
+		for cube in a.snapshot.cubes:
+			if cube.layer == before.player.location.layer and _linear_body_hits(points[i-1],points[i],cube.center2):
+				return _error(Code.PLAYER_UNSAFE,"fall.path_points2",[connection_id,cube.cube_id],"Swept actor open interior intersects a platform/obstacle.",Status.UNSAFE)
+	return _result(Status.SAFE,[])
+
+static func _linear_body_hits(start: Vector3i, finish: Vector3i, obstacle: Vector3i) -> bool:
+	# Minkowski expansion 卤2 in doubled coordinates. Rational interval arithmetic
+	# is exact and deterministic, with no floating epsilon or frame sampling.
+	# DATA bounds path positions to 卤1e6; obstacle coordinates are int32. Thus
+	# cross-products are < 9e15 and fit int64, including extreme obstacle positions.
+	var enter: Array = [0,1]
+	var leave: Array = [1,1]
+	for axis in 3:
+		var delta: int = int(finish[axis])-int(start[axis])
+		var low: int = int(obstacle[axis])-2-int(start[axis])
+		var high: int = int(obstacle[axis])+2-int(start[axis])
+		if delta == 0:
+			if low >= 0 or high <= 0: return false
+			continue
+		var p: Array = [low,delta]
+		var q: Array = [high,delta]
+		if delta < 0: p = [-high,-delta]; q = [-low,-delta]
+		if _fraction_less(enter,p): enter = p
+		if _fraction_less(q,leave): leave = q
+		if not _fraction_less(enter,leave): return false
+	return _fraction_less(enter,leave)
+static func _fraction_less(a: Array, b: Array) -> bool:
+	return int(a[0])*int(b[1]) < int(b[0])*int(a[1])
+
+static func _dot_i(a: Vector3i, b: Vector3i) -> int:
+	return int(a.x)*int(b.x)+int(a.y)*int(b.y)+int(a.z)*int(b.z)

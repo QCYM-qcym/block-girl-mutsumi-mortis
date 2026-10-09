@@ -32,7 +32,7 @@ static func initial_state(level: Dictionary) -> Dictionary:
 	var level_flags: Dictionary = {}
 	for flag in level["flag_definitions"]:
 		level_flags[flag["flag_id"]] = flag["initial_value"]
-	return {
+	var result := {
 		"player": level["spawn"].duplicate(true),
 		"world_orientations": world_orientations,
 		"celestial": {"slot_id": level["celestial"]["initial_slot_id"]},
@@ -40,3 +40,6 @@ static func initial_state(level: Dictionary) -> Dictionary:
 		"mechanism_states": mechanism_states,
 		"level_flags": level_flags,
 	}
+	if level.get("schema_version") == 2:
+		result["camera_quadrant"] = level.camera_initial_quadrant
+	return result

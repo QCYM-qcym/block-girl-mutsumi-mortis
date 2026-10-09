@@ -7,6 +7,7 @@ const Records = preload("res://foundation/contracts/contract_records.gd")
 const Key = preload("res://foundation/contracts/state_key.gd")
 const Goal = preload("res://foundation/rules/goal_evaluator.gd")
 const Codec = preload("res://foundation/level/level_codec.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const Validator = preload("res://foundation/validation/static_validator.gd")
 const Status = Types.ParityStatus
 const Mode = Types.ReplayMode
@@ -61,6 +62,10 @@ func replay(level: Dictionary, trace: Dictionary, options: Dictionary) -> Dictio
 	if not _options.mode in [Mode.LOGICAL_SESSION, Mode.GRAPHICAL] or _options.max_steps < 0 or _options.max_runtime_ms < 0 or _options.step_timeout_ms <= 0:
 		return _end(_result(Status.ERROR, length, 0, null, "", "", null,
 			[_issue(3016, "options", "Invalid replay mode or budget.")]))
+	if Feel.enabled(level) and _options.mode == Mode.GRAPHICAL:
+		# The old prototype tween is NOT an authorized-path Fall presenter.
+		# 00 owns this completion bridge; never pass a ghost/linear fallback.
+		return _end(_result(Status.ERROR,length,0,null,"","",null,[_issue(3016,"dependencies.GameFeelPresenter","CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",{"owner":"00+10A","required":"authorized path sampling + natural completion bridge"})]))
 	if not is_inside_tree():
 		return _end(_result(Status.ERROR, length, 0, null, "", "", null,
 			[_issue(3016, "replay", "Asynchronous replay requires a SceneTree.")]))

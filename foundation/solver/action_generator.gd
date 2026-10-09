@@ -4,8 +4,9 @@ const Data = preload("res://foundation/contracts/contract_validation.gd")
 const Records = preload("res://foundation/contracts/contract_records.gd")
 const Search = preload("res://foundation/solver/search_records.gd")
 const Code = preload("res://foundation/solver/solver_types.gd").AnalysisCode
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const ORDER = [["face_axis"],[],["rotation_delta"],["rotation_delta"],["transition_id"],["mechanism_id"],
-	["group_id","rotation_delta","mechanism_id"],["celestial_op","target_slot_id","alternate_slot_id","mechanism_id"]]
+	["group_id","rotation_delta","mechanism_id"],["celestial_op","target_slot_id","alternate_slot_id","mechanism_id"],["connection_id"],["camera_quadrant"]]
 
 static func generate(level: Dictionary, state: Dictionary) -> Dictionary:
 	var issues := Data.validate_level_shape(level)
@@ -28,6 +29,11 @@ static func generate(level: Dictionary, state: Dictionary) -> Dictionary:
 			actions.append(Records.make_action(5,{"mechanism_id":mechanism.mechanism_id}))
 			if mechanism.action.kind in [6,7]:
 				actions.append(mechanism.action.duplicate(true))
+	if Feel.enabled(level):
+		for connection in level.perspective_falls:
+			actions.append({"kind":8,"connection_id":connection.connection_id})
+		for quadrant in 4:
+			actions.append({"kind":9,"camera_quadrant":quadrant})
 	actions.sort_custom(_less)
 	var unique: Array[Dictionary] = []
 	for action in actions:
