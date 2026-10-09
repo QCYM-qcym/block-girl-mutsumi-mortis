@@ -1,0 +1,3966 @@
+{
+  "mode": "graphical",
+  "case": "rendered_01",
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "dirty": [
+    "?? docs/beta-sprint/game-feel-owner-10b/",
+    "?? game/feel/",
+    "?? tests/beta_sprint/game_feel_owner_10b/"
+  ],
+  "arguments": [
+    "--path",
+    "\"E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\"",
+    "--max-fps",
+    "120",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01"
+  ],
+  "script": "res://tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+  "sources": [
+    {
+      "path": "docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md",
+      "sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de"
+    },
+    {
+      "path": "foundation/orientation/discrete_orientation.gd",
+      "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3"
+    },
+    {
+      "path": "foundation/orientation/discrete_orientation.gd.uid",
+      "sha256": "044f46c1b49be270eebe9f8edd9cd0a7e837c4f1635b316eec803dfdb59e6071"
+    },
+    {
+      "path": "foundation/runtime/input_mapper.gd",
+      "sha256": "e384fdb015805b1dfdbb55742807951360751981610e77619f72286fa5642529"
+    },
+    {
+      "path": "foundation/runtime/input_mapper.gd.uid",
+      "sha256": "86a463ae620001160190b1d018b1fc601bfacbc366e95a2ff65accb4dd04300e"
+    },
+    {
+      "path": "foundation/runtime/kernel_port.gd",
+      "sha256": "ca263b7439848b1975707adecc1634884192994de6f881d5962d69ff0e3e3ea1"
+    },
+    {
+      "path": "foundation/runtime/kernel_port.gd.uid",
+      "sha256": "bbb8bca23bd5b134b6af66326081798ca3d42b1fadb55b117837890dfb5d6554"
+    },
+    {
+      "path": "foundation/runtime/prototype_presenter.gd",
+      "sha256": "86459ca8a8177d0ce0b7e11c868e601a57025877322b4279e5e49c5627827ca5"
+    },
+    {
+      "path": "foundation/runtime/prototype_presenter.gd.uid",
+      "sha256": "fa1390fe3c1fa282d22f50c8824e6e3ef857f9d7dc8b9cf4430e8210747acaad"
+    },
+    {
+      "path": "foundation/runtime/runtime_session.gd",
+      "sha256": "010f40186788a2158987fbc71368e1c667c4dde30abb4fc50067a9883071f6e9"
+    },
+    {
+      "path": "foundation/runtime/runtime_session.gd.uid",
+      "sha256": "5a53015c87718df76d79f7d0a28db871b7ad7fa4a09b484dd9cfd13369647dba"
+    },
+    {
+      "path": "foundation/spatial/mapping_query.gd",
+      "sha256": "b2e08f02e95bd21c7fc804d19a54c4152bd4f21dbf24ae7a3cefbbb6b332803f"
+    },
+    {
+      "path": "foundation/spatial/mapping_query.gd.uid",
+      "sha256": "3bce6d18a7b30377b67cbb31c0778b3c4491b46e5603f2639c7e27f7ee1648bd"
+    },
+    {
+      "path": "foundation/spatial/spatial_validation.gd",
+      "sha256": "c66a518586fe79c76b4868ff35f92a2082c11ba8f9c54d166d6da622d8ce015b"
+    },
+    {
+      "path": "foundation/spatial/spatial_validation.gd.uid",
+      "sha256": "5936c4d1158a8a95a01d98b2b8c133d55fe5d140be6509185de9baeb97c1a314"
+    },
+    {
+      "path": "foundation/spatial/surface_geometry.gd",
+      "sha256": "74678e85217833b1bb30e038ccbaddbd2d057885eeb38d02c766dbf07967c79a"
+    },
+    {
+      "path": "foundation/spatial/surface_geometry.gd.uid",
+      "sha256": "9fda16e12674dd9dd66b3ebd6ee8b9ffaf00e195d6b1af6ce885980f6dcea107"
+    },
+    {
+      "path": "game/feel/animation/edge_recoil/edge_event.gd",
+      "sha256": "346a4b6bec276f5199b63b35a60bc705498f566ea820d62d907671e417b7d45a"
+    },
+    {
+      "path": "game/feel/animation/edge_recoil/edge_event.gd.uid",
+      "sha256": "463e9664c6db0196d397e46b32173293137f8da18f39d103a2a0f5bbc77a33cf"
+    },
+    {
+      "path": "game/feel/animation/edge_recoil/edge_lean.gd",
+      "sha256": "d5579751788c116c6dea0baba8ff85d6c3db72ba1b8d8b4e5a4fb2b98b98dda3"
+    },
+    {
+      "path": "game/feel/animation/edge_recoil/edge_lean.gd.uid",
+      "sha256": "7a20edc38e163d700e5acfe171391c8928e997395c0f9d72534384b45ada821f"
+    },
+    {
+      "path": "game/feel/animation/edge_recoil/recoil_motion.gd",
+      "sha256": "1e1d46c175da921c0ca0be93d5dd7ad03cabb871a54364bdc25af2d05c71a129"
+    },
+    {
+      "path": "game/feel/animation/edge_recoil/recoil_motion.gd.uid",
+      "sha256": "6982856926cd47947ea8ea04a0e77ea1dff43d1439c82f2a3f6352a9e0c2414e"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/fixture.gd",
+      "sha256": "247937036c8f1c44a07722d5e04b3caaad93e4d6c711155990c0cb4d22a55992"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/fixture.gd.uid",
+      "sha256": "f9d0cfc6e9a8e1cee05ce1308a5e2ae62c78344999316b10ec2bc7aece19667f"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/lab_view.gd",
+      "sha256": "ce508e0df582203d842200a1aa6af51e86623937263e48a551fa209fc5b47d45"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/lab_view.gd.uid",
+      "sha256": "855e541cbf36f0c81b31fa010f274545b1e8a6fcf4bb9b2ea53205d9ac129470"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/run.ps1",
+      "sha256": "e926f369e5cdb0ad01861a21a6343b96ca2b76921b1162a10dcc34ffea59f889"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+      "sha256": "b2d6fb1a2e8e7831689ac75cf19bbfa16b6b74c2b914394407b6b85c678585ae"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_graphical.gd.uid",
+      "sha256": "b7f7430cf753edef92cedf5ff2145fe8ac22fffd80cd9534304ca293d49c1d6a"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_unit.gd",
+      "sha256": "37104aa332bb46ee972751b9fe379fce612b73d0a6c7b83511238c42407ac1a0"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_unit.gd.uid",
+      "sha256": "97094ba68fe6116598ce8a13da89a218cf0b451dae11a070261c522d55cc1c5f"
+    }
+  ],
+  "engine_path": "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "input": "DTO sampling (Unit); graphical native mapper with synthetic classified event",
+  "started": "2026-10-10T00:25:38.7077580+08:00",
+  "pid": 50548,
+  "status": "PASS",
+  "profile_environment": {
+    "XDG_CONFIG_HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\xdg_config_home",
+    "USERPROFILE": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\userprofile",
+    "XDG_DATA_HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\xdg_data_home",
+    "LOCALAPPDATA": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\localappdata",
+    "HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\home",
+    "XDG_CACHE_HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\xdg_cache_home",
+    "APPDATA": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01\\profile\\appdata"
+  },
+  "exit_code": 0,
+  "finished": "2026-10-10T00:25:49.9972419+08:00",
+  "stderr": null,
+  "stdout_tail": [
+    "Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org",
+    "D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 5060 Ti",
+    "",
+    "EDGE_RENDERED_UNIT checks=83 failures=0 captures=43 natural_samples=313"
+  ],
+  "report": {
+    "authoritative_runtime": false,
+    "checks": 83,
+    "cues": [
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 1,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.158333333333333,
+        "identity": {
+          "attempt_id": 1,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.443757555555556,
+        "identity": {
+          "attempt_id": 1,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0537366666666668,
+        "identity": {
+          "attempt_id": 39,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.139014666666667,
+        "identity": {
+          "attempt_id": 39,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.458695,
+        "identity": {
+          "attempt_id": 39,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.052842,
+        "identity": {
+          "attempt_id": 79,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.132118,
+        "identity": {
+          "attempt_id": 79,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.443724481481482,
+        "identity": {
+          "attempt_id": 79,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.05208,
+        "identity": {
+          "attempt_id": 119,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.137629333333333,
+        "identity": {
+          "attempt_id": 119,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.454296,
+        "identity": {
+          "attempt_id": 119,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.052925,
+        "identity": {
+          "attempt_id": 159,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133545,
+        "identity": {
+          "attempt_id": 159,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.451371555573616,
+        "identity": {
+          "attempt_id": 159,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0535968888888889,
+        "identity": {
+          "attempt_id": 199,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.138156333333333,
+        "identity": {
+          "attempt_id": 199,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.450192333333334,
+        "identity": {
+          "attempt_id": 199,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.050397,
+        "identity": {
+          "attempt_id": 239,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.130531,
+        "identity": {
+          "attempt_id": 239,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.453413,
+        "identity": {
+          "attempt_id": 239,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.051872,
+        "identity": {
+          "attempt_id": 279,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133512,
+        "identity": {
+          "attempt_id": 279,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.451222333333333,
+        "identity": {
+          "attempt_id": 279,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 316,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0844626666666667,
+        "identity": {
+          "attempt_id": 322,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.116666666666667,
+        "identity": {
+          "attempt_id": 330,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133333333333333,
+        "identity": {
+          "attempt_id": 330,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.451548333333333,
+        "identity": {
+          "attempt_id": 330,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 331,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.135785333333333,
+        "identity": {
+          "attempt_id": 331,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 340,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 344,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.144509333333333,
+        "identity": {
+          "attempt_id": 344,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 355,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.144391555555556,
+        "identity": {
+          "attempt_id": 355,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      }
+    ],
+    "display": "Windows",
+    "doubles": [
+      "synthetic_game_feel_event"
+    ],
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "failures": [],
+    "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+    "formal_runtime_cases": {
+      "checks": 0,
+      "reason": "01 event facade and 00 sole-writer host not delivered on contract baseline",
+      "status": "case_pending"
+    },
+    "inputs": [
+      {
+        "attempt": 0,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 38,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 38,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "attempt": 78,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "attempt": 78,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 118,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 118,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "attempt": 158,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "attempt": 158,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "attempt": 198,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "attempt": 198,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "attempt": 238,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "attempt": 238,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "attempt": 278,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "attempt": 278,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "attempt": 315,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "attempt": 315,
+        "key": 68,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 321,
+        "key": 65,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 329,
+        "key": 65,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 330,
+        "key": 68,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 330,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "attempt": 339,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 343,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 343,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 354,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 354,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 371,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      }
+    ],
+    "natural_samples": [
+      {
+        "angle": 0.0507544353604317,
+        "attempt": 1,
+        "elapsed": 0.0416666666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0755319893360138,
+        "attempt": 1,
+        "elapsed": 0.0527777777777778,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.101866528391838,
+        "attempt": 1,
+        "elapsed": 0.0638189999999999,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.12194262444973,
+        "attempt": 1,
+        "elapsed": 0.0721559999999999,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.193925455212593,
+        "attempt": 1,
+        "elapsed": 0.108333333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.20815446972847,
+        "attempt": 1,
+        "elapsed": 0.12403,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 1,
+        "elapsed": 0.129864,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 1,
+        "elapsed": 0.158333333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.205198332667351,
+        "attempt": 1,
+        "elapsed": 0.176801,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.191889211535454,
+        "attempt": 1,
+        "elapsed": 0.182619,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.189568117260933,
+        "attempt": 1,
+        "elapsed": 0.183660749957949,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.171675056219101,
+        "attempt": 1,
+        "elapsed": 0.191994083291282,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.154393911361694,
+        "attempt": 1,
+        "elapsed": 0.200611333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0674744099378586,
+        "attempt": 1,
+        "elapsed": 0.258333333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0598241575062275,
+        "attempt": 1,
+        "elapsed": 0.265476666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0505567342042923,
+        "attempt": 1,
+        "elapsed": 0.275,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.038916353136301,
+        "attempt": 1,
+        "elapsed": 0.288784,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0305090844631195,
+        "attempt": 1,
+        "elapsed": 0.30057,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0223012622445822,
+        "attempt": 1,
+        "elapsed": 0.3144,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0145504856482148,
+        "attempt": 1,
+        "elapsed": 0.331066666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00884315650910139,
+        "attempt": 1,
+        "elapsed": 0.347733333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00507436878979206,
+        "attempt": 1,
+        "elapsed": 0.363202,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00248975586146116,
+        "attempt": 1,
+        "elapsed": 0.379868666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0009765625,
+        "attempt": 1,
+        "elapsed": 0.396535333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 1,
+        "elapsed": 0.413202,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 1,
+        "elapsed": 0.428479777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0146809862926602,
+        "attempt": 39,
+        "elapsed": 0.0210433333333332,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0179406590759754,
+        "attempt": 39,
+        "elapsed": 0.0234173333333332,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0272478796541691,
+        "attempt": 39,
+        "elapsed": 0.0293753333333332,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0426409319043159,
+        "attempt": 39,
+        "elapsed": 0.0377083333333332,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.060205589979887,
+        "attempt": 39,
+        "elapsed": 0.0460416666666666,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0829591676592827,
+        "attempt": 39,
+        "elapsed": 0.0559369999999999,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.133025377988815,
+        "attempt": 39,
+        "elapsed": 0.0768439999999999,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209380939602852,
+        "attempt": 39,
+        "elapsed": 0.128739333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.139014666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.166792444444444,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.166965944441335,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.172221333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.192385077476501,
+        "attempt": 39,
+        "elapsed": 0.182397333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.180065155029297,
+        "attempt": 39,
+        "elapsed": 0.188018,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.139249086380005,
+        "attempt": 39,
+        "elapsed": 0.20871,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0586080513894558,
+        "attempt": 39,
+        "elapsed": 0.266666666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.056444313377142,
+        "attempt": 39,
+        "elapsed": 0.268827333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0504055842757225,
+        "attempt": 39,
+        "elapsed": 0.275161333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0431412532925606,
+        "attempt": 39,
+        "elapsed": 0.283495333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0364224873483181,
+        "attempt": 39,
+        "elapsed": 0.292085,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0270723085850477,
+        "attempt": 39,
+        "elapsed": 0.306012,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0163410622626543,
+        "attempt": 39,
+        "elapsed": 0.32678,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0109836291521788,
+        "attempt": 39,
+        "elapsed": 0.340779,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.00693978415802121,
+        "attempt": 39,
+        "elapsed": 0.354816,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.00292968773283064,
+        "attempt": 39,
+        "elapsed": 0.375914,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.001381067908369,
+        "attempt": 39,
+        "elapsed": 0.390199714285714,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 39,
+        "elapsed": 0.410159,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 39,
+        "elapsed": 0.424973814814815,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 39,
+        "elapsed": 0.439973814814815,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0151288770139217,
+        "attempt": 79,
+        "elapsed": 0.021383,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0174420196563005,
+        "attempt": 79,
+        "elapsed": 0.023071,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0278279725462198,
+        "attempt": 79,
+        "elapsed": 0.029716,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0433232560753822,
+        "attempt": 79,
+        "elapsed": 0.03805,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0609612949192524,
+        "attempt": 79,
+        "elapsed": 0.0463833333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0914613679051399,
+        "attempt": 79,
+        "elapsed": 0.0595006666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.141251564025879,
+        "attempt": 79,
+        "elapsed": 0.0804056666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 79,
+        "elapsed": 0.132118,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 79,
+        "elapsed": 0.142016333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 79,
+        "elapsed": 0.170263,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 79,
+        "elapsed": 0.170490249998716,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 79,
+        "elapsed": 0.174163,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.184439212083817,
+        "attempt": 79,
+        "elapsed": 0.185994,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.172532230615616,
+        "attempt": 79,
+        "elapsed": 0.191581666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.132702142000198,
+        "attempt": 79,
+        "elapsed": 0.212392666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0550369024276733,
+        "attempt": 79,
+        "elapsed": 0.270263,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0513569004833698,
+        "attempt": 79,
+        "elapsed": 0.274132,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0453507080674171,
+        "attempt": 79,
+        "elapsed": 0.280869,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0385902673006058,
+        "attempt": 79,
+        "elapsed": 0.289202,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0325434878468513,
+        "attempt": 79,
+        "elapsed": 0.297535333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0249168612062931,
+        "attempt": 79,
+        "elapsed": 0.309667666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0147458035498858,
+        "attempt": 79,
+        "elapsed": 0.330588666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00974118988960981,
+        "attempt": 79,
+        "elapsed": 0.344691666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00605941331014037,
+        "attempt": 79,
+        "elapsed": 0.358572666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00258374167606235,
+        "attempt": 79,
+        "elapsed": 0.379090666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00119603995699435,
+        "attempt": 79,
+        "elapsed": 0.393376380952381,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 79,
+        "elapsed": 0.413909666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 79,
+        "elapsed": 0.428724481481482,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0227353703230619,
+        "attempt": 119,
+        "elapsed": 0.026609,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0252401046454906,
+        "attempt": 119,
+        "elapsed": 0.028167,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0372573882341385,
+        "attempt": 119,
+        "elapsed": 0.03494,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0541722737252712,
+        "attempt": 119,
+        "elapsed": 0.043274,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0728119760751724,
+        "attempt": 119,
+        "elapsed": 0.0516073333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0929717868566513,
+        "attempt": 119,
+        "elapsed": 0.0601296666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.1432144343853,
+        "attempt": 119,
+        "elapsed": 0.0812686666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 119,
+        "elapsed": 0.137629333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 119,
+        "elapsed": 0.162629333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 119,
+        "elapsed": 0.162796958329144,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 119,
+        "elapsed": 0.170962666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.199417397379875,
+        "attempt": 119,
+        "elapsed": 0.179296,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.177339822053909,
+        "attempt": 119,
+        "elapsed": 0.189296,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.147374585270882,
+        "attempt": 119,
+        "elapsed": 0.204296,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.080936573445797,
+        "attempt": 119,
+        "elapsed": 0.246976666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0617309361696243,
+        "attempt": 119,
+        "elapsed": 0.263643333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0533874966204166,
+        "attempt": 119,
+        "elapsed": 0.271975333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0457589700818062,
+        "attempt": 119,
+        "elapsed": 0.280391333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0360606461763382,
+        "attempt": 119,
+        "elapsed": 0.292571333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0263854563236237,
+        "attempt": 119,
+        "elapsed": 0.307154666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0185032840818167,
+        "attempt": 119,
+        "elapsed": 0.321969481481482,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0120794298127294,
+        "attempt": 119,
+        "elapsed": 0.337629333333334,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00707587134093046,
+        "attempt": 119,
+        "elapsed": 0.354296,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00371863972395658,
+        "attempt": 119,
+        "elapsed": 0.370962666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00154408090747893,
+        "attempt": 119,
+        "elapsed": 0.387629333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 119,
+        "elapsed": 0.404296,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 119,
+        "elapsed": 0.420962666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 119,
+        "elapsed": 0.437629333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0158221628516912,
+        "attempt": 159,
+        "elapsed": 0.0219,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0181914065033197,
+        "attempt": 159,
+        "elapsed": 0.023592,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0287135094404221,
+        "attempt": 159,
+        "elapsed": 0.030231,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0443512573838234,
+        "attempt": 159,
+        "elapsed": 0.038562,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0621006600558758,
+        "attempt": 159,
+        "elapsed": 0.0468953333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0847846865653992,
+        "attempt": 159,
+        "elapsed": 0.0567056666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.134379833936691,
+        "attempt": 159,
+        "elapsed": 0.0774246666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 159,
+        "elapsed": 0.133545,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 159,
+        "elapsed": 0.15433,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 159,
+        "elapsed": 0.15555,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 159,
+        "elapsed": 0.162663,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 159,
+        "elapsed": 0.170996,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.19934193789959,
+        "attempt": 159,
+        "elapsed": 0.179329333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.178831860423088,
+        "attempt": 159,
+        "elapsed": 0.188594666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.138087600469589,
+        "attempt": 159,
+        "elapsed": 0.209354666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0579822175204754,
+        "attempt": 159,
+        "elapsed": 0.267285333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0428139232099056,
+        "attempt": 159,
+        "elapsed": 0.283894333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0375252105295658,
+        "attempt": 159,
+        "elapsed": 0.290607333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0367418564856052,
+        "attempt": 159,
+        "elapsed": 0.291649333351394,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0282193422317505,
+        "attempt": 159,
+        "elapsed": 0.304149333351394,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0190492998808622,
+        "attempt": 159,
+        "elapsed": 0.32081600001806,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0121188405901194,
+        "attempt": 159,
+        "elapsed": 0.337482666684727,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.00710948603227735,
+        "attempt": 159,
+        "elapsed": 0.354149333351394,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.00371863972395658,
+        "attempt": 159,
+        "elapsed": 0.37081600001806,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.00169145595282316,
+        "attempt": 159,
+        "elapsed": 0.387482666684727,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 159,
+        "elapsed": 0.404149333351394,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 159,
+        "elapsed": 0.42081600001806,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 159,
+        "elapsed": 0.436093777795838,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0120200701057911,
+        "attempt": 199,
+        "elapsed": 0.018917,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0137934321537614,
+        "attempt": 199,
+        "elapsed": 0.020359,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0237508937716484,
+        "attempt": 199,
+        "elapsed": 0.027248,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0384788922965527,
+        "attempt": 199,
+        "elapsed": 0.03558,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0555500835180283,
+        "attempt": 199,
+        "elapsed": 0.0439133333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0831458196043968,
+        "attempt": 199,
+        "elapsed": 0.0560156666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.133414015173912,
+        "attempt": 199,
+        "elapsed": 0.0770106666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209320470690727,
+        "attempt": 199,
+        "elapsed": 0.1282,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 199,
+        "elapsed": 0.138156333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 199,
+        "elapsed": 0.166859,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 199,
+        "elapsed": 0.167053374995772,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 199,
+        "elapsed": 0.172721,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.191938981413841,
+        "attempt": 199,
+        "elapsed": 0.182597,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.179605811834335,
+        "attempt": 199,
+        "elapsed": 0.188232666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.138622224330902,
+        "attempt": 199,
+        "elapsed": 0.209057666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0584165155887604,
+        "attempt": 199,
+        "elapsed": 0.266859,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.04757284745574,
+        "attempt": 199,
+        "elapsed": 0.278309333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0419588759541512,
+        "attempt": 199,
+        "elapsed": 0.284939333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0411208495497704,
+        "attempt": 199,
+        "elapsed": 0.285980958377642,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0304229967296124,
+        "attempt": 199,
+        "elapsed": 0.300692,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0207620970904827,
+        "attempt": 199,
+        "elapsed": 0.317358666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0133899757638574,
+        "attempt": 199,
+        "elapsed": 0.334025333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.00802328530699015,
+        "attempt": 199,
+        "elapsed": 0.350692,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.00431238394230604,
+        "attempt": 199,
+        "elapsed": 0.367358666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.001953125,
+        "attempt": 199,
+        "elapsed": 0.384025333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 199,
+        "elapsed": 0.400692,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 199,
+        "elapsed": 0.417358666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 199,
+        "elapsed": 0.433525666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0175102334469557,
+        "attempt": 239,
+        "elapsed": 0.02312,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0198341589421034,
+        "attempt": 239,
+        "elapsed": 0.024715,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0308432970196009,
+        "attempt": 239,
+        "elapsed": 0.031451,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0468353629112244,
+        "attempt": 239,
+        "elapsed": 0.039783,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0648358538746834,
+        "attempt": 239,
+        "elapsed": 0.0481163333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0908701196312904,
+        "attempt": 239,
+        "elapsed": 0.0592536666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.140955626964569,
+        "attempt": 239,
+        "elapsed": 0.0802756666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 239,
+        "elapsed": 0.130531,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 239,
+        "elapsed": 0.140565333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 239,
+        "elapsed": 0.170079666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 239,
+        "elapsed": 0.170237541660996,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 239,
+        "elapsed": 0.173449,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.184365406632423,
+        "attempt": 239,
+        "elapsed": 0.186028,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.172529473900795,
+        "attempt": 239,
+        "elapsed": 0.191583555555556,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.132985904812813,
+        "attempt": 239,
+        "elapsed": 0.212230666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0552142523229122,
+        "attempt": 239,
+        "elapsed": 0.270079666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0449015833437443,
+        "attempt": 239,
+        "elapsed": 0.281393333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0394518300890923,
+        "attempt": 239,
+        "elapsed": 0.288093333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0386458337306976,
+        "attempt": 239,
+        "elapsed": 0.289134833347586,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0283962171524763,
+        "attempt": 239,
+        "elapsed": 0.303866,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0191864818334579,
+        "attempt": 239,
+        "elapsed": 0.320532666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0122363120317459,
+        "attempt": 239,
+        "elapsed": 0.337199333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.00717624323442578,
+        "attempt": 239,
+        "elapsed": 0.353866,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.00378221087157726,
+        "attempt": 239,
+        "elapsed": 0.370532666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.00169145595282316,
+        "attempt": 239,
+        "elapsed": 0.387199333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 239,
+        "elapsed": 0.403866,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 239,
+        "elapsed": 0.420532666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 239,
+        "elapsed": 0.436746333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0180334448814392,
+        "attempt": 279,
+        "elapsed": 0.023483,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0204962734133005,
+        "attempt": 279,
+        "elapsed": 0.025162,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0314859487116337,
+        "attempt": 279,
+        "elapsed": 0.031813,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.047912459820509,
+        "attempt": 279,
+        "elapsed": 0.040304,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0660131350159645,
+        "attempt": 279,
+        "elapsed": 0.0486373333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0874788463115692,
+        "attempt": 279,
+        "elapsed": 0.0578366666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.137193083763123,
+        "attempt": 279,
+        "elapsed": 0.0786376666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 279,
+        "elapsed": 0.133512,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 279,
+        "elapsed": 0.143382333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 279,
+        "elapsed": 0.171160111111111,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 279,
+        "elapsed": 0.171349986116273,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.203691348433495,
+        "attempt": 279,
+        "elapsed": 0.177447,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.184907227754593,
+        "attempt": 279,
+        "elapsed": 0.185779,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.167313441634178,
+        "attempt": 279,
+        "elapsed": 0.194112333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.135483250021935,
+        "attempt": 279,
+        "elapsed": 0.210813666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0566930137574673,
+        "attempt": 279,
+        "elapsed": 0.268577333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0377216674387455,
+        "attempt": 279,
+        "elapsed": 0.290348,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0216502994298935,
+        "attempt": 279,
+        "elapsed": 0.315630333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0139481304213405,
+        "attempt": 279,
+        "elapsed": 0.332579333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.00834375992417336,
+        "attempt": 279,
+        "elapsed": 0.349528333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.00447517260909081,
+        "attempt": 279,
+        "elapsed": 0.366477333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.00207160203717649,
+        "attempt": 279,
+        "elapsed": 0.383426333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 279,
+        "elapsed": 0.400375333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 279,
+        "elapsed": 0.417324333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 279,
+        "elapsed": 0.434273333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.00974118988960981,
+        "attempt": 316,
+        "elapsed": 0.016949,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0352920815348625,
+        "attempt": 316,
+        "elapsed": 0.033898,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0710583031177521,
+        "attempt": 316,
+        "elapsed": 0.050847,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 316,
+        "elapsed": 0.067796,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.150348320603371,
+        "attempt": 316,
+        "elapsed": 0.0844626666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 322,
+        "elapsed": 0.0166666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 322,
+        "elapsed": 0.0333333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 322,
+        "elapsed": 0.05,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 322,
+        "elapsed": 0.0666666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 322,
+        "elapsed": 0.0833333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 322,
+        "elapsed": 0.1,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 322,
+        "elapsed": 0.116666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 330,
+        "elapsed": 0.0166666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 330,
+        "elapsed": 0.0333333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 330,
+        "elapsed": 0.05,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 330,
+        "elapsed": 0.0666666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 330,
+        "elapsed": 0.0833333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 330,
+        "elapsed": 0.1,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 330,
+        "elapsed": 0.116666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 330,
+        "elapsed": 0.133333333333333,
+        "orientation": 7,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 330,
+        "elapsed": 0.15,
+        "orientation": 7,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 330,
+        "elapsed": 0.166666666666667,
+        "orientation": 7,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.190296024084091,
+        "attempt": 330,
+        "elapsed": 0.183333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.15557961165905,
+        "attempt": 330,
+        "elapsed": 0.2,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.125367179512978,
+        "attempt": 330,
+        "elapsed": 0.216666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0993415489792824,
+        "attempt": 330,
+        "elapsed": 0.233333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0771933943033218,
+        "attempt": 330,
+        "elapsed": 0.25,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0586080513894558,
+        "attempt": 330,
+        "elapsed": 0.266666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0432736948132515,
+        "attempt": 330,
+        "elapsed": 0.283333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0308819245547056,
+        "attempt": 330,
+        "elapsed": 0.3,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0211150869727135,
+        "attempt": 330,
+        "elapsed": 0.316666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0136544518172741,
+        "attempt": 330,
+        "elapsed": 0.333333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00819964241236448,
+        "attempt": 330,
+        "elapsed": 0.35,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00442157546058297,
+        "attempt": 330,
+        "elapsed": 0.366803333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.001953125,
+        "attempt": 330,
+        "elapsed": 0.383752333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 330,
+        "elapsed": 0.400701333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 330,
+        "elapsed": 0.417650333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 330,
+        "elapsed": 0.434599333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00974118988960981,
+        "attempt": 331,
+        "elapsed": 0.016949,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0352920815348625,
+        "attempt": 331,
+        "elapsed": 0.033898,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0710583031177521,
+        "attempt": 331,
+        "elapsed": 0.050847,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.111473113298416,
+        "attempt": 331,
+        "elapsed": 0.067796,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.150348320603371,
+        "attempt": 331,
+        "elapsed": 0.0844626666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.185210421681404,
+        "attempt": 331,
+        "elapsed": 0.102452,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.205283284187317,
+        "attempt": 331,
+        "elapsed": 0.119118666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 331,
+        "elapsed": 0.135785333333333,
+        "orientation": 19,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0338224731385708,
+        "attempt": 340,
+        "elapsed": 0.0331013333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.068582110106945,
+        "attempt": 340,
+        "elapsed": 0.049768,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.088557280600071,
+        "attempt": 340,
+        "elapsed": 0.058288,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00658727716654539,
+        "attempt": 344,
+        "elapsed": 0.013823,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0249264296144247,
+        "attempt": 344,
+        "elapsed": 0.027979,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0571371093392372,
+        "attempt": 344,
+        "elapsed": 0.0446456666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0958168655633926,
+        "attempt": 344,
+        "elapsed": 0.0613123333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.135668039321899,
+        "attempt": 344,
+        "elapsed": 0.077979,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.171393945813179,
+        "attempt": 344,
+        "elapsed": 0.0946456666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.197536781430244,
+        "attempt": 344,
+        "elapsed": 0.111176,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209267973899841,
+        "attempt": 344,
+        "elapsed": 0.127842666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 344,
+        "elapsed": 0.144509333333333,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 344,
+        "elapsed": 0.159787111111111,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00799351371824741,
+        "attempt": 355,
+        "elapsed": 0.0152777777777778,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0292727127671242,
+        "attempt": 355,
+        "elapsed": 0.0305555555555556,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0628297924995422,
+        "attempt": 355,
+        "elapsed": 0.0472222222222222,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0986814871430397,
+        "attempt": 355,
+        "elapsed": 0.0625,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.138413801789284,
+        "attempt": 355,
+        "elapsed": 0.0791666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.173642471432686,
+        "attempt": 355,
+        "elapsed": 0.0958333333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.197459384799004,
+        "attempt": 355,
+        "elapsed": 0.111111111111111,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209257706999779,
+        "attempt": 355,
+        "elapsed": 0.127777777777778,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 355,
+        "elapsed": 0.144391555555556,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 355,
+        "elapsed": 0.161058222222222,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.203045442700386,
+        "attempt": 355,
+        "elapsed": 0.177724888888889,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.169109955430031,
+        "attempt": 355,
+        "elapsed": 0.193235555555556,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.137106105685234,
+        "attempt": 355,
+        "elapsed": 0.209902222222222,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.109419159591198,
+        "attempt": 355,
+        "elapsed": 0.226568888888889,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0857357382774353,
+        "attempt": 355,
+        "elapsed": 0.243235555555556,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0657416507601738,
+        "attempt": 355,
+        "elapsed": 0.259902222222222,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      }
+    ],
+    "pid": 50548,
+    "renderer": "forward_plus",
+    "shots": [
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q0_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.12194262444973,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q0_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q0_blocked.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.154393911361694,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q0_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q0_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q1_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.133025377988815,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q1_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q1_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.139249086380005,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q1_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q1_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q2_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.141251564025879,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q2_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q2_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.132702142000198,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q2_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q2_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q3_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.1432144343853,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q3_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q3_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.147374585270882,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q3_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w0_q3_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q0_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.134379833936691,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q0_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q0_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.138087600469589,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q0_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q0_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q1_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.133414015173912,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q1_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q1_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.138622224330902,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q1_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q1_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q2_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.140955626964569,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q2_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q2_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.132985904812813,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q2_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q2_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q3_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.137193083763123,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q3_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q3_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.135483250021935,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q3_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/w1_q3_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.203281730413437,
+        "camera": 0,
+        "formal_orientation": 7,
+        "name": "opposite",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/opposite.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 19,
+        "name": "preempted",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/preempted.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 12,
+        "name": "reset",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\rendered_01/reset.png",
+        "phase": "IDLE",
+        "world": 0
+      }
+    ],
+    "user_data_dir": "E:/godot/worktrees/block-girl-game-feel-edge-animation/docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/profile/appdata/Godot/app_userdata/方块少女-若叶睦"
+  },
+  "source_drift": []
+}

@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "status": "EDGE_LEAN_RECOIL_READY_OWNER_LOCAL",
+  "code_commit": "746ffb3531cb5c9f4c7ebf74f4cfa905f71183d8",
+  "contract_commit": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "branch": "feat/edge-recoil-animation",
+  "sources": [
+    {
+      "git_blob": "37761ce976d6c90a8e02c0643207ce756129b2fb",
+      "path": "game/feel/animation/edge_recoil/edge_admission.gd",
+      "sha256": "16d7e9ff103a87275e32f7e25ea440c5fa709343d4c276b1cd72023a98a61271"
+    },
+    {
+      "git_blob": "cbbb34ef5fbeabfccce18673bbdac6417070f50e",
+      "path": "game/feel/animation/edge_recoil/edge_event.gd",
+      "sha256": "0c7d0299be311763a8ad67f621ab1a04be18dd21708ba527c2d9774da6eea478"
+    },
+    {
+      "git_blob": "44ae4a932341d0f0f24b01845addba12297ea94a",
+      "path": "game/feel/animation/edge_recoil/edge_event.gd.uid",
+      "sha256": "463e9664c6db0196d397e46b32173293137f8da18f39d103a2a0f5bbc77a33cf"
+    },
+    {
+      "git_blob": "d2964c3b8fa46da3c0882f79a111f74624490e16",
+      "path": "game/feel/animation/edge_recoil/edge_lean.gd",
+      "sha256": "7a4d22c48b03f818c7e14eea6890674c20389cb3f2f04443cffaf87a25fedc7b"
+    },
+    {
+      "git_blob": "ec8afdb21c6a87f816eaa5920e1e3763ddfc5cc2",
+      "path": "game/feel/animation/edge_recoil/edge_lean.gd.uid",
+      "sha256": "7a20edc38e163d700e5acfe171391c8928e997395c0f9d72534384b45ada821f"
+    },
+    {
+      "git_blob": "984f876bda32f0ec4d0359487277e6f11026f54d",
+      "path": "game/feel/animation/edge_recoil/recoil_motion.gd",
+      "sha256": "75a4004446e040b4fac635084496de5604bbe0012cf93e9a5adbef0194a2e5db"
+    },
+    {
+      "git_blob": "49111d8eb605a71e4e47bb30d9f7d364720c2b6b",
+      "path": "game/feel/animation/edge_recoil/recoil_motion.gd.uid",
+      "sha256": "6982856926cd47947ea8ea04a0e77ea1dff43d1439c82f2a3f6352a9e0c2414e"
+    },
+    {
+      "git_blob": "ff1ce613e743206b66f5ab8985fa48b7b1d66906",
+      "path": "tests/beta_sprint/game_feel_owner_10b/fixture.gd",
+      "sha256": "247937036c8f1c44a07722d5e04b3caaad93e4d6c711155990c0cb4d22a55992"
+    },
+    {
+      "git_blob": "2a7ad52f97b0d88b788acbcbe9d3c395e4ca1706",
+      "path": "tests/beta_sprint/game_feel_owner_10b/fixture.gd.uid",
+      "sha256": "f9d0cfc6e9a8e1cee05ce1308a5e2ae62c78344999316b10ec2bc7aece19667f"
+    },
+    {
+      "git_blob": "3266b0f0ff7367c778530c792d2590353025735b",
+      "path": "tests/beta_sprint/game_feel_owner_10b/lab_view.gd",
+      "sha256": "d86e37f28f20890bca50a849d44fa16747e7c304e1e17ff8fe97a69b36cbe825"
+    },
+    {
+      "git_blob": "3ffbef1700f8bb79e6a3f772796c1d98c2e0687e",
+      "path": "tests/beta_sprint/game_feel_owner_10b/lab_view.gd.uid",
+      "sha256": "855e541cbf36f0c81b31fa010f274545b1e8a6fcf4bb9b2ea53205d9ac129470"
+    },
+    {
+      "git_blob": "0ed4ee5c3b0e00dbd5196333f3ace4a580468413",
+      "path": "tests/beta_sprint/game_feel_owner_10b/run.ps1",
+      "sha256": "0e3d46f8013cff33769db840feb3af81f8335b7ea48e265c7c77a776048528a7"
+    },
+    {
+      "git_blob": "cb2ea03fe106886b67a9b938bd515382a31958fb",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+      "sha256": "0c02d1f35b45a147a8c73b5df9590ffcf3ccf1834fbeddfe74e0cbffdc3c4af1"
+    },
+    {
+      "git_blob": "6bed1a8116c8e9e79e95219c9352973930effd84",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_graphical.gd.uid",
+      "sha256": "b7f7430cf753edef92cedf5ff2145fe8ac22fffd80cd9534304ca293d49c1d6a"
+    },
+    {
+      "git_blob": "c60a646b5f5eac109076feca8f3f00067afb32ed",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_unit.gd",
+      "sha256": "8b179d232bda146b09ad5c7038ad67a4b815dc84cc83beb1d5d337bae8fef138"
+    },
+    {
+      "git_blob": "8de1c9defff9cd7a8f37c00468bfc9514b9dc9ce",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_unit.gd.uid",
+      "sha256": "97094ba68fe6116598ce8a13da89a218cf0b451dae11a070261c522d55cc1c5f"
+    }
+  ],
+  "bindings": [
+    {
+      "status": "PASS",
+      "source_match_count": 16,
+      "checks": 7247,
+      "failures": [],
+      "source_drift": [],
+      "pid": 29496,
+      "original_execution_dirty": [
+        "?? docs/beta-sprint/game-feel-owner-10b/",
+        "?? game/feel/",
+        "?? tests/beta_sprint/game_feel_owner_10b/"
+      ],
+      "execution_claim": "Original baseline/WIP execution retained; owned physical source bytes equal immutable code commit blobs",
+      "case": "final_unit_01",
+      "original_execution_head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd"
+    },
+    {
+      "status": "PASS",
+      "source_match_count": 16,
+      "checks": 100,
+      "failures": [],
+      "source_drift": [],
+      "pid": 36756,
+      "original_execution_dirty": [
+        "A  docs/beta-sprint/game-feel-owner-10b/.gitignore",
+        "A  docs/beta-sprint/game-feel-owner-10b/INTEGRATION_REQUEST.md",
+        "A  docs/beta-sprint/game-feel-owner-10b/LEDGER.md",
+        "A  docs/beta-sprint/game-feel-owner-10b/PLAN.md",
+        "A  docs/beta-sprint/game-feel-owner-10b/RECEIPT.md",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_mapper_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_mapper_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_mapper_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_runtime_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_runtime_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_runtime_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_mapper_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_mapper_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_mapper_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/opposite.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/preempted.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/reset.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_runtime_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_runtime_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_runtime_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/generated_sidecars_cleanup.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/opposite.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/preempted.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/reset.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/opposite.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/preempted.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/reset.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_blocked.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_initial.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_lean.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_recoil.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_rest.png",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/stdout.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/process.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/report.json",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/stderr.log",
+        "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/stdout.log",
+        "A  game/feel/animation/edge_recoil/edge_admission.gd",
+        "A  game/feel/animation/edge_recoil/edge_event.gd",
+        "A  game/feel/animation/edge_recoil/edge_event.gd.uid",
+        "A  game/feel/animation/edge_recoil/edge_lean.gd",
+        "A  game/feel/animation/edge_recoil/edge_lean.gd.uid",
+        "A  game/feel/animation/edge_recoil/recoil_motion.gd",
+        "A  game/feel/animation/edge_recoil/recoil_motion.gd.uid",
+        "A  tests/beta_sprint/game_feel_owner_10b/fixture.gd",
+        "A  tests/beta_sprint/game_feel_owner_10b/fixture.gd.uid",
+        "A  tests/beta_sprint/game_feel_owner_10b/lab_view.gd",
+        "A  tests/beta_sprint/game_feel_owner_10b/lab_view.gd.uid",
+        "A  tests/beta_sprint/game_feel_owner_10b/run.ps1",
+        "A  tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+        "A  tests/beta_sprint/game_feel_owner_10b/test_graphical.gd.uid",
+        "A  tests/beta_sprint/game_feel_owner_10b/test_unit.gd",
+        "A  tests/beta_sprint/game_feel_owner_10b/test_unit.gd.uid",
+        "?? docs/beta-sprint/game-feel-owner-10b/.gitattributes"
+      ],
+      "execution_claim": "Original baseline/WIP execution retained; owned physical source bytes equal immutable code commit blobs",
+      "case": "final_rendered_02",
+      "original_execution_head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd"
+    }
+  ],
+  "final_captures": [
+    {
+      "sha256": "515ac65cd00c817e4ee8ad54cd2dda828dbd3618ee63be7f45604f6133bac3f2",
+      "name": "opposite.png"
+    },
+    {
+      "sha256": "a2c6a38a5d0266c5374c7bfd3bce09503f0402986b3488539e3c52a626aeeea6",
+      "name": "preempted.png"
+    },
+    {
+      "sha256": "514aaa66e3126c20f437e3833af8c7160ddb3f5f9f109d528ba714a8f4b0f3a4",
+      "name": "reset.png"
+    },
+    {
+      "sha256": "f7f0e26f64af617c2f5958df18449a1f790992559d4062ad7574a8a9c27939c7",
+      "name": "w0_q0_blocked.png"
+    },
+    {
+      "sha256": "87bb63da1f9d9d96a32e9844af3dff7b4f507b8ee9fb6f851851e79ea372b3d0",
+      "name": "w0_q0_initial.png"
+    },
+    {
+      "sha256": "58e0b275905db30c078c631b6805e7f0f834b5b192b1d672b20c3f6c8ec301c2",
+      "name": "w0_q0_lean.png"
+    },
+    {
+      "sha256": "ee1fec64e3f763859ad778c45977ed8728243110a149f289caf5d581445875b3",
+      "name": "w0_q0_recoil.png"
+    },
+    {
+      "sha256": "bafdba599484aec049549acb549f08581f3afdbf2a012e5e8e36273b4019bbfe",
+      "name": "w0_q0_rest.png"
+    },
+    {
+      "sha256": "1e4f9f7baeeb919878cb3454a532d9cc4c7c2a5457b2cdbb179ccd9dde7e0a57",
+      "name": "w0_q1_blocked.png"
+    },
+    {
+      "sha256": "4115faf4c11be7bc8e1d6f0e958b733cfd039be563faa19d880c8e34b3a035d9",
+      "name": "w0_q1_initial.png"
+    },
+    {
+      "sha256": "b16874b7b48b7baa35897aed61ab16b0b6299d42972c701dbe3a1197b18442e1",
+      "name": "w0_q1_lean.png"
+    },
+    {
+      "sha256": "693e3811418ee7f5b72b3c458a6556478bc1871c701d3ed89e8c97877de759c6",
+      "name": "w0_q1_recoil.png"
+    },
+    {
+      "sha256": "5fd2f1340b6c85189f6b0bcb8216fb2a0697537f89772a687d99eb78275b2cd8",
+      "name": "w0_q1_rest.png"
+    },
+    {
+      "sha256": "fce34d94406dfe6c02c36f52af9dab7f20996a2fad65edd417ebcf7d0928cb1a",
+      "name": "w0_q2_blocked.png"
+    },
+    {
+      "sha256": "43b7d0690e2e01678c9203c0e85fe0fd8124e4c03c4c2ea074dc5f65d4d42030",
+      "name": "w0_q2_initial.png"
+    },
+    {
+      "sha256": "572323c91fc80cf3d6d1209b1fc49ba9725cc1b4bedf22a57a414d7bfeef481c",
+      "name": "w0_q2_lean.png"
+    },
+    {
+      "sha256": "76b1fde0579bec522df98d0566906095bae937caef05dc00e959b510523430a6",
+      "name": "w0_q2_recoil.png"
+    },
+    {
+      "sha256": "4b23680d4b5d87ec5cc259ef5b0c49a16612d97f025094f8927a586ef060d8c7",
+      "name": "w0_q2_rest.png"
+    },
+    {
+      "sha256": "ad2b05e8f109f8bc9ed052f269ede80a758abf7312978e5a0936ad0ee54f5c06",
+      "name": "w0_q3_blocked.png"
+    },
+    {
+      "sha256": "38ccdfb4f4e082e0e2e0d7e3c337de8b3df529d39218ec21c1c509edb7da80ab",
+      "name": "w0_q3_initial.png"
+    },
+    {
+      "sha256": "2abb0f460be10a733fceb328789929a74d61f5c9dfe88706f3ea4f886b037e0b",
+      "name": "w0_q3_lean.png"
+    },
+    {
+      "sha256": "c56df52a72892c9304a58d41d7842ca8b5d5249b911bccd633258960b034cb5c",
+      "name": "w0_q3_recoil.png"
+    },
+    {
+      "sha256": "6deda495f2fcdfe438b59d922a8488c777f667490b34eb2cc8aa123a38bfcd64",
+      "name": "w0_q3_rest.png"
+    },
+    {
+      "sha256": "a985b0ded851e037dab1d560881c730453c4a2cc7f77a87fbc1e9ff6263173a1",
+      "name": "w1_q0_blocked.png"
+    },
+    {
+      "sha256": "3dd545b105d4c0b2bdf9e161caaa56fa33e42a6ef03331a982cbae2a97128e3c",
+      "name": "w1_q0_initial.png"
+    },
+    {
+      "sha256": "a0a829391fb1d1562584edda0c6528f73d4bb1184424be6932d71105a8f61829",
+      "name": "w1_q0_lean.png"
+    },
+    {
+      "sha256": "9be31539e832ac67a9b6be5a0bb763fdc6aef446ba995221f0bbdfee969d4a2a",
+      "name": "w1_q0_recoil.png"
+    },
+    {
+      "sha256": "6819318abfb1e33b3cf3542c1991f2c509f490834000b3dfc7309764f62f3c1f",
+      "name": "w1_q0_rest.png"
+    },
+    {
+      "sha256": "5b3d0e9af5e6091b070a113679161a8d7976c35e9f5f9afefa83b6e6ed3d9273",
+      "name": "w1_q1_blocked.png"
+    },
+    {
+      "sha256": "2deac8c856ce396532ee61bca8aee9550d077c53643f6d38b23bb2b73f6a0475",
+      "name": "w1_q1_initial.png"
+    },
+    {
+      "sha256": "f40f934fc5d5e43be0495e32127762cd636b3616ddda0f339c21e4c0bb74591c",
+      "name": "w1_q1_lean.png"
+    },
+    {
+      "sha256": "ff0659a1791980b27d99d07296e4382f7b88e8eb46dc34872df8dbb769553719",
+      "name": "w1_q1_recoil.png"
+    },
+    {
+      "sha256": "d612412a642d59dd42ab52afe97a753eeabcc994ba191efb3870237875e8b251",
+      "name": "w1_q1_rest.png"
+    },
+    {
+      "sha256": "8e20679579879da299b49dc7184513bf96119c5b6526b0ebf23a2d403f4348be",
+      "name": "w1_q2_blocked.png"
+    },
+    {
+      "sha256": "2340ce59f387b56513461427a7359aae6cf959a7c2e29c0a6880e2bb644b5e33",
+      "name": "w1_q2_initial.png"
+    },
+    {
+      "sha256": "3dee15dfedec45ce4309f5c82de121ad18c0a97ba2e76bc757b9dd3ce111f119",
+      "name": "w1_q2_lean.png"
+    },
+    {
+      "sha256": "1b6f4aa8e52b567054a187f8f9560b217e6653843a9cb0b0cbad3641b93b05d2",
+      "name": "w1_q2_recoil.png"
+    },
+    {
+      "sha256": "d0fac864179fd84e569e4aeb3b89b697a5ebc55fc5a5cd519abb7ff1f5b092f7",
+      "name": "w1_q2_rest.png"
+    },
+    {
+      "sha256": "8cae9c522d9f6f41bb4a6ff059947454765f289240aa0cd2a8850b00e396f75d",
+      "name": "w1_q3_blocked.png"
+    },
+    {
+      "sha256": "260bb4c4b81f3d5314639c4194fc91eed7efefb22decf0b118ecf0d3c52e1153",
+      "name": "w1_q3_initial.png"
+    },
+    {
+      "sha256": "351659eedd16bee4205cb077c536a0a8d649044450a944910aa906c92aaeb11c",
+      "name": "w1_q3_lean.png"
+    },
+    {
+      "sha256": "22cca9b8bb7195b9cdf2bb1c5e74e63cac686ac5494ec53692cfedb995684239",
+      "name": "w1_q3_recoil.png"
+    },
+    {
+      "sha256": "a696954b50cf2f65f94febf890f80dbbc30d6d24646eba22c18c68ec0f0988b1",
+      "name": "w1_q3_rest.png"
+    }
+  ],
+  "changed_file_count": 285,
+  "outside_allowlist": [],
+  "formal_runtime_graphical": {
+    "status": "case_pending",
+    "checks": 0,
+    "authoritative_runtime": false
+  },
+  "push": "NOT_RUN"
+}
