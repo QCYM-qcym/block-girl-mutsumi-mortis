@@ -40,8 +40,8 @@ Files: tests/beta_sprint/pfall_v2_integration/{audit.py,test_path.gd,run.py}; do
 
 Files: tests/beta_sprint/pfall_v2_integration/package.py; append-only build outside repository; acceptance receipt.
 
-- [ ] Review evidence and commit only 00 test/docs scripts.
-- [ ] Package clean committed sources into a new directory and archive; refuse overwrite.
-- [ ] Repeat full-path and natural Graphical tests on the actual package.
-- [ ] Verify package manifest and preserve previous packages/profiles/evidence.
+- [x] Review evidence and commit only 00 test/docs scripts.
+- [x] Package clean committed sources into a new directory and archive; refuse overwrite.
+- [x] Repeat full-path and natural Graphical tests on the actual package.
+- [x] Verify package manifest and preserve previous packages/profiles/evidence.
 - [ ] Commit receipt and hand off the actual frozen object to 08; Human QA remains NOT_RUN.
