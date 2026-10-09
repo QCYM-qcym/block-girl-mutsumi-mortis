@@ -55,5 +55,50 @@
     "target_face_id": "exit/TOP",
     "goal_face_id": "exit/TOP",
     "requires_fall_before_route": true
+  },
+  "opt_in_candidate": {
+    "schema_version": 2,
+    "contract_version": "foundation.game_feel.v1",
+    "rule_version": "foundation.rules.game_feel.v1",
+    "camera_initial_quadrant": 1,
+    "connection": {
+      "connection_id": "pfall_a",
+      "source_face_id": "source/TOP",
+      "source_edge": 2,
+      "target_face_id": "target/TOP",
+      "allowed_camera_quadrants": [
+        1
+      ],
+      "allowed_world_orientations": [
+        0
+      ],
+      "required_flags": [],
+      "path_points2": [
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          -2,
+          6,
+          2
+        ],
+        [
+          -6,
+          6,
+          6
+        ],
+        [
+          -8,
+          2,
+          8
+        ]
+      ],
+      "orientation_policy": "PRESERVE",
+      "motion_profile_id": "pfall_a_edge_clear_v1",
+      "presentation_duration_ms": 600
+    },
+    "authority": "CANDIDATE_ONLY_RUNTIME_DELIVERY_PENDING"
   }
 }
