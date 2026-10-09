@@ -1,17 +1,21 @@
 {
   "task": "GAME_FEEL_UI_EXTENSION_01",
+  "increment": "ACTION_FEEDBACK_PHASE_FIX",
   "owner_ready": true,
   "overall_ready": false,
-  "source_commit": "27ff384dbde90be9432086904b2a5cc470e24852",
+  "source_commit": "e7641bd280ce82f46db88d7f28940f24168528a6",
+  "previous_delivery": "cccd9e2f23fbf3761e15dc44aa74a8496f78d268",
   "ui_implementation_commit": "8724dbc13c6e1852d2020be2f05eb638162e373d",
   "audio_dependency_commit": "4afbd068fae74a826dae4db04c2c612af23fa861",
   "audio_normal_merge_commit": "fd29aeeb644bd8098ca3d641dcb80fc2802c5b27",
   "contract_baseline": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
-  "original_wip_execution_head": "fd29aeeb644bd8098ca3d641dcb80fc2802c5b27",
+  "action_feedback_phase": "FEEDBACK",
+  "edge_phase": "REJECTED",
+  "original_wip_execution_head": "cccd9e2f23fbf3761e15dc44aa74a8496f78d268",
   "original_wip_dirty_preserved": true,
-  "evidence": "docs/game-shell/game-feel-ui-extension-01/evidence/owner07_audio_final_02/run_report.json",
-  "evidence_sha256": "02f630f201886befad77a872bc49674239fe1676a061c78b84bceaa807bfba1d",
-  "behavioral_checks": 165,
+  "evidence": "docs/game-shell/game-feel-ui-extension-01/evidence/owner07_feedback_contract_green_01/run_report.json",
+  "evidence_sha256": "e5eee72df35a185ee4b69de07262dc026411da3b6b894b58e360023810bd9b81",
+  "behavioral_checks": 169,
   "all_stages_exit_zero": true,
   "all_stages_stderr_zero": true,
   "source_drift": false,
@@ -72,9 +76,9 @@
     },
     {
       "path": "game/feel/ui/game_feel_ui.gd",
-      "tested_sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28",
-      "git_blob_sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28",
-      "physical_sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28",
+      "tested_sha256": "2a2d8dbb8182f2e666b4fd12079d404b9fc90a0711c4cedc5de93ba3e6d009dd",
+      "git_blob_sha256": "2a2d8dbb8182f2e666b4fd12079d404b9fc90a0711c4cedc5de93ba3e6d009dd",
+      "physical_sha256": "2a2d8dbb8182f2e666b4fd12079d404b9fc90a0711c4cedc5de93ba3e6d009dd",
       "match": true
     },
     {
@@ -1066,9 +1070,9 @@
     },
     {
       "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd",
-      "tested_sha256": "9a650843495f40a832a7253ffb0f152f6f3c54994fd63d70140b73a22994c3e6",
-      "git_blob_sha256": "9a650843495f40a832a7253ffb0f152f6f3c54994fd63d70140b73a22994c3e6",
-      "physical_sha256": "9a650843495f40a832a7253ffb0f152f6f3c54994fd63d70140b73a22994c3e6",
+      "tested_sha256": "326670d6ed9566b39ca2aec1ca967bec696e97b7d503cc55d6d00141936ba376",
+      "git_blob_sha256": "326670d6ed9566b39ca2aec1ca967bec696e97b7d503cc55d6d00141936ba376",
+      "physical_sha256": "326670d6ed9566b39ca2aec1ca967bec696e97b7d503cc55d6d00141936ba376",
       "match": true
     },
     {
