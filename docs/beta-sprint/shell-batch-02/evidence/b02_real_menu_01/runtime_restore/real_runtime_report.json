@@ -1,0 +1,44 @@
+{
+	"audio_driver_argument": "default",
+	"cases": [
+		"OWNER independent-process Continue at native start; not Human Cold Continue"
+	],
+	"checkpoints": [],
+	"checks": 11,
+	"completion_events": [],
+	"evidence_type": "OWNER_HEADLESS_REAL_RUNTIME_INPUT",
+	"failures": [],
+	"fixture": "only prior L01/L02 completed and L03-unlocked save setup; no Runtime state assigned",
+	"human_acceptance": "NOT_RUN",
+	"input_recipe_content_commit": "",
+	"pending": [],
+	"phase": "restore",
+	"pid": 42104,
+	"progress": {
+		"completed": [
+			"mutsumi_l01",
+			"mutsumi_l02",
+			"mutsumi_l03",
+			"mutsumi_l04",
+			"mutsumi_l05"
+		],
+		"has_progress": true,
+		"recent": "mutsumi_l05",
+		"settings": {
+			"fullscreen": false,
+			"master": 0.42,
+			"music": 0.23,
+			"muted": true,
+			"sfx": 0.67
+		},
+		"unlocked": [
+			"mutsumi_l01",
+			"mutsumi_l02",
+			"mutsumi_l03",
+			"mutsumi_l04",
+			"mutsumi_l05"
+		]
+	},
+	"save_path": "user://beta_sprint/b02_real_menu_01/runtime_progress.json",
+	"shell_quit_requested": true
+}
