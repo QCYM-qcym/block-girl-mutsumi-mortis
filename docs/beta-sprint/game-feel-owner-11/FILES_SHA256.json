@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "owner": "11",
+  "count": 174,
+  "files": [
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/EVENT_MAPPING.md",
+      "bytes": 4781,
+      "sha256": "200dead06cff98e839bd186f2d354a565adceb6eb5535ed77a1071f0cc7dfbd9"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/GENERATED_SIDECAR_CLEANUP.json",
+      "bytes": 9849,
+      "sha256": "e455e048ee9747686b0dcd75961d79b2900146bdc1a45c35f936ccccdebd093a"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/IMPLEMENTATION_PLAN.md",
+      "bytes": 5060,
+      "sha256": "1501e9ea0206db11b496c1d0b1b0211149a0799ce5fb24bf6bff95b59e4e0b89"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/INTEGRATION_REQUEST.md",
+      "bytes": 3973,
+      "sha256": "fdfb1155e529966740708b83d26b507dddef227a127491ef616f25a090798a1f"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/LEDGER.md",
+      "bytes": 3966,
+      "sha256": "b6305f03b74217f63cd2df732895cedec711053204177d0308c64039e3a87d4b"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/RECEIPT.md",
+      "bytes": 6689,
+      "sha256": "8090ceedca26da86e7a9638c76b7212ace3f9a5826a195a72af26693554bd138"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/REVIEW.md",
+      "bytes": 1956,
+      "sha256": "f9845e5cf59ff34d47ba288582ff48140e90cad497e07d026b3817549ea950bc"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/SETTINGS_CONTRACT.md",
+      "bytes": 2063,
+      "sha256": "a6914fdd667c6504d85ba6144fb797cbbe5a2d2703bb6b58557d98f7a7bbc50c"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/verify_delivery.py",
+      "bytes": 3623,
+      "sha256": "1b7ef5a3ce0afa2098d88d5edd6bfe2dac7f11fc2095939c4dde5f8e6917f663"
+    },
+    {
+      "path": "game/feel/audio/audio_director.gd",
+      "bytes": 10746,
+      "sha256": "cfb498eb5fe2e6f64f017076cc6ba4db789d2fed10fd7e234b7217a58b276df1"
+    },
+    {
+      "path": "game/feel/audio/audio_director.gd.uid",
+      "bytes": 19,
+      "sha256": "9a074897d591d931f97dc4339ffe0764c60f6e06bbba2f1c9cebd48b9475c1cc"
+    },
+    {
+      "path": "game/feel/audio/event_policy.gd",
+      "bytes": 10082,
+      "sha256": "0e6cc9af14802b8f500adee1eef03903208d45d4c9a48b590cae0616ab4ef4ff"
+    },
+    {
+      "path": "game/feel/audio/event_policy.gd.uid",
+      "bytes": 19,
+      "sha256": "9de0a18607acf87517a0582b0f5119c53f6c1a30019afada7abd78ef3b14b9aa"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/.gitattributes",
+      "bytes": 38,
+      "sha256": "aa0bcac8cf39347027879b8c44d57afb8f73144174b8d2d48920f7d19d40c7a6"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/LICENSE_PROVENANCE.md",
+      "bytes": 2220,
+      "sha256": "bd7ac09853f8c8f07054f004cae09a7ecc2c738da3116950a3e630d564bdfb9e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/README.md",
+      "bytes": 3639,
+      "sha256": "289802eaa70f20c00e99c3e345a15c6d0789f3f45b8a95090faabff1fa647d0e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_complete.wav",
+      "bytes": 882044,
+      "sha256": "a3fe04c3c99d1696291001de6084091faab39988a2e6e9493786b3755e57858b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_complete.wav.import",
+      "bytes": 545,
+      "sha256": "cd9193e26712b5b749d578aecd6287a6277518b7fc5432b352ad83da0a3a5fc8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_discovery.wav",
+      "bytes": 617444,
+      "sha256": "46542c2edecb00e4f6da8b7b4cea86211e0848cf349c00869ea8b1618437a7c3"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_discovery.wav.import",
+      "bytes": 547,
+      "sha256": "f8619a9aebb65cd97d6f24c803119b537e7fc0707d104b67ba4ff0f2bb56c0fe"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_inner.wav",
+      "bytes": 7056044,
+      "sha256": "b13510489512d0feb3dac4183fa44fd66c9ef405e477e1c98f33102f48eca2df"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_inner.wav.import",
+      "bytes": 536,
+      "sha256": "83a3d42bd14115a82f255361bcead12966f416e3de81f41a32d9f67c1cad7c11"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_menu.wav",
+      "bytes": 4704044,
+      "sha256": "2b85bdc907e31c217b4b1f538accc862feff0e60a9c3e06221a18b0053bedf1e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_menu.wav.import",
+      "bytes": 532,
+      "sha256": "9edd0a377541610028dc2bbf8267591eae06f45ef5ebbec3bd3b12d1d9b0d725"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_surface.wav",
+      "bytes": 7056044,
+      "sha256": "5f1b37aac47c6620ecf713a4db3241481097c2b9d45b7de4e056496ab3ff8ae2"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_surface.wav.import",
+      "bytes": 542,
+      "sha256": "6d0eba8ced03b4fbc600d2f58fd0c75a662a493d4ee2f659d4547ea2f7acc327"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_contact.wav",
+      "bytes": 14156,
+      "sha256": "7d51c300bae0871f9efe054bff7b54c8980fe6ecd4d234b787900a6a85015834"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_contact.wav.import",
+      "bytes": 557,
+      "sha256": "743200d3d7c5bdc3e9eb56b9cbffcbcdd2561c9e7e339e7abd6660a2747907af"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_roll.wav",
+      "bytes": 31796,
+      "sha256": "c093c423ba282670f76ce63f358f16051e9de848173a03d862ce7795efb34507"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_roll.wav.import",
+      "bytes": 547,
+      "sha256": "638e9a6154343e78fe5118dbf90283a84174b9fbd7ee16c600168efaa386b3b4"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_lean.wav",
+      "bytes": 28268,
+      "sha256": "bb3c197376b93a5869063883bae6453579a724565af7088fd9d4773ab65853a1"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_lean.wav.import",
+      "bytes": 548,
+      "sha256": "4a82e982d6228b29290d7f49823f4711a0a9d86bf2d55d290d9b536661b95898"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_recoil.wav",
+      "bytes": 39734,
+      "sha256": "40e32f16f12228183e2947e87dcb5a1b288e1dae13a0b5861c1883c8fa4a1004"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_recoil.wav.import",
+      "bytes": 554,
+      "sha256": "92ee618ba918a929cc9dad1239bc94ba4f4b8af9dfcf9d4f60b6573e456271e8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_start.wav",
+      "bytes": 33560,
+      "sha256": "240dbf1b7abbbcb7432dc9ad2ef2fc651527703b876b62b4098ca2ed21c07543"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_start.wav.import",
+      "bytes": 551,
+      "sha256": "5cd314c36ea6036180f983d51f697b3af9856c8426e26f725fb39ea4df4b717f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_whoosh.wav",
+      "bytes": 132344,
+      "sha256": "3e128ac7e6f29d61407535a96e9f2118e4936bae42605695166bec7c02b68f03"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_whoosh.wav.import",
+      "bytes": 554,
+      "sha256": "4212d10a7c935cd6e95198eba61a40e2832689899841bf61215c413706f6b6c9"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_goal.wav",
+      "bytes": 194084,
+      "sha256": "43961d92045b3b4bfc18923595da6c3ecdea341bcd41b4e616b0f6f23c93b665"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_goal.wav.import",
+      "bytes": 533,
+      "sha256": "0d91fdcbe8513f3c5aeb4a230c6bb7164ed2a0b95863d5f536c78efdf2aaaf51"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_landing_impact.wav",
+      "bytes": 48554,
+      "sha256": "87957679daf3cc200a48e605a21496c64128d835984f32500b4e7f0da7ab51d6"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_landing_impact.wav.import",
+      "bytes": 563,
+      "sha256": "3f5524d5ebacd7632836686030679ae07e621b8445e545a7a7c677f7c9b72286"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_connect.wav",
+      "bytes": 48554,
+      "sha256": "4fc05130e3198ddcdce2654848b0202dfb67b606019b062f4ab8c004ab7adc4a"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_connect.wav.import",
+      "bytes": 578,
+      "sha256": "efede9bc2969334d1c783aa1e6e1d623a9f8e6274b86d02cb2c6f8265dffe368"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_disconnect.wav",
+      "bytes": 44144,
+      "sha256": "3f6a5d98320bb3756a00d432bd2223d426884ea5fed299180ad9417f2bec1d2f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_disconnect.wav.import",
+      "bytes": 587,
+      "sha256": "047188c7c2d42ab4453aa62cd35aa2c445f1d60cd103d994b1719ba1863a8fda"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_back.wav",
+      "bytes": 15038,
+      "sha256": "1501c416f64eaf149af896861d33bc3f7e7e17c867ed59fa86db2ac2cd3b38d9"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_back.wav.import",
+      "bytes": 542,
+      "sha256": "ee516b4b1e9cdbf33338fab78c0174da729e06caa51fd87fb8987c8d4e0e0691"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_select.wav",
+      "bytes": 10628,
+      "sha256": "4a1a89b9ac07fea2f78e7f015c818c2741756ae031a1c7a2d3837459ca7e047a"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_select.wav.import",
+      "bytes": 548,
+      "sha256": "f316cd5d10fce38b98445e7e2ff32108b79a14ff94cb753ebdc9f23edf5ad26e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_world_shift.wav",
+      "bytes": 97064,
+      "sha256": "d7890db889f772274e274805c5236446fcb42f25aa4ee531050fe5cc15d7820f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_world_shift.wav.import",
+      "bytes": 554,
+      "sha256": "8f822b52591ea546738b2c637f8f34e7a71ea56fb2b4ddf20e4e63aeeb0fbeac"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/manifest.json",
+      "bytes": 12594,
+      "sha256": "720fc149ad94276250bd4aee8d6ef4540ed46d5d8cae965d388ca970a8eefc48"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/previews/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/previews/asset_audition.wav",
+      "bytes": 6916688,
+      "sha256": "3f5bee76bdcfb88f13b7dac6393a4bbad856f34181670715adbc7769b6ef4d52"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_complete.wav",
+      "bytes": 1323044,
+      "sha256": "c6fed428dac7158d88068cce711a5f18cf97dc27c03a41c2f08004350007536a"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_discovery.wav",
+      "bytes": 926144,
+      "sha256": "8721dc1580235abdd2163dcac2c3d3abf22605a55f224cedc856e934d699ae67"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_inner.wav",
+      "bytes": 10584044,
+      "sha256": "01e1190a8961541e60d0ec0b225d0f9c30b95558f62256160c03a964d4262209"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_menu.wav",
+      "bytes": 7056044,
+      "sha256": "b3eff19ef6eafb482514a56e37e8d6cb11bf209f720e7c332584d726ec281f2f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_surface.wav",
+      "bytes": 10584044,
+      "sha256": "7a8bf05fab41ca504aed401564894494195c60550d975e2a8ff84d591c12006d"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_contact.wav",
+      "bytes": 21212,
+      "sha256": "c4e09b3310e76b19c974d492fd5963ad360dc40c894d2357c74142a0f2d66175"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_roll.wav",
+      "bytes": 47672,
+      "sha256": "026ac3ebba6e1860b43a3d9c41795c0ab42945db46a2178a08c5a9e29ebdfbaa"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_lean.wav",
+      "bytes": 42380,
+      "sha256": "5b295b6b593c7f77ff9e599b93386af608e98788dee5c0443bbadc3a9071a53b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_recoil.wav",
+      "bytes": 59579,
+      "sha256": "87b25db0f7a39c43251ffcc2fc51318ad80b9cb18f14284992d8bd0e58c6d26f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_start.wav",
+      "bytes": 50318,
+      "sha256": "c4c0f71f7a414ce45f1f93aa08aea6281089437e2ef3292d5540b8c8dc3997c3"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_whoosh.wav",
+      "bytes": 198494,
+      "sha256": "3680144c00840bc22737912de1a87def85182ab9a95e70daed52f4937bde52d8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_goal.wav",
+      "bytes": 291104,
+      "sha256": "39b02b2143ec3ed698c65b7266663cfab2a4551634c6042043c3d077aef7fa88"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_landing_impact.wav",
+      "bytes": 72809,
+      "sha256": "554549b3d031f96c7fdd97869e8cee675017f7b6c5540a7d3989aae9a66400be"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_connect.wav",
+      "bytes": 72809,
+      "sha256": "4a48df773ddf965d143f665a50065ce4d3dd008f8ada88bbe80589251c98077e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_disconnect.wav",
+      "bytes": 66194,
+      "sha256": "cb4fe6833a07c4e8f28a1340740bd5a2cb52432cb660d0cfd6cd3a083db78a2e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_back.wav",
+      "bytes": 22535,
+      "sha256": "1d2bc245996b7c4eac7c9a3735931719431f9e3d038f31c0f2aa4ac50f2a1660"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_select.wav",
+      "bytes": 15920,
+      "sha256": "7efddacfa19b70d6dc7b3bf88f3b661bab0d266fb4de3a704ca53d7674f71bc8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_world_shift.wav",
+      "bytes": 145574,
+      "sha256": "65769cfb14c23baf0c917a587beeb015f1ec6613e33bb9f9fbc41f23a4528f9d"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/score.json",
+      "bytes": 1606,
+      "sha256": "c0fa322b0b25eda9aead673529786da4d3abd11c4faa3305d69b0b850f979396"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/synthesize.py",
+      "bytes": 11316,
+      "sha256": "10fd759d3ba44aec21ab7f752b23dd4cd1a81b0eb2664c1f88e9971b9b467c44"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/.gitattributes",
+      "bytes": 95,
+      "sha256": "7d5e503de7cdb2fa7b5b28ec029bc22bb4a0d0b47a30baf72649827faf945157"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/evidence-20261009T162148256154Z/pcm_metrics.json",
+      "bytes": 7236,
+      "sha256": "1c91e78d784958c4e0656f900ffbd8987e33fa04db6c2718d0a76bc57bff2651"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/evidence-20261009T162148256154Z/render.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/evidence-20261009T162148256154Z/render.stdout.txt",
+      "bytes": 69,
+      "sha256": "2982ff2bc47c42cf702155d4238ca0791b1f728b9e96ebba319ebb2b3504cdc7"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/evidence-20261009T162148256154Z/reproduction.json",
+      "bytes": 7309,
+      "sha256": "97f31203b27fe886c459406b658eca638a456aaf48ab4e595a112290e777f65e"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/pcm_metrics.json",
+      "bytes": 7236,
+      "sha256": "1c91e78d784958c4e0656f900ffbd8987e33fa04db6c2718d0a76bc57bff2651"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/pcm_metrics_final.json",
+      "bytes": 7236,
+      "sha256": "1c91e78d784958c4e0656f900ffbd8987e33fa04db6c2718d0a76bc57bff2651"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/validate_assets.py",
+      "bytes": 4259,
+      "sha256": "8f099825aa976b0c33856971f3ea49206760d3b73f25bd348a51c10d07a0387b"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/assets/verify_reproduction.py",
+      "bytes": 2746,
+      "sha256": "1e71cfd06341235c33eecba0a2ca7ed3f88fc2de5f9911968691789976ec7d1a"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/.gdignore",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/.gitignore",
+      "bytes": 11,
+      "sha256": "49f8429df931d72e6fc9924e450b6e08b38ab2fbb6fe44d1a8f9b2e55c903be9"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_final_01/actual_mix.wav",
+      "bytes": 450604,
+      "sha256": "dd62e3ea6a7b5428c4fe560f2a8f173a2cf5b62d0db51aeb9f4dd9703f826655"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_final_01/director.json",
+      "bytes": 1025,
+      "sha256": "99c71d831e77b50189671f46981787c5c494ed75973f2f96c3012354917c9695"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_final_01/process.json",
+      "bytes": 9156,
+      "sha256": "8931b702483936a38eefd2a7130f4bd9382d5fa0a58630c340405ca37b6ced5a"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_final_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_final_01/stdout.log",
+      "bytes": 231,
+      "sha256": "e4c365469802263bad9de372e85b8bd434bd74876bfabf953754b28e1d649fc2"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_01/process.json",
+      "bytes": 8230,
+      "sha256": "4e31e479ce16bf54ce0c0570eb82d94fe9815e33ddae74e14e0fc54c8cad645a"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_01/stderr.log",
+      "bytes": 844,
+      "sha256": "6affc4004b0af919ea44c8ef31d8d229f05faa323acb233b7ece80823c440dda"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_01/stdout.log",
+      "bytes": 172,
+      "sha256": "17b006212ac9fbcb9f971bdce37e9b6b4ea802b8e9e074518075278c672c4587"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_02/actual_mix.wav",
+      "bytes": 340012,
+      "sha256": "f39de18ce66eebd399c29c97a5f234de3778780445e3d412d343700704e3ef57"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_02/director.json",
+      "bytes": 997,
+      "sha256": "2a7298b5c8e713e9f6637328446f1ee188ee809e21600bf5bcddf688e874f052"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_02/process.json",
+      "bytes": 8451,
+      "sha256": "a5b0ad19866d91dcafcee1b8f676b086b01a1823ecd389a766c7342460ec7f4c"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_green_02/stdout.log",
+      "bytes": 231,
+      "sha256": "1bc16ded66a5b20375e7097a90e7e8a01f4375bdafeb77c368390b0a6689ba9b"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_red_01/actual_mix.wav",
+      "bytes": 344108,
+      "sha256": "3dc53d672554f4a8fe21a90113e024f494a27a726d49dd5f670f8544482214e8"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_red_01/director.json",
+      "bytes": 1872,
+      "sha256": "c65bb839a5a6f3bfdf32cde65aabd97e8fe9a135abcbdcbb3b3f2b8e3f399e57"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_red_01/process.json",
+      "bytes": 9595,
+      "sha256": "b0508fba1f6cd4a43303a0ed5ecb974c7265e35b8d8079e2a76450969c15e925"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_red_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_red_01/stdout.log",
+      "bytes": 1340,
+      "sha256": "56b309840ecd5dd6c50ecd2a31227bceb90188245833bd7fa2cb1e06f336e5da"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_green_01/actual_mix.wav",
+      "bytes": 434220,
+      "sha256": "35d4aa942f6226b85a3137ca4aa12eec4be7fba13a2621f20021b86dd753ab37"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_green_01/director.json",
+      "bytes": 1006,
+      "sha256": "83ff8b1e247f2024f787ecbe26f156e4e7b15444516602550ad6496629b951b4"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_green_01/process.json",
+      "bytes": 8486,
+      "sha256": "c0e90b2ea291cb6368d12a9159a51be4692cd93b2e7586210e6bfcea4cefb32d"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_green_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_green_01/stdout.log",
+      "bytes": 230,
+      "sha256": "b55c92d4e8e371d58074b2b568f03f7a761c89dae735142e0c6bf7f425ba5c70"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_red_01/actual_mix.wav",
+      "bytes": 438316,
+      "sha256": "cae2a718c13019ea50f7325e8275e69d2d2a0346b72aa185a516da099ae1eb50"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_red_01/director.json",
+      "bytes": 1175,
+      "sha256": "aff3d8f441369eefddbf68e4f67fc7f5f46f25fa24af5ad46b94c135dd26a64e"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_red_01/process.json",
+      "bytes": 8660,
+      "sha256": "7fae63cbd31127f5fa0974ec511002f8383cdf5b89b66ded1fc81da52325c497"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_red_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_regression_red_01/stdout.log",
+      "bytes": 404,
+      "sha256": "e7bd225c4836a55a4fd24aef00e848531894a9e7a5c1eb49ad45d5aad76e1a2e"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_green_01/actual_mix.wav",
+      "bytes": 454700,
+      "sha256": "45c66d720ed052f07d720ae8843443eada945f07055babeefa5187912a880a61"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_green_01/director.json",
+      "bytes": 1030,
+      "sha256": "b7a09668f8973efd1e8d1923feb39e58b63003a045a982d56d9fc91a8b49f510"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_green_01/process.json",
+      "bytes": 8950,
+      "sha256": "66339b601f38d6ba7c9e5b09bd8f259eb6b657c145c23b9934b34073550e98b1"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_green_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_green_01/stdout.log",
+      "bytes": 231,
+      "sha256": "2f5d54744d5427752cf144b900f3916fd388affa411dd8fb3310fc8ab0527413"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_01/actual_mix.wav",
+      "bytes": 448556,
+      "sha256": "c37e5e380c795ceec49474c60502b9b3e9b09b8300b20ebef1ea578338c54516"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_01/director.json",
+      "bytes": 1277,
+      "sha256": "2bffaa312c977d8471f6c9651ef6c4348aa1e728c0cac10957f318e34dae0344"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_01/process.json",
+      "bytes": 9209,
+      "sha256": "665dd53d0bfa43506ba39d4d709d0832715ff771cc157895d22f4e9260835fa6"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_01/stdout.log",
+      "bytes": 487,
+      "sha256": "f7b8fa91c7e5bf52fc54bcfb906fd4c223f3ef6e6062d8428ed90fe03c2e1d1e"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_02/actual_mix.wav",
+      "bytes": 458796,
+      "sha256": "b6613bbf0831a36aa898d963ca6eca52308a82598b21e30e7567d6b0a0adf337"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_02/director.json",
+      "bytes": 1384,
+      "sha256": "65a0d071bcbb794ac2ca4e7fa830389f3d7aec62fb6614391e2110ecadd66bfa"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_02/process.json",
+      "bytes": 9323,
+      "sha256": "ad984449fc0bc4a4537252bc2d3f78342c35189424e9e9b92257aaddd4fd8521"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/director_review_red_02/stdout.log",
+      "bytes": 598,
+      "sha256": "885887fb632787830a1b467347a3b8f330a2f9a11e0560e7e389130540b0d064"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/import_final_01/process.json",
+      "bytes": 8071,
+      "sha256": "a65e12f2386b553a12ad70981b0a2186130e2fc7a348c80359ee1dff2624dbaf"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/import_final_01/stderr.log",
+      "bytes": 248,
+      "sha256": "01720ac377233c4bce8cecc77c90c1e9c81750d8f483ec6cb31cfc777ece1493"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/import_final_01/stdout.log",
+      "bytes": 82763,
+      "sha256": "61a905674082268b4e501dda9d5312f8e892c9dd2bc6346393104bd1d1e9da3f"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_01/policy.json",
+      "bytes": 662,
+      "sha256": "19dfb1144ca13ec5a84161d9504662d2b8bbb4fa92fad719e1fa0e580f61e7f6"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_01/process.json",
+      "bytes": 2201,
+      "sha256": "5860f6e22ea58ac7ab9711e967007463e0580598fb7001f43a09b95494931cb6"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_01/stdout.log",
+      "bytes": 107,
+      "sha256": "c7628c06dfde936935e783213678aa59f3a2973361ac3b3eca0c5ccde11b6f11"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_02/policy.json",
+      "bytes": 662,
+      "sha256": "852a974f739bef493e8f9591bd5cd6e9f21139a2c5bd74386cb54568aa3a840c"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_02/process.json",
+      "bytes": 2427,
+      "sha256": "3bea141e65af3f2726d3dfcc09ea8d1b576b37cc9ea75a7ba89c55e49cfab669"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_final_02/stdout.log",
+      "bytes": 107,
+      "sha256": "c7628c06dfde936935e783213678aa59f3a2973361ac3b3eca0c5ccde11b6f11"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_green_01/policy.json",
+      "bytes": 662,
+      "sha256": "79ed67136bc05d41754468babea16fdd7d0d2bf85cf8914f156c9af07a80c706"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_green_01/process.json",
+      "bytes": 1781,
+      "sha256": "b7349e7e906d3051e77a1ef15117a950d60577c8b18c3d0d8058382603f05a7a"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_green_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_green_01/stdout.log",
+      "bytes": 107,
+      "sha256": "a909d8848bf066751c0ee1eb2b8689ba68411840beca0ac0a18ac2d2c0a9222b"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_red_01/policy.json",
+      "bytes": 1139,
+      "sha256": "be68419c6ed953ea138236ae47b42735da50afcf3beb8a47590be80beb33ff0a"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_red_01/process.json",
+      "bytes": 2292,
+      "sha256": "aba965b8b4d8c6e12a57907c1c44d67c69ab17b9edf228d44e7788e244bc55b0"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_red_01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/policy_red_01/stdout.log",
+      "bytes": 610,
+      "sha256": "5259f3879dca44efcd2895ce240eea0427a6d799555c518ca37b9d2ac7db316c"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/process.json",
+      "bytes": 12007,
+      "sha256": "b18355b05070d063b88e7aed1850683cf2ea111c5b11f5d171684c40cd5ae052"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/read.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/read.stdout.log",
+      "bytes": 113,
+      "sha256": "d9ee3754cd7b2db33dc21b2e5eb59b80c1d26295f9cc2ac0e2e4088e050719e9"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/settings_read.json",
+      "bytes": 1084,
+      "sha256": "1776fbcb327f9c82fba6599ba935acc7deef3055df043453f9742257cf191435"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/settings_write.json",
+      "bytes": 1085,
+      "sha256": "47c30bfa6ba849fed638db6dcaa2b0a68ab551ff8bfde536eac0d22fc605f467"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/write.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_01/write.stdout.log",
+      "bytes": 114,
+      "sha256": "542aa40230ebabb2ef0c1adbfe5f34863173ec66795553659dd3233706f20584"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/process.json",
+      "bytes": 12231,
+      "sha256": "e5db39ec9d657b0d34f8f88166c4880846785a75b71babb4ea02c676f84f8254"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/read.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/read.stdout.log",
+      "bytes": 113,
+      "sha256": "d9ee3754cd7b2db33dc21b2e5eb59b80c1d26295f9cc2ac0e2e4088e050719e9"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/settings_read.json",
+      "bytes": 1083,
+      "sha256": "28309e0ebef6d5625745a28b79e73b97fd415b3dac607214651266eb928f6a08"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/settings_write.json",
+      "bytes": 1085,
+      "sha256": "960a74d60da3c6d70047b67be73f1c2700078b7f36ea46b9bbc6d7441031d451"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/write.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/evidence/settings_final_02/write.stdout.log",
+      "bytes": 114,
+      "sha256": "542aa40230ebabb2ef0c1adbfe5f34863173ec66795553659dd3233706f20584"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/run_settings.py",
+      "bytes": 3419,
+      "sha256": "7d1cf3ae1fc7ab8b3ed549837891b7a7e65ac865b40c727b7cc8bd3506aeefc4"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/run_validation.py",
+      "bytes": 5933,
+      "sha256": "c0071e7376a869226163cfa070ee766722658b01fd4b960465fd340c76ba1ca9"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/test_director.gd",
+      "bytes": 13294,
+      "sha256": "9f3e1188d7caa5b064089dbafda1a9289e84a1bffc0810b965f3b69893592b20"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/test_director.gd.uid",
+      "bytes": 20,
+      "sha256": "cc579ede271fd3622380914c9b89a5db4a89f03c55f057fb87ed3da22b6fad33"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/test_policy.gd",
+      "bytes": 9826,
+      "sha256": "cf441eaf65c0bf9985b3aa8015490045ea1caf8be5dd9585bc955347744a7dd4"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/test_policy.gd.uid",
+      "bytes": 20,
+      "sha256": "bfd7a6ccc490e75265913d55a6522c4628eaa71e27359e3db50b235e8122db89"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/test_settings_persistence.gd",
+      "bytes": 2890,
+      "sha256": "319d1e2a7919acdc6a568c8952a71a4e839c705c3ca7f071719c5d70b3a8bfaa"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_11/test_settings_persistence.gd.uid",
+      "bytes": 20,
+      "sha256": "aedf556aa887b5924df8ea7ee3afe64784bfdcabece21c18702241860698c5cb"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "stage": "policy",
+  "command": [
+    "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+    "--headless",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_11/test_policy.gd",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\policy_red_01"
+  ],
+  "cwd": "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "branch": "feat/game-feel-audio",
+  "dirty": [
+    "?? docs/beta-sprint/game-feel-owner-11/",
+    "?? game/feel/",
+    "?? production/experimental/",
+    "?? tests/beta_sprint/game_feel_owner_11/"
+  ],
+  "source_sha256": {
+    "game/feel/audio/event_policy.gd": "21b85572a903421594e72c332d179a1f331c903d3fca4a31a22ae739e7df8cee"
+  },
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "profile": "E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\policy_red_01\\profile",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "synthetic game_feel.event.v1 snapshots"
+  ],
+  "input": "direct audio API calls; no gameplay/OS input",
+  "human_listening": "NOT_RUN",
+  "pid": 45736,
+  "exit_code": 1,
+  "seconds": 0.16526680000242777,
+  "source_drift": false,
+  "stderr_bytes": 0,
+  "status": "FAIL",
+  "checks": 56,
+  "failures": [
+    "fall acceptance starts scoped whoosh without impact",
+    "matching COMMITTED alone lands",
+    "landing stops matching fall loop",
+    "ordinary accepted move rolls",
+    "normal committed move contacts",
+    "explicit edge sounds once",
+    "new edge allowed after cooldown",
+    "old cancel leaves newly started fall",
+    "interrupt synchronously stops with no landing",
+    "generation advance cancels old identity",
+    "new generation can commit",
+    "new level run may bind after clear"
+  ],
+  "user_data_dir": "E:/godot/worktrees/block-girl-game-feel-audio/tests/beta_sprint/game_feel_owner_11/evidence/policy_red_01/profile/Godot/app_userdata/方块少女-若叶睦",
+  "display": "headless"
+}
