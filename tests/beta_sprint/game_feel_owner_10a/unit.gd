@@ -161,6 +161,28 @@ func run() -> void:
 	motion.parameters.impact_compression = NAN
 	check(not motion.begin(event).ok, "nonfinite parameter rejected")
 	motion.parameters.impact_compression = 0.055
+	# Actual Owner01 motion() DTO shape observed read-only in its WIP.
+	# Shape fixture only: this does not import or claim a delivered Runtime port.
+	var structured := Fixture.event()
+	structured.safety_verdict = {"status": "SAFE", "issues": [], "evidence_ref": {
+		"kind": "exact_linear_cube_sweep.v1", "level_hash": "UNIT_LEVEL_HASH",
+		"connection_id": structured.connection_id, "profile_hash": structured.motion_profile_hash}}
+	check(motion.begin(structured).ok, "Owner01 structured SAFE verdict compatible")
+	check(motion.sample(0.8).position == Vector3(structured.authorized_path_points2[-1]) * 0.5, "structured verdict exact target")
+	motion.clear()
+	var legacy_scalar := Fixture.event()
+	legacy_scalar.safety_verdict = "SAFE"
+	check(motion.begin(legacy_scalar).ok, "original scalar presentation fixture stays compatible")
+	motion.clear()
+	for mutation in ["UNPROVEN", "issues", "profile", "connection", "evidence"]:
+		var invalid := structured.duplicate(true)
+		match mutation:
+			"UNPROVEN": invalid.safety_verdict.status = "UNPROVEN"
+			"issues": invalid.safety_verdict.issues = [{"message": "unresolved"}]
+			"profile": invalid.safety_verdict.evidence_ref.profile_hash = "OTHER_PROFILE"
+			"connection": invalid.safety_verdict.evidence_ref.connection_id = "OTHER_CONNECTION"
+			"evidence": invalid.safety_verdict.erase("evidence_ref")
+		check(not motion.begin(invalid).ok and not motion.sample(0.2).active, "structured attestation rejected: " + mutation)
 	# All effect stages are interruptible; caller restores its authoritative base.
 	for t in [0.04, 0.17, 0.5, 0.8]:
 		check(motion.begin(event).ok, "phase cancellation begins")

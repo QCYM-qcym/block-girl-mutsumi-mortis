@@ -19,6 +19,21 @@ static func pose_valid(value: Variant) -> bool:
 	var location: Variant = value.get("location")
 	return location is Dictionary and integer(location.get("layer"), 0, 1) and integer(location.get("face"), 0, 5) and text(location.get("cube_id"))
 
+static func safe_attestation(event: Dictionary) -> bool:
+	var verdict: Variant = event.get("safety_verdict")
+	# Retain the original presentation-unit scalar seam. A real 01 attestation
+	# additionally binds the evidence to the exact connection/profile snapshot.
+	if text(verdict): return verdict == "SAFE"
+	if not verdict is Dictionary: return false
+	if not text(verdict.get("status")) or verdict.status != "SAFE": return false
+	var issues: Variant = verdict.get("issues")
+	if not issues is Array or not issues.is_empty(): return false
+	var reference: Variant = verdict.get("evidence_ref")
+	if not reference is Dictionary: return false
+	for key in ["kind", "level_hash", "connection_id", "profile_hash"]:
+		if not text(reference.get(key)): return false
+	return reference.connection_id == event.get("connection_id") and reference.profile_hash == event.get("motion_profile_hash")
+
 static func event_issues(event: Dictionary, phase: String) -> Array:
 	var result: Array = []
 	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1":

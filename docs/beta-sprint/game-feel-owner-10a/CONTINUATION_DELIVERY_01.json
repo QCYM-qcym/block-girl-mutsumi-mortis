@@ -1,0 +1,315 @@
+{
+  "task": "PFALL_ANIMATION_LANDING_01",
+  "continuation": "structured_safety_dto_01",
+  "previous_delivery": "a9f69021e93b9f08a43ad8ec38c067e828d46c43",
+  "status": "OWNER_LOCAL_CONTINUATION_READY",
+  "contract": "game_feel.event.v1",
+  "evidence": [
+    {
+      "case": "safety_dto_unit_final_01",
+      "checks": 2011,
+      "failures": [],
+      "original_execution_head": "a9f69021e93b9f08a43ad8ec38c067e828d46c43",
+      "original_execution_dirty": [
+        " M docs/beta-sprint/game-feel-owner-10a/INTEGRATION_REQUEST.md",
+        " M game/feel/animation/fall_landing/fall_motion.gd",
+        " M game/feel/animation/fall_landing/fall_visual_state.gd",
+        " M tests/beta_sprint/game_feel_owner_10a/fixture.gd",
+        " M tests/beta_sprint/game_feel_owner_10a/unit.gd",
+        "?? docs/beta-sprint/game-feel-owner-10a/CONTINUATION_01.md",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_green_01/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_red_01/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_red_02/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_unit_final_01/"
+      ],
+      "authority": false,
+      "doubles": [
+        "01 DTO",
+        "Safety attestation",
+        "native commit"
+      ],
+      "tested_sources": [
+        {
+          "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3",
+          "path": "foundation/orientation/discrete_orientation.gd"
+        },
+        {
+          "sha256": "64fd3defbaca889b4ed566fff1006321153d34339de0d51a44fcb028f1f3dcf0",
+          "path": "game/feel/animation/fall_landing/fall_motion.gd"
+        },
+        {
+          "sha256": "a790b10ae7b5668e3f009a46b3d3d2516f3d2b9508002060b91c99f6cc649b70",
+          "path": "game/feel/animation/fall_landing/fall_motion.gd.uid"
+        },
+        {
+          "sha256": "7b8f2e8e39e05a2046dae83b36cdccdcc7c365e0e1f12cd4a01819b56a6da0b6",
+          "path": "game/feel/animation/fall_landing/fall_visual_state.gd"
+        },
+        {
+          "sha256": "782b143eb4c19d0de4f607b3e843c5e182353911501878f047309a3885823ee9",
+          "path": "game/feel/animation/fall_landing/fall_visual_state.gd.uid"
+        },
+        {
+          "sha256": "70a931adb7be862ef4eb1452dc95f1257863e87f369fc0a7bf83401f2fcc86cb",
+          "path": "game/feel/animation/fall_landing/landing_motion.gd"
+        },
+        {
+          "sha256": "ff1221de65442a9943d579c784f230bca1a3f635100900497c1ddb026d8b80f5",
+          "path": "game/feel/animation/fall_landing/landing_motion.gd.uid"
+        },
+        {
+          "sha256": "0a03cc864bc4d2dec3f257aa91f369873bdd71be75494f75ef66982567d750fa",
+          "path": "game/feel/animation/fall_landing/motion_parameters.gd"
+        },
+        {
+          "sha256": "507b1eac12ae5d54e79e3f53a44ac0c469cca6d5143805147d7fdd896817054d",
+          "path": "game/feel/animation/fall_landing/motion_parameters.gd.uid"
+        },
+        {
+          "sha256": "72131306c53a55075df43f1f8ff95762ffb53dc176fbb26619716cbcfc1c2bd4",
+          "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd"
+        },
+        {
+          "sha256": "f053418410686f1347ef68c5392ff2023340fbb1b79b99f390ab20b47f50daca",
+          "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd.uid"
+        },
+        {
+          "sha256": "dfb3a92472e454033eddde3156e59e3d52d1ff19c1d4a90aac9268224b7a1553",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd"
+        },
+        {
+          "sha256": "9e58fe40b935ac0ec15c11c072aa6c6f274dd463af94a2583cfab2fc74ac278e",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd.uid"
+        },
+        {
+          "sha256": "89d0eba5aae1f7f130ed6bbf44ec1635d108a347a6059e38c82f6d4a04083407",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd"
+        },
+        {
+          "sha256": "df9eec9a499bed24af698e356fabb9d9f214f29ffe0f29f3887ebd32a75b9451",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd.uid"
+        },
+        {
+          "sha256": "51f484881dde10d951c1de30859acdd1dd1044ae1047a002a2cbf95ef16f724c",
+          "path": "tests/beta_sprint/game_feel_owner_10a/run.ps1"
+        },
+        {
+          "sha256": "fecd115d31bd311fd5d430094c9a3697a5225633f91f8341005d08791ceee9c2",
+          "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd"
+        },
+        {
+          "sha256": "a4fedbb77aa7ada931787bc993ddab1cdb7db1e6f8e362a8ec20295d53bf224f",
+          "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd.uid"
+        }
+      ],
+      "source_binding": "MATCH unchanged tested source bytes",
+      "process_sha256": "1ee61328cb179a19e649d108eee8f65260313cb31cd49d57ae8a31c4a515ccf0"
+    },
+    {
+      "case": "safety_dto_graphical_final_01",
+      "checks": 253,
+      "failures": [],
+      "original_execution_head": "a9f69021e93b9f08a43ad8ec38c067e828d46c43",
+      "original_execution_dirty": [
+        " M docs/beta-sprint/game-feel-owner-10a/INTEGRATION_REQUEST.md",
+        " M game/feel/animation/fall_landing/fall_motion.gd",
+        " M game/feel/animation/fall_landing/fall_visual_state.gd",
+        " M tests/beta_sprint/game_feel_owner_10a/fixture.gd",
+        " M tests/beta_sprint/game_feel_owner_10a/unit.gd",
+        "?? docs/beta-sprint/game-feel-owner-10a/CONTINUATION_01.md",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_graphical_final_01/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_green_01/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_red_01/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_red_02/",
+        "?? docs/beta-sprint/game-feel-owner-10a/evidence/safety_dto_unit_final_01/"
+      ],
+      "authority": false,
+      "doubles": [
+        "01 DTO",
+        "Safety attestation",
+        "native commit"
+      ],
+      "tested_sources": [
+        {
+          "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3",
+          "path": "foundation/orientation/discrete_orientation.gd"
+        },
+        {
+          "sha256": "64fd3defbaca889b4ed566fff1006321153d34339de0d51a44fcb028f1f3dcf0",
+          "path": "game/feel/animation/fall_landing/fall_motion.gd"
+        },
+        {
+          "sha256": "a790b10ae7b5668e3f009a46b3d3d2516f3d2b9508002060b91c99f6cc649b70",
+          "path": "game/feel/animation/fall_landing/fall_motion.gd.uid"
+        },
+        {
+          "sha256": "7b8f2e8e39e05a2046dae83b36cdccdcc7c365e0e1f12cd4a01819b56a6da0b6",
+          "path": "game/feel/animation/fall_landing/fall_visual_state.gd"
+        },
+        {
+          "sha256": "782b143eb4c19d0de4f607b3e843c5e182353911501878f047309a3885823ee9",
+          "path": "game/feel/animation/fall_landing/fall_visual_state.gd.uid"
+        },
+        {
+          "sha256": "70a931adb7be862ef4eb1452dc95f1257863e87f369fc0a7bf83401f2fcc86cb",
+          "path": "game/feel/animation/fall_landing/landing_motion.gd"
+        },
+        {
+          "sha256": "ff1221de65442a9943d579c784f230bca1a3f635100900497c1ddb026d8b80f5",
+          "path": "game/feel/animation/fall_landing/landing_motion.gd.uid"
+        },
+        {
+          "sha256": "0a03cc864bc4d2dec3f257aa91f369873bdd71be75494f75ef66982567d750fa",
+          "path": "game/feel/animation/fall_landing/motion_parameters.gd"
+        },
+        {
+          "sha256": "507b1eac12ae5d54e79e3f53a44ac0c469cca6d5143805147d7fdd896817054d",
+          "path": "game/feel/animation/fall_landing/motion_parameters.gd.uid"
+        },
+        {
+          "sha256": "6b31265ce8f89a8b075e5aea7bf91f0b4b808430e634b78e2aa6183c8821819d",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_BG_CH_WAKABA_CUBE_001_basecolor.png"
+        },
+        {
+          "sha256": "5fc520080663454edfb7fac5415d8b83fa93daea1f3b8bdcd2f4298f0a569704",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_BG_CH_WAKABA_CUBE_001_basecolor.png.import"
+        },
+        {
+          "sha256": "477226a679d5ca46d4101dc542dfbf93089e7bf0936841172c0eda86cc4ec3c2",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_source_eyes_v13.png"
+        },
+        {
+          "sha256": "34ebc4368b6c7e03aeb91fc9dcc0b7ec04a77a5bb9de05c5362ecefcf20df1cf",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_source_eyes_v13.png.import"
+        },
+        {
+          "sha256": "275bb9a495fc3725896bc473c2aac455abcc6d515b29eb450853ea1d3be765ac",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb"
+        },
+        {
+          "sha256": "10f0d9d1d9d9378c78036bdc1d19882a9b6ddc78fdb6b8e0e870a8f679ca1737",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb.import"
+        },
+        {
+          "sha256": "feeec798faa3d262294aec0948f468fabfe57d1bb9e8418c2b15ef3bed7d27b6",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/godot/BG_CH_WAKABA_CUBE_001.tscn"
+        },
+        {
+          "sha256": "082d5aac32b7c62d6defe425f7899f7220d839421396abab36b9531bbd483cd4",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/reports/asset_manifest.json"
+        },
+        {
+          "sha256": "6b31265ce8f89a8b075e5aea7bf91f0b4b808430e634b78e2aa6183c8821819d",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/BG_CH_WAKABA_CUBE_001_basecolor.png"
+        },
+        {
+          "sha256": "3a0dd0970256ad6b296a1e2f59946fee1e48c906b2eb3a2d546c4c03bddce861",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/BG_CH_WAKABA_CUBE_001_basecolor.png.import"
+        },
+        {
+          "sha256": "477226a679d5ca46d4101dc542dfbf93089e7bf0936841172c0eda86cc4ec3c2",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/source_eyes_v13.png"
+        },
+        {
+          "sha256": "3019f7e34b8695ec427c32f633719bb2b628250267e67d7130209b53fb66b04a",
+          "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/source_eyes_v13.png.import"
+        },
+        {
+          "sha256": "72131306c53a55075df43f1f8ff95762ffb53dc176fbb26619716cbcfc1c2bd4",
+          "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd"
+        },
+        {
+          "sha256": "f053418410686f1347ef68c5392ff2023340fbb1b79b99f390ab20b47f50daca",
+          "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd.uid"
+        },
+        {
+          "sha256": "dfb3a92472e454033eddde3156e59e3d52d1ff19c1d4a90aac9268224b7a1553",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd"
+        },
+        {
+          "sha256": "9e58fe40b935ac0ec15c11c072aa6c6f274dd463af94a2583cfab2fc74ac278e",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd.uid"
+        },
+        {
+          "sha256": "89d0eba5aae1f7f130ed6bbf44ec1635d108a347a6059e38c82f6d4a04083407",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd"
+        },
+        {
+          "sha256": "df9eec9a499bed24af698e356fabb9d9f214f29ffe0f29f3887ebd32a75b9451",
+          "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd.uid"
+        },
+        {
+          "sha256": "51f484881dde10d951c1de30859acdd1dd1044ae1047a002a2cbf95ef16f724c",
+          "path": "tests/beta_sprint/game_feel_owner_10a/run.ps1"
+        },
+        {
+          "sha256": "fecd115d31bd311fd5d430094c9a3697a5225633f91f8341005d08791ceee9c2",
+          "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd"
+        },
+        {
+          "sha256": "a4fedbb77aa7ada931787bc993ddab1cdb7db1e6f8e362a8ec20295d53bf224f",
+          "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd.uid"
+        }
+      ],
+      "source_binding": "MATCH unchanged tested source bytes",
+      "process_sha256": "60ec4e7c24de6bd232c23637a809dba5008ad3cb33419186e44e67ae77dbfbbb"
+    }
+  ],
+  "dependency_observation": {
+    "integration_head": "6fe974c98747bb99be2bd8f2594dbf392172ccd7",
+    "integration_presenter_exists": false,
+    "integration_host_exists": false,
+    "runtime_observed_head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+    "runtime_observed_dirty": [
+      " M foundation/contracts/contract_records.gd",
+      " M foundation/contracts/contract_validation.gd",
+      " M foundation/contracts/foundation_types.gd",
+      " M foundation/contracts/state_key.gd",
+      " M foundation/level/level_codec.gd",
+      " M foundation/rules/puzzle_rule_kernel.gd",
+      " M foundation/validation/safety_queries.gd",
+      "?? docs/beta-sprint/game-feel-owner-01/",
+      "?? foundation/game_feel/",
+      "?? tests/beta_sprint/game_feel_owner_01/"
+    ],
+    "observed_safety_source_sha256": "50bb12f7c7db5abfcc63b659ee59eb17a790eceb076677602975450dd2abe7f4",
+    "formal_dependency_delivery_sha": null
+  },
+  "formal_cases": [
+    {
+      "checks": 0,
+      "status": "case_pending",
+      "dependency_delivery_sha": null,
+      "case": "MAP_A_legal_fall"
+    },
+    {
+      "checks": 0,
+      "status": "case_pending",
+      "dependency_delivery_sha": null,
+      "case": "MAP_B_legal_fall"
+    },
+    {
+      "checks": 0,
+      "status": "case_pending",
+      "dependency_delivery_sha": null,
+      "case": "natural_commit_landing_continue_MOVE"
+    },
+    {
+      "checks": 0,
+      "status": "case_pending",
+      "dependency_delivery_sha": null,
+      "case": "Runtime_Orientation_StateKey"
+    },
+    {
+      "checks": 0,
+      "status": "case_pending",
+      "dependency_delivery_sha": null,
+      "case": "Reset_Pause_Exit_InputSpam"
+    }
+  ],
+  "review": {
+    "critical": 0,
+    "important": 0
+  },
+  "push": "NOT_RUN"
+}

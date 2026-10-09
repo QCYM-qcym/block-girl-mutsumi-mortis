@@ -29,7 +29,7 @@ func begin(event: Dictionary) -> Dictionary:
 			if not point is Vector3i: issues.append({"path": "event.authorized_path_points2", "message": "Expected Vector3i half-unit positions."})
 	if not State.frame_valid(event.get("source_frame")):
 		issues.append({"path": "event.source_frame", "message": "Canonical source frame required."})
-	if event.get("safety_verdict") != "SAFE" or not State.text(event.get("connection_id")) or not State.text(event.get("motion_profile_id")) or not State.text(event.get("motion_profile_hash")):
+	if not State.text(event.get("connection_id")) or not State.text(event.get("motion_profile_id")) or not State.text(event.get("motion_profile_hash")) or not State.safe_attestation(event):
 		issues.append({"path": "event.motion_profile", "message": "Explicit SAFE attestation and profile identity required; animation never supplies proof."})
 	var duration: Variant = event.get("presentation_duration_seconds")
 	if not (duration is float or duration is int) or not is_finite(float(duration)) or float(duration) <= 0.0 or float(duration) > 30.0:

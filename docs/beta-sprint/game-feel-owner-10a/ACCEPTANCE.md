@@ -2,6 +2,8 @@
 
 2026-10-10. Branch feat/pfall-animation; contract baseline 2938d6e534f5b596bb320ce79d72b69f5923f3cd. Push NOT_RUN.
 
+Continuation: [structured Owner01 Safety DTO compatibility](CONTINUATION_01.md) is implemented and freshly verified (Unit 2011/0, private graphical 253/0). The original evidence counts and delivery receipt below refer to the original delivery and are retained unchanged. Formal integrated cases remain pending for the actual Runtime facade/00 host.
+
 Implemented: independent FallMotion, LandingMotion, FallVisualState and configurable MotionParameters. No shared Presenter, real Actor, Runtime, Camera, Gameplay event bus, Save, InputMap or project.godot edits. Modules only return visual samples. Anticipation/departure/main fall/committed impact/damped rebound/settle are continuous and deterministic; every cleared or settled offset is exact neutral. Experimental defaults are not formal art acceptance.
 
 | Case | Owner-local result | Formal integrated result |
