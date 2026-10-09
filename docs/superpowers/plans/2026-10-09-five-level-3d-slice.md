@@ -44,21 +44,21 @@
 **Consumes:** accepted Presenter.bind(graph,mover,view,content),sync(delta),reset_visuals(),approvedassets and native Content state.
 **Produces:** presentation factory _create_presenter()->Node3D and actual scene entries, without new Runtime semantics.
 
-- [ ] Add meaningful presentation coverage/parity assertions; record the baseline missing L05 connection cue/incorrect L04Exit orientation before change.
-- [ ] Implement batch-local asset layout and real mechanism observations, retaining inherited roll/camera/Shift/occlusion and allgameplay.
-- [ ] Run real graphical normal/Reset/alternate-camera full routes for bothlevels and exact retainedPixel parity; inspect actualscreens and naturaltransition samples.
-- [ ] Verify nativeGoal/Shellreturn/unlock/persistence and unchangedresource/Art/Foundation SHA; commit preciseOwner candidate/CLEAN.
-- [ ] Fresh independent scope/spec/code/evidence review; repair actual defects before00 merge.
+- [x] Add meaningful presentation coverage/parity assertions; record the baseline missing L05 connection cue/incorrect L04Exit orientation before change.
+- [x] Implement batch-local asset layout and real mechanism observations, retaining inherited roll/camera/Shift/occlusion and allgameplay.
+- [x] Run real graphical normal/Reset/alternate-camera full routes for bothlevels and exact retainedPixel parity; inspect actualscreens and naturaltransition samples.
+- [x] Verify nativeGoal/Shellreturn/unlock/persistence and unchangedresource/Art/Foundation SHA; commit preciseOwner candidate/CLEAN.
+- [x] Fresh independent scope/spec/code/evidence review; repair actual defects before00 merge.
 
 ### 3.06 L06 design
 
-- [ ] Read and review06 complete objective/mechanisms/difficulty/route/recovery design and actualcommit; no L04/L05/gameplay changes.
-- [ ] Normalmerge design history when delivered; missingfutureL06implementation does not block current3D.
+- [x] Read and review06 complete objective/mechanisms/difficulty/route/recovery design and actualcommit; no L04/L05/gameplay changes.
+- [x] Normalmerge design history when delivered; missingfutureL06implementation does not block current3D.
 
 ### 4.00 focused integration and new build
 
-- [ ] AuditOwnerunique diff and normalbatchmerge within thisintegrationwindow. Keep mainintegration runnable.
-- [ ] Focused currentL01/L02/L03 3D regressions, newL04/L05 formalmenu smokes, realunlock/Save/Continue; avoid unchangedUIresolutionmatrix repetition.
+- [x] AuditOwnerunique diff and normalbatchmerge within thisintegrationwindow. Keep mainintegration runnable.
+- [x] Focused currentL01/L02/L03 3D regressions, newL04/L05 formalmenu smokes, realunlock/Save/Continue; avoid unchangedUIresolutionmatrix repetition.
 - [ ] Use existing sourcebuilder through a new00wrapper to create the namedfive-level3D QA candidate; preserve underlyingknownbaseline logs and originalpre-handoff archives. Record actualsource,1270+/actualcopiedSHA,engine,ZIP,stages and startup.
 - [ ] Verify exactoldQA/frozenproduction/sourcepayload preservation, finalReview and fileSHA; commitdocs-onlyreceipt and verifyrealHEAD/CLEAN.
 - [ ] Handoff exactnewsource/ZIP/receipt to08 for changed3D routes,Reset,normalprogression,ColdContinue and necessaryUIfocusedchecks. HumanQA NOT_RUN until actual08result.
