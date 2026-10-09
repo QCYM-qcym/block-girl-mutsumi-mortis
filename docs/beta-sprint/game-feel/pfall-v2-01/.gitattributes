@@ -1,0 +1,4 @@
+# Preserve raw process evidence byte-for-byte, including engine-emitted blank lines.
+*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.log binary
+*.png binary

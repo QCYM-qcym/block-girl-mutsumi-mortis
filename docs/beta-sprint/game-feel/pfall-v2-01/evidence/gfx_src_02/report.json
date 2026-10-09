@@ -1,0 +1,3518 @@
+{
+	"authoritative_runtime": true,
+	"authority": "real default formal Runtime + Owner09 map + real10A +00 natural SceneTree bridge; no manual Fall finish",
+	"captures": [
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_a_source.png",
+			"phase": "IDLE",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_a_fall_1.png",
+			"phase": "FALL",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_a_landed.png",
+			"phase": "IDLE",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_a_fall_3.png",
+			"phase": "FALL",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_b_source.png",
+			"phase": "IDLE",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_b_fall_5.png",
+			"phase": "FALL",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_b_landed.png",
+			"phase": "IDLE",
+			"width": 1152
+		},
+		{
+			"height": 648,
+			"path": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/map_b_fall_7.png",
+			"phase": "FALL",
+			"width": 1152
+		}
+	],
+	"checks": 62,
+	"display": "Windows",
+	"doubles": [],
+	"failures": [],
+	"human_qa": "NOT_RUN",
+	"pid": 21960,
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"input": "Godot Input.parse_input_event routed through actual Host; OS/human input NOT_RUN",
+			"map": "a",
+			"samples": [
+				{
+					"actor": "[X: (0.999268, 0.038254, 0.000732), Y: (-0.038254, 0.998536, 0.038254), Z: (0.000732, -0.038254, 0.999268), O: (0.0, 3.0, 0.0)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 200.5148)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2311
+				},
+				{
+					"actor": "[X: (0.998437, 0.055875, 0.001563), Y: (-0.055875, 0.996873, 0.055875), Z: (0.001563, -0.055875, 0.998437), O: (0.0, 3.0, 0.0)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 200.5148)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2325
+				},
+				{
+					"actor": "[X: (0.998105, 0.061498, 0.001895), Y: (-0.061498, 0.996211, 0.061498), Z: (0.001895, -0.061498, 0.998105), O: (0.0, 3.0, 0.0)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 200.5148)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2339
+				},
+				{
+					"actor": "[X: (0.998289, 0.05845, 0.001711), Y: (-0.05845, 0.996578, 0.05845), Z: (0.001711, -0.05845, 0.998289), O: (-0.097774, 3.0, 0.097774)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 204.9052)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2360
+				},
+				{
+					"actor": "[X: (0.999031, 0.044004, 0.000969), Y: (-0.044004, 0.998062, 0.044004), Z: (0.000969, -0.044004, 0.999031), O: (-0.250855, 3.0, 0.250855)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 211.7791)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2373
+				},
+				{
+					"actor": "[X: (0.999584, 0.028832, 0.000416), Y: (-0.028832, 0.999168, 0.028832), Z: (0.000416, -0.028832, 0.999584), O: (-0.370351, 3.0, 0.370351)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 217.1449)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2394
+				},
+				{
+					"actor": "[X: (0.999999, 0.001046, 0.000001), Y: (-0.001046, 0.999999, 0.001046), Z: (0.000001, -0.001046, 0.999999), O: (-0.655025, 3.0, 0.655025)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 229.9279)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2455
+				},
+				{
+					"actor": "[X: (0.999999, 0.001046, 0.000001), Y: (-0.001046, 0.999999, 0.001046), Z: (0.000001, -0.001046, 0.999999), O: (-0.655025, 3.0, 0.655025)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 229.9279)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2455
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.757606, 3.0, 0.757606)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 234.5341)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2456
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.778349, 3.0, 0.778349)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 235.4656)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2457
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.778594, 3.0, 0.778594)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 235.4766)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2478
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.815778, 3.0, 0.815778)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 237.1463)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2492
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.863464, 3.0, 0.863464)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 239.2876)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2506
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.925325, 3.0, 0.925325)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 242.0653)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2526
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.005553, 3.0, 1.005553)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 245.6679)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2540
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.098446, 3.0, 1.098446)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 249.8391)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2561
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.204003, 3.0, 1.204003)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 254.579)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2575
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.322225, 3.0, 1.322225)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 259.8877)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2589
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.453118, 3.0, 1.453118)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 265.7652)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2610
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.596689, 3.0, 1.596689)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 272.212)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2623
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.752924, 3.0, 1.752924)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 279.2276)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2644
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.921824, 3.0, 1.921824)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 286.8119)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2658
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.103388, 3.0, 2.103388)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 294.9648)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2672
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.281014, 3.0, 2.281014)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 302.9408)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2693
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.486873, 3.0, 2.486873)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 312.1846)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2707
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.705397, 3.0, 2.705397)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 321.9972)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2728
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.936585, 3.0, 2.936585)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 332.3784)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2742
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.104176, 2.791648, 3.104176)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 346.9207)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2756
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.252276, 2.495447, 3.252276)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 363.5464)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2776
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.407689, 2.184623, 3.407689)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 380.9929)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2790
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.570421, 1.859158, 3.570421)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 399.2611)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2811
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.740468, 1.519063, 3.740468)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 418.3505)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2825
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.917828, 1.164345, 3.917828)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 438.2607)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2839
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2860
+				},
+				{
+					"actor": "[X: (1.005228, 0.0, 0.0), Y: (0.0, 0.989626, 0.0), Z: (0.0, 0.0, 1.005228), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2873
+				},
+				{
+					"actor": "[X: (1.016428, 0.0, 0.0), Y: (0.0, 0.967936, 0.0), Z: (0.0, 0.0, 1.016428), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2894
+				},
+				{
+					"actor": "[X: (1.026479, 0.0, 0.0), Y: (0.0, 0.949074, 0.0), Z: (0.0, 0.0, 1.026479), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2908
+				},
+				{
+					"actor": "[X: (1.02353, 0.0, 0.0), Y: (0.0, 0.95455, 0.0), Z: (0.0, 0.0, 1.02353), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2922
+				},
+				{
+					"actor": "[X: (1.012466, 0.0, 0.0), Y: (0.0, 0.975526, 0.0), Z: (0.0, 0.0, 1.012466), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2943
+				},
+				{
+					"actor": "[X: (1.004732, 0.0, 0.0), Y: (0.0, 0.990602, 0.0), Z: (0.0, 0.0, 1.004732), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2957
+				},
+				{
+					"actor": "[X: (1.000181, 0.0, 0.0), Y: (0.0, 0.999638, 0.0), Z: (0.0, 0.0, 1.000181), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2978
+				},
+				{
+					"actor": "[X: (0.998071, 0.0, 0.0), Y: (0.0, 1.003869, 0.0), Z: (0.0, 0.0, 0.998071), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 2992
+				},
+				{
+					"actor": "[X: (0.997533, 0.0, 0.0), Y: (0.0, 1.004952, 0.0), Z: (0.0, 0.0, 0.997533), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3006
+				},
+				{
+					"actor": "[X: (0.997824, 0.0, 0.0), Y: (0.0, 1.004367, 0.0), Z: (0.0, 0.0, 0.997824), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3026
+				},
+				{
+					"actor": "[X: (0.998416, 0.0, 0.0), Y: (0.0, 1.003175, 0.0), Z: (0.0, 0.0, 0.998416), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3040
+				},
+				{
+					"actor": "[X: (0.999006, 0.0, 0.0), Y: (0.0, 1.001992, 0.0), Z: (0.0, 0.0, 0.999006), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3061
+				},
+				{
+					"actor": "[X: (0.999458, 0.0, 0.0), Y: (0.0, 1.001085, 0.0), Z: (0.0, 0.0, 0.999458), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3075
+				},
+				{
+					"actor": "[X: (0.999748, 0.0, 0.0), Y: (0.0, 1.000503, 0.0), Z: (0.0, 0.0, 0.999748), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3089
+				},
+				{
+					"actor": "[X: (0.999906, 0.0, 0.0), Y: (0.0, 1.000187, 0.0), Z: (0.0, 0.0, 0.999906), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3110
+				},
+				{
+					"actor": "[X: (0.999977, 0.0, 0.0), Y: (0.0, 1.000046, 0.0), Z: (0.0, 0.0, 0.999977), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3124
+				},
+				{
+					"actor": "[X: (1.000001, 0.0, 0.0), Y: (0.0, 0.999999, 0.0), Z: (0.0, 0.0, 1.000001), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3144
+				},
+				{
+					"actor": "[X: (1.000004, 0.0, 0.0), Y: (0.0, 0.999992, 0.0), Z: (0.0, 0.0, 1.000004), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3158
+				},
+				{
+					"actor": "[X: (1.000002, 0.0, 0.0), Y: (0.0, 0.999997, 0.0), Z: (0.0, 0.0, 1.000002), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3172
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3193
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 1.0, 4.0)]",
+					"commits": 1,
+					"phase": "IDLE",
+					"screen": "(576.0, 447.4854)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 3207
+				}
+			],
+			"source": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 3.0, 0.0)]",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_path_points2": [
+					"(0, 6, 0)",
+					"(-2, 6, 2)",
+					"(-6, 6, 6)",
+					"(-8, 2, 8)"
+				],
+				"camera_quadrant": 1,
+				"connection_id": "pfall_a",
+				"contract_version": "game_feel.event.v1",
+				"event_id": 1,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "3ab24c3b0bfdea8a080acdc6440d4f00",
+				"motion_profile_hash": "9d606bccecd4741b40f6262e408fdd285f97b3fa55e3080ea47e3f4a65f01070",
+				"motion_profile_id": "pfall_a_edge_clear_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 2,
+					"level_run_id": "3ab24c3b0bfdea8a080acdc6440d4f00",
+					"session_id": "8836e46d3acefbddb286b21607b9ce0b"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"connection_id": "pfall_a",
+						"kind": 8
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_a",
+						"kind": "exact_linear_cube_sweep.v1",
+						"level_hash": "f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772",
+						"profile_hash": "9d606bccecd4741b40f6262e408fdd285f97b3fa55e3080ea47e3f4a65f01070",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 1,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "8836e46d3acefbddb286b21607b9ce0b",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 2,
+					"is_global": false,
+					"level_run_id": "3ab24c3b0bfdea8a080acdc6440d4f00",
+					"session_id": "8836e46d3acefbddb286b21607b9ce0b",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"target": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 1.0, 4.0)]"
+		},
+		{
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"input": "Godot Input.parse_input_event routed through actual Host; OS/human input NOT_RUN",
+			"map": "b",
+			"samples": [
+				{
+					"actor": "[X: (0.999059, 0.043367, 0.000941), Y: (-0.043367, 0.998118, 0.043367), Z: (0.000941, -0.043367, 0.999059), O: (0.0, 3.0, 0.0)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 267.8704)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6540
+				},
+				{
+					"actor": "[X: (0.998493, 0.05486, 0.001507), Y: (-0.05486, 0.996986, 0.05486), Z: (0.001507, -0.05486, 0.998493), O: (0.0, 3.0, 0.0)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 267.8704)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6561
+				},
+				{
+					"actor": "[X: (0.998105, 0.061512, 0.001895), Y: (-0.061512, 0.996209, 0.061512), Z: (0.001895, -0.061512, 0.998105), O: (-0.016918, 3.0, 0.016918)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 268.63)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6575
+				},
+				{
+					"actor": "[X: (0.998421, 0.056145, 0.001579), Y: (-0.056145, 0.996843, 0.056145), Z: (0.001579, -0.056145, 0.998421), O: (-0.122858, 3.0, 0.122858)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 273.3872)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6589
+				},
+				{
+					"actor": "[X: (0.999004, 0.044618, 0.000996), Y: (-0.044618, 0.998007, 0.044618), Z: (0.000996, -0.044618, 0.999004), O: (-0.231006, 3.0, 0.231006)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 278.2434)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6610
+				},
+				{
+					"actor": "[X: (0.999694, 0.024733, 0.000306), Y: (-0.024733, 0.999388, 0.024733), Z: (0.000306, -0.024733, 0.999694), O: (-0.378068, 3.0, 0.378068)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 284.8471)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6624
+				},
+				{
+					"actor": "[X: (1.0, 0.000436, 0.0), Y: (-0.000436, 1.0, 0.000436), Z: (0.0, -0.000436, 1.0), O: (-0.634485, 3.0, 0.634485)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 296.3611)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6684
+				},
+				{
+					"actor": "[X: (1.0, 0.000436, 0.0), Y: (-0.000436, 1.0, 0.000436), Z: (0.0, -0.000436, 1.0), O: (-0.634485, 3.0, 0.634485)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 296.3611)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6684
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.708024, 3.0, 0.708024)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 299.6633)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6685
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.726708, 3.0, 0.726708)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 300.5023)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6693
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.729124, 3.0, 0.729124)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 300.6107)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6707
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.761955, 3.0, 0.761955)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 302.085)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6728
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.815361, 3.0, 0.815361)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 304.4832)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6742
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.880675, 3.0, 0.880675)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 307.416)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6756
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-0.957759, 3.0, 0.957759)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 310.8774)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6776
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.038278, 3.038278, 1.038278)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 313.2039)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6790
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.120776, 3.120776, 1.120776)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 314.13)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6811
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.212996, 3.212996, 1.212996)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 315.1653)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6825
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.31494, 3.31494, 1.31494)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 316.3096)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6839
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.426606, 3.426606, 1.426606)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 317.5631)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6860
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.547996, 3.547996, 1.547996)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 318.9259)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6874
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.679113, 3.679113, 1.679113)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 320.3978)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6894
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.819964, 3.819964, 1.819964)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 321.979)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6908
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.970539, 3.970539, 1.970539)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 323.6693)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6922
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.117718, 4.117718, 2.117718)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 325.3216)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6943
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.286962, 4.286962, 2.286962)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 327.2215)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6957
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.46593, 4.46593, 2.46593)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 329.2306)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6978
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.654635, 4.654635, 2.654635)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 331.3489)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 6992
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-2.853063, 4.853063, 2.853063)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 333.5764)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7006
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.074972, 5.0, 3.074972)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 338.5925)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7026
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.341812, 5.0, 3.341812)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 350.5746)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7040
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.620561, 5.0, 3.620561)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 363.0915)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7061
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-3.911218, 5.0, 3.911218)]",
+					"commits": 0,
+					"phase": "FALL",
+					"screen": "(576.0, 376.1431)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7075
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7089
+				},
+				{
+					"actor": "[X: (1.005228, 0.0, 0.0), Y: (0.0, 0.989626, 0.0), Z: (0.0, 0.0, 1.005228), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7110
+				},
+				{
+					"actor": "[X: (1.016428, 0.0, 0.0), Y: (0.0, 0.967936, 0.0), Z: (0.0, 0.0, 1.016428), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7124
+				},
+				{
+					"actor": "[X: (1.026479, 0.0, 0.0), Y: (0.0, 0.949074, 0.0), Z: (0.0, 0.0, 1.026479), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7144
+				},
+				{
+					"actor": "[X: (1.02353, 0.0, 0.0), Y: (0.0, 0.95455, 0.0), Z: (0.0, 0.0, 1.02353), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7158
+				},
+				{
+					"actor": "[X: (1.012466, 0.0, 0.0), Y: (0.0, 0.975526, 0.0), Z: (0.0, 0.0, 1.012466), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7172
+				},
+				{
+					"actor": "[X: (1.004745, 0.0, 0.0), Y: (0.0, 0.990577, 0.0), Z: (0.0, 0.0, 1.004745), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7193
+				},
+				{
+					"actor": "[X: (1.000188, 0.0, 0.0), Y: (0.0, 0.999624, 0.0), Z: (0.0, 0.0, 1.000188), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7207
+				},
+				{
+					"actor": "[X: (0.998073, 0.0, 0.0), Y: (0.0, 1.003864, 0.0), Z: (0.0, 0.0, 0.998073), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7228
+				},
+				{
+					"actor": "[X: (0.997533, 0.0, 0.0), Y: (0.0, 1.004951, 0.0), Z: (0.0, 0.0, 0.997533), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7242
+				},
+				{
+					"actor": "[X: (0.997823, 0.0, 0.0), Y: (0.0, 1.004369, 0.0), Z: (0.0, 0.0, 0.997823), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7256
+				},
+				{
+					"actor": "[X: (0.998415, 0.0, 0.0), Y: (0.0, 1.003177, 0.0), Z: (0.0, 0.0, 0.998415), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7276
+				},
+				{
+					"actor": "[X: (0.999005, 0.0, 0.0), Y: (0.0, 1.001994, 0.0), Z: (0.0, 0.0, 0.999005), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7290
+				},
+				{
+					"actor": "[X: (0.999457, 0.0, 0.0), Y: (0.0, 1.001087, 0.0), Z: (0.0, 0.0, 0.999457), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7311
+				},
+				{
+					"actor": "[X: (0.999748, 0.0, 0.0), Y: (0.0, 1.000504, 0.0), Z: (0.0, 0.0, 0.999748), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7325
+				},
+				{
+					"actor": "[X: (0.999906, 0.0, 0.0), Y: (0.0, 1.000188, 0.0), Z: (0.0, 0.0, 0.999906), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7339
+				},
+				{
+					"actor": "[X: (0.999977, 0.0, 0.0), Y: (0.0, 1.000046, 0.0), Z: (0.0, 0.0, 0.999977), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7360
+				},
+				{
+					"actor": "[X: (1.000001, 0.0, 0.0), Y: (0.0, 0.999999, 0.0), Z: (0.0, 0.0, 1.000001), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7373
+				},
+				{
+					"actor": "[X: (1.000004, 0.0, 0.0), Y: (0.0, 0.999992, 0.0), Z: (0.0, 0.0, 1.000004), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7394
+				},
+				{
+					"actor": "[X: (1.000002, 0.0, 0.0), Y: (0.0, 0.999997, 0.0), Z: (0.0, 0.0, 1.000002), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7408
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "LANDING",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7422
+				},
+				{
+					"actor": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 5.0, 4.0)]",
+					"commits": 1,
+					"phase": "IDLE",
+					"screen": "(576.0, 380.1298)",
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_ms": 7443
+				}
+			],
+			"source": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 3.0, 0.0)]",
+			"started": {
+				"attempt_id": 16,
+				"authoritative_final_orientation": 0,
+				"authorized_path_points2": [
+					"(0, 6, 0)",
+					"(-2, 6, 2)",
+					"(-6, 10, 6)",
+					"(-8, 10, 8)"
+				],
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v1",
+				"event_id": 20,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "42419d8c59ac4e8db5049dfdd626c382",
+				"motion_profile_hash": "c2b731a0976c69d54e0dbe4db113a16fbca79de92da8a3384458f79e892f1bbc",
+				"motion_profile_id": "pfall_b_edge_clear_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 16,
+					"generation": 8,
+					"level_run_id": "42419d8c59ac4e8db5049dfdd626c382",
+					"session_id": "8836e46d3acefbddb286b21607b9ce0b"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"connection_id": "pfall_b",
+						"kind": 8
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "exact_linear_cube_sweep.v1",
+						"level_hash": "ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4",
+						"profile_hash": "c2b731a0976c69d54e0dbe4db113a16fbca79de92da8a3384458f79e892f1bbc",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 1,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "8836e46d3acefbddb286b21607b9ce0b",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 8,
+					"is_global": false,
+					"level_run_id": "42419d8c59ac4e8db5049dfdd626c382",
+					"session_id": "8836e46d3acefbddb286b21607b9ce0b",
+					"transaction_id": 11
+				},
+				"world_id": 0
+			},
+			"target": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-4.0, 5.0, 4.0)]"
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-v2-01/evidence/gfx_src_02/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}
