@@ -42,7 +42,7 @@ func run() -> void:
 	for entry in shell.catalog.entries:
 		ids.append(entry.id)
 		check(entry.adapter == "p01" and shell.catalog.is_available(entry.id), "registered Content Scene loads through p01 " + entry.id)
-	check(ids == LEVEL_IDS, "Content catalog has exact three stable ids in order")
+	check(ids.slice(0, LEVEL_IDS.size()) == LEVEL_IDS, "Content catalog retains the original three stable ids as its prefix")
 	if not failures.is_empty():
 		await finish(false)
 		return
@@ -154,15 +154,22 @@ func restored_process() -> void:
 	await route_l03("normal")
 	await delay(0.25)
 	check_completion(LEVEL_IDS[2], 2)
-	check(shell.progress.completed == LEVEL_IDS and shell.view.buttons["next"].disabled and shell.catalog.next_id(LEVEL_IDS[2]).is_empty(), "CASE6 final completion has no Next")
+	var successor: String = shell.catalog.next_id(LEVEL_IDS[2])
+	var expected_unlocked := LEVEL_IDS.duplicate()
+	var has_next: bool = not successor.is_empty() and shell.catalog.is_available(successor)
+	if has_next:
+		expected_unlocked.append(successor)
+	check(shell.progress.completed == LEVEL_IDS and shell.progress.unlocked == expected_unlocked and shell.view.buttons["next"].disabled == (not has_next), "CASE6 original-three completion unlocks the actual available successor and binds Next")
 	await shot("ui_07_complete_final")
 	var saved: Dictionary = shell.store.load_save()
-	check(saved.completed == LEVEL_IDS and saved.unlocked == LEVEL_IDS and saved.recent == LEVEL_IDS[2], "CASE6 all completion progress persisted")
+	check(saved.completed == LEVEL_IDS and saved.unlocked == expected_unlocked and saved.recent == LEVEL_IDS[2], "CASE6 original-three completion and actual successor persisted")
 	await button("select")
 	for id in LEVEL_IDS:
 		check(not shell.view.buttons["level:" + id].disabled and shell.view.buttons["level:" + id].text.ends_with("已通关"), "CASE6 select shows completed playable entry " + id)
+	if has_next:
+		check(shell.view.buttons.has("level:" + successor) and not shell.view.buttons["level:" + successor].disabled and not shell.view.buttons["level:" + successor].text.ends_with("已通关"), "CASE6 actual successor is unlocked but not marked completed")
 	await shot("ui_08_select_all_completed")
-	cases.append("CASE6 L02 L03 completion and final selection")
+	cases.append("CASE6 L02 L03 completion and original-three selection")
 	await finish(false)
 
 func check_at_spawn(label: String) -> void:

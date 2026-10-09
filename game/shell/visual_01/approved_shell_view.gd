@@ -40,6 +40,7 @@ var _settings_source := ""
 var _page_tween: Tween
 var _status_tween: Tween
 var _note: Label
+var _select_scroll: ScrollContainer
 
 func _ready() -> void:
 	layer = 100
@@ -73,6 +74,11 @@ func _ready() -> void:
 	_identity = _label(_content, "MUTSUMI VEILSHIFT", 20)
 	heading = _label(_content, "", 56, true)
 	_subtitle = _label(_content, "", 24)
+	_select_scroll = ScrollContainer.new()
+	_select_scroll.follow_focus = true
+	_select_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_select_scroll.visible = false
+	_content.add_child(_select_scroll)
 	body = VBoxContainer.new()
 	body.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_content.add_child(body)
@@ -119,6 +125,7 @@ func show_screen(name: String, data: Dictionary = {}) -> void:
 	_rows.clear()
 	_sliders_rows.clear()
 	_note = null
+	_select_scroll.scroll_vertical = 0
 	for child in body.get_children():
 		body.remove_child(child)
 		child.queue_free()
@@ -377,8 +384,19 @@ func _layout() -> void:
 	else:
 		_world_field.z_index = 0
 		_background.z_index = 0
-	body.position = Vector2(text_x, body_y)
-	body.size = Vector2(text_width, maxf(1, area.y - body_y - 96 * unit))
+	var list_area := Rect2(text_x, body_y, text_width, maxf(1, area.y - body_y - 96 * unit))
+	var extended_list: bool = screen == "select" and _data.get("entries", []).size() > 3
+	_select_scroll.visible = extended_list
+	var body_parent: Node = _select_scroll if extended_list else _content
+	if body.get_parent() != body_parent:
+		body.reparent(body_parent, false)
+	if extended_list:
+		_select_scroll.position = list_area.position
+		_select_scroll.size = list_area.size
+		body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	else:
+		body.position = list_area.position
+		body.size = list_area.size
 	body.add_theme_constant_override("separation", roundi((20 if screen == "main" else 32 if screen == "select" else 36 if compact else 5) * unit))
 	for spec in _label_specs:
 		var minimum := 16 if spec.size < 32 else 22
