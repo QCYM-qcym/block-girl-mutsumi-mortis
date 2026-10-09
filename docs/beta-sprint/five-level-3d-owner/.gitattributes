@@ -1,0 +1,4 @@
+# Evidence is an immutable byte record, including native Windows stdout and
+# process receipts. Do not normalize historical CRLF during Git integration.
+evidence/** -text
+*.json -text
