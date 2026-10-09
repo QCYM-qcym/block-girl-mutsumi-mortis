@@ -1,0 +1,52 @@
+{
+  "status": "PENDING",
+  "formal_API": "foundation/parity/trace_replayer.gd::replay(mode=1)",
+  "source_evidence": "E:\\godot\\worktrees\\block-girl-game-feel-quality\\docs\\beta-sprint\\game-feel-owner-03\\v2\\evidence\\formal_gfx_02",
+  "owner": "03 Quality",
+  "display": "Windows",
+  "renderer": "forward_plus",
+  "matched_steps": [
+    0,
+    0
+  ],
+  "issues": [
+    [
+      {
+        "code": 3016,
+        "details": {
+          "owner": "00+10A",
+          "required": "authorized path sampling + natural completion bridge"
+        },
+        "message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+        "path": "dependencies.GameFeelPresenter",
+        "severity": 0,
+        "upstream": []
+      }
+    ],
+    [
+      {
+        "code": 3016,
+        "details": {
+          "owner": "00+10A",
+          "required": "authorized path sampling + natural completion bridge"
+        },
+        "message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+        "path": "dependencies.GameFeelPresenter",
+        "severity": 0,
+        "upstream": []
+      }
+    ]
+  ],
+  "probe_checks": 11,
+  "probe_failures": [],
+  "checks_excluded_from_Full_Slice_PASS": true,
+  "owner_source_commit": "99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff",
+  "human_qa": "NOT_RUN",
+  "report_sha256": "ad7b425f545cfe23a623eb89b52a79d71eb636c7653f7017a67cd089402fb4bc",
+  "process_sha256": "729896ade3acf002735870c64a61394e671c5d98cabecda46137b72b8c0678de",
+  "revision": 2,
+  "prior_record": "GRAPHICAL_TRACE_PENDING_01.json (original omitted execution_head; raw evidence unchanged)",
+  "probe_exit_code": 0,
+  "probe_stderr_bytes": 0,
+  "probe_source_drift": []
+}
