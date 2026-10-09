@@ -54,7 +54,7 @@
 ## Task 3: Isolated QA build + receipt
 
 - [x] Verify protected files and current Main/Integration HEADs; retain all failed/successful evidence.
-- [ ] Generate fresh source playable build; reuse existing source build copier, provide isolated-save launcher and truthful import/boot evidence.
+- [x] Generate fresh source playable build; reuse existing source build copier, provide isolated-save launcher and truthful import/boot evidence.
 - [x] Preserve old08 source build/profile/report; do not execute or edit them.
-- [ ] Verify copied source hashes, record Files/SHA, receipt + 00/08 handoff, presentation status separate from Content quality and Human QA.
-- [ ] Final commit/docs hash verify, working tree CLEAN, Push NOT_RUN.
+- [x] Verify copied source hashes, record Files/SHA, receipt + 00/08 handoff, presentation status separate from Content quality and Human QA.
+- [x] Final commit/docs hash verify, working tree CLEAN, Push NOT_RUN.
