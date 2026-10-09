@@ -1,0 +1,33 @@
+{
+  "content_commit": "d4be39c76988e2face66d5f36be6e0c65fe9a169",
+  "source": "docs/beta-sprint/content-batch-02/REPORT.md: actual routes; validated natural-input delivery",
+  "scope": "Owner test input recipes only; no Content resource/solution/hint edits",
+  "routes": {
+    "mutsumi_l04": [
+      {"action":"move","direction":"UP"},
+      {"action":"move","direction":"LEFT"},
+      {"action":"shift"},
+      {"action":"move","direction":"UP","count":2},
+      {"action":"move","direction":"RIGHT","count":3},
+      {"action":"view","direction":"E"},
+      {"action":"move","direction":"RIGHT","count":2},
+      {"action":"shift"},
+      {"action":"move","direction":"RIGHT"},
+      {"action":"move","direction":"UP"}
+    ],
+    "mutsumi_l05": [
+      {"action":"move","direction":"UP","count":2},
+      {"action":"shift"},
+      {"action":"move","direction":"UP"},
+      {"action":"move","direction":"RIGHT"},
+      {"action":"shift"},
+      {"action":"move","direction":"UP","count":2},
+      {"action":"move","direction":"RIGHT","count":2},
+      {"action":"shift"},
+      {"action":"view","direction":"E"},
+      {"action":"move","direction":"RIGHT","count":3},
+      {"action":"shift"},
+      {"action":"move","direction":"RIGHT","count":2}
+    ]
+  }
+}
