@@ -6,6 +6,8 @@ Contract baseline: `2938d6e534f5b596bb320ce79d72b69f5923f3cd`. Owner code: `game
 
 Instantiate the CanvasLayer only in `experiments/game_feel_01/host/**`, leaving accepted Shell/HUD unchanged. Host calls bind_context(actual_session_id,actual_level_run_id) on binding/load and routes immutable game_feel_event to consume_event. Same-run repeat binding preserves deduplication. Reset/reload/exit must deliver the old scoped interruption or bind the new run before deferred cleanup.
 
+Phase pairing follows the committed contract: non-edge ACTION_FEEDBACK uses FEEDBACK (including MECHANISM_LOCKED); only typed MOVE_REJECTED_EDGE uses REJECTED. Native rejected status/code remains inside the copied result, separate from delivery phase. See FEEDBACK_CONTRACT_FIX.md for the corrected consumer and RED/GREEN.
+
 Open with open_settings(actual_saved_settings). Connect:
 
 - settings_preview(values) → delivered11 AudioDirector.apply_settings(values) and existing fullscreen lifecycle. Audio ignores fullscreen. Preview must not write Save.

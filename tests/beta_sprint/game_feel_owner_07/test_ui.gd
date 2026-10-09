@@ -60,6 +60,7 @@ func run() -> void:
 	if phase == "seed":
 		await settings_case()
 		await event_case()
+		feedback_contract_case()
 	else: await restore_case()
 	await finish()
 
@@ -153,7 +154,7 @@ func settings_case() -> void:
 func cue(event_id: int, semantic: String, phase_name: String, reason := "NONE", transaction := 5) -> Dictionary:
 	var source := {"location":{"layer":0,"cube_id":&"fixture_source","face":0},"orientation":0}
 	var target := {"location":{"layer":0,"cube_id":&"fixture_target","face":0},"orientation":0}
-	var rejected := phase_name == "REJECTED"
+	var rejected := semantic in ["MOVE_REJECTED_EDGE", "ACTION_FEEDBACK"]
 	return {"schema_version":1,"contract_version":"game_feel.event.v1","semantic":semantic,"phase":phase_name,
 		"event_id":event_id,"session_id":"unit_session","level_run_id":"unit_run","attempt_id":event_id,
 		"presentation_identity":null if rejected else {"session_id":"unit_session","level_run_id":"unit_run","generation":1,"attempt_id":transaction},
@@ -178,11 +179,11 @@ func event_case() -> void:
 	check(not ui.feedback_panel.visible, "matching committed Fall clears the temporary motion indicator")
 	ui.consume_event(cue(3,"MOVE_REJECTED_EDGE","REJECTED","EDGE"))
 	check(not ui.feedback_panel.visible, "ordinary typed edge rejection produces no blocked-road UI popup")
-	ui.consume_event(cue(4,"ACTION_FEEDBACK","REJECTED","BUSY"))
+	ui.consume_event(cue(4,"ACTION_FEEDBACK","FEEDBACK","BUSY"))
 	check(not ui.feedback_panel.visible, "Busy does not become edge, connection permission or a repeated popup")
 	ui.set_authored_hint("fixture key hint","existing authored optional explanation")
 	ui.set_accessibility({"reduced_motion":true,"hint_strength":2})
-	ui.consume_event(cue(5,"ACTION_FEEDBACK","REJECTED","MECHANISM_LOCKED"))
+	ui.consume_event(cue(5,"ACTION_FEEDBACK","FEEDBACK","MECHANISM_LOCKED"))
 	check(ui.feedback_panel.visible and not ui.detail_label.text.is_empty(), "explicit mechanism reason may show auxiliary explanation at player-selected strong hints")
 	ui.set_accessibility({"reduced_motion":false,"hint_strength":0})
 	check(not ui.detail_label.visible, "minimal hints hide optional stronger guidance")
@@ -208,13 +209,13 @@ func event_case() -> void:
 	malformed.presentation_identity.session_id = "different_session"
 	ui.consume_event(malformed)
 	check(not ui.feedback_panel.visible, "invalid presentation identity cannot authorize feedback")
-	ui.consume_event(cue(12,"ACTION_FEEDBACK","REJECTED","SAFETY_REJECTED"))
+	ui.consume_event(cue(12,"ACTION_FEEDBACK","FEEDBACK","SAFETY_REJECTED"))
 	check(not ui.feedback_panel.visible, "Safety rejection does not become permission or ordinary Edge popup")
 	ui.set_accessibility({"hint_strength":2,"reduced_motion":true})
-	ui.consume_event(cue(13,"ACTION_FEEDBACK","REJECTED","MECHANISM_LOCKED"))
+	ui.consume_event(cue(13,"ACTION_FEEDBACK","FEEDBACK","MECHANISM_LOCKED"))
 	ui.consume_event(cue(14,"MOVE_APPLIED_NORMAL","STARTED"))
 	check(not ui.feedback_panel.visible, "successful normal movement dismisses outdated mechanism feedback")
-	ui.consume_event(cue(15,"ACTION_FEEDBACK","REJECTED","MECHANISM_LOCKED"))
+	ui.consume_event(cue(15,"ACTION_FEEDBACK","FEEDBACK","MECHANISM_LOCKED"))
 	ui.set_authored_hint("", "")
 	check(not ui.feedback_panel.visible, "removed authored guidance clears its auxiliary mechanism panel")
 	ui.bind_context("unit_session","unit_run")
@@ -222,6 +223,26 @@ func event_case() -> void:
 	check(not ui.feedback_panel.visible, "repeated binding to the same run cannot reset deduplication")
 	ui.bind_context("unit_session","new_run")
 	check(ui.detail_label.text.is_empty() and ui.input_label.text.is_empty(), "new run clears prior authored hints instead of reusing another level's guidance")
+
+func feedback_contract_case() -> void:
+	ui.bind_context("unit_session", "feedback_contract_run")
+	ui.set_authored_hint("fixture key hint", "existing authored mechanism explanation")
+	ui.set_accessibility({"hint_strength":2,"reduced_motion":false})
+	var invalid := cue(1,"ACTION_FEEDBACK","REJECTED","MECHANISM_LOCKED")
+	invalid.level_run_id = "feedback_contract_run"
+	ui.consume_event(invalid)
+	check(not ui.feedback_panel.visible, "invalid ACTION_FEEDBACK/REJECTED phase does not show mechanism guidance")
+	# Clear any incorrect negative-case feedback before the independent positive assertion.
+	ui.set_accessibility({"hint_strength":1,"reduced_motion":false})
+	ui.set_accessibility({"hint_strength":2,"reduced_motion":false})
+	var feedback := cue(2,"ACTION_FEEDBACK","FEEDBACK","MECHANISM_LOCKED")
+	feedback.level_run_id = "feedback_contract_run"
+	var before := feedback.duplicate(true)
+	ui.consume_event(feedback)
+	check(ui.feedback_panel.visible and ui.detail_label.text == "existing authored mechanism explanation", "formal ACTION_FEEDBACK/FEEDBACK shows authored mechanism help at strong hints")
+	check(feedback == before, "formal FEEDBACK consumption preserves native rejected result and immutable event")
+	ui.set_accessibility({"hint_strength":1,"reduced_motion":false})
+	check(not ui.feedback_panel.visible, "formal mechanism feedback stays quiet at default hint strength")
 
 func restore_case() -> void:
 	check(FileAccess.file_exists(save_path) and AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "independent cold process loads actual saved Master mute")

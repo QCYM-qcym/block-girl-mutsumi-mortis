@@ -290,7 +290,7 @@ func consume_event(event: Dictionary) -> void:
 		status_label.text = "错视坠落中 · 操作暂锁"
 		_update_details()
 		feedback_panel.show()
-	elif semantic == "ACTION_FEEDBACK" and phase == "REJECTED" and event.get("reason_category") == "MECHANISM_LOCKED" and _active_identity.is_empty():
+	elif semantic == "ACTION_FEEDBACK" and phase == "FEEDBACK" and event.get("reason_category") == "MECHANISM_LOCKED" and _active_identity.is_empty():
 		if _options.hint_strength == 2 and not _hint.is_empty():
 			_mechanism_hint = true
 			status_label.text = "机制尚未开放"
