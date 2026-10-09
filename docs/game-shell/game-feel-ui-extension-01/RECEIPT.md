@@ -2,7 +2,7 @@
 
 GAME_FEEL_UI_EXTENSION_READY: **NOT_READY — required shared integration cases pending**.
 
-Latest increment: structured01 safety_verdict consumption, aligned with Runtime candidate26387d6c34a869ad7035ee13ee77d8d5c24d796a. See STRUCTURED_SAFETY_FIX.md. Current full Owner evidence owner07_structured_safety_green_01 passes180 checks with172 source files; scalar-fixture and previous169-check evidence remain historical. Current incremental source commit/binding is recorded after commit in DELIVERY_BINDING.json. No overall Real/Build/Human READY claim.
+Latest increment: structured01 safety_verdict consumption, aligned with Runtime candidate26387d6c34a869ad7035ee13ee77d8d5c24d796a. Source/fix commit: **492331fa27f6742d5133f3f4f3ab000e6a94a2f3**. See STRUCTURED_SAFETY_FIX.md. Full Owner evidence owner07_structured_safety_green_01 passes180 checks with172 files verified against committed/physical/tested bytes; scalar-fixture and prior169-check evidence remain historical. Current binding is DELIVERY_BINDING.json; the following commit contains binding/receipt metadata only. No overall Real/Build/Human READY claim.
 
 Incremental public-contract correction: ACTION_FEEDBACK now consumes phase FEEDBACK, while typed Edge retains REJECTED. Source/fix commit: **e7641bd280ce82f46db88d7f28940f24168528a6**. See FEEDBACK_CONTRACT_FIX.md. Latest full Owner evidence is owner07_feedback_contract_green_01:169 checks,172 source files, all checked against actual committed blobs/physical/tested bytes. Earlier165-check Audio delivery remains history. Current binding is DELIVERY_BINDING.json; the following commit contains binding/receipt metadata only. Overall integration/Human pending state is unchanged.
 
