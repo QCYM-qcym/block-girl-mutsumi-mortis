@@ -3,9 +3,11 @@ extends RefCounted
 const Data = preload("res://foundation/contracts/contract_validation.gd")
 const Types = preload("res://foundation/contracts/foundation_types.gd")
 const Code = Types.ValidationCode
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const ENUMS = {"layer": Types.WorldLayer, "face": Types.FaceDirection, "intent": Types.RotationIntent,
-	"compatibility": Types.FaceCompatibility, "axis": Types.FaceAxis, "kind": Types.PuzzleActionKind, "operation": Types.CelestialOp}
+	"compatibility": Types.FaceCompatibility, "axis": Types.FaceAxis, "kind": Types.PuzzleActionKind, "game_feel_kind":Types.GameFeelActionKind, "operation": Types.CelestialOp}
 const RECORDS = {
+	"fall_connection": Feel.CONNECTION_WIRE,
 	"level": {"schema_version":"int", "contract_version":"string", "orientation_version":"string", "rule_version":"string", "level_id":"name", "content_hash":"string", "cell_size":"int", "worlds":"array:world", "cubes":"array:cube", "faces":"array:face_record", "groups":"array:group", "celestial":"celestial", "mechanisms":"array:mechanism", "face_transitions":"array:transition", "shift_compatibilities":"array:compatibility", "spawn":"player", "goal":"goal", "flag_definitions":"array:flag", "build_info":"metadata"},
 	"world": {"layer":"layer", "pivot2":"coordinate", "initial_orientation":"int", "allowed_states":"array:int", "allowed_rotation_deltas":"array:int", "allowed_rotation_intents":"array:intent"},
 	"cube": {"cube_id":"name", "layer":"layer", "center2":"coordinate", "orientation":"int", "group_id":"name", "occludes_light":"bool", "tags":"array:name"},
@@ -23,14 +25,15 @@ const RECORDS = {
 	"flag": {"flag_id":"name", "initial_value":"bool"},
 }
 const ACTIONS = {
+	8:{"kind":"game_feel_kind","connection_id":"name"},9:{"kind":"game_feel_kind","camera_quadrant":"int"},
 	0: {"kind":"kind", "face_axis":"axis"}, 1: {"kind":"kind"},
 	2: {"kind":"kind", "rotation_delta":"int"}, 3: {"kind":"kind", "rotation_delta":"int"},
 	4: {"kind":"kind", "transition_id":"name"}, 5: {"kind":"kind", "mechanism_id":"name"},
 	6: {"kind":"kind", "group_id":"name", "rotation_delta":"int", "mechanism_id":"name"},
 	7: {"kind":"kind", "celestial_op":"operation", "target_slot_id":"name", "alternate_slot_id":"name", "mechanism_id":"name"},
 }
-const RECORD_ORDER = {"world":["layer"], "cube":["cube_id"], "face_record":["face_id"], "group":["group_id"], "slot":["slot_id"], "mechanism":["mechanism_id"], "transition":["transition_id"], "flag":["flag_id"], "rotation_edge":["from_orientation", "rotation_delta", "to_orientation"], "slot_edge":["from_slot_id", "to_slot_id"]}
-const SORTED_SETS = ["cube_ids", "mechanism_ids", "required_flags", "tags"]
+const RECORD_ORDER = {"fall_connection":["connection_id"],"world":["layer"], "cube":["cube_id"], "face_record":["face_id"], "group":["group_id"], "slot":["slot_id"], "mechanism":["mechanism_id"], "transition":["transition_id"], "flag":["flag_id"], "rotation_edge":["from_orientation", "rotation_delta", "to_orientation"], "slot_edge":["from_slot_id", "to_slot_id"]}
+const SORTED_SETS = ["allowed_camera_quadrants","allowed_world_orientations","cube_ids", "mechanism_ids", "required_flags", "tags"]
 
 static func encode(level: Dictionary) -> Dictionary:
 	var identity := compute_content_hash(level)
@@ -81,13 +84,14 @@ static func _to_wire(value: Variant, descriptor: String, field: String = "") -> 
 		if RECORD_ORDER.has(item_type):
 			source.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return _record_less(a, b, RECORD_ORDER[item_type]))
 		elif field in SORTED_SETS:
-			source.sort_custom(func(a: Variant, b: Variant) -> bool: return _less(String(a), String(b)))
+			source.sort_custom(func(a: Variant, b: Variant) -> bool: return a < b if a is int and b is int else _less(String(a), String(b)))
 		var output: Array = []
 		for item in source:
 			output.append(_to_wire(item, item_type))
 		return output
 	if RECORDS.has(descriptor) or descriptor == "action":
-		var schema: Dictionary = ACTIONS[value.kind] if descriptor == "action" else RECORDS[descriptor]
+		var schema: Dictionary = (ACTIONS[value.kind] if descriptor == "action" else RECORDS[descriptor]).duplicate()
+		if descriptor == "level" and Feel.enabled(value): schema.merge(Feel.LEVEL_WIRE)
 		var output := {}
 		for key in schema:
 			output[key] = _to_wire(value[key], schema[key], key)
@@ -107,10 +111,11 @@ static func _from_wire(value: Variant, descriptor: String, path: String, issues:
 			output.append(_from_wire(value[i], descriptor.substr(6), path + "[%d]" % i, issues))
 		return output
 	if (RECORDS.has(descriptor) or descriptor == "action") and value is Dictionary:
-		var schema: Dictionary = RECORDS.get(descriptor, {})
+		var schema: Dictionary = RECORDS.get(descriptor, {}).duplicate()
+		if descriptor == "level" and Feel.enabled(value): schema.merge(Feel.LEVEL_WIRE)
 		if descriptor == "action":
 			var symbol: Variant = value.get("kind")
-			var kind: int = Types.PuzzleActionKind.get(symbol, -1) if symbol is String else -1
+			var kind: int = Types.PuzzleActionKind.get(symbol,Types.GameFeelActionKind.get(symbol,-1)) if symbol is String else -1
 			schema = ACTIONS.get(kind, {"kind":"kind"})
 		var output := {}
 		for key in value:

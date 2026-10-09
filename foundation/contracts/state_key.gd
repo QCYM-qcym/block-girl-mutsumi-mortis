@@ -22,9 +22,12 @@ static func build(level: Dictionary, state: Dictionary) -> Dictionary:
 
 	# Spell out the frozen object order; Dictionary iteration never emits fields.
 	var location: Dictionary = state.player.location
-	var key := 'statekey.v1:{"level_hash":' + _quote(level.content_hash)
+	var prefix := "statekey.game_feel.v1" if level.schema_version == 2 else "statekey.v1"
+	var key := prefix + ':{"level_hash":' + _quote(level.content_hash)
 	key += ',"rule_version":' + _quote(level.rule_version)
-	key += ',"state":{"celestial":{"slot_id":' + _quote(String(state.celestial.slot_id)) + '}'
+	key += ',"state":{'
+	if level.schema_version == 2: key += '"camera_quadrant":' + str(state.camera_quadrant) + ','
+	key += '"celestial":{"slot_id":' + _quote(String(state.celestial.slot_id)) + '}'
 	key += ',"group_orientations":' + _map(state.group_orientations)
 	key += ',"level_flags":' + _map(state.level_flags)
 	key += ',"mechanism_states":' + _map(state.mechanism_states)

@@ -182,3 +182,18 @@ func _checked_transition(result: Dictionary, action: Dictionary) -> Dictionary:
 func _same_continuation(callback_generation: int, callback_serial: int, callback_global_id: int) -> bool:
 	return ready and generation == callback_generation and _serial == callback_serial and _global_id == callback_global_id
 
+
+func cancel_pending() -> void:
+	# Lifecycle cancellation preserves the last committed core state.
+	generation += 1
+	_clear_activity()
+
+func unload() -> void:
+	cancel_pending()
+	ready = false
+	state = {}
+	level = {}
+	last_result = {}
+
+func game_feel_description(before: Dictionary, action: Dictionary, result: Dictionary) -> Dictionary:
+	return _port.game_feel_description(level,before,action,result) if _port.has_method("game_feel_description") else {}

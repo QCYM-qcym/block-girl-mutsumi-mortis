@@ -12,6 +12,8 @@ const Connectivity = preload("res://foundation/rules/connectivity_resolver.gd")
 const Effects = preload("res://foundation/rules/mechanism_effects.gd")
 const Permission = preload("res://foundation/rules/transition_permission.gd")
 const Safety = preload("res://foundation/validation/safety_queries.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
+const Fall = preload("res://foundation/game_feel/fall_permission.gd")
 const Kind = Types.PuzzleActionKind
 const Global = Types.GlobalTransitionKind
 const Code = Types.ValidationCode
@@ -28,6 +30,10 @@ static func evaluate_action(level: Dictionary, state: Dictionary, action: Dictio
 	if not current.is_empty():
 		return current
 	if context.global_transition_state != Types.GlobalTransitionState.IDLE:
+		if Feel.enabled(level) and action.kind in [8,9]: return Rules.rejected(state,action,Code.GLOBAL_TRANSITION_BUSY)
+		if Feel.enabled(level) and action.kind == 0 and not Fall.connections(level,state,action.face_axis).is_empty():
+			var road := Connectivity.query_move(level,state,action.face_axis)
+			if road.ok and road.target_location == null: return Rules.rejected(state,action,Code.GLOBAL_TRANSITION_BUSY)
 		return Permission.evaluate(level, state, action, context, _evaluate_idle, _evaluate_trusted, Safety)
 	return _evaluate_idle(level, state, action)
 
@@ -69,7 +75,11 @@ static func _current(level: Dictionary, state: Dictionary, action: Dictionary) -
 
 
 static func _evaluate_idle(level: Dictionary, state: Dictionary, action: Dictionary) -> Dictionary:
-	return _transaction(level, state, action, false, &"USE", true)
+	if Feel.enabled(level) and action.kind in [8,9]: return Fall.evaluate(level,state,action)
+	var result := _transaction(level, state, action, false, &"USE", true)
+	if Feel.enabled(level) and action.kind == 0 and result.status == 1 and result.rejection_code == Reject.MOVE_BLOCKED and result.issues.is_empty() and not Fall.connections(level,state,action.face_axis).is_empty():
+		return Fall.evaluate(level,state,action)
+	return result
 
 
 static func _evaluate_trusted(level: Dictionary, state: Dictionary, action: Dictionary) -> Dictionary:
@@ -300,3 +310,13 @@ static func _quarter_axis(axis: Vector3i) -> int:
 			return Math.quarter_turn(component, axis[component])
 	assert(false, "A valid face movement defines a signed unit roll axis")
 	return -1
+
+
+static func game_feel_description(level: Dictionary, state: Dictionary, action: Dictionary, result: Dictionary) -> Dictionary:
+	if not Feel.enabled(level): return {}
+	var invalid_state := Data.validate_state_shape(level,state)
+	if not invalid_state.is_empty():
+		return {"semantic":"ACTION_FEEDBACK","reason_category":"INVALID_FACE" if invalid_state.any(func(i):return i.code == Code.INVALID_FACE) else "ERROR","source_frame":{},"motion":{}}
+	if not Data.validate_action_shape(level,action).is_empty():
+		return {"semantic":"ACTION_FEEDBACK","reason_category":"INVALID_ACTION","source_frame":{},"motion":{}}
+	return Fall.description(level,state,action,result)

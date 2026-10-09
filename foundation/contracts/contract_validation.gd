@@ -3,9 +3,11 @@ extends RefCounted
 
 const Types = preload("res://foundation/contracts/foundation_types.gd")
 const Code = Types.ValidationCode
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const QUARTER_TURNS = [2, 3, 22, 18, 9, 12]
 const FACE_NAMES = ["FRONT", "BACK", "LEFT", "RIGHT", "TOP", "BOTTOM"]
 const SCHEMAS = {
+	"fall_connection": Feel.CONNECTION_DATA,
 	"level": {
 		"schema_version": "int", "contract_version": "string", "orientation_version": "string",
 		"rule_version": "string", "level_id": "id", "content_hash": "hash", "cell_size": "int",
@@ -56,19 +58,22 @@ const ACTION_FIELDS = {
 
 static func validate_level_shape(level: Dictionary) -> Array[Dictionary]:
 	var issues: Array[Dictionary] = []
-	_check_value(level, "level", "", issues)
+	var opt_in: bool = typeof(level.get("schema_version")) == TYPE_INT and level.schema_version == 2 and typeof(level.get("contract_version")) == TYPE_STRING and level.contract_version == Feel.CONTRACT
+	var shape: Dictionary = SCHEMAS.level.duplicate()
+	if opt_in: shape.merge(Feel.LEVEL_FIELDS)
+	_check_record(level, shape, "", issues)
+	var versions := {"schema_version": 2 if opt_in else 1, "contract_version": Feel.CONTRACT if opt_in else "foundation.contract.v1", "orientation_version":"cube24.v1", "rule_version": Feel.RULE if opt_in else "foundation.rules.v1"}
+	for field in versions:
+		var expected: Variant = versions[field]
+		if typeof(level.get(field)) == typeof(expected) and level[field] != expected:
+			_issue(issues, Code.VERSION_MISMATCH, field, "Unsupported contract version.")
 	# Relationship checks only consume fully typed records, never malformed input.
 	if not issues.is_empty():
 		return _sorted(issues)
-	for field in {"schema_version": 1, "contract_version": "foundation.contract.v1",
-		"orientation_version": "cube24.v1", "rule_version": "foundation.rules.v1"}:
-		var expected = {"schema_version": 1, "contract_version": "foundation.contract.v1",
-			"orientation_version": "cube24.v1", "rule_version": "foundation.rules.v1"}[field]
-		if level[field] != expected:
-			_issue(issues, Code.VERSION_MISMATCH, field, "Unsupported contract version.")
 	if level.cell_size != 1:
 		_issue(issues, Code.OFF_LATTICE, "cell_size", "Cell size must be one logical unit.")
 	var indexes := _level_indexes(level, issues)
+	if opt_in: _validate_falls(level, indexes, issues)
 	_validate_worlds(level.worlds, issues)
 	_validate_faces(level, indexes, issues)
 	_validate_groups(level, indexes, issues)
@@ -88,7 +93,9 @@ static func validate_state_shape(level: Dictionary, state: Dictionary) -> Array[
 	var issues := validate_level_shape(level)
 	if not issues.is_empty():
 		return issues
-	_check_value(state, "state", "", issues)
+	var shape: Dictionary = SCHEMAS.state.duplicate()
+	if Feel.enabled(level): shape.merge(Feel.STATE_FIELDS)
+	_check_record(state, shape, "", issues)
 	if not issues.is_empty():
 		return _sorted(issues)
 	var indexes := _level_indexes(level, issues)
@@ -118,7 +125,10 @@ static func validate_action_shape(level: Dictionary, action: Dictionary) -> Arra
 	var issues := validate_level_shape(level)
 	if not issues.is_empty():
 		return issues
-	_check_action_fields(action, "", issues)
+	if Feel.enabled(level) and Feel.ACTION_FIELDS.has(action.get("kind")):
+		_check_record(action,Feel.ACTION_FIELDS[action.kind],"",issues)
+	else:
+		_check_action_fields(action, "", issues)
 	if issues.is_empty():
 		_check_action_references(action, _level_indexes(level, issues), "", issues)
 	return _sorted(issues)
@@ -152,7 +162,7 @@ static func _check_value(value: Variant, descriptor: String, path: String, issue
 	var expected_type := TYPE_INT
 	match descriptor:
 		"string", "hash": expected_type = TYPE_STRING
-		"id", "optional_id", "face_id", "name", "trigger": expected_type = TYPE_STRING_NAME
+		"id", "optional_id", "face_id", "name", "trigger", "preserve": expected_type = TYPE_STRING_NAME
 		"coordinate", "center": expected_type = TYPE_VECTOR3I
 		"bool": expected_type = TYPE_BOOL
 	if not _type(value, expected_type, path, issues):
@@ -184,6 +194,11 @@ static func _check_value(value: Variant, descriptor: String, path: String, issue
 		"intent": _enum_range(value, 6, path, issues)
 		"axis", "operation": _enum_range(value, 4, path, issues)
 		"kind": _enum_range(value, 8, path, issues)
+		"game_feel_kind": _member(value,[8,9],path,Code.INVALID_ENUM,issues)
+		"quadrant": _enum_range(value,4,path,issues)
+		"preserve": _member(value,[&"PRESERVE"],path,Code.INVALID_ENUM,issues)
+		"duration":
+			if value <= 0 or value > 5000: _issue(issues,Code.INVALID_TYPE,path,"Duration must be 1..5000 presentation milliseconds.")
 
 
 static func _check_record(value: Variant, fields: Dictionary, path: String, issues: Array[Dictionary]) -> void:
@@ -465,3 +480,28 @@ static func _sorted(issues: Array[Dictionary]) -> Array[Dictionary]:
 			return a.entity_ids.size() < b.entity_ids.size()
 		return a.message < b.message)
 	return issues
+
+
+static func _validate_falls(level: Dictionary, indexes: Dictionary, issues: Array[Dictionary]) -> void:
+	var ids := {}
+	for i in level.perspective_falls.size():
+		var c: Dictionary = level.perspective_falls[i]
+		var path := "perspective_falls[%d]" % i
+		if ids.has(c.connection_id): _issue(issues,Code.DUPLICATE_ID,path + ".connection_id","Duplicate connection ID.")
+		ids[c.connection_id] = true
+		_reference(c.source_face_id,indexes.faces,path + ".source_face_id",issues)
+		_reference(c.target_face_id,indexes.faces,path + ".target_face_id",issues)
+		_references(c.required_flags,indexes.flags,path + ".required_flags",issues)
+		for field in ["allowed_camera_quadrants","allowed_world_orientations"]:
+			if c[field].is_empty(): _issue(issues,Code.INVALID_REFERENCE,path + "." + field,"Permission set cannot be empty.")
+			_unique(c[field],path + "." + field,issues)
+		if c.path_points2.size() < 3 or c.path_points2.size() > 64: _issue(issues,Code.INVALID_TYPE,path + ".path_points2","Require 3..64 ordered actor-center points.")
+		for point in c.path_points2:
+			for axis in 3:
+				if absi(int(point[axis])) > 1000000: _issue(issues,Code.ARITHMETIC_OVERFLOW,path + ".path_points2","Path exceeds exact swept arithmetic profile.")
+		for j in i:
+			var other: Dictionary = level.perspective_falls[j]
+			if c.source_face_id == other.source_face_id and c.source_edge == other.source_edge:
+				var camera_overlap: bool = c.allowed_camera_quadrants.any(func(x):return x in other.allowed_camera_quadrants)
+				var world_overlap: bool = c.allowed_world_orientations.any(func(x):return x in other.allowed_world_orientations)
+				if camera_overlap and world_overlap: _issue(issues,Code.INVALID_REFERENCE,path,"Overlapping connection permissions are ambiguous.")
