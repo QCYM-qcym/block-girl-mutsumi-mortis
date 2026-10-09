@@ -28,11 +28,16 @@ with tarfile.open(fileobj=io.BytesIO(payload)) as source:
         files.append({'path':'project/'+member.name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'kind':'git_source'})
 
 # Reuse existing compiled imports. No editor/import command rewrites frozen sources.
-imports=set()
+imports={}
 for path in project.rglob('*.import'):
-    imports.update(re.findall(r'res://(\.godot/imported/[^"\s]+)',path.read_text(encoding='utf-8-sig')))
+    metadata=path.read_text(encoding='utf-8-sig')
+    source_match=re.search(r'source_file="res://([^"]+)"',metadata)
+    for relative in re.findall(r'res://(\.godot/imported/[^"\s]+)',metadata): imports[relative]=source_match[1] if source_match else None
+owners=json.loads((root/'docs/beta-sprint/game-feel/WORKTREES.json').read_text(encoding='utf-8-sig'))['owners']
+cache_roots=[root,Path('E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01/project')]+[Path(x['worktree']) for x in owners]
 for relative in sorted(imports):
-    candidates=[root/relative,Path('E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01/project')/relative]
+    asset=imports[relative]
+    candidates=[p/relative for p in cache_roots if asset and (p/asset).is_file() and (p/asset).read_bytes()==(project/asset).read_bytes()]
     source=next((p for p in candidates if p.is_file()),None)
     if source is None: raise SystemExit('Missing existing import artifact: '+relative)
     data=source.read_bytes();destination=project/relative
