@@ -1,8 +1,9 @@
 extends SceneTree
-## PRESENTATION_CONTRACT_UNIT. Synthetic events and explicit legacy host sink, no legal Fall claim.
+## PRESENTATION_CONTRACT_UNIT. Synthetic events/host Save bridge, actual delivered AudioDirector.
 const UI_PATH := "res://game/feel/ui/game_feel_ui.gd"
 const Store = preload("res://game/shell/save_store.gd")
-const LegacySettings = preload("res://game/shell/settings.gd")
+const AudioDirector = preload("res://game/feel/audio/audio_director.gd")
+const AUDIO_COMMIT := "4afbd068fae74a826dae4db04c2c612af23fa861"
 var checks := 0
 var failures: Array[String] = []
 var evidence := ""
@@ -13,6 +14,7 @@ var progress: Dictionary
 var preview_calls: Array[Dictionary] = []
 var option_calls: Array[Dictionary] = []
 var store
+var audio
 var apply_count := 0
 var cancel_count := 0
 var defer_apply := false
@@ -42,12 +44,15 @@ func run() -> void:
 	store = Store.new(save_path,"mutsumi_l01")
 	progress = store.load_save()
 	if phase == "seed": check(not FileAccess.file_exists(save_path), "Unit host sink cannot overwrite prior progress")
-	LegacySettings.apply(progress.settings,root)
+	audio = AudioDirector.new()
+	root.add_child(audio)
+	audio.apply_settings(progress.settings)
+	check(audio.snapshot().issues.is_empty() and audio.snapshot().voice_count == 18, "actual delivered AudioDirector loads all original18 voices without diagnostics")
 	ui = load(UI_PATH).new()
 	root.add_child(ui)
 	ui.settings_preview.connect(func(values: Dictionary):
 		preview_calls.append(values.duplicate(true))
-		LegacySettings.apply(values,root))
+		audio.apply_settings(values))
 	ui.settings_apply.connect(host_apply)
 	ui.settings_cancel.connect(func(): cancel_count += 1)
 	ui.accessibility_changed.connect(func(values: Dictionary): option_calls.append(values.duplicate(true)))
@@ -66,8 +71,11 @@ func host_apply(values: Dictionary) -> void:
 	if store.save(candidate):
 		progress = candidate
 		apply_count += 1
+		audio.apply_settings(values) # Retry after failure rollback must apply the newly saved values.
 		ui.settings_applied(values)
-	else: ui.settings_failed(store.last_error)
+	else:
+		audio.apply_settings(progress.settings)
+		ui.settings_failed(store.last_error)
 
 func settings_case() -> void:
 	var original: Dictionary = progress.settings.duplicate(true)
@@ -82,9 +90,15 @@ func settings_case() -> void:
 	ui.sliders.hint_strength.value = 2
 	await settle()
 	check(preview_calls.back().master == 0.37 and preview_calls.back().music == 0.21 and preview_calls.back().sfx == 0.63 and preview_calls.back().muted, "preview sends existing audio keys with actual control values")
-	check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "explicit legacy Unit sink proves requested Mute reaches real Master bus")
-	check(is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")),linear_to_db(0.37)), "explicit legacy Unit sink proves real Master gain preview")
-	check(is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Ambience")),linear_to_db(0.21)-12.0) and is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")),linear_to_db(0.63)-6.0), "explicit legacy sink applies actual Music and SFX gain with existing calibration")
+	check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "actual delivered11 AudioDirector applies UI Mute to Master")
+	check(is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")),linear_to_db(0.37)), "actual11 AudioDirector applies UI Master preview gain")
+	check(is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Ambience")),linear_to_db(0.21)-12.0) and is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")),linear_to_db(0.63)-6.0), "actual11 AudioDirector applies Music and SFX with unchanged bus calibration")
+	ui.buttons.muted.button_pressed = false
+	check(not AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "unmuting through UI reaches actual Audio API")
+	ui.sliders.master.value = 0
+	ui.sliders.music.value = 0
+	ui.sliders.sfx.value = 0
+	check(AudioServer.is_bus_mute(0) and AudioServer.is_bus_mute(AudioServer.get_bus_index("Ambience")) and AudioServer.is_bus_mute(AudioServer.get_bus_index("SFX")), "zero UI volumes actually mute all corresponding buses")
 	check(option_calls.back().reduced_motion and option_calls.back().hint_strength == 2, "Reduced Motion and Hint Strength notify the external presentation-config port")
 	check(not preview_calls.back().has("reduced_motion") and not preview_calls.back().has("hint_strength"), "UI config does not invent a conflicting Settings save contract")
 	ui.buttons.cancel.pressed.emit()
@@ -106,9 +120,21 @@ func settings_case() -> void:
 	check(not saved.has_progress and saved.unlocked == ["mutsumi_l01"] and saved.completed.is_empty(), "UI settings never alter progression")
 	ui.open_settings(saved.settings)
 	await settle()
+	ui.sliders.master.value = 54
+	ui.buttons.muted.button_pressed = false
+	audio.apply_settings(saved.settings) # Actual11 contract:00 restores persisted audio on failure.
 	ui.settings_failed("Unit injected host write failure")
 	check(ui.settings_open and not ui.error_label.text.is_empty(), "host failure stays open and reports its real failure")
-	ui.buttons.cancel.pressed.emit()
+	check(AudioServer.is_bus_mute(0) and is_equal_approx(AudioServer.get_bus_volume_db(0),linear_to_db(0.37)), "explicit host failure bridge restores persisted settings through actual11 API")
+	ui.buttons.apply.pressed.emit()
+	await settle()
+	check(not ui.settings_open and progress.settings.master == 0.54 and not progress.settings.muted, "retry persists the displayed draft through the existing SaveStore")
+	check(not AudioServer.is_bus_mute(0) and is_equal_approx(AudioServer.get_bus_volume_db(0),linear_to_db(0.54)), "successful retry reapplies saved audio after failure rollback through the actual11 API")
+	ui.open_settings(progress.settings)
+	await settle()
+	ui.sliders.master.value = 37
+	ui.buttons.muted.button_pressed = true
+	ui.buttons.apply.pressed.emit()
 	await settle()
 	ui.open_settings(saved.settings)
 	await settle()
@@ -206,11 +232,15 @@ func restore_case() -> void:
 	await settle()
 
 func finish() -> void:
-	var report := {"phase":phase,"pid":OS.get_process_id(),"checks":checks,"failures":failures,"fixture_kind":"PRESENTATION_CONTRACT_UNIT","authoritative_runtime":false,"doubles":["immutable cue DTO fixtures","test-only00 host Save bridge","existing legacy bus Settings sink; formal11 NOT_RUN"],"fault_exercises":["injected host write failure","deferred host acknowledgement","external programmatic slider mutation during deferred host acknowledgement"],"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"input":"Control interaction signals; actual storage and bus queries","human_acceptance":"NOT_RUN","formal_runtime":"PENDING_01","formal_audio":"PENDING_11","save_path":save_path,"user_data_dir":OS.get_user_data_dir()}
+	var api_status := "NOT_RUN"
+	if is_instance_valid(audio): api_status = "ACTUAL_API_OWNER_PASS" if failures.is_empty() else "ACTUAL_API_OWNER_FAIL"
+	var fault_exercises := ["injected host write failure","deferred host acknowledgement","external programmatic slider mutation during deferred host acknowledgement"] if phase == "seed" else []
+	var report := {"phase":phase,"pid":OS.get_process_id(),"checks":checks,"failures":failures,"fixture_kind":"PRESENTATION_CONTRACT_UNIT","authoritative_runtime":false,"doubles":["immutable cue DTO fixtures","test-only00 host Save/Audio routing bridge"],"fault_exercises":fault_exercises,"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"input":"Control interaction signals; actual storage and AudioDirector bus queries","human_acceptance":"NOT_RUN","formal_runtime":"PENDING_01","audio_dependency_sha":AUDIO_COMMIT,"formal_audio":api_status,"production_audio_host":"PENDING_00","save_path":save_path,"user_data_dir":OS.get_user_data_dir()}
 	DirAccess.make_dir_recursive_absolute(evidence)
 	var file := FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify(report,"\t")); file.close()
 	if is_instance_valid(ui): ui.queue_free()
+	if is_instance_valid(audio): audio.queue_free()
 	await settle()
 	print(JSON.stringify(report))
 	quit(0 if failures.is_empty() else 1)

@@ -2,7 +2,7 @@
 
 GAME_FEEL_UI_EXTENSION_READY: **NOT_READY — required shared integration cases pending**.
 
-Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Actual implementation/evidence commit: **8724dbc13c6e1852d2020be2f05eb638162e373d**. Exact source binding: DELIVERY_BINDING.json; subsequent commit contains this binding/receipt metadata only.
+Owner-local implementation/review: READY for00 normal integration. Branch: feat/game-feel-ui. Worktree: E:/godot/worktrees/block-girl-game-feel-ui. Shared contract baseline:2938d6e534f5b596bb320ce79d72b69f5923f3cd. Production UI implementation commit:8724dbc13c6e1852d2020be2f05eb638162e373d. Formal11 Audio dependency4afbd068fae74a826dae4db04c2c612af23fa861 was normally merged in fd29aeeb644bd8098ca3d641dcb80fc2802c5b27. Latest tested-source commit/binding is recorded in DELIVERY_BINDING.json after the Audio test handoff commit; prior104-file binding is retained in evidence/ui_only_104_binding.json.
 
 ## Requested output
 
@@ -10,7 +10,7 @@ UI changes: independent experimental Settings/status UI; approved stone controls
 
 Perspective indicators: accepted authoritative-version Fall status, matching identity-scoped completion/interruption, stale/duplicate/foreign-run protection. Ordinary Edge/Busy stays silent; strong assistance uses existing authored text only. Pre-action legal/disconnected/allowed readiness interface is pending01/00; no permission inferred from screen geometry.
 
-Audio settings: Master/Music/SFX/Mute controls send unchanged keys. Unit00 bridge verifies actual legacy bus gains, mute, original version1 persistence, Cancel and cold process restore. Formal11 AudioDirector and00 production routing **case_pending**, zero checks; no formal Audio integration PASS.
+Audio settings: Master/Music/SFX/Mute controls send unchanged keys to the **actual delivered11 AudioDirector** through an explicitly declared Unit00 host bridge. Verified calibrated Master/Ambience/SFX gains, mute/unmute/zero, original version1 Save, Cancel, persistence-failure rollback, successful retry and distinct cold restore. All18 real service voices load without diagnostics. Production00 host routing remains **case_pending**, zero checks; this is actual settings API evidence, not integrated gameplay/audio/Human PASS.
 
 Accessibility: Reduced Motion disables Owner row tweens and emits external config; Hint Strength0/1/2 uses existing authored content. Approved opaque face/ink contrast and keyboard/mouse instructions reused. Formal Presenter Fall/Edge simplification and parity **case_pending**, zero checks. No legacy save schema change.
 
@@ -24,21 +24,23 @@ Push: **NOT_RUN**. No messages sent to other chats. Review subagent messages sta
 
 ## Actual verification
 
-Evidence: evidence/owner07_final_03. WIP execution HEAD2938d6e; original dirty inventory retained. Five separate processes, isolated APPDATA/LOCALAPPDATA profile, engine4.7.2.stable.steam.ed1daf0bf:
+Latest evidence: evidence/owner07_audio_final_02. Actual WIP execution HEADfd29aeeb644bd8098ca3d641dcb80fc2802c5b27; original dirty inventory retained. Five separate processes, isolated APPDATA/LOCALAPPDATA profile, engine4.7.2.stable.steam.ed1daf0bf:
 
 | Stage | Checks | Exit | stderr |
 | --- | ---: | ---: | ---: |
 | Existing Save regression |19|0|0 bytes|
 | Existing Shell flow regression |20|0|0 bytes|
-| Owner Settings/event/fault cases |39|0|0 bytes|
-| Cold process restore |4|0|0 bytes|
+| Owner Settings/actual Audio API/event/fault cases |45|0|0 bytes|
+| Cold process restore/actual Audio API |5|0|0 bytes|
 | Three logical viewports/native input |76|0|0 bytes|
 
-Total158 positive checks, failures=[], source_drift=false. Cue tests explicitly PRESENTATION_CONTRACT_UNIT, authoritative_runtime=false; report declares Unit host/legacy bus/DTO doubles and injected/deferred/programmatic faults. These are not legal Runtime or natural Fall proof. Save profile is fresh and located beneath the recorded .godot evidence path. Original saves/QA untouched.
+Total165 positive checks, failures=[], source_drift=false. Cue tests explicitly PRESENTATION_CONTRACT_UNIT, authoritative_runtime=false; report declares Unit00 host routing/DTO doubles and actual executed injected/deferred/programmatic faults. AudioDirector and SaveStore are actual delivered services. These tests are not legal Runtime/natural Fall or production host proof. Save profile is fresh beneath recorded .godot evidence; original saves/QA untouched.
 
-After implementation commit, native `git cat-file blob` byte streams were independently SHA256 checked: all104 tested files equal both committed blobs and actual physical bytes. Frozen approved paths have an empty diff from2938d6e. WIP execution identity is retained; the later source binding does not relabel the original run as a clean-commit execution.
+The earlier UI-only stage used158 checks with104 sources bound to8724dbc. Its binding remains history. Latest evidence includes172 actual UI/Audio/approved dependency files, bound after commit via native git cat-file byte streams against original tested and physical SHA256. Frozen approved paths remain unchanged; Audio11 scripts/assets are unchanged from4afbd06. WIP identity remains exact; source binding never relabels the original run as a clean-commit execution.
 
 TDD history preserves expected lifecycle/pending/Hint-removal failures; old empty-run false green is retained as a known harness bug, never counted. owner07_final_01 retains a harness aggregate-accounting failure despite five successful stages; final_02 passes after repair. A trailing blank EOF was then removed from motion_row.gd, and final_03 repeats all158 checks against the exact delivery bytes. First parser/import and pre-contract Shell exploration remain in preserved exploratory/local history and do not supply final PASS.
+
+After11 delivery, audio_retry_red_01 exposes the need to reapply newly saved Audio values after a failed-save rollback and retry. It is retained exactly, including its known incorrect unconditional formal_audio PASS field despite failures; that field is invalid and supplies no PASS. Latest audio_final_02 computes API PASS/FAIL/NOT_RUN from actual execution/results, and cold restore correctly records no fault injection. audio_final_01 supplied163 checks before this evidence-label fix and voice-load check; latest165 checks bind the final sources. All earlier receipts remain historical.
 
 31 untracked foreign .uid/.import files created by this worktree's headless import were inventoried with hashes and removed by exact LiteralPath after checking worktree containment. Owner metadata remains. See evidence/generated_metadata_inventory.json. Independent read-only review resolved all three findings; REVIEW.md scopes its verdict.
 

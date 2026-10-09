@@ -9,11 +9,11 @@ Instantiate the CanvasLayer only in `experiments/game_feel_01/host/**`, leaving 
 Open with open_settings(actual_saved_settings). Connect:
 
 - settings_preview(values) → delivered11 AudioDirector.apply_settings(values) and existing fullscreen lifecycle. Audio ignores fullscreen. Preview must not write Save.
-- settings_apply(values) → existing host progress/Save transaction using unchanged version1 keys. On actual success call settings_applied(values); on actual failure call settings_failed(actual_message). Never acknowledge just because the signal was emitted. UI makes no independent Save call.
+- settings_apply(values) → existing host progress/Save transaction using unchanged version1 keys. On actual success apply the newly saved values to AudioDirector, then call settings_applied(values); on failure restore persisted values to AudioDirector, then call settings_failed(actual_message). Reapplying on success is essential after a failure rollback followed by retry without editing. Never acknowledge just because the signal was emitted. UI makes no independent Save call.
 - settings_cancel() → captured host page/Pause state. Cancel first sends saved audio preview and restores prior presentation config. Host suspends real Runtime/input while Settings is open; UI does not change Runtime legality or invent pause state.
 - accessibility_changed(options) → host presentation configuration `{reduced_motion:bool,hint_strength:int0..2}`. Notify formal Cube Presenter/motion composition to simplify Fall/Edge decoration; never change an authorized path, orientation endpoint, Safety or Runtime results. UI already suppresses its own row tweens. Persisting experimental config requires an explicit00-owned contract; do not silently insert it into legacy Save.
 
-For asynchronous persistence, acknowledge/fail before another settings opening. Missing Audio stays silent with host diagnostics. Formal API integration is pending11; Unit legacy sink is not production wiring.
+For asynchronous persistence, acknowledge/fail before another settings opening. Missing Audio stays silent with host diagnostics. Formal11 API is now delivered at4afbd068fae74a826dae4db04c2c612af23fa861 and normally merged as the consumer dependency. Actual Owner Settings/API/Save lifecycle tests pass; the explicit Unit00 host bridge remains separate from production00 host wiring.
 
 ## Authored hints and map placement
 

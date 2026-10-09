@@ -13,10 +13,10 @@ if (Test-Path -LiteralPath $uiOwnerEvidence) { throw 'Evidence is append-only; u
 New-Item -ItemType Directory -Path $uiOwnerEvidence | Out-Null
 $uiOwnerProfile = Join-Path $uiOwnerEvidence 'profile'
 New-Item -ItemType Directory -Path $uiOwnerProfile | Out-Null
-$uiOwnerFiles = @(git -C $uiOwnerRoot ls-files --cached --others --exclude-standard -- game/feel/ui game/shell production/ui/beta_shell_01 tests/shell tests/beta_sprint/game_feel_owner_07 docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md)
+$uiOwnerFiles = @(git -C $uiOwnerRoot ls-files --cached --others --exclude-standard -- game/feel/ui game/feel/audio game/shell production/ui/beta_shell_01 production/experimental/game_feel_01/audio tests/shell tests/beta_sprint/game_feel_owner_07 docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md docs/beta-sprint/game-feel-owner-11/SETTINGS_CONTRACT.md)
 $uiOwnerHashes = @($uiOwnerFiles | Sort-Object -Unique | ForEach-Object { [ordered]@{path=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $uiOwnerRoot $_)).Hash.ToLowerInvariant()} })
 $uiOwnerStages = [Collections.Generic.List[object]]::new()
-$uiOwnerSummary = [ordered]@{head=(git -C $uiOwnerRoot rev-parse HEAD).Trim();dirty=@(git -C $uiOwnerRoot status --porcelain);status='RUNNING';source_files=$uiOwnerHashes;source_drift=$null;profile=$uiOwnerProfile;engine_path=$Godot;display='headless';evidence_type='OWNER_HEADLESS_ONLY';formal_audio='PENDING_11';formal_runtime='PENDING_01';fresh_integrated_build_graphical='PENDING_00';human_acceptance='NOT_RUN';stages=@();frozen_imports_restored=$false}
+$uiOwnerSummary = [ordered]@{head=(git -C $uiOwnerRoot rev-parse HEAD).Trim();dirty=@(git -C $uiOwnerRoot status --porcelain);status='RUNNING';source_files=$uiOwnerHashes;source_drift=$null;profile=$uiOwnerProfile;engine_path=$Godot;display='headless';evidence_type='OWNER_HEADLESS_ONLY';audio_dependency_sha='4afbd068fae74a826dae4db04c2c612af23fa861';formal_audio='DELIVERED_API; see executed stages; production host PENDING_00';formal_runtime='PENDING_01';fresh_integrated_build_graphical='PENDING_00';human_acceptance='NOT_RUN';stages=@();frozen_imports_restored=$false}
 function Save-UiOwnerReport {
     $uiOwnerSummary.stages = @($uiOwnerStages.ToArray())
     [IO.File]::WriteAllText((Join-Path $uiOwnerEvidence 'run_report.json'), ($uiOwnerSummary | ConvertTo-Json -Depth 12).Replace("`r`n","`n") + "`n", [Text.UTF8Encoding]::new($false))

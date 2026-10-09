@@ -26,11 +26,11 @@ Passive feedback consumes `game_feel.event.v1` deep snapshots without modifying 
 
 Actual engine: `4.7.2.stable.steam.ed1daf0bf`. All executed Owner stages are hidden headless processes. Runner creates fresh evidence and a separate APPDATA/LOCALAPPDATA profile. Seed/restore are distinct OS processes sharing only that profile; OS.get_user_data_dir is checked. Existing saves and QA packages remain intact.
 
-Cue fixtures declare `PRESENTATION_CONTRACT_UNIT`, `authoritative_runtime=false`. Settings uses an explicit Unit-only00 Save bridge and legacy bus sink: these prove actual old storage/bus behavior with requested values, not an undelivered11 AudioDirector or legal01 Fall. All doubles/pending cases are recorded. Parser/import failures and behavioral RED remain separate.
+Cue fixtures declare `PRESENTATION_CONTRACT_UNIT`, `authoritative_runtime=false`. Initial Settings evidence used a Unit-only00 Save bridge and legacy bus sink.11 subsequently delivered4afbd068fae74a826dae4db04c2c612af23fa861; it was normally merged. Latest tests invoke the actual AudioDirector and actual original SaveStore through an explicitly declared Unit00 routing bridge. They prove UI values/actual API/storage behavior, not production host wiring or legal01 Fall. Doubles/pending cases and parser/import/behavioral failures remain separate.
 
 Fresh logical1920×1080/1280×720/960×720 checks disable project content scaling explicitly and measure actual Controls, focus, mouse/key actions, label/scroll containment and band bounds. They are **not** fresh integrated-build graphical, map occlusion, Pause-return or Human PASS. Existing Shell/save regressions are separate.
 
-Pending:01 readiness/real events;11 actual Audio API/audio behavior;00 formal Presenter notification, lab host, Pause/return and immutable Build;08 visual/Human acceptance. See INTEGRATION_REQUEST.md and CASE_PENDING.json. Overall GAME_FEEL_UI_EXTENSION_READY remains NOT_READY until required integration checks run.
+Pending:01 readiness/real events;00 production Audio/Presenter routing, lab host, Pause/return and immutable Build;08 visual/Human acceptance. Formal11 API is available and verified locally; subjective listening is not part of07 evidence. See INTEGRATION_REQUEST.md and CASE_PENDING.json. Overall GAME_FEEL_UI_EXTENSION_READY remains NOT_READY until required integrated checks run.
 
 ## Preserved exploration
 
