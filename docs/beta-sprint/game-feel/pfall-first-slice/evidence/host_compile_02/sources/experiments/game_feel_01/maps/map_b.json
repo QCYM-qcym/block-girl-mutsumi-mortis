@@ -1,0 +1,59 @@
+{
+  "id": "game_feel_01_map_b",
+  "title": "MAP B - real target HIGHER",
+  "source_center2": [
+    0,
+    4,
+    0
+  ],
+  "target_center2": [
+    -8,
+    8,
+    8
+  ],
+  "source_layer": 0,
+  "target_layer": 0,
+  "source_face": "TOP",
+  "target_face": "TOP",
+  "candidate_camera": 1,
+  "candidate_entry_axis": "U_NEG",
+  "candidate_pose_policy": "PRESERVE - requires Owner01 contract",
+  "status": "DIAGNOSTIC_ONLY_RUNTIME_EXTENSION_REQUIRED",
+  "connection": {
+    "connection_id": "pfall_b",
+    "source": {
+      "layer": 0,
+      "cube_id": "source",
+      "face": "TOP"
+    },
+    "target": {
+      "layer": 0,
+      "cube_id": "target",
+      "face": "TOP"
+    },
+    "allowed_camera_quadrants": [
+      1
+    ],
+    "activation": "EXPLICIT_PLAYER_ACTION",
+    "entry_axis": "U_NEG",
+    "orientation_policy": "PRESERVE",
+    "authorizes_traversal": false,
+    "safety_status": "UNPROVEN",
+    "path_design": "clear source edge, then continuous screen-space descent, then exact target support; canonical path authored/validated by 01",
+    "runtime_schema": "PENDING_OWNER01"
+  },
+  "exit_center2": [
+    -6,
+    8,
+    8
+  ],
+  "post_landing_route": {
+    "move": "MOVE",
+    "face_axis": "U_POS",
+    "face_axis_value": 0,
+    "source_face_id": "target/TOP",
+    "target_face_id": "exit/TOP",
+    "goal_face_id": "exit/TOP",
+    "requires_fall_before_route": true
+  }
+}

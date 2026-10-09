@@ -1,0 +1,232 @@
+{
+	"checks": 17,
+	"display": "headless",
+	"doubles": [],
+	"failures": [],
+	"fall_checks": 0,
+	"fall_status": "case_pending",
+	"input": "direct Solver and actual Runtime Replay; landing is an authored spawn, not Fall acceptance",
+	"pid": 29460,
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"exit_anchor": {
+				"face_id": "exit/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-6, 1, 8)"
+			},
+			"fixture_kind": "AUTHORED_LANDING_SPAWN_CONTROL_NOT_FALL",
+			"full_map_hash": "8c2c341aeca6aae2137b95da95752fd43ef95ffbb40623fc8f77e3cd992997f4",
+			"full_solver_status": 1,
+			"map": "a",
+			"replay": {
+				"action": null,
+				"actual_statekey": "statekey.v1:{\"level_hash\":\"774d5a9a11e3bfb9df9dcd3e0ab79a81c966a18509d464de8171048b5e3dadf9\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"divergence_step": null,
+				"expected_statekey": "statekey.v1:{\"level_hash\":\"774d5a9a11e3bfb9df9dcd3e0ab79a81c966a18509d464de8171048b5e3dadf9\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"issues": [],
+				"matched_steps": 1,
+				"status": 0,
+				"trace_length": 1
+			},
+			"target_anchor": {
+				"face_id": "target/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-8, 1, 8)"
+			},
+			"trace": {
+				"goal_statekey": "statekey.v1:{\"level_hash\":\"774d5a9a11e3bfb9df9dcd3e0ab79a81c966a18509d464de8171048b5e3dadf9\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"initial_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"initial_statekey": "statekey.v1:{\"level_hash\":\"774d5a9a11e3bfb9df9dcd3e0ab79a81c966a18509d464de8171048b5e3dadf9\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"level_hash": "774d5a9a11e3bfb9df9dcd3e0ab79a81c966a18509d464de8171048b5e3dadf9",
+				"policy_descriptor": {
+					"filter_descriptor": {
+						"disabled_mechanics": [],
+						"filter_id": "UNFILTERED",
+						"filter_version": "1"
+					},
+					"mode": 0,
+					"strategy": "BFS",
+					"validation_options": {
+						"max_checks": 100000,
+						"max_configurations": 4096
+					}
+				},
+				"rule_version": "foundation.rules.v1",
+				"shortest": true,
+				"steps": [
+					{
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"expected_state": {
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "exit",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 1,
+						"resulting_statekey": "statekey.v1:{\"level_hash\":\"774d5a9a11e3bfb9df9dcd3e0ab79a81c966a18509d464de8171048b5e3dadf9\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+					}
+				],
+				"total_actions": 1,
+				"trace_version": "solutiontrace.v1"
+			}
+		},
+		{
+			"exit_anchor": {
+				"face_id": "exit/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-6, 9, 8)"
+			},
+			"fixture_kind": "AUTHORED_LANDING_SPAWN_CONTROL_NOT_FALL",
+			"full_map_hash": "a02ae685981ce0d9735111886dc23738485184f6872804140cdf4cada3b168a1",
+			"full_solver_status": 1,
+			"map": "b",
+			"replay": {
+				"action": null,
+				"actual_statekey": "statekey.v1:{\"level_hash\":\"bb39ddcab4b16d3f17372c6ba2208c1bf07455af850871f1f42607058fb3980f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"divergence_step": null,
+				"expected_statekey": "statekey.v1:{\"level_hash\":\"bb39ddcab4b16d3f17372c6ba2208c1bf07455af850871f1f42607058fb3980f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"issues": [],
+				"matched_steps": 1,
+				"status": 0,
+				"trace_length": 1
+			},
+			"target_anchor": {
+				"face_id": "target/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-8, 9, 8)"
+			},
+			"trace": {
+				"goal_statekey": "statekey.v1:{\"level_hash\":\"bb39ddcab4b16d3f17372c6ba2208c1bf07455af850871f1f42607058fb3980f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"initial_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"initial_statekey": "statekey.v1:{\"level_hash\":\"bb39ddcab4b16d3f17372c6ba2208c1bf07455af850871f1f42607058fb3980f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"level_hash": "bb39ddcab4b16d3f17372c6ba2208c1bf07455af850871f1f42607058fb3980f",
+				"policy_descriptor": {
+					"filter_descriptor": {
+						"disabled_mechanics": [],
+						"filter_id": "UNFILTERED",
+						"filter_version": "1"
+					},
+					"mode": 0,
+					"strategy": "BFS",
+					"validation_options": {
+						"max_checks": 100000,
+						"max_configurations": 4096
+					}
+				},
+				"rule_version": "foundation.rules.v1",
+				"shortest": true,
+				"steps": [
+					{
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"expected_state": {
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "exit",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 1,
+						"resulting_statekey": "statekey.v1:{\"level_hash\":\"bb39ddcab4b16d3f17372c6ba2208c1bf07455af850871f1f42607058fb3980f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+					}
+				],
+				"total_actions": 1,
+				"trace_version": "solutiontrace.v1"
+			}
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/pfall-first-slice/evidence/map_exit_intake_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

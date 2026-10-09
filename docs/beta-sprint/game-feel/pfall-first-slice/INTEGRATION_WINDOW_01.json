@@ -1,0 +1,21 @@
+{
+  "task": "PFALL_FIRST_VERTICAL_SLICE_INTEGRATION_01",
+  "local_date": "2026-10-10",
+  "window": 1,
+  "status": "OPEN",
+  "baseline": "48a0e1791e7715722e38a1a01ab229535e2efb10",
+  "contract": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "policy": "Normal no-ff merges, owner history retained, one incremental batch window; no push",
+  "merges": [
+    {"owner":"09", "delivery":"54ea24cd50c4bd45b083dc26487ff2b7afd2a703", "merge":"6fe974c98747bb99be2bd8f2594dbf392172ccd7"},
+    {"owner":"10A", "delivery":"4781dfcf16757ccbde13e54ee449f1cf00174944", "merge":"9fc940577b9ca484921abb405b181565973b4e6d"},
+    {"owner":"09", "delivery":"82a8a7dc85205e9391551f24267f35f5abe53393", "merge":"112c322aeea54c7876825612365b87ac628934a4"},
+    {"owner":"10B", "delivery":"285896da24b4f5ec223fe8bf3f75e29fa1d18381", "merge":"607599f796e61138ad08be53044f058ce5f415ff"},
+    {"owner":"11", "delivery":"4afbd068fae74a826dae4db04c2c612af23fa861", "merge":"b58e54952eff6557d63f6e1d13f695c197c5f0fe"},
+    {"owner":"09", "delivery":"e4bcdfc6459f587cb26c25494dd5b57b76ccdca4", "merge":"839694bcf937516a646f05418da3e502444da519"},
+    {"owner":"07", "delivery":"d9dd3317e558f0d8380a2e6635452308d49240f1", "merge":"f8b5b198859eaea9fe2423c578598b548a28066f"}
+  ],
+  "core_playable":"PENDING",
+  "build":"NOT_READY",
+  "human_qa":"NOT_RUN"
+}
