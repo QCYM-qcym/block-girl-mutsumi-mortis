@@ -1,0 +1,302 @@
+{
+  "inspected_count": 9,
+  "kind": "Owner visual inspection, not HumanQA",
+  "doubles": [],
+  "inspected": [
+    {
+      "file": "024_mutsumi_l04_probes_shift_sample.png",
+      "expected_sha256": "acc28bb1f36516511fd950fd035138c4279d9de76cb0d9392c5e7f15ee91b1a7",
+      "case": "gfx03_default",
+      "actual_sha256": "acc28bb1f36516511fd950fd035138c4279d9de76cb0d9392c5e7f15ee91b1a7",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          1,
+          5
+        ],
+        "crossing": false,
+        "destination": [
+          1,
+          5
+        ],
+        "gate": false,
+        "goal": false,
+        "graph_world": 1,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 0,
+        "moving": false,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "physical_face_direction": "(0, 0, 1)",
+        "plate": false,
+        "view": 0,
+        "view_busy": false,
+        "world": 1
+      }
+    },
+    {
+      "file": "055_mutsumi_l04_3d_alternate_camera_goal.png",
+      "expected_sha256": "8104b7c2dd0ec8b42e4d8d7e4c4ad700af04a1b1f0489aa8d29c891ab00d18f1",
+      "case": "gfx03_default",
+      "actual_sha256": "8104b7c2dd0ec8b42e4d8d7e4c4ad700af04a1b1f0489aa8d29c891ab00d18f1",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          11,
+          1
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          1
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l04",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+        "phase": "complete",
+        "physical_face_direction": "(0, 0, -1)",
+        "plate": false,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "file": "074_mutsumi_l05_probes_shift_sample.png",
+      "expected_sha256": "89e6d45bf20840c51950d933600bb816739d256a0257f16818618bf7e424b5c7",
+      "case": "gfx03_default",
+      "actual_sha256": "89e6d45bf20840c51950d933600bb816739d256a0257f16818618bf7e424b5c7",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          0,
+          5
+        ],
+        "crossing": false,
+        "destination": [
+          0,
+          5
+        ],
+        "gate": false,
+        "goal": false,
+        "graph_world": 1,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 0,
+        "moving": false,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "physical_face_direction": "(0, 0, 1)",
+        "plate": false,
+        "view": 0,
+        "view_busy": false,
+        "world": 1
+      }
+    },
+    {
+      "file": "084_mutsumi_l05_3d_normal_inner_plate_closed.png",
+      "expected_sha256": "cc6f9bde7f84bff8c4dd840ca09253163d1ad19aa4f58c7943f0aaad524dcb35",
+      "case": "gfx03_default",
+      "actual_sha256": "cc6f9bde7f84bff8c4dd840ca09253163d1ad19aa4f58c7943f0aaad524dcb35",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          11,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          0
+        ],
+        "gate": false,
+        "goal": false,
+        "graph_world": 1,
+        "id": "mutsumi_l05",
+        "link": true,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+        "phase": "idle",
+        "physical_face_direction": "(0, 1, 0)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 1
+      }
+    },
+    {
+      "file": "085_mutsumi_l05_3d_normal_plate_open.png",
+      "expected_sha256": "a220eb3ce38db2919f3dc7ae057152fb45dfcbf85b7fb3290ebab0938c5c32b0",
+      "case": "gfx03_default",
+      "actual_sha256": "a220eb3ce38db2919f3dc7ae057152fb45dfcbf85b7fb3290ebab0938c5c32b0",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          11,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          0
+        ],
+        "gate": true,
+        "goal": false,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+        "phase": "idle",
+        "physical_face_direction": "(0, 1, 0)",
+        "plate": true,
+        "view": 1,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "file": "106_mutsumi_l05_3d_alternate_camera_link_active.png",
+      "expected_sha256": "d7db1d68ce86aa5e020747e076746164742bb9d052640b4fc299d6be2d7b5d7f",
+      "case": "gfx03_default",
+      "actual_sha256": "d7db1d68ce86aa5e020747e076746164742bb9d052640b4fc299d6be2d7b5d7f",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          3,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          3,
+          0
+        ],
+        "gate": false,
+        "goal": false,
+        "graph_world": 1,
+        "id": "mutsumi_l05",
+        "link": true,
+        "moves": 8,
+        "moving": false,
+        "orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+        "phase": "idle",
+        "physical_face_direction": "(1, 0, 0)",
+        "plate": false,
+        "view": 1,
+        "view_busy": false,
+        "world": 1
+      }
+    },
+    {
+      "file": "109_mutsumi_l05_3d_alternate_camera_plate_open.png",
+      "expected_sha256": "bc527f785b79400b946cd5c8112c1cfb979a9609ba5d58536aff369f120e74a2",
+      "case": "gfx03_default",
+      "actual_sha256": "bc527f785b79400b946cd5c8112c1cfb979a9609ba5d58536aff369f120e74a2",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          11,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          11,
+          0
+        ],
+        "gate": true,
+        "goal": false,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 11,
+        "moving": false,
+        "orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+        "phase": "idle",
+        "physical_face_direction": "(0, 1, 0)",
+        "plate": true,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "file": "111_mutsumi_l05_3d_alternate_camera_goal.png",
+      "expected_sha256": "64c518a2d10f19e5bdc583682833972565f6197307263c34051658a5493cc743",
+      "case": "gfx03_default",
+      "actual_sha256": "64c518a2d10f19e5bdc583682833972565f6197307263c34051658a5493cc743",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          13,
+          0
+        ],
+        "crossing": false,
+        "destination": [
+          13,
+          0
+        ],
+        "gate": false,
+        "goal": true,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 13,
+        "moving": false,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "complete",
+        "physical_face_direction": "(0, -1, 0)",
+        "plate": false,
+        "view": 2,
+        "view_busy": false,
+        "world": 0
+      }
+    },
+    {
+      "file": "112_mutsumi_l05_3d_alternate_camera_same_process_continue_spawn.png",
+      "expected_sha256": "7c6f3db28800c03931b22271c0b00d260a9301bcec0c062c57b013d5d4d8922f",
+      "case": "gfx03_default",
+      "actual_sha256": "7c6f3db28800c03931b22271c0b00d260a9301bcec0c062c57b013d5d4d8922f",
+      "assessment": "Owner visually inspected actual rendered PNG; retained native topology, glyphs, camera, world/plate/gate/Goal/Continue display without clipping of the authored viewport.",
+      "native_state": {
+        "cell": [
+          0,
+          5
+        ],
+        "crossing": false,
+        "destination": [
+          0,
+          5
+        ],
+        "gate": false,
+        "goal": false,
+        "graph_world": 0,
+        "id": "mutsumi_l05",
+        "link": false,
+        "moves": 0,
+        "moving": false,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "physical_face_direction": "(0, 0, 1)",
+        "plate": false,
+        "view": 0,
+        "view_busy": false,
+        "world": 0
+      }
+    }
+  ],
+  "failures": [],
+  "observations": [
+    "Shared Shell complete panel overlays part of SOUTH view as inherited; native Goal and saved progress remain visible.",
+    "WorldShift samples show native incoming world and retained outgoing transient geometry; no test modifies the transient.",
+    "Active connection has two stacked original endpoint labels in coincident EAST projection; no physical bridge supplies absent native support."
+  ],
+  "screenshots_total": 112
+}
