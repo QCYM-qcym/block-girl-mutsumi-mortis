@@ -1,0 +1,93 @@
+{
+  "status": "GAME_CONTENT_BATCH_02_READY",
+  "date": "2026-10-09",
+  "baseline": "b910167becee2194c0cfc724d8f0fe47578836a9",
+  "branch": "feat/beta-content-batch-02",
+  "production_candidate_commit": "d4be39c76988e2face66d5f36be6e0c65fe9a169",
+  "receipt_commit_note": "Commit containing this receipt is docs-only after the production candidate",
+  "owner_roots": [
+    "game/levels/mutsumi/batch_02/",
+    "docs/beta-sprint/content-batch-02/",
+    "tests/beta_sprint/content_batch_02/"
+  ],
+  "levels": [
+    {
+      "id": "mutsumi_l04",
+      "title": "借来的道路",
+      "scene": "res://game/levels/mutsumi/batch_02/l04_borrowed_path.tscn",
+      "resource": "res://game/levels/mutsumi/batch_02/l04_borrowed_path.tres",
+      "adapter": "p01",
+      "status": "GREYBOX_PLAYABLE",
+      "registration_allowed": true,
+      "unit": "PASS",
+      "real": "HEADLESS_NATURAL_INPUT_PASS",
+      "graphical": "PENDING_00_INTEGRATION"
+    },
+    {
+      "id": "mutsumi_l05",
+      "title": "归途的门",
+      "scene": "res://game/levels/mutsumi/batch_02/l05_gate_home.tscn",
+      "resource": "res://game/levels/mutsumi/batch_02/l05_gate_home.tres",
+      "adapter": "p01",
+      "status": "GREYBOX_PLAYABLE",
+      "registration_allowed": true,
+      "unit": "PASS",
+      "real": "HEADLESS_NATURAL_INPUT_PASS",
+      "graphical": "PENDING_00_INTEGRATION"
+    }
+  ],
+  "unit": {
+    "status": "PASS",
+    "run": "unit_final",
+    "pid": 32756,
+    "exit_code": 0,
+    "checks": 45,
+    "failures": 0,
+    "topology": [
+      {
+        "solvable": 68,
+        "minimum_shifts": 2,
+        "id": "mutsumi_l04",
+        "reachable": 68
+      },
+      {
+        "solvable": 100,
+        "minimum_shifts": 4,
+        "id": "mutsumi_l05",
+        "reachable": 100
+      }
+    ]
+  },
+  "real": {
+    "status": "HEADLESS_NATURAL_INPUT_PASS",
+    "run": "real_03",
+    "pid": 48780,
+    "exit_code": 0,
+    "checks": 206,
+    "failures": 0,
+    "natural_routes": 6,
+    "formal_completion_events": 6,
+    "routes_per_level": 3,
+    "source_byte_hashes": 21
+  },
+  "graphical": "PENDING_00_INTEGRATION",
+  "independent_review": {
+    "important_findings": 1,
+    "second_independent_review": "NOT_RUN",
+    "resolution": "L05 frozen displayed bridge support repaired Owner-local; unit_bridge_red -> unit_bridge_green -> unit_final / real_03"
+  },
+  "integration_requests": {
+    "art": "05/00 supplies final L04/L05 environment art and readability acceptance",
+    "graphical": "00 runs original graphical case on final integration when graphical slot is available",
+    "shell": "07 registers both records from batch_02/level_order.json into the actual catalog"
+  },
+  "production_foundation_changes": "NONE",
+  "shared_runtime_presenter_changes": "NONE",
+  "old_three_levels_changes": "NONE",
+  "shell_save_art_changes": "NONE",
+  "working_tree_on_delivery": "CLEAN",
+  "push": "NOT_RUN",
+  "integration_merge": "NOT_RUN",
+  "files_sha256": "FILES_SHA256.json",
+  "source_sha256": "SOURCE_SHA256.json"
+}
