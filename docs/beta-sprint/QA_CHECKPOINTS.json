@@ -1,14 +1,15 @@
 {
   "schema": 1,
-  "latest_checkpoint": "BETA_3D02_FOCUSED_QA_01_CLOSEOUT",
-  "receipt": "docs/beta-sprint/content-expansion-02/QA_STATUS.json",
-  "status": "BETA_3D02_FOCUSED_QA_PARTIAL_ACCEPTED",
+  "latest_checkpoint": "FIVE_LEVEL_ALPHA_QA_01_COMPLETE",
+  "receipt": "docs/beta-sprint/five-level-3d-slice/BASELINE.json",
+  "status": "FIVE_LEVEL_ALPHA_QA_01_COMPLETE_ACCEPTED",
   "build_identity": {
-    "path": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
-    "zip": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01.zip",
-    "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
-    "runtime_source": "7a95b28b155f5d32c4b559bdf90e0ea9beaad4ac",
-    "delivery": "b910167becee2194c0cfc724d8f0fe47578836a9",
+    "zip_sha256": "0e45be5e2fe21767bc0e72ddf0017d7013a93a6b25c3fb2eec2bcafb6a14c3b9",
+    "path": "E:/godot/beta-sprint-builds/beta_l04_p1_20261009_01",
+    "zip": "E:/godot/beta-sprint-builds/beta_l04_p1_20261009_01.zip",
+    "runtime_source": "4267365d5d794a82dff4acc731073eb532ee40a1",
+    "integration_receipt": "9e2e9c29a73272d431795f12db1fefaff2433b05",
+    "Owner_fix": "2a2fd7ad06b5c139b51b77c8dae1a9289b0530e8",
     "bind_results_to_fixed_package_only": true
   },
   "bugs": {
@@ -16,16 +17,24 @@
       "status": "CLOSED",
       "basis": "08 independent mouse/keyboard recheck and 50 viewport-linked screenshots",
       "result": "docs/beta-sprint/qa-checkpoint-01/evidence/UI_08_001_RECHECK_COMPLETE.json"
+    },
+    "L04_INNER_MOVEMENT_P1": {
+      "result": "docs/beta-sprint/five-level-3d-slice/evidence/accepted_alpha_qa/FIVE_LEVEL_ALPHA_QA_01_COMPLETE.json",
+      "status": "CLOSED",
+      "basis": "08 actualnewfixedpackage shortA/fullL04/Reset/nativeL05unlock recheck"
     }
   },
   "focused_cases": {
+    "L05_first_human": "PASS_BLIND_PLAY",
+    "L04_full": "PASS",
+    "L04_Reset": "PASS",
+    "L05_unlock": "PASS_NATIVE_GOAL",
+    "new_Phase3_QA": "NOT_RUN_NOT_YET_PUBLISHED",
+    "fixed_hotfix_cold_continue": "PASS",
     "L03_first_time": "RETEST_PENDING",
-    "current_3d02_matrix": "3/3 PASS_WITH_NONBLOCKING_P2",
-    "current_3d02_cold_continue": "PASS"
+    "five_level_progression": "PASS_PRIOR_THREE_HISTORY_PLUS_REAL_L04_L05"
   },
   "backlog": {
-    "open_P2_count": 3,
-    "new_P2_count": 1,
     "issues": [
       {
         "id": "VIS01-P2-001 / UI-08-K01",
@@ -85,11 +94,18 @@
         "production_fix": "NONE; fixed package left unchanged; Art FROZEN"
       }
     ],
-    "document": "docs/beta-sprint/content-expansion-02/BACKLOG.json"
+    "open_P2_count": 3,
+    "new_P2_count": 0,
+    "document": "docs/beta-sprint/content-expansion-02/BACKLOG.json",
+    "scope": "Allthreeexistingissuesretained; historical newly_found/observed/evidencefields belong to earlierfixed3D02 run"
   },
-  "scope": "Current fixed3D02 matrix and two-process ColdContinue; first-time comprehension pending",
+  "scope": "Historicalfixedhotfix Humanrecheck; no transfer of PASS to Phase3 new3D candidate",
+  "P0": 0,
+  "P1": 0,
+  "P2": 3,
+  "release_recommendation": "CONTINUE_BETA",
   "whole_game_beta_qa_complete": false,
-  "next": "BETA_CONTENT_BATCH_02_NEXT_QA",
+  "next": "BETA_PHASE3_FIVE_LEVEL_3D_UNIFICATION",
   "next_development": "ALLOWED_TO_CONTINUE",
   "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
   "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE",
@@ -132,6 +148,102 @@
       "scope": "Authorized focused UI recheck only",
       "whole_game_beta_qa_complete": false,
       "next": "BETA-3D-INTEGRATION-02",
+      "next_development": "ALLOWED_TO_CONTINUE",
+      "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
+      "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE"
+    },
+    {
+      "schema": 1,
+      "latest_checkpoint": "BETA_3D02_FOCUSED_QA_01_CLOSEOUT",
+      "receipt": "docs/beta-sprint/content-expansion-02/QA_STATUS.json",
+      "status": "BETA_3D02_FOCUSED_QA_PARTIAL_ACCEPTED",
+      "build_identity": {
+        "path": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
+        "zip": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01.zip",
+        "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+        "runtime_source": "7a95b28b155f5d32c4b559bdf90e0ea9beaad4ac",
+        "delivery": "b910167becee2194c0cfc724d8f0fe47578836a9",
+        "bind_results_to_fixed_package_only": true
+      },
+      "bugs": {
+        "UI-08-001": {
+          "status": "CLOSED",
+          "basis": "08 independent mouse/keyboard recheck and 50 viewport-linked screenshots",
+          "result": "docs/beta-sprint/qa-checkpoint-01/evidence/UI_08_001_RECHECK_COMPLETE.json"
+        }
+      },
+      "focused_cases": {
+        "L03_first_time": "RETEST_PENDING",
+        "current_3d02_matrix": "3/3 PASS_WITH_NONBLOCKING_P2",
+        "current_3d02_cold_continue": "PASS"
+      },
+      "backlog": {
+        "open_P2_count": 3,
+        "new_P2_count": 1,
+        "issues": [
+          {
+            "id": "VIS01-P2-001 / UI-08-K01",
+            "severity": "P2",
+            "owner": "07 Game Shell",
+            "status": "OPEN",
+            "observed_this_run": true,
+            "evidence": [
+              9,
+              20,
+              35,
+              40
+            ],
+            "description": "Pause板底辅助文字贴边；960与底部操作说明重叠；关键控件仍能使用。"
+          },
+          {
+            "id": "L03_STALE_HINT_EXISTING",
+            "severity": "P2",
+            "owner": "06 Game Content",
+            "status": "OPEN",
+            "observed_this_run": false,
+            "reference": "E:/godot/beta-sprint-builds/beta_3d02_qa_20261009_01/BETA_3D02_HUMAN_QA_01_COMPLETE.json",
+            "description": "保留上轮真实跨越后过期提示；本轮未重跑完整跨越路线，不关闭或漏计。"
+          },
+          {
+            "id": "FOCUS-3D02-P2-001",
+            "severity": "P2",
+            "owner": "07 Game Shell (关联06菜单内容)",
+            "status": "OPEN",
+            "newly_found": true,
+            "title": "L02/L03选关仍显示灰盒/无正式环境预览，和实际3D入关不一致",
+            "steps": "Main→LevelSelect；用Down聚焦L02/L03；观察预览文字；Enter实际入关",
+            "expected": "选关状态文案准确表达当前关卡已是正式3D；若仅预览待补，应明确仅预览待补，避免称整关灰盒。",
+            "actual": "L02与L03显示灰盒试玩·尚无正式环境预览，预览区域为空；实际进入已有完整3D画面。",
+            "impact": "可能令玩家以为新关仍处于旧灰盒阶段；Enter入关正常，非P1。",
+            "confirmed_scope": {
+              "L02": [
+                "1920x1080",
+                "1280x720"
+              ],
+              "L03": [
+                "1280x720"
+              ],
+              "compact960": "L02/L03预览区为空，caption在该布局未展示，不将未显示的文字作为960复现证据"
+            },
+            "evidence": [
+              4,
+              32,
+              61,
+              62
+            ],
+            "actual_3d_comparison": [
+              5,
+              33,
+              63
+            ],
+            "production_fix": "NONE; fixed package left unchanged; Art FROZEN"
+          }
+        ],
+        "document": "docs/beta-sprint/content-expansion-02/BACKLOG.json"
+      },
+      "scope": "Current fixed3D02 matrix and two-process ColdContinue; first-time comprehension pending",
+      "whole_game_beta_qa_complete": false,
+      "next": "BETA_CONTENT_BATCH_02_NEXT_QA",
       "next_development": "ALLOWED_TO_CONTINUE",
       "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
       "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE"

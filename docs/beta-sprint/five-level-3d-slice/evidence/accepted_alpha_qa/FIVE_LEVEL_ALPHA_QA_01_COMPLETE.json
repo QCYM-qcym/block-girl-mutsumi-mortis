@@ -1,0 +1,213 @@
+{
+  "marker": "FIVE_LEVEL_ALPHA_QA_01_COMPLETE",
+  "task": "L04_P1_RECHECK_AND_L05_FIRST_PLAYTEST",
+  "recorded_utc": "2026-10-09T08:13:15.836Z",
+  "build": "E:/godot/beta-sprint-builds/beta_l04_p1_20261009_01",
+  "version": "beta_l04_p1_20261009_01",
+  "integration_receipt": "9e2e9c29a73272d431795f12db1fefaff2433b05",
+  "frozen_source": "4267365d5d794a82dff4acc731073eb532ee40a1",
+  "zip_sha256": "0e45be5e2fe21767bc0e72ddf0017d7013a93a6b25c3fb2eec2bcafb6a14c3b9",
+  "engine": "4.7.2.stable.steam.ed1daf0bf",
+  "method": "Independent Computer Use actual native mouse/keyboard playthrough; no author solution/routes read for L05; owner automation not used as Human PASS",
+  "L04_P1": "CLOSED",
+  "L04_full_playthrough": "PASS",
+  "L04_scope": {
+    "surface_spawn": [
+      4,
+      11,
+      32
+    ],
+    "inner_shift": [
+      5,
+      12,
+      33
+    ],
+    "actual_a_roll": [
+      6,
+      7,
+      13
+    ],
+    "continued_wasd": [
+      8,
+      16,
+      17,
+      18,
+      19,
+      20,
+      35,
+      36
+    ],
+    "perspective_movement": [
+      9,
+      10,
+      34,
+      35,
+      36
+    ],
+    "reset": 11,
+    "reset_then_full_goal": 30,
+    "reentry": 32,
+    "actual_goal": 30,
+    "completion_save": "progress_after_l04_actual_goal.json",
+    "note": "One full playthrough after an intentional mid-play Reset; re-entry and alternate-view movement independently passed. No claim of a second complete playthrough."
+  },
+  "L05_unlock": {
+    "status": "PASS",
+    "initial_locked": 3,
+    "actual_L04_goal": 30,
+    "saved_unlocked": "progress_after_l04_actual_goal.json",
+    "formal_select_unlocked": 31,
+    "formal_entry": 39,
+    "save_edits": "NONE"
+  },
+  "L05_first_human_playthrough": {
+    "status": "PASS",
+    "marker": "L05_FIRST_HUMAN_PLAYTHROUGH_PASS",
+    "first_entry": 39,
+    "goal": 68,
+    "minutes": 4.398716666666667,
+    "goal_understood": "Surface plate opens gate; combine world paths and perspective link",
+    "mechanism_density": "Sequential hints made combination manageable for this tester",
+    "hidden_conditions": "None observed; world/link/plate requirements stated in game",
+    "long_stalls": "None observed",
+    "reset": 49,
+    "pause_resume": [
+      47,
+      48
+    ],
+    "completion_ui": [
+      68,
+      69,
+      70,
+      71
+    ],
+    "author_answers_read": false,
+    "formal_playable_upgrade": "NOT_GRANTED; GREYBOX_PLAYABLE label retained"
+  },
+  "five_level_progression": {
+    "status": "PASS",
+    "scope": "Historical genuine L01-L03 normal completion retained; new package continued original values, then actual L04 Goal -> L05 unlock -> L05 Goal -> all five completed visible. Not a fresh five-level replay on this package.",
+    "all_complete_select": 71,
+    "all_complete_save": "progress_after_l05_goal.json"
+  },
+  "save_continue": {
+    "status": "PASS",
+    "old_game_pid": 27168,
+    "old_game_dead_utc": "2026-10-09T08:06:44.0426944Z",
+    "new_game_pid": 49660,
+    "new_game_start_local": "2026-10-09T16:07:09.672696+08:00",
+    "same_isolated_profile": "E:/godot/beta-sprint-builds/l04_p1_l05_human_recheck_20261009T075359Z/profile/Roaming",
+    "prequit_state": "L05 Inner/EAST, moved away from spawn",
+    "prequit_evidence": 77,
+    "real_continue": 82,
+    "result": "L05 Surface/NORTH authored spawn; gate closed; all five completion/unlock records preserved",
+    "valid_snapshots": 9
+  },
+  "counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 3,
+    "new_P0": 0,
+    "new_P1": 0,
+    "new_P2": 0,
+    "P2_scope": "Three previously tracked nonblocking P2s retained, no fresh closure implied"
+  },
+  "retained_P2": [
+    "VIS01-P2-001 / UI-08-K01 Pause auxiliary footer overlap/clipping at 960x720 — 07",
+    "L03_STALE_HINT_EXISTING — 06",
+    "FOCUS-3D02-P2-001 Level Select presentation caption mismatch — 07/06"
+  ],
+  "L03_first_time_comprehension": "RETEST_PENDING",
+  "UI_matrix": "Historical three-size evidence retained with original build binding; no new three-size acceptance claimed in this focused task",
+  "player_confusion": [
+    {
+      "level": "L04",
+      "evidence": [
+        22,
+        23,
+        24
+      ],
+      "text": "连接成立后最初试 D 无位移；改用当前视角的 W 跨越。方向需重新对应画面。",
+      "resolution": "Short trial resolved",
+      "owners": [
+        "06",
+        "07"
+      ]
+    },
+    {
+      "level": "L04",
+      "evidence": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "text": "EAST 下接近出口后沿直路多走了两格；转回 NORTH 看清转角后到达 Goal。",
+      "resolution": "Reorientation resolved",
+      "owners": [
+        "06",
+        "05"
+      ]
+    },
+    {
+      "level": "L05",
+      "evidence": [
+        41,
+        42,
+        43
+      ],
+      "text": "起点前进一格时不确定能否切世界；明确拒绝提示与下一格提示帮助找到共同落脚点。",
+      "resolution": "In-game feedback resolved",
+      "owners": [
+        "06"
+      ]
+    },
+    {
+      "level": "L05",
+      "evidence": [
+        44,
+        45,
+        46
+      ],
+      "text": "Inner 桥转角被角色遮住，第一次试 D 无位移；试 W 后看清路径。",
+      "resolution": "Short trial resolved",
+      "owners": [
+        "06",
+        "05"
+      ]
+    }
+  ],
+  "softlocks": "NONE_OBSERVED in tested L04/L05 normal path, Reset, re-entry and cold Continue",
+  "unexpected_shortcuts": "NONE_OBSERVED; not exhaustive search of all theoretical paths",
+  "owner_handoffs": {
+    "00 Integration": "Accept independent focused COMPLETE evidence, remove L04 P1 from open QA gate; continue Beta. Original 07 UI P2 and L03 first-tester gate remain. Build import metadata observation included in audit, no UI symptom found.",
+    "01 Runtime": "No new runtime defect; movement, reset, completion and cold Continue passed independently.",
+    "06 Game Content": "L04_INNER_MOVEMENT_P1 CLOSED; L05 first blind Goal PASS; consider minor direction/occlusion confusion feedback; keep L05 GREYBOX_PLAYABLE until formal content approval.",
+    "05 Art": "Minor L04 exit corner/L05 bridge corner occlusion feedback for future readability work; frozen Art unchanged.",
+    "07 Game Shell": "Formal natural unlock, final-level disabled next entry, keyboard return/select, Save and cold Continue passed; keep existing nonblocking P2s."
+  },
+  "release_recommendation": "CONTINUE_BETA",
+  "judgment": "Five-level Alpha can support continued play within this focused QA scope; first-time L03 comprehension remains pending and a single L05 playtester does not certify all-player usability.",
+  "production_changes": "NONE",
+  "working_tree": {
+    "path": "E:/godot/若叶睦/方块少女-若叶睦",
+    "head": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "status": [
+      "?? docs/art/BETA_UI_ART_DIRECTION_01/"
+    ],
+    "change_from_before": "NONE"
+  },
+  "push": "NOT_RUN",
+  "screenshots": 83,
+  "trace_note": "Screenshot labels 26-28 used goal prospectively, but actual formal Goal was only seq30; progress_before_l04_actual_goal.json confirms no earlier completion. Immediate transition frames are not independent stable-state proof.",
+  "verification": {
+    "frozen_package_files_unchanged": 1279,
+    "original_payload_manifest_verified": 1270,
+    "run_files_unchanged": 1278,
+    "isolated_generated_import_metadata": 1,
+    "old_sealed_evidence_unchanged": 538,
+    "original_save_unchanged": true,
+    "game_processes_ended": true
+  }
+}
