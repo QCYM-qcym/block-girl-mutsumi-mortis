@@ -23,10 +23,10 @@
 ## 00 bootstrap tasks
 
 - [x] Read actual HEAD/CLEAN/worktrees, runtime/presentation/audio/UI/Art/Harness sources and current Owner threads in parallel; record AUDIT.
-- [x] Capture old/current QA, approved Art/UI and production inventories; review shared DTO/ownership boundaries. Contract commit follows the verification gate.
-- [ ] Prepare each code Owner worktree from that exact commit, verify branch/initial HEAD/CLEAN/contract hash; record actual native/fallback result.
-- [ ] Dispatch all existing Owner threads with common contract and exclusive paths; 08 receives readiness scope only until a real new Build exists.
-- [ ] Verify no ownership overlaps, only 00 shared reservations, no baseline/QA/Art drift; commit actual bootstrap receipt and check CLEAN.
+- [x] Capture old/current QA, approved Art/UI and production inventories; review shared DTO/ownership boundaries. Contract committed as 2938d6e534f5b596bb320ce79d72b69f5923f3cd.
+- [x] Prepare each code Owner worktree from that exact commit, verify branch/initial HEAD/CLEAN/contract hash; native non-Git-parent failure and sequential Git fallback recorded in WORKTREES.json.
+- [x] Dispatch all eight existing production Owner threads with common contract and exclusive paths; startup acknowledgements retained. 08 receives readiness scope only until a real new Build exists.
+- [x] Verify no ownership overlaps, only 00 shared reservations, no baseline/QA/Art drift; actual receipt ready for docs-only commit and final CLEAN gate.
 
 ## Owner execution interfaces and independent validation
 
