@@ -1,0 +1,239 @@
+{
+  "schema": 1,
+  "task": "BETA_3D_UI_QA_01_CLOSEOUT",
+  "status": "BETA_3D_UI_QA_CHECKPOINT_ACCEPTED",
+  "accepted_utc": "2026-10-09T04:07:29.6451654Z",
+  "qa_date": "2026-10-09",
+  "track": "00 Integration Coordinator",
+  "integration_parent": "dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916",
+  "build_identity": {
+    "path": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01",
+    "project": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01/project/project.godot",
+    "zip": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01.zip",
+    "zip_sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1",
+    "source_snapshot": "ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3",
+    "integration_receipt": "dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916",
+    "fix": "81d9470c174bd67a73e7e8fedf4b92240ddfc2fd"
+  },
+  "qa_evidence_root": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01",
+  "qa_evidence_manifest_sha256": "fc22fa5848aff507a7920a85bcb53d65209f011696a27eb6c7f9c7414fce5c35",
+  "UI_08_001": "CLOSED",
+  "BLACK_BOX_3D_UI_QA_01": "COMPLETE_AUTHORIZED_RECHECK_SCOPE",
+  "completion_scope": "本轮授权的 Navigation/Pause/Settings/Hint/Focus/文字/裁切/可操作性三尺寸补测完成；COMPLETE 是覆盖完成，不表示无 P2。",
+  "ui_matrix": {
+    "status": "3/3 PASS",
+    "known_nonblocking_P2_preserved": true,
+    "rows": [
+      {
+        "target": "1920x1080",
+        "actual_client": [
+          1920,
+          1080
+        ],
+        "actual_viewport": [
+          1920,
+          1080
+        ],
+        "actual_render": [
+          1920,
+          1080
+        ],
+        "actual_outer": [
+          1938,
+          1127
+        ],
+        "screenshot_pixels": [
+          1538,
+          895
+        ],
+        "interaction": "PASS_WITH_KNOWN_P2",
+        "navigation": "PASS",
+        "pause": "PASS",
+        "settings": "PASS",
+        "hint": "PASS",
+        "focus": "PASS",
+        "button_accessibility": "PASS",
+        "text_overflow": "核心文字 PASS；既有 Pause 板底辅助文字问题保留",
+        "clipping": "核心按钮 PASS；既有 Pause 板底辅助文字边缘/重叠问题保留",
+        "entry_sequences": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "target": "1280x720",
+        "actual_client": [
+          1280,
+          720
+        ],
+        "actual_viewport": [
+          1280,
+          720
+        ],
+        "actual_render": [
+          1280,
+          720
+        ],
+        "actual_outer": [
+          1298,
+          767
+        ],
+        "screenshot_pixels": [
+          1026,
+          607
+        ],
+        "interaction": "PASS_WITH_KNOWN_P2",
+        "navigation": "PASS",
+        "pause": "PASS",
+        "settings": "PASS",
+        "hint": "PASS",
+        "focus": "PASS",
+        "button_accessibility": "PASS",
+        "text_overflow": "核心文字 PASS；既有 Pause 板底辅助文字问题保留",
+        "clipping": "核心按钮 PASS；既有 Pause 板底辅助文字边缘/重叠问题保留",
+        "entry_sequences": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "target": "960x720",
+        "actual_client": [
+          960,
+          720
+        ],
+        "actual_viewport": [
+          960,
+          720
+        ],
+        "actual_render": [
+          960,
+          720
+        ],
+        "actual_outer": [
+          978,
+          767
+        ],
+        "screenshot_pixels": [
+          770,
+          607
+        ],
+        "interaction": "PASS_WITH_KNOWN_P2",
+        "navigation": "PASS",
+        "pause": "PASS",
+        "settings": "PASS",
+        "hint": "PASS",
+        "focus": "PASS",
+        "button_accessibility": "PASS",
+        "text_overflow": "核心文字 PASS；既有 Pause 板底辅助文字问题保留",
+        "clipping": "核心按钮 PASS；既有 Pause 板底辅助文字边缘/重叠问题保留",
+        "entry_sequences": [
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "Navigation": "PASS",
+    "Settings": "PASS",
+    "Hint": "PASS",
+    "Focus": "PASS",
+    "L02_Pause": "PASS"
+  },
+  "retained": {
+    "L01_3D_Playthrough": "PREVIOUS_PASS_PRESERVED",
+    "L02_Unlock": "PREVIOUS_PASS_PRESERVED",
+    "Cold_Continue": "PREVIOUS_PASS_PRESERVED"
+  },
+  "counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 1,
+    "new_P0": 0,
+    "new_P1": 0,
+    "new_P2": 0
+  },
+  "P2_backlog": [
+    {
+      "id": "VIS01-P2-001 / UI-08-K01",
+      "severity": "P2",
+      "owner": "07 Game Shell",
+      "existing": true,
+      "description": "Pause 板底辅助文字贴底；960×720 与底部操作说明重叠；主要按钮仍可操作。保留原问题，不重复计数。"
+    }
+  ],
+  "production_changes": "NONE",
+  "art_direction": "APPROVED_FROZEN_NOT_REOPENED",
+  "build_identity_frozen": true,
+  "evidence_frozen": true,
+  "preserved_screenshots": 50,
+  "sealed_evidence_files": 60,
+  "full_qa_inventory_files": 140,
+  "actual_client_viewport_render_linked_checks": 50,
+  "retests_this_closeout": [],
+  "next": "BETA-3D-INTEGRATION-02",
+  "next_development": "ALLOWED_TO_CONTINUE",
+  "existing_next_candidate": {
+    "branch": "feat/beta-3d-integration-02",
+    "commit": "b910167becee2194c0cfc724d8f0fe47578836a9",
+    "status": "BETA_3D_INTEGRATION_02_READY",
+    "new_build": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
+    "separate_qa_identity": true
+  },
+  "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
+  "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE",
+  "whole_game_beta_qa": "NOT_COMPLETE",
+  "working_tree": "CLEAN_AFTER_SEALED_METADATA_COMMIT",
+  "push": "NOT_RUN",
+  "history": {
+    "previous_00_handoff": "docs/beta-sprint/ui-08-001-integration/UI_08_001_INTEGRATION_RECEIPT.md",
+    "previous_status": "OPEN / READY_FOR_08_RECHECK; Human QA NOT_RUN at original handoff",
+    "authoritative_08_result": "evidence/UI_08_001_RECHECK_COMPLETE.json",
+    "original_08_files_not_modified": true
+  }
+}

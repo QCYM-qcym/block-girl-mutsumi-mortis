@@ -1,0 +1,4 @@
+# Preserve exact physical bytes of the accepted QA evidence.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Frozen originals include intentional Markdown hard breaks and their original EOF bytes.
+evidence/** -whitespace

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "latest_checkpoint": "BETA_3D_UI_QA_01_CLOSEOUT",
+  "receipt": "docs/beta-sprint/qa-checkpoint-01/CHECKPOINT.json",
+  "status": "BETA_3D_UI_QA_CHECKPOINT_ACCEPTED",
+  "build_identity": {
+    "path": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01",
+    "project": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01/project/project.godot",
+    "zip": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01.zip",
+    "zip_sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1",
+    "source_snapshot": "ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3",
+    "integration_receipt": "dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916",
+    "fix": "81d9470c174bd67a73e7e8fedf4b92240ddfc2fd"
+  },
+  "bugs": {
+    "UI-08-001": {
+      "status": "CLOSED",
+      "basis": "08 independent mouse/keyboard recheck and 50 viewport-linked screenshots",
+      "result": "docs/beta-sprint/qa-checkpoint-01/evidence/UI_08_001_RECHECK_COMPLETE.json"
+    }
+  },
+  "backlog": {
+    "open_P2_count": 1,
+    "new_P2_count": 0,
+    "issues": [
+      {
+        "id": "VIS01-P2-001 / UI-08-K01",
+        "severity": "P2",
+        "owner": "07 Game Shell",
+        "existing": true,
+        "description": "Pause 板底辅助文字贴底；960×720 与底部操作说明重叠；主要按钮仍可操作。保留原问题，不重复计数。"
+      }
+    ],
+    "document": "docs/beta-sprint/visual-integration-01/POST_INTEGRATION_POLISH_BACKLOG.md"
+  },
+  "scope": "Authorized focused UI recheck only",
+  "whole_game_beta_qa_complete": false,
+  "next": "BETA-3D-INTEGRATION-02",
+  "next_development": "ALLOWED_TO_CONTINUE",
+  "L03_FIRST_TIME_COMPREHENSION": "RETEST_PENDING",
+  "FOUNDATION_4_FULL": "DEFERRED_CURRENT_BETA_SCOPE"
+}

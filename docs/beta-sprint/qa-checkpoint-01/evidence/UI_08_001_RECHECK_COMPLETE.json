@@ -1,0 +1,2429 @@
+{
+  "status": "UI_08_001_RECHECK_COMPLETE",
+  "project": "Mutsumi Veilshift",
+  "track": "08 QA & Build",
+  "mode": "FOCUSED BLACK-BOX RECHECK",
+  "date": "2026-10-09",
+  "build": {
+    "path": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01",
+    "project": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01/project/project.godot",
+    "zip": "E:/godot/beta-sprint-builds/visual_ui08001_20261009_01.zip",
+    "zip_sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1",
+    "source_snapshot": "ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3",
+    "integration_receipt": "dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916",
+    "fix": "81d9470c174bd67a73e7e8fedf4b92240ddfc2fd"
+  },
+  "bug": {
+    "id": "UI-08-001",
+    "status": "CLOSED",
+    "severity_before": "P2",
+    "l02_pause": "PASS",
+    "independent_input": true,
+    "owner_results_used_as_human_qa": false,
+    "checks": {
+      "text": "PASS: 暂停 Esc 在深色背景上可辨认",
+      "background": "PASS: 浅色底板未吞没文字",
+      "mouse": "PASS: 打开暂停、选择设置、继续",
+      "escape": "PASS: 恢复游戏",
+      "state": "PASS: 1920 移动后位置、960 移动及 EAST 视角在暂停/恢复前后保持；仅可视状态核对"
+    }
+  },
+  "matrix": [
+    {
+      "target": "1920x1080",
+      "actual_client": [
+        1920,
+        1080
+      ],
+      "actual_viewport": [
+        1920,
+        1080
+      ],
+      "actual_render": [
+        1920,
+        1080
+      ],
+      "actual_outer": [
+        1938,
+        1127
+      ],
+      "screenshot_pixels": [
+        1538,
+        895
+      ],
+      "interaction": "PASS_WITH_KNOWN_P2",
+      "navigation": "PASS",
+      "pause": "PASS",
+      "settings": "PASS",
+      "hint": "PASS",
+      "focus": "PASS",
+      "button_accessibility": "PASS",
+      "text_overflow": "核心文字 PASS；既有 Pause 板底辅助文字问题保留",
+      "clipping": "核心按钮 PASS；既有 Pause 板底辅助文字边缘/重叠问题保留",
+      "entry_sequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "target": "1280x720",
+      "actual_client": [
+        1280,
+        720
+      ],
+      "actual_viewport": [
+        1280,
+        720
+      ],
+      "actual_render": [
+        1280,
+        720
+      ],
+      "actual_outer": [
+        1298,
+        767
+      ],
+      "screenshot_pixels": [
+        1026,
+        607
+      ],
+      "interaction": "PASS_WITH_KNOWN_P2",
+      "navigation": "PASS",
+      "pause": "PASS",
+      "settings": "PASS",
+      "hint": "PASS",
+      "focus": "PASS",
+      "button_accessibility": "PASS",
+      "text_overflow": "核心文字 PASS；既有 Pause 板底辅助文字问题保留",
+      "clipping": "核心按钮 PASS；既有 Pause 板底辅助文字边缘/重叠问题保留",
+      "entry_sequences": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "target": "960x720",
+      "actual_client": [
+        960,
+        720
+      ],
+      "actual_viewport": [
+        960,
+        720
+      ],
+      "actual_render": [
+        960,
+        720
+      ],
+      "actual_outer": [
+        978,
+        767
+      ],
+      "screenshot_pixels": [
+        770,
+        607
+      ],
+      "interaction": "PASS_WITH_KNOWN_P2",
+      "navigation": "PASS",
+      "pause": "PASS",
+      "settings": "PASS",
+      "hint": "PASS",
+      "focus": "PASS",
+      "button_accessibility": "PASS",
+      "text_overflow": "核心文字 PASS；既有 Pause 板底辅助文字问题保留",
+      "clipping": "核心按钮 PASS；既有 Pause 板底辅助文字边缘/重叠问题保留",
+      "entry_sequences": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    }
+  ],
+  "navigation": "PASS: 主菜单→选关→L-02；暂停→主菜单；1280/960 键盘焦点、Enter 实际选关；真实点击退出",
+  "settings": "PASS: 三尺寸均打开并操作；1920 调整后 Cancel；1280 调整后 Apply；960 Tab/Shift+Tab、End 恢复音乐100、Apply；未测试全屏切换",
+  "hint": "PASS: L-02 顶部操作/目标文字和底部键位说明可读；960 Space 后世界标签/提示更新；不包含 L-03 Perspective Connection 可理解性复测",
+  "counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 1,
+    "new_P0": 0,
+    "new_P1": 0,
+    "new_P2": 0
+  },
+  "open_issues": [
+    {
+      "id": "VIS01-P2-001 / UI-08-K01",
+      "severity": "P2",
+      "owner": "07 Game Shell",
+      "existing": true,
+      "description": "Pause 板底辅助文字贴底；960×720 与底部操作说明重叠；主要按钮仍可操作。保留原问题，不重复计数。"
+    }
+  ],
+  "known_baseline": [
+    "PIXEL_BASELINE_PRESENT: L-02 灰盒/像素表现，按集成范围属于已知状态"
+  ],
+  "black_box_3d_ui_qa_01": "COMPLETE",
+  "completion_scope": "本轮授权的 Navigation/Pause/Settings/Hint/Focus/文字/裁切/可操作性三尺寸补测完成；COMPLETE 是覆盖完成，不表示无 P2。",
+  "not_retested": [
+    "L-01 完整3D通关",
+    "L-02解锁",
+    "Cold Continue",
+    "Level Complete 页三尺寸",
+    "Reset 激活",
+    "L-03 完整试玩"
+  ],
+  "retained_passes": {
+    "l01_3d_playthrough": "PASS (historical, unchanged)",
+    "l02_unlock": "PASS (historical, unchanged)",
+    "cold_continue": "PASS (historical, unchanged)"
+  },
+  "historical_evidence": "E:/godot/若叶睦/方块少女-若叶睦/docs/beta-sprint/visual-integration-01/BLACK_BOX_3D_UI_QA_01_PARTIAL_RECEIPT_2026-10-09.md",
+  "environment": {
+    "engine": "4.7.2.stable.steam.ed1daf0bf",
+    "renderer": "D3D12 12_0 Forward+",
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "input": "Computer Use @oai/sky; real screenshot-bound mouse/keyboard",
+    "activation_failure_this_run": false,
+    "size_control": "external Godot SceneTree test launcher, production main scene; native Godot root window APIs only",
+    "measurement": "DisplayServer.window_get_size, root.get_visible_rect, root.get_texture; each screenshot linked to contemporaneous geometry",
+    "pid": 48204,
+    "normal_menu_quit": true
+  },
+  "qa_save": {
+    "source": "E:\\godot\\beta-sprint-builds\\black_box_3d_ui_qa_01_20261007\\clean_profile\\Roaming\\Godot\\app_userdata\\方块少女-若叶睦\\beta_sprint\\black_box_3d_ui_qa_01\\progress.json",
+    "isolated_profile": true,
+    "source_unchanged": true,
+    "final_payload": {
+      "completed": [
+        "mutsumi_l01"
+      ],
+      "has_progress": true,
+      "recent": "mutsumi_l02",
+      "settings": {
+        "fullscreen": false,
+        "master": 0.55,
+        "music": 1,
+        "muted": false,
+        "sfx": 1
+      },
+      "unlocked": [
+        "mutsumi_l01",
+        "mutsumi_l02"
+      ]
+    }
+  },
+  "production_changes": "NONE",
+  "verification": {
+    "before_count": 1148,
+    "after_count": 1148,
+    "changed": [],
+    "added": [],
+    "removed": [],
+    "interaction_count": 50,
+    "size_mismatch": [],
+    "missing_screenshots": [],
+    "qa_original_progress_unchanged": true,
+    "game_pid_48204_running": false,
+    "stderr_bytes": 0,
+    "stdout": "Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 5060 Ti\r\n\r\n",
+    "qa_original_progress_source": "E:\\godot\\beta-sprint-builds\\black_box_3d_ui_qa_01_20261007\\clean_profile\\Roaming\\Godot\\app_userdata\\方块少女-若叶睦\\beta_sprint\\black_box_3d_ui_qa_01\\progress.json",
+    "frozen_ui_art_count": 77,
+    "frozen_ui_art_changed": [],
+    "build_zip_sha256": "40afc81b0c5d5574b1bd688d6048ece4c1537da94905af30e32eca92b5456cb1"
+  },
+  "screenshots": [
+    {
+      "sequence": 1,
+      "label": "main_measured",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/001_1920x1080_main_measured_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 220,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515107.588,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 2,
+      "label": "main_select_mouse",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/002_1920x1080_main_select_mouse_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 248,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515115.022,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "label": "select_l02_actual",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/003_1920x1080_select_l02_actual_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 281,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515123.877,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 4,
+      "label": "l02_before_pause_move",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/004_1920x1080_l02_before_pause_move_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 353,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515142.989,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "label": "l02_pause_mouse_visible_label",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/005_1920x1080_l02_pause_mouse_visible_label_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 379,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515149.923,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "label": "l02_esc_resume_state_preserved",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/006_1920x1080_l02_esc_resume_state_preserved_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 412,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515158.723,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "label": "pause_1920_keyboard_entry",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/007_1920x1080_pause_1920_keyboard_entry_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 490,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515179.523,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "label": "pause_1920_focus_reset",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/008_1920x1080_pause_1920_focus_reset_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 510,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515184.857,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "label": "pause_1920_focus_settings",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/009_1920x1080_pause_1920_focus_settings_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 536,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515191.79,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 10,
+      "label": "settings_1920_keyboard_open",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/010_1920x1080_settings_1920_keyboard_open_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 556,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515197.123,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 11,
+      "label": "settings_1920_volume_preview",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/011_1920x1080_settings_1920_volume_preview_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 621,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515214.474,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 12,
+      "label": "settings_1920_mouse_cancel",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/012_1920x1080_settings_1920_mouse_cancel_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 647,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515221.391,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 13,
+      "label": "pause_1920_mouse_resume",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/013_1920x1080_pause_1920_mouse_resume_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 667,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515226.725,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 14,
+      "label": "hint_1920_reset_visible",
+      "size": "1920x1080",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/014_1920x1080_hint_1920_reset_visible_0.png",
+      "dimensions": [
+        1538,
+        895
+      ],
+      "geometry": {
+        "client_size": [
+          1920,
+          1080
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1938,
+          1127
+        ],
+        "pid": 48204,
+        "render_size": [
+          1920,
+          1080
+        ],
+        "requested": [
+          1920,
+          1080
+        ],
+        "sample": 778,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515256.325,
+        "viewport_size": [
+          1920,
+          1080
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "sequence": 15,
+      "label": "l02_1280_size_measured",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/015_1280x720_l02_1280_size_measured_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 808,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515264.325,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 16,
+      "label": "pause_1280_mouse_entry",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/016_1280x720_pause_1280_mouse_entry_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 851,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515275.792,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 17,
+      "label": "settings_1280_mouse_open",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/017_1280x720_settings_1280_mouse_open_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 909,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515291.259,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 18,
+      "label": "settings_1280_focus_music",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/018_1280x720_settings_1280_focus_music_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 961,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515305.126,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 19,
+      "label": "settings_1280_music_preview",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/019_1280x720_settings_1280_music_preview_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 988,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515312.326,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 20,
+      "label": "settings_1280_apply",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/020_1280x720_settings_1280_apply_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1014,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515319.244,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 21,
+      "label": "pause_1280_esc_resume",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/021_1280x720_pause_1280_esc_resume_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1119,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515347.244,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 22,
+      "label": "hint_1280_reset_visible",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/022_1280x720_hint_1280_reset_visible_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1145,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515354.177,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 23,
+      "label": "pause_1280_before_navigation",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/023_1280x720_pause_1280_before_navigation_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1171,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515361.061,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 24,
+      "label": "navigation_1280_pause_to_main",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/024_1280x720_navigation_1280_pause_to_main_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1192,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515366.661,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 25,
+      "label": "navigation_1280_main_tab",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/025_1280x720_navigation_1280_main_tab_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1225,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515375.461,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 26,
+      "label": "navigation_1280_focus_select",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/026_1280x720_navigation_1280_focus_select_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1244,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515380.528,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 27,
+      "label": "navigation_1280_enter_select",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/027_1280x720_navigation_1280_enter_select_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1276,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515389.045,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 28,
+      "label": "navigation_1280_mouse_l02",
+      "size": "1280x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/028_1280x720_navigation_1280_mouse_l02_0.png",
+      "dimensions": [
+        1026,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          1280,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          1298,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          1280,
+          720
+        ],
+        "requested": [
+          1280,
+          720
+        ],
+        "sample": 1329,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515403.179,
+        "viewport_size": [
+          1280,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 29,
+      "label": "l02_960_size_measured",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/029_960x720_l02_960_size_measured_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1351,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515409.045,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 30,
+      "label": "l02_960_pre_pause_move",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/030_960x720_l02_960_pre_pause_move_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1447,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515434.646,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 31,
+      "label": "l02_960_pre_pause_camera",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/031_960x720_l02_960_pre_pause_camera_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1467,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515439.979,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 32,
+      "label": "pause_960_mouse_entry",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/032_960x720_pause_960_mouse_entry_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1486,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515445.046,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 33,
+      "label": "pause_960_esc_resume_same_state",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/033_960x720_pause_960_esc_resume_same_state_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1551,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515462.38,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 34,
+      "label": "pause_960_keyboard_entry",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/034_960x720_pause_960_keyboard_entry_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1577,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515469.313,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 35,
+      "label": "settings_960_mouse_open",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/035_960x720_settings_960_mouse_open_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1598,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515474.913,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 36,
+      "label": "settings_960_focus_music",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/036_960x720_settings_960_focus_music_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1701,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515502.381,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 37,
+      "label": "settings_960_restore_music_mouse",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/037_960x720_settings_960_restore_music_mouse_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1806,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515530.382,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 38,
+      "label": "settings_960_music_max_keyboard",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/038_960x720_settings_960_music_max_keyboard_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1911,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515558.382,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 39,
+      "label": "settings_960_reverse_focus",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/039_960x720_settings_960_reverse_focus_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1950,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515568.782,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 40,
+      "label": "settings_960_apply_restore",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/040_960x720_settings_960_apply_restore_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 1970,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515574.082,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 41,
+      "label": "pause_960_mouse_resume",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/041_960x720_pause_960_mouse_resume_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 2041,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515593.016,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 42,
+      "label": "hint_960_reset_visible",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/042_960x720_hint_960_reset_visible_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 2076,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515602.35,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 43,
+      "label": "hint_960_world_label_update",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/043_960x720_hint_960_world_label_update_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 2153,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515622.883,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 44,
+      "label": "pause_960_before_navigation",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/044_960x720_pause_960_before_navigation_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 2238,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515645.551,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 45,
+      "label": "navigation_960_pause_to_main",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/045_960x720_navigation_960_pause_to_main_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 2272,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515654.618,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 46,
+      "label": "navigation_960_mouse_select",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/046_960x720_navigation_960_mouse_select_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 2343,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515673.535,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 47,
+      "label": "navigation_960_focus_l02",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/047_960x720_navigation_960_focus_l02_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 3025,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515855.405,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 48,
+      "label": "navigation_960_keyboard_enter_l02",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/048_960x720_navigation_960_keyboard_enter_l02_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 3051,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515862.29,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 49,
+      "label": "final_pause_before_quit",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/049_960x720_final_pause_before_quit_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 3077,
+        "title": "Mutsumi Veilshift · L-02  /  两岸之间",
+        "unix_time": 1791515869.223,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    },
+    {
+      "sequence": 50,
+      "label": "final_main_before_quit",
+      "size": "960x720",
+      "path": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01/screenshots/050_960x720_final_main_before_quit_0.png",
+      "dimensions": [
+        770,
+        607
+      ],
+      "geometry": {
+        "client_size": [
+          960,
+          720
+        ],
+        "content_scale_factor": 1,
+        "content_scale_mode": 0,
+        "outer_size": [
+          978,
+          767
+        ],
+        "pid": 48204,
+        "render_size": [
+          960,
+          720
+        ],
+        "requested": [
+          960,
+          720
+        ],
+        "sample": 3097,
+        "title": "Mutsumi Veilshift · 方块少女 · Beta",
+        "unix_time": 1791515874.556,
+        "viewport_size": [
+          960,
+          720
+        ],
+        "window_mode": 0,
+        "window_size": [
+          960,
+          720
+        ]
+      }
+    }
+  ]
+}
