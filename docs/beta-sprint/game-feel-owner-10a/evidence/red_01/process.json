@@ -1,0 +1,59 @@
+{
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "dirty": [
+    "?? docs/beta-sprint/game-feel-owner-10a/",
+    "?? tests/beta_sprint/game_feel_owner_10a/"
+  ],
+  "case": "red_01",
+  "mode": "unit",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "01 DTO",
+    "Safety attestation",
+    "native commit"
+  ],
+  "sources": [
+    {
+      "path": "foundation/orientation/discrete_orientation.gd",
+      "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd",
+      "sha256": "9635f9c88c64060e669a6f7b4a506d334aabae8063dbcdb6c434e64cea08ff00"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10a/run.ps1",
+      "sha256": "563fdb527132cc69d0be9aa974be2b538c68aa34021949a2550bdf95a8838260"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd",
+      "sha256": "f2505464865f0237ad0796c621ff6e354f2856d59e160998ad162fc1aa132af8"
+    }
+  ],
+  "project_name": "PFALL_10A_62abb31245f44bf1b2f52472bcee8799",
+  "arguments": [
+    "--path",
+    "\"E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\red_01\\project\"",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_10a/unit.gd",
+    "--headless",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\red_01"
+  ],
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "started": "2026-10-10T00:19:52.2759013+08:00",
+  "status": "FAILED",
+  "pid": 8004,
+  "exit_code": 1,
+  "finished": "2026-10-10T00:19:52.4635669+08:00",
+  "stderr": "FAIL 10A: independent sampler exists: res://game/feel/animation/fall_landing/fall_motion.gd\r\nFAIL 10A: independent sampler exists: res://game/feel/animation/fall_landing/landing_motion.gd\r\n",
+  "source_changes": [],
+  "checks": 2,
+  "failures": [
+    "independent sampler exists: res://game/feel/animation/fall_landing/fall_motion.gd",
+    "independent sampler exists: res://game/feel/animation/fall_landing/landing_motion.gd"
+  ],
+  "user_data_dir": "C:/Users/QCYM/AppData/Roaming/PFALL_10A_62abb31245f44bf1b2f52472bcee8799",
+  "profile_isolated": true
+}

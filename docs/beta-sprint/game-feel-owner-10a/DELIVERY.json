@@ -1,0 +1,136 @@
+{
+  "task": "PFALL_ANIMATION_LANDING_01",
+  "status": "OWNER_LOCAL_DELIVERY_READY",
+  "contract_commit": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "implementation_commit": "f590b2b6a1d16e4d22c1e82c41be079a24b67de5",
+  "worktree": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation",
+  "branch": "feat/pfall-animation",
+  "interfaces": [
+    "begin(event:Dictionary)->Dictionary",
+    "sample(elapsed_seconds:float)->Dictionary",
+    "cancel(presentation_identity:Dictionary)->void",
+    "clear()->void"
+  ],
+  "evidence_bindings": [
+    {
+      "case": "unit_delivery_01",
+      "original_execution_head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+      "original_execution_dirty": [
+        "?? docs/beta-sprint/game-feel-owner-10a/",
+        "?? game/feel/",
+        "?? tests/beta_sprint/game_feel_owner_10a/"
+      ],
+      "checks": 2003,
+      "failures": [],
+      "authority": false,
+      "doubles": [
+        "01 DTO",
+        "Safety attestation",
+        "native commit"
+      ],
+      "source_binding": "MATCH unchanged tested bytes",
+      "process_record_sha256": "9e1f0606b37cd8c9175100e51e12be64b31dc6870d5befe927174ec3f7efe4e3"
+    },
+    {
+      "case": "graphical_final_01",
+      "original_execution_head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+      "original_execution_dirty": [
+        "?? docs/beta-sprint/game-feel-owner-10a/",
+        "?? game/feel/",
+        "?? tests/beta_sprint/game_feel_owner_10a/"
+      ],
+      "checks": 251,
+      "failures": [],
+      "authority": false,
+      "doubles": [
+        "01 DTO",
+        "Safety attestation",
+        "native commit"
+      ],
+      "source_binding": "MATCH unchanged tested bytes",
+      "process_record_sha256": "4363a038744873662df38b8dde3857fed6bdb9acd1d5a6bdaa44d611c169e17d"
+    }
+  ],
+  "public_integration": "00 owned; INTEGRATION_REQUEST.md",
+  "formal_cases": [
+    {
+      "case": "legal_MAP_A",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "legal_MAP_B",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "native_exactly_one_commit",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "Runtime_Orientation_StateKey",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "fall_then_continue_move",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "Runtime_BUSY_input_spam",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "Reset_generation",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "Safety_Solver_Replay",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "Audio_VFX",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    },
+    {
+      "case": "HumanQA",
+      "doubles": [],
+      "status": "case_pending",
+      "actual_dependency_delivery_sha": null,
+      "checks": 0
+    }
+  ],
+  "review": {
+    "critical": 0,
+    "minor_notes": [
+      "host event-id deduplication",
+      "initial TOP->TOP support frame"
+    ],
+    "important": 0
+  },
+  "push": "NOT_RUN"
+}

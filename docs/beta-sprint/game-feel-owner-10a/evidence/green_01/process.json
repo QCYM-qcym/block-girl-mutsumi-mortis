@@ -1,0 +1,83 @@
+{
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "dirty": [
+    "?? docs/beta-sprint/game-feel-owner-10a/",
+    "?? game/feel/",
+    "?? tests/beta_sprint/game_feel_owner_10a/"
+  ],
+  "case": "green_01",
+  "mode": "unit",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "01 DTO",
+    "Safety attestation",
+    "native commit"
+  ],
+  "sources": [
+    {
+      "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3",
+      "path": "foundation/orientation/discrete_orientation.gd"
+    },
+    {
+      "sha256": "09de66ae7dfb16dfc1acae05ab7e215b8e61173f926796bf8b47505a50deac68",
+      "path": "game/feel/animation/fall_landing/fall_motion.gd"
+    },
+    {
+      "sha256": "4b4a930ff66cf4ab8c80d2a045519f3f4cdb91d3f73272b9ffd80d45ded4ed7d",
+      "path": "game/feel/animation/fall_landing/fall_visual_state.gd"
+    },
+    {
+      "sha256": "71ffb373eab8708f7160c442f591d3ca3ce12502800ee235c7f12b769cf66e19",
+      "path": "game/feel/animation/fall_landing/landing_motion.gd"
+    },
+    {
+      "sha256": "0a03cc864bc4d2dec3f257aa91f369873bdd71be75494f75ef66982567d750fa",
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd"
+    },
+    {
+      "sha256": "9635f9c88c64060e669a6f7b4a506d334aabae8063dbcdb6c434e64cea08ff00",
+      "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd"
+    },
+    {
+      "sha256": "563fdb527132cc69d0be9aa974be2b538c68aa34021949a2550bdf95a8838260",
+      "path": "tests/beta_sprint/game_feel_owner_10a/run.ps1"
+    },
+    {
+      "sha256": "f2505464865f0237ad0796c621ff6e354f2856d59e160998ad162fc1aa132af8",
+      "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd"
+    }
+  ],
+  "project_name": "PFALL_10A_0037033ad0374ee5b761392f59602c0e",
+  "arguments": [
+    "--path",
+    "\"E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\green_01\\project\"",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_10a/unit.gd",
+    "--headless",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\green_01"
+  ],
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "started": "2026-10-10T00:21:53.6438775+08:00",
+  "status": "FAILED",
+  "pid": 11868,
+  "exit_code": 1,
+  "finished": "2026-10-10T00:21:53.9337730+08:00",
+  "stderr": "FAIL 10A: accepted Unit starts, height sign=true\r\nFAIL 10A: exact authorized target\r\nFAIL 10A: matching COMMITTED starts landing\r\nFAIL 10A: new presentation after previous completion\r\nFAIL 10A: matching cancel synchronous neutral\r\nFAIL 10A: new launch after cancel\r\nFAIL 10A: late cancel cannot clear new launch\r\nFAIL 10A: deep snapshot ownership\r\nFAIL 10A: cube24 committed=0\r\n",
+  "source_changes": [],
+  "checks": 1096,
+  "failures": [
+    "accepted Unit starts, height sign=true",
+    "exact authorized target",
+    "matching COMMITTED starts landing",
+    "new presentation after previous completion",
+    "matching cancel synchronous neutral",
+    "new launch after cancel",
+    "late cancel cannot clear new launch",
+    "deep snapshot ownership",
+    "cube24 committed=0"
+  ],
+  "user_data_dir": "C:/Users/QCYM/AppData/Roaming/PFALL_10A_0037033ad0374ee5b761392f59602c0e",
+  "profile_isolated": true
+}
