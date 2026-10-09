@@ -10,6 +10,9 @@ var visual_container: SubViewportContainer
 var visual_viewport: SubViewport
 var using_3d := true
 
+func _create_presenter() -> Node3D:
+	return Presenter3D.new()
+
 func _ready() -> void:
 	super._ready()
 	for child in get_children():
@@ -29,7 +32,7 @@ func _ready() -> void:
 	visual_viewport.msaa_3d = Viewport.MSAA_4X
 	visual_viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	visual_container.add_child(visual_viewport)
-	presenter = Presenter3D.new()
+	presenter = _create_presenter()
 	presenter.name = "L01Presenter3D"
 	visual_viewport.add_child(presenter)
 	presenter.bind(graph, mover, view, content)

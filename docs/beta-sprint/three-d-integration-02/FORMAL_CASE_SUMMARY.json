@@ -1,0 +1,209 @@
+[
+  {
+    "evidence": "l02_final",
+    "level_id": "mutsumi_l02",
+    "status": "PASS",
+    "entry_checks": 9,
+    "graphical_checks": 483,
+    "stages": [
+      {
+        "name": "entry_mutsumi_l02",
+        "pid": 21260,
+        "actual_pid": 21260,
+        "exit_code": 0,
+        "checks": 9,
+        "stderr_empty": true,
+        "stdout_clean": true,
+        "failures": []
+      },
+      {
+        "name": "gameplay_mutsumi_l02",
+        "pid": 32256,
+        "actual_pid": 32256,
+        "exit_code": 0,
+        "checks": 483,
+        "stderr_empty": true,
+        "stdout_clean": true,
+        "failures": []
+      }
+    ],
+    "parity": [
+      {
+        "mode": "normal",
+        "matched": true,
+        "pixel_events": 12,
+        "art3d_events": 12,
+        "pixel_inputs": 26,
+        "art3d_inputs": 26,
+        "goal": true,
+        "goal_observation_sha256": "fba32bdbba86dc9d4dc92a426bc183343a7203852408fb019fe3dbf42fd54278"
+      },
+      {
+        "mode": "reset_replay",
+        "matched": true,
+        "pixel_events": 12,
+        "art3d_events": 12,
+        "pixel_inputs": 26,
+        "art3d_inputs": 26,
+        "goal": true,
+        "goal_observation_sha256": "fba32bdbba86dc9d4dc92a426bc183343a7203852408fb019fe3dbf42fd54278"
+      },
+      {
+        "mode": "alternate_views",
+        "matched": true,
+        "pixel_events": 18,
+        "art3d_events": 18,
+        "pixel_inputs": 38,
+        "art3d_inputs": 38,
+        "goal": true,
+        "goal_observation_sha256": "1d4bb484c936b42215f8de52bd83b20f8da369a7b4a224653aa327493d836167"
+      }
+    ],
+    "completion_events": 6,
+    "physical_faces": [
+      "(0, 0, 1)",
+      "(0, 1, 0)",
+      "(0, 0, -1)",
+      "(0, -1, 0)"
+    ],
+    "roll_samples": 12,
+    "shift_samples": 8,
+    "camera_samples": 16,
+    "save": "user://beta_sprint/b3d02_l02_final/mutsumi_l02.json",
+    "display": "Windows",
+    "renderer": "forward_plus",
+    "original_report": "E:\\godot\\worktrees\\block-girl-beta-3d-integration-02\\.godot\\beta-sprint\\three-d-02\\l02_final\\gameplay_mutsumi_l02\\report.json",
+    "receipt_report": "evidence/l02_final/gameplay_mutsumi_l02.json"
+  },
+  {
+    "evidence": "l03_g01",
+    "level_id": "mutsumi_l03",
+    "status": "PASS",
+    "entry_checks": 9,
+    "graphical_checks": 1349,
+    "stages": [
+      {
+        "name": "entry_mutsumi_l03",
+        "pid": 36536,
+        "actual_pid": 36536,
+        "exit_code": 0,
+        "checks": 9,
+        "stderr_empty": true,
+        "stdout_clean": true,
+        "failures": []
+      },
+      {
+        "name": "gameplay_mutsumi_l03",
+        "pid": 33684,
+        "actual_pid": 33684,
+        "exit_code": 0,
+        "checks": 1349,
+        "stderr_empty": true,
+        "stdout_clean": true,
+        "failures": []
+      }
+    ],
+    "parity": [
+      {
+        "mode": "normal",
+        "matched": true,
+        "pixel_events": 9,
+        "art3d_events": 9,
+        "pixel_inputs": 15,
+        "art3d_inputs": 15,
+        "goal": true,
+        "goal_observation_sha256": "2a5aabf857c0382c3d5dced329ee6ddc10aa9661fb298958cadd867647bbe3fe"
+      },
+      {
+        "mode": "reset_replay",
+        "matched": true,
+        "pixel_events": 9,
+        "art3d_events": 9,
+        "pixel_inputs": 15,
+        "art3d_inputs": 15,
+        "goal": true,
+        "goal_observation_sha256": "2a5aabf857c0382c3d5dced329ee6ddc10aa9661fb298958cadd867647bbe3fe"
+      },
+      {
+        "mode": "alternate_views",
+        "matched": true,
+        "pixel_events": 16,
+        "art3d_events": 16,
+        "pixel_inputs": 30,
+        "art3d_inputs": 30,
+        "goal": true,
+        "goal_observation_sha256": "e374044cb6ae037ab41a5164438b54b3065f9f7069b4b95a9f64cd0955927803"
+      }
+    ],
+    "completion_events": 6,
+    "physical_faces": [
+      "(0, 0, 1)"
+    ],
+    "roll_samples": 0,
+    "shift_samples": 12,
+    "camera_samples": 16,
+    "save": "user://beta_sprint/b3d02_l03_g01/mutsumi_l03.json",
+    "display": "Windows",
+    "renderer": "forward_plus",
+    "original_report": "E:\\godot\\worktrees\\block-girl-beta-3d-integration-02\\.godot\\beta-sprint\\three-d-02\\l03_g01\\gameplay_mutsumi_l03\\report.json",
+    "receipt_report": "evidence/l03_g01/gameplay_mutsumi_l03.json"
+  },
+  {
+    "evidence": "l01_g01",
+    "level_id": "mutsumi_l01",
+    "status": "PASS",
+    "entry_checks": 9,
+    "graphical_checks": 279,
+    "stages": [
+      {
+        "name": "entry_mutsumi_l01",
+        "pid": 29008,
+        "actual_pid": 29008,
+        "exit_code": 0,
+        "checks": 9,
+        "stderr_empty": true,
+        "stdout_clean": true,
+        "failures": []
+      },
+      {
+        "name": "gameplay_mutsumi_l01",
+        "pid": 26816,
+        "actual_pid": 26816,
+        "exit_code": 0,
+        "checks": 279,
+        "stderr_empty": true,
+        "stdout_clean": true,
+        "failures": []
+      }
+    ],
+    "parity": [
+      {
+        "mode": "normal",
+        "matched": true,
+        "pixel_events": 20,
+        "art3d_events": 20,
+        "pixel_inputs": 42,
+        "art3d_inputs": 42,
+        "goal": true,
+        "goal_observation_sha256": "f25c5cad740f289a4960987c29d15f81a512065b0abc3e8c45b91f4c54ff5567"
+      }
+    ],
+    "completion_events": 2,
+    "physical_faces": [
+      "(0, 1, 0)",
+      "(0, 0, -1)",
+      "(0, -1, 0)",
+      "(0, 0, 1)",
+      "(1, 0, 0)",
+      "(-1, 0, 0)"
+    ],
+    "roll_samples": 0,
+    "shift_samples": 4,
+    "camera_samples": 16,
+    "save": "user://beta_sprint/b3d02_l01_g01/mutsumi_l01.json",
+    "display": "Windows",
+    "renderer": "forward_plus",
+    "original_report": "E:\\godot\\worktrees\\block-girl-beta-3d-integration-02\\.godot\\beta-sprint\\three-d-02\\l01_g01\\gameplay_mutsumi_l01\\report.json",
+    "receipt_report": "evidence/l01_g01/gameplay_mutsumi_l01.json"
+  }
+]

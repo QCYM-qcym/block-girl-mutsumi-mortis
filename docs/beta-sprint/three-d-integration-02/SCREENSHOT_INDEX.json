@@ -1,0 +1,868 @@
+[
+  {
+    "case": "l01_g01",
+    "path": "evidence/l01_g01/028_3d_normal_l01_plate_normal.png",
+    "sha256": "2b15812a85578841419f7101156a85476b94609fd50866ab1e8ab53cb9d57f6f",
+    "observation": {
+      "hint": "",
+      "name": "028_3d_normal_l01_plate_normal",
+      "objective": "出口属于表世界。踏上圆形踏板，在门打开时向前翻滚。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          11,
+          0
+        ],
+        "face": "(0, -1, 0)",
+        "gate": true,
+        "goal": false,
+        "id": "mutsumi_l01",
+        "link_active": false,
+        "moves": 13,
+        "orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+        "phase": "idle",
+        "plate": true,
+        "view": 1,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (-1.0, 0.0, 0.0), Y: (0.0, 0.0, -1.0), Z: (0.0, -1.0, 0.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 8.52136611938477,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "open",
+        "incoming_walk_surface_reveal": 0.0,
+        "occlusion": {
+          "0:exit": false,
+          "0:gate": false,
+          "1:exit": false,
+          "1:gate": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (-1.0, 0.0, 0.0), Y: (0.0, 0.0, -1.0), Z: (0.0, -1.0, 0.0)]",
+        "plate_state": "pressed",
+        "shift_committed": true,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l01_g01",
+    "path": "evidence/l01_g01/029_3d_normal_complete.png",
+    "sha256": "985812737655652e5284564242186791e2503dd23c3fd87255814d306cbdb73d",
+    "observation": {
+      "hint": "",
+      "name": "029_3d_normal_complete",
+      "objective": "已到达出口。按 R 可以重新开始。",
+      "shell_state": 5,
+      "state": {
+        "cell": [
+          13,
+          0
+        ],
+        "face": "(0, 1, 0)",
+        "gate": false,
+        "goal": true,
+        "id": "mutsumi_l01",
+        "link_active": false,
+        "moves": 15,
+        "orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+        "phase": "complete",
+        "plate": false,
+        "view": 1,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, -1.0), Z: (0.0, 1.0, 0.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 8.52136611938477,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "complete",
+        "fraction": 0.0,
+        "gate_state": "closed",
+        "incoming_walk_surface_reveal": 0.0,
+        "occlusion": {
+          "0:exit": true,
+          "0:gate": true,
+          "1:exit": false,
+          "1:gate": false
+        },
+        "phase": "complete",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, -1.0), Z: (0.0, 1.0, 0.0)]",
+        "plate_state": "inactive",
+        "shift_committed": true,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/022_probes_before_connection.png",
+    "sha256": "1ebeef2571b46a4c69fb78f9630f095417a046e46880322f2378c04b01b50c05",
+    "observation": {
+      "hint": "Q / E    ·    鼠标左右拖动",
+      "name": "022_probes_before_connection",
+      "objective": "两个圆点是连接端点。用 Q / E 转到 EAST，然后向相接的另一端翻滚。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          3,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l03",
+        "link_active": false,
+        "moves": 3,
+        "orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 0,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": 0.785398163397448,
+        "camera_size": 6.27010631561279,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "未连接",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(2.0, 2.14, -0.5)",
+            "text": "未连接",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": false,
+        "link_status": "inactive",
+        "occlusion": {
+          "0:exit": false,
+          "1:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 0,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/023_probes_connection_active.png",
+    "sha256": "4335b11771085d06b0eadf71ff0b11f5fa58fe4195ee44335fc1e468cc19f56e",
+    "observation": {
+      "hint": "Q / E    ·    鼠标左右拖动",
+      "name": "023_probes_connection_active",
+      "objective": "两个圆点是连接端点。用 Q / E 转到 EAST，然后向相接的另一端翻滚。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          3,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l03",
+        "link_active": true,
+        "moves": 3,
+        "orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 1,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 6.08427858352661,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": true,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(-3.0, 2.14, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": true,
+        "link_status": "active",
+        "occlusion": {
+          "0:exit": false,
+          "1:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/028_probes_wrong_world_blocked.png",
+    "sha256": "2ad288c48dd94e05402ca008bbf093ebfa6378ab6c6f220acbaf16d6c96a66fd",
+    "observation": {
+      "hint": "",
+      "name": "028_probes_wrong_world_blocked",
+      "objective": "这对连接标记属于表世界。先按 Space 返回表世界。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          3,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l03",
+        "link_active": false,
+        "moves": 3,
+        "orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 1,
+        "world": 1
+      },
+      "visual": {
+        "actor_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 6.08427858352661,
+        "displayed_worlds": [
+          false,
+          true
+        ],
+        "exit_state": "locked",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "未连接",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(-3.0, 2.14, -0.5)",
+            "text": "未连接",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": false,
+        "link_status": "inactive",
+        "occlusion": {
+          "0:exit": false,
+          "1:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": true,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 1
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/033_probes_crossing_pending.png",
+    "sha256": "12e8de337b2909b51b3ab62f143fc5f8e420b77784cae9ed48579f809ae8e413",
+    "observation": {
+      "hint": "Q / E    ·    鼠标左右拖动",
+      "name": "033_probes_crossing_pending",
+      "objective": "两个圆点是连接端点。用 Q / E 转到 EAST，然后向相接的另一端翻滚。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          3,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l03",
+        "link_active": true,
+        "moves": 3,
+        "orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+        "phase": "roll",
+        "plate": false,
+        "view": 1,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (0.608761, 0.793353, 0.0), Y: (-0.793353, 0.608761, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 6.08427858352661,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.416666666666667,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": true,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(-3.0, 2.14, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": true,
+        "link_status": "active",
+        "occlusion": {
+          "0:exit": false,
+          "1:exit": false
+        },
+        "phase": "roll",
+        "physical_basis": "[X: (0.0, 1.0, 0.0), Y: (-1.0, 0.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/034_probes_connection_crossed.png",
+    "sha256": "855bce3db7b01b65f5d6c235ebc32a46a7971b7764572373e39c041f4d7f3265",
+    "observation": {
+      "hint": "",
+      "name": "034_probes_connection_crossed",
+      "objective": "走到连接标记前。转动视角，观察远处的平台如何与眼前的道路相接。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          9,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l03",
+        "link_active": true,
+        "moves": 4,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 1,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 6.08427858352661,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": true,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(-3.0, 2.14, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": true,
+        "link_status": "active",
+        "occlusion": {
+          "0:exit": false,
+          "1:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/035_probes_connection_disconnected.png",
+    "sha256": "37807612339fe48d339210b6d734abd8df9fcd6cafd7500870ef99854295b5d7",
+    "observation": {
+      "hint": "",
+      "name": "035_probes_connection_disconnected",
+      "objective": "走到连接标记前。转动视角，观察远处的平台如何与眼前的道路相接。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          9,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l03",
+        "link_active": false,
+        "moves": 4,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 2,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": -2.35619449019234,
+        "camera_size": 7.81286907196045,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "未连接",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(2.0, 2.14, -0.5)",
+            "text": "未连接",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": false,
+        "link_status": "inactive",
+        "occlusion": {
+          "0:exit": false,
+          "1:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 2,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l03_g01",
+    "path": "evidence/l03_g01/039_3d_normal_complete.png",
+    "sha256": "3285fc353f1946d48bfaa92944878ec678da066f2b96ad3e6a557fdb8530de45",
+    "observation": {
+      "hint": "",
+      "name": "039_3d_normal_complete",
+      "objective": "已到达出口。按 R 可以重新开始。",
+      "shell_state": 5,
+      "state": {
+        "cell": [
+          11,
+          2
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": true,
+        "id": "mutsumi_l03",
+        "link_active": true,
+        "moves": 6,
+        "orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+        "phase": "complete",
+        "plate": false,
+        "view": 1,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (-1.0, 0.0, 0.0), Y: (0.0, -1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": -0.785398163397448,
+        "camera_size": 6.08427858352661,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "complete",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": true,
+        "link_markers": [
+          {
+            "anchor_id": "mutsumi_l03_a",
+            "position": "(-3.0, 1.64, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          },
+          {
+            "anchor_id": "mutsumi_l03_b",
+            "position": "(-3.0, 2.14, -0.5)",
+            "text": "连接成立",
+            "visible": true
+          }
+        ],
+        "link_runtime_active": true,
+        "link_status": "active",
+        "occlusion": {
+          "0:exit": true,
+          "1:exit": false
+        },
+        "phase": "complete",
+        "physical_basis": "[X: (-1.0, 0.0, 0.0), Y: (0.0, -1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 1,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l02_final",
+    "path": "evidence/l02_final/001_probes_spawn.png",
+    "sha256": "30336aea6cbd68d41e76123cc29eac50c582845dcbc62452e1ed2896c5f1b029",
+    "observation": {
+      "hint": "W A S D",
+      "name": "001_probes_spawn",
+      "objective": "同一地点，两个世界。寻找共同的落脚点，在两岸之间切换道路。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          0,
+          5
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l02",
+        "link_active": false,
+        "moves": 0,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 0,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": 0.785398163397448,
+        "camera_size": 4.19901704788208,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [],
+        "link_runtime_active": false,
+        "link_status": "not_authored",
+        "occlusion": {
+          "0:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 0,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l02_final",
+    "path": "evidence/l02_final/023_probes_roll_sample.png",
+    "sha256": "adfcb89d43cdfdcd301ef3dcce616aae952c2a09f6eac1ef7edf77759b43b79d",
+    "observation": {
+      "hint": "W A S D",
+      "name": "023_probes_roll_sample",
+      "objective": "同一地点，两个世界。寻找共同的落脚点，在两岸之间切换道路。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          0,
+          5
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l02",
+        "link_active": false,
+        "moves": 0,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "roll",
+        "plate": false,
+        "view": 0,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.751362, -0.65989), Z: (0.0, 0.65989, 0.751362)]",
+        "camera_angle": 0.785398163397448,
+        "camera_size": 4.19901704788208,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.458794444444445,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [],
+        "link_runtime_active": false,
+        "link_status": "not_authored",
+        "occlusion": {
+          "0:exit": false
+        },
+        "phase": "roll",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 0,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l02_final",
+    "path": "evidence/l02_final/030_probes_shift_sample.png",
+    "sha256": "b170382bb6f6a55f979ff617ad3a6c3d94445269b8a12ca8ad50b1450e8898d0",
+    "observation": {
+      "hint": "Space",
+      "name": "030_probes_shift_sample",
+      "objective": "沿里世界的桥前进；没有另一世界地面的格子不能切换。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          0,
+          3
+        ],
+        "face": "(0, 0, -1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l02",
+        "link_active": false,
+        "moves": 4,
+        "orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 0,
+        "world": 1
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, -1.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+        "camera_angle": 0.785398163397448,
+        "camera_size": 4.19901704788208,
+        "displayed_worlds": [
+          true,
+          true
+        ],
+        "exit_state": "not_authored",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.300525920360631,
+        "link_active": false,
+        "link_markers": [],
+        "link_runtime_active": false,
+        "link_status": "not_authored",
+        "occlusion": {
+          "0:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, -1.0, 0.0), Z: (0.0, 0.0, -1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": true,
+        "shift_progress": 0.72,
+        "view": 0,
+        "world": 1
+      }
+    }
+  },
+  {
+    "case": "l02_final",
+    "path": "evidence/l02_final/041_3d_normal_complete.png",
+    "sha256": "29ee88c176bf0978caea1dee9fbefe5b7873d6b43658bb9034e754b4bc1aabec",
+    "observation": {
+      "hint": "",
+      "name": "041_3d_normal_complete",
+      "objective": "已到达出口。按 R 可以重新开始。",
+      "shell_state": 5,
+      "state": {
+        "cell": [
+          4,
+          1
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": true,
+        "id": "mutsumi_l02",
+        "link_active": false,
+        "moves": 8,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "complete",
+        "plate": false,
+        "view": 0,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": 0.785398163397448,
+        "camera_size": 4.19901704788208,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "complete",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [],
+        "link_runtime_active": false,
+        "link_status": "not_authored",
+        "occlusion": {
+          "0:exit": true
+        },
+        "phase": "complete",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": true,
+        "shift_progress": 0.0,
+        "view": 0,
+        "world": 0
+      }
+    }
+  },
+  {
+    "case": "l02_final",
+    "path": "evidence/l02_final/050_3d_alternate_views_final_reset.png",
+    "sha256": "30336aea6cbd68d41e76123cc29eac50c582845dcbc62452e1ed2896c5f1b029",
+    "observation": {
+      "hint": "W A S D",
+      "name": "050_3d_alternate_views_final_reset",
+      "objective": "同一地点，两个世界。寻找共同的落脚点，在两岸之间切换道路。",
+      "shell_state": 3,
+      "state": {
+        "cell": [
+          0,
+          5
+        ],
+        "face": "(0, 0, 1)",
+        "gate": false,
+        "goal": false,
+        "id": "mutsumi_l02",
+        "link_active": false,
+        "moves": 0,
+        "orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+        "phase": "idle",
+        "plate": false,
+        "view": 0,
+        "world": 0
+      },
+      "visual": {
+        "actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "camera_angle": 0.785398163397448,
+        "camera_size": 4.19901704788208,
+        "displayed_worlds": [
+          true,
+          false
+        ],
+        "exit_state": "available",
+        "fraction": 0.0,
+        "gate_state": "not_authored",
+        "incoming_walk_surface_reveal": 0.0,
+        "link_active": false,
+        "link_markers": [],
+        "link_runtime_active": false,
+        "link_status": "not_authored",
+        "occlusion": {
+          "0:exit": false
+        },
+        "phase": "idle",
+        "physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+        "plate_state": "not_authored",
+        "shift_committed": false,
+        "shift_progress": 0.0,
+        "view": 0,
+        "world": 0
+      }
+    }
+  }
+]

@@ -303,6 +303,8 @@ func _update_occlusion(delta: float) -> void:
 	var aim := actor.global_position
 	for world in 2:
 		for kind in ["gate", "exit"]:
+			if not mechanisms[world].has(kind):
+				continue
 			var key := "%s:%s" % [world, kind]
 			var node: Node3D = mechanisms[world][kind]
 			var box := _world_mesh_bounds(node)
