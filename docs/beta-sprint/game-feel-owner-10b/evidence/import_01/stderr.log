@@ -1,0 +1,6 @@
+ERROR: ImageLoaderSVG: Couldn't set target on ThorVG canvas, error code 1.
+   at: create_image_from_utf8_buffer (modules/svg/image_loader_svg.cpp:113)
+ERROR: Error loading image: 'res://production/ui/beta_shell_01/icons_source.svg'.
+   at: load_image (core/io/image_loader.cpp:102)
+ERROR: Error importing 'res://production/ui/beta_shell_01/icons_source.svg'.
+   at: _reimport_file (editor/file_system/editor_file_system.cpp:3093)

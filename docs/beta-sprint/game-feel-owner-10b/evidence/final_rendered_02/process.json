@@ -1,0 +1,5038 @@
+{
+  "mode": "graphical",
+  "case": "final_rendered_02",
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "dirty": [
+    "A  docs/beta-sprint/game-feel-owner-10b/.gitignore",
+    "A  docs/beta-sprint/game-feel-owner-10b/INTEGRATION_REQUEST.md",
+    "A  docs/beta-sprint/game-feel-owner-10b/LEDGER.md",
+    "A  docs/beta-sprint/game-feel-owner-10b/PLAN.md",
+    "A  docs/beta-sprint/game-feel-owner-10b/RECEIPT.md",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_mapper_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_mapper_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_mapper_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_runtime_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_runtime_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/baseline_runtime_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_02/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/behavioral_red_03/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_green_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/boundary_red_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_mapper_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_mapper_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_mapper_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/opposite.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/preempted.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/reset.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q0_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q1_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q2_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w0_q3_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q0_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q1_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q2_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_01/w1_q3_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_runtime_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_runtime_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_runtime_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/final_unit_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/geometry_green_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/green_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/generated_sidecars_cleanup.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/import_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/missing_modules_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/released_direction_red_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/opposite.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/preempted.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/reset.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q0_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q1_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q2_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w0_q3_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q0_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q1_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q2_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_01/w1_q3_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/opposite.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/preempted.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/reset.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q0_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q1_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q2_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w0_q3_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q0_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q1_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q2_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_blocked.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_initial.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_lean.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_recoil.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/rendered_02/w1_q3_rest.png",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_green_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/review_red_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_green_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_01/stdout.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/process.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/report.json",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/stderr.log",
+    "A  docs/beta-sprint/game-feel-owner-10b/evidence/throttle_red_02/stdout.log",
+    "A  game/feel/animation/edge_recoil/edge_admission.gd",
+    "A  game/feel/animation/edge_recoil/edge_event.gd",
+    "A  game/feel/animation/edge_recoil/edge_event.gd.uid",
+    "A  game/feel/animation/edge_recoil/edge_lean.gd",
+    "A  game/feel/animation/edge_recoil/edge_lean.gd.uid",
+    "A  game/feel/animation/edge_recoil/recoil_motion.gd",
+    "A  game/feel/animation/edge_recoil/recoil_motion.gd.uid",
+    "A  tests/beta_sprint/game_feel_owner_10b/fixture.gd",
+    "A  tests/beta_sprint/game_feel_owner_10b/fixture.gd.uid",
+    "A  tests/beta_sprint/game_feel_owner_10b/lab_view.gd",
+    "A  tests/beta_sprint/game_feel_owner_10b/lab_view.gd.uid",
+    "A  tests/beta_sprint/game_feel_owner_10b/run.ps1",
+    "A  tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+    "A  tests/beta_sprint/game_feel_owner_10b/test_graphical.gd.uid",
+    "A  tests/beta_sprint/game_feel_owner_10b/test_unit.gd",
+    "A  tests/beta_sprint/game_feel_owner_10b/test_unit.gd.uid",
+    "?? docs/beta-sprint/game-feel-owner-10b/.gitattributes"
+  ],
+  "arguments": [
+    "--path",
+    "\"E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\"",
+    "--max-fps",
+    "120",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02"
+  ],
+  "script": "res://tests/beta_sprint/game_feel_owner_10b/test_graphical.gd",
+  "sources": [
+    {
+      "sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+      "path": "docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md"
+    },
+    {
+      "sha256": "8e24075cc398a2c8e8e3542157d985e316b17ff14e5322f4396ad8b6cba6992b",
+      "path": "foundation/authoring/authoring_adapter.gd"
+    },
+    {
+      "sha256": "9c083c0a5725b5ababcd0b75fbad3a3845e02eb95fbcdb5152c270e44dad03c6",
+      "path": "foundation/authoring/authoring_adapter.gd.uid"
+    },
+    {
+      "sha256": "f01d2a7e32b8269e5f9322a15eb60f58440b5f5a13046bb9cac5a08456dd5979",
+      "path": "foundation/authoring/authoring_schema.gd"
+    },
+    {
+      "sha256": "10ad67c7356378a06f776a3660329f3fe062b100863c2021e0877235886812cf",
+      "path": "foundation/authoring/authoring_schema.gd.uid"
+    },
+    {
+      "sha256": "c905d9f90d30d52acb95202d0595b325b3eb072aafd32818bc24631e43cab218",
+      "path": "foundation/authoring/bypass_authoring_resource.gd"
+    },
+    {
+      "sha256": "51cd8de15058a2b89fb1b244366eb9ee51dd47fe77027f3937166b0d7221c39f",
+      "path": "foundation/authoring/bypass_authoring_resource.gd.uid"
+    },
+    {
+      "sha256": "76e7abf6ad004adbd3179117dc9270b352e8932b37c68ef412b306eefc4b6d8f",
+      "path": "foundation/authoring/cube_authoring_node.gd"
+    },
+    {
+      "sha256": "556705adfb55cfab9715d9fd582b7ce94d54113e305d879fec45e7fae197efd8",
+      "path": "foundation/authoring/cube_authoring_node.gd.uid"
+    },
+    {
+      "sha256": "9aef53711a2ccbbd75deb9e2949ca4afe6eee7512a9f583542cb92d1a6857e72",
+      "path": "foundation/authoring/document_projector.gd"
+    },
+    {
+      "sha256": "57cd6873c52f673a10a2c270869df8f58a844e0c4f61c8971816c01a82a793b8",
+      "path": "foundation/authoring/document_projector.gd.uid"
+    },
+    {
+      "sha256": "e2a02cdb7deee38162fc0d358c769e4f551314113fe89e5db082779087581cea",
+      "path": "foundation/authoring/edit_operations.gd"
+    },
+    {
+      "sha256": "323b818448a1826cef50cf99d7badedb72cf44feab17cdb6fbe57b92fefa88ec",
+      "path": "foundation/authoring/edit_operations.gd.uid"
+    },
+    {
+      "sha256": "8aa0ef35609cba6f0733393f865fdd88ffdc186cf7894a81c08d9a5c9b796d31",
+      "path": "foundation/authoring/face_authoring_resource.gd"
+    },
+    {
+      "sha256": "344a5d4ef9c21988d6ad5e62ef793f29eb475135a0055063a5fab04e9bed542a",
+      "path": "foundation/authoring/face_authoring_resource.gd.uid"
+    },
+    {
+      "sha256": "90c27d3d762afe75019c0752314b3b5b1ec02c24ef9a206084933fa63e1102ac",
+      "path": "foundation/authoring/group_authoring_node.gd"
+    },
+    {
+      "sha256": "5e078ccd1d10c64f17e84ce289bf1e1c5b57f49c84ee3f345291766cc68eabfa",
+      "path": "foundation/authoring/group_authoring_node.gd.uid"
+    },
+    {
+      "sha256": "d1f69acf0675a405efda5df5511e33f067a583ea4bce4a9a3e90524e5e476a11",
+      "path": "foundation/authoring/id_registry.gd"
+    },
+    {
+      "sha256": "6202ee5e98cf071573e667ef3f6945471b79553f8bea6be76a1f7d4c012b07fd",
+      "path": "foundation/authoring/id_registry.gd.uid"
+    },
+    {
+      "sha256": "1ab7da742d9c35d09bb5089592c415e7535e4eab3ba0b229fe9244e82f5e4fb4",
+      "path": "foundation/authoring/intent_authoring_resource.gd"
+    },
+    {
+      "sha256": "7f42e903c9e72337e2ff2c6ecce3feef5be57a3aaef382e0d5a678c54b6e9798",
+      "path": "foundation/authoring/intent_authoring_resource.gd.uid"
+    },
+    {
+      "sha256": "0d67b9c2c86e9bf59e7b29c84241136c0cde7e35bb4fc7e121e911958262cdce",
+      "path": "foundation/authoring/intent_binder.gd"
+    },
+    {
+      "sha256": "e22a3cf54a73caaf0f67b0c81544ad1e97362da243c028a938dd78204068dae6",
+      "path": "foundation/authoring/intent_binder.gd.uid"
+    },
+    {
+      "sha256": "2ee1e6a6163d7dbe62e88115f11d756b636aeb2ffb46bd3058e71e265219f52e",
+      "path": "foundation/authoring/level_authoring_root.gd"
+    },
+    {
+      "sha256": "1d88d736a9f62a19bd451760849321fbb8dbf81bb68a305c3007e515dd016fb6",
+      "path": "foundation/authoring/level_authoring_root.gd.uid"
+    },
+    {
+      "sha256": "f7a9496a09248c73ff27a645bf4c8dc4fab23c42a1b665d291cdaeb11950480e",
+      "path": "foundation/authoring/mechanism_authoring_node.gd"
+    },
+    {
+      "sha256": "215fc5ca459cc256b864c73ff021e26a148500c07043cbe9944d44376b3d985d",
+      "path": "foundation/authoring/mechanism_authoring_node.gd.uid"
+    },
+    {
+      "sha256": "377a43bcc82f3539544d7a26c76babe7a41ca627e6c270e88914d3551d7bbfcf",
+      "path": "foundation/authoring/mechanism_config.gd"
+    },
+    {
+      "sha256": "3ee954c5931a6be0de8d02eaa77c60f92febbf8e5994c76919e65fda193ec3c0",
+      "path": "foundation/authoring/mechanism_config.gd.uid"
+    },
+    {
+      "sha256": "854a75d1cfa020e0f95f566b09c28cfa22f7d2c9e8e5f546df9b85ef9d618849",
+      "path": "foundation/authoring/milestone_authoring_resource.gd"
+    },
+    {
+      "sha256": "4e13f2b67dae8ec68e4cc2bb0af641677edc4a28f121b4e5e70ab5f2c1243f48",
+      "path": "foundation/authoring/milestone_authoring_resource.gd.uid"
+    },
+    {
+      "sha256": "c7b4ef77259850d47aad46984bb67796ed5ae14d8c58e1b14db550d6c45b4b91",
+      "path": "foundation/authoring/payload_assembler.gd"
+    },
+    {
+      "sha256": "9bcda25c41c9693b210709b62fea4bc8762e00797f53a3b4bfaf8673f4f15975",
+      "path": "foundation/authoring/payload_assembler.gd.uid"
+    },
+    {
+      "sha256": "5b7b91514e6bb85c1955be4fd5df0f20144e19508aab774adfe140ca0e9e20b7",
+      "path": "foundation/authoring/slot_authoring_node.gd"
+    },
+    {
+      "sha256": "476a4ecc9fe179036c8c66e660f25cd8ad91cd8584e591c050ac2990bd4212d9",
+      "path": "foundation/authoring/slot_authoring_node.gd.uid"
+    },
+    {
+      "sha256": "b8cb5e31172edb5ac5d51fc950ee8882a88bae000ebdbc81a37417d30105af1c",
+      "path": "foundation/authoring/source_map.gd"
+    },
+    {
+      "sha256": "548c14f470af10c1ab1fa2b89bdbfe817c549ec15a2268c35d8e29a96dbaf41b",
+      "path": "foundation/authoring/source_map.gd.uid"
+    },
+    {
+      "sha256": "5e3e516b09c35c0f4c385bed6f3ffe7ea82eed905eb86182a30ebd40724dba11",
+      "path": "foundation/authoring/transition_authoring_node.gd"
+    },
+    {
+      "sha256": "9d6ff876a9cd416752194065315d26953f0bbaf9abcbc3a6f728aac222ad9993",
+      "path": "foundation/authoring/transition_authoring_node.gd.uid"
+    },
+    {
+      "sha256": "38bed3977e2a670aa7cf073df0ef8744bb059d997d4c8e6ccdd14b18c68ae407",
+      "path": "foundation/authoring/world_authoring_root.gd"
+    },
+    {
+      "sha256": "b1adba0155e54ebf3657064c93f6b9c6ab3c25a4276e87bf06c1095d1b92e628",
+      "path": "foundation/authoring/world_authoring_root.gd.uid"
+    },
+    {
+      "sha256": "588c09f9f8bcb69526d1bbc88a1fbf0a7a5a5420d91759a24fc83ec9acd868d7",
+      "path": "foundation/celestial/celestial_rules.gd"
+    },
+    {
+      "sha256": "d51b9b05014ba3dcfa2fa370c8f0ea32d26cae5e53eb3cedbd8a1f6fb3a4c07d",
+      "path": "foundation/celestial/celestial_rules.gd.uid"
+    },
+    {
+      "sha256": "43b1ecd083e8b3a254a7c4b98c2af3f55259c4b3bd9a2af975964c1b81b52534",
+      "path": "foundation/celestial/logical_lighting.gd"
+    },
+    {
+      "sha256": "5306b26defc4f92e340361fbfce342be1636cf2fa45ee20ac4498ca6d3bd817d",
+      "path": "foundation/celestial/logical_lighting.gd.uid"
+    },
+    {
+      "sha256": "2483db2c1f9bae9b9b1a704f79762502cd0fb43a162183ec47ab6953661f8bd6",
+      "path": "foundation/contracts/contract_records.gd"
+    },
+    {
+      "sha256": "51fa419058e52a243817824c745be8877d9f9b93acfc5ab63b411b2be84ceb09",
+      "path": "foundation/contracts/contract_records.gd.uid"
+    },
+    {
+      "sha256": "a33702938116ce3e02d3d499a93f6de150c1fdabbaa2ef60eff38914bbe256ee",
+      "path": "foundation/contracts/contract_validation.gd"
+    },
+    {
+      "sha256": "ec7bdd5841da84993ad5ea3669cb297a13e8aa6de8d51e60299bb032e2cc46e7",
+      "path": "foundation/contracts/contract_validation.gd.uid"
+    },
+    {
+      "sha256": "7618827c59e0f2a6f4052fc035f94138298e4cf07e7f7a410de8d9c3d36ef1b3",
+      "path": "foundation/contracts/foundation_types.gd"
+    },
+    {
+      "sha256": "16b1e796105a4191850eed0ad9732980d155e5577708565778d48e02e3cf0783",
+      "path": "foundation/contracts/foundation_types.gd.uid"
+    },
+    {
+      "sha256": "71a956aa471010fc0f30f32edc196bb51a90a6a3ef7f56f674eed15d40a63184",
+      "path": "foundation/contracts/state_key.gd"
+    },
+    {
+      "sha256": "2bdbf085706bc94e408e8343f81a09f048882a62ca293e1ba3603277b0be785f",
+      "path": "foundation/contracts/state_key.gd.uid"
+    },
+    {
+      "sha256": "4718d338e6d0649d810ac9bd57b1bca3542f53e91bd5a9ae13ca3e2499a6f50b",
+      "path": "foundation/level/authoring_reader.gd"
+    },
+    {
+      "sha256": "33652011d79200ed65489a8c794b2e60a6e67d45c9acfe055379d7e995af67ac",
+      "path": "foundation/level/authoring_reader.gd.uid"
+    },
+    {
+      "sha256": "4121e9895ea2da55d2a9d7cff46881530b23bf27149c380738cfee25fb368be8",
+      "path": "foundation/level/level_baker.gd"
+    },
+    {
+      "sha256": "b86ffdd542b245d86e8fd640f6c14abe158da795ccd1e28ecf79539137626499",
+      "path": "foundation/level/level_baker.gd.uid"
+    },
+    {
+      "sha256": "fb76824ce7a0d83bb22e20d9ef74a3e15e4248aa4b1ed8da76e97890a26ea68d",
+      "path": "foundation/level/level_codec.gd"
+    },
+    {
+      "sha256": "e1d1594cb26cd6a8190c685c89cd3d59a03a16879b82e48768f09c73cf920591",
+      "path": "foundation/level/level_codec.gd.uid"
+    },
+    {
+      "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3",
+      "path": "foundation/orientation/discrete_orientation.gd"
+    },
+    {
+      "sha256": "044f46c1b49be270eebe9f8edd9cd0a7e837c4f1635b316eec803dfdb59e6071",
+      "path": "foundation/orientation/discrete_orientation.gd.uid"
+    },
+    {
+      "sha256": "b3a85967995f9d645cc72a335a37d10e155449966568bc3ccd8f1f050b611706",
+      "path": "foundation/parity/parity_types.gd"
+    },
+    {
+      "sha256": "db35544dc57859ebb077077125981ba79d4abedc3073ce8bc5abef177a4529f6",
+      "path": "foundation/parity/parity_types.gd.uid"
+    },
+    {
+      "sha256": "39a4eeac753c1fba8c2f5ada215811a6755dd69efb3bf7b56143137a4949e87f",
+      "path": "foundation/parity/trace_replayer.gd"
+    },
+    {
+      "sha256": "14ab0b5bea8ded8db7b1f944d3cf2480bf030c6cdc5ebe83dff8e2912c8f1548",
+      "path": "foundation/parity/trace_replayer.gd.uid"
+    },
+    {
+      "sha256": "8ec8e876e57ce7260351754811a6f6aff8cb3f920e886591e08d049a3f0e91de",
+      "path": "foundation/quality/intent/ablation_analyzer.gd"
+    },
+    {
+      "sha256": "dadfb3e91d8bff8404e5fa384368360008ce7a1999a76c853ffc7c42e73119cc",
+      "path": "foundation/quality/intent/ablation_analyzer.gd.uid"
+    },
+    {
+      "sha256": "19663748e47a358fb81aa1185732deff8d3967619c408590e1d12f103e53a605",
+      "path": "foundation/quality/intent/intent_types.gd"
+    },
+    {
+      "sha256": "90226dfe2dd939ccdafd6365314a01a779a49562e92edb2a5881cfaf9cc6ccb0",
+      "path": "foundation/quality/intent/intent_types.gd.uid"
+    },
+    {
+      "sha256": "3d7b6373f263388462a1bd5727564c0ff376903f4fc2f499c0e2d9c8d7a18e51",
+      "path": "foundation/quality/intent/intent_validation.gd"
+    },
+    {
+      "sha256": "65ebabc8cb6d6943af752c0b7e07c8f0f63f94ce06a4d949df5f88d789428b3b",
+      "path": "foundation/quality/intent/intent_validation.gd.uid"
+    },
+    {
+      "sha256": "6832d3ef0bac110f87227c9a4c9a5055937cd820dcf35498676b39f0cbfd69b6",
+      "path": "foundation/quality/intent/mechanic_classifier.gd"
+    },
+    {
+      "sha256": "50d0be1b9948b95935c332b6dd381204857ef4ea7d98dc18c2e5d5d2dd9c3a41",
+      "path": "foundation/quality/intent/mechanic_classifier.gd.uid"
+    },
+    {
+      "sha256": "3acdd52daa1ccd96b75518bd2fd06aa84cd41d59cab181844d1c003f7f03e693",
+      "path": "foundation/quality/intent/milestone_analyzer.gd"
+    },
+    {
+      "sha256": "266ea012ea0f249cf86d8c0e3b981fbf96538592967567ff635c35d8482eb1be",
+      "path": "foundation/quality/intent/milestone_analyzer.gd.uid"
+    },
+    {
+      "sha256": "0a22a5bc8b7901b9d375996e10beea78825ad2770290cf9f55622a6d540a4aee",
+      "path": "foundation/quality/softlock/softlock_analyzer.gd"
+    },
+    {
+      "sha256": "d4ab36a17e62c839661149bc58ee61e00a3d6cd2faf4dd111cc97ab0ec7020b2",
+      "path": "foundation/quality/softlock/softlock_analyzer.gd.uid"
+    },
+    {
+      "sha256": "c6533c8916a1e99ae7a1538225333c2279efe91862a944add106e7b8307bfa41",
+      "path": "foundation/quality/softlock/softlock_types.gd"
+    },
+    {
+      "sha256": "7d73102d9ed0396c3eba4d5df3114073e1fdabeb9951b98003b187b9390f476a",
+      "path": "foundation/quality/softlock/softlock_types.gd.uid"
+    },
+    {
+      "sha256": "6600f944a37f3ef9c36f9f1dc041e2816297554bf8a3a458e5803f427110d2a1",
+      "path": "foundation/rules/connectivity_resolver.gd"
+    },
+    {
+      "sha256": "2791d42d764c6706ed667e185916e67967386219d5b75c47861213087b9498c0",
+      "path": "foundation/rules/connectivity_resolver.gd.uid"
+    },
+    {
+      "sha256": "818e505cec058f4e4d184982a8cd6dc274129303264a9d7c2185bd585304ee16",
+      "path": "foundation/rules/derived_state_resolver.gd"
+    },
+    {
+      "sha256": "3c6b8b2b204c9350ce6eef4a1c831bb54e9c8b069097187a47da75074ebb87c2",
+      "path": "foundation/rules/derived_state_resolver.gd.uid"
+    },
+    {
+      "sha256": "753a40e59dead0260a01ba887068ac58e8d317949568f76c3fd43d278b10a017",
+      "path": "foundation/rules/goal_evaluator.gd"
+    },
+    {
+      "sha256": "fac7f4400de2690bb7c2a454d8e30100f5fe46447a9ba5e5612039478ded2fbe",
+      "path": "foundation/rules/goal_evaluator.gd.uid"
+    },
+    {
+      "sha256": "79e0fc8e2e9dd59e9e482f49798a5f007cabe53cf7cfb28225972e4db27a0a05",
+      "path": "foundation/rules/mechanism_effects.gd"
+    },
+    {
+      "sha256": "42fd15b48b722a6a3b7ea76b4e5f935137628dec8d0484787d6ccb142accd9ab",
+      "path": "foundation/rules/mechanism_effects.gd.uid"
+    },
+    {
+      "sha256": "e00f29fd0e9819d35f4c443ca3df3e7d5b992f637f401f164ac7fe66067b662c",
+      "path": "foundation/rules/puzzle_rule_kernel.gd"
+    },
+    {
+      "sha256": "9a010502086b62557d5d1055bd25f0c5fd58c55b0b52ef895c2daf375b28fdc0",
+      "path": "foundation/rules/puzzle_rule_kernel.gd.uid"
+    },
+    {
+      "sha256": "57c78d9b004724bd5ab15dfb8a0a964016ec44b7b5beef9251e49fb6c0977b8d",
+      "path": "foundation/rules/rule_records.gd"
+    },
+    {
+      "sha256": "05b22f87c165aaf675f61c133c1ea54d6fe658ee775784916a2f5b89e38880be",
+      "path": "foundation/rules/rule_records.gd.uid"
+    },
+    {
+      "sha256": "a259ad9f2f7dda55aed2a4781438fe3fce310e1574de506868f2d31bf007741e",
+      "path": "foundation/rules/rule_types.gd"
+    },
+    {
+      "sha256": "af2fdb37ad814916ab0eaf3f5568a23a71b8e86352cb30656cea851f72132dec",
+      "path": "foundation/rules/rule_types.gd.uid"
+    },
+    {
+      "sha256": "b7bceaad74bdb72076383a9238a00a9a30912c85ea0995b350fbb2faa70843c8",
+      "path": "foundation/rules/transition_permission.gd"
+    },
+    {
+      "sha256": "4c7a9a1c524e9a4d666b9885dadff8ca64a1ef263a72da18c911a855efe055d4",
+      "path": "foundation/rules/transition_permission.gd.uid"
+    },
+    {
+      "sha256": "e384fdb015805b1dfdbb55742807951360751981610e77619f72286fa5642529",
+      "path": "foundation/runtime/input_mapper.gd"
+    },
+    {
+      "sha256": "86a463ae620001160190b1d018b1fc601bfacbc366e95a2ff65accb4dd04300e",
+      "path": "foundation/runtime/input_mapper.gd.uid"
+    },
+    {
+      "sha256": "ca263b7439848b1975707adecc1634884192994de6f881d5962d69ff0e3e3ea1",
+      "path": "foundation/runtime/kernel_port.gd"
+    },
+    {
+      "sha256": "bbb8bca23bd5b134b6af66326081798ca3d42b1fadb55b117837890dfb5d6554",
+      "path": "foundation/runtime/kernel_port.gd.uid"
+    },
+    {
+      "sha256": "86459ca8a8177d0ce0b7e11c868e601a57025877322b4279e5e49c5627827ca5",
+      "path": "foundation/runtime/prototype_presenter.gd"
+    },
+    {
+      "sha256": "fa1390fe3c1fa282d22f50c8824e6e3ef857f9d7dc8b9cf4430e8210747acaad",
+      "path": "foundation/runtime/prototype_presenter.gd.uid"
+    },
+    {
+      "sha256": "010f40186788a2158987fbc71368e1c667c4dde30abb4fc50067a9883071f6e9",
+      "path": "foundation/runtime/runtime_session.gd"
+    },
+    {
+      "sha256": "5a53015c87718df76d79f7d0a28db871b7ad7fa4a09b484dd9cfd13369647dba",
+      "path": "foundation/runtime/runtime_session.gd.uid"
+    },
+    {
+      "sha256": "9e0c8cdd23c6641815ed4d349f3f0716da0e4307c5c402c034bfbdfe50c4a989",
+      "path": "foundation/solver/action_generator.gd"
+    },
+    {
+      "sha256": "4646bb7e947be5293380afd71744962e76ccac924b704ea7eea70fc4c336035a",
+      "path": "foundation/solver/action_generator.gd.uid"
+    },
+    {
+      "sha256": "4321c9d7958a2bb8aecb0ede747de102e412ef13efb7b8f833f04818ba6a253d",
+      "path": "foundation/solver/bfs_solver.gd"
+    },
+    {
+      "sha256": "85a68c40d7e0afca019fdbf923e386e8742ec39547cce750df617df352045b9d",
+      "path": "foundation/solver/bfs_solver.gd.uid"
+    },
+    {
+      "sha256": "6d2a47b0494a598d3730287da435cf79562d98fde05092163beaa38028d7fac0",
+      "path": "foundation/solver/search_records.gd"
+    },
+    {
+      "sha256": "6ee07f01976566fba5c0f6f83d34a1da7edf987c2dc505379e4b11e9af05501d",
+      "path": "foundation/solver/search_records.gd.uid"
+    },
+    {
+      "sha256": "a45fdbc78e61db5782f298454dc7a9a560b409872973feec57eb99f181060d30",
+      "path": "foundation/solver/solution_trace.gd"
+    },
+    {
+      "sha256": "7b51dd9f7e29a025627783c8a0d45761c1a2758052c7030f8fbb3764c1ea0caa",
+      "path": "foundation/solver/solution_trace.gd.uid"
+    },
+    {
+      "sha256": "8abc89b53517d287f2974699a5721a6490ae7e4a66b92c50d066ab17e3c9f012",
+      "path": "foundation/solver/solver_types.gd"
+    },
+    {
+      "sha256": "eb13e8659ddeda8a76f894f3794426b9d630e8060e426f7aeac566395629921d",
+      "path": "foundation/solver/solver_types.gd.uid"
+    },
+    {
+      "sha256": "536badc3a36d47df297e541e742c506f158759f7edd87c2abf0fc18f34b92482",
+      "path": "foundation/solver/state_explorer.gd"
+    },
+    {
+      "sha256": "ac4cf7f7b8a097e2a3e96094e04516d086a76046618a10090ce1580e6b49b1cb",
+      "path": "foundation/solver/state_explorer.gd.uid"
+    },
+    {
+      "sha256": "5747fb5c359ebf10c8bea1bfc159eab4ff8a19aa17dafac7aae5bea26da80b6f",
+      "path": "foundation/solver/state_graph.gd"
+    },
+    {
+      "sha256": "cd1ce7f74b5b40253da08ded2f8ab02cd0bd193329b058069d9260baaf6b1a8d",
+      "path": "foundation/solver/state_graph.gd.uid"
+    },
+    {
+      "sha256": "b2e08f02e95bd21c7fc804d19a54c4152bd4f21dbf24ae7a3cefbbb6b332803f",
+      "path": "foundation/spatial/mapping_query.gd"
+    },
+    {
+      "sha256": "3bce6d18a7b30377b67cbb31c0778b3c4491b46e5603f2639c7e27f7ee1648bd",
+      "path": "foundation/spatial/mapping_query.gd.uid"
+    },
+    {
+      "sha256": "c66a518586fe79c76b4868ff35f92a2082c11ba8f9c54d166d6da622d8ce015b",
+      "path": "foundation/spatial/spatial_validation.gd"
+    },
+    {
+      "sha256": "5936c4d1158a8a95a01d98b2b8c133d55fe5d140be6509185de9baeb97c1a314",
+      "path": "foundation/spatial/spatial_validation.gd.uid"
+    },
+    {
+      "sha256": "74678e85217833b1bb30e038ccbaddbd2d057885eeb38d02c766dbf07967c79a",
+      "path": "foundation/spatial/surface_geometry.gd"
+    },
+    {
+      "sha256": "9fda16e12674dd9dd66b3ebd6ee8b9ffaf00e195d6b1af6ce885980f6dcea107",
+      "path": "foundation/spatial/surface_geometry.gd.uid"
+    },
+    {
+      "sha256": "b632a1b46d433923a40f25592db01cc0aa07d54da9ad1829bf27f807eaa86c7c",
+      "path": "foundation/validation/safety_queries.gd"
+    },
+    {
+      "sha256": "cba35529558f61dc2d4ff0e783053668851eec77272e34219f974f98b5d5de34",
+      "path": "foundation/validation/safety_queries.gd.uid"
+    },
+    {
+      "sha256": "db89857424c113153a0df3dff13aefb779e271d4b026a5e95cc438a4e4dbcef2",
+      "path": "foundation/validation/static_validator.gd"
+    },
+    {
+      "sha256": "bfcebbc1b27a806a1777d6b1776067b887dc203dcde05dcd369dc149ca75ce81",
+      "path": "foundation/validation/static_validator.gd.uid"
+    },
+    {
+      "sha256": "c9e006050d1486c1c1fd342027172cf706a14e40df3c6ad89f73b5e0106321fb",
+      "path": "foundation/validation/validation_types.gd"
+    },
+    {
+      "sha256": "ae5f9ca008dff062e6f6856e51bfc160c357f9f3bbac4230f0ca2fe10d0e6258",
+      "path": "foundation/validation/validation_types.gd.uid"
+    },
+    {
+      "sha256": "16d7e9ff103a87275e32f7e25ea440c5fa709343d4c276b1cd72023a98a61271",
+      "path": "game/feel/animation/edge_recoil/edge_admission.gd"
+    },
+    {
+      "sha256": "0c7d0299be311763a8ad67f621ab1a04be18dd21708ba527c2d9774da6eea478",
+      "path": "game/feel/animation/edge_recoil/edge_event.gd"
+    },
+    {
+      "sha256": "463e9664c6db0196d397e46b32173293137f8da18f39d103a2a0f5bbc77a33cf",
+      "path": "game/feel/animation/edge_recoil/edge_event.gd.uid"
+    },
+    {
+      "sha256": "7a4d22c48b03f818c7e14eea6890674c20389cb3f2f04443cffaf87a25fedc7b",
+      "path": "game/feel/animation/edge_recoil/edge_lean.gd"
+    },
+    {
+      "sha256": "7a20edc38e163d700e5acfe171391c8928e997395c0f9d72534384b45ada821f",
+      "path": "game/feel/animation/edge_recoil/edge_lean.gd.uid"
+    },
+    {
+      "sha256": "75a4004446e040b4fac635084496de5604bbe0012cf93e9a5adbef0194a2e5db",
+      "path": "game/feel/animation/edge_recoil/recoil_motion.gd"
+    },
+    {
+      "sha256": "6982856926cd47947ea8ea04a0e77ea1dff43d1439c82f2a3f6352a9e0c2414e",
+      "path": "game/feel/animation/edge_recoil/recoil_motion.gd.uid"
+    },
+    {
+      "sha256": "8a88ade903ed03df0e25bca31bc977c8bd9ae1d31c5298e8b2f32e9551390fa0",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001_BG_CH_MORTIS_CUBE_001_basecolor.png"
+    },
+    {
+      "sha256": "b4f0384af257462383039a5cf828a98fce24c73fc100143b231e1b3ed1f63732",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001_BG_CH_MORTIS_CUBE_001_basecolor.png.import"
+    },
+    {
+      "sha256": "e8ae3c6f91b3cffa060e927196a61cfa84d061d30203408a4489a1b589793b9b",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001_mortis_eyes_v03.png"
+    },
+    {
+      "sha256": "113c2e368bf2cd831035d4e3509ce9d7733cb5ce8f59dae1ff0a1796cc5281a5",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001_mortis_eyes_v03.png.import"
+    },
+    {
+      "sha256": "67eebcf4697fd59797d1f5948685ef1b4b59e6f8531d035357b18c33c5d7583f",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001.glb"
+    },
+    {
+      "sha256": "295ae5cfc010e7a8a99f8e5fad53c54099d5e5ea80ca94577033d240b9d209ce",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001.glb.import"
+    },
+    {
+      "sha256": "13f5f6f086f8a833e97d905eca521aa331b0483a0501db7616633a2905577606",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/godot/BG_CH_MORTIS_CUBE_001.tscn"
+    },
+    {
+      "sha256": "ca594b307b4ef4149f81a50fe24a4ac5a0b41dfe0b739f1dddb3e5412846436d",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/reports/asset_manifest.json"
+    },
+    {
+      "sha256": "8a88ade903ed03df0e25bca31bc977c8bd9ae1d31c5298e8b2f32e9551390fa0",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/textures/BG_CH_MORTIS_CUBE_001_basecolor.png"
+    },
+    {
+      "sha256": "9937e521143493b78c7e87d751b8c29e4b2f677f6f6ec4bb1df36d15f0ff1ba3",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/textures/BG_CH_MORTIS_CUBE_001_basecolor.png.import"
+    },
+    {
+      "sha256": "e8ae3c6f91b3cffa060e927196a61cfa84d061d30203408a4489a1b589793b9b",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/textures/mortis_eyes_v03.png"
+    },
+    {
+      "sha256": "a64398fc9a861cd921f24fef96c055b686994ece4bc9a6ee4fc54a07e569d15c",
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/textures/mortis_eyes_v03.png.import"
+    },
+    {
+      "sha256": "6b31265ce8f89a8b075e5aea7bf91f0b4b808430e634b78e2aa6183c8821819d",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_BG_CH_WAKABA_CUBE_001_basecolor.png"
+    },
+    {
+      "sha256": "5fc520080663454edfb7fac5415d8b83fa93daea1f3b8bdcd2f4298f0a569704",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_BG_CH_WAKABA_CUBE_001_basecolor.png.import"
+    },
+    {
+      "sha256": "477226a679d5ca46d4101dc542dfbf93089e7bf0936841172c0eda86cc4ec3c2",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_source_eyes_v13.png"
+    },
+    {
+      "sha256": "34ebc4368b6c7e03aeb91fc9dcc0b7ec04a77a5bb9de05c5362ecefcf20df1cf",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_source_eyes_v13.png.import"
+    },
+    {
+      "sha256": "275bb9a495fc3725896bc473c2aac455abcc6d515b29eb450853ea1d3be765ac",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb"
+    },
+    {
+      "sha256": "10f0d9d1d9d9378c78036bdc1d19882a9b6ddc78fdb6b8e0e870a8f679ca1737",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb.import"
+    },
+    {
+      "sha256": "feeec798faa3d262294aec0948f468fabfe57d1bb9e8418c2b15ef3bed7d27b6",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/godot/BG_CH_WAKABA_CUBE_001.tscn"
+    },
+    {
+      "sha256": "082d5aac32b7c62d6defe425f7899f7220d839421396abab36b9531bbd483cd4",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/reports/asset_manifest.json"
+    },
+    {
+      "sha256": "6b31265ce8f89a8b075e5aea7bf91f0b4b808430e634b78e2aa6183c8821819d",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/BG_CH_WAKABA_CUBE_001_basecolor.png"
+    },
+    {
+      "sha256": "3a0dd0970256ad6b296a1e2f59946fee1e48c906b2eb3a2d546c4c03bddce861",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/BG_CH_WAKABA_CUBE_001_basecolor.png.import"
+    },
+    {
+      "sha256": "477226a679d5ca46d4101dc542dfbf93089e7bf0936841172c0eda86cc4ec3c2",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/source_eyes_v13.png"
+    },
+    {
+      "sha256": "3019f7e34b8695ec427c32f633719bb2b628250267e67d7130209b53fb66b04a",
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/textures/source_eyes_v13.png.import"
+    },
+    {
+      "sha256": "3333e8393751441999014ac291037462c46a1e5f013f1cd34b1218cfa7cf27d8",
+      "path": "prototype/foundation/runtime/foundation_runtime.gd"
+    },
+    {
+      "sha256": "efdbbf5464875fc5f5ce2782aec701d13318104cf9960811397d38ebe7b2eca4",
+      "path": "prototype/foundation/runtime/foundation_runtime.gd.uid"
+    },
+    {
+      "sha256": "b8c59813145cc8d9e3c1211cc53859337bf73c64e40a41651ddec5bbbc874b3a",
+      "path": "prototype/foundation/runtime/foundation_runtime.tscn"
+    },
+    {
+      "sha256": "061e9f2c1bbf3710d1d531fbf4b77811a6bc84334e3b72feb7116fdd6713a25e",
+      "path": "prototype/foundation/runtime/runtime_fixture.gd"
+    },
+    {
+      "sha256": "c25f341460da4b30c9b540a27b19e04ae5817027e362630bf5da901415764ebd",
+      "path": "prototype/foundation/runtime/runtime_fixture.gd.uid"
+    },
+    {
+      "sha256": "247937036c8f1c44a07722d5e04b3caaad93e4d6c711155990c0cb4d22a55992",
+      "path": "tests/beta_sprint/game_feel_owner_10b/fixture.gd"
+    },
+    {
+      "sha256": "f9d0cfc6e9a8e1cee05ce1308a5e2ae62c78344999316b10ec2bc7aece19667f",
+      "path": "tests/beta_sprint/game_feel_owner_10b/fixture.gd.uid"
+    },
+    {
+      "sha256": "d86e37f28f20890bca50a849d44fa16747e7c304e1e17ff8fe97a69b36cbe825",
+      "path": "tests/beta_sprint/game_feel_owner_10b/lab_view.gd"
+    },
+    {
+      "sha256": "855e541cbf36f0c81b31fa010f274545b1e8a6fcf4bb9b2ea53205d9ac129470",
+      "path": "tests/beta_sprint/game_feel_owner_10b/lab_view.gd.uid"
+    },
+    {
+      "sha256": "0e3d46f8013cff33769db840feb3af81f8335b7ea48e265c7c77a776048528a7",
+      "path": "tests/beta_sprint/game_feel_owner_10b/run.ps1"
+    },
+    {
+      "sha256": "0c02d1f35b45a147a8c73b5df9590ffcf3ccf1834fbeddfe74e0cbffdc3c4af1",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_graphical.gd"
+    },
+    {
+      "sha256": "b7f7430cf753edef92cedf5ff2145fe8ac22fffd80cd9534304ca293d49c1d6a",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_graphical.gd.uid"
+    },
+    {
+      "sha256": "8b179d232bda146b09ad5c7038ad67a4b815dc84cc83beb1d5d337bae8fef138",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_unit.gd"
+    },
+    {
+      "sha256": "97094ba68fe6116598ce8a13da89a218cf0b451dae11a070261c522d55cc1c5f",
+      "path": "tests/beta_sprint/game_feel_owner_10b/test_unit.gd.uid"
+    }
+  ],
+  "engine_path": "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "input": "DTO sampling (Unit); graphical native mapper with synthetic classified event",
+  "started": "2026-10-10T00:35:28.9792709+08:00",
+  "pid": 36756,
+  "status": "PASS",
+  "profile_environment": {
+    "XDG_DATA_HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\xdg_data_home",
+    "XDG_CONFIG_HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\xdg_config_home",
+    "LOCALAPPDATA": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\localappdata",
+    "XDG_CACHE_HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\xdg_cache_home",
+    "APPDATA": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\appdata",
+    "HOME": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\home",
+    "USERPROFILE": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02\\profile\\userprofile"
+  },
+  "exit_code": 0,
+  "finished": "2026-10-10T00:35:41.9152434+08:00",
+  "stderr": null,
+  "stdout_tail": [
+    "Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org",
+    "D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 5060 Ti",
+    "",
+    "EDGE_RENDERED_UNIT checks=100 failures=0 captures=43 natural_samples=338"
+  ],
+  "report": {
+    "authoritative_runtime": false,
+    "checks": 100,
+    "cues": [
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 1,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.137451333333333,
+        "identity": {
+          "attempt_id": 1,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.442779333333333,
+        "identity": {
+          "attempt_id": 1,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0392228888888889,
+        "identity": {
+          "attempt_id": 39,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133067666666667,
+        "identity": {
+          "attempt_id": 39,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.453885333333333,
+        "identity": {
+          "attempt_id": 39,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.051731,
+        "identity": {
+          "attempt_id": 77,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.140222,
+        "identity": {
+          "attempt_id": 77,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.441427,
+        "identity": {
+          "attempt_id": 77,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0396685555555556,
+        "identity": {
+          "attempt_id": 116,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.136433666666667,
+        "identity": {
+          "attempt_id": 116,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.442069777777778,
+        "identity": {
+          "attempt_id": 116,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.055275,
+        "identity": {
+          "attempt_id": 155,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133101,
+        "identity": {
+          "attempt_id": 155,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.441854333333333,
+        "identity": {
+          "attempt_id": 155,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.044367,
+        "identity": {
+          "attempt_id": 194,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.130257666666667,
+        "identity": {
+          "attempt_id": 194,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.451592,
+        "identity": {
+          "attempt_id": 194,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0508217777777778,
+        "identity": {
+          "attempt_id": 232,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.141166333333333,
+        "identity": {
+          "attempt_id": 232,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.44217,
+        "identity": {
+          "attempt_id": 232,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0397167777777778,
+        "identity": {
+          "attempt_id": 271,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.134993666666667,
+        "identity": {
+          "attempt_id": 271,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.440956333333333,
+        "identity": {
+          "attempt_id": 271,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 310,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.145999333333333,
+        "identity": {
+          "attempt_id": 310,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.449988666666667,
+        "identity": {
+          "attempt_id": 310,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 430,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0833333333333333,
+        "identity": {
+          "attempt_id": 436,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.116666666666667,
+        "identity": {
+          "attempt_id": 444,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133333333333333,
+        "identity": {
+          "attempt_id": 444,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeRecoilEnd",
+        "elapsed": 0.45,
+        "identity": {
+          "attempt_id": 444,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 445,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133333333333333,
+        "identity": {
+          "attempt_id": 445,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 454,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 459,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133333333333333,
+        "identity": {
+          "attempt_id": 459,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeLeanStart",
+        "elapsed": 0.0,
+        "identity": {
+          "attempt_id": 469,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      },
+      {
+        "cue": "EdgeBlocked",
+        "elapsed": 0.133333333333333,
+        "identity": {
+          "attempt_id": 469,
+          "generation": 1,
+          "level_run_id": "unit-run",
+          "session_id": "unit-session"
+        }
+      }
+    ],
+    "display": "Windows",
+    "doubles": [
+      "synthetic_game_feel_event"
+    ],
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "failures": [],
+    "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+    "formal_runtime_cases": {
+      "checks": 0,
+      "reason": "01 event facade and 00 sole-writer host not delivered on contract baseline",
+      "status": "case_pending"
+    },
+    "inputs": [
+      {
+        "attempt": 0,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 38,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 38,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "attempt": 76,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "attempt": 76,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 115,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 115,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "attempt": 154,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "attempt": 154,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "attempt": 193,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "attempt": 193,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "attempt": 231,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "attempt": 231,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "attempt": 270,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "attempt": 270,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "attempt": 309,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "attempt": 309,
+        "key": 68,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 429,
+        "key": 68,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 429,
+        "key": 68,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 435,
+        "key": 65,
+        "pressed": true,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 443,
+        "key": 65,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 444,
+        "key": 68,
+        "pressed": false,
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "attempt": 444,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "attempt": 453,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 458,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 458,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 468,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 468,
+        "key": 87,
+        "pressed": true,
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "attempt": 485,
+        "key": 87,
+        "pressed": false,
+        "quadrant": 2,
+        "world": 0
+      }
+    ],
+    "natural_samples": [
+      {
+        "angle": 0.0778731480240822,
+        "attempt": 1,
+        "elapsed": 0.0537796666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0886649340391159,
+        "attempt": 1,
+        "elapsed": 0.0583333333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.117853790521622,
+        "attempt": 1,
+        "elapsed": 0.070448,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.188275173306465,
+        "attempt": 1,
+        "elapsed": 0.104401666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.201384902000427,
+        "attempt": 1,
+        "elapsed": 0.114666,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.206433057785034,
+        "attempt": 1,
+        "elapsed": 0.120787,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209410607814789,
+        "attempt": 1,
+        "elapsed": 0.129118,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 1,
+        "elapsed": 0.137451333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 1,
+        "elapsed": 0.148562444444444,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.173822462558746,
+        "attempt": 1,
+        "elapsed": 0.190964333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.141205951571465,
+        "attempt": 1,
+        "elapsed": 0.207631,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.100359156727791,
+        "attempt": 1,
+        "elapsed": 0.232631,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0848184302449226,
+        "attempt": 1,
+        "elapsed": 0.243939,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0763515904545784,
+        "attempt": 1,
+        "elapsed": 0.250694,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0667066723108292,
+        "attempt": 1,
+        "elapsed": 0.259027,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0579081438481808,
+        "attempt": 1,
+        "elapsed": 0.267360333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0474322997033596,
+        "attempt": 1,
+        "elapsed": 0.278471444444444,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0367288738489151,
+        "attempt": 1,
+        "elapsed": 0.291666666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0283794198185205,
+        "attempt": 1,
+        "elapsed": 0.303895333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0172910019755363,
+        "attempt": 1,
+        "elapsed": 0.324605333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0117796435952187,
+        "attempt": 1,
+        "elapsed": 0.338470333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00589992711320519,
+        "attempt": 1,
+        "elapsed": 0.359416333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00292968773283064,
+        "attempt": 1,
+        "elapsed": 0.376083,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00119603995699435,
+        "attempt": 1,
+        "elapsed": 0.392749666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 1,
+        "elapsed": 0.409416333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 1,
+        "elapsed": 0.426083,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0120596755295992,
+        "attempt": 39,
+        "elapsed": 0.018951,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0385531783103943,
+        "attempt": 39,
+        "elapsed": 0.0356176666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0556272938847542,
+        "attempt": 39,
+        "elapsed": 0.0439486666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0775417014956474,
+        "attempt": 39,
+        "elapsed": 0.0536376666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.11134035885334,
+        "attempt": 39,
+        "elapsed": 0.0677416666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.144323170185089,
+        "attempt": 39,
+        "elapsed": 0.0817596666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.203043088316917,
+        "attempt": 39,
+        "elapsed": 0.116401,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.133067666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.141399666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 39,
+        "elapsed": 0.166302,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.191108644008636,
+        "attempt": 39,
+        "elapsed": 0.182968666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.173115134239197,
+        "attempt": 39,
+        "elapsed": 0.191302666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.118110582232475,
+        "attempt": 39,
+        "elapsed": 0.221061,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0901322290301323,
+        "attempt": 39,
+        "elapsed": 0.239927666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0820951238274574,
+        "attempt": 39,
+        "elapsed": 0.246061666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0719520822167397,
+        "attempt": 39,
+        "elapsed": 0.254402666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0626892074942589,
+        "attempt": 39,
+        "elapsed": 0.262736,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0516208671033382,
+        "attempt": 39,
+        "elapsed": 0.273847111111111,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0401586517691612,
+        "attempt": 39,
+        "elapsed": 0.287192,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0302500892430544,
+        "attempt": 39,
+        "elapsed": 0.300964,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0217272508889437,
+        "attempt": 39,
+        "elapsed": 0.315477,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0126953339204192,
+        "attempt": 39,
+        "elapsed": 0.335913,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.00828641373664141,
+        "attempt": 39,
+        "elapsed": 0.349676,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.00378221087157726,
+        "attempt": 39,
+        "elapsed": 0.370552,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.00169145595282316,
+        "attempt": 39,
+        "elapsed": 0.387218666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 39,
+        "elapsed": 0.403885333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 39,
+        "elapsed": 0.420552,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 39,
+        "elapsed": 0.437218666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 0
+      },
+      {
+        "angle": 0.0181389059871435,
+        "attempt": 77,
+        "elapsed": 0.0235553333333334,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0183999128639698,
+        "attempt": 77,
+        "elapsed": 0.0237424583321077,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0222905687987804,
+        "attempt": 77,
+        "elapsed": 0.026327,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0367288738489151,
+        "attempt": 77,
+        "elapsed": 0.034661,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0477429553866386,
+        "attempt": 77,
+        "elapsed": 0.040222,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.087989903986454,
+        "attempt": 77,
+        "elapsed": 0.0580506666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.121047236025333,
+        "attempt": 77,
+        "elapsed": 0.0717806666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.207946673035622,
+        "attempt": 77,
+        "elapsed": 0.123555333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 77,
+        "elapsed": 0.140222,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 77,
+        "elapsed": 0.141008125019658,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 77,
+        "elapsed": 0.173555333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.176688432693481,
+        "attempt": 77,
+        "elapsed": 0.189603333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.174857646226883,
+        "attempt": 77,
+        "elapsed": 0.190470833361441,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.119595892727375,
+        "attempt": 77,
+        "elapsed": 0.220147666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.102364055812359,
+        "attempt": 77,
+        "elapsed": 0.231258777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0897344350814819,
+        "attempt": 77,
+        "elapsed": 0.240222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0755793303251266,
+        "attempt": 77,
+        "elapsed": 0.251333111111111,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0629965662956238,
+        "attempt": 77,
+        "elapsed": 0.262444222222222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0511568672955036,
+        "attempt": 77,
+        "elapsed": 0.274348984126984,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0402298383414745,
+        "attempt": 77,
+        "elapsed": 0.287097666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0258283652365208,
+        "attempt": 77,
+        "elapsed": 0.308093666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0172219201922417,
+        "attempt": 77,
+        "elapsed": 0.324760333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0107864988967776,
+        "attempt": 77,
+        "elapsed": 0.341427,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00617632595822215,
+        "attempt": 77,
+        "elapsed": 0.358093666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0030881620477885,
+        "attempt": 77,
+        "elapsed": 0.374760333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00119603995699435,
+        "attempt": 77,
+        "elapsed": 0.391427,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 77,
+        "elapsed": 0.408093666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 77,
+        "elapsed": 0.424760333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0202622879296541,
+        "attempt": 116,
+        "elapsed": 0.025,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0476629808545113,
+        "attempt": 116,
+        "elapsed": 0.0401846666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0494841746985912,
+        "attempt": 116,
+        "elapsed": 0.0410615416788484,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0819875672459602,
+        "attempt": 116,
+        "elapsed": 0.0555266666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.101964823901653,
+        "attempt": 116,
+        "elapsed": 0.06386,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.128626585006714,
+        "attempt": 116,
+        "elapsed": 0.0749711111111111,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.205750465393066,
+        "attempt": 116,
+        "elapsed": 0.119767,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 116,
+        "elapsed": 0.136433666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 116,
+        "elapsed": 0.144764666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 116,
+        "elapsed": 0.17003,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.182913169264793,
+        "attempt": 116,
+        "elapsed": 0.186696666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.165451318025589,
+        "attempt": 116,
+        "elapsed": 0.195027666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.122777104377747,
+        "attempt": 116,
+        "elapsed": 0.218215,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0971247404813766,
+        "attempt": 116,
+        "elapsed": 0.234881666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0857663303613663,
+        "attempt": 116,
+        "elapsed": 0.243212666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0753264874219894,
+        "attempt": 116,
+        "elapsed": 0.251545666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0584491603076458,
+        "attempt": 116,
+        "elapsed": 0.266823444444444,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0443028435111046,
+        "attempt": 116,
+        "elapsed": 0.282101222222222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0326458998024464,
+        "attempt": 116,
+        "elapsed": 0.297379,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.023243548348546,
+        "attempt": 116,
+        "elapsed": 0.312656777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0158372242003679,
+        "attempt": 116,
+        "elapsed": 0.327934555555556,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00976563431322575,
+        "attempt": 116,
+        "elapsed": 0.344601222222222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00573600782081485,
+        "attempt": 116,
+        "elapsed": 0.360125333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00300996797159314,
+        "attempt": 116,
+        "elapsed": 0.375403111111111,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.00119603995699435,
+        "attempt": 116,
+        "elapsed": 0.392069777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 116,
+        "elapsed": 0.408736444444444,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 116,
+        "elapsed": 0.425403111111111,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 0
+      },
+      {
+        "angle": 0.0190492998808622,
+        "attempt": 155,
+        "elapsed": 0.0241883333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0193473529070616,
+        "attempt": 155,
+        "elapsed": 0.0243844583278786,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0279135201126337,
+        "attempt": 155,
+        "elapsed": 0.029765,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.04342220723629,
+        "attempt": 155,
+        "elapsed": 0.038099,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0549892261624336,
+        "attempt": 155,
+        "elapsed": 0.0436545555555556,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0860910564661026,
+        "attempt": 155,
+        "elapsed": 0.0572546666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.119452185928822,
+        "attempt": 155,
+        "elapsed": 0.0711146666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 155,
+        "elapsed": 0.133101,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 155,
+        "elapsed": 0.140855,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 155,
+        "elapsed": 0.16773,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 155,
+        "elapsed": 0.174188333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.18801374733448,
+        "attempt": 155,
+        "elapsed": 0.184363333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.170222818851471,
+        "attempt": 155,
+        "elapsed": 0.192695333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.117301926016808,
+        "attempt": 155,
+        "elapsed": 0.221562666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0957595929503441,
+        "attempt": 155,
+        "elapsed": 0.235848380952381,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0814623013138771,
+        "attempt": 155,
+        "elapsed": 0.246559333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0713830962777138,
+        "attempt": 155,
+        "elapsed": 0.254892333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0570410415530205,
+        "attempt": 155,
+        "elapsed": 0.268225666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0445068888366222,
+        "attempt": 155,
+        "elapsed": 0.28186203030303,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.03378015011549,
+        "attempt": 155,
+        "elapsed": 0.295750919191919,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0249359924346209,
+        "attempt": 155,
+        "elapsed": 0.309639808080808,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0174829792231321,
+        "attempt": 155,
+        "elapsed": 0.324188333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0105856973677874,
+        "attempt": 155,
+        "elapsed": 0.342044666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.00658727716654539,
+        "attempt": 155,
+        "elapsed": 0.356330380952381,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.00378221087157726,
+        "attempt": 155,
+        "elapsed": 0.370616095238095,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.001381067908369,
+        "attempt": 155,
+        "elapsed": 0.390566666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 155,
+        "elapsed": 0.404852380952381,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 155,
+        "elapsed": 0.425187666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 1
+      },
+      {
+        "angle": 0.0202622879296541,
+        "attempt": 194,
+        "elapsed": 0.025,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0431633517146111,
+        "attempt": 194,
+        "elapsed": 0.0379706666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0449281260371208,
+        "attempt": 194,
+        "elapsed": 0.038845791665523,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0765356495976448,
+        "attempt": 194,
+        "elapsed": 0.0532076666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0963678881525993,
+        "attempt": 194,
+        "elapsed": 0.061541,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.120474338531494,
+        "attempt": 194,
+        "elapsed": 0.071541,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.20027182996273,
+        "attempt": 194,
+        "elapsed": 0.113591,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 194,
+        "elapsed": 0.130257666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 194,
+        "elapsed": 0.138589666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 194,
+        "elapsed": 0.162946,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.198691561818123,
+        "attempt": 194,
+        "elapsed": 0.179612666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.180216237902641,
+        "attempt": 194,
+        "elapsed": 0.187947666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.122806251049042,
+        "attempt": 194,
+        "elapsed": 0.218198,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0950746908783913,
+        "attempt": 194,
+        "elapsed": 0.236335666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.085794135928154,
+        "attempt": 194,
+        "elapsed": 0.243191666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0753486454486847,
+        "attempt": 194,
+        "elapsed": 0.251526666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0657887831330299,
+        "attempt": 194,
+        "elapsed": 0.25986,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.054352443665266,
+        "attempt": 194,
+        "elapsed": 0.270971111111111,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0419986359775066,
+        "attempt": 194,
+        "elapsed": 0.284888,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0317573882639408,
+        "attempt": 194,
+        "elapsed": 0.298692,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0232947804033756,
+        "attempt": 194,
+        "elapsed": 0.312566,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0136369792744517,
+        "attempt": 194,
+        "elapsed": 0.333401,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.00895035080611706,
+        "attempt": 194,
+        "elapsed": 0.347318,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.00414320454001427,
+        "attempt": 194,
+        "elapsed": 0.368227,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.00182698119897395,
+        "attempt": 194,
+        "elapsed": 0.384893666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 194,
+        "elapsed": 0.401560333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 194,
+        "elapsed": 0.418227,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 194,
+        "elapsed": 0.434893666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.019506897777319,
+        "attempt": 232,
+        "elapsed": 0.0244996666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0197619032114744,
+        "attempt": 232,
+        "elapsed": 0.0246654166627523,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0292074792087078,
+        "attempt": 232,
+        "elapsed": 0.030516,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0449334345757961,
+        "attempt": 232,
+        "elapsed": 0.03885,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0566172525286675,
+        "attempt": 232,
+        "elapsed": 0.0444055555555556,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0899839252233505,
+        "attempt": 232,
+        "elapsed": 0.0588846666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.123468846082687,
+        "attempt": 232,
+        "elapsed": 0.0727956666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.208346009254456,
+        "attempt": 232,
+        "elapsed": 0.124499666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 232,
+        "elapsed": 0.141166333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 232,
+        "elapsed": 0.141983833329962,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 232,
+        "elapsed": 0.174499666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.173400342464447,
+        "attempt": 232,
+        "elapsed": 0.191166333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.171537339687347,
+        "attempt": 232,
+        "elapsed": 0.192060583332298,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.115902550518513,
+        "attempt": 232,
+        "elapsed": 0.222434666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0990361571311951,
+        "attempt": 232,
+        "elapsed": 0.233545777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0884683579206467,
+        "attempt": 232,
+        "elapsed": 0.241166333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0744507759809494,
+        "attempt": 232,
+        "elapsed": 0.252277444444444,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0619968958199024,
+        "attempt": 232,
+        "elapsed": 0.263388555555556,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0502871833741665,
+        "attempt": 232,
+        "elapsed": 0.275293317460317,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0395484119653702,
+        "attempt": 232,
+        "elapsed": 0.287970666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0254001840949059,
+        "attempt": 232,
+        "elapsed": 0.308836666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0168863944709301,
+        "attempt": 232,
+        "elapsed": 0.325503333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0105405561625957,
+        "attempt": 232,
+        "elapsed": 0.34217,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.00601993780583143,
+        "attempt": 232,
+        "elapsed": 0.358836666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.00300996797159314,
+        "attempt": 232,
+        "elapsed": 0.375503333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.00119603995699435,
+        "attempt": 232,
+        "elapsed": 0.39217,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 232,
+        "elapsed": 0.408836666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 232,
+        "elapsed": 0.425503333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 1
+      },
+      {
+        "angle": 0.0202622879296541,
+        "attempt": 271,
+        "elapsed": 0.025,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0454504936933517,
+        "attempt": 271,
+        "elapsed": 0.0391046666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.047139834612608,
+        "attempt": 271,
+        "elapsed": 0.0399305416397552,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0784984305500984,
+        "attempt": 271,
+        "elapsed": 0.0540456666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.098388597369194,
+        "attempt": 271,
+        "elapsed": 0.062379,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.125119552016258,
+        "attempt": 271,
+        "elapsed": 0.0734901111111111,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.204677402973175,
+        "attempt": 271,
+        "elapsed": 0.118327,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 271,
+        "elapsed": 0.134993666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 271,
+        "elapsed": 0.143320666666667,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 271,
+        "elapsed": 0.168857,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.18546549975872,
+        "attempt": 271,
+        "elapsed": 0.185523666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.167841896414757,
+        "attempt": 271,
+        "elapsed": 0.193853666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.126965045928955,
+        "attempt": 271,
+        "elapsed": 0.215721,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.100712656974792,
+        "attempt": 271,
+        "elapsed": 0.232387666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0890648290514946,
+        "attempt": 271,
+        "elapsed": 0.240720666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0766321793198586,
+        "attempt": 271,
+        "elapsed": 0.250462666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0595524981617928,
+        "attempt": 271,
+        "elapsed": 0.265740444444444,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0452243499457836,
+        "attempt": 271,
+        "elapsed": 0.281018222222222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0333968251943588,
+        "attempt": 271,
+        "elapsed": 0.296296,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0238210614770651,
+        "attempt": 271,
+        "elapsed": 0.311604333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0162825956940651,
+        "attempt": 271,
+        "elapsed": 0.326882111111111,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0101016517728567,
+        "attempt": 271,
+        "elapsed": 0.343548777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.00573600782081485,
+        "attempt": 271,
+        "elapsed": 0.360215444444444,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.00300996797159314,
+        "attempt": 271,
+        "elapsed": 0.375493222222222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.001381067908369,
+        "attempt": 271,
+        "elapsed": 0.390958333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 271,
+        "elapsed": 0.407624333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "attempt": 271,
+        "elapsed": 0.424290333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 3,
+        "world": 1
+      },
+      {
+        "angle": 0.050749734044075,
+        "attempt": 310,
+        "elapsed": 0.0416646666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.091989204287529,
+        "attempt": 310,
+        "elapsed": 0.0597202222222222,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.135195896029472,
+        "attempt": 310,
+        "elapsed": 0.0777757777777778,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.173639714717865,
+        "attempt": 310,
+        "elapsed": 0.0958313333333333,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.199261650443077,
+        "attempt": 310,
+        "elapsed": 0.112666,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209423154592514,
+        "attempt": 310,
+        "elapsed": 0.129332666666667,
+        "orientation": 0,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 310,
+        "elapsed": 0.145999333333333,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 310,
+        "elapsed": 0.162666,
+        "orientation": 0,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.199333548545837,
+        "attempt": 310,
+        "elapsed": 0.179332666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.163490697741508,
+        "attempt": 310,
+        "elapsed": 0.195999333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.132224813103676,
+        "attempt": 310,
+        "elapsed": 0.212666,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.10522286593914,
+        "attempt": 310,
+        "elapsed": 0.229332666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0804222449660301,
+        "attempt": 310,
+        "elapsed": 0.247388222222222,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0598600208759308,
+        "attempt": 310,
+        "elapsed": 0.265443777777778,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.043284710496664,
+        "attempt": 310,
+        "elapsed": 0.283322,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.030889643356204,
+        "attempt": 310,
+        "elapsed": 0.299988666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0211150869727135,
+        "attempt": 310,
+        "elapsed": 0.316655333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0136544518172741,
+        "attempt": 310,
+        "elapsed": 0.333322,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00819964241236448,
+        "attempt": 310,
+        "elapsed": 0.349988666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00442157546058297,
+        "attempt": 310,
+        "elapsed": 0.366655333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00207160203717649,
+        "attempt": 310,
+        "elapsed": 0.383322,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 310,
+        "elapsed": 0.399988666666667,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 310,
+        "elapsed": 0.416655333333333,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 310,
+        "elapsed": 0.433322,
+        "orientation": 0,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 430,
+        "elapsed": 0.0166666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 430,
+        "elapsed": 0.0333333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 430,
+        "elapsed": 0.05,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 430,
+        "elapsed": 0.0666666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 430,
+        "elapsed": 0.0833333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 436,
+        "elapsed": 0.0166666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 436,
+        "elapsed": 0.0333333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 436,
+        "elapsed": 0.05,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 436,
+        "elapsed": 0.0666666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 436,
+        "elapsed": 0.0833333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 436,
+        "elapsed": 0.1,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 436,
+        "elapsed": 0.116666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 444,
+        "elapsed": 0.0166666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 444,
+        "elapsed": 0.0333333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 444,
+        "elapsed": 0.05,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 444,
+        "elapsed": 0.0666666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 444,
+        "elapsed": 0.0833333333333333,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 444,
+        "elapsed": 0.1,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 444,
+        "elapsed": 0.116666666666667,
+        "orientation": 7,
+        "phase": "LEAN",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 444,
+        "elapsed": 0.133333333333333,
+        "orientation": 7,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 444,
+        "elapsed": 0.15,
+        "orientation": 7,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 444,
+        "elapsed": 0.166666666666667,
+        "orientation": 7,
+        "phase": "BLOCKED",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.190296024084091,
+        "attempt": 444,
+        "elapsed": 0.183333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.15557961165905,
+        "attempt": 444,
+        "elapsed": 0.2,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.125367179512978,
+        "attempt": 444,
+        "elapsed": 0.216666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0993415489792824,
+        "attempt": 444,
+        "elapsed": 0.233333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0771933943033218,
+        "attempt": 444,
+        "elapsed": 0.25,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0586080513894558,
+        "attempt": 444,
+        "elapsed": 0.266666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0432736948132515,
+        "attempt": 444,
+        "elapsed": 0.283333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0308819245547056,
+        "attempt": 444,
+        "elapsed": 0.3,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0211150869727135,
+        "attempt": 444,
+        "elapsed": 0.316666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0136544518172741,
+        "attempt": 444,
+        "elapsed": 0.333333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00819964241236448,
+        "attempt": 444,
+        "elapsed": 0.35,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00442157546058297,
+        "attempt": 444,
+        "elapsed": 0.366666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00207160203717649,
+        "attempt": 444,
+        "elapsed": 0.383333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.000690533954184502,
+        "attempt": 444,
+        "elapsed": 0.4,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 444,
+        "elapsed": 0.416666666666667,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "attempt": 444,
+        "elapsed": 0.433333333333333,
+        "orientation": 7,
+        "phase": "RECOIL",
+        "quadrant": 0,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 445,
+        "elapsed": 0.0166666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 445,
+        "elapsed": 0.0333333333333333,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 445,
+        "elapsed": 0.05,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 445,
+        "elapsed": 0.0666666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 445,
+        "elapsed": 0.0833333333333333,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 445,
+        "elapsed": 0.1,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 445,
+        "elapsed": 0.116666666666667,
+        "orientation": 19,
+        "phase": "LEAN",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 445,
+        "elapsed": 0.133333333333333,
+        "orientation": 19,
+        "phase": "BLOCKED",
+        "quadrant": 1,
+        "world": 1
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 454,
+        "elapsed": 0.0166666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 454,
+        "elapsed": 0.0333333333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 454,
+        "elapsed": 0.05,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 454,
+        "elapsed": 0.0666666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 459,
+        "elapsed": 0.0166666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 459,
+        "elapsed": 0.0333333333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 459,
+        "elapsed": 0.05,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 459,
+        "elapsed": 0.0666666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 459,
+        "elapsed": 0.0833333333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 459,
+        "elapsed": 0.1,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 459,
+        "elapsed": 0.116666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 459,
+        "elapsed": 0.133333333333333,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 459,
+        "elapsed": 0.15,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.00944291893392801,
+        "attempt": 469,
+        "elapsed": 0.0166666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0342497900128365,
+        "attempt": 469,
+        "elapsed": 0.0333333333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0691155046224594,
+        "attempt": 469,
+        "elapsed": 0.05,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.108745634555817,
+        "attempt": 469,
+        "elapsed": 0.0666666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.147849872708321,
+        "attempt": 469,
+        "elapsed": 0.0833333333333333,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.181126698851585,
+        "attempt": 469,
+        "elapsed": 0.1,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.203281730413437,
+        "attempt": 469,
+        "elapsed": 0.116666666666667,
+        "orientation": 12,
+        "phase": "LEAN",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 469,
+        "elapsed": 0.133333333333333,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 469,
+        "elapsed": 0.15,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "attempt": 469,
+        "elapsed": 0.166666666666667,
+        "orientation": 12,
+        "phase": "BLOCKED",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.190296024084091,
+        "attempt": 469,
+        "elapsed": 0.183333333333333,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.15557961165905,
+        "attempt": 469,
+        "elapsed": 0.2,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.125367179512978,
+        "attempt": 469,
+        "elapsed": 0.216666666666667,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0993415489792824,
+        "attempt": 469,
+        "elapsed": 0.233333333333333,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0771933943033218,
+        "attempt": 469,
+        "elapsed": 0.25,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      },
+      {
+        "angle": 0.0586080513894558,
+        "attempt": 469,
+        "elapsed": 0.266666666666667,
+        "orientation": 12,
+        "phase": "RECOIL",
+        "quadrant": 2,
+        "world": 0
+      }
+    ],
+    "pid": 36756,
+    "renderer": "forward_plus",
+    "shots": [
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q0_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.117853790521622,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q0_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q0_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.141205951571465,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q0_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w0_q0_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q0_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q1_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.144323170185089,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q1_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q1_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.173115134239197,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q1_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w0_q1_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q1_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q2_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.121047236025333,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q2_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q2_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.174857646226883,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q2_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w0_q2_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q2_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q3_initial.png",
+        "phase": "IDLE",
+        "world": 0
+      },
+      {
+        "angle": 0.128626585006714,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q3_lean.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q3_blocked.png",
+        "phase": "BLOCKED",
+        "world": 0
+      },
+      {
+        "angle": 0.165451318025589,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q3_recoil.png",
+        "phase": "RECOIL",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w0_q3_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w0_q3_rest.png",
+        "phase": "DONE",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q0_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.119452185928822,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q0_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q0_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.170222818851471,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q0_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 0,
+        "formal_orientation": 0,
+        "name": "w1_q0_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q0_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q1_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.120474338531494,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q1_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q1_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.180216237902641,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q1_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 0,
+        "name": "w1_q1_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q1_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q2_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.123468846082687,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q2_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q2_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.171537339687347,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q2_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 0,
+        "name": "w1_q2_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q2_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_initial",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q3_initial.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.125119552016258,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_lean",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q3_lean.png",
+        "phase": "LEAN",
+        "world": 1
+      },
+      {
+        "angle": 0.209439113736153,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_blocked",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q3_blocked.png",
+        "phase": "BLOCKED",
+        "world": 1
+      },
+      {
+        "angle": 0.167841896414757,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_recoil",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q3_recoil.png",
+        "phase": "RECOIL",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 3,
+        "formal_orientation": 0,
+        "name": "w1_q3_rest",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/w1_q3_rest.png",
+        "phase": "DONE",
+        "world": 1
+      },
+      {
+        "angle": 0.203281730413437,
+        "camera": 0,
+        "formal_orientation": 7,
+        "name": "opposite",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/opposite.png",
+        "phase": "LEAN",
+        "world": 0
+      },
+      {
+        "angle": 0.0,
+        "camera": 1,
+        "formal_orientation": 19,
+        "name": "preempted",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/preempted.png",
+        "phase": "IDLE",
+        "world": 1
+      },
+      {
+        "angle": 0.0,
+        "camera": 2,
+        "formal_orientation": 12,
+        "name": "reset",
+        "path": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation\\docs\\beta-sprint\\game-feel-owner-10b\\evidence\\final_rendered_02/reset.png",
+        "phase": "IDLE",
+        "world": 0
+      }
+    ],
+    "user_data_dir": "E:/godot/worktrees/block-girl-game-feel-edge-animation/docs/beta-sprint/game-feel-owner-10b/evidence/final_rendered_02/profile/appdata/Godot/app_userdata/方块少女-若叶睦"
+  },
+  "source_drift": []
+}

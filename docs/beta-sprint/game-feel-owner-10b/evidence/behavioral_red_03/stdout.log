@@ -1,0 +1,33 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+EDGE_UNIT checks=296 failures=30
+FAIL: explicit EDGE begins
+FAIL: small peak, blocked hold
+FAIL: FaceAxis U_POS leans world +X
+FAIL: pivot is front bottom edge, not center
+FAIL: rebound moves toward standing
+FAIL: final absolute pose exact and stable
+FAIL: three one-shot hooks
+FAIL: long hold has no animation flood
+FAIL: release rearms fresh attempt
+FAIL: opposite edge can begin
+FAIL: opposite lean signed correctly
+FAIL: old attempt cancellation cannot stop new
+FAIL: cancel does not manufacture normal completion
+FAIL: new generation admits
+FAIL: old generation cancel ignored
+FAIL: non-edge does not start or replace: BUSY
+FAIL: non-edge does not start or replace: PAUSED
+FAIL: non-edge does not start or replace: MECHANISM_LOCKED
+FAIL: non-edge does not start or replace: INVALID_FACE
+FAIL: non-edge does not start or replace: SAFETY_REJECTED
+FAIL: non-edge does not start or replace: INVALID_ACTION
+FAIL: non-edge does not start or replace: WORLD_NOT_ALLOWED
+FAIL: non-edge does not start or replace: CAMERA_NOT_ALLOWED
+FAIL: non-edge does not start or replace: UNCLASSIFIED_REJECTION
+FAIL: non-edge does not start or replace: ERROR
+FAIL: deep snapshot survives caller mutation
+FAIL: sample identity owned copy
+FAIL: standalone return validates EDGE DTO
+FAIL: standalone peak to exact neutral
+FAIL: old end cannot clean reentrant new effect
