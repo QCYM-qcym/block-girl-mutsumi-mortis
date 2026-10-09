@@ -1,0 +1,48 @@
+{
+  "stage": "policy",
+  "command": [
+    "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+    "--headless",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_11/test_policy.gd",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\policy_final_01"
+  ],
+  "cwd": "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "branch": "feat/game-feel-audio",
+  "dirty": [
+    "?? docs/beta-sprint/game-feel-owner-11/",
+    "?? game/feel/",
+    "?? production/experimental/",
+    "?? tests/beta_sprint/game_feel_owner_11/"
+  ],
+  "source_sha256": {
+    "game/feel/audio/audio_director.gd": "cfb498eb5fe2e6f64f017076cc6ba4db789d2fed10fd7e234b7217a58b276df1",
+    "game/feel/audio/event_policy.gd": "0e6cc9af14802b8f500adee1eef03903208d45d4c9a48b590cae0616ab4ef4ff",
+    "tests/beta_sprint/game_feel_owner_11/run_validation.py": "619cb433e30ed7caf94dbda6aa1f5aa250a0dd55dd3e84a4221b9a8b02afd115",
+    "tests/beta_sprint/game_feel_owner_11/test_policy.gd": "cf441eaf65c0bf9985b3aa8015490045ea1caf8be5dd9585bc955347744a7dd4"
+  },
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "profile": "E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\policy_final_01\\profile",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "synthetic game_feel.event.v1 snapshots"
+  ],
+  "input": "direct audio API calls; no gameplay/OS input",
+  "human_listening": "NOT_RUN",
+  "pid": 50828,
+  "exit_code": 0,
+  "seconds": 0.16648169999825768,
+  "source_drift": false,
+  "stderr_bytes": 0,
+  "status": "PASS",
+  "evidence_class": "PRESENTATION_CONTRACT_UNIT",
+  "checks": 63,
+  "failures": [],
+  "user_data_dir": "E:/godot/worktrees/block-girl-game-feel-audio/tests/beta_sprint/game_feel_owner_11/evidence/policy_final_01/profile/Godot/app_userdata/方块少女-若叶睦",
+  "display": "headless"
+}
