@@ -69,6 +69,7 @@ func run() -> void:
 		rows.append({"map":letter,"level_hash":level.content_hash,"move":move,"shift":shift,"static_landing":safe,"invalid_landing":unsafe_result,"solver_status":solve.status,"solver_metrics":solve.metrics,"before_StateKey":before,"after_StateKey":Key.build(level,session.state).key})
 	var control: Dictionary = Factory.read_spec("a")
 	control.id="owner09_adjacent_control"
+	control.erase("exit_center2") # Preserve the original two-cube ordinary-move control.
 	control.target_center2=[2,4,0]
 	var baked: Dictionary = Factory.bake(control)
 	check(baked.ok,"ordinary adjacent control bake")

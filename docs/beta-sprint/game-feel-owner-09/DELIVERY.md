@@ -1,5 +1,7 @@
 # GAME_FEEL_OWNER_09_MAPS_READY
 
+Historical first delivery below. Subsequent requested route increment: [EXIT_ROUTE_DELTA.md](EXIT_ROUTE_DELTA.md). Original evidence retains its original identity.
+
 Contract baseline `2938d6e534f5b596bb320ce79d72b69f5923f3cd`, branch `feat/pfall-map`, worktree `E:/godot/worktrees/block-girl-game-feel-map`.
 Verified contract SHA-256: `6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de`.
 
