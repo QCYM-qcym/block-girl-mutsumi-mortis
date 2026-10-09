@@ -24,8 +24,12 @@ foreach ($fiveFile in $fiveBaseline.protected_sources) {
 }
 & (Join-Path $fiveSource 'tests/beta_sprint/three_d_02/build_qa.ps1') -QaProfile CONTENT02 -BuildName $BuildName -EvidenceName $EvidenceName -Godot $Godot
 $fiveBaseExit = $LASTEXITCODE
-if ($fiveBaseExit -ne 0) { throw 'Existing source/CONTENT02 QA builder did not pass.' }
+$fiveVerification = Get-Content -LiteralPath (Join-Path $fiveBuild 'QA_BUILD_VERIFICATION.json') -Raw | ConvertFrom-Json
+if ($fiveVerification.status -notin @('PASS','PASS_WITH_KNOWN_BASELINE_P2')) { throw 'Existing CONTENT02 formal QA classification did not pass.' }
 $fiveManifest = Get-Content -LiteralPath (Join-Path $fiveBuild 'build-manifest.json') -Raw | ConvertFrom-Json
+foreach ($fiveStage in $fiveManifest.verification) {
+    if ($fiveStage.exit_code -ne 0 -or $fiveStage.timed_out) { throw "Real copied-project stage did not pass: $($fiveStage.stage)" }
+}
 $fiveExpectedIDs = @('mutsumi_l01','mutsumi_l02','mutsumi_l03','mutsumi_l04','mutsumi_l05')
 if ((@($fiveManifest.game_catalog.levels.id) -join ',') -ne ($fiveExpectedIDs -join ',')) { throw 'The formal five-level catalog changed.' }
 foreach ($fiveRelative in @('game/levels/mutsumi/batch_02/l04_borrowed_path.tscn','game/levels/mutsumi/batch_02/l05_gate_home.tscn')) {
@@ -60,7 +64,7 @@ STAIR_CLEARANCE=PARTIAL_PASS; STAIR_TRAVERSAL=NOT_RUN. Art/Foundation source cha
 Copied-source/catalog/boot results remain in build-manifest.json and QA_BUILD_VERIFICATION.json. Focused evidence: $EvidenceName and the formal00receipt. Known baseline import/exit notes: $($fiveKnown -join '; ')
 "@
 [IO.File]::WriteAllText((Join-Path $fiveBuild 'README.md'),$fiveReadme,[Text.UTF8Encoding]::new($false))
-$fiveIdentity = [ordered]@{version_id=$BuildName;phase='BETA_PHASE_3_FIVE_LEVEL_3D_UNIFICATION';source_commit=$fiveManifest.head;package_kind='SOURCE_PLAYABLE_NOT_EXE';engine=$fiveManifest.godot_version;levels=$fiveExpectedIDs;L04='3D_FORMAL_PLAYABLE';L05='3D_FORMAL_PLAYABLE';isolated_save="user://beta_sprint/$BuildName/qa_progress.json";human_qa='NOT_RUN';first_time_L03='RETEST_PENDING';art_source_changes='NONE';foundation_changes='NONE';old_QA_results_transferred=$false;focused_evidence=$EvidenceName;prior_CONTENT02_archive=$fivePriorZip;prior_CONTENT02_archive_SHA256=(Get-FileHash -LiteralPath $fivePriorZip -Algorithm SHA256).Hash.ToLowerInvariant()}
+$fiveIdentity = [ordered]@{version_id=$BuildName;phase='BETA_PHASE_3_FIVE_LEVEL_3D_UNIFICATION';source_commit=$fiveManifest.head;package_kind='SOURCE_PLAYABLE_NOT_EXE';engine=$fiveManifest.godot_version;levels=$fiveExpectedIDs;L04='3D_FORMAL_PLAYABLE';L05='3D_FORMAL_PLAYABLE';isolated_save="user://beta_sprint/$BuildName/qa_progress.json";human_qa='NOT_RUN';first_time_L03='RETEST_PENDING';art_source_changes='NONE';foundation_changes='NONE';old_QA_results_transferred=$false;focused_evidence=$EvidenceName;CONTENT02_last_native_exit=$fiveBaseExit;CONTENT02_status=$fiveVerification.status;prior_CONTENT02_archive=$fivePriorZip;prior_CONTENT02_archive_SHA256=(Get-FileHash -LiteralPath $fivePriorZip -Algorithm SHA256).Hash.ToLowerInvariant()}
 $fiveIdentityText = $fiveIdentity | ConvertTo-Json -Depth 6
 [IO.File]::WriteAllText((Join-Path $fiveBuild 'QA_BUILD_IDENTITY.json'),$fiveIdentityText,[Text.UTF8Encoding]::new($false))
 [IO.File]::WriteAllText((Join-Path $fiveCache 'QA_BUILD_IDENTITY.json'),$fiveIdentityText,[Text.UTF8Encoding]::new($false))
