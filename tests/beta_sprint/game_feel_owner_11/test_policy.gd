@@ -34,6 +34,7 @@ func event(semantic: String, phase: String, number: int, attempt: int = 1, gener
 		"motion_profile_id": "fixture-safe", "motion_profile_hash": "unit-hash", "safety_verdict": "SAFE", "orientation_policy": "PRESERVE", "presentation_duration_seconds": 0.8}
 
 func run() -> void:
+	check_runtime_shapes()
 	var p = Policy.new()
 	var start := event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
 	var before := start.duplicate(true)
@@ -141,3 +142,53 @@ func run() -> void:
 		file.store_string(JSON.stringify(report, "\t"))
 	print("AUDIO_POLICY checks=", checks, " failures=", failures.size())
 	quit(0 if failures.is_empty() else 1)
+
+func runtime_shape_event(semantic: String, phase: String, number: int) -> Dictionary:
+	# Shapes inspected in Runtime candidate 26387d6; synthetic values, not Safety proof.
+	var sample := event(semantic, phase, number)
+	if semantic == "MOVE_REJECTED_EDGE":
+		sample.result.next_state = null
+	elif semantic == "PERSPECTIVE_FALL_APPLIED":
+		sample.result.action = {"kind": 8, "connection_id": &"connection-A"}
+		sample.connection_id = &"connection-A"
+		sample.motion_profile_id = &"fixture-safe"
+		sample.intended_move_direction = null
+		sample.safety_verdict = {"status": "SAFE", "issues": [], "evidence_ref": {"kind": "exact_linear_cube_sweep.v1", "query": "Safety.validate_perspective_motion", "before_statekey": "unit-before", "after_statekey": "unit-after", "level_hash": "unit-level-hash", "connection_id": &"connection-A", "profile_hash": "unit-hash"}}
+	return sample
+
+func check_runtime_shapes() -> void:
+	var p = Policy.new()
+	var fall := runtime_shape_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
+	var frozen := fall.duplicate(true)
+	check(p.consume(fall, 0.0).cues == ["fall_start", "fall_whoosh"], "formal-shaped SAFE dictionary/StringName/nullable Fall direction accepted")
+	check(fall == frozen, "structured safety evidence never rewritten")
+	check(p.consume(runtime_shape_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 2), 0.8).cues == ["landing_impact"], "formal-shaped Fall matches commit once")
+	p = Policy.new()
+	var edge := runtime_shape_event("MOVE_REJECTED_EDGE", "REJECTED", 1)
+	frozen = edge.duplicate(true)
+	check(p.consume(edge, 0.0).cues == ["edge_recoil"], "formal Rules.rejected next_state null accepted for explicit EDGE")
+	check(edge == frozen and edge.result.next_state == null and edge.result.size() == 8, "rejected eight-field native result remains null and untouched")
+	for reason in ["BUSY", "MECHANISM_LOCKED", "SAFETY_REJECTED"]:
+		p = Policy.new()
+		var bad := runtime_shape_event("MOVE_REJECTED_EDGE", "REJECTED", 1)
+		bad.reason_category = reason
+		check(p.consume(bad, 0.0).cues.is_empty(), "null next_state is not evidence of EDGE: " + reason)
+	for fault in ["unsafe", "issues", "missing_ref", "empty_level_hash", "wrong_connection", "wrong_profile"]:
+		p = Policy.new()
+		var bad := runtime_shape_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
+		match fault:
+			"unsafe": bad.safety_verdict.status = "UNPROVEN"
+			"issues": bad.safety_verdict.issues = ["unresolved"]
+			"missing_ref": bad.safety_verdict.erase("evidence_ref")
+			"empty_level_hash": bad.safety_verdict.evidence_ref.level_hash = ""
+			"wrong_connection": bad.safety_verdict.evidence_ref.connection_id = &"other"
+			"wrong_profile": bad.safety_verdict.evidence_ref.profile_hash = "other"
+		check(p.consume(bad, 0.0).cues.is_empty(), "structured Safety fails silent: " + fault)
+	p = Policy.new()
+	var bad_edge := runtime_shape_event("MOVE_REJECTED_EDGE", "REJECTED", 1)
+	bad_edge.result.changed = true
+	check(p.consume(bad_edge, 0.0).cues.is_empty(), "null next_state never permits changed rejection")
+	p = Policy.new()
+	var bad_move := event("MOVE_APPLIED_NORMAL", "STARTED", 1)
+	bad_move.intended_move_direction = null
+	check(p.consume(bad_move, 0.0).cues.is_empty(), "ordinary MOVE still requires mapped direction")

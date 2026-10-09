@@ -151,24 +151,29 @@ func _validate(event: Dictionary) -> String:
 	if not _pose_valid(event.get("source_pose")) or event.get("source_face") != event.source_pose.location: return "invalid source pose/face"
 	if not event.get("world_id") is int or event.world_id != event.source_pose.location.layer: return "source world mismatch"
 	if not event.get("camera_quadrant") is int or not event.camera_quadrant in [0, 1, 2, 3]: return "invalid discrete camera"
-	if not event.get("intended_move_direction") is int or not event.intended_move_direction in [0, 1, 2, 3]: return "invalid mapped move"
+	var direction = event.get("intended_move_direction")
+	if not (kind == "PERSPECTIVE_FALL_APPLIED" and direction == null):
+		if not direction is int or not direction in [0, 1, 2, 3]: return "invalid mapped move"
 	if not event.get("result") is Dictionary: return "missing native result"
 	var result: Dictionary = event.result
-	if not result.get("previous_state") is Dictionary or result.previous_state.get("player") != event.source_pose or not result.get("next_state") is Dictionary: return "result/source mismatch"
+	if not result.get("previous_state") is Dictionary or result.previous_state.get("player") != event.source_pose or not result.has("next_state"): return "result/source mismatch"
 	if kind == "MOVE_REJECTED_EDGE":
-		if phase != "REJECTED" or event.get("reason_category") != "EDGE" or result.get("status") != 1 or result.get("changed") != false or result.previous_state != result.next_state: return "edge requires explicit unchanged rejection"
+		if phase != "REJECTED" or event.get("reason_category") != "EDGE" or result.get("status") != 1 or result.get("changed") != false: return "edge requires explicit unchanged rejection"
+		# Rules.rejected retains null; legacy Unit snapshots may copy unchanged state.
+		if result.next_state != null and result.next_state != result.previous_state: return "edge cannot carry changed next state"
 		if event.get("target_pose") != null or event.get("target_face") != null or event.get("transition_identity") != null: return "edge cannot carry accepted target"
 		return ""
 	if not phase in ["STARTED", "COMMITTED"] or result.get("status") != 0 or result.get("changed") != true or event.get("reason_category") != "NONE": return "motion requires changed APPLIED result"
+	if not result.next_state is Dictionary: return "motion requires accepted next state"
 	if not _pose_valid(event.get("target_pose")) or event.get("target_face") != event.target_pose.location or result.next_state.get("player") != event.target_pose: return "invalid target/result"
 	if not event.get("authoritative_final_orientation") is int or event.authoritative_final_orientation != event.target_pose.orientation: return "invalid authoritative orientation"
 	if not event.get("transition_identity") is Dictionary: return "missing transition identity"
 	var token: Dictionary = event.transition_identity
 	if token.get("session_id") != id.session_id or token.get("level_run_id") != id.level_run_id or token.get("generation") != id.generation or not token.get("transaction_id") is int or token.transaction_id < 0 or not token.get("is_global") is bool: return "transition identity mismatch"
 	if kind == "PERSPECTIVE_FALL_APPLIED" and phase == "STARTED":
-		if event.get("safety_verdict") != "SAFE" or event.get("orientation_policy") != "PRESERVE" or event.source_pose.orientation != event.target_pose.orientation or event.target_pose.location.layer != event.world_id: return "Fall lacks explicit safe preserved same-world path"
+		if not _safe_verdict(event) or event.get("orientation_policy") != "PRESERVE" or event.source_pose.orientation != event.target_pose.orientation or event.target_pose.location.layer != event.world_id: return "Fall lacks explicit safe preserved same-world path"
 		for field in ["connection_id", "motion_profile_id", "motion_profile_hash"]:
-			if not event.get(field) is String or event[field].is_empty(): return "missing Fall profile identity"
+			if not (event.get(field) is String or event.get(field) is StringName) or str(event[field]).is_empty(): return "missing Fall profile identity"
 		if not event.get("source_frame") is Dictionary: return "missing source frame"
 		if not event.get("authorized_path_points2") is Array or event.authorized_path_points2.size() < 2: return "missing authorized path"
 		for point in event.authorized_path_points2:
@@ -176,3 +181,12 @@ func _validate(event: Dictionary) -> String:
 		var duration = event.get("presentation_duration_seconds")
 		if not (duration is float or duration is int) or not is_finite(float(duration)) or duration <= 0: return "invalid Fall duration"
 	return ""
+
+func _safe_verdict(event: Dictionary) -> bool:
+	var verdict = event.get("safety_verdict")
+	if verdict is String: return verdict == "SAFE" # Historical presentation Unit shape.
+	if not verdict is Dictionary or verdict.get("status") != "SAFE": return false
+	if not verdict.get("issues") is Array or not verdict.issues.is_empty(): return false
+	var evidence = verdict.get("evidence_ref")
+	if not evidence is Dictionary or not evidence.get("level_hash") is String or evidence.level_hash.is_empty(): return false
+	return evidence.get("connection_id") == event.get("connection_id") and evidence.get("profile_hash") == event.get("motion_profile_hash")
