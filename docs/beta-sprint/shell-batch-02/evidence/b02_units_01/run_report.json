@@ -1,0 +1,70 @@
+{
+  "head": "b910167becee2194c0cfc724d8f0fe47578836a9",
+  "branch": "feat/beta-shell-batch-02",
+  "evidence_type": "OWNER_HEADLESS_ONLY",
+  "human_acceptance": "NOT_RUN",
+  "source_files": [
+    {
+      "path": "game/levels/mutsumi/batch_01/level_order.json",
+      "sha256": "8f910ba32ac7c9307d472f0de5f2e0a8221f2be613b2e19019af19152928ef45"
+    },
+    {
+      "path": "game/shell/game_shell.gd",
+      "sha256": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb"
+    },
+    {
+      "path": "game/shell/level_catalog.gd",
+      "sha256": "ed16d8e75efa3b8a5cee132c83402909dd6ecfb1dade4689e5cac702ef408a09"
+    },
+    {
+      "path": "game/shell/save_store.gd",
+      "sha256": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f"
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd",
+      "sha256": "0afe74272daa616b64602b028e90f79cb6a038420e5a7b349ab78f793f624edb"
+    },
+    {
+      "path": "tests/beta_sprint/shell_batch_02/legacy_catalog_rows.json",
+      "sha256": "f90c75b5bbd5abe50ed282cbf8f0ad77a5bd686af6ad76d4cd5d537f4d145558"
+    },
+    {
+      "path": "tests/beta_sprint/shell_batch_02/run_headless.ps1",
+      "sha256": "7b85322e3ca673c8b0c3bc11988303af0bcce56f97272652f86df9aae509c0c7"
+    },
+    {
+      "path": "tests/beta_sprint/shell_batch_02/test_menu_capacity.gd",
+      "sha256": "3c1968203bf16b2f7d1030cc8678fe164d696ef2e02a42c0558ba31f20f50233"
+    },
+    {
+      "path": "tests/beta_sprint/shell_batch_02/test_save_compat.gd",
+      "sha256": "35309ae2efbfa9048188cbf8905d296f0cfd593cbf1afc26d07d4fe024d3ef72"
+    },
+    {
+      "path": "tests/beta_sprint/test_beta_catalog.gd",
+      "sha256": "7897c2397cec4e4bc391814bad386d5e6e7459304667cea5156a0438391cc90a"
+    },
+    {
+      "path": "tests/beta_sprint/test_content_shell.gd",
+      "sha256": "d8c0b549a3eb69865ead2afdcc4be5dbee6efd13098dbc469deab0c6489146d3"
+    }
+  ],
+  "status": "FAIL",
+  "stages": [
+    {
+      "name": "import",
+      "args": [
+        "--headless",
+        "--editor",
+        "--import"
+      ],
+      "exit_code": -1073741819,
+      "stdout": "E:\\godot\\worktrees\\block-girl-beta-shell-batch-02\\.godot\\beta-sprint\\shell-batch-02\\b02_units_01\\import.stdout.log",
+      "stderr": "E:\\godot\\worktrees\\block-girl-beta-shell-batch-02\\.godot\\beta-sprint\\shell-batch-02\\b02_units_01\\import.stderr.log",
+      "status": "FAIL",
+      "stderr_bytes": 0
+    }
+  ],
+  "frozen_import_restored": true,
+  "failure": "import failed: E:\\godot\\worktrees\\block-girl-beta-shell-batch-02\\.godot\\beta-sprint\\shell-batch-02\\b02_units_01\\import.stderr.log"
+}

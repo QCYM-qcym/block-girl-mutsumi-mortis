@@ -1,0 +1,218 @@
+{
+  "marker": "GAME_SHELL_BATCH_02_READY",
+  "track": "07 Game Shell",
+  "date": "2026-10-09",
+  "branch": "feat/beta-shell-batch-02",
+  "worktree": "E:\\godot\\worktrees\\block-girl-beta-shell-batch-02",
+  "candidate_commit": "2ee64801d497df3acc909b4021b7325162cef2b5",
+  "baseline": "b910167becee2194c0cfc724d8f0fe47578836a9",
+  "content_dependency": "d4be39c76988e2face66d5f36be6e0c65fe9a169",
+  "content_docs_dependency": "9482e7279acd2cc99af0f7b2211790ab2eace815",
+  "content_merge": "e6a6bc8c5a1b172ea89d75114315ca3df5c8bc92",
+  "content_docs_merge": "b1d721db0c143ead99b1719e04d3568e5ae9bb2b",
+  "registered_levels": [
+    "mutsumi_l01",
+    "mutsumi_l02",
+    "mutsumi_l03",
+    "mutsumi_l04",
+    "mutsumi_l05"
+  ],
+  "legacy_three_rows": "EXACT_UNCHANGED",
+  "owner_headless_status": "PASS",
+  "total_checks": 319.0,
+  "stages": [
+    {
+      "name": "catalog",
+      "status": "PASS",
+      "checks": 68,
+      "pid": null,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "save_path": null
+    },
+    {
+      "name": "save_compat",
+      "status": "PASS",
+      "checks": 33,
+      "pid": null,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "save_path": null
+    },
+    {
+      "name": "menu_capacity",
+      "status": "PASS",
+      "checks": 94,
+      "pid": null,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "save_path": null
+    },
+    {
+      "name": "runtime_seed",
+      "status": "PASS",
+      "checks": 102,
+      "pid": 7488,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "save_path": "user://beta_sprint/b02_candidate_final_01/runtime_progress.json"
+    },
+    {
+      "name": "runtime_restore",
+      "status": "PASS",
+      "checks": 11,
+      "pid": 48092,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "save_path": "user://beta_sprint/b02_candidate_final_01/runtime_progress.json"
+    },
+    {
+      "name": "legacy_restore",
+      "status": "PASS",
+      "checks": 11,
+      "pid": 5548,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "save_path": "user://beta_sprint/b02_candidate_final_01/save_compat.actual-copy.json"
+    }
+  ],
+  "pending": [],
+  "completion_events": [
+    {
+      "authored_goal": "(11, 2)",
+      "cell": "(11, 2)",
+      "goal": true,
+      "id": "mutsumi_l03",
+      "moves": 6,
+      "phase": "complete"
+    },
+    {
+      "authored_goal": "(11, 1)",
+      "cell": "(11, 1)",
+      "goal": true,
+      "id": "mutsumi_l04",
+      "moves": 11,
+      "phase": "complete"
+    },
+    {
+      "authored_goal": "(13, 0)",
+      "cell": "(13, 0)",
+      "goal": true,
+      "id": "mutsumi_l05",
+      "moves": 13,
+      "phase": "complete"
+    }
+  ],
+  "measured_layouts": [
+    {
+      "case": "HEADLESS_LOGICAL_LAYOUT_NOT_HUMAN_SIZE_PASS",
+      "clip": "[P: (80.0, 368.0), S: (736.0, 616.0)]",
+      "id": "mutsumi_l04",
+      "requested": "(1920, 1080)",
+      "row": "[P: (80.0, 852.0), S: (728.0, 132.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (1920.0, 1080.0)]"
+    },
+    {
+      "case": "HEADLESS_LOGICAL_LAYOUT_NOT_HUMAN_SIZE_PASS",
+      "clip": "[P: (80.0, 368.0), S: (736.0, 616.0)]",
+      "id": "mutsumi_l05",
+      "requested": "(1920, 1080)",
+      "row": "[P: (80.0, 852.0), S: (728.0, 132.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (1920.0, 1080.0)]"
+    },
+    {
+      "case": "HEADLESS_LOGICAL_LAYOUT_NOT_HUMAN_SIZE_PASS",
+      "clip": "[P: (53.33333, 245.3333), S: (490.6667, 410.6667)]",
+      "id": "mutsumi_l04",
+      "requested": "(1280, 720)",
+      "row": "[P: (53.33333, 568.3333), S: (482.0, 88.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (1280.0, 720.0)]"
+    },
+    {
+      "case": "HEADLESS_LOGICAL_LAYOUT_NOT_HUMAN_SIZE_PASS",
+      "clip": "[P: (53.33333, 245.3333), S: (490.6667, 410.6667)]",
+      "id": "mutsumi_l05",
+      "requested": "(1280, 720)",
+      "row": "[P: (53.33333, 568.3333), S: (482.0, 88.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (1280.0, 720.0)]"
+    },
+    {
+      "case": "HEADLESS_LOGICAL_LAYOUT_NOT_HUMAN_SIZE_PASS",
+      "clip": "[P: (32.0, 352.0), S: (896.0, 320.0)]",
+      "id": "mutsumi_l04",
+      "requested": "(960, 720)",
+      "row": "[P: (32.0, 596.0), S: (888.0, 76.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (960.0, 720.0)]"
+    },
+    {
+      "case": "HEADLESS_LOGICAL_LAYOUT_NOT_HUMAN_SIZE_PASS",
+      "clip": "[P: (32.0, 352.0), S: (896.0, 320.0)]",
+      "id": "mutsumi_l05",
+      "requested": "(960, 720)",
+      "row": "[P: (32.0, 596.0), S: (888.0, 76.0)]",
+      "viewport": "[P: (0.0, 0.0), S: (960.0, 720.0)]"
+    }
+  ],
+  "final_progress": {
+    "completed": [
+      "mutsumi_l01",
+      "mutsumi_l02",
+      "mutsumi_l03",
+      "mutsumi_l04",
+      "mutsumi_l05"
+    ],
+    "has_progress": true,
+    "recent": "mutsumi_l05",
+    "settings": {
+      "fullscreen": false,
+      "master": 0.42,
+      "music": 0.23,
+      "muted": true,
+      "sfx": 0.67
+    },
+    "unlocked": [
+      "mutsumi_l01",
+      "mutsumi_l02",
+      "mutsumi_l03",
+      "mutsumi_l04",
+      "mutsumi_l05"
+    ]
+  },
+  "fixture_declaration": "only prior L01/L02 completed and L03-unlocked save setup; no Runtime state assigned",
+  "save_version": 1,
+  "actual_save": {
+    "backup": {
+      "future": false,
+      "valid_v1": true
+    },
+    "compatibility": "PASS",
+    "current_default_path": "user://mutsumi_veilshift/beta_progress.json",
+    "isolated_copy_path": "user://beta_sprint/b02_candidate_final_01/save_compat.actual-copy.json",
+    "load_message": "",
+    "original_access": "READ_ONLY",
+    "original_path": "E:/godot/beta-sprint-builds/black_box_3d_ui_qa_01_20261007/clean_profile/Roaming/Godot/app_userdata/方块少女-若叶睦/beta_sprint/black_box_3d_ui_qa_01/progress.json",
+    "present": true,
+    "primary": {
+      "future": false,
+      "valid_v1": true
+    },
+    "provenance": "E:/godot/beta-sprint-builds/black_box_3d_ui_qa_01_20261007/BLACK_BOX_3D_UI_QA_01.md",
+    "selection": "EXPLICIT_LEGACY_SOURCE",
+    "source": "PRIMARY_VALID_V1",
+    "store_future_format_read_only": false
+  },
+  "original_save_preserved": true,
+  "human_acceptance": "NOT_RUN_BY_07",
+  "graphical_owner": "00/08",
+  "graphical_cases_run_by_07": 0,
+  "reported_by_00": "Content L04/L05 Graphical 206/6 routes/23 PNG; 08 Focused QA sealed; final original-three/menu regression and Daily Build owned by 00",
+  "shared_config_changes": "NONE",
+  "save_store_changes": "NONE",
+  "foundation_production_changes": "NONE",
+  "runtime_puzzle_changes": "NONE",
+  "art_source_changes": "NONE",
+  "content_owner_edits_by_07": "NONE; exact dependencies normally merged",
+  "candidate_working_tree": "CLEAN_VERIFIED_AFTER_COMMIT",
+  "docs_sealing": "FOLLOW_UP_DOCS_ONLY_COMMIT",
+  "push": "NOT_RUN"
+}
