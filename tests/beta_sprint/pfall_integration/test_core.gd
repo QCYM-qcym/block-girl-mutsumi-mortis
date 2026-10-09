@@ -148,6 +148,6 @@ func run() -> void:
 	finish()
 
 func finish() -> void:
-	var report: Dictionary={"checks":checks,"failures":failures,"rows":rows,"doubles":[],"authority":"real default formal Runtime + Owner09 map + real10A +00 natural SceneTree bridge; no manual Fall finish","pid":OS.get_process_id(),"user_data_dir":OS.get_user_data_dir(),"display":DisplayServer.get_name(),"human_qa":"NOT_RUN"}
+	var report: Dictionary={"checks":checks,"failures":failures,"rows":rows,"doubles":[],"authoritative_runtime":not rows.is_empty(),"authority":"real default formal Runtime + Owner09 map + real10A +00 natural SceneTree bridge; no manual Fall finish" if not rows.is_empty() else "dependency preflight only; real Core NOT_RUN","pid":OS.get_process_id(),"user_data_dir":OS.get_user_data_dir(),"display":DisplayServer.get_name(),"human_qa":"NOT_RUN"}
 	FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE).store_string(JSON.stringify(report,"\t"))
 	quit(0 if failures.is_empty() else 1)
