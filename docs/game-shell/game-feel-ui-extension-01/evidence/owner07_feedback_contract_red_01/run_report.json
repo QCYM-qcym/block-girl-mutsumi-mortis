@@ -1,0 +1,730 @@
+{
+  "head": "cccd9e2f23fbf3761e15dc44aa74a8496f78d268",
+  "dirty": [
+    " M tests/beta_sprint/game_feel_owner_07/test_ui.gd"
+  ],
+  "status": "FAIL",
+  "source_files": [
+    {
+      "path": "docs/beta-sprint/game-feel-owner-11/SETTINGS_CONTRACT.md",
+      "sha256": "a6914fdd667c6504d85ba6144fb797cbbe5a2d2703bb6b58557d98f7a7bbc50c"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md",
+      "sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de"
+    },
+    {
+      "path": "game/feel/audio/audio_director.gd",
+      "sha256": "cfb498eb5fe2e6f64f017076cc6ba4db789d2fed10fd7e234b7217a58b276df1"
+    },
+    {
+      "path": "game/feel/audio/audio_director.gd.uid",
+      "sha256": "9a074897d591d931f97dc4339ffe0764c60f6e06bbba2f1c9cebd48b9475c1cc"
+    },
+    {
+      "path": "game/feel/audio/event_policy.gd",
+      "sha256": "0e6cc9af14802b8f500adee1eef03903208d45d4c9a48b590cae0616ab4ef4ff"
+    },
+    {
+      "path": "game/feel/audio/event_policy.gd.uid",
+      "sha256": "9de0a18607acf87517a0582b0f5119c53f6c1a30019afada7abd78ef3b14b9aa"
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd",
+      "sha256": "5f018b31f55d85980df8b26c0c6eca693fef7f5bf7a1a964f3816b9bb7033e28"
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd.uid",
+      "sha256": "93c41a0768005f61a8f3b879bc7ccd1d77b4d6958652b8f6f14b6a27691749ee"
+    },
+    {
+      "path": "game/feel/ui/motion_row.gd",
+      "sha256": "d24422f1e0fe87f8d9c430f19f5db0113871d8e8e439234b22b03a2babd9523a"
+    },
+    {
+      "path": "game/feel/ui/motion_row.gd.uid",
+      "sha256": "7ff96c79889ae17b37fdb301ee303c99d85541f4d4dcf5bbff038b871a5a0135"
+    },
+    {
+      "path": "game/shell/game_shell.gd",
+      "sha256": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb"
+    },
+    {
+      "path": "game/shell/game_shell.gd.uid",
+      "sha256": "275446e9c92663fd457b69607f552fa832f8927e3c201b160764133f2eccbf2f"
+    },
+    {
+      "path": "game/shell/game_shell.tscn",
+      "sha256": "25e16dfe9f9818bdbacbd50e06cbfe8401cf03c65206cf75792a167887d8d4af"
+    },
+    {
+      "path": "game/shell/level_adapter.gd",
+      "sha256": "4c0f17c61136aa00674feccdbe00fff6a9b46402d65bd728b82863d538ff011d"
+    },
+    {
+      "path": "game/shell/level_adapter.gd.uid",
+      "sha256": "baf6ab891a73a8ca8df6f3979486e1c04147708647988c6c48bdcc1b816512e2"
+    },
+    {
+      "path": "game/shell/level_catalog.gd",
+      "sha256": "ed16d8e75efa3b8a5cee132c83402909dd6ecfb1dade4689e5cac702ef408a09"
+    },
+    {
+      "path": "game/shell/level_catalog.gd.uid",
+      "sha256": "5e4c518b4e896a4a6f9d1dca0e0ae3bae27934ac0538d7beecdded524a9b0bf4"
+    },
+    {
+      "path": "game/shell/save_store.gd",
+      "sha256": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f"
+    },
+    {
+      "path": "game/shell/save_store.gd.uid",
+      "sha256": "41d1acdd0bd1b14a42ce220f7040c5f588e246526372f113ecacf61386f6d7a0"
+    },
+    {
+      "path": "game/shell/settings.gd",
+      "sha256": "3b4dcfa09a0a6f932ee76ab3394d70fb144253790710846953139a69a0502d4a"
+    },
+    {
+      "path": "game/shell/settings.gd.uid",
+      "sha256": "4b4ba7740eb6a1f286af20d7ad3a43dfef64256732d12532dc2d68c9cf5cdd3c"
+    },
+    {
+      "path": "game/shell/shell_input.gd",
+      "sha256": "20c5b92a40d5dfc49534dc5f64e29486c39e6be13ff501480687208252d5f69c"
+    },
+    {
+      "path": "game/shell/shell_input.gd.uid",
+      "sha256": "0856582c4ae95a10b81766dba6f5b4a11b0bf8d4fac40d33f80d7c914d0933a8"
+    },
+    {
+      "path": "game/shell/shell_view.gd",
+      "sha256": "44e262e47a4b3c2c9892fff270a1b3cf35387c80dff5098506d0256a108427f2"
+    },
+    {
+      "path": "game/shell/shell_view.gd.uid",
+      "sha256": "eb577ea991fd1d3879adaf8047d63a26426a49aacd3e5bac271f46dd26c0c0c4"
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd",
+      "sha256": "4f4cfde859cf504e8e4ebde611ea51c95e837845b719f51cdaab3f8c332f6ddc"
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd.uid",
+      "sha256": "50f575e147dde210730dcef8119a50653296b3a3c217ba1dd418430b52846b9f"
+    },
+    {
+      "path": "game/shell/visual_01/hint_strip.gd",
+      "sha256": "5c9e5405805b401a135ff8985fd69c56622ce35819c1ef162c853fed77268ef6"
+    },
+    {
+      "path": "game/shell/visual_01/hint_strip.gd.uid",
+      "sha256": "fb8b593c865900660b9ed6a51c99b65bc23722bf433d5f368dc7c380a0e7d68a"
+    },
+    {
+      "path": "game/shell/visual_01/hud.gd",
+      "sha256": "ab70e68b2b017ab49549257d1eadc205ab2e53924acb98203dd3f2b2c816f5be"
+    },
+    {
+      "path": "game/shell/visual_01/hud.gd.uid",
+      "sha256": "9d58af1e7d3a2ee62aec61f33c3ff3ce26138b2abf31437cdd6c30222bc4f1b5"
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd",
+      "sha256": "783818f4f94142e2f3da712998b737cf7ebce91db1e43790c268e1b02b8874ad"
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd.uid",
+      "sha256": "bed206373f0e6fcadad3c444c0d22a0fc98bae47300d4776975cf6235c8f852d"
+    },
+    {
+      "path": "game/shell/visual_01/stone_row.gd",
+      "sha256": "2d1f1d69549dd0dc7c9d34fc78296e217858aa506631efd0cbe7e4894fda5e44"
+    },
+    {
+      "path": "game/shell/visual_01/stone_row.gd.uid",
+      "sha256": "781aa50b3e5a8186047d0d01249c45c09942e1c05f584d4db67f6f2ac5247c6d"
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd",
+      "sha256": "575e0fd3aa5ca83d445733584fe276cee4c7556186bc754455860ad4b1be4138"
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd.uid",
+      "sha256": "df8cd98e3e79a6711f2076768b4be0231679d76a019121a08db04420fd14b7da"
+    },
+    {
+      "path": "game/shell/visual_01/tokens.gd",
+      "sha256": "6be129dd2d3eda6a6294242fa1c3defe7a171eda09599656574e6c11c6b24fd4"
+    },
+    {
+      "path": "game/shell/visual_01/tokens.gd.uid",
+      "sha256": "c721d34a72d92b272f7bf29a88ff05c7ee64a6d75d1e331a0138fe800839a842"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/.gitattributes",
+      "sha256": "aa0bcac8cf39347027879b8c44d57afb8f73144174b8d2d48920f7d19d40c7a6"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_complete.wav",
+      "sha256": "a3fe04c3c99d1696291001de6084091faab39988a2e6e9493786b3755e57858b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_complete.wav.import",
+      "sha256": "cd9193e26712b5b749d578aecd6287a6277518b7fc5432b352ad83da0a3a5fc8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_discovery.wav",
+      "sha256": "46542c2edecb00e4f6da8b7b4cea86211e0848cf349c00869ea8b1618437a7c3"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_discovery.wav.import",
+      "sha256": "f8619a9aebb65cd97d6f24c803119b537e7fc0707d104b67ba4ff0f2bb56c0fe"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_inner.wav",
+      "sha256": "b13510489512d0feb3dac4183fa44fd66c9ef405e477e1c98f33102f48eca2df"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_inner.wav.import",
+      "sha256": "83a3d42bd14115a82f255361bcead12966f416e3de81f41a32d9f67c1cad7c11"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_menu.wav",
+      "sha256": "2b85bdc907e31c217b4b1f538accc862feff0e60a9c3e06221a18b0053bedf1e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_menu.wav.import",
+      "sha256": "9edd0a377541610028dc2bbf8267591eae06f45ef5ebbec3bd3b12d1d9b0d725"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_surface.wav",
+      "sha256": "5f1b37aac47c6620ecf713a4db3241481097c2b9d45b7de4e056496ab3ff8ae2"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/bgm_surface.wav.import",
+      "sha256": "6d0eba8ced03b4fbc600d2f58fd0c75a662a493d4ee2f659d4547ea2f7acc327"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_contact.wav",
+      "sha256": "7d51c300bae0871f9efe054bff7b54c8980fe6ecd4d234b787900a6a85015834"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_contact.wav.import",
+      "sha256": "743200d3d7c5bdc3e9eb56b9cbffcbcdd2561c9e7e339e7abd6660a2747907af"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_roll.wav",
+      "sha256": "c093c423ba282670f76ce63f358f16051e9de848173a03d862ce7795efb34507"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_cube_roll.wav.import",
+      "sha256": "638e9a6154343e78fe5118dbf90283a84174b9fbd7ee16c600168efaa386b3b4"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_lean.wav",
+      "sha256": "bb3c197376b93a5869063883bae6453579a724565af7088fd9d4773ab65853a1"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_lean.wav.import",
+      "sha256": "4a82e982d6228b29290d7f49823f4711a0a9d86bf2d55d290d9b536661b95898"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_recoil.wav",
+      "sha256": "40e32f16f12228183e2947e87dcb5a1b288e1dae13a0b5861c1883c8fa4a1004"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_edge_recoil.wav.import",
+      "sha256": "92ee618ba918a929cc9dad1239bc94ba4f4b8af9dfcf9d4f60b6573e456271e8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_start.wav",
+      "sha256": "240dbf1b7abbbcb7432dc9ad2ef2fc651527703b876b62b4098ca2ed21c07543"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_start.wav.import",
+      "sha256": "5cd314c36ea6036180f983d51f697b3af9856c8426e26f725fb39ea4df4b717f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_whoosh.wav",
+      "sha256": "3e128ac7e6f29d61407535a96e9f2118e4936bae42605695166bec7c02b68f03"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_fall_whoosh.wav.import",
+      "sha256": "4212d10a7c935cd6e95198eba61a40e2832689899841bf61215c413706f6b6c9"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_goal.wav",
+      "sha256": "43961d92045b3b4bfc18923595da6c3ecdea341bcd41b4e616b0f6f23c93b665"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_goal.wav.import",
+      "sha256": "0d91fdcbe8513f3c5aeb4a230c6bb7164ed2a0b95863d5f536c78efdf2aaaf51"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_landing_impact.wav",
+      "sha256": "87957679daf3cc200a48e605a21496c64128d835984f32500b4e7f0da7ab51d6"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_landing_impact.wav.import",
+      "sha256": "3f5524d5ebacd7632836686030679ae07e621b8445e545a7a7c677f7c9b72286"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_connect.wav",
+      "sha256": "4fc05130e3198ddcdce2654848b0202dfb67b606019b062f4ab8c004ab7adc4a"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_connect.wav.import",
+      "sha256": "efede9bc2969334d1c783aa1e6e1d623a9f8e6274b86d02cb2c6f8265dffe368"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_disconnect.wav",
+      "sha256": "3f6a5d98320bb3756a00d432bd2223d426884ea5fed299180ad9417f2bec1d2f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_perspective_disconnect.wav.import",
+      "sha256": "047188c7c2d42ab4453aa62cd35aa2c445f1d60cd103d994b1719ba1863a8fda"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_back.wav",
+      "sha256": "1501c416f64eaf149af896861d33bc3f7e7e17c867ed59fa86db2ac2cd3b38d9"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_back.wav.import",
+      "sha256": "ee516b4b1e9cdbf33338fab78c0174da729e06caa51fd87fb8987c8d4e0e0691"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_select.wav",
+      "sha256": "4a1a89b9ac07fea2f78e7f015c818c2741756ae031a1c7a2d3837459ca7e047a"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_ui_select.wav.import",
+      "sha256": "f316cd5d10fce38b98445e7e2ff32108b79a14ff94cb753ebdc9f23edf5ad26e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_world_shift.wav",
+      "sha256": "d7890db889f772274e274805c5236446fcb42f25aa4ee531050fe5cc15d7820f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/exports/sfx_world_shift.wav.import",
+      "sha256": "8f822b52591ea546738b2c637f8f34e7a71ea56fb2b4ddf20e4e63aeeb0fbeac"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/LICENSE_PROVENANCE.md",
+      "sha256": "bd7ac09853f8c8f07054f004cae09a7ecc2c738da3116950a3e630d564bdfb9e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/manifest.json",
+      "sha256": "720fc149ad94276250bd4aee8d6ef4540ed46d5d8cae965d388ca970a8eefc48"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/previews/.gdignore",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/previews/asset_audition.wav",
+      "sha256": "3f5bee76bdcfb88f13b7dac6393a4bbad856f34181670715adbc7769b6ef4d52"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/README.md",
+      "sha256": "289802eaa70f20c00e99c3e345a15c6d0789f3f45b8a95090faabff1fa647d0e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/.gdignore",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_complete.wav",
+      "sha256": "c6fed428dac7158d88068cce711a5f18cf97dc27c03a41c2f08004350007536a"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_discovery.wav",
+      "sha256": "8721dc1580235abdd2163dcac2c3d3abf22605a55f224cedc856e934d699ae67"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_inner.wav",
+      "sha256": "01e1190a8961541e60d0ec0b225d0f9c30b95558f62256160c03a964d4262209"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_menu.wav",
+      "sha256": "b3eff19ef6eafb482514a56e37e8d6cb11bf209f720e7c332584d726ec281f2f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/bgm_surface.wav",
+      "sha256": "7a8bf05fab41ca504aed401564894494195c60550d975e2a8ff84d591c12006d"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_contact.wav",
+      "sha256": "c4e09b3310e76b19c974d492fd5963ad360dc40c894d2357c74142a0f2d66175"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_roll.wav",
+      "sha256": "026ac3ebba6e1860b43a3d9c41795c0ab42945db46a2178a08c5a9e29ebdfbaa"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_lean.wav",
+      "sha256": "5b295b6b593c7f77ff9e599b93386af608e98788dee5c0443bbadc3a9071a53b"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_recoil.wav",
+      "sha256": "87b25db0f7a39c43251ffcc2fc51318ad80b9cb18f14284992d8bd0e58c6d26f"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_start.wav",
+      "sha256": "c4c0f71f7a414ce45f1f93aa08aea6281089437e2ef3292d5540b8c8dc3997c3"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_whoosh.wav",
+      "sha256": "3680144c00840bc22737912de1a87def85182ab9a95e70daed52f4937bde52d8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_goal.wav",
+      "sha256": "39b02b2143ec3ed698c65b7266663cfab2a4551634c6042043c3d077aef7fa88"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_landing_impact.wav",
+      "sha256": "554549b3d031f96c7fdd97869e8cee675017f7b6c5540a7d3989aae9a66400be"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_connect.wav",
+      "sha256": "4a48df773ddf965d143f665a50065ce4d3dd008f8ada88bbe80589251c98077e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_disconnect.wav",
+      "sha256": "cb4fe6833a07c4e8f28a1340740bd5a2cb52432cb660d0cfd6cd3a083db78a2e"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_back.wav",
+      "sha256": "1d2bc245996b7c4eac7c9a3735931719431f9e3d038f31c0f2aa4ac50f2a1660"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_select.wav",
+      "sha256": "7efddacfa19b70d6dc7b3bf88f3b661bab0d266fb4de3a704ca53d7674f71bc8"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/pcm24/sfx_world_shift.wav",
+      "sha256": "65769cfb14c23baf0c917a587beeb015f1ec6613e33bb9f9fbc41f23a4528f9d"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/score.json",
+      "sha256": "c0fa322b0b25eda9aead673529786da4d3abd11c4faa3305d69b0b850f979396"
+    },
+    {
+      "path": "production/experimental/game_feel_01/audio/source/synthesize.py",
+      "sha256": "10fd759d3ba44aec21ab7f752b23dd4cd1a81b0eb2664c1f88e9971b9b467c44"
+    },
+    {
+      "path": "production/ui/beta_shell_01/.gitattributes",
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/ASSET_BINDING_MANIFEST.json",
+      "sha256": "6bfb9213846f053ed1ac195b062b967af07d5657d0df894b1bd5e1492e8cca55"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/.gitattributes",
+      "sha256": "896bd8cc13003b78bd5918baebfa252f058c43fc4daca538fa87344719a86a5e"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/font_manifest.json",
+      "sha256": "446b4c7fb07f8296ecba522f913519b68d1cf28c9bfc65aa2b6cacdc9bdfc247"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC-OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf.import",
+      "sha256": "860729bd98b30a1868d939922d475056e6f498570f31faf97cb72e38399b77a9"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC-OFL.txt",
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC.ttf",
+      "sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC.ttf.import",
+      "sha256": "f7540a45c8165b52b3ca9b14232eba7218513df90436f94511359a641a60c7f3"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons_source.svg",
+      "sha256": "1f4217a34bc404884dfe7676120f9da77cb6abb640d7657393412061c0f6ab45"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons_source.svg.import",
+      "sha256": "c7911c2c43b002f31f1f245405f17fa1c6f086d342f831f4f643fb9b91af7b05"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arch.svg",
+      "sha256": "25f495586be7ac3f7a9252eaee66947a4b75a98f0a6dfe0a7082e5443de6db7d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arch.svg.import",
+      "sha256": "94ad64616cf06fbf1b104bd480ca767381b8790a64f383d1989363209082e0bf"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arrow.svg",
+      "sha256": "dee8052daf6925a0c2a0ba375e914640e12dd61fc17eed40df15bf4146892e4f"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arrow.svg.import",
+      "sha256": "8eaff712ef5d5c079db6ddf5d9d41f8e6bbfcb6c97a6226d53f10e0cf2c53e5e"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/check.svg",
+      "sha256": "bc3d9135fb0c3302ae35a787bfcf4ccf2d0aed1363af9e3b13dbc46a138db303"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/check.svg.import",
+      "sha256": "9d5bcd42340192bb89e63fafec8845778289d3fc7a0d3b927b488de57171021b"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/checked.svg",
+      "sha256": "a6c98b78a2134519863a844650bfd2f12cddb3b487a01491d1a15350497feec0"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/checked.svg.import",
+      "sha256": "10495d8a85d603971a59114657e41b8e3140f70b1a42574d0c3fc43f8670db9a"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/lock.svg",
+      "sha256": "d4e0e581aa41388129b82eb4700e3a13e29edbb406c6fbae26882b583789a420"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/lock.svg.import",
+      "sha256": "6873f586108024684f052bb9fc3504064683d8840f6631cc7f49d37661fa84b0"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/pause.svg",
+      "sha256": "59e9017cdb3dbbdf213127a73a20f65c9a571685e2eab5acd0c2d6bc7965f7c8"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/pause.svg.import",
+      "sha256": "06abd1671802baa9b21f61b5b6cd688524911386a385f72a2977b64f95648e1d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/quit.svg",
+      "sha256": "e2ccf015ae6450c1262c542ceb05710761a318f48fe03c4d784db6d4be99ba11"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/quit.svg.import",
+      "sha256": "ac2ee96b003ac443fd4406cdec40b46c4487188c37ccbb5048152fa6fa7a683a"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/reset.svg",
+      "sha256": "fa8c97192f030e61d547eaed6cc41965cc41f761a46726382f2db34210f415ff"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/reset.svg.import",
+      "sha256": "d443df068d8a1079635943f9152de46c1ef529575e851aad7f9edd34893357be"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/return.svg",
+      "sha256": "0f091fc587080252dd1077d872606009737a15ec190971ab34d6aafd286e8a3f"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/return.svg.import",
+      "sha256": "3ea39ee322987f976ef76129de695b94d43bde4e64f3066bcc70bdae62830db7"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/settings.svg",
+      "sha256": "b930398e6163aaadf08fe26b7728ad48cc099d1ffa3b21a50782cc2ea5d8c4c0"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/settings.svg.import",
+      "sha256": "b65db68c24590aec4637b2794ac97faca7978ee01a47462125e30dd2b4ee2537"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/slider_grab.svg",
+      "sha256": "8b1bcfdcd27b9089d0a501f411b13b322bc3e1a52a28a72ec54e8b4602807dd5"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/slider_grab.svg.import",
+      "sha256": "7029f04112ac67690daa08ebf1a08ef0cdd8ecea03df2a35152fe3e1220469b1"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/steps.svg",
+      "sha256": "4cffcac08912ce186cf9fcf2d8b7ad8c01299b48b1b5be62082ee0e61ce2b5ea"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/steps.svg.import",
+      "sha256": "443cbc0f868edd0a85c5f86c37ea1886dd2be8a546be10c6801439dcb7eec5da"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/unchecked.svg",
+      "sha256": "1a47ead9ebad9f8835ee5826b57c9729c646c75bcc3692114603550d5510f359"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/unchecked.svg.import",
+      "sha256": "9abf7486429c44721c4e0f51758d873a3f8f93048eedabae005b1fa625603005"
+    },
+    {
+      "path": "production/ui/beta_shell_01/previews/l01.png",
+      "sha256": "9a2b50f448ffeae560c90e012f99108135b1f746e847943667f3d4bc708fecc7"
+    },
+    {
+      "path": "production/ui/beta_shell_01/previews/l01.png.import",
+      "sha256": "a6e99628dbdd75268ac4e82747552a3f3a3956f09e6c9a53a5b8450ad7748699"
+    },
+    {
+      "path": "production/ui/beta_shell_01/surface_identity.png",
+      "sha256": "f70f92ad5615e2ab5cd75927671c63ae8be526a2c29d638ac06ae86475cbf0cc"
+    },
+    {
+      "path": "production/ui/beta_shell_01/surface_identity.png.import",
+      "sha256": "74846878b836696bee637110144932b607695dc28120e80585158fb7fb425f1d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/tokens.json",
+      "sha256": "5f342f44dca86436659ce39b6bca45c8a4ab9a9cc94b3f68d879fed3e32b12a5"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/run.ps1",
+      "sha256": "4b587cde5b58f006504dd698c23a9de95f9a7528a238be48eff033d118c875da"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_layout.gd",
+      "sha256": "548c54a5afd92f053858665b490479243d13b66fb8ea736b2cd21ec1ffcb6524"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_layout.gd.uid",
+      "sha256": "10ebe86c46cfc8818a49f804e80808d4917b45304c472db9469077fd13538be8"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd",
+      "sha256": "326670d6ed9566b39ca2aec1ca967bec696e97b7d503cc55d6d00141936ba376"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd.uid",
+      "sha256": "0f7d4009639bdb8e2fa9dffd0d873c18d5a3570669ee21c2149058aa2aef418c"
+    },
+    {
+      "path": "tests/shell/.gitignore",
+      "sha256": "fece5e911fee0763510b0e59e9e2f22c724ce923e49f05b3f45713d9eba7f408"
+    },
+    {
+      "path": "tests/shell/fixture_level.gd",
+      "sha256": "4140dd19883fa4232a1e8f956b25d3bf72cc2171c041bf6c9d62f2205daa42b3"
+    },
+    {
+      "path": "tests/shell/fixture_level.gd.uid",
+      "sha256": "226be2f2b332de6cbda6525e583e66f02d8a9fdc6f89be3d9f612f2a5baf16f0"
+    },
+    {
+      "path": "tests/shell/fixture_level.tscn",
+      "sha256": "11728a0f27accdf10b21c7fccbf712f1952b8ea797966b9252a68c9364a3263b"
+    },
+    {
+      "path": "tests/shell/pause_text/run_pause_text.ps1",
+      "sha256": "b432fe998a08972bc3d1f87b62f47609ec30360711969137ed4f3c9c197a1c96"
+    },
+    {
+      "path": "tests/shell/pause_text/test_pause_text.gd",
+      "sha256": "fddcb3b4e85e8c2d1a7e526b46dfb48ec3a075d330acb3f63a8ef9336f136683"
+    },
+    {
+      "path": "tests/shell/pause_text/test_pause_text.gd.uid",
+      "sha256": "702be78f48ee094e2e7645532e2b284b9e9bd9f51754d632783ea7a8a47a484b"
+    },
+    {
+      "path": "tests/shell/run_validation.ps1",
+      "sha256": "e72ade8ff37fee7c938be75ab18907063ef789222fbbe8827fff6bafeaa9948c"
+    },
+    {
+      "path": "tests/shell/test_flow.gd",
+      "sha256": "35010dd46cf30ef39d601d006274fd69f73e92eae3dd5afd7e99f11217eb6e2d"
+    },
+    {
+      "path": "tests/shell/test_flow.gd.uid",
+      "sha256": "b545c9c836c8a617dd81d52c268699298f931f49a1c04cf6b8563969b461268f"
+    },
+    {
+      "path": "tests/shell/test_goal_boundary.gd",
+      "sha256": "f938368db2c316975523473d92d1e6ef6f980ef4fb60d32476d418da60e3fa08"
+    },
+    {
+      "path": "tests/shell/test_goal_boundary.gd.uid",
+      "sha256": "04dcbf4ba75e83cd00d6849f115342315740b2d2dea178f02db0d96c0205cbb7"
+    },
+    {
+      "path": "tests/shell/test_mute_restart.gd",
+      "sha256": "adcdc403e548c3b863f88786a04aa6fd3f0e76f0dea9e0201878281b4047805c"
+    },
+    {
+      "path": "tests/shell/test_mute_restart.gd.uid",
+      "sha256": "0617c284788fbda20613abc7b67cae2c9d9c4897e4555c320383ed4a27491a43"
+    },
+    {
+      "path": "tests/shell/test_p01_legacy_entry.gd",
+      "sha256": "6c86e773556d68bee71bdffbccc618b40c038cb5733211b3c65d966a0e2f64d5"
+    },
+    {
+      "path": "tests/shell/test_p01_legacy_entry.gd.uid",
+      "sha256": "46d6990da27a878a16cbee85f622fbb909e6123411133d2ae21de53d2e8ec34b"
+    },
+    {
+      "path": "tests/shell/test_playthrough.gd",
+      "sha256": "283b34c197fc64e7e118794d79bf59b9959798f18da1ab4655b592de82c4c0f0"
+    },
+    {
+      "path": "tests/shell/test_playthrough.gd.uid",
+      "sha256": "dd47ec513447b9e0c60822153f96e37b1f3a5749bffce26078e3b02240fd5cce"
+    },
+    {
+      "path": "tests/shell/test_restart.gd",
+      "sha256": "a5073715705be1f7f52666d329204fdcfc4f16cfb65308a90cf8cdbe61bb6aa3"
+    },
+    {
+      "path": "tests/shell/test_restart.gd.uid",
+      "sha256": "6b7f1c5e967730da1caa83dd3ad0a12ae4cd156bdb8c504ca32546431e6c46ee"
+    },
+    {
+      "path": "tests/shell/test_save.gd",
+      "sha256": "387337b9227a99128c400ed1b467fc92dc315934308fcd65dbfcc615c8db78de"
+    },
+    {
+      "path": "tests/shell/test_save.gd.uid",
+      "sha256": "1cafe0a187a967927271f633b00b38f3d19c01422da7ca0b409df73f9bd080d5"
+    }
+  ],
+  "source_drift": null,
+  "profile": "E:\\godot\\worktrees\\block-girl-game-feel-ui\\.godot\\game-feel-ui\\owner07_feedback_contract_red_01\\profile",
+  "engine_path": "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "display": "headless",
+  "evidence_type": "OWNER_HEADLESS_ONLY",
+  "audio_dependency_sha": "4afbd068fae74a826dae4db04c2c612af23fa861",
+  "formal_audio": "DELIVERED_API; see executed stages; production host PENDING_00",
+  "formal_runtime": "PENDING_01",
+  "fresh_integrated_build_graphical": "PENDING_00",
+  "human_acceptance": "NOT_RUN",
+  "stages": [
+    {
+      "name": "seed",
+      "args": [
+        "--headless",
+        "--path",
+        "\"E:\\godot\\worktrees\\block-girl-game-feel-ui\"",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_07/test_ui.gd",
+        "--",
+        "--phase=seed",
+        "--evidence-dir=\"E:\\godot\\worktrees\\block-girl-game-feel-ui\\.godot\\game-feel-ui\\owner07_feedback_contract_red_01\\seed\"",
+        "--shell-save=user://beta_sprint/owner07_feedback_contract_red_01/settings.json"
+      ],
+      "status": "FAIL",
+      "pid": 51672,
+      "exit_code": 1,
+      "checks": 0,
+      "stderr_bytes": 260
+    }
+  ],
+  "frozen_imports_restored": false,
+  "failure": "seed failed; retained raw stdout/stderr"
+}

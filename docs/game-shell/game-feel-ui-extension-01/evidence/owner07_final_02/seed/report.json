@@ -1,0 +1,36 @@
+{
+	"authoritative_runtime": false,
+	"checks": 39,
+	"display": "headless",
+	"doubles": [
+		"immutable cue DTO fixtures",
+		"test-only00 host Save bridge",
+		"existing legacy bus Settings sink; formal11 NOT_RUN"
+	],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"fault_exercises": [
+		"injected host write failure",
+		"deferred host acknowledgement",
+		"external programmatic slider mutation during deferred host acknowledgement"
+	],
+	"fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+	"formal_audio": "PENDING_11",
+	"formal_runtime": "PENDING_01",
+	"human_acceptance": "NOT_RUN",
+	"input": "Control interaction signals; actual storage and bus queries",
+	"phase": "seed",
+	"pid": 50932,
+	"save_path": "user://beta_sprint/owner07_final_02/settings.json",
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-ui/.godot/game-feel-ui/owner07_final_02/profile/Godot/app_userdata/方块少女-若叶睦"
+}

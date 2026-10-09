@@ -1,0 +1,490 @@
+{
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "dirty": [
+    "?? docs/game-shell/game-feel-ui-extension-01/",
+    "?? game/feel/",
+    "?? game/levels/mutsumi/batch_02/levels_3d/presented_level.gd.uid",
+    "?? game/levels/mutsumi/batch_02/levels_3d/presenter.gd.uid",
+    "?? tests/beta_sprint/content_batch_02/evidence/real_01/source_test_playthrough.gd.uid",
+    "?? tests/beta_sprint/content_batch_02/test_playthrough.gd.uid",
+    "?? tests/beta_sprint/content_expansion_02/test_old_three_focused.gd.uid",
+    "?? tests/beta_sprint/five_level_3d/test_entry.gd.uid",
+    "?? tests/beta_sprint/five_level_3d/test_gameplay.gd.uid",
+    "?? tests/beta_sprint/game_feel_owner_07/",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/before_shell/source_test_l04.gd.uid",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/01_normal_surface_spawn.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/02_normal_inner_spawn.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/03_normal_first_inner_move.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/04_normal_inner_east_connection.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/05_normal_connection_landed.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/06_normal_goal.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/07_reset_replay_surface_spawn.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/08_reset_replay_inner_spawn.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/09_reset_replay_first_inner_move.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/10_reset_replay_inner_east_connection.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/11_reset_replay_connection_landed.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/12_reset_replay_goal.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/13_alternate_camera_surface_spawn.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/14_alternate_camera_inner_spawn.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/15_alternate_camera_first_inner_move.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/16_alternate_camera_inner_east_connection.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/17_alternate_camera_connection_landed.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_graphical/screenshots/18_alternate_camera_goal.png.import",
+    "?? tests/beta_sprint/l04_inner_movement_p1/evidence/playthrough_headless/source_test_playthrough.gd.uid",
+    "?? tests/beta_sprint/l04_inner_movement_p1/test_playthrough.gd.uid",
+    "?? tests/beta_sprint/l04_p1_integration/test_focused.gd.uid",
+    "?? tests/beta_sprint/l06_preproduction/validate_design.gd.uid",
+    "?? tests/beta_sprint/shell_batch_02/test_real_runtime.gd.uid"
+  ],
+  "status": "FAIL",
+  "source_files": [
+    {
+      "path": "docs/beta-sprint/game-feel/GAME_FEEL_CONTRACT.md",
+      "sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de"
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd",
+      "sha256": "abbb5c033390ff3b176fc308f9b6a7216ed81a9c3047d010de4518775096d1b8"
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd.uid",
+      "sha256": "93c41a0768005f61a8f3b879bc7ccd1d77b4d6958652b8f6f14b6a27691749ee"
+    },
+    {
+      "path": "game/feel/ui/motion_row.gd",
+      "sha256": "eacdb9a43cf8397e29b7815a5d7f971919894c5ce1db5211c4187ac971e252bb"
+    },
+    {
+      "path": "game/feel/ui/motion_row.gd.uid",
+      "sha256": "7ff96c79889ae17b37fdb301ee303c99d85541f4d4dcf5bbff038b871a5a0135"
+    },
+    {
+      "path": "game/shell/game_shell.gd",
+      "sha256": "e87d8fd84f7897371b20e07ccea6f4088493f42317cd8da5b95ce455c8aef5fb"
+    },
+    {
+      "path": "game/shell/game_shell.gd.uid",
+      "sha256": "275446e9c92663fd457b69607f552fa832f8927e3c201b160764133f2eccbf2f"
+    },
+    {
+      "path": "game/shell/game_shell.tscn",
+      "sha256": "25e16dfe9f9818bdbacbd50e06cbfe8401cf03c65206cf75792a167887d8d4af"
+    },
+    {
+      "path": "game/shell/level_adapter.gd",
+      "sha256": "4c0f17c61136aa00674feccdbe00fff6a9b46402d65bd728b82863d538ff011d"
+    },
+    {
+      "path": "game/shell/level_adapter.gd.uid",
+      "sha256": "baf6ab891a73a8ca8df6f3979486e1c04147708647988c6c48bdcc1b816512e2"
+    },
+    {
+      "path": "game/shell/level_catalog.gd",
+      "sha256": "ed16d8e75efa3b8a5cee132c83402909dd6ecfb1dade4689e5cac702ef408a09"
+    },
+    {
+      "path": "game/shell/level_catalog.gd.uid",
+      "sha256": "5e4c518b4e896a4a6f9d1dca0e0ae3bae27934ac0538d7beecdded524a9b0bf4"
+    },
+    {
+      "path": "game/shell/save_store.gd",
+      "sha256": "aa4ffc1e71d53b0c070a6894537025cde475fd6ef519241dd885519ca1c2833f"
+    },
+    {
+      "path": "game/shell/save_store.gd.uid",
+      "sha256": "41d1acdd0bd1b14a42ce220f7040c5f588e246526372f113ecacf61386f6d7a0"
+    },
+    {
+      "path": "game/shell/settings.gd",
+      "sha256": "3b4dcfa09a0a6f932ee76ab3394d70fb144253790710846953139a69a0502d4a"
+    },
+    {
+      "path": "game/shell/settings.gd.uid",
+      "sha256": "4b4ba7740eb6a1f286af20d7ad3a43dfef64256732d12532dc2d68c9cf5cdd3c"
+    },
+    {
+      "path": "game/shell/shell_input.gd",
+      "sha256": "20c5b92a40d5dfc49534dc5f64e29486c39e6be13ff501480687208252d5f69c"
+    },
+    {
+      "path": "game/shell/shell_input.gd.uid",
+      "sha256": "0856582c4ae95a10b81766dba6f5b4a11b0bf8d4fac40d33f80d7c914d0933a8"
+    },
+    {
+      "path": "game/shell/shell_view.gd",
+      "sha256": "44e262e47a4b3c2c9892fff270a1b3cf35387c80dff5098506d0256a108427f2"
+    },
+    {
+      "path": "game/shell/shell_view.gd.uid",
+      "sha256": "eb577ea991fd1d3879adaf8047d63a26426a49aacd3e5bac271f46dd26c0c0c4"
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd",
+      "sha256": "4f4cfde859cf504e8e4ebde611ea51c95e837845b719f51cdaab3f8c332f6ddc"
+    },
+    {
+      "path": "game/shell/visual_01/approved_shell_view.gd.uid",
+      "sha256": "50f575e147dde210730dcef8119a50653296b3a3c217ba1dd418430b52846b9f"
+    },
+    {
+      "path": "game/shell/visual_01/hint_strip.gd",
+      "sha256": "5c9e5405805b401a135ff8985fd69c56622ce35819c1ef162c853fed77268ef6"
+    },
+    {
+      "path": "game/shell/visual_01/hint_strip.gd.uid",
+      "sha256": "fb8b593c865900660b9ed6a51c99b65bc23722bf433d5f368dc7c380a0e7d68a"
+    },
+    {
+      "path": "game/shell/visual_01/hud.gd",
+      "sha256": "ab70e68b2b017ab49549257d1eadc205ab2e53924acb98203dd3f2b2c816f5be"
+    },
+    {
+      "path": "game/shell/visual_01/hud.gd.uid",
+      "sha256": "9d58af1e7d3a2ee62aec61f33c3ff3ce26138b2abf31437cdd6c30222bc4f1b5"
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd",
+      "sha256": "783818f4f94142e2f3da712998b737cf7ebce91db1e43790c268e1b02b8874ad"
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd.uid",
+      "sha256": "bed206373f0e6fcadad3c444c0d22a0fc98bae47300d4776975cf6235c8f852d"
+    },
+    {
+      "path": "game/shell/visual_01/stone_row.gd",
+      "sha256": "2d1f1d69549dd0dc7c9d34fc78296e217858aa506631efd0cbe7e4894fda5e44"
+    },
+    {
+      "path": "game/shell/visual_01/stone_row.gd.uid",
+      "sha256": "781aa50b3e5a8186047d0d01249c45c09942e1c05f584d4db67f6f2ac5247c6d"
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd",
+      "sha256": "575e0fd3aa5ca83d445733584fe276cee4c7556186bc754455860ad4b1be4138"
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd.uid",
+      "sha256": "df8cd98e3e79a6711f2076768b4be0231679d76a019121a08db04420fd14b7da"
+    },
+    {
+      "path": "game/shell/visual_01/tokens.gd",
+      "sha256": "6be129dd2d3eda6a6294242fa1c3defe7a171eda09599656574e6c11c6b24fd4"
+    },
+    {
+      "path": "game/shell/visual_01/tokens.gd.uid",
+      "sha256": "c721d34a72d92b272f7bf29a88ff05c7ee64a6d75d1e331a0138fe800839a842"
+    },
+    {
+      "path": "production/ui/beta_shell_01/.gitattributes",
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/ASSET_BINDING_MANIFEST.json",
+      "sha256": "6bfb9213846f053ed1ac195b062b967af07d5657d0df894b1bd5e1492e8cca55"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/.gitattributes",
+      "sha256": "896bd8cc13003b78bd5918baebfa252f058c43fc4daca538fa87344719a86a5e"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/font_manifest.json",
+      "sha256": "446b4c7fb07f8296ecba522f913519b68d1cf28c9bfc65aa2b6cacdc9bdfc247"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC-OFL.txt",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf.import",
+      "sha256": "860729bd98b30a1868d939922d475056e6f498570f31faf97cb72e38399b77a9"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC-OFL.txt",
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC.ttf",
+      "sha256": "a4aed9985a5916fbf6690456f8732a9fccd517938e353165d4142b4f11a39280"
+    },
+    {
+      "path": "production/ui/beta_shell_01/fonts/NotoSerifSC.ttf.import",
+      "sha256": "f7540a45c8165b52b3ca9b14232eba7218513df90436f94511359a641a60c7f3"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons_source.svg",
+      "sha256": "1f4217a34bc404884dfe7676120f9da77cb6abb640d7657393412061c0f6ab45"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons_source.svg.import",
+      "sha256": "c7911c2c43b002f31f1f245405f17fa1c6f086d342f831f4f643fb9b91af7b05"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arch.svg",
+      "sha256": "25f495586be7ac3f7a9252eaee66947a4b75a98f0a6dfe0a7082e5443de6db7d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arch.svg.import",
+      "sha256": "94ad64616cf06fbf1b104bd480ca767381b8790a64f383d1989363209082e0bf"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arrow.svg",
+      "sha256": "dee8052daf6925a0c2a0ba375e914640e12dd61fc17eed40df15bf4146892e4f"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/arrow.svg.import",
+      "sha256": "8eaff712ef5d5c079db6ddf5d9d41f8e6bbfcb6c97a6226d53f10e0cf2c53e5e"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/check.svg",
+      "sha256": "bc3d9135fb0c3302ae35a787bfcf4ccf2d0aed1363af9e3b13dbc46a138db303"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/check.svg.import",
+      "sha256": "9d5bcd42340192bb89e63fafec8845778289d3fc7a0d3b927b488de57171021b"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/checked.svg",
+      "sha256": "a6c98b78a2134519863a844650bfd2f12cddb3b487a01491d1a15350497feec0"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/checked.svg.import",
+      "sha256": "10495d8a85d603971a59114657e41b8e3140f70b1a42574d0c3fc43f8670db9a"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/lock.svg",
+      "sha256": "d4e0e581aa41388129b82eb4700e3a13e29edbb406c6fbae26882b583789a420"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/lock.svg.import",
+      "sha256": "6873f586108024684f052bb9fc3504064683d8840f6631cc7f49d37661fa84b0"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/pause.svg",
+      "sha256": "59e9017cdb3dbbdf213127a73a20f65c9a571685e2eab5acd0c2d6bc7965f7c8"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/pause.svg.import",
+      "sha256": "06abd1671802baa9b21f61b5b6cd688524911386a385f72a2977b64f95648e1d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/quit.svg",
+      "sha256": "e2ccf015ae6450c1262c542ceb05710761a318f48fe03c4d784db6d4be99ba11"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/quit.svg.import",
+      "sha256": "ac2ee96b003ac443fd4406cdec40b46c4487188c37ccbb5048152fa6fa7a683a"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/reset.svg",
+      "sha256": "fa8c97192f030e61d547eaed6cc41965cc41f761a46726382f2db34210f415ff"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/reset.svg.import",
+      "sha256": "d443df068d8a1079635943f9152de46c1ef529575e851aad7f9edd34893357be"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/return.svg",
+      "sha256": "0f091fc587080252dd1077d872606009737a15ec190971ab34d6aafd286e8a3f"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/return.svg.import",
+      "sha256": "3ea39ee322987f976ef76129de695b94d43bde4e64f3066bcc70bdae62830db7"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/settings.svg",
+      "sha256": "b930398e6163aaadf08fe26b7728ad48cc099d1ffa3b21a50782cc2ea5d8c4c0"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/settings.svg.import",
+      "sha256": "b65db68c24590aec4637b2794ac97faca7978ee01a47462125e30dd2b4ee2537"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/slider_grab.svg",
+      "sha256": "8b1bcfdcd27b9089d0a501f411b13b322bc3e1a52a28a72ec54e8b4602807dd5"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/slider_grab.svg.import",
+      "sha256": "7029f04112ac67690daa08ebf1a08ef0cdd8ecea03df2a35152fe3e1220469b1"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/steps.svg",
+      "sha256": "4cffcac08912ce186cf9fcf2d8b7ad8c01299b48b1b5be62082ee0e61ce2b5ea"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/steps.svg.import",
+      "sha256": "443cbc0f868edd0a85c5f86c37ea1886dd2be8a546be10c6801439dcb7eec5da"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/unchecked.svg",
+      "sha256": "1a47ead9ebad9f8835ee5826b57c9729c646c75bcc3692114603550d5510f359"
+    },
+    {
+      "path": "production/ui/beta_shell_01/icons/unchecked.svg.import",
+      "sha256": "9abf7486429c44721c4e0f51758d873a3f8f93048eedabae005b1fa625603005"
+    },
+    {
+      "path": "production/ui/beta_shell_01/previews/l01.png",
+      "sha256": "9a2b50f448ffeae560c90e012f99108135b1f746e847943667f3d4bc708fecc7"
+    },
+    {
+      "path": "production/ui/beta_shell_01/previews/l01.png.import",
+      "sha256": "a6e99628dbdd75268ac4e82747552a3f3a3956f09e6c9a53a5b8450ad7748699"
+    },
+    {
+      "path": "production/ui/beta_shell_01/surface_identity.png",
+      "sha256": "f70f92ad5615e2ab5cd75927671c63ae8be526a2c29d638ac06ae86475cbf0cc"
+    },
+    {
+      "path": "production/ui/beta_shell_01/surface_identity.png.import",
+      "sha256": "74846878b836696bee637110144932b607695dc28120e80585158fb7fb425f1d"
+    },
+    {
+      "path": "production/ui/beta_shell_01/tokens.json",
+      "sha256": "5f342f44dca86436659ce39b6bca45c8a4ab9a9cc94b3f68d879fed3e32b12a5"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/run.ps1",
+      "sha256": "3d0ebca9410e31fde9b4b5a92fb6a6ffb48e3980fc87627d3b3731378f24a8f5"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_layout.gd",
+      "sha256": "548c54a5afd92f053858665b490479243d13b66fb8ea736b2cd21ec1ffcb6524"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_layout.gd.uid",
+      "sha256": "10ebe86c46cfc8818a49f804e80808d4917b45304c472db9469077fd13538be8"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd",
+      "sha256": "6a5de63099a26241f311617068d50598e0b94749aaa020220604cdff37bcec99"
+    },
+    {
+      "path": "tests/beta_sprint/game_feel_owner_07/test_ui.gd.uid",
+      "sha256": "0f7d4009639bdb8e2fa9dffd0d873c18d5a3570669ee21c2149058aa2aef418c"
+    },
+    {
+      "path": "tests/shell/.gitignore",
+      "sha256": "fece5e911fee0763510b0e59e9e2f22c724ce923e49f05b3f45713d9eba7f408"
+    },
+    {
+      "path": "tests/shell/fixture_level.gd",
+      "sha256": "4140dd19883fa4232a1e8f956b25d3bf72cc2171c041bf6c9d62f2205daa42b3"
+    },
+    {
+      "path": "tests/shell/fixture_level.gd.uid",
+      "sha256": "226be2f2b332de6cbda6525e583e66f02d8a9fdc6f89be3d9f612f2a5baf16f0"
+    },
+    {
+      "path": "tests/shell/fixture_level.tscn",
+      "sha256": "11728a0f27accdf10b21c7fccbf712f1952b8ea797966b9252a68c9364a3263b"
+    },
+    {
+      "path": "tests/shell/pause_text/run_pause_text.ps1",
+      "sha256": "b432fe998a08972bc3d1f87b62f47609ec30360711969137ed4f3c9c197a1c96"
+    },
+    {
+      "path": "tests/shell/pause_text/test_pause_text.gd",
+      "sha256": "fddcb3b4e85e8c2d1a7e526b46dfb48ec3a075d330acb3f63a8ef9336f136683"
+    },
+    {
+      "path": "tests/shell/pause_text/test_pause_text.gd.uid",
+      "sha256": "702be78f48ee094e2e7645532e2b284b9e9bd9f51754d632783ea7a8a47a484b"
+    },
+    {
+      "path": "tests/shell/run_validation.ps1",
+      "sha256": "e72ade8ff37fee7c938be75ab18907063ef789222fbbe8827fff6bafeaa9948c"
+    },
+    {
+      "path": "tests/shell/test_flow.gd",
+      "sha256": "35010dd46cf30ef39d601d006274fd69f73e92eae3dd5afd7e99f11217eb6e2d"
+    },
+    {
+      "path": "tests/shell/test_flow.gd.uid",
+      "sha256": "b545c9c836c8a617dd81d52c268699298f931f49a1c04cf6b8563969b461268f"
+    },
+    {
+      "path": "tests/shell/test_goal_boundary.gd",
+      "sha256": "f938368db2c316975523473d92d1e6ef6f980ef4fb60d32476d418da60e3fa08"
+    },
+    {
+      "path": "tests/shell/test_goal_boundary.gd.uid",
+      "sha256": "04dcbf4ba75e83cd00d6849f115342315740b2d2dea178f02db0d96c0205cbb7"
+    },
+    {
+      "path": "tests/shell/test_mute_restart.gd",
+      "sha256": "adcdc403e548c3b863f88786a04aa6fd3f0e76f0dea9e0201878281b4047805c"
+    },
+    {
+      "path": "tests/shell/test_mute_restart.gd.uid",
+      "sha256": "0617c284788fbda20613abc7b67cae2c9d9c4897e4555c320383ed4a27491a43"
+    },
+    {
+      "path": "tests/shell/test_p01_legacy_entry.gd",
+      "sha256": "6c86e773556d68bee71bdffbccc618b40c038cb5733211b3c65d966a0e2f64d5"
+    },
+    {
+      "path": "tests/shell/test_p01_legacy_entry.gd.uid",
+      "sha256": "46d6990da27a878a16cbee85f622fbb909e6123411133d2ae21de53d2e8ec34b"
+    },
+    {
+      "path": "tests/shell/test_playthrough.gd",
+      "sha256": "283b34c197fc64e7e118794d79bf59b9959798f18da1ab4655b592de82c4c0f0"
+    },
+    {
+      "path": "tests/shell/test_playthrough.gd.uid",
+      "sha256": "dd47ec513447b9e0c60822153f96e37b1f3a5749bffce26078e3b02240fd5cce"
+    },
+    {
+      "path": "tests/shell/test_restart.gd",
+      "sha256": "a5073715705be1f7f52666d329204fdcfc4f16cfb65308a90cf8cdbe61bb6aa3"
+    },
+    {
+      "path": "tests/shell/test_restart.gd.uid",
+      "sha256": "6b7f1c5e967730da1caa83dd3ad0a12ae4cd156bdb8c504ca32546431e6c46ee"
+    },
+    {
+      "path": "tests/shell/test_save.gd",
+      "sha256": "387337b9227a99128c400ed1b467fc92dc315934308fcd65dbfcc615c8db78de"
+    },
+    {
+      "path": "tests/shell/test_save.gd.uid",
+      "sha256": "1cafe0a187a967927271f633b00b38f3d19c01422da7ca0b409df73f9bd080d5"
+    }
+  ],
+  "source_drift": null,
+  "profile": "E:\\godot\\worktrees\\block-girl-game-feel-ui\\.godot\\game-feel-ui\\owner07_lifecycle_red_01\\profile",
+  "engine_path": "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+  "display": "headless",
+  "evidence_type": "OWNER_HEADLESS_ONLY",
+  "formal_audio": "PENDING_11",
+  "formal_runtime": "PENDING_01",
+  "fresh_integrated_build_graphical": "PENDING_00",
+  "human_acceptance": "NOT_RUN",
+  "stages": [
+    {
+      "name": "seed",
+      "args": [
+        "--headless",
+        "--path",
+        "\"E:\\godot\\worktrees\\block-girl-game-feel-ui\"",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_07/test_ui.gd",
+        "--",
+        "--phase=seed",
+        "--evidence-dir=\"E:\\godot\\worktrees\\block-girl-game-feel-ui\\.godot\\game-feel-ui\\owner07_lifecycle_red_01\\seed\"",
+        "--shell-save=user://beta_sprint/owner07_lifecycle_red_01/settings.json"
+      ],
+      "status": "FAIL",
+      "pid": 2648,
+      "exit_code": 1,
+      "checks": 0,
+      "stderr_bytes": 226
+    }
+  ],
+  "frozen_imports_restored": false,
+  "failure": "seed failed; retained raw stdout/stderr"
+}

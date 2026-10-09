@@ -1,0 +1,37 @@
+{
+	"audio_dependency_sha": "4afbd068fae74a826dae4db04c2c612af23fa861",
+	"authoritative_runtime": false,
+	"checks": 45,
+	"display": "headless",
+	"doubles": [
+		"immutable cue DTO fixtures",
+		"test-only00 host Save/Audio routing bridge"
+	],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"fault_exercises": [
+		"injected host write failure",
+		"deferred host acknowledgement",
+		"external programmatic slider mutation during deferred host acknowledgement"
+	],
+	"fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+	"formal_audio": "ACTUAL_API_OWNER_PASS",
+	"formal_runtime": "PENDING_01",
+	"human_acceptance": "NOT_RUN",
+	"input": "Control interaction signals; actual storage and AudioDirector bus queries",
+	"phase": "seed",
+	"pid": 32416,
+	"production_audio_host": "PENDING_00",
+	"save_path": "user://beta_sprint/owner07_audio_final_02/settings.json",
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-ui/.godot/game-feel-ui/owner07_audio_final_02/profile/Godot/app_userdata/方块少女-若叶睦"
+}
