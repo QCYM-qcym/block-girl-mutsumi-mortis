@@ -44,4 +44,4 @@ Files: tests/beta_sprint/pfall_v2_integration/package.py; append-only build outs
 - [x] Package clean committed sources into a new directory and archive; refuse overwrite.
 - [x] Repeat full-path and natural Graphical tests on the actual package.
 - [x] Verify package manifest and preserve previous packages/profiles/evidence.
-- [ ] Commit receipt and hand off the actual frozen object to 08; Human QA remains NOT_RUN.
+- [x] Commit receipt and hand off the actual frozen object to 08; Human QA remains NOT_RUN.
