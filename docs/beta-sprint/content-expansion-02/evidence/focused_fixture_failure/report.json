@@ -1,0 +1,320 @@
+{
+	"cases": [
+		{
+			"checks": 66,
+			"coverage": "formal mouse menu entry, four views, cube/world visual parity, Reset, Pause/Resume/Main",
+			"goal": "PREVIOUS_PASS_PRESERVED_NOT_RERUN",
+			"id": "mutsumi_l01"
+		}
+	],
+	"checks": 73,
+	"display": "Windows",
+	"doubles": [],
+	"failures": [
+		"explicit fixture uses original SaveStore",
+		"formal menu entry enabled: level:mutsumi_l02",
+		"actual formal menu loads mutsumi_l02"
+	],
+	"head": "0f4384ba5cfa7d6dc3f64341e2c198de4e1b68cf",
+	"level_id": "old_three_focused",
+	"pid": 31572,
+	"project": "E:/godot/worktrees/block-girl-foundation-4-integration/",
+	"save_path": "user://beta_sprint/b3d02_p2_final_focused/old_three.json",
+	"scope": "limited current integrated3D regression; L01/L02 full playthroughs and new Daily Human QA not claimed",
+	"screenshots": [
+		{
+			"hint": "W A S D",
+			"name": "001_mutsumi_l01_spawn",
+			"objective": "沿石径前进，寻找通往出口的路。WASD 翻滚，Q / E 转动视角，Space 切换世界。",
+			"shell_state": 3,
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"face": "(0, 0, 1)",
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l01",
+				"link_active": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"visual": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"camera_angle": 0.785398163397448,
+				"camera_size": 7.09540033340454,
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"exit_state": "available",
+				"fraction": 0.0,
+				"gate_state": "closed",
+				"incoming_walk_surface_reveal": 0.0,
+				"occlusion": {
+					"0:exit": false,
+					"0:gate": false,
+					"1:exit": false,
+					"1:gate": false
+				},
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"plate_state": "inactive",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"hint": "Space",
+			"name": "002_mutsumi_l01_shift_sample",
+			"objective": "前方断路。这里在两个世界都能落脚，试着切换到里世界。",
+			"shell_state": 3,
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"face": "(0, -1, 0)",
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l01",
+				"link_active": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "shift",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"visual": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"camera_angle": 0.785398163397448,
+				"camera_size": 7.09540033340454,
+				"displayed_worlds": [
+					true,
+					true
+				],
+				"exit_state": "available",
+				"fraction": 0.0,
+				"gate_state": "closed",
+				"incoming_walk_surface_reveal": 0.0,
+				"occlusion": {
+					"0:exit": false,
+					"0:gate": false,
+					"1:exit": false,
+					"1:gate": false
+				},
+				"phase": "shift",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"plate_state": "inactive",
+				"shift_committed": false,
+				"shift_progress": 0.1599936,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"hint": "Space",
+			"name": "003_mutsumi_l01_shift_sample",
+			"objective": "前方断路。这里在两个世界都能落脚，试着切换到里世界。",
+			"shell_state": 3,
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"face": "(0, -1, 0)",
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l01",
+				"link_active": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "shift",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"visual": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"camera_angle": 0.785398163397448,
+				"camera_size": 7.09540033340454,
+				"displayed_worlds": [
+					true,
+					true
+				],
+				"exit_state": "available",
+				"fraction": 0.0,
+				"gate_state": "closed",
+				"incoming_walk_surface_reveal": 0.0,
+				"occlusion": {
+					"0:exit": false,
+					"0:gate": false,
+					"1:exit": false,
+					"1:gate": false
+				},
+				"phase": "shift",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"plate_state": "inactive",
+				"shift_committed": false,
+				"shift_progress": 0.3599856,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"hint": "Space",
+			"name": "004_mutsumi_l01_shift_sample",
+			"objective": "沿石径前进，寻找通往出口的路。WASD 翻滚，Q / E 转动视角，Space 切换世界。",
+			"shell_state": 3,
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"face": "(0, -1, 0)",
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l01",
+				"link_active": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"visual": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"camera_angle": 0.785398163397448,
+				"camera_size": 7.09540033340454,
+				"displayed_worlds": [
+					true,
+					true
+				],
+				"exit_state": "locked",
+				"fraction": 0.0,
+				"gate_state": "closed",
+				"incoming_walk_surface_reveal": 0.300505725191892,
+				"occlusion": {
+					"0:exit": false,
+					"0:gate": false,
+					"1:exit": false,
+					"1:gate": false
+				},
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"plate_state": "inactive",
+				"shift_committed": true,
+				"shift_progress": 0.7199952,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"hint": "",
+			"name": "005_mutsumi_l01_shift_sample",
+			"objective": "沿石径前进，寻找通往出口的路。WASD 翻滚，Q / E 转动视角，Space 切换世界。",
+			"shell_state": 3,
+			"state": {
+				"cell": [
+					0,
+					2
+				],
+				"face": "(0, -1, 0)",
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l01",
+				"link_active": false,
+				"moves": 3,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"visual": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"camera_angle": 0.785398163397448,
+				"camera_size": 7.09540033340454,
+				"displayed_worlds": [
+					false,
+					true
+				],
+				"exit_state": "locked",
+				"fraction": 0.0,
+				"gate_state": "closed",
+				"incoming_walk_surface_reveal": 0.0,
+				"occlusion": {
+					"0:exit": false,
+					"0:gate": false,
+					"1:exit": false,
+					"1:gate": false
+				},
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.0, 1.0), Z: (0.0, -1.0, 0.0)]",
+				"plate_state": "inactive",
+				"shift_committed": true,
+				"shift_progress": 0.0,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"hint": "W A S D",
+			"name": "006_mutsumi_l01_reset",
+			"objective": "沿石径前进，寻找通往出口的路。WASD 翻滚，Q / E 转动视角，Space 切换世界。",
+			"shell_state": 3,
+			"state": {
+				"cell": [
+					0,
+					5
+				],
+				"face": "(0, 0, 1)",
+				"gate": false,
+				"goal": false,
+				"id": "mutsumi_l01",
+				"link_active": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"visual": {
+				"actor_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"camera_angle": 0.785398163397448,
+				"camera_size": 7.09540033340454,
+				"displayed_worlds": [
+					true,
+					false
+				],
+				"exit_state": "available",
+				"fraction": 0.0,
+				"gate_state": "closed",
+				"incoming_walk_surface_reveal": 0.0,
+				"occlusion": {
+					"0:exit": false,
+					"0:gate": false,
+					"1:exit": false,
+					"1:gate": false
+				},
+				"phase": "idle",
+				"physical_basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0)]",
+				"plate_state": "inactive",
+				"shift_committed": false,
+				"shift_progress": 0.0,
+				"view": 0,
+				"world": 0
+			}
+		}
+	]
+}

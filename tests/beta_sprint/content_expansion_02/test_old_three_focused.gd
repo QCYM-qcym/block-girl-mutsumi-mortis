@@ -37,6 +37,7 @@ func run() -> void:
 	var fixture := store.defaults()
 	fixture.has_progress = true
 	fixture.unlocked = ["mutsumi_l01","mutsumi_l02","mutsumi_l03"]
+	fixture.recent = "mutsumi_l01"
 	fixture.settings.muted = true
 	check(store.save(fixture), "explicit fixture uses original SaveStore")
 	shell = load("res://game/shell/game_shell.tscn").instantiate()
