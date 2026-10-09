@@ -54,7 +54,7 @@ Isolated save: user://beta_sprint/$BuildName/qa_progress.json
 
 L01-L03 preserve their approved3D presentation. L04/L05 use the new approved3D attachment with the same formal puzzles and Runtime. L04Inner(0,5) is retained. Five stable level IDs enter through Main/LevelSelect and normalcompletion unlocks the next level.
 WASD roll; Q/E four90-degree Camera; Space WorldShift; R Reset; Esc Pause/Resume.
-Continue returns to the last unlocked level's authored start. Save/Continue logic is unchanged. The package has no prepared progress or test-save files.
+Continue returns to the most recently entered unlocked level's authored start. Save/Continue logic is unchanged. The package has no prepared progress or test-save files.
 
 New-package Human QA: NOT_RUN.08 should focus L04/L05 full3D routes,Reset,normalprogression,Save/ColdContinue,Camera/WorldShift and necessaryUI interactions. Old fullplaythroughs/UI matrices/ColdContinue are historical evidence only.
 ExistingP2: pause auxiliary-text overlap, L03 stalehint, and selected-level preview/caption mismatch. Authored quality declarations were preserved with puzzle resources; the presentation status is recorded separately in the integration receipt.
