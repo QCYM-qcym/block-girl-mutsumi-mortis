@@ -1,0 +1,4474 @@
+{
+	"candidate_sha256": "c6599a5ef256729f6861854ac970a075a487e0387766000d00cdcfb4f7fa174f",
+	"checks": 485,
+	"display": "headless",
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"human_qa": "NOT_RUN",
+	"pid": 47168,
+	"presenter": "NOT_RUN",
+	"production_l06_registered": false,
+	"routes": [
+		{
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 27,
+				"complete": true,
+				"door": false,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"commits": 27,
+			"goal": true,
+			"kind": "original_timed_movement_api_not_human_or_presenter",
+			"name": "normal",
+			"rolls": 21,
+			"trace_end": 28,
+			"trace_start": 0
+		},
+		{
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 27,
+				"complete": true,
+				"door": false,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"commits": 27,
+			"goal": true,
+			"kind": "original_timed_movement_api_not_human_or_presenter",
+			"name": "reset_replay",
+			"rolls": 21,
+			"trace_end": 56,
+			"trace_start": 28
+		},
+		{
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 27,
+				"complete": true,
+				"door": false,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"commits": 27,
+			"goal": true,
+			"kind": "original_timed_movement_api_not_human_or_presenter",
+			"name": "alternate_camera",
+			"rolls": 21,
+			"trace_end": 87,
+			"trace_start": 56
+		},
+		{
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 29,
+				"complete": true,
+				"door": false,
+				"moves": 23,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"commits": 29,
+			"goal": true,
+			"kind": "original_timed_movement_api_not_human_or_presenter",
+			"name": "spawn_inner",
+			"rolls": 23,
+			"trace_end": 117,
+			"trace_start": 87
+		}
+	],
+	"save_io": "NONE",
+	"status": "DESIGN_NATIVE_RULE_VALIDATION",
+	"topology": {
+		"inner_gate_rejections": 4,
+		"kind": "native_query_only_not_playthrough",
+		"minimum_actions": 28,
+		"minimum_shifts": 6,
+		"no_link_goal_cost": -1,
+		"no_shift_goal_cost": -1,
+		"pose_quotient_reason": "orientation is ungated by ContentState",
+		"reachable": 148,
+		"solvable": 148,
+		"spawn_neighbors": [
+			{
+				"legal_moves": 1,
+				"view": 0,
+				"world": 0
+			},
+			{
+				"legal_moves": 1,
+				"view": 0,
+				"world": 1
+			},
+			{
+				"legal_moves": 1,
+				"view": 3,
+				"world": 0
+			},
+			{
+				"legal_moves": 1,
+				"view": 1,
+				"world": 0
+			},
+			{
+				"legal_moves": 1,
+				"view": 3,
+				"world": 1
+			},
+			{
+				"legal_moves": 1,
+				"view": 1,
+				"world": 1
+			},
+			{
+				"legal_moves": 1,
+				"view": 2,
+				"world": 0
+			},
+			{
+				"legal_moves": 1,
+				"view": 2,
+				"world": 1
+			}
+		]
+	},
+	"trace": [
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					6
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 0,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					6
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(0, -1, 0)|(1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(0, -1, 0)|(1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"step": 1
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 25,
+				"complete": false,
+				"door": true,
+				"moves": 19,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 25,
+				"complete": false,
+				"door": true,
+				"moves": 19,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 27,
+				"complete": true,
+				"door": false,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					6
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 0,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					6
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(0, -1, 0)|(1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(0, -1, 0)|(1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"step": 1
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 25,
+				"complete": false,
+				"door": true,
+				"moves": 19,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 25,
+				"complete": false,
+				"door": true,
+				"moves": 19,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 27,
+				"complete": true,
+				"door": false,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 0,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 0,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"step": -1
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					6
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 0,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					0,
+					6
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 2,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 2,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(0, -1, 0)|(1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(0, -1, 0)|(1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			},
+			"screen_direction": 2,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"screen_direction": 2,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"screen_direction": 2,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 3,
+				"world": 0
+			},
+			"step": 1
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"step": 1
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, 1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"step": 1
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 25,
+				"complete": false,
+				"door": true,
+				"moves": 19,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 2,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"screen_direction": 2,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 25,
+				"complete": false,
+				"door": true,
+				"moves": 19,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 2,
+				"world": 0
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 27,
+				"complete": true,
+				"door": false,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 2,
+				"world": 0
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 0,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					-1,
+					7
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					7
+				],
+				"commits": 1,
+				"complete": false,
+				"door": false,
+				"moves": 0,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					-1,
+					6
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					-1,
+					7
+				],
+				"commits": 2,
+				"complete": false,
+				"door": false,
+				"moves": 1,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					-1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					-1,
+					6
+				],
+				"commits": 3,
+				"complete": false,
+				"door": false,
+				"moves": 2,
+				"orientation": "(0, 0, -1)|(-1, 0, 0)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					-1,
+					5
+				],
+				"commits": 4,
+				"complete": false,
+				"door": false,
+				"moves": 3,
+				"orientation": "(0, -1, 0)|(-1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					5
+				],
+				"commits": 5,
+				"complete": false,
+				"door": false,
+				"moves": 4,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					5
+				],
+				"commits": 6,
+				"complete": false,
+				"door": false,
+				"moves": 5,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 7,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					5
+				],
+				"commits": 8,
+				"complete": false,
+				"door": false,
+				"moves": 6,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					4
+				],
+				"commits": 9,
+				"complete": false,
+				"door": false,
+				"moves": 7,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 10,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					2,
+					3
+				],
+				"commits": 11,
+				"complete": false,
+				"door": false,
+				"moves": 8,
+				"orientation": "(1, 0, 0)|(0, 1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					1,
+					3
+				],
+				"commits": 12,
+				"complete": false,
+				"door": false,
+				"moves": 9,
+				"orientation": "(0, 1, 0)|(-1, 0, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				-1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					3
+				],
+				"commits": 13,
+				"complete": false,
+				"door": false,
+				"moves": 10,
+				"orientation": "(-1, 0, 0)|(0, -1, 0)|(0, 0, 1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					2
+				],
+				"commits": 14,
+				"complete": false,
+				"door": false,
+				"moves": 11,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					1
+				],
+				"commits": 15,
+				"complete": false,
+				"door": false,
+				"moves": 12,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					0,
+					0
+				],
+				"commits": 16,
+				"complete": false,
+				"door": false,
+				"moves": 13,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 17,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					1,
+					0
+				],
+				"commits": 18,
+				"complete": false,
+				"door": false,
+				"moves": 14,
+				"orientation": "(0, 1, 0)|(0, 0, -1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					2,
+					0
+				],
+				"commits": 19,
+				"complete": false,
+				"door": false,
+				"moves": 15,
+				"orientation": "(1, 0, 0)|(0, 0, -1)|(0, 1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "rotate",
+			"after": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 0,
+				"world": 0
+			},
+			"step": 1
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					3,
+					0
+				],
+				"commits": 20,
+				"complete": false,
+				"door": false,
+				"moves": 16,
+				"orientation": "(0, -1, 0)|(0, 0, -1)|(1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					9,
+					0
+				],
+				"commits": 21,
+				"complete": false,
+				"door": false,
+				"moves": 17,
+				"orientation": "(-1, 0, 0)|(0, 0, -1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 1,
+			"world_direction": [
+				0,
+				1
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 22,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 19,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					9,
+					1
+				],
+				"commits": 23,
+				"complete": false,
+				"door": false,
+				"moves": 18,
+				"orientation": "(-1, 0, 0)|(0, 1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 25,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"before": {
+				"cell": [
+					10,
+					1
+				],
+				"commits": 24,
+				"complete": false,
+				"door": false,
+				"moves": 19,
+				"orientation": "(0, 1, 0)|(1, 0, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "shift",
+			"after": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 25,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 1
+			}
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 27,
+				"complete": false,
+				"door": true,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					1
+				],
+				"commits": 26,
+				"complete": false,
+				"door": false,
+				"moves": 20,
+				"orientation": "(1, 0, 0)|(0, -1, 0)|(0, 0, -1)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 3,
+			"world_direction": [
+				0,
+				-1
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 28,
+				"complete": false,
+				"door": false,
+				"moves": 22,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					11,
+					0
+				],
+				"commits": 27,
+				"complete": false,
+				"door": true,
+				"moves": 21,
+				"orientation": "(1, 0, 0)|(0, 0, 1)|(0, -1, 0)",
+				"phase": "idle",
+				"plate": true,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		},
+		{
+			"action": "move",
+			"after": {
+				"cell": [
+					13,
+					0
+				],
+				"commits": 29,
+				"complete": true,
+				"door": false,
+				"moves": 23,
+				"orientation": "(-1, 0, 0)|(0, 0, 1)|(0, 1, 0)",
+				"phase": "complete",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"before": {
+				"cell": [
+					12,
+					0
+				],
+				"commits": 28,
+				"complete": false,
+				"door": false,
+				"moves": 22,
+				"orientation": "(0, -1, 0)|(0, 0, 1)|(-1, 0, 0)",
+				"phase": "idle",
+				"plate": false,
+				"view": 1,
+				"world": 0
+			},
+			"screen_direction": 0,
+			"world_direction": [
+				1,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "retained_inline_audit_failure",
+  "baseline_head": "9e2e9c29a73272d431795f12db1fefaff2433b05",
+  "command_exit_code": 1,
+  "checks_reached": 6,
+  "failure": "AssertionError: documented NORTH key sequence equals actual native trace",
+  "cause": "DESIGN.md wrote S at formal action 21, after the EAST crossing. Original PerspectiveController mapping and native_02 trace require D for world +z from (9,0) to (9,1).",
+  "fix_scope": "one character in DESIGN.md reference key sequence",
+  "native_candidate_modified": false,
+  "native_runtime_modified": false,
+  "native_evidence_modified": false,
+  "final_recheck": "STRUCTURAL_AUDIT.json"
+}
