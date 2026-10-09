@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "task": "BETA_GAME_FEEL_PARALLEL_BOOTSTRAP_01",
+  "reference_baseline": "d472885d7375ef73fd36e4abc1847a9ba36cac44",
+  "contract_baseline": "THE_COMMIT_CONTAINING_THIS_MATRIX_AND_GAME_FEEL_CONTRACT; actual SHA registered after commit in WORKTREES.json",
+  "integration": {
+    "path": "E:/godot/worktrees/block-girl-foundation-4-integration",
+    "branch": "integration/foundation-4-authoring",
+    "owner": "00"
+  },
+  "code_owners": [
+    {
+      "owner": "01",
+      "thread_id": "01a09970-c892-7e93-bce1-5c6473c26ea5",
+      "title": "01｜Runtime｜D_JOBS Final",
+      "host_id": "local",
+      "branch": "feat/pfall-runtime",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-runtime",
+      "write_paths": [
+        "foundation/game_feel/**",
+        "foundation/contracts/foundation_types.gd",
+        "foundation/contracts/contract_records.gd",
+        "foundation/contracts/contract_validation.gd",
+        "foundation/contracts/state_key.gd",
+        "foundation/rules/**",
+        "foundation/validation/safety_queries.gd",
+        "foundation/runtime/runtime_session.gd",
+        "foundation/runtime/kernel_port.gd",
+        "foundation/runtime/input_mapper.gd",
+        "foundation/solver/**",
+        "foundation/parity/trace_replayer.gd",
+        "foundation/level/level_codec.gd",
+        "tests/beta_sprint/game_feel_owner_01/**",
+        "docs/beta-sprint/game-feel-owner-01/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    },
+    {
+      "owner": "09",
+      "thread_id": "01a120e9-944b-75f3-9663-f690cc816795",
+      "title": "09｜Map & Spatial Design",
+      "host_id": "local",
+      "branch": "feat/pfall-map",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-map",
+      "write_paths": [
+        "experiments/game_feel_01/maps/**",
+        "tests/beta_sprint/game_feel_owner_09/**",
+        "docs/beta-sprint/game-feel-owner-09/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    },
+    {
+      "owner": "10A",
+      "thread_id": "01a12155-8bd9-7b23-b6e2-0faab59ce419",
+      "title": "10A | fall animation",
+      "host_id": "local",
+      "branch": "feat/pfall-animation",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-fall-animation",
+      "write_paths": [
+        "game/feel/animation/fall_landing/**",
+        "tests/beta_sprint/game_feel_owner_10a/**",
+        "docs/beta-sprint/game-feel-owner-10a/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    },
+    {
+      "owner": "10B",
+      "thread_id": "01a12155-c080-7a73-b7e2-4764b328a3f9",
+      "title": "10B | edge animation",
+      "host_id": "local",
+      "branch": "feat/edge-recoil-animation",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-edge-animation",
+      "write_paths": [
+        "game/feel/animation/edge_recoil/**",
+        "tests/beta_sprint/game_feel_owner_10b/**",
+        "docs/beta-sprint/game-feel-owner-10b/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    },
+    {
+      "owner": "11",
+      "thread_id": "01a12155-ea2b-70a0-bc0a-3af83aea60f9",
+      "title": "11 Audio",
+      "host_id": "local",
+      "branch": "feat/game-feel-audio",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-audio",
+      "write_paths": [
+        "game/feel/audio/**",
+        "production/experimental/game_feel_01/audio/**",
+        "tests/beta_sprint/game_feel_owner_11/**",
+        "docs/beta-sprint/game-feel-owner-11/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    },
+    {
+      "owner": "07",
+      "thread_id": "01a1112c-6fbd-7243-8a67-fc1141598d77",
+      "title": "07 | 梳理 Game Shell 菜单与流程",
+      "host_id": "local",
+      "branch": "feat/game-feel-ui",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-ui",
+      "write_paths": [
+        "game/feel/ui/**",
+        "production/experimental/game_feel_01/ui/**",
+        "docs/game-shell/game-feel-ui-extension-01/**",
+        "tests/beta_sprint/game_feel_owner_07/**",
+        "docs/beta-sprint/game-feel-owner-07/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    },
+    {
+      "owner": "03",
+      "thread_id": "01a09970-b32f-74b0-8e0a-13b72bdea4fe",
+      "title": "03｜Quality｜C_QUALITY / I2",
+      "host_id": "local",
+      "branch": "test/game-feel-quality",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-quality",
+      "write_paths": [
+        "tests/beta_sprint/game_feel/**",
+        "tests/beta_sprint/game_feel_owner_03/**",
+        "docs/beta-sprint/game-feel-owner-03/**"
+      ],
+      "delivery": "Owner-local commit + exact SHA/file hashes/raw evidence; formal dependent cases pending"
+    }
+  ],
+  "art_owner": {
+    "owner": "05",
+    "thread_id": "01a0ca0e-e76c-7d21-9cae-844bd2adf0db",
+    "title": "05｜Art｜角色翻滚 + Inner World",
+    "host_id": "local",
+    "environment": "Existing independent E:/Study/方块娘项目/若叶睦/model/art production environment",
+    "write_policy": "New additive game_feel_01 experimental release only; actual output path declared by 05; approved masters frozen",
+    "integration_target": "production/experimental/game_feel_01/art_vfx/**",
+    "integration_target_owner": "00"
+  },
+  "human_qa": {
+    "owner": "08",
+    "thread_id": "01a1112c-8568-7de1-80b2-6ab782c2094d",
+    "title": "08｜QA & Build｜试玩 / Bug / 打包",
+    "host_id": "local",
+    "state": "WAITING_FOR_INTEGRATED_BUILD",
+    "blocks_owner_local_development": false
+  },
+  "reserved_to_00": [
+    "docs/beta-sprint/game-feel/**",
+    "game/feel/cube_presenter.gd",
+    "experiments/game_feel_01/host/**",
+    "production/experimental/game_feel_01/art_vfx/**",
+    "project.godot",
+    "default_bus_layout.tres",
+    "game/shell/**",
+    "game/levels/mutsumi/**",
+    "prototype/perspective/**",
+    "game/player/**",
+    "game/polish/**",
+    "prototype/foundation/runtime/**",
+    "foundation/runtime/prototype_presenter.gd"
+  ],
+  "forbidden_to_every_game_feel_owner": [
+    "foundation/authoring/**",
+    "foundation/jobs/**",
+    "foundation/editor/**",
+    "addons/**",
+    "production/art_3d/**",
+    "production/ui/beta_shell_01/**",
+    "docs/art/BETA_UI_ART_DIRECTION_01/**",
+    "game/levels/mutsumi/batch_01/**",
+    "game/levels/mutsumi/batch_02/**"
+  ],
+  "scope_rules": [
+    "01 may extend only opt-in formal Fall permission/action/state/Safety/Solver/Replay/codec; retain old versions and ordinary behavior. No D_JOBS/A_EDIT/general authoring redevelopment.",
+    "New modules may create matching Godot .uid sidecars within their own roots. Existing shared script .uid changes require 00 review.",
+    "Do not edit other Owner roots, the shared contract, Autoload/InputMap/Main/global bus/Save. Submit precise INTEGRATION_REQUEST for shared wiring.",
+    "Owner-local Unit fixtures may be synthetic with declared doubles/authority=false; never pass them as Real/Graphical legal Fall.",
+    "Existing 03/07 exploratory worktrees and raw evidence are preserved. Copy only their own additive outputs into allocated roots; no old branch wholesale merge/reset.",
+    "Experimental Reduced Motion / Hint Strength may travel as separate presentation config. Do not add keys to legacy Save settings or persist them without 00 reviewed integration.",
+    "No implicit ownership permission from a path not matching an allowlist; report exact required shared delta without stopping independent local work."
+  ]
+}
