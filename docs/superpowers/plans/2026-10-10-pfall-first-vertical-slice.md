@@ -35,25 +35,26 @@
 
 ## Task1: receive and validate independent delivered candidates
 
-- [ ] Check each exact candidate ancestor, file scope, working tree, raw evidence/hashes; normal merge only ready deliveries in one batch window.
-- [ ] Execute 09 actual validate_maps.gd from00 with a fresh00 evidence directory/isolated profile; retain 30 baseline checks and all Fall pending cases.
-- [ ] Receive10A/03 commits, verify APIs and run scoped module checks. WIP is not copied or cherry-picked into production.
+- [x] Check each exact candidate ancestor, file scope, working tree, raw evidence/hashes; normal merge only ready deliveries in one batch window.
+- [x] Execute 09 actual validate_maps.gd from00 with a fresh00 evidence directory/isolated profile; retain 30 baseline checks and the initial Fall pending record.
+- [x] Receive10A/03 commits, verify APIs and run scoped checks. WIP is not copied or cherry-picked into production; 03 A/B/Camera independent native observations 69 checks completed.
 
 ## Task2: one authoritative visual writer
 
-- [ ] Create tests/beta_sprint/pfall_integration/test_presenter.gd for identity/reset/reentrant-finish/pause/dedup and exact landing using actual10A modules and explicitly labelled Unit DTOs.
-- [ ] Watch a meaningful behavioral RED, implement game/feel/cube_presenter.gd, then GREEN. Public interface: bind(actor:Node3D, fall:RefCounted, landing:RefCounted, pose_projection:Callable, finish_transition:Callable); consume_event(event:Dictionary); tick(delta:float); set_paused(bool); clear(). No runtime state writes.
-- [ ] Natural sample motion_done invokes real finish with transition_identity once. Only matching COMMITTED starts Landing; sample/cancel uses presentation_identity. All visual writes stay in this class.
+- [x] Create tests/beta_sprint/pfall_integration/test_presenter.gd for identity/reset/reentrant-finish/pause/dedup and exact landing using actual10A modules and explicitly labelled Unit DTOs.
+- [x] Preserve behavioral RED and GREEN. game/feel/cube_presenter.gd has one authoritative actor writer, captured identities, scope and result-valued canonical projection. No Runtime state writes.
+- [x] Natural sample motion_done invokes real finish with transition_identity once. Only matching COMMITTED starts Landing; sample/cancel uses presentation_identity. All visual writes stay in this class.
 
 ## Task3: real formal lab host and core acceptance
 
-- [ ] Inspect01's actual delivered facade/config/action/finish/reset functions before importing it; record exact path/interface in ledger. Do not invent an unimplemented API.
-- [ ] Compose experiments/game_feel_01/host/lab.tscn and lab.gd, actual Baker/Runtime/approved-or-isolated actor/Camera and map selection. No fallback fake Runtime or authoritative Mesh coordinate decisions.
-- [ ] Add executable Real/Graphical core cases using03 matrix; legal A/B, negative gate variants, final state/key/orientation, continuous motion, post-landing MOVE, Reset/interruption, Solver/Safety/Replay and unchanged Roll/Connection controls. checks>0, failures=[], exit0, stderr empty and doubles=[] required for PASS.
+- [x] Inspect01's actual delivered facade/config/action/finish/reset functions before importing26387d6; record exact path/interface. Camera uses native transition_started + strict get_pending_identity, not neutral feedback.
+- [x] Compose experiments/game_feel_01/host/core_lab.tscn and core_lab.gd, actual Baker/Runtime/isolated actor/Camera and map selection. No fallback fake Runtime or authoritative Mesh coordinate decisions.
+- [x] Execute Real54/Graphical62 and independent03 A26/B26/Camera17, 01 rules59 and logical Solver/Replay24. Natural motion, state/key/orientation, Reset/interruption and legacy controls pass. v2 Graphical TraceReplayer case remains individually pending; full94 matrix is not PASS.
 
 ## Task4: immutable Build and08 handoff
 
-- [ ] When actual core gate passes, package a fresh core_build version/source identity and all files/hash manifest, standalone lab launcher and isolated user profile. Keep existing five-level launcher available. Record incomplete Art/Audio/UI.
-- [ ] Send08 exact source/ZIP/path/launcher/profile and focused core scope; Human QA remains NOT_RUN until actual tester evidence.
-- [ ] Receive remaining10B/05/11/07/03 deliveries incrementally within merge policy; prepare second full audiovisual Build after those actual gates.
-- [ ] Record PFALL_INCREMENTAL_INTEGRATION_STATUS with actual PENDING/BLOCKED/PASS and committed delivery references; verify production/QA/Art preservation and00 CLEAN before final report.
+- [x] Package beta_pfall_core_20261010_01 at exact ee1ea27 source,163 Git blobs, SHA manifest and isolated launcher/profile. Fresh package54 checks pass; old five-level package remains immutable. Record incomplete Art/Audio/UI.
+- [x] Send08 exact source/ZIP/path/launcher/profile and focused core scope.08 verified identity and isolated copy; Human QA NOT_RUN awaiting actual player.
+- [x] Receive10B/11/07/03 delivered modules and consumer fixes in window1.05 remains independent user-review-pending.
+- [ ] Prepare second full audiovisual Build after actual native Edge/Art/VFX/Audio/UI integration gates; do not block first Core result.
+- [x] Record formal limited Core receipt and PFALL_INCREMENTAL_INTEGRATION_STATUS, scoped pending results and source/Build identities;14440 preservation and default Main startup pass.00 seal commit checked CLEAN before final report.

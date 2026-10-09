@@ -1,0 +1,8492 @@
+{
+	"binding_path": "res://docs/beta-sprint/game-feel/CORE_PLAYABLE_QUALITY_BINDINGS.json",
+	"binding_sha256": "638da80e4b7fd6088a19df1339365bc8627e59777395b9313104c8d7f14196b9",
+	"capture": {
+		"authoritative_runtime": null,
+		"display": "Windows",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+		"fixture_kind": "REAL_CORE_HOST",
+		"input_profile": "NATIVE_INPUT_PARSE_INPUT_EVENT",
+		"pid": 41744,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/.godot/game-feel-quality/i_b_01/profile/AppData/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"case": "CORE_B_NATURAL_FALL",
+	"checks": 26,
+	"delivery_sha": null,
+	"doubles": [],
+	"events": [
+		{
+			"event": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_path_points2": [
+					"(0, 6, 0)",
+					"(-2, 6, 2)",
+					"(-6, 10, 6)",
+					"(-8, 10, 8)"
+				],
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v1",
+				"event_id": 1,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+				"motion_profile_hash": "c2b731a0976c69d54e0dbe4db113a16fbca79de92da8a3384458f79e892f1bbc",
+				"motion_profile_id": "pfall_b_edge_clear_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 2,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"connection_id": "pfall_b",
+						"kind": 8
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "exact_linear_cube_sweep.v1",
+						"level_hash": "ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4",
+						"profile_hash": "c2b731a0976c69d54e0dbe4db113a16fbca79de92da8a3384458f79e892f1bbc",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 1,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 2,
+					"is_global": false,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"runtime_after_callback": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"runtime_statekey_before": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2534.349
+		},
+		{
+			"event": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_path_points2": [
+					"(0, 6, 0)",
+					"(-2, 6, 2)",
+					"(-6, 10, 6)",
+					"(-8, 10, 8)"
+				],
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v1",
+				"event_id": 2,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+				"motion_profile_hash": "c2b731a0976c69d54e0dbe4db113a16fbca79de92da8a3384458f79e892f1bbc",
+				"motion_profile_id": "pfall_b_edge_clear_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "COMMITTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 2,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"connection_id": "pfall_b",
+						"kind": 8
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "exact_linear_cube_sweep.v1",
+						"level_hash": "ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4",
+						"profile_hash": "c2b731a0976c69d54e0dbe4db113a16fbca79de92da8a3384458f79e892f1bbc",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 1,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 2,
+					"is_global": false,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"runtime_after_callback": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_before": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 3096.617
+		},
+		{
+			"event": {
+				"attempt_id": 2,
+				"authoritative_final_orientation": 12,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 3,
+				"intended_move_direction": 0,
+				"interruption_reason": null,
+				"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+				"phase": "STARTED",
+				"presentation_identity": {
+					"attempt_id": 2,
+					"generation": 2,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "exit",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 12
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"schema_version": 1,
+				"semantic": "MOVE_APPLIED_NORMAL",
+				"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+				"source_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "exit",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "exit",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 12
+				},
+				"transition_identity": {
+					"generation": 2,
+					"is_global": false,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+					"transaction_id": 2
+				},
+				"world_id": 0
+			},
+			"runtime_after_callback": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"runtime_statekey_before": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 4620.969
+		},
+		{
+			"event": {
+				"attempt_id": 2,
+				"authoritative_final_orientation": 12,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 4,
+				"intended_move_direction": 0,
+				"interruption_reason": null,
+				"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+				"phase": "COMMITTED",
+				"presentation_identity": {
+					"attempt_id": 2,
+					"generation": 2,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "exit",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 12
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"schema_version": 1,
+				"semantic": "MOVE_APPLIED_NORMAL",
+				"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+				"source_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "exit",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "exit",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 12
+				},
+				"transition_identity": {
+					"generation": 2,
+					"is_global": false,
+					"level_run_id": "11fb283b4573bfd88f4cc32db04abbbd",
+					"session_id": "7dcef224facd5bf07c07cbee9273f8a9",
+					"transaction_id": 2
+				},
+				"world_id": 0
+			},
+			"runtime_after_callback": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "exit",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 12
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_before": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 4815.791
+		}
+	],
+	"evidence_role": "PHASE_EVIDENCE_ONLY",
+	"failures": [],
+	"inputs": [
+		{
+			"event_index": 0,
+			"input": {
+				"kind": "mouse_button",
+				"pressed": true,
+				"x": 60.0,
+				"y": 150.0
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2107.854
+		},
+		{
+			"event_index": 0,
+			"input": {
+				"kind": "mouse_button",
+				"pressed": false,
+				"x": 60.0,
+				"y": 150.0
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2126.187
+		},
+		{
+			"event_index": 0,
+			"input": {
+				"key": "F",
+				"kind": "key",
+				"pressed": true
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2487.781
+		},
+		{
+			"event_index": 1,
+			"input": {
+				"key": "F",
+				"kind": "key",
+				"pressed": false
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2537.455
+		},
+		{
+			"input": {
+				"center2": [
+					-8.0,
+					10.0,
+					8.0
+				],
+				"kind": "checkpoint",
+				"label": "Landing",
+				"preserve_initial_basis": true
+			},
+			"time_ms": 4554.849
+		},
+		{
+			"event_index": 2,
+			"input": {
+				"key": "D",
+				"kind": "key",
+				"pressed": true
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 4556.697
+		},
+		{
+			"event_index": 3,
+			"input": {
+				"key": "D",
+				"kind": "key",
+				"pressed": false
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 4624.908
+		}
+	],
+	"missing": [],
+	"natural_success": null,
+	"samples": [
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": null,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 0.0,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1791.986
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 30.732,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1822.718
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 1.921,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1824.639
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 14.736,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1839.375
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1856.041
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.677,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1872.718
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.706,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1889.424
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.62,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1906.044
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1922.717
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1939.379
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1956.046
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.676,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1972.722
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.654,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1989.376
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.691,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 30.693,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2006.067
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.644,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2022.711
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2039.379
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2056.048
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.693,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2072.741
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.636,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2089.377
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2106.041
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 18.681,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2124.722
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 60.512,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2185.234
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 0.809,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2186.043
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 0.434,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2186.477
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.261,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2202.738
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2219.404
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2236.071
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2252.739
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2269.398
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2286.07
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2302.742
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2319.404
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2336.073
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.677,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2352.75
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.648,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2369.398
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.644,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2386.042
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.719,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2402.761
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.634,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2419.395
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.675,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2436.07
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2452.734
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2469.395
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2486.06
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 49.878,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2535.938
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 3.748,
+			"model_basis": [
+				[
+					0.999409139156342,
+					0.0343656614422798,
+					0.000590848387219012
+				],
+				[
+					-0.0343656614422798,
+					0.998818278312683,
+					0.0343656614422798
+				],
+				[
+					0.000590848387219012,
+					-0.0343656614422798,
+					0.999409139156342
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2539.686
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 0.736,
+			"model_basis": [
+				[
+					0.998932540416718,
+					0.0461810752749443,
+					0.00106748542748392
+				],
+				[
+					-0.0461810752749443,
+					0.99786502122879,
+					0.0461810752749443
+				],
+				[
+					0.00106748542748392,
+					-0.0461810752749443,
+					0.998932540416718
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2540.422
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 14.46,
+			"model_basis": [
+				[
+					0.998921155929565,
+					0.0464265011250973,
+					0.00107887387275696
+				],
+				[
+					-0.0464265011250973,
+					0.997842252254486,
+					0.0464265011250973
+				],
+				[
+					0.00107887387275696,
+					-0.0464265011250973,
+					0.998921155929565
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2554.882
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.677,
+			"model_basis": [
+				[
+					0.998549938201904,
+					0.0538138188421726,
+					0.00145006645470858
+				],
+				[
+					-0.0538138188421726,
+					0.997099876403809,
+					0.0538138188421726
+				],
+				[
+					0.00145006645470858,
+					-0.0538138188421726,
+					0.998549938201904
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2571.559
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					0.99811327457428,
+					0.0613706149160862,
+					0.00188673590309918
+				],
+				[
+					-0.0613706149160862,
+					0.99622654914856,
+					0.0613706149160862
+				],
+				[
+					0.00188673590309918,
+					-0.0613706149160862,
+					0.99811327457428
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				267.870391845703
+			],
+			"time_ms": 2588.222
+		},
+		{
+			"canonical_position": [
+				-0.0983213633298874,
+				3.0,
+				0.0983213633298874
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					0.998314082622528,
+					0.0580185428261757,
+					0.00168591819237918
+				],
+				[
+					-0.0580185428261757,
+					0.996628165245056,
+					0.0580185428261757
+				],
+				[
+					0.00168591819237918,
+					-0.0580185428261757,
+					0.998314082622528
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				272.285369873047
+			],
+			"time_ms": 2604.881
+		},
+		{
+			"canonical_position": [
+				-0.221918299794197,
+				3.0,
+				0.221918299794197
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					0.998952567577362,
+					0.0457452274858952,
+					0.00104740995448083
+				],
+				[
+					-0.0457452274858952,
+					0.997905194759369,
+					0.0457452274858952
+				],
+				[
+					0.00104740995448083,
+					-0.0457452274858952,
+					0.998952567577362
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				277.835327148438
+			],
+			"time_ms": 2621.547
+		},
+		{
+			"canonical_position": [
+				-0.345515251159668,
+				3.0,
+				0.345515251159668
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					0.999573230743408,
+					0.0292087830603123,
+					0.00042675860458985
+				],
+				[
+					-0.0292087830603123,
+					0.999146461486816,
+					0.0292087830603123
+				],
+				[
+					0.00042675860458985,
+					-0.0292087830603123,
+					0.999573230743408
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				283.385314941406
+			],
+			"time_ms": 2638.216
+		},
+		{
+			"canonical_position": [
+				-0.469112187623978,
+				3.0,
+				0.469112187623978
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					0.999914109706879,
+					0.0131053403019905,
+					0.0000858823477756232
+				],
+				[
+					-0.0131053403019905,
+					0.999828219413757,
+					0.0131053403019905
+				],
+				[
+					0.0000858823477756232,
+					-0.0131053403019905,
+					0.999914109706879
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				288.935272216797
+			],
+			"time_ms": 2654.884
+		},
+		{
+			"canonical_position": [
+				-0.592709124088287,
+				3.0,
+				0.592709124088287
+			],
+			"frame_interval_ms": 16.742,
+			"model_basis": [
+				[
+					0.999997675418854,
+					0.00214671157300472,
+					0.00000230419027502649
+				],
+				[
+					-0.00214671157300472,
+					0.999995410442352,
+					0.00214671157300472
+				],
+				[
+					0.00000230419027502649,
+					-0.00214671157300472,
+					0.999997675418854
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				294.485260009766
+			],
+			"time_ms": 2671.626
+		},
+		{
+			"canonical_position": [
+				-0.66835606098175,
+				3.0,
+				0.66835606098175
+			],
+			"frame_interval_ms": 16.582,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				297.882049560547
+			],
+			"time_ms": 2688.208
+		},
+		{
+			"canonical_position": [
+				-0.679030001163483,
+				3.0,
+				0.679030001163483
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				298.361389160156
+			],
+			"time_ms": 2704.882
+		},
+		{
+			"canonical_position": [
+				-0.701612234115601,
+				3.0,
+				0.701612234115601
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				299.375396728516
+			],
+			"time_ms": 2721.546
+		},
+		{
+			"canonical_position": [
+				-0.736102879047394,
+				3.0,
+				0.736102879047394
+			],
+			"frame_interval_ms": 16.643,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				300.924163818359
+			],
+			"time_ms": 2738.189
+		},
+		{
+			"canonical_position": [
+				-0.779043972492218,
+				3.0,
+				0.779043972492218
+			],
+			"frame_interval_ms": 16.7,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				302.852386474609
+			],
+			"time_ms": 2754.889
+		},
+		{
+			"canonical_position": [
+				-0.836564898490906,
+				3.0,
+				0.836564898490906
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				305.435272216797
+			],
+			"time_ms": 2771.551
+		},
+		{
+			"canonical_position": [
+				-0.9060018658638,
+				3.0,
+				0.9060018658638
+			],
+			"frame_interval_ms": 16.645,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				308.553253173828
+			],
+			"time_ms": 2788.196
+		},
+		{
+			"canonical_position": [
+				-0.987329661846161,
+				3.0,
+				0.987329661846161
+			],
+			"frame_interval_ms": 16.695,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				312.205169677734
+			],
+			"time_ms": 2804.891
+		},
+		{
+			"canonical_position": [
+				-1.06579411029816,
+				3.06579399108887,
+				1.06579411029816
+			],
+			"frame_interval_ms": 16.644,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				313.512725830078
+			],
+			"time_ms": 2821.535
+		},
+		{
+			"canonical_position": [
+				-1.15165483951569,
+				3.1516547203064,
+				1.15165483951569
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				314.476593017578
+			],
+			"time_ms": 2838.204
+		},
+		{
+			"canonical_position": [
+				-1.2472403049469,
+				3.2472403049469,
+				1.2472403049469
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				315.549652099609
+			],
+			"time_ms": 2854.876
+		},
+		{
+			"canonical_position": [
+				-1.35255479812622,
+				3.35255479812622,
+				1.35255479812622
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				316.73193359375
+			],
+			"time_ms": 2871.539
+		},
+		{
+			"canonical_position": [
+				-1.46759653091431,
+				3.46759653091431,
+				1.46759653091431
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				318.023376464844
+			],
+			"time_ms": 2888.206
+		},
+		{
+			"canonical_position": [
+				-1.59236061573029,
+				3.592360496521,
+				1.59236061573029
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				319.423950195313
+			],
+			"time_ms": 2904.871
+		},
+		{
+			"canonical_position": [
+				-1.72684717178345,
+				3.72684717178345,
+				1.72684717178345
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				320.933715820313
+			],
+			"time_ms": 2921.532
+		},
+		{
+			"canonical_position": [
+				-1.8710470199585,
+				3.8710470199585,
+				1.8710470199585
+			],
+			"frame_interval_ms": 16.698,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				322.552429199219
+			],
+			"time_ms": 2938.23
+		},
+		{
+			"canonical_position": [
+				-2.02498388290405,
+				4.02498388290405,
+				2.02498388290405
+			],
+			"frame_interval_ms": 16.64,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				324.280487060547
+			],
+			"time_ms": 2954.87
+		},
+		{
+			"canonical_position": [
+				-2.18864393234253,
+				4.18864393234253,
+				2.18864393234253
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				326.117736816406
+			],
+			"time_ms": 2971.535
+		},
+		{
+			"canonical_position": [
+				-2.36203479766846,
+				4.36203479766846,
+				2.36203479766846
+			],
+			"frame_interval_ms": 16.658,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				328.064270019531
+			],
+			"time_ms": 2988.193
+		},
+		{
+			"canonical_position": [
+				-2.54513692855835,
+				4.54513692855835,
+				2.54513692855835
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 3.31,
+			"screen_position": [
+				576.0,
+				330.119689941406
+			],
+			"time_ms": 3004.865
+		},
+		{
+			"canonical_position": [
+				-2.73797178268433,
+				4.73797178268433,
+				2.73797178268433
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				332.284484863281
+			],
+			"time_ms": 3021.531
+		},
+		{
+			"canonical_position": [
+				-2.94053745269775,
+				4.94053745269775,
+				2.94053745269775
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				334.558502197266
+			],
+			"time_ms": 3038.196
+		},
+		{
+			"canonical_position": [
+				-3.18715214729309,
+				5.0,
+				3.18715214729309
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				343.629821777344
+			],
+			"time_ms": 3054.869
+		},
+		{
+			"canonical_position": [
+				-3.45905900001526,
+				5.0,
+				3.45905900001526
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				355.839447021484
+			],
+			"time_ms": 3071.531
+		},
+		{
+			"canonical_position": [
+				-3.74285054206848,
+				5.0,
+				3.74285054206848
+			],
+			"frame_interval_ms": 16.698,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				368.582794189453
+			],
+			"time_ms": 3088.229
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.62,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3104.849
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.675,
+			"model_basis": [
+				[
+					1.00522685050964,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.989627659320831,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00522685050964
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3121.524
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.01642739772797,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.967937290668488,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.01642739772797
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3138.197
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.02647817134857,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.949075102806091,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.02647817134857
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3154.857
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.02353119850159,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.954548120498657,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.02353119850159
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3171.528
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.01246809959412,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.975522577762604,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.01246809959412
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3188.195
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.00473356246948,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.990599632263184,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00473356246948
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3204.862
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.68,
+			"model_basis": [
+				[
+					1.00018191337585,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.99963641166687,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00018191337585
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3221.542
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.645,
+			"model_basis": [
+				[
+					0.998071074485779,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00386893749237,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.998071074485779
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3238.187
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					0.99753338098526,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00495159626007,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.99753338098526
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3254.858
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					0.997823655605316,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00436699390411,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.997823655605316
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3271.522
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					0.998416185379028,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00317513942719,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.998416185379028
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3288.179
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.696,
+			"model_basis": [
+				[
+					0.999005496501923,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0019918680191,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.999005496501923
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3304.875
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.647,
+			"model_basis": [
+				[
+					0.999457776546478,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00108540058136,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.999457776546478
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3321.522
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					0.999748289585114,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00050354003906,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.999748289585114
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3338.19
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					0.999906420707703,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00018703937531,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.999906420707703
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3354.855
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					0.999977231025696,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.00004553794861,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					0.999977231025696
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3371.524
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.00000059604645,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.999998807907104,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00000059604645
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3388.193
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.658,
+			"model_basis": [
+				[
+					1.00000381469727,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.999992430210114,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00000381469727
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3404.851
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.00000166893005,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.999996721744537,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00000166893005
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3421.519
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.00000011920929,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.999999761581421,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.00000011920929
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3438.186
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3454.851
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 17.119,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3471.97
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.212,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3488.182
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3504.849
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3521.515
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3538.188
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3554.854
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.653,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3571.507
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.67,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3588.177
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3604.848
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3621.51
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.67,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3638.18
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3654.843
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3671.512
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3688.175
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3704.84
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.68,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3721.52
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.655,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3738.175
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3754.842
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3771.514
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.654,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3788.168
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.677,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3804.845
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3821.505
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3838.17
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3854.838
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3871.5
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3888.174
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3904.833
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3921.5
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3938.174
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3954.838
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3971.503
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 3988.163
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.699,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 4.55,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4004.862
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.627,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4021.489
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4038.158
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4054.83
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4071.491
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4088.16
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4104.827
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4121.489
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.677,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4138.166
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.652,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4154.818
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.775,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4171.593
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.562,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4188.155
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4204.823
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4221.492
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.655,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4238.147
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.746,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4254.893
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.593,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4271.486
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4288.149
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.67,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4304.819
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4321.491
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.658,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4338.149
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4354.814
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4371.479
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4388.147
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4404.821
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.812,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4421.633
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.522,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4438.155
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4454.815
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4471.483
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4488.143
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4504.814
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4521.476
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.721,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4538.197
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.617,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4554.814
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 0.041,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4554.855
+		},
+		{
+			"canonical_position": [
+				-4.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 68.316,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				576.0,
+				380.129760742188
+			],
+			"time_ms": 4623.171
+		},
+		{
+			"canonical_position": [
+				-3.83350539207459,
+				5.12351751327515,
+				4.0
+			],
+			"frame_interval_ms": 4.705,
+			"model_basis": [
+				[
+					0.957022905349731,
+					-0.290012240409851,
+					0.0
+				],
+				[
+					0.290012240409851,
+					0.957022905349731,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				581.449157714844,
+				372.231811523438
+			],
+			"time_ms": 4627.876
+		},
+		{
+			"canonical_position": [
+				-3.80941987037659,
+				5.13581371307373,
+				4.0
+			],
+			"frame_interval_ms": 0.593,
+			"model_basis": [
+				[
+					0.945233762264252,
+					-0.326394200325012,
+					0.0
+				],
+				[
+					0.326394200325012,
+					0.945233762264252,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				582.237487792969,
+				371.276916503906
+			],
+			"time_ms": 4628.469
+		},
+		{
+			"canonical_position": [
+				-3.796058177948,
+				5.14214468002319,
+				4.0
+			],
+			"frame_interval_ms": 14.123,
+			"model_basis": [
+				[
+					0.938202679157257,
+					-0.346086382865906,
+					0.0
+				],
+				[
+					0.346086382865906,
+					0.938202679157257,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				582.6748046875,
+				370.763732910156
+			],
+			"time_ms": 4642.592
+		},
+		{
+			"canonical_position": [
+				-3.7147901058197,
+				5.17369508743286,
+				4.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					0.888485312461853,
+					-0.458905041217804,
+					0.0
+				],
+				[
+					0.458905041217804,
+					0.888485312461853,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				585.334594726563,
+				367.876617431641
+			],
+			"time_ms": 4659.257
+		},
+		{
+			"canonical_position": [
+				-3.60689830780029,
+				5.19897985458374,
+				4.0
+			],
+			"frame_interval_ms": 16.676,
+			"model_basis": [
+				[
+					0.805878162384033,
+					-0.592081367969513,
+					0.0
+				],
+				[
+					0.592081367969513,
+					0.805878162384033,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				588.865783691406,
+				364.602691650391
+			],
+			"time_ms": 4675.933
+		},
+		{
+			"canonical_position": [
+				-3.4922137260437,
+				5.20706367492676,
+				4.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					0.699277698993683,
+					-0.714850127696991,
+					0.0
+				],
+				[
+					0.714850127696991,
+					0.699277698993683,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				592.619323730469,
+				361.755554199219
+			],
+			"time_ms": 4692.599
+		},
+		{
+			"canonical_position": [
+				-3.37804651260376,
+				5.19651079177856,
+				4.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					0.574557304382324,
+					-0.818464338779449,
+					0.0
+				],
+				[
+					0.818464338779449,
+					0.574557304382324,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				596.355895996094,
+				359.547698974609
+			],
+			"time_ms": 4709.271
+		},
+		{
+			"canonical_position": [
+				-3.27157306671143,
+				5.16919422149658,
+				4.0
+			],
+			"frame_interval_ms": 16.656,
+			"model_basis": [
+				[
+					0.440767496824265,
+					-0.897621333599091,
+					0.0
+				],
+				[
+					0.897621333599091,
+					0.440767496824265,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				599.840637207031,
+				358.077117919922
+			],
+			"time_ms": 4725.927
+		},
+		{
+			"canonical_position": [
+				-3.1788125038147,
+				5.12995147705078,
+				4.0
+			],
+			"frame_interval_ms": 16.789,
+			"model_basis": [
+				[
+					0.308763891458511,
+					-0.951138734817505,
+					0.0
+				],
+				[
+					0.951138734817505,
+					0.308763891458511,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				602.876586914063,
+				357.316101074219
+			],
+			"time_ms": 4742.716
+		},
+		{
+			"canonical_position": [
+				-3.10383415222168,
+				5.08570718765259,
+				4.0
+			],
+			"frame_interval_ms": 16.546,
+			"model_basis": [
+				[
+					0.189541235566139,
+					-0.981872737407684,
+					0.0
+				],
+				[
+					0.981872737407684,
+					0.189541235566139,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				605.33056640625,
+				357.122741699219
+			],
+			"time_ms": 4759.262
+		},
+		{
+			"canonical_position": [
+				-3.04868698120117,
+				5.04434967041016,
+				4.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					0.093036450445652,
+					-0.995662689208984,
+					0.0
+				],
+				[
+					0.995662689208984,
+					0.093036450445652,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				607.135498046875,
+				357.277404785156
+			],
+			"time_ms": 4775.919
+		},
+		{
+			"canonical_position": [
+				-3.01400852203369,
+				5.01362657546997,
+				4.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					0.0276351105421782,
+					-0.999618053436279,
+					0.0
+				],
+				[
+					0.999618053436279,
+					0.0276351105421782,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.270446777344,
+				357.533508300781
+			],
+			"time_ms": 4792.592
+		},
+		{
+			"canonical_position": [
+				-3.00019979476929,
+				5.00019979476929,
+				4.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					0.000399307406041771,
+					-0.999999940395355,
+					0.0
+				],
+				[
+					0.999999940395355,
+					0.000399307406041771,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.722412109375,
+				357.675598144531
+			],
+			"time_ms": 4809.256
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.712,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4825.968
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.622,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4842.59
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.656,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4859.246
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.681,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4875.927
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4892.588
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4909.262
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.688,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4925.95
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4942.616
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.652,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4959.268
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4975.939
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.67,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 4992.609
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 15.56,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5009.273
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.675,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5025.948
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.65,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5042.598
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5059.266
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.646,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5075.912
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5092.579
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5109.24
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5125.911
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5142.572
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5159.235
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.675,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5175.91
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5192.569
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.675,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5209.244
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5225.907
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5242.574
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5259.235
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.719,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5275.954
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.624,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5292.578
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5309.237
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5325.9
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5342.573
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.651,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5359.224
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.685,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5375.909
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5392.57
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5409.234
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.67,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5425.904
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.655,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5442.559
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.696,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5459.255
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.651,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5475.906
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.648,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5492.554
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.689,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5509.243
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.653,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5525.896
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5542.564
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5559.225
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5575.892
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.708,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5592.6
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.623,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5609.223
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5625.896
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5642.56
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5659.227
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5675.893
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5692.552
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.675,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5709.227
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.676,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5725.903
+		},
+		{
+			"canonical_position": [
+				-3.0,
+				5.0,
+				4.0
+			],
+			"frame_interval_ms": 16.648,
+			"model_basis": [
+				[
+					0.0,
+					-1.0,
+					0.0
+				],
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 13.133,
+			"screen_position": [
+				608.728942871094,
+				357.677886962891
+			],
+			"time_ms": 5742.551
+		}
+	],
+	"source_sha": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+	"status": "OBSERVATIONS_RECORDED"
+}

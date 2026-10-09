@@ -1,0 +1,2584 @@
+{
+  "task": "GAME_FEEL_INTEGRATION_QUALITY_01",
+  "contract_commit": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "contract_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+  "cases": [
+    {
+      "id": "CORE_A_NATURAL_FALL",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Owner09 pfall_a; Surface TOP; actual target lower; source actor center2 [0,6,0], target [-8, 2, 8]",
+      "action": "Registered native input sequence in actual 00 CORE_PLAYABLE host, EAST then explicit departure",
+      "expected": "Real STARTED→natural Presenter→native finish bridge→one COMMITTED→settled Landing; exact target/PRESERVE, visible continuous descent",
+      "evidence": [
+        "00 registered binding/receipt",
+        "01/09/10A actual delivery commits",
+        "native input",
+        "event/result snapshots",
+        "actor/camera trajectory",
+        "commit count"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_B_NATURAL_FALL",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Owner09 pfall_b; Surface TOP; actual target higher; source actor center2 [0,6,0], target [-8, 10, 8]",
+      "action": "Registered native input sequence in actual 00 CORE_PLAYABLE host, EAST then explicit departure",
+      "expected": "Real STARTED→natural Presenter→native finish bridge→one COMMITTED→settled Landing; exact target/PRESERVE, visible continuous descent",
+      "evidence": [
+        "00 registered binding/receipt",
+        "01/09/10A actual delivery commits",
+        "native input",
+        "event/result snapshots",
+        "actor/camera trajectory",
+        "commit count"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_CAMERA_REJECT",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Try each of three forbidden quadrants",
+      "expected": "CAMERA_NOT_ALLOWED; unchanged full state and body; no accepted Fall",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_NO_CONNECTION",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Use official no-author-connection fixture",
+      "expected": "FALL_NOT_AVAILABLE; no Runtime transition or decorative Fall",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_CROSS_WORLD",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Request Surface connection from Inner",
+      "expected": "WORLD_NOT_ALLOWED; do not reinterpret as EDGE",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_CONSECUTIVE_FALL",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Two authorized Fall runs using actual Reset/reload between runs",
+      "expected": "Unique identities; exactly one natural commit per accepted run; no stale callback",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_LANDING_NEXT_MOVE",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Land then issue next legal native movement",
+      "expected": "Landing neutral endpoint, physical orientation preserved, subsequent input accepted",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_RESET_INPUT",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Reset in flight; then new native movement/Fall",
+      "expected": "Old identity invalidated; no old commit/landing; new input/effect remains usable",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_HELD_REVERSE_BUSY",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Held/repeated/opposite movement, Q/E/drag/Space during flight",
+      "expected": "BUSY preserves captured camera/path/token and prevents overlapping motion",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_STATEKEY",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Compare full canonical state/key before and after actual natural completion",
+      "expected": "Official versioned StateKey and Orientation exactly match authorized result",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_SAFETY_SOLVER_REPLAY",
+      "area": "Solver",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT",
+        "SOLVER",
+        "REPLAY",
+        "SAFETY"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Real swept Safety negatives, formal Solver witness and native Runtime Replay",
+      "expected": "Real version dispatch and semantic validation; no fabricated edges or state writes",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "CORE_ORDINARY_CONTROLS",
+      "area": "Runtime",
+      "mode": "GRAPHICAL",
+      "scope": "CORE_PLAYABLE",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Actual default pipeline / official fixture and exact registered Build identity",
+      "action": "Native ordinary Roll and original authored PerspectiveConnection control",
+      "expected": "Original production permissions/physical pose/commit behavior unchanged; distinguish P01 observation identity from formal StateKey",
+      "evidence": [
+        "actual delivery/binding source SHA",
+        "native inputs",
+        "formal result/key/trace",
+        "body/phase observations",
+        "raw logs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null,
+      "registration_requirements": [
+        "CORE_PLAYABLE_RECEIPT"
+      ]
+    },
+    {
+      "id": "G_EVENT_NONE",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative MOVE_APPLIED_NORMAL/NONE; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_EDGE",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative MOVE_REJECTED_EDGE/EDGE; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_MECHANISM_LOCKED",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative ACTION_FEEDBACK/MECHANISM_LOCKED; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_BUSY",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative ACTION_FEEDBACK/BUSY; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_INVALID_FACE",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative ACTION_FEEDBACK/INVALID_FACE; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_SAFETY_REJECTED",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative ACTION_FEEDBACK/SAFETY_REJECTED; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_INVALID_ACTION",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative ACTION_FEEDBACK/INVALID_ACTION; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_EVENT_UNCLASSIFIED_REJECTION",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Real authored fixture with explicit native result/reason",
+      "action": "Request action through actual default Runtime/native input",
+      "expected": "Authoritative ACTION_FEEDBACK/UNCLASSIFIED_REJECTION; preserve original status/code/issues; MOVE_BLOCKED alone never implies EDGE",
+      "evidence": [
+        "immutable game_feel.event.v1 snapshots",
+        "native result",
+        "input and identities",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_LOWER_SURFACE",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Real authored Surface connection, actual target height lower, permitted view",
+      "action": "Explicit departure input; wait for stable completion",
+      "expected": "Accepted exactly once; canonical target, world, Face and Orientation match Runtime",
+      "evidence": [
+        "author resource/hash",
+        "actual source/target heights",
+        "view",
+        "permission",
+        "transition and commit signals",
+        "full canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_LOWER_INNER",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Real authored Inner connection, actual target height lower, permitted view",
+      "action": "Explicit departure input; wait for stable completion",
+      "expected": "Accepted exactly once; canonical target, world, Face and Orientation match Runtime",
+      "evidence": [
+        "author resource/hash",
+        "actual source/target heights",
+        "view",
+        "permission",
+        "transition and commit signals",
+        "full canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_HIGHER_SURFACE",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Real authored Surface connection, actual target height higher, permitted view",
+      "action": "Explicit departure input; wait for stable completion",
+      "expected": "Accepted exactly once; canonical target, world, Face and Orientation match Runtime",
+      "evidence": [
+        "author resource/hash",
+        "actual source/target heights",
+        "view",
+        "permission",
+        "transition and commit signals",
+        "full canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_HIGHER_INNER",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Real authored Inner connection, actual target height higher, permitted view",
+      "action": "Explicit departure input; wait for stable completion",
+      "expected": "Accepted exactly once; canonical target, world, Face and Orientation match Runtime",
+      "evidence": [
+        "author resource/hash",
+        "actual source/target heights",
+        "view",
+        "permission",
+        "transition and commit signals",
+        "full canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_REJECT_INVALID_VIEW",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Owner-authored negative fixture: invalid_view",
+      "action": "Request Fall through official action interface",
+      "expected": "Explicit rejection reason, zero accepted transitions and zero commits; entire canonical state unchanged",
+      "evidence": [
+        "negative author resource/hash",
+        "request and rejection",
+        "safety result",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_REJECT_INVALID_LANDING",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Owner-authored negative fixture: invalid_landing",
+      "action": "Request Fall through official action interface",
+      "expected": "Explicit rejection reason, zero accepted transitions and zero commits; entire canonical state unchanged",
+      "evidence": [
+        "negative author resource/hash",
+        "request and rejection",
+        "safety result",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_REJECT_NO_CONNECTION",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Owner-authored negative fixture: no_connection",
+      "action": "Request Fall through official action interface",
+      "expected": "Explicit rejection reason, zero accepted transitions and zero commits; entire canonical state unchanged",
+      "evidence": [
+        "negative author resource/hash",
+        "request and rejection",
+        "safety result",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_REJECT_SWEPT_OBSTACLE",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Owner-authored negative fixture: swept_obstacle",
+      "action": "Request Fall through official action interface",
+      "expected": "Explicit rejection reason, zero accepted transitions and zero commits; entire canonical state unchanged",
+      "evidence": [
+        "negative author resource/hash",
+        "request and rejection",
+        "safety result",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_REJECT_UNKNOWN_SAFETY",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Owner-authored negative fixture: unknown_safety",
+      "action": "Request Fall through official action interface",
+      "expected": "Explicit rejection reason, zero accepted transitions and zero commits; entire canonical state unchanged",
+      "evidence": [
+        "negative author resource/hash",
+        "request and rejection",
+        "safety result",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_REJECT_WRONG_WORLD",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Owner-authored negative fixture: wrong_world",
+      "action": "Request Fall through official action interface",
+      "expected": "Explicit rejection reason, zero accepted transitions and zero commits; entire canonical state unchanged",
+      "evidence": [
+        "negative author resource/hash",
+        "request and rejection",
+        "safety result",
+        "canonical before/after"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_NO_AUTO_FALL",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION"
+      ],
+      "setup": "Valid connection and view, idle actor at departure",
+      "action": "No departure input",
+      "expected": "No automatic Fall, no transition or commit",
+      "evidence": [
+        "idle observation duration",
+        "signals",
+        "canonical states"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_WORLD_PERMISSIONS",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION"
+      ],
+      "setup": "Separate legal and illegal Surface/Inner connection permissions",
+      "action": "Try each connection from both worlds",
+      "expected": "Author permissions govern; no blanket Inner prohibition",
+      "evidence": [
+        "four permission cases",
+        "author config",
+        "rejections and commits"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_FORBIDDEN_QUADRANT_1",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION"
+      ],
+      "setup": "Excluded author quadrant #1; actual quadrant bound from delivered author data",
+      "action": "Explicit Fall attempt",
+      "expected": "CAMERA_NOT_ALLOWED, no accepted motion/commit, canonical state unchanged",
+      "evidence": [
+        "allowed/excluded author quadrants",
+        "captured authoritative camera",
+        "feedback and full state"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_FORBIDDEN_QUADRANT_2",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION"
+      ],
+      "setup": "Excluded author quadrant #2; actual quadrant bound from delivered author data",
+      "action": "Explicit Fall attempt",
+      "expected": "CAMERA_NOT_ALLOWED, no accepted motion/commit, canonical state unchanged",
+      "evidence": [
+        "allowed/excluded author quadrants",
+        "captured authoritative camera",
+        "feedback and full state"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_FALL_FORBIDDEN_QUADRANT_3",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION"
+      ],
+      "setup": "Excluded author quadrant #3; actual quadrant bound from delivered author data",
+      "action": "Explicit Fall attempt",
+      "expected": "CAMERA_NOT_ALLOWED, no accepted motion/commit, canonical state unchanged",
+      "evidence": [
+        "allowed/excluded author quadrants",
+        "captured authoritative camera",
+        "feedback and full state"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "G_CUBE24_ENDPOINTS",
+      "area": "Runtime",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "24 actual cube24.v1 source orientations",
+      "action": "Run authorized Fall and Landing for each orientation",
+      "expected": "PRESERVE policy: source/target/final IDs identical, exact canonical endpoint and StateKey",
+      "evidence": [
+        "24 source/target/COMMITTED orientation IDs",
+        "formal math pose",
+        "state/key evidence"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_POSE_FALL",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Official transition/path and actor model",
+      "action": "Sample start, contact, end and settled frame",
+      "expected": "Fall start/end match Runtime; Landing ends at exact orientation; Recoil preserves position/orientation",
+      "evidence": [
+        "timestamped Runtime and model poses",
+        "canonical Face/Orientation",
+        "transition IDs",
+        "settled frame"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_HELD_WASD",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "held_wasd",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_EDGE_SPAM",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "edge_spam",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_REVERSE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "reverse",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_CAMERA_QE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "camera_qe",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_MOUSE_DRAG",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "mouse_drag",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_SPACE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "space",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_RESET",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "reset",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_PAUSE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "pause",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_FALL_EXIT_LEVEL",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach fall using real input; instrument actual signals and model",
+      "action": "exit_level",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_POSE_LANDING",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Official transition/path and actor model",
+      "action": "Sample start, contact, end and settled frame",
+      "expected": "Fall start/end match Runtime; Landing ends at exact orientation; Recoil preserves position/orientation",
+      "evidence": [
+        "timestamped Runtime and model poses",
+        "canonical Face/Orientation",
+        "transition IDs",
+        "settled frame"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_HELD_WASD",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "held_wasd",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_EDGE_SPAM",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "edge_spam",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_REVERSE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "reverse",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_CAMERA_QE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "camera_qe",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_MOUSE_DRAG",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "mouse_drag",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_SPACE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "space",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_RESET",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "reset",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_PAUSE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "pause",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_LANDING_EXIT_LEVEL",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "FALL_LANDING",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach landing using real input; instrument actual signals and model",
+      "action": "exit_level",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_POSE_EDGE_RECOIL",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Official transition/path and actor model",
+      "action": "Sample start, contact, end and settled frame",
+      "expected": "Fall start/end match Runtime; Landing ends at exact orientation; Recoil preserves position/orientation",
+      "evidence": [
+        "timestamped Runtime and model poses",
+        "canonical Face/Orientation",
+        "transition IDs",
+        "settled frame"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_HELD_WASD",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "held_wasd",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_EDGE_SPAM",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "edge_spam",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_REVERSE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "reverse",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_CAMERA_QE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "camera_qe",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_MOUSE_DRAG",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "mouse_drag",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_SPACE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "space",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_RESET",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "reset",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_PAUSE",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "pause",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_INPUT_EDGE_RECOIL_EXIT_LEVEL",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "EDGE_RECOIL",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Reach edge_recoil using real input; instrument actual signals and model",
+      "action": "exit_level",
+      "expected": "Follow delivered interruption policy; no overlapping transitions, stale commits, leaked Tween, orientation drift, wrong Face or stuck input; audio evaluated separately when its delivery exists",
+      "evidence": [
+        "timestamped input/phase log",
+        "all accepted/committed IDs and generations",
+        "model poses",
+        "owned Tween/VFX counts",
+        "audio events",
+        "next legal input result"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_REPEAT_100",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "ANIMATION",
+        "AUDIO_UI"
+      ],
+      "setup": "Resettable official Fall/Recoil fixture",
+      "action": "100 complete cycles with mixed input interruptions",
+      "expected": "No accumulated rotation error, stale callbacks, orphan effects or input lock",
+      "evidence": [
+        "per-cycle canonical/model poses",
+        "owned object counts",
+        "script log",
+        "cue counts"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_SIX_VISIBLE_FACES",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "ANIMATION",
+        "ART",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Formal pose cases exposing all six marked-face directions",
+      "action": "Play ordinary Roll and new motions",
+      "expected": "Rendered physical marker agrees with formal math; support face is never mistaken for painted face",
+      "evidence": [
+        "six screenshots",
+        "formal Orientation and physical face direction",
+        "model transforms"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_CANCEL_LATE_NEW_LAUNCH",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "ANIMATION",
+        "AUDIO_UI",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Active old motion then Reset/reload/unload/cancel and a new launch",
+      "action": "Deliver late old sample/tween/audio/completion callbacks in separate expected-failure probe",
+      "expected": "Full captured identity invalidated; old cleanup cannot clear new effect; no stale commit/Landing/Goal/Save",
+      "evidence": [
+        "old/new full identities",
+        "cancel and callback log",
+        "new effect sample",
+        "state/Save deltas"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "A_PAUSE_IDENTITY",
+      "area": "Animation",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_EVENT_PORT",
+        "ANIMATION",
+        "AUDIO_UI",
+        "HOST_NATIVE_INPUT"
+      ],
+      "setup": "Each active Fall/Landing/Recoil effect",
+      "action": "Pause then resume; lose focus and end drag",
+      "expected": "Elapsed motion/audio suspended; same token resumes; held input clears; no artificial EDGE/cancel/Landing",
+      "evidence": [
+        "elapsed and full identity samples",
+        "audio playback pause",
+        "native focus/input events"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "ART_GLB",
+      "area": "Graphical",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "ART",
+        "ANIMATION",
+        "INTEGRATED_CONTENT"
+      ],
+      "setup": "Delivered GLB files in clean worktree",
+      "action": "Fresh Godot import, instantiate every referenced model",
+      "expected": "Real imported PackedScene/mesh/material resources; no missing refs or errors",
+      "evidence": [
+        "engine/version",
+        "GLB and import hashes",
+        "import log",
+        "instantiated resources",
+        "screenshot"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "ART_SHADER",
+      "area": "Graphical",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "ART",
+        "ANIMATION",
+        "INTEGRATED_CONTENT"
+      ],
+      "setup": "All delivered Fall/Landing/Recoil VFX and materials",
+      "action": "Render all stages in actual target renderer",
+      "expected": "No shader/script errors, missing textures or invisible required effects",
+      "evidence": [
+        "renderer",
+        "complete stderr",
+        "per-stage captures"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "ART_VFX",
+      "area": "Graphical",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "ART",
+        "ANIMATION",
+        "INTEGRATED_CONTENT"
+      ],
+      "setup": "Each VFX with actual lifecycle",
+      "action": "Finish, Reset, Pause/resume and leave level",
+      "expected": "Owned particles/effects stop or free according to policy; no residue after teardown",
+      "evidence": [
+        "owned nodes/particles before/during/after",
+        "weak reference after exit",
+        "video"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "PERF_SOAK",
+      "area": "Graphical",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "ART",
+        "ANIMATION",
+        "INTEGRATED_CONTENT"
+      ],
+      "setup": "Official fixture and device/renderer/settings",
+      "action": "30 minute graphical session with repeated transitions",
+      "expected": "No errors or progressive memory/object/Tween growth; input remains usable",
+      "evidence": [
+        "duration",
+        "frame samples",
+        "memory/object trend",
+        "log",
+        "last legal input"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "PERF_PHASES",
+      "area": "Graphical",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "ART",
+        "ANIMATION",
+        "INTEGRATED_CONTENT"
+      ],
+      "setup": "Same scene/hardware/resolution and warm cache for comparison",
+      "action": "Measure idle, departure, Fall, contact, Landing, Recoil and load separately",
+      "expected": "Report p50/p95/p99/max milliseconds by phase and sample counts; judge only delivered budget",
+      "evidence": [
+        "raw timestamped phase/frame samples",
+        "render config",
+        "owner performance budget",
+        "baseline and candidate SHAs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "PERF_L04_LOAD",
+      "area": "Graphical",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "ART",
+        "ANIMATION",
+        "INTEGRATED_CONTENT"
+      ],
+      "setup": "L04 only once formally in integrated catalog",
+      "action": "Capture cold/warm loading separately from animations",
+      "expected": "Historical loading minimum 9 FPS remains a loading observation; no unsupported attribution to new Fall",
+      "evidence": [
+        "load boundaries",
+        "L04 identity/hash",
+        "animation phase boundaries",
+        "separate distributions"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "AU_EVENTS",
+      "area": "Audio",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Delivered event-to-cue mapping",
+      "action": "One Fall/Landing/Recoil plus held/spammed inputs",
+      "expected": "Cue multiplicity matches actual accepted transition/contact/rejection policy, no input-repeat spam",
+      "evidence": [
+        "cue policy",
+        "input/transition/contact/cue timestamps and IDs"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "AU_CONTACT",
+      "area": "Audio",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Official contact event and declared sync tolerance",
+      "action": "Fall into Landing",
+      "expected": "Landing cue matches actual contact timestamp within declared tolerance",
+      "evidence": [
+        "contact and cue times",
+        "declared tolerance",
+        "audio recording"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "AU_PAUSE",
+      "area": "Audio",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Audio active during each animation",
+      "action": "Pause/resume, Reset and exit",
+      "expected": "Actual playback obeys delivered pause/cancel policy without duplicate restart",
+      "evidence": [
+        "policy",
+        "stream playback/paused states",
+        "cue counts",
+        "recording"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "AU_VOLUME",
+      "area": "Audio",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Isolated save and actual AudioServer buses",
+      "action": "Apply/cancel Master, Music, SFX and mute values",
+      "expected": "Correct bus volume/mute and cancel restoration; no gameplay mutation",
+      "evidence": [
+        "settings",
+        "bus levels/mutes",
+        "canonical state"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "AU_COLD_RESTORE",
+      "area": "Audio",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Unique isolated settings save",
+      "action": "Seed settings, exit process, start independent process",
+      "expected": "Saved settings and actual buses restore; PID changes, same save path/hash",
+      "evidence": [
+        "seed/restore PIDs",
+        "save path/hash",
+        "values",
+        "bus states"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "UI_REDUCED_MOTION",
+      "area": "UI",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Delivered accessibility setting and actual presentation",
+      "action": "Toggle, play all motions, restart application",
+      "expected": "Motion follows declared reduced policy; logic/Orientation/Face/timing guarantees preserved; persistence follows contract",
+      "evidence": [
+        "setting policy",
+        "normal/reduced poses",
+        "canonical final state",
+        "cold restoration"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "UI_HUD_RESOLUTIONS",
+      "area": "UI",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Actual HUD, pause and settings screens",
+      "action": "960x720, 1280x720, 1920x1080; mouse and keyboard navigation",
+      "expected": "Readable unclipped HUD, operable controls/focus, no input leakage",
+      "evidence": [
+        "actual viewport/window sizes",
+        "screenshots",
+        "Control rectangles",
+        "focus/navigation actions"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "AU_DEDUP_THROTTLE",
+      "area": "Audio",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "STARTED/COMMITTED/feedback and held rejected attempts",
+      "action": "Duplicate event IDs, feedback, UI-complete signals and rapid held edge input",
+      "expected": "One committed landing; EDGE throttled per declared policy; non-edge feedback never reuses EDGE cue",
+      "evidence": [
+        "event/attempt/presentation identities",
+        "cue multiplicity",
+        "AudioDirector throttle policy"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "UI_REASON_SETTINGS",
+      "area": "UI",
+      "mode": "GRAPHICAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "AUDIO_UI",
+        "SHELL",
+        "ANIMATION"
+      ],
+      "setup": "Lab HUD and separate presentation config",
+      "action": "Show each real reason/locked status; preview/apply/cancel settings, Reduced Motion and Hint Strength",
+      "expected": "Correct reason/focus/values; use unchanged legacy keys; no implicit Save schema expansion",
+      "evidence": [
+        "actual event reason",
+        "signal payloads",
+        "focus",
+        "legacy Save/hash"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "FORMAL_SOLVER",
+      "area": "Solver",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SOLVER"
+      ],
+      "setup": "Exact integrated author artifacts and official production modules",
+      "action": "Real solver witness + validate_semantics + Runtime replay; real swept Safety negatives",
+      "expected": "No substituted search/replay/safety algorithms; Camera/connection conditions reproduced and every state/commit matches",
+      "evidence": [
+        "owner receipt/commits",
+        "canonical hash",
+        "official call reports",
+        "semantic trace",
+        "step StateKeys and commits"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "FORMAL_REPLAY",
+      "area": "Solver",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "REPLAY"
+      ],
+      "setup": "Exact integrated author artifacts and official production modules",
+      "action": "Real solver witness + validate_semantics + Runtime replay; real swept Safety negatives",
+      "expected": "No substituted search/replay/safety algorithms; Camera/connection conditions reproduced and every state/commit matches",
+      "evidence": [
+        "owner receipt/commits",
+        "canonical hash",
+        "official call reports",
+        "semantic trace",
+        "step StateKeys and commits"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "FORMAL_SAFETY",
+      "area": "Solver",
+      "mode": "REAL",
+      "scope": "new_owner_delivery",
+      "dependencies": [
+        "RUNTIME_FALL",
+        "AUTHOR_CONNECTION",
+        "SAFETY"
+      ],
+      "setup": "Exact integrated author artifacts and official production modules",
+      "action": "Real solver witness + validate_semantics + Runtime replay; real swept Safety negatives",
+      "expected": "No substituted search/replay/safety algorithms; Camera/connection conditions reproduced and every state/commit matches",
+      "evidence": [
+        "owner receipt/commits",
+        "canonical hash",
+        "official call reports",
+        "semantic trace",
+        "step StateKeys and commits"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "REG_L01",
+      "area": "Legacy regression",
+      "mode": "GRAPHICAL",
+      "scope": "L01-L05",
+      "dependencies": [
+        "INTEGRATED_CONTENT",
+        "RUNTIME",
+        "ANIMATION",
+        "SHELL"
+      ],
+      "setup": "Actual catalog L01, isolated save",
+      "action": "Focused normal Roll/Shift/view/reset/pause/exit and Goal route",
+      "expected": "Original permissions, commits, physical orientation, Goal and inputs preserved",
+      "evidence": [
+        "catalog/scene hash",
+        "actual input sequence",
+        "per-commit state",
+        "Goal",
+        "screenshots"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "REG_L02",
+      "area": "Legacy regression",
+      "mode": "GRAPHICAL",
+      "scope": "L01-L05",
+      "dependencies": [
+        "INTEGRATED_CONTENT",
+        "RUNTIME",
+        "ANIMATION",
+        "SHELL"
+      ],
+      "setup": "Actual catalog L02, isolated save",
+      "action": "Focused normal Roll/Shift/view/reset/pause/exit and Goal route",
+      "expected": "Original permissions, commits, physical orientation, Goal and inputs preserved",
+      "evidence": [
+        "catalog/scene hash",
+        "actual input sequence",
+        "per-commit state",
+        "Goal",
+        "screenshots"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "REG_L03",
+      "area": "Legacy regression",
+      "mode": "GRAPHICAL",
+      "scope": "L01-L05",
+      "dependencies": [
+        "INTEGRATED_CONTENT",
+        "RUNTIME",
+        "ANIMATION",
+        "SHELL"
+      ],
+      "setup": "Actual catalog L03, isolated save",
+      "action": "Focused normal Roll/Shift/view/reset/pause/exit and Goal route",
+      "expected": "Original permissions, commits, physical orientation, Goal and inputs preserved",
+      "evidence": [
+        "catalog/scene hash",
+        "actual input sequence",
+        "per-commit state",
+        "Goal",
+        "screenshots"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "REG_L04",
+      "area": "Legacy regression",
+      "mode": "GRAPHICAL",
+      "scope": "L01-L05",
+      "dependencies": [
+        "INTEGRATED_CONTENT",
+        "RUNTIME",
+        "ANIMATION",
+        "SHELL"
+      ],
+      "setup": "Actual catalog L04, isolated save",
+      "action": "Focused normal Roll/Shift/view/reset/pause/exit and Goal route",
+      "expected": "Original permissions, commits, physical orientation, Goal and inputs preserved",
+      "evidence": [
+        "catalog/scene hash",
+        "actual input sequence",
+        "per-commit state",
+        "Goal",
+        "screenshots"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "REG_L05",
+      "area": "Legacy regression",
+      "mode": "GRAPHICAL",
+      "scope": "L01-L05",
+      "dependencies": [
+        "INTEGRATED_CONTENT",
+        "RUNTIME",
+        "ANIMATION",
+        "SHELL"
+      ],
+      "setup": "Actual catalog L05, isolated save",
+      "action": "Focused normal Roll/Shift/view/reset/pause/exit and Goal route",
+      "expected": "Original permissions, commits, physical orientation, Goal and inputs preserved",
+      "evidence": [
+        "catalog/scene hash",
+        "actual input sequence",
+        "per-commit state",
+        "Goal",
+        "screenshots"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    },
+    {
+      "id": "REG_L06",
+      "area": "Legacy regression",
+      "mode": "GRAPHICAL",
+      "scope": "conditional_L06",
+      "dependencies": [
+        "L06_INTEGRATION_RECEIPT"
+      ],
+      "setup": "Only if L06 is officially in this integration",
+      "action": "Focused regression agreed with its Owner",
+      "expected": "No inferred L06 coverage from L01-L05",
+      "evidence": [
+        "integration scope receipt",
+        "real run evidence"
+      ],
+      "status": "case_pending",
+      "checks": 0,
+      "source_sha": null,
+      "delivery_sha": null,
+      "doubles": [],
+      "authoritative_runtime": null
+    }
+  ]
+}

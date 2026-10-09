@@ -2,20 +2,74 @@
   "task": "PFALL_FIRST_VERTICAL_SLICE_INTEGRATION_01",
   "local_date": "2026-10-10",
   "window": 1,
-  "status": "OPEN",
+  "status": "CLOSED",
   "baseline": "48a0e1791e7715722e38a1a01ab229535e2efb10",
   "contract": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
   "policy": "Normal no-ff merges, owner history retained, one incremental batch window; no push",
   "merges": [
-    {"owner":"09", "delivery":"54ea24cd50c4bd45b083dc26487ff2b7afd2a703", "merge":"6fe974c98747bb99be2bd8f2594dbf392172ccd7"},
-    {"owner":"10A", "delivery":"4781dfcf16757ccbde13e54ee449f1cf00174944", "merge":"9fc940577b9ca484921abb405b181565973b4e6d"},
-    {"owner":"09", "delivery":"82a8a7dc85205e9391551f24267f35f5abe53393", "merge":"112c322aeea54c7876825612365b87ac628934a4"},
-    {"owner":"10B", "delivery":"285896da24b4f5ec223fe8bf3f75e29fa1d18381", "merge":"607599f796e61138ad08be53044f058ce5f415ff"},
-    {"owner":"11", "delivery":"4afbd068fae74a826dae4db04c2c612af23fa861", "merge":"b58e54952eff6557d63f6e1d13f695c197c5f0fe"},
-    {"owner":"09", "delivery":"e4bcdfc6459f587cb26c25494dd5b57b76ccdca4", "merge":"839694bcf937516a646f05418da3e502444da519"},
-    {"owner":"07", "delivery":"d9dd3317e558f0d8380a2e6635452308d49240f1", "merge":"f8b5b198859eaea9fe2423c578598b548a28066f"}
+    {
+      "owner": "09",
+      "delivery": "54ea24cd50c4bd45b083dc26487ff2b7afd2a703",
+      "merge": "6fe974c98747bb99be2bd8f2594dbf392172ccd7"
+    },
+    {
+      "owner": "10A",
+      "delivery": "4781dfcf16757ccbde13e54ee449f1cf00174944",
+      "merge": "9fc940577b9ca484921abb405b181565973b4e6d"
+    },
+    {
+      "owner": "09",
+      "delivery": "82a8a7dc85205e9391551f24267f35f5abe53393",
+      "merge": "112c322aeea54c7876825612365b87ac628934a4"
+    },
+    {
+      "owner": "10B",
+      "delivery": "285896da24b4f5ec223fe8bf3f75e29fa1d18381",
+      "merge": "607599f796e61138ad08be53044f058ce5f415ff"
+    },
+    {
+      "owner": "11",
+      "delivery": "4afbd068fae74a826dae4db04c2c612af23fa861",
+      "merge": "b58e54952eff6557d63f6e1d13f695c197c5f0fe"
+    },
+    {
+      "owner": "09",
+      "delivery": "e4bcdfc6459f587cb26c25494dd5b57b76ccdca4",
+      "merge": "839694bcf937516a646f05418da3e502444da519"
+    },
+    {
+      "owner": "07",
+      "delivery": "d9dd3317e558f0d8380a2e6635452308d49240f1",
+      "merge": "f8b5b198859eaea9fe2423c578598b548a28066f"
+    },
+    {
+      "owner": "01",
+      "delivery": "26387d6c34a869ad7035ee13ee77d8d5c24d796a",
+      "merge": "63eb5b3385cf3eff9c97a0c5991378e8115575a9"
+    },
+    {
+      "owner": "03",
+      "delivery": "9f378d0f29694686f41eb605640dcd35e09de26a",
+      "merge": "022343212995fe686f922787436290dd2e71b8d7"
+    },
+    {
+      "owner": "07",
+      "delivery": "6d3bf4b7f5120b44dad4790b657a4be953dd4954",
+      "merge": "2d64aed03ad77468100ea349da3cbc07c0b0cd21"
+    },
+    {
+      "owner": "11",
+      "delivery": "7363e9e7d7849018cc456ae866a60e23472591d6",
+      "merge": "82ca2704f8aad439b1a276688a2bcc87aa33e175"
+    }
   ],
-  "core_playable":"PENDING",
-  "build":"NOT_READY",
-  "human_qa":"NOT_RUN"
+  "core_playable": "PASS_AUTOMATED_FIRST_VERTICAL_SLICE",
+  "build": "E:/godot/beta-sprint-builds/beta_pfall_core_20261010_01",
+  "human_qa": "NOT_RUN_AWAITING_ACTUAL_PLAYER",
+  "closed_utc": "2026-10-09T17:31:02.090606+00:00",
+  "validated_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+  "build_source": "ee1ea27c292132a090e4294d6a18718a3d654086",
+  "build_zip_sha256": "a5e9daf415c2c89a17c7cc56bab932b847b8fee6cef3f2532c9b61e980863024",
+  "second_build": "PENDING_AUDIOVISUAL_NATIVE_WIRING_AND_GATES",
+  "conflicts": []
 }

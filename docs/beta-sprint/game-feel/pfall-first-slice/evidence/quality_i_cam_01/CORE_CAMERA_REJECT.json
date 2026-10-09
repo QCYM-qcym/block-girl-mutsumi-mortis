@@ -1,0 +1,4167 @@
+{
+	"binding_path": "res://docs/beta-sprint/game-feel/CORE_PLAYABLE_QUALITY_BINDINGS.json",
+	"binding_sha256": "638da80e4b7fd6088a19df1339365bc8627e59777395b9313104c8d7f14196b9",
+	"capture": {
+		"authoritative_runtime": null,
+		"display": "Windows",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+		"fixture_kind": "REAL_CORE_HOST",
+		"input_profile": "NATIVE_INPUT_PARSE_INPUT_EVENT",
+		"pid": 43788,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/.godot/game-feel-quality/i_cam_01/profile/AppData/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"case": "CORE_CAMERA_REJECT",
+	"checks": 17,
+	"delivery_sha": null,
+	"doubles": [],
+	"events": [
+		{
+			"event": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 1,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "0359004cd688a00d39719537d442169b",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"camera_quadrant": 0,
+						"kind": 9
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 0,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "09934ed9e079dc1f0fe530e52d1ddb2d",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"runtime_after_callback": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"runtime_statekey_before": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2148.576
+		},
+		{
+			"event": {
+				"attempt_id": 2,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 0,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 2,
+				"intended_move_direction": null,
+				"interruption_reason": null,
+				"level_run_id": "0359004cd688a00d39719537d442169b",
+				"phase": "FEEDBACK",
+				"presentation_identity": null,
+				"reason_category": "CAMERA_NOT_ALLOWED",
+				"result": {
+					"action": {
+						"connection_id": "pfall_a",
+						"kind": 8
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [
+						{
+							"code": 1502,
+							"details": {
+								"reason_category": "CAMERA_NOT_ALLOWED"
+							},
+							"entity_ids": [],
+							"message": "Author did not permit this quadrant.",
+							"path": "perspective_fall",
+							"severity": 0
+						}
+					],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 0,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 2101,
+					"status": 1
+				},
+				"schema_version": 1,
+				"semantic": "ACTION_FEEDBACK",
+				"session_id": "09934ed9e079dc1f0fe530e52d1ddb2d",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			},
+			"runtime_after_callback": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"runtime_statekey_before": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2696.135
+		}
+	],
+	"evidence_role": "PHASE_EVIDENCE_ONLY",
+	"failures": [],
+	"inputs": [
+		{
+			"event_index": 0,
+			"input": {
+				"key": "Q",
+				"kind": "key",
+				"pressed": true
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2118.568
+		},
+		{
+			"event_index": 1,
+			"input": {
+				"key": "Q",
+				"kind": "key",
+				"pressed": false
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2152.414
+		},
+		{
+			"event_index": 1,
+			"input": {
+				"key": "F",
+				"kind": "key",
+				"pressed": true
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2668.535
+		},
+		{
+			"event_index": 2,
+			"input": {
+				"key": "F",
+				"kind": "key",
+				"pressed": false
+			},
+			"runtime_after_frame": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_before": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"runtime_statekey_after": {
+				"issues": [],
+				"key": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"ok": true
+			},
+			"time_ms": 2699.446
+		}
+	],
+	"missing": [],
+	"natural_success": null,
+	"samples": [
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": null,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 0.0,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1816.621
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 33.096,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1849.717
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 1.237,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1850.954
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 15.403,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1866.357
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.718,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1883.075
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.638,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1899.713
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1916.386
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.656,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1933.042
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1949.707
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1966.368
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1983.035
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 1999.704
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 33.018,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2016.373
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2033.044
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2049.703
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2066.36
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.68,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2083.04
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2099.697
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2116.365
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 34.238,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				576.0,
+				200.514770507813
+			],
+			"time_ms": 2150.603
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 4.441,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				579.500732421875,
+				200.546798706055
+			],
+			"time_ms": 2155.044
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 11.313,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				587.976989746094,
+				200.891387939453
+			],
+			"time_ms": 2166.357
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				600.543579101563,
+				202.107055664063
+			],
+			"time_ms": 2183.025
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				616.106811523438,
+				204.832824707031
+			],
+			"time_ms": 2199.691
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				633.36962890625,
+				209.597015380859
+			],
+			"time_ms": 2216.357
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				650.893981933594,
+				216.662078857422
+			],
+			"time_ms": 2233.02
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				667.258483886719,
+				225.930694580078
+			],
+			"time_ms": 2249.694
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				681.267395019531,
+				236.930313110352
+			],
+			"time_ms": 2266.356
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.682,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				692.145202636719,
+				248.882034301758
+			],
+			"time_ms": 2283.038
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.658,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				699.653686523438,
+				260.826751708984
+			],
+			"time_ms": 2299.696
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.656,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				704.092224121094,
+				271.77099609375
+			],
+			"time_ms": 2316.352
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.17822265625,
+				280.802673339844
+			],
+			"time_ms": 2333.024
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.659,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.833984375,
+				287.148101806641
+			],
+			"time_ms": 2349.683
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915649414063,
+				290.157348632813
+			],
+			"time_ms": 2366.34
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2383.012
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2399.681
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.706,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2416.387
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.631,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2433.018
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2449.683
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 17.196,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2466.879
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.136,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2483.015
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2499.684
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2516.347
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.679,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2533.026
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.655,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2549.681
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.653,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2566.334
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.689,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2583.023
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2599.685
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2616.348
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2633.009
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.672,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2649.681
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.834,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2666.515
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 31.486,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2698.001
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 3.854,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2701.855
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 14.476,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2716.331
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2732.996
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.676,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2749.672
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2766.334
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2783.007
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2799.667
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2816.335
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2833.006
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2849.669
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2866.329
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2883.0
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.658,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2899.658
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.679,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2916.337
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2932.994
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.702,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2949.696
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.635,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2966.331
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2982.995
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 2999.658
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.678,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 1.721,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3016.336
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3033.001
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3049.665
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.651,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3066.316
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.68,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3082.996
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.662,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3099.658
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3116.322
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3132.993
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3149.657
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3166.325
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.667,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3182.992
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.663,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3199.655
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.671,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3216.326
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.656,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3232.982
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.681,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3249.663
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.652,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3266.315
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3282.981
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.678,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3299.659
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.649,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3316.308
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.674,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3332.982
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3349.651
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.784,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3366.435
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.547,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3382.982
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.66,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3399.642
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.678,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3416.32
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.665,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3432.985
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.676,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3449.661
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.649,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3466.31
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.765,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3483.075
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.57,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3499.645
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.664,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3516.309
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.677,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3532.986
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.669,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3549.655
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.653,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3566.308
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3582.974
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.666,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3599.64
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.661,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3616.301
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.673,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3632.974
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.655,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3649.629
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.775,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3666.404
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.574,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3682.978
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.657,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3699.635
+		},
+		{
+			"canonical_position": [
+				0.0,
+				3.0,
+				0.0
+			],
+			"frame_interval_ms": 16.668,
+			"model_basis": [
+				[
+					1.0,
+					0.0,
+					0.0
+				],
+				[
+					0.0,
+					1.0,
+					0.0
+				],
+				[
+					0.0,
+					0.0,
+					1.0
+				]
+			],
+			"process_ms": 7.381,
+			"screen_position": [
+				706.915771484375,
+				290.322265625
+			],
+			"time_ms": 3716.303
+		}
+	],
+	"source_sha": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+	"status": "OBSERVATIONS_RECORDED"
+}

@@ -1,0 +1,182 @@
+{
+  "task": "PFALL_FIRST_VERTICAL_SLICE_INTEGRATION_01",
+  "status": "PERSPECTIVE_FALL_CORE_PLAYABLE",
+  "core_playable": "PASS",
+  "scope": "AUTOMATED_FIRST_VERTICAL_SLICE: actual default Runtime, A/B authored maps, natural Fall/Landing/ordinaryRoll; not full Game Feel or Human QA",
+  "registered_utc": "2026-10-09T17:31:02.090105+00:00",
+  "validated_integration_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+  "contract_commit": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "contract_sha256": "6224f8cd364f98da41822eabe7ba2973fa2db01d030373e7b3e94d69f35f23de",
+  "runtime_delivery": "26387d6c34a869ad7035ee13ee77d8d5c24d796a",
+  "registration_status": "REGISTERED_00_CORE_PLAYABLE",
+  "candidate_binding_kept": "TEST_DEPENDENCY_ONLY",
+  "registered_quality_cases": [
+    {
+      "case": "CORE_A_NATURAL_FALL",
+      "formal_result": "PASS",
+      "execution_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+      "checks": 26,
+      "failures": [],
+      "doubles": [],
+      "pid": 37820,
+      "stderr_bytes": 0,
+      "exit_code": 0,
+      "physical_checks": 1221,
+      "exact_git_blob_checks": 1152,
+      "raw_status_preserved": "OBSERVATIONS_RECORDED",
+      "raw_report_sha256": "151988a9d079251c9f452590397efce387e853a16b3c6bd5e08e3ef4139df329",
+      "evidence": "docs/beta-sprint/game-feel/pfall-first-slice/evidence/quality_i_a_01"
+    },
+    {
+      "case": "CORE_B_NATURAL_FALL",
+      "formal_result": "PASS",
+      "execution_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+      "checks": 26,
+      "failures": [],
+      "doubles": [],
+      "pid": 41744,
+      "stderr_bytes": 0,
+      "exit_code": 0,
+      "physical_checks": 1221,
+      "exact_git_blob_checks": 1152,
+      "raw_status_preserved": "OBSERVATIONS_RECORDED",
+      "raw_report_sha256": "da91d9bab66fd5db5e541ab06f698a4d5a87b2d65d0f95a69a866b2a4d908ae2",
+      "evidence": "docs/beta-sprint/game-feel/pfall-first-slice/evidence/quality_i_b_01"
+    },
+    {
+      "case": "CORE_CAMERA_REJECT",
+      "formal_result": "PASS",
+      "execution_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+      "checks": 17,
+      "failures": [],
+      "doubles": [],
+      "pid": 43788,
+      "stderr_bytes": 0,
+      "exit_code": 0,
+      "physical_checks": 1221,
+      "exact_git_blob_checks": 1152,
+      "raw_status_preserved": "OBSERVATIONS_RECORDED",
+      "raw_report_sha256": "cb4920a77f4f8b071b71c322fb3dd22969b1c767364918a8b866e183d4de2ad0",
+      "evidence": "docs/beta-sprint/game-feel/pfall-first-slice/evidence/quality_i_cam_01"
+    }
+  ],
+  "core_gate": {
+    "MAP_A_lower_world_height_screen_down": "PASS",
+    "MAP_B_higher_world_height_screen_down": "PASS",
+    "wrong_camera": "PASS",
+    "no_author_connection": "PASS",
+    "same_world_only": "PASS",
+    "source_target_statekey": "MATCH",
+    "cube24_orientation": "PRESERVE",
+    "continuous_fall": "PASS",
+    "natural_completion": "PASS",
+    "post_landing_roll_and_goal": "PASS",
+    "reset_midflight_old_identity_and_new_launch": "PASS",
+    "busy_pause_resume_input": "PASS",
+    "safety_and_all24_runtime_rules": "PASS",
+    "formal_solver_logical_replay": "PASS",
+    "legacy_roll_perspective_connection": "OWNER_3557_REGRESSION_PASS_SOURCE_AUDITED"
+  },
+  "validation": {
+    "bridge_unit": {
+      "checks": 54,
+      "doubles": [
+        "01 event DTO/Safety attestation",
+        "native finish/commit"
+      ],
+      "case": "bridge_bound_01"
+    },
+    "real_core": {
+      "checks": 54,
+      "doubles": [],
+      "case": "core_real_01"
+    },
+    "graphical_core": {
+      "checks": 62,
+      "doubles": [],
+      "case": "core_graphical_01",
+      "pngs": 8,
+      "viewport": [
+        1152,
+        648
+      ]
+    },
+    "runtime_rules": {
+      "checks": 59,
+      "doubles": [],
+      "case": "i_core_rules_01"
+    },
+    "formal_solver_logical_replay": {
+      "checks": 24,
+      "doubles": [],
+      "case": "i_core_replay_01",
+      "graphical_replayer_case": "PENDING; expected fail-closed negative is not Graphical replay PASS"
+    },
+    "quality_independent_native": {
+      "checks": 69,
+      "cases": 3,
+      "doubles": []
+    },
+    "package_fresh_start": {
+      "checks": 54,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "evidence": "E:\\godot\\beta-sprint-builds\\beta_pfall_core_20261010_01\\verification\\core_fresh_start_01"
+    },
+    "default_main_startup": {
+      "checks": 1,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "case": "main_startup_01",
+      "scope": "ten headless frames only"
+    }
+  },
+  "build": {
+    "path": "E:/godot/beta-sprint-builds/beta_pfall_core_20261010_01",
+    "zip": "E:\\godot\\beta-sprint-builds\\beta_pfall_core_20261010_01.zip",
+    "zip_sha256": "a5e9daf415c2c89a17c7cc56bab932b847b8fee6cef3f2532c9b61e980863024",
+    "integration_commit": "ee1ea27c292132a090e4294d6a18718a3d654086",
+    "manifest_sha256": "035c8ee6c7bd5f1827901349a83a2635c28d4ad278a81e5f463038534c58eaa7",
+    "source_files": 163,
+    "source_drift": [],
+    "all_build_git_blobs_match_current_production": true,
+    "launcher": "E:\\godot\\beta-sprint-builds\\beta_pfall_core_20261010_01\\play.ps1",
+    "profile": "E:\\godot\\beta-sprint-builds\\beta_pfall_core_20261010_01\\qa-profile",
+    "kind": "CORE_LAB_CANDIDATE_FROZEN_IDENTITY; automatic Core accepted by this separate receipt"
+  },
+  "qa": {
+    "handoff": "READY_AND_RECEIVED_08",
+    "human": "NOT_RUN_AWAITING_ACTUAL_PLAYER",
+    "human_report": "E:/godot/beta-sprint-builds/pfall_core_focused_qa_20261009T172150Z/GAME_FEEL_HUMAN_QA_01_PARTIAL.md",
+    "human_issue_counts": "NOT_ASSESSED",
+    "first_time_comprehension": "NOT_RUN"
+  },
+  "preserved": {
+    "accepted_five_level_baseline": "d472885d7375ef73fd36e4abc1847a9ba36cac44",
+    "five_level_QA": "UNCHANGED; historical P0/P1=0/0, P2/P3=3/1",
+    "foundation": "AUTHORIZED_01_OPT_IN_FALL_ONLY; legacy schema1 retained",
+    "frozen_art_sources": "UNCHANGED",
+    "game_shell_save_schema": "UNCHANGED",
+    "contract": "UNCHANGED",
+    "stair_clearance": "PARTIAL_PASS",
+    "stair_traversal": "NOT_RUN",
+    "L03_first_time": "RETEST_PENDING",
+    "L06": "INDEPENDENT_NOT_INCLUDED"
+  },
+  "pending": [
+    "v2 Graphical TraceReplayer专项，仅该case",
+    "full94 Quality matrix",
+    "10B native Edge and00 Presenter wiring",
+    "05 user art review and main-project Art/VFX wiring",
+    "11 fullHost Audio natural cue integration and human listening",
+    "07 fullHost HUD/accessibility/settings integration",
+    "second full Game Feel Build",
+    "08 actual human focused Core QA"
+  ],
+  "known_failures": {
+    "unresolved_core_behavior": [],
+    "historical_svg_import": "Owner03 fresh-import metadata failure preserved; first Core package excludes frozen UI SVG and fresh startup has empty stderr; not new Gameplay failure"
+  },
+  "push": "NOT_RUN"
+}
