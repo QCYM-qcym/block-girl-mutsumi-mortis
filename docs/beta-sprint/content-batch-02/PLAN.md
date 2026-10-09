@@ -10,7 +10,7 @@ Spec: DESIGN.md. Inline执行 writing-plans / executing-plans / test-driven-deve
 4. [x] Real headless：真实Input→GridInput→原Runtime→Goal committed及原adapter.completed；正常/Reset后/视角不同三条路线，动作中R和数据SHA。
 5. [x] 提供graphical同脚本执行入口；实际图形验收PENDING，由00在最终集成执行。
 6. [x] 独立只读代码审查、修复唯一Important；Stable IDs/catalog已发布。
-7. [ ] 生成FilesSHA/receipt并提交；检查CLEAN，PushNOT_RUN。
+7. [x] 生产候选已提交d4be39c，提交后CLEAN；FilesSHA/receipt随交付记录提交，最终状态由receipt提交后的git status核验；PushNOT_RUN。
 
 ## Review focus
 
