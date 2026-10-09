@@ -40,21 +40,21 @@
 - [x] Write/run entry test against current native L02; expected RED: missing display_3d/Presenter.
 - [x] Add L01 attachment default factory and subclass Presenter/attachment, then bind only L02 native scene.
 - [x] Floors use actual surface_cells/inner_cells and graph.nodes platform IDs. Exit/world-switch use existing formal state methods; omit unauthored gate/plate.
-- [ ] Run graphical L02: normal, reset_replay, alternate_views plus Pixel parity; Surface/Inner, world shifts, real cube basis/6faces, both four-quarter orbits, reset during roll/shift/view, native Shell completion.
-- [ ] Confirm failures=[], checks>0, exit0, stderr empty; commit task before attachingL03.
+- [x] Run graphical L02: normal, reset_replay, alternate_views plus Pixel parity; Surface/Inner, world shifts, real cube basis/6faces, both four-quarter orbits, reset during roll/shift/view, native Shell completion.
+- [x] Confirm failures=[], checks>0, exit0, stderr empty; commit task before attachingL03.
 
 ## Task 2: L03 + L01 regression
 
-- [ ] Run L03 entry RED before attaching it.
-- [ ] Bind L03 native scene only; extend data-driven layout for actual authored link endpoints and Runtime-active status labels without adding logical edges or bridges.
-- [ ] Run graphical L03: before connection, rotate, Surface EAST activation, timed crossing3→9, disconnect/wrongworld blocked crossing, reset, goal; Pixel parity exact including view/link events.
-- [ ] Run L01 graphical regression through unchanged Presenter/default factory, actual route/roll/view/shift/plate/gate/Goal; no Cold Continue matrix.
-- [ ] Independent reviewer inspects scope and runtime-write absence; resolve actual regressions only; commit.
+- [x] Run L03 entry RED before attaching it.
+- [x] Bind L03 native scene only; extend data-driven layout for actual authored link endpoints and Runtime-active status labels without adding logical edges or bridges.
+- [x] Run graphical L03: before connection, rotate, Surface EAST activation, timed crossing3→9, disconnect/wrongworld blocked crossing, reset, goal; Pixel parity exact including view/link events.
+- [x] Run L01 graphical regression through unchanged Presenter/default factory, actual route/roll/view/shift/plate/gate/Goal; no Cold Continue matrix.
+- [x] Independent reviewer inspects scope and runtime-write absence; resolve actual regressions only; commit.
 
 ## Task 3: Isolated QA build + receipt
 
-- [ ] Verify protected files and current Main/Integration HEADs; retain all failed/successful evidence.
+- [x] Verify protected files and current Main/Integration HEADs; retain all failed/successful evidence.
 - [ ] Generate fresh source playable build; reuse existing source build copier, provide isolated-save launcher and truthful import/boot evidence.
-- [ ] Preserve old08 source build/profile/report; do not execute or edit them.
+- [x] Preserve old08 source build/profile/report; do not execute or edit them.
 - [ ] Verify copied source hashes, record Files/SHA, receipt + 00/08 handoff, presentation status separate from Content quality and Human QA.
 - [ ] Final commit/docs hash verify, working tree CLEAN, Push NOT_RUN.

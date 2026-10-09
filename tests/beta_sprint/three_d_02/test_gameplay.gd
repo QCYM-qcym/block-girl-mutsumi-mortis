@@ -1,6 +1,7 @@
 extends "res://tests/playtest/test_batch_01_runtime.gd"
 ## Exact native P01 inputs and observations. No Foundation Runtime or state assignment.
 const SaveStore = preload("res://game/shell/save_store.gd")
+const UITokens = preload("res://game/shell/visual_01/tokens.gd")
 var shell
 var level_id := ""
 var evidence := ""
@@ -174,6 +175,7 @@ func visual_check(label: String) -> void:
 	var seen: Dictionary = game.presenter.debug_snapshot()
 	check(game.presenter.actor.basis.is_equal_approx(game.mover.orientation.as_basis()), label + " visual cube basis equals actual native physical orientation")
 	check(seen.world == game.mover.world and seen.view == game.view.current, label + " visual world/view observes actual Runtime")
+	check(is_equal_approx(seen.camera_angle, PI/4-game.view.displayed_angle()), label + " actual 3D camera consumes native displayed quarter-turn angle")
 	if level_id != "mutsumi_l01":
 		check(seen.gate_state == "not_authored" and seen.plate_state == "not_authored", label + " unauthored gate/plate remain absent")
 		check(game.presenter.mechanisms.all(func(pair:Dictionary)->bool:return not pair.has("gate") and not pair.has("plate")), label + " no false optional mechanism nodes")
@@ -183,10 +185,45 @@ func visual_check(label: String) -> void:
 		if level_id == "mutsumi_l03":
 			var effective: bool = game.graph.link.active and not game.view.busy
 			check(seen.link_active == effective, label + " 3D endpoint status observes effective native connection")
+			check(seen.link_runtime_active == game.graph.link.active, label + " debug retains original Runtime connection observation")
 			check(seen.link_status == ("active" if effective else "inactive"), label + " explicit active/inactive connection status")
+			await marker_check(label, seen, effective)
 	else:
 		check(seen.gate_state == ("open" if game.graph.door_open else "closed") and seen.plate_state == ("pressed" if game.graph.plate_pressed else "inactive"), label + " original L01 plate/gate mapping preserved")
 	check(game.approved_hud.world_label.text.contains("Mortis" if game.mover.world == 1 else "若叶睦"), label + " approved HUD world follows Runtime")
+
+func marker_check(label: String, seen: Dictionary, effective: bool) -> void:
+	check(game.presenter.link_markers.size() == 2 and seen.link_markers.size() == 2, label + " exactly two actual authored endpoint markers")
+	if game.presenter.link_markers.size() != 2 or seen.link_markers.size() != 2: return
+	var expected_anchors: Array = [game.graph.link.a, game.graph.link.b]
+	for index in 2:
+		var row: Dictionary = game.presenter.link_markers[index]
+		var observed: Dictionary = seen.link_markers[index]
+		check(row.anchor == expected_anchors[index], label + " marker uses original Runtime anchor identity")
+		check(row.node is Label3D and observed.text == row.node.text and observed.visible == row.node.is_visible_in_tree(), label + " debug text/visibility observes real Label3D")
+		check(row.node.text == ("连接成立" if effective else "未连接"), label + " physical endpoint text follows effective native permission")
+		check(row.node.is_visible_in_tree() == game.graph.can_stand(row.anchor.node,game.mover.world), label + " endpoint visibility observes actual current-world support")
+		check(row.node.get_parent() == game.presenter and row.node.font == UITokens.font(false,600), label + " endpoint uses direct presentation child and approved shared font")
+		check(observed.position == row.node.position, label + " debug position observes physical endpoint marker")
+		var point: Vector3 = game.presenter.displayed_position(row.anchor.position(), row.anchor.platform)
+		check(is_equal_approx(row.node.position.x,point.x) and is_equal_approx(row.node.position.z,point.z), label + " marker follows native endpoint and actual interpolated platform offset")
+		var screen: Vector2 = game.presenter.camera.unproject_position(row.node.global_position)
+		var area: Vector2 = game.visual_viewport.get_visible_rect().size
+		check(screen.x >= 0 and screen.x <= area.x and screen.y >= 0 and screen.y <= area.y, label + " endpoint marker stays within real 3D viewport")
+
+func l03_topology_check() -> void:
+	for world in 2:
+		var authored = game.content.surface_cells if world == 0 else game.content.inner_cells
+		var floors: Array = game.presenter.assets.filter(func(row:Dictionary)->bool:return row.world == world and row.walkable)
+		check(floors.size() == authored.size(), "L03 each world has exact authored walkable visual footprint count")
+		var observed_cells: Array = []
+		for row in floors:
+			var cell := Vector2i(row.cell)
+			observed_cells.append(cell)
+			check(cell in authored and row.cell == Vector2(cell) and row.platform == game.graph.nodes[cell], "L03 floor maps exact native integer cell and platform")
+			check(str(row.node.get_meta("approved_asset_id")).ends_with("_FLOOR_001"), "L03 existing approved floors add no visual bridge across native gap")
+		check(observed_cells.size() == authored.size() and authored.all(func(cell:Vector2i)->bool:return cell in observed_cells), "L03 both worlds preserve each original support cell")
+		check(not floors.any(func(row:Dictionary)->bool:return row.cell.x > 3.0 and row.cell.x < 9.0), "L03 authored 3 to 9 gap remains visually unsupported")
 
 func reset_check() -> void:
 	await tap(KEY_R)
@@ -300,6 +337,7 @@ func l02_roll_probes() -> void:
 	await reset_check()
 
 func connection_probes() -> void:
+	l03_topology_check()
 	await move(Vector2i.RIGHT,3)
 	var blocked := native_snapshot()
 	await move(Vector2i.RIGHT)
