@@ -1,0 +1,82 @@
+{
+  "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "dirty": [
+    "?? docs/beta-sprint/game-feel-owner-10a/",
+    "?? game/feel/",
+    "?? tests/beta_sprint/game_feel_owner_10a/"
+  ],
+  "case": "unit_final_01",
+  "mode": "unit",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "01 DTO",
+    "Safety attestation",
+    "native commit"
+  ],
+  "sources": [
+    {
+      "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3",
+      "path": "foundation/orientation/discrete_orientation.gd"
+    },
+    {
+      "sha256": "09de66ae7dfb16dfc1acae05ab7e215b8e61173f926796bf8b47505a50deac68",
+      "path": "game/feel/animation/fall_landing/fall_motion.gd"
+    },
+    {
+      "sha256": "14c4569470b45be8d8644a98eee7d640b4f0f13a9becc0375162c264ab6fc055",
+      "path": "game/feel/animation/fall_landing/fall_visual_state.gd"
+    },
+    {
+      "sha256": "70a931adb7be862ef4eb1452dc95f1257863e87f369fc0a7bf83401f2fcc86cb",
+      "path": "game/feel/animation/fall_landing/landing_motion.gd"
+    },
+    {
+      "sha256": "0a03cc864bc4d2dec3f257aa91f369873bdd71be75494f75ef66982567d750fa",
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd"
+    },
+    {
+      "sha256": "9635f9c88c64060e669a6f7b4a506d334aabae8063dbcdb6c434e64cea08ff00",
+      "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd"
+    },
+    {
+      "sha256": "d12a9215b7fd5a10bc7b9ec6a3ec06f044c9c05750e174440f2b3adddd762f0a",
+      "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd"
+    },
+    {
+      "sha256": "64fbea6ca82c977275f0f1398dfd5c4d116902ce8b42ca0f806f31e6edb9448c",
+      "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd"
+    },
+    {
+      "sha256": "51f484881dde10d951c1de30859acdd1dd1044ae1047a002a2cbf95ef16f724c",
+      "path": "tests/beta_sprint/game_feel_owner_10a/run.ps1"
+    },
+    {
+      "sha256": "ae1043b9e0354c1f8ba7f67faaf85a6064968f6dababaf23b9443150a40e9560",
+      "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd"
+    }
+  ],
+  "project_name": "PFALL_10A_9992b753547948789fd34725e64c7818",
+  "arguments": [
+    "--path",
+    "\"E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\unit_final_01\\project\"",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_10a/unit.gd",
+    "--headless",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\unit_final_01"
+  ],
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "started": "2026-10-10T00:27:33.0695637+08:00",
+  "status": "PASS",
+  "pid": 37164,
+  "exit_code": 0,
+  "finished": "2026-10-10T00:27:33.3561990+08:00",
+  "stderr": null,
+  "source_changes": [],
+  "copied_source_changes": [],
+  "checks": 2003,
+  "failures": [],
+  "user_data_dir": "C:/Users/QCYM/AppData/Roaming/PFALL_10A_9992b753547948789fd34725e64c7818",
+  "profile_isolated": true
+}
