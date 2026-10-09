@@ -16,10 +16,10 @@ selected=[p for p in selected if not any(s in p.split('/') for s in ['evidence',
 files=[]
 target.mkdir(parents=True,exist_ok=False)
 project=target/'project'
-payload=git('archive','--format=tar',head,*selected)
+payload=git('archive','--format=tar',head,*roots) # Stay below Windows command-line length.
 with tarfile.open(fileobj=io.BytesIO(payload)) as source:
     for member in source:
-        if not member.isfile(): continue
+        if not member.isfile() or member.name not in selected: continue
         destination=project/member.name
         if not destination.resolve().is_relative_to(project.resolve()): raise SystemExit('Archive path escaped build')
         data=source.extractfile(member).read()
