@@ -7,6 +7,7 @@ const Shell = preload("res://game/shell/game_shell.gd")
 const Tokens = preload("res://game/shell/visual_01/tokens.gd")
 const Check = preload("res://game/shell/visual_01/stone_check.gd")
 const Row = preload("res://game/shell/visual_01/stone_row.gd")
+const Goal = preload("res://foundation/rules/goal_evaluator.gd")
 const OPTIONS = {"version":1,"reduced_motion":false,"hint_strength":1,"contrast":false,"input_hints":true}
 var shell: Node
 var ui
@@ -18,11 +19,19 @@ var lab_active := false
 var epoch := 0
 var runtime: Object
 var _event_callback: Callable
+var _commit_callback: Callable
 var _draft_options: Dictionary={}
 var _scope: Dictionary={}
 var _updating := false
 var _closing := false
 var _cue_sequence := 0
+var _legacy_level: Node
+var _legacy_audio: Node
+var _legacy_callback: Callable
+var _legacy_reset_callback: Callable
+var _goal_scope: Dictionary={}
+var _audio_identities: Dictionary={}
+var _last_audio_identity: Dictionary={}
 
 func bind_shell(host: Node) -> void:
 	shell=host
@@ -67,7 +76,7 @@ func _build_extra_controls() -> void:
 		control.focus_next=control.get_path_to(ui.focus_order[(index+1)%ui.focus_order.size()])
 		control.focus_previous=control.get_path_to(ui.focus_order[posmod(index-1,ui.focus_order.size())])
 		control.focus_neighbor_bottom=control.focus_next;control.focus_neighbor_top=control.focus_previous
-	var notice:=Tokens.label("减少动态用于界面与下一次坠落。\n边缘反馈尚未启用；连接准备提示暂不可用。",16)
+	var notice:=Tokens.label("减少动态用于界面、坠落与边缘反馈。\n连接准备提示暂不可用。",16)
 	ui.settings_panel.get_child(0).get_child(0).add_child(notice)
 	lab_entry=Row.new();lab_entry.display_text="错视实验";lab_entry.configure(0.5)
 	lab_entry.theme=Tokens.theme()
@@ -176,6 +185,7 @@ func launch_lab(letter: String) -> void:
 func leave_level() -> void:
 	if ui and ui.settings_open: ui.cancel_settings()
 	_bind_runtime(null)
+	_bind_legacy(null)
 	lab_active=false
 	if audio: audio.clear()
 
@@ -184,32 +194,107 @@ func shell_state_changed() -> void:
 	var level: Node=shell.adapter.level
 	var source: Object=level.get_game_feel_runtime() if level!=null and level.has_method("get_game_feel_runtime") else null
 	_bind_runtime(source)
+	_bind_legacy(level if source==null else null)
 	var paused: bool=shell.state==Shell.State.PAUSED
 	if source: level.set_host_paused(paused)
 	audio.set_paused(paused)
 	if source:
-		audio.set_music("exploration",source.get_state().player.location.layer)
+		if _goal_scope!=_scope: audio.set_music("exploration",source.get_state().player.location.layer)
 		_route_options(options)
 	elif shell.state in [Shell.State.MAIN_MENU,Shell.State.LEVEL_SELECT]: audio.set_music("menu")
-	else: audio.set_music("none") # Original scenes retain verified local audio.
+	elif _legacy_level!=null: _sync_legacy_music()
+	else: audio.set_music("none")
 	lab_entry.visible=shell.state==Shell.State.MAIN_MENU and not shell.settings_open
 	ui.feedback_panel.visible=not paused and not shell.settings_open and not ui.status_label.text.is_empty()
+
+func _bind_legacy(level: Node) -> void:
+	if level==_legacy_level: return
+	if is_instance_valid(_legacy_level):
+		if _legacy_reset_callback.is_valid() and _legacy_level.controls.reset_requested.is_connected(_legacy_reset_callback):
+			_legacy_level.controls.reset_requested.disconnect(_legacy_reset_callback)
+		audio.clear()
+	if is_instance_valid(_legacy_audio):
+		if _legacy_callback.is_valid() and _legacy_audio.cue_played.is_connected(_legacy_callback):
+			_legacy_audio.cue_played.disconnect(_legacy_callback)
+		for player in _legacy_audio.ambience: player.stream_paused=false
+	_legacy_level=null;_legacy_audio=null;_legacy_callback=Callable();_legacy_reset_callback=Callable()
+	if level==null: return
+	var has_polish:=false
+	for property in level.get_property_list():
+		if property.name=="polish": has_polish=true
+	if not has_polish: return
+	var local_audio: Node=level.polish.audio
+	if local_audio.get_script().resource_path!="res://game/polish/p01_audio.gd": return
+	_legacy_level=level;_legacy_audio=local_audio
+	_legacy_callback=_legacy_cue.bind(level,epoch)
+	local_audio.cue_played.connect(_legacy_callback)
+	_legacy_reset_callback=prepare_reset
+	level.controls.reset_requested.connect(_legacy_reset_callback)
+	_sync_legacy_music()
+
+func _sync_legacy_music() -> void:
+	if not is_instance_valid(_legacy_level): return
+	# Existing native Movement/Graph remain authoritative; no eligibility inference.
+	if not _legacy_level.graph.complete: audio.set_music("exploration",_legacy_level.mover.world)
+	# The accepted ambience remains loaded; only11 owns exploration music playback.
+	for player in _legacy_audio.ambience: player.stream_paused=true
+
+func _legacy_cue(cue: String, level: Node, captured_epoch: int) -> void:
+	if _closing or level!=_legacy_level or captured_epoch!=epoch: return
+	# Shell completion is already the single Goal audio authority for these levels.
+	if cue=="complete":
+		_legacy_audio.players[cue].stop()
+		return
+	var translated: String={"roll":"cube_roll","land":"cube_contact","shift_inner":"world_shift","shift_surface":"world_shift","link_on":"perspective_connect","link_off":"perspective_disconnect"}.get(cue,"")
+	if translated.is_empty(): return
+	_cue_sequence+=1
+	audio.play_ui(translated,"legacy:%d:%d"%[epoch,_cue_sequence])
+	# Route one voice for these cues; other accepted local mechanism sounds stay intact.
+	_legacy_audio.players[cue].stop()
+
+func prepare_reset() -> void:
+	if runtime!=null:
+		_cancel_runtime_audio()
+		audio.set_music("exploration",runtime.get_state().player.location.layer)
+	else: audio.clear()
+	_goal_scope={}
+
+func _cancel_runtime_audio() -> void:
+	# Owner clear() retires a complete run. Reset advances generation within that
+	# same run, so cancel captured identities rather than retire future events.
+	for identity in _audio_identities.values(): audio.cancel(identity)
+	_audio_identities.clear()
+	_last_audio_identity={}
 
 func _bind_runtime(source: Object) -> void:
 	if source==runtime:
 		_sync_scope();return
 	if runtime!=null and _event_callback.is_valid() and runtime.game_feel_event.is_connected(_event_callback): runtime.game_feel_event.disconnect(_event_callback)
-	epoch+=1;runtime=source;_scope={};ui.bind_context("","")
+	if runtime!=null and _commit_callback.is_valid() and runtime.committed.is_connected(_commit_callback): runtime.committed.disconnect(_commit_callback)
+	_event_callback=Callable()
+	_commit_callback=Callable()
+	_cancel_runtime_audio()
+	epoch+=1;runtime=source;_scope={};_goal_scope={};ui.bind_context("","")
 	if source:
 		_event_callback=forward_event.bind(source,epoch)
 		source.game_feel_event.connect(_event_callback)
+		_commit_callback=_runtime_committed.bind(source,epoch)
+		source.committed.connect(_commit_callback)
 		_sync_scope()
+
+func _runtime_committed(_state: Dictionary, source: Object, captured_epoch: int) -> void:
+	if _closing or source!=runtime or captured_epoch!=epoch: return
+	_sync_scope()
+	_sync_goal()
 
 func _sync_scope() -> void:
 	if runtime==null: return
 	var next: Dictionary=runtime.get_presentation_scope()
 	if next!=_scope:
 		_scope=next.duplicate(true)
+		_goal_scope={}
+		_cancel_runtime_audio()
+		audio.set_music("exploration",runtime.get_state().player.location.layer)
 		ui.bind_context("","") #07 scopes session/run;00 additionally owns generation changes.
 		ui.bind_context(str(next.session_id),str(next.level_run_id))
 		ui.set_authored_hint("WASD / 方向键：移动   F：尝试坠落\nQ / E：视角   R：重置   Esc：暂停","")
@@ -228,6 +313,9 @@ func forward_event(event: Dictionary,source: Object,captured_epoch: int) -> void
 	if event.get("session_id")!=_scope.get("session_id") or event.get("level_run_id")!=_scope.get("level_run_id"): return
 	var identity: Variant=event.get("presentation_identity")
 	if identity is Dictionary and identity.get("generation")!=_scope.get("generation"): return
+	if identity is Dictionary and event.get("semantic") in ["MOVE_APPLIED_NORMAL","PERSPECTIVE_FALL_APPLIED","MOVE_REJECTED_EDGE"]:
+		_audio_identities[JSON.stringify(identity)]=identity.duplicate(true)
+		if event.get("semantic")=="MOVE_APPLIED_NORMAL": _last_audio_identity=identity.duplicate(true)
 	ui.consume_event(event);audio.consume_event(event);_route_options(options)
 	if ui.settings_open: ui.feedback_panel.hide()
 
@@ -235,10 +323,26 @@ func _ui_cue(cue: String) -> void:
 	_cue_sequence+=1;audio.play_ui(cue,"shell:%d:%d"%[epoch,_cue_sequence])
 
 func _process(_delta: float) -> void:
-	if runtime!=null: _sync_scope()
+	if runtime!=null:
+		_sync_scope()
+		_sync_goal()
+	if _legacy_level!=null: _sync_legacy_music()
+
+func _sync_goal() -> void:
+	if _goal_scope==_scope or shell.state!=Shell.State.PLAYING or _last_audio_identity.is_empty(): return
+	var goal: Dictionary=Goal.is_goal(runtime.get_level(),runtime.get_state())
+	if not goal.ok or not goal.is_goal: return
+	_goal_scope=_scope.duplicate(true)
+	audio.play_ui("goal",_last_audio_identity.duplicate(true))
+	ui.set_authored_hint("实验完成：按 R 重置，或用 A / B 切换实验地图。","")
+	_route_options(options)
 
 func _exit_tree() -> void:
 	_closing=true
+	_bind_legacy(null)
 	if runtime!=null and _event_callback.is_valid() and runtime.game_feel_event.is_connected(_event_callback): runtime.game_feel_event.disconnect(_event_callback)
+	if runtime!=null and _commit_callback.is_valid() and runtime.committed.is_connected(_commit_callback): runtime.committed.disconnect(_commit_callback)
+	_commit_callback=Callable()
+	_event_callback=Callable();runtime=null
 	epoch+=1
 	if audio: audio.clear()

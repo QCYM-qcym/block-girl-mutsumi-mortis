@@ -1,0 +1,40 @@
+{
+	"checks": 4,
+	"display": "headless",
+	"doubles": [],
+	"failures": [
+		"11 Surface music consumes actual legacy World",
+		"11 Inner BGM follows actual committed world",
+		"11 World Shift cue from actual accepted native signal"
+	],
+	"observations": {
+		"audio": {
+			"bus_gains": {
+				"Ambience": -12.0,
+				"Master": 0.0,
+				"SFX": -6.0
+			},
+			"context": "menu",
+			"cue_counts": {},
+			"issues": [],
+			"master_muted": false,
+			"paused": false,
+			"playing": [
+				"music:menu"
+			],
+			"positions": {
+				"complete": 0.0,
+				"discovery": 0.0,
+				"inner": 0.0,
+				"menu": 0.28154194355011,
+				"surface": 0.0
+			},
+			"target_world": 0,
+			"voice_count": 18,
+			"world_blend": 0.0
+		}
+	},
+	"pid": 15988,
+	"scope": "Actual shared Shell/SaveStore/Audio/Runtime API; no Human result",
+	"user_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/full-slice-01/evidence/audio_red/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

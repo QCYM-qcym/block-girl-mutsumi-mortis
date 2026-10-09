@@ -1,0 +1,61 @@
+{
+	"checks": 16,
+	"display": "headless",
+	"doubles": [],
+	"failures": [],
+	"observations": {
+		"audio": {
+			"bus_gains": {
+				"Ambience": -12.0,
+				"Master": 0.0,
+				"SFX": -6.0
+			},
+			"context": "exploration",
+			"cue_counts": {
+				"cube_contact": 2,
+				"cube_roll": 2,
+				"fall_start": 2,
+				"fall_whoosh": 2,
+				"goal": 2,
+				"landing_impact": 2,
+				"music:complete": 2
+			},
+			"issues": [],
+			"master_muted": false,
+			"paused": false,
+			"playing": [
+				"music:surface",
+				"music:inner"
+			],
+			"positions": {
+				"complete": 0.0,
+				"discovery": 0.0,
+				"inner": 4.8326530456543,
+				"menu": 0.0,
+				"surface": 4.8326530456543
+			},
+			"target_world": 0,
+			"voice_count": 18,
+			"world_blend": 0.0
+		},
+		"progress": {
+			"completed": [],
+			"has_progress": false,
+			"recent": "",
+			"settings": {
+				"fullscreen": false,
+				"master": 1.0,
+				"music": 1.0,
+				"muted": false,
+				"sfx": 1.0
+			},
+			"unlocked": [
+				"mutsumi_l01"
+			]
+		},
+		"scope": "Native Fall/Roll/Goal, no progress/unlock mutation"
+	},
+	"pid": 20572,
+	"scope": "Actual shared Shell/SaveStore/Audio/Runtime API; no Human result",
+	"user_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/full-slice-01/evidence/goal_final_src/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

@@ -1,9 +1,13 @@
 extends RefCounted
 ## One writer for the real actor. Never grants movement or changes Runtime state.
 const State = preload("res://game/feel/animation/fall_landing/fall_visual_state.gd")
+const EdgeEvent = preload("res://game/feel/animation/edge_recoil/edge_event.gd")
 var _actor: Node3D
 var _fall: RefCounted
 var _landing: RefCounted
+var _edge: RefCounted
+var _edge_reduced := false
+var _edge_pivot := Vector3.ZERO
 var _projection: Callable
 var _finish: Callable
 var _base := Transform3D.IDENTITY
@@ -31,6 +35,13 @@ func set_reduced_motion(value: bool) -> void:
 
 func reduced_motion_enabled() -> bool: return _reduced_motion
 
+func bind_edge(edge: RefCounted) -> void:
+	if _edge != null: _edge.clear()
+	_edge=edge
+
+func release_edge_intent() -> void:
+	if _edge != null: _edge.set_intent(null)
+
 func bind(actor: Node3D, fall: RefCounted, landing: RefCounted, projection: Callable, finish_transition: Callable) -> void:
 	clear()
 	_actor = actor
@@ -46,7 +57,9 @@ func bind_scope(scope: Dictionary) -> void:
 	var next: Dictionary={}
 	if scope.has_all(["session_id","level_run_id","generation"]):
 		for key in ["session_id","level_run_id","generation"]: next[key]=scope[key]
-	if next!=_scope: clear()
+	if next!=_scope:
+		clear()
+		if _edge != null: _edge.clear()
 	_scope=next
 
 func sync_pose(pose: Dictionary) -> Dictionary:
@@ -72,7 +85,7 @@ func _current(identity: Variant) -> bool:
 func consume_event(event: Dictionary) -> Dictionary:
 	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1":
 		return _failure("Expected versioned Runtime presentation event.")
-	if event.get("phase") in ["STARTED","COMMITTED"] and not _current(event.get("presentation_identity")):
+	if event.get("phase") in ["STARTED","COMMITTED","REJECTED"] and not _current(event.get("presentation_identity")):
 		return {"ok":true,"ignored":true,"issues":[]}
 	var key := str([event.get("session_id"),event.get("level_run_id"),event.get("event_id")])
 	if _seen.has(key): return {"ok":true,"ignored":true,"issues":[]}
@@ -82,6 +95,7 @@ func consume_event(event: Dictionary) -> Dictionary:
 		if identity is Dictionary and identity == _presentation: clear()
 		return {"ok":true,"issues":[]}
 	if event.get("semantic") == "MOVE_APPLIED_NORMAL": return _consume_roll(event)
+	if event.get("semantic") == "MOVE_REJECTED_EDGE": return _consume_edge(event)
 	if event.get("semantic") != "PERSPECTIVE_FALL_APPLIED":
 		return {"ok":true,"ignored":true,"issues":[]}
 	if event.get("phase") == "STARTED":
@@ -133,6 +147,26 @@ func consume_event(event: Dictionary) -> Dictionary:
 		return {"ok":true,"issues":[]}
 	return _failure("Unexpected Fall lifecycle phase.")
 
+func _consume_edge(event: Dictionary) -> Dictionary:
+	if _edge == null or _phase in ["ROLL","FALL","LANDING"]:
+		return {"ok":true,"ignored":true,"issues":[]}
+	var issues: Array=EdgeEvent.validate(event)
+	if not issues.is_empty(): return {"ok":false,"issues":issues}
+	var projected: Dictionary=_project(event.source_pose)
+	if not projected.ok: return projected
+	var begin: Dictionary=_edge.begin(event)
+	# The Owner's admission/latch retains active progress and rejects held repeats.
+	if not begin.ok: return {"ok":true,"ignored":true,"issues":[]}
+	clear()
+	_base=projected.transform
+	_source=_base
+	_presentation=event.presentation_identity.duplicate(true)
+	_edge_pivot=_edge.support_pivot_offset()
+	_edge_reduced=_reduced_motion
+	_phase="EDGE"
+	_write(_base)
+	return {"ok":true,"issues":[]}
+
 func _consume_roll(event: Dictionary) -> Dictionary:
 	if event.get("phase") == "COMMITTED":
 		if _phase != "ROLL" or event.get("presentation_identity") != _presentation or event.get("transition_identity") != _token:
@@ -178,6 +212,16 @@ func _consume_roll(event: Dictionary) -> Dictionary:
 func tick(delta: float) -> void:
 	if _paused or _phase == "IDLE" or not is_finite(delta) or delta < 0.0: return
 	_elapsed += delta
+	if _phase == "EDGE":
+		var captured_epoch := _epoch
+		var sample: Dictionary=_edge.sample(_elapsed)
+		if captured_epoch != _epoch or sample.identity != _presentation: return
+		if sample.motion_done:
+			clear()
+		elif sample.active:
+			var rotation := Basis.IDENTITY if _edge_reduced else Basis(sample.rotation_offset)
+			_write(Transform3D(rotation*_source.basis,_source.origin+_edge_pivot-rotation*_edge_pivot))
+		return
 	if _phase == "ROLL":
 		var progress := smoothstep(0.0,ROLL_DURATION,_elapsed)
 		var rotation := Basis(_roll_axis,progress*PI*0.5)
@@ -232,7 +276,15 @@ func clear() -> void:
 	_finish_sent = false
 	if _fall != null: _fall.cancel(previous)
 	if _landing != null: _landing.cancel(previous)
+	if _edge != null: _edge.cancel(previous)
 	_write(_base)
+
+func dispose() -> void:
+	clear()
+	if _edge != null: _edge.clear()
+	_actor=null
+	_projection=Callable()
+	_finish=Callable()
 
 func snapshot() -> Dictionary:
 	return {"phase":_phase,"elapsed":_elapsed,"presentation_identity":_presentation.duplicate(true),"transition_identity":_token.duplicate(true),"finish_sent":_finish_sent,"paused":_paused}

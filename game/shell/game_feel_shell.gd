@@ -2,6 +2,7 @@ extends "res://game/shell/game_shell.gd"
 ## 00 wiring only; approved Shell remains the lifecycle/progress owner.
 const FeelHost = preload("res://game/shell/game_feel_host.gd")
 var game_feel
+var _quit_requested := false
 func _ready() -> void:
 	super._ready()
 	game_feel=FeelHost.new();add_child(game_feel);game_feel.bind_shell(self)
@@ -22,11 +23,21 @@ func save_settings() -> void:
 func cancel_settings() -> void:
 	if game_feel: game_feel.ui.cancel_settings()
 	else: super.cancel_settings()
+func reset_current() -> void:
+	if state not in [State.PAUSED,State.LEVEL_COMPLETE]: return
+	if game_feel: game_feel.prepare_reset()
+	super.reset_current()
 func request_quit() -> void:
+	if _quit_requested: return
 	if settings_open: cancel_settings()
 	if dirty and not _save_progress(): return
+	_quit_requested=true
 	# Run the same scene-unload boundary before quitting, including native interruption/audio cleanup.
 	_leave_level()
+	# Let queued scene destruction and the audio mixer retire their WAV playbacks
+	# before the engine tears down ObjectDB. No SaveStore semantics change.
+	await get_tree().process_frame
+	await get_tree().create_timer(0.12).timeout
 	get_tree().quit()
 func _on_setting_preview(key: String,value: Variant) -> void:
 	if game_feel and game_feel.ui.settings_open:

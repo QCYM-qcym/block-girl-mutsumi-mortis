@@ -1,0 +1,98 @@
+{
+	"checks": 6,
+	"display": "headless",
+	"doubles": [],
+	"failures": [],
+	"observations": {
+		"events": [
+			{
+				"attempt_id": 1,
+				"authoritative_final_orientation": null,
+				"camera_quadrant": 1,
+				"contract_version": "game_feel.event.v1",
+				"event_id": 1,
+				"intended_move_direction": 0,
+				"interruption_reason": null,
+				"level_run_id": "851e71eceb7d822b488947b50d45d103",
+				"phase": "REJECTED",
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "851e71eceb7d822b488947b50d45d103",
+					"session_id": "ddceef287c9b2a80ed59dee30bc30ace"
+				},
+				"reason_category": "EDGE",
+				"result": {
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"changed": false,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": null,
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 2000,
+					"status": 1
+				},
+				"schema_version": 1,
+				"semantic": "MOVE_REJECTED_EDGE",
+				"session_id": "ddceef287c9b2a80ed59dee30bc30ace",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": null,
+				"target_pose": null,
+				"transition_identity": null,
+				"world_id": 0
+			}
+		],
+		"host_issues": [],
+		"presenter": {
+			"elapsed": 0.0,
+			"finish_sent": false,
+			"paused": false,
+			"phase": "IDLE",
+			"presentation_identity": {},
+			"transition_identity": {}
+		}
+	},
+	"pid": 2388,
+	"scope": "Actual shared Shell/SaveStore/Audio/Runtime API; no Human result",
+	"user_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/full-slice-01/evidence/edge_green/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

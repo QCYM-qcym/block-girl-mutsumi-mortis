@@ -3,6 +3,7 @@ extends Node3D
 const Presenter = preload("res://game/feel/cube_presenter.gd")
 const Fall = preload("res://game/feel/animation/fall_landing/fall_motion.gd")
 const Landing = preload("res://game/feel/animation/fall_landing/landing_motion.gd")
+const Edge = preload("res://game/feel/animation/edge_recoil/edge_lean.gd")
 const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
 const Orientation = preload("res://foundation/orientation/discrete_orientation.gd")
 const Goal = preload("res://foundation/rules/goal_evaluator.gd")
@@ -80,6 +81,7 @@ func _ready() -> void:
 	runtime.transition_started.connect(_on_native_started)
 	runtime.committed.connect(_on_committed)
 	presenter.bind(actor,Fall.new(),Landing.new(),project_pose,runtime.finish_transition)
+	presenter.bind_edge(Edge.new())
 	load_map("a")
 
 func load_map(letter: String) -> void:
@@ -228,8 +230,13 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_W,KEY_UP: runtime.request_move(Vector2.UP)
 		KEY_S,KEY_DOWN: runtime.request_move(Vector2.DOWN)
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and not event.pressed and event.physical_keycode in [KEY_A,KEY_D,KEY_W,KEY_S,KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN]:
+		presenter.release_edge_intent()
+
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_CLOSE_REQUEST: _close("QUIT")
+	elif what==NOTIFICATION_WM_WINDOW_FOCUS_OUT: presenter.release_edge_intent()
 
 func _exit_tree() -> void:
 	_close("UNLOAD")
@@ -241,6 +248,7 @@ func _close(reason: String) -> void:
 	_camera_motion={}
 	presenter.bind_scope({})
 	if runtime!=null: runtime.interrupt(reason)
+	presenter.dispose()
 
 func _update_status(reason: String) -> void:
 	if runtime==null or not runtime.is_loaded(): return
