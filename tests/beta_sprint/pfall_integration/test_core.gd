@@ -10,6 +10,7 @@ var rows: Array = []
 var evidence := ""
 var profile := ""
 var host: Node3D
+var captures: Array=[]
 
 func _initialize() -> void:
 	for arg in OS.get_cmdline_user_args():
@@ -41,9 +42,17 @@ func settle(seconds: float=3.0) -> Array:
 	while Time.get_ticks_msec()<until:
 		await process_frame
 		var snap: Dictionary=host.presenter.snapshot()
+		if DisplayServer.get_name()!="headless" and snap.phase=="FALL" and samples.size()==6: await capture("map_"+host.map_letter+"_fall_"+str(captures.size()))
 		samples.append({"time_ms":Time.get_ticks_msec(),"phase":snap.phase,"actor":host.actor.transform,"screen":host.camera.unproject_position(host.actor.global_position),"state":host.runtime.get_state(),"commits":host.runtime.get_commit_count()})
 		if snap.phase=="IDLE" and host.runtime.is_idle(): break
 	return samples
+
+func capture(name: String) -> void:
+	await RenderingServer.frame_post_draw
+	var pixels: Image=root.get_texture().get_image()
+	var path: String=evidence.path_join(name+".png")
+	check(not pixels.is_empty() and pixels.save_png(path)==OK,"actual rendered pixels captured: "+name)
+	captures.append({"path":path,"width":pixels.get_width(),"height":pixels.get_height(),"phase":host.presenter.snapshot().phase})
 
 func run() -> void:
 	check(OS.get_user_data_dir().replace("\\","/").begins_with(profile.replace("\\","/")+"/"),"fresh isolated user data")
@@ -66,6 +75,7 @@ func run() -> void:
 		var before: Dictionary=host.runtime.get_state()
 		var before_key: String=Key.build(level,before).key
 		var source: Transform3D=host.actor.transform
+		if DisplayServer.get_name()!="headless": await capture("map_"+letter+"_source")
 		var offset: int=host.events.size()
 		await native_key(KEY_F)
 		var started: Dictionary={}
@@ -107,6 +117,7 @@ func run() -> void:
 		for event in host.events.slice(offset):
 			if event.semantic=="PERSPECTIVE_FALL_APPLIED" and event.phase=="COMMITTED": committed_count+=1
 		check(committed_count==1,letter+" one matching native COMMITTED")
+		if DisplayServer.get_name()!="headless": await capture("map_"+letter+"_landed")
 		var roll: Dictionary=host.runtime.request_action({"kind":0,"face_axis":0})
 		check(roll.status==0 and roll.changed,letter+" actual post-landing ordinary Roll accepted")
 		await settle()
@@ -148,6 +159,6 @@ func run() -> void:
 	finish()
 
 func finish() -> void:
-	var report: Dictionary={"checks":checks,"failures":failures,"rows":rows,"doubles":[],"authoritative_runtime":not rows.is_empty(),"authority":"real default formal Runtime + Owner09 map + real10A +00 natural SceneTree bridge; no manual Fall finish" if not rows.is_empty() else "dependency preflight only; real Core NOT_RUN","pid":OS.get_process_id(),"user_data_dir":OS.get_user_data_dir(),"display":DisplayServer.get_name(),"human_qa":"NOT_RUN"}
+	var report: Dictionary={"checks":checks,"failures":failures,"rows":rows,"captures":captures,"doubles":[],"authoritative_runtime":not rows.is_empty(),"authority":"real default formal Runtime + Owner09 map + real10A +00 natural SceneTree bridge; no manual Fall finish" if not rows.is_empty() else "dependency preflight only; real Core NOT_RUN","pid":OS.get_process_id(),"user_data_dir":OS.get_user_data_dir(),"display":DisplayServer.get_name(),"renderer":RenderingServer.get_current_rendering_method(),"human_qa":"NOT_RUN"}
 	FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE).store_string(JSON.stringify(report,"\t"))
 	quit(0 if failures.is_empty() else 1)
