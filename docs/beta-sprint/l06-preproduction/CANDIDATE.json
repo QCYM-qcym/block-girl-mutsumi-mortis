@@ -1,0 +1,47 @@
+{
+  "status": "DESIGN_ONLY_NOT_REGISTERED",
+  "baseline": "9e2e9c29a73272d431795f12db1fefaff2433b05",
+  "data": {
+    "level_id": "mutsumi_l06",
+    "display_title": "L-06 / 交织的归途（暂定）",
+    "quality": "GREYBOX",
+    "intent": "借两个世界的道路前进，找到相接的视线，回到 Surface 踏板并抵达出口。",
+    "spawn": [0, 7],
+    "goal": [13, 0],
+    "surface_cells": [[0,7],[0,6],[0,5],[2,5],[2,4],[2,3],[1,0],[2,0],[3,0],[9,0],[9,1],[11,1],[11,0],[12,0],[13,0]],
+    "inner_cells": [[0,7],[-1,7],[-1,6],[-1,5],[0,5],[1,5],[2,5],[2,3],[1,3],[0,3],[0,2],[0,1],[0,0],[1,0],[2,0],[3,0],[9,1],[10,1],[11,1],[11,0],[12,0],[13,0]],
+    "platform_b_cells": [[9,0],[9,1],[10,1],[11,1],[11,0],[12,0],[13,0]],
+    "link_enabled": true,
+    "link_a": [3,0],
+    "link_b": [9,0],
+    "link_worlds": [0],
+    "gate_enabled": true
+  },
+  "normal_route": [
+    {"action":"move","direction":[0,-1],"count":2,"landmark":"A: (0,5)"},
+    {"action":"shift","landmark":"A: Surface -> Inner"},
+    {"action":"move","direction":[1,0],"count":2,"landmark":"B: (2,5)"},
+    {"action":"shift","landmark":"B: Inner -> Surface"},
+    {"action":"move","direction":[0,-1],"count":2,"landmark":"C: (2,3)"},
+    {"action":"shift","landmark":"C: Surface -> Inner"},
+    {"action":"move","direction":[-1,0],"count":2,"landmark":"(0,3)"},
+    {"action":"move","direction":[0,-1],"count":3,"landmark":"(0,0)"},
+    {"action":"move","direction":[1,0],"count":1,"landmark":"D: (1,0)"},
+    {"action":"shift","landmark":"D: Inner -> Surface"},
+    {"action":"move","direction":[1,0],"count":2,"landmark":"Link A: (3,0)"},
+    {"action":"align_east","landmark":"Surface EAST authored connection"},
+    {"action":"move","direction":[1,0],"count":1,"landmark":"Link B: (9,0)"},
+    {"action":"move","direction":[0,1],"count":1,"landmark":"E: (9,1)"},
+    {"action":"shift","landmark":"E: Surface -> Inner"},
+    {"action":"move","direction":[1,0],"count":2,"landmark":"F: (11,1)"},
+    {"action":"shift","landmark":"F: Inner -> Surface"},
+    {"action":"move","direction":[0,-1],"count":1,"landmark":"Plate: (11,0)"},
+    {"action":"move","direction":[1,0],"count":2,"landmark":"Gate -> Surface Goal: (13,0)"}
+  ],
+  "spawn_inner_prefix": [
+    {"action":"shift","landmark":"Spawn: Surface -> Inner"},
+    {"action":"move","direction":[-1,0],"count":1,"landmark":"(-1,7)"},
+    {"action":"move","direction":[0,-1],"count":2,"landmark":"(-1,5)"},
+    {"action":"move","direction":[1,0],"count":1,"landmark":"A: (0,5)"}
+  ]
+}
