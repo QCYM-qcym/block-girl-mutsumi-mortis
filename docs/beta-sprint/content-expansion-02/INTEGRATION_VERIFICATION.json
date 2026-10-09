@@ -1,0 +1,131 @@
+{
+  "verified_utc": "2026-10-09T05:27:19.9344448Z",
+  "source_head": "991140292ac67e87d1751a062e7e96c7b9fee553",
+  "integration_window": "Phase2 coordinated window; accepted3D02 and ready06/07 normal merges",
+  "foundation_runtime_art_save": "UNCHANGED",
+  "frozen_file_verification": {
+    "files": 537,
+    "changed": []
+  },
+  "forbidden_production_diff": [],
+  "old_qa": [
+    {
+      "root": "E:/godot/beta-sprint-builds/ui_08_001_recheck_20261009_01",
+      "verification": {
+        "files": 140,
+        "changed": []
+      }
+    },
+    {
+      "root": "E:/godot/beta-sprint-builds/beta_3d02_qa_20261009_01",
+      "verification": {
+        "files": 184,
+        "changed": []
+      }
+    }
+  ],
+  "fixed_3d02": {
+    "path": "E:/godot/beta-sprint-builds/beta_3d02_20261009_01",
+    "files": {
+      "files": 1173,
+      "changed": []
+    },
+    "zip_sha256": "697070886818f1e437e9fd20444fe98684a60582eeb2b30bcea98bf8ab64c999",
+    "new_focused_packet": {
+      "files": 180,
+      "changed": []
+    }
+  },
+  "owner_deliverables": [
+    {
+      "owner": "content-batch-02",
+      "verification": {
+        "files": 64,
+        "changed": []
+      }
+    },
+    {
+      "owner": "shell-batch-02",
+      "verification": {
+        "files": 80,
+        "changed": []
+      }
+    }
+  ],
+  "old_three_test_bound_sources": {
+    "files": 392,
+    "changed": []
+  },
+  "shell_test_bound_sources": {
+    "files": 140,
+    "changed": []
+  },
+  "new_level_graphical_bound_sources": {
+    "files": 20,
+    "changed": []
+  },
+  "new_level_graphical_catalog_note": "Original single-entry catalog fixtures; catalog excluded from post-registration hash comparison. Formal current five-level catalog separately verified with68checks and Shell319check native menu/unlock/Continue cases.",
+  "original_three_catalog_rows": "EXACT_UNCHANGED",
+  "main": {
+    "path": "E:/godot/若叶睦/方块少女-若叶睦",
+    "head": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "untouched_by_this_task": true,
+    "preexisting_untracked_count": 77
+  },
+  "daily_build": {
+    "path": "E:/godot/beta-sprint-builds/beta_content_batch_02_20261009_01",
+    "source_head": "991140292ac67e87d1751a062e7e96c7b9fee553",
+    "package_kind": "SOURCE_PLAYABLE_NOT_EXE",
+    "build_file_verification": {
+      "files": 1241,
+      "changed": []
+    },
+    "source_file_verification": {
+      "files": 1241,
+      "changed": []
+    },
+    "zip": {
+      "zip": "E:\\godot\\beta-sprint-builds\\beta_content_batch_02_20261009_01.zip",
+      "sha256": "dc7b92903f8b87d2b074531e680cc8bb9049ef123ef2ae9c697efd4ee59e7b5a",
+      "bytes": 60405480
+    },
+    "verification": {
+      "status": "PASS_WITH_KNOWN_BASELINE_P2",
+      "profile": "CONTENT02",
+      "base_builder_exit": 0,
+      "head": "991140292ac67e87d1751a062e7e96c7b9fee553",
+      "source": "E:\\godot\\worktrees\\block-girl-foundation-4-integration",
+      "build": "E:\\godot\\beta-sprint-builds\\beta_content_batch_02_20261009_01",
+      "copied_files": 1241,
+      "copied_hash_mismatches": [],
+      "known_baseline_notes": [
+        "Existing standalone --quit-after ObjectDB exit warning: content_mutsumi_l02_boot"
+      ],
+      "restored_generated_import_metadata": [],
+      "save": "user://beta_sprint/beta_content_batch_02_20261009_01/qa_progress.json",
+      "human_qa": "NOT_RUN",
+      "stairs_clearance": "PARTIAL_PASS",
+      "stairs_traversal": "NOT_RUN",
+      "finished_utc": "2026-10-09T05:24:17.1220745Z"
+    }
+  },
+  "result_scopes": {
+    "fixed_3d02_matrix": "3/3 PASS_WITH_NONBLOCKING_P2",
+    "fixed_3d02_cold_continue": "PASS",
+    "L03_first_time": "RETEST_PENDING",
+    "new_daily_human_qa": "NOT_RUN",
+    "whole_game_beta_qa_complete": false
+  },
+  "open_issues": {
+    "P0": 0,
+    "P1": 0,
+    "retained_P2": 2,
+    "new_P2": 1,
+    "total_P2": 3,
+    "known_standalone_boot_warning": "Existing133byteObjectDB quit warning, exactbaselineSHA; retained separately from player QA issues"
+  },
+  "Foundation_4_full": "DEFERRED_CURRENT_BETA_SCOPE",
+  "stairs_clearance": "PARTIAL_PASS",
+  "stairs_traversal": "NOT_RUN",
+  "push": "NOT_RUN"
+}
