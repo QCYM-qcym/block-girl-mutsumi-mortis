@@ -1,0 +1,37 @@
+{
+	"authoritative_runtime": false,
+	"checks": 56,
+	"display": "headless",
+	"doubles": [
+		"synthetic game_feel.event.v1 snapshots"
+	],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [
+		"fall acceptance starts scoped whoosh without impact",
+		"matching COMMITTED alone lands",
+		"landing stops matching fall loop",
+		"ordinary accepted move rolls",
+		"normal committed move contacts",
+		"explicit edge sounds once",
+		"new edge allowed after cooldown",
+		"old cancel leaves newly started fall",
+		"interrupt synchronously stops with no landing",
+		"generation advance cancels old identity",
+		"new generation can commit",
+		"new level run may bind after clear"
+	],
+	"fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+	"input": "direct immutable unit fixtures",
+	"pid": 45736,
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-audio/tests/beta_sprint/game_feel_owner_11/evidence/policy_red_01/profile/Godot/app_userdata/方块少女-若叶睦"
+}

@@ -1,0 +1,30 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.86 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060 Ti
+
+FAIL: fixed 18 local voice players
+FAIL: both exploration layers actually playing
+FAIL: paired layers synchronized
+FAIL: world shift preserves running position
+FAIL: world shift actually blends
+FAIL: pause suspends music playhead
+FAIL: resume finishes same blend
+FAIL: fall starts with no early impact
+FAIL: scoped whoosh loop actually playing
+FAIL: matching real-port-shape commit triggers single impact
+FAIL: alternate commit delivery deduplicated
+FAIL: old cancellation does not stop new loop
+FAIL: cancel has no late landing
+FAIL: held input burst plays one recoil
+FAIL: repeated actions never allocate extra players
+FAIL: Goal and UI completion sources deduplicate together
+FAIL: UI event identity deduplicated
+FAIL: back maps to original UI sound
+FAIL: music zero mutes music bus
+FAIL: legacy master gain formula
+FAIL: SFX independently controlled
+FAIL: existing muted key controls Master
+FAIL: clear retains UI dedup against late callback
+FAIL: clear rejects late start in retired run
+FAIL: missing audio silently diagnoses and never blocks caller
+FAIL: actual Godot mixed PCM is nonzero
+AUDIO_DIRECTOR checks=35 failures=26 peak=0.0
