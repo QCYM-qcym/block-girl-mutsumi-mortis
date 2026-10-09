@@ -1,0 +1,469 @@
+{
+  "task": "GAME_FEEL_UI_HOST_INTEGRATION_01",
+  "status": "PARTIAL",
+  "created_utc": "2026-10-09T18:16:35.083262+00:00",
+  "integration_commit": "249e0cbbf34ec782fefc3b8c997cff7a4cd394e8",
+  "07_owner_commit": "cccd9e2f23fbf3761e15dc44aa74a8496f78d268",
+  "07_accepted_delivery": "6d3bf4b7f5120b44dad4790b657a4be953dd4954",
+  "11_original": "4afbd068fae74a826dae4db04c2c612af23fa861",
+  "11_accepted": "7363e9e7d7849018cc456ae866a60e23472591d6",
+  "contract": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "ui_staging": "PASS",
+  "audio_settings": "PASS_PREVIEW_CANCEL_RETRY_COLD_SCENE;EXIT_BEHAVIOR_PASS_WITH_P2_WARNING",
+  "fall_indicator": "PASS_REAL_RUNTIME_STARTED_COMMITTED_INTERRUPTED",
+  "runtime_readiness_interface": "PENDING_RUNTIME_INTERFACE",
+  "connection_valid_invalid_feedback": "PENDING_RUNTIME_INTERFACE",
+  "reduced_motion": {
+    "07": "PASS",
+    "10A": "PASS_REAL_NEXT_FALL_AND_LANDING;STATEKEY_ORIENTATION_PARITY",
+    "10B": "PENDING_PRESENTER_CONSUMPTION",
+    "persisted": "PASS_EXISTING_SAVESTORE"
+  },
+  "hint_accessibility": "PASS_07_SCOPE;LEGACY_HINT_PRESENTATION_PRESERVED",
+  "graphical_matrix": "PASS_3_OF_3",
+  "graphical_checks": 213,
+  "host_checks": 36,
+  "cold_checks": 27,
+  "doubles": [],
+  "visual_regression": "FOCUSED_AUTOMATED_AND_CAPTURE_REVIEW;HUMAN_NOT_RUN",
+  "legacy_game_shell": "FOCUSED_PASS_MAIN_SELECT_PAUSE_SETTINGS_NEW_CONTINUE;FULL_FIVE_PLAYTHROUGHS_NOT_REPEATED",
+  "core_gameplay_build": "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04",
+  "build_identity_sha256": "09ed63ee034f3a9ceb48144d970e1b2c2bcbfc06ab52e07f9315f9a9c99072b7",
+  "archive_sha256": "fa11b8aafaa88f8eef3fae6fad73e752a5a7fb40af974767d32da06651eeeb81",
+  "package_integrity": {
+    "checks": 923,
+    "failures": []
+  },
+  "runs": [
+    {
+      "case": "final_host_01",
+      "phase": "unit",
+      "pid": 18376,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/final_host_01",
+        "--phase=unit",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 36,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "62adc83c2af00dbf5a00a8749bf5171dee4b3e601317dc73a9973f62ccf0a5cc",
+      "actual_viewport": null
+    },
+    {
+      "case": "final_cold_01",
+      "phase": "seed",
+      "pid": 32108,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/final_cold_01",
+        "--phase=seed",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 18,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "62d9a3ecb9df1d65bbb4d9e42a48975f7864f70c888c3bbf3f5eda34e3a91c12",
+      "actual_viewport": null
+    },
+    {
+      "case": "final_cold_01",
+      "phase": "restore",
+      "pid": 7572,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/final_cold_01",
+        "--phase=restore",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 9,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "e6f3e370db7fac929028afad2a5d5734fd312a5563adc0d76147b110d686c434",
+      "actual_viewport": null
+    },
+    {
+      "case": "final_1920_01",
+      "phase": "matrix",
+      "pid": 32164,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_matrix.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01",
+        "--phase=matrix",
+        "--shell-save=user://ui_host/progress.json",
+        "--size=1920x1080"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 71,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "5fa3408b8bfee2131b10d0ff2a6cdce258489b86abe0c7c0f2a5992ea3f25fb6",
+      "actual_viewport": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "case": "final_1280_01",
+      "phase": "matrix",
+      "pid": 37216,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_matrix.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01",
+        "--phase=matrix",
+        "--shell-save=user://ui_host/progress.json",
+        "--size=1280x720"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 71,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "9f894b63b9eef9100407a2eaa26b7d843e748c2650e4eb33ef913cd814950dab",
+      "actual_viewport": [
+        1280,
+        720
+      ]
+    },
+    {
+      "case": "final_960_01",
+      "phase": "matrix",
+      "pid": 37228,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_game_feel_ui_host_20261010_04\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_matrix.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01",
+        "--phase=matrix",
+        "--shell-save=user://ui_host/progress.json",
+        "--size=960x720"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 71,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "a85374590c87bb1df37d47c7cf516d0082718726916ae65479baf70536b79697",
+      "actual_viewport": [
+        960,
+        720
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/01_main.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "c416774f3e34958bc04a70608442237283359425e489eb837d46ac5e535e405a"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/02_settings_preview.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "c2a31e08050fbbc6b149b4f95c0e6e270fad94e673530de5cde953919cf602e5"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/03_settings_accessibility.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "1d9e02ddcde3a561b9f65de5143536d4e9663317d0c231b83f9216e0126cd415"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/04_fall_hud.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "01d6b75c17b09d7256ffb2e8a3bd246c5c607e6b10cdb55d0d4c947c0b35201a"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/05_pause.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "71e2b9adcf99ad02e3a1a98ccf97cb401017d1cac962ef69b445b35e22bf9e9f"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/06_landed_goal.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "2d738abbb99680de58b54bb0952801d3d485e9372d2cba64dbcd47346ab8c979"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/07_legacy_settings.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "09db524f347fc967a817ce2b30f21ced41e011598aee67ad65877b9f9d290119"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1920_01/08_select.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "4da62ba9da326e22fff24a02ef4972dd1cd2e24c178c2632a3e32f6450aaf5de"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/01_main.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "7d3ddf85cec0504e2ccd6d8d982520e616fb7c8f0262b64f8e2044d34db9fdfc"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/02_settings_preview.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "ab8961279017454db24df6ed305fb876f982b7fa1c5c5574122c1c0a2b924d9f"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/03_settings_accessibility.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "4e05be29b7800629e0c891f110914ec41c6ab9ad392883c9aae20778d6a7bb8f"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/04_fall_hud.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "0ecd247993f11f8dd8178307373e7ff125d11ae7c13fbe481a6579310ae253b9"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/05_pause.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "c629cef1a5555fdf699810e277dece1ed652880b43482b97d5113827ac0bcba4"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/06_landed_goal.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "447198595c57ae3e6f27a8a68a0fe52dda973ecdf452decd3d6c2fd560aa2181"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/07_legacy_settings.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "02525a44fad059962bdef032ae82c163332eb656da1a95bea627cd68fb5b1350"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_1280_01/08_select.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "e952d09bc8bfbfdc3b279c88d6b167d1a38e1ed5cd4d5ab830d2a1c4dcd5db56"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/01_main.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "d56254e83c4fc7445c1bca4825fc7d2ce8a2859e0c1773b18b3a5d58c77cd92f"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/02_settings_preview.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "cd1887d8c40ec66b6a73cdf47132a370a236f6632cf7b93e23d01dee73851c26"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/03_settings_accessibility.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "81297d719127e2bc3613f5988513c531d37e6bafd273160fcedf30a345fb7021"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/04_fall_hud.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "af1d580dbe20fcf06318daa4149845c8537ec3c9e09fb601dd6a625b081c67b9"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/05_pause.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "9bf05a57075341b96f27b5088185b6d5b1a24ffcdfe9e288ab24233ee0485372"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/06_landed_goal.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "0cb4cb7e8cb92a69375a68dd0cfbf45a3044250e85acef4b02a7c09b347da91c"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/07_legacy_settings.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "2f91e3d77b3d1d6fda33c49324593bd0ddc769f5e1fbbbbdc3c6c2c31c3b93ef"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/ui-host-01/evidence/final_960_01/08_select.png",
+      "size": [
+        960,
+        720
+      ],
+      "sha256": "d503724ed3f4bfdd3061de7f53a71a5a7a1fe86c132d98fa32aaa30a358f13ed"
+    }
+  ],
+  "files": [
+    {
+      "path": "project/game/feel/cube_presenter.gd",
+      "bytes": 11092,
+      "sha256": "2825743085553feeb6123447edb4fda654478fa6b0add5237018b8e2b20ba9a6",
+      "kind": "git_source"
+    },
+    {
+      "path": "project/game/shell/game_feel_host.gd",
+      "bytes": 11013,
+      "sha256": "5b9ab99d9c53e8ce41e401fa17bda1ecb6fcbcab1fd06ae211d9dc0f973dd46f",
+      "kind": "git_source"
+    },
+    {
+      "path": "project/game/shell/game_feel_lab.gd",
+      "bytes": 462,
+      "sha256": "0c004732600d9d0acfc0d7b270066f640b901a203a50d6becabdf60aa1294c35",
+      "kind": "git_source"
+    },
+    {
+      "path": "project/game/shell/game_feel_lab.tscn",
+      "bytes": 172,
+      "sha256": "9ea6ee0f8b1bea9b81cf5a53664f455f569e838c6e75627c1d928565b38d28e6",
+      "kind": "git_source"
+    },
+    {
+      "path": "project/game/shell/game_feel_shell.gd",
+      "bytes": 2223,
+      "sha256": "6fdf6f00da7a56d1065b62db059d6e8d89ea9c24396ea9cf1e184a04bac4271c",
+      "kind": "git_source"
+    },
+    {
+      "path": "project/game/shell/game_feel_shell.tscn",
+      "bytes": 174,
+      "sha256": "00ed12fb8c65d607938482205a5f83dfc3fa689aeb7a087b5f244592267d76d0",
+      "kind": "git_source"
+    },
+    {
+      "path": "project/project.godot",
+      "bytes": 630,
+      "sha256": "182e3a555d5e4b6b727cec9244d45f0f3b501672a50b1bcb8a00a60ce18249c7",
+      "kind": "git_source"
+    }
+  ],
+  "pending": [
+    {
+      "id": "UI_HOST_EXIT_OBJECTDB_01",
+      "severity": "P2",
+      "status": "BACKLOG",
+      "evidence": "evidence/final_quit_01/seed.stderr.log",
+      "actual": "six ObjectDB leaked instances at process quit;6 behavior checks pass, restore stderr0;not warning-free PASS",
+      "owner": "00 diagnosis;handoff exact component only after attribution"
+    },
+    {
+      "id": "CONNECTION_PREPAREDNESS",
+      "status": "PENDING_RUNTIME_INTERFACE",
+      "owner": "01"
+    },
+    {
+      "id": "EDGE_REDUCED_MOTION",
+      "status": "PENDING_PRESENTER_CONSUMPTION",
+      "owner": "00/10B"
+    }
+  ],
+  "human_qa": "NOT_RUN",
+  "foundation_changes": "NONE_THIS_TASK",
+  "art_changes": "NONE",
+  "owner_production_changes": "NONE",
+  "qa_baseline": "UNCHANGED",
+  "qa_handoff": "READY_FOR_08",
+  "push": "NOT_RUN"
+}
