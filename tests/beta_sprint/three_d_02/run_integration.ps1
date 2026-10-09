@@ -2,7 +2,7 @@ param(
     [string]$Project = (Join-Path $PSScriptRoot '../../..'),
     [string]$Godot = 'D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe',
     [string]$EvidenceName = ('b3d02_' + (Get-Date -Format 'yyyyMMdd_HHmmss') + '_' + [guid]::NewGuid().ToString('N').Substring(0,6)),
-    [ValidateSet('import','entry','l02','l03','l01','all')][string]$Mode = 'entry',
+    [ValidateSet('import','entry','l02','l03','l01','all','focused')][string]$Mode = 'entry',
     [ValidateSet('mutsumi_l01','mutsumi_l02','mutsumi_l03')][string]$Level = 'mutsumi_l02',
     [switch]$TraceProgress,
     [int]$StageTimeoutSeconds = 180
@@ -18,7 +18,7 @@ $b3dHead = (& git -C $b3dProject rev-parse HEAD).Trim()
 if ($LASTEXITCODE -ne 0) { throw 'Cannot identify source HEAD.' }
 $b3dPaths = @('project.godot','default_bus_layout.tres')
 $b3dPaths += @(& git -C $b3dProject ls-files --cached --others --exclude-standard -- game prototype/perspective production/art_3d production/audio/p01 production/ui/beta_shell_01 tests/playtest/test_batch_01_runtime.gd tests/beta_sprint/three_d_02)
-if ($TraceProgress) { $b3dPaths += 'tests/beta_sprint/content_expansion_02/trace_3d_regression.gd' }
+$b3dPaths += @(& git -C $b3dProject ls-files --cached --others --exclude-standard -- tests/beta_sprint/content_expansion_02)
 $b3dSources = @($b3dPaths | Sort-Object -Unique | Where-Object { Test-Path -LiteralPath (Join-Path $b3dProject $_) -PathType Leaf } | ForEach-Object {
     [ordered]@{path=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $b3dProject $_) -Algorithm SHA256).Hash.ToLowerInvariant()}
 })
@@ -82,6 +82,10 @@ function Invoke-B3DGameplay([string]$Id) {
 try {
     if ($Mode -in @('import','all')) { Invoke-B3DStage 'import' @('--headless','--editor','--import') }
     if ($Mode -eq 'entry') { Invoke-B3DEntry $Level }
+    elseif ($Mode -eq 'focused') {
+        $caseEvidence = Join-Path $b3dEvidence 'old_three_focused'
+        Invoke-B3DStage 'old_three_focused' @('--max-fps','60','--script','res://tests/beta_sprint/content_expansion_02/test_old_three_focused.gd','--',('--evidence-dir="'+$caseEvidence+'"'),"--shell-save=user://beta_sprint/b3d02_$EvidenceName/old_three.json","--head=$b3dHead") $caseEvidence $true
+    }
     elseif ($Mode -eq 'all') {
         foreach ($id in @('mutsumi_l02','mutsumi_l03','mutsumi_l01')) {
             Invoke-B3DEntry $id
