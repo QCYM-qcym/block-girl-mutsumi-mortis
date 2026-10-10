@@ -30,6 +30,17 @@ class ReceiptTests(unittest.TestCase):
     def test_bound_new_profile_receipt_qualifies_only_its_job(self):
         self.assertEqual(classify(self.record()), "PASS")
 
+    def test_legacy_job_requires_explicit_profile_and_candidate(self):
+        r = self.record()
+        r.update(scope="LEGACY_FOCUSED_REAL", profile="LEGACY_EXPLICIT")
+        self.assertEqual(classify(r), "PASS")
+        for field, value in [("profile", "foundation.game_feel.v1"),
+                             ("candidate", None), ("doubles", ["FakeKernel"])]:
+            with self.subTest(field=field):
+                invalid = dict(r)
+                invalid[field] = value
+                self.assertEqual(classify(invalid), "FAIL")
+
     def test_fail_closed_corrupted_receipts(self):
         for field, value in [("candidate", None), ("candidate", "not-a-sha"),
                              ("doubles", ["FakeSolver"]), ("checks", 0),

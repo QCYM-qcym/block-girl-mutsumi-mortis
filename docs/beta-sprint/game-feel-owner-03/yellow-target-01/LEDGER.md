@@ -15,3 +15,9 @@ Final review: one Important source-set admission/drift gap, corrected with candi
 Final: Ruling: reviewer declined actual dependency/runtime/graphics/full Safety/permissions/legacy results — they remain explicitly pending until actual candidate runs, no silent acceptance — cost if wrong: omitted cases stay visibly unaccepted.
 Final: Ruling: reviewer declined future intake/provenance/cleanliness and parent-only evidence — verify directly in subsequent intake and final checks — cost if wrong: no candidate-bound acceptance can be signed.
 New coordination: true combined candidate984f275913b1495fc09f92743fb0f665715f50c1 supplied; finish test correction, clean and preserve Owner history before controlled normal merge. Graphical window readiness not yet supplied; headless core may execute first.
+
+Execution intake: clean Owner preparation acef10e then authorized normal merge of combined984f275, preserving histories, HEAD333f185. Actual new production/dependency bytes bound by full path set and SHA. No production edits.
+Headless results: yt_core_01 162, yt_pconn_01 66, yt_legacy_profile_02 16; all PASS/exit0/stderr0/failures[]/doubles[]/drift[]. 244 assertions are not twelve cases or an addition to old69.
+Harness failure: yt_legacy_profile_01 consumed the formal09 wrapper rather than its .spec; raw4 checks/script errors preserved. Corrected only03 consumer, same candidate GREEN16 with historical schema1/schema2 hashes.
+Wrapper verification: three new official UID sidecars, actual check-only exit0/stderr0. Receipt Unit14 including explicit candidate-bound legacy scope PASS gating; Unit is not Real evidence.
+GRAPHICAL_WINDOW_READY received from00; independent03 formal/lifecycle/input/legacy graphical now authorized. Shared natural/audio/UI receipts remain separate provenance, not independent03 execution.

@@ -17,6 +17,9 @@ JOBS = {
     "formal": ("test_yellow_target_graphical.gd", True),
     "lifecycle": ("test_yellow_target_lifecycle.gd", True),
     "input": ("test_yellow_target_input.gd", True),
+    "legacy_profile": ("test_yellow_target_legacy_profile.gd", False),
+    "legacy_pconn": ("test_yellow_target_pconn.gd", False),
+    "legacy_graphical": ("test_yellow_target_legacy_graphical.gd", True),
 }
 SOURCE_ROOTS = ["foundation", "game", "experiments/game_feel_01", "prototype/perspective",
                 "production", "tests", "project.godot", "default_bus_layout.tres"]
@@ -31,6 +34,9 @@ def classify(r):
         return "FAIL"
     if r.get("scope") == "DEPENDENCY_PROBE" or r.get("dependency_pending"):
         return "PENDING"
+    if (r.get("exit_code") == 0 and r.get("scope") == "LEGACY_FOCUSED_REAL" and
+            r.get("profile") == "LEGACY_EXPLICIT" and re.fullmatch(r"[0-9a-f]{40}", r.get("candidate") or "")):
+        return "PASS" # Candidate-bound affected legacy job only.
     if (r.get("exit_code") != 0 or r.get("scope") != "NEW_PROFILE_REAL" or
             not re.fullmatch(r"[0-9a-f]{40}", r.get("candidate") or "") or
             r.get("profile") != "foundation.game_feel.v2"):
