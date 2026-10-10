@@ -106,6 +106,8 @@ func run()->void:
 		var forward_lean:=false
 		var compression:=false
 		var rebound:=false
+		var last_fall_image:Image
+		var last_fall_frame:Dictionary={}
 		var deadline:=Time.get_ticks_msec()+5000
 		while lab.presenter.snapshot().phase!="IDLE" and Time.get_ticks_msec()<deadline:
 			await process_frame
@@ -122,6 +124,7 @@ func run()->void:
 				frame.advance=advance
 				frame.lean=sampled.rotation_offset.get_angle()
 				frame.actual_signed_forward_lean=((lab.actor.basis*source_basis.inverse())*normal).normalized().dot(forward)
+				frame.support_gap=support_gap(body,target)
 				max_step=maxf(max_step,lab.actor.position.distance_to(previous_position))
 				if advance>0.05 and advance<1.0: forward_lean=forward_lean or frame.actual_signed_forward_lean>0.005
 				if advance>0.5 and parameter<0.25 and not stages.has("edge"):
@@ -132,11 +135,9 @@ func run()->void:
 					if parameter>=0.55 and not stages.has("middle"):
 						root.get_texture().get_image().save_png(evidence.path_join(letter+"_03_descend_middle.png"))
 						stages.middle=true
-					if parameter>=0.90 and not stages.has("precontact"):
-						check(support_gap(body,target)>0.0,letter+" pre-contact remains above yellow support plane")
-						root.get_texture().get_image().save_png(evidence.path_join(letter+"_04_pre_yellow_contact.png"))
-						stages.precontact=true
 				if advance<=0.5: check(absf((lab.actor.position-source_center).dot(normal))<0.0001,letter+" rendered frame stays on source plane before edge leave")
+				last_fall_image=root.get_texture().get_image()
+				last_fall_frame=frame.duplicate(true)
 			if view.phase=="LANDING":
 				var gap:=support_gap(body,target)
 				gaps.append(gap)
@@ -145,6 +146,10 @@ func run()->void:
 				compression=compression or scale.y<0.99
 				rebound=rebound or scale.y>1.00001
 				if not stages.has("contact"):
+					check(last_fall_image!=null and last_fall_frame.get("support_gap",-1.0)>0.0 and last_fall_frame.get("commits",-1)==0,letter+" last actually rendered frame before yellow contact is above support and uncommitted")
+					if last_fall_image!=null:
+						last_fall_image.save_png(evidence.path_join(letter+"_04_pre_yellow_contact.png"))
+						stages.precontact=true
 					check(runtime.get_commit_count()==1,letter+" actual COMMITTED exactly once before landing")
 					root.get_texture().get_image().save_png(evidence.path_join(letter+"_05_yellow_landing.png"))
 					stages.contact=true
@@ -167,7 +172,7 @@ func run()->void:
 		while lab.presenter.snapshot().phase!="IDLE" and Time.get_ticks_msec()<deadline: await process_frame
 		check(Goal.is_goal(baked.level,runtime.get_state()).is_goal and runtime.get_commit_count()==2,letter+" actual Fall Roll Goal route")
 		check(lab.host_issues.is_empty(),letter+" shared Host no errors")
-		rows.append({"map":letter,"native_identity":started.transition_identity,"source_pose":before.player,"target_pose":landed.player,"source_anchor2":str(source.position2),"target_anchor2":str(target.position2),"forward":v(forward),"support_edge_distance":0.5,"leave_point":v(leave_point),"authorized_trajectory":path,"initial_advance":initial_advance,"descent_start_seconds":descend_start,"early_parameter_increment":early_increment,"late_parameter_increment":late_increment,"join_velocity_before":v(join_before),"join_velocity_after":v(join_after),"cadence":cadence,"samples":frames,"landing_gaps":gaps,"stages":stages,"final_statekey":Key.build(baked.level,landed).key,"goal_statekey":Key.build(baked.level,runtime.get_state()).key})
+		rows.append({"map":letter,"native_identity":started.transition_identity,"source_pose":before.player,"target_pose":landed.player,"source_anchor2":str(source.position2),"target_anchor2":str(target.position2),"forward":v(forward),"support_edge_distance":0.5,"leave_point":v(leave_point),"authorized_trajectory":path,"initial_advance":initial_advance,"descent_start_seconds":descend_start,"early_parameter_increment":early_increment,"late_parameter_increment":late_increment,"join_velocity_before":v(join_before),"join_velocity_after":v(join_after),"cadence":cadence,"samples":frames,"precontact_frame":last_fall_frame,"landing_gaps":gaps,"stages":stages,"final_statekey":Key.build(baked.level,landed).key,"goal_statekey":Key.build(baked.level,runtime.get_state()).key})
 		bridge.free()
 		await process_frame
 	FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE).store_string(JSON.stringify({"task":"PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01","checks":checks,"failures":failures,"doubles":[],"rows":rows,"viewport":[root.size.x,root.size.y],"display":DisplayServer.get_name(),"renderer":RenderingServer.get_current_rendering_method(),"user_data_dir":OS.get_user_data_dir(),"authority":"Real public Baker/Runtime/registered natural Presenter; native MOVE and once-only COMMITTED. Dense pure sampler probes observe the accepted motion without changing clock or authority. Per-frame real mesh/contact and six renderer screenshots per map."},"\t"))
