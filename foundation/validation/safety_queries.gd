@@ -7,6 +7,9 @@ const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
 const Spatial = preload("res://foundation/spatial/spatial_validation.gd")
 const Orientation = preload("res://foundation/orientation/discrete_orientation.gd")
 const Code = Types.ValidationCode
+const Feel = preload("res://foundation/game_feel/schema.gd")
+const Trajectory = preload("res://foundation/game_feel/trajectory_profile.gd")
+const CurveSweep = preload("res://foundation/game_feel/trajectory_sweep.gd")
 const LO := -2147483648
 const HI := 2147483647
 
@@ -122,7 +125,7 @@ static func _context(level: Dictionary, state: Dictionary) -> Dictionary:
 		return _result(Status.UNSAFE,structural)
 	return {"status":Status.SAFE,"issues":[],"snapshot":snapshot.value,"anchor":anchor,"body":body,"center":center}
 
-static func _roll(_level: Dictionary, before: Dictionary, after: Dictionary, action: Dictionary, a: Dictionary, b: Dictionary) -> Dictionary:
+static func _roll(level: Dictionary, before: Dictionary, after: Dictionary, action: Dictionary, a: Dictionary, b: Dictionary) -> Dictionary:
 	var issues: Array[Dictionary] = []
 	var d := _direction(a.anchor.frame,action.face_axis)
 	var normal: Vector3i = a.anchor.frame.normal
@@ -144,6 +147,7 @@ static func _roll(_level: Dictionary, before: Dictionary, after: Dictionary, act
 		if cube.cube_id in [before.player.location.cube_id,after.player.location.cube_id]:
 			continue
 		if _intersects(box,_body(_components(cube.center2),issues)):
+			if Feel.curved(level) and _roll_rear_separated(pivot,d,cube.center2): continue
 			return {"result":_unproven([cube.cube_id],"Roll swept enclosure is not separated from an unrelated Cube."),"box":box}
 	return {"result":_result(Status.SAFE,[]),"box":box}
 
@@ -352,7 +356,7 @@ static func validate_perspective_motion(level: Dictionary, before: Dictionary, a
 	if a.status != Status.SAFE: return _result(a.status,a.issues)
 	var b := _context(level,after)
 	if b.status != Status.SAFE: return _result(b.status,b.issues)
-	if level.get("schema_version") != 2: return _error(Code.INVALID_ACTION,"fall",[],"Not an opt-in level.")
+	if not Feel.enabled(level): return _error(Code.INVALID_ACTION,"fall",[],"Not an opt-in level.")
 	var c := _find(level.perspective_falls,"connection_id",connection_id)
 	if c.is_empty(): return _error(Code.INVALID_REFERENCE,"fall.connection_id",[connection_id],"No authored motion profile.")
 	var expected := before.duplicate(true)
@@ -361,6 +365,10 @@ static func validate_perspective_motion(level: Dictionary, before: Dictionary, a
 		return _error(Code.INVALID_ACTION,"fall",[connection_id],"Fall only translates player within the same committed World/pose.")
 	if a.anchor.face_id != c.source_face_id or b.anchor.face_id != c.target_face_id or a.anchor.frame.normal != Vector3i.UP or b.anchor.frame.normal != Vector3i.UP:
 		return _error(Code.INVALID_FACE,"fall",[connection_id],"Profile requires its exact upward TOP anchors.")
+	if Feel.curved(level):
+		var geometry := Trajectory.validate_geometry(c.trajectory,Vector3i(a.center[0],a.center[1],a.center[2]),Vector3i(b.center[0],b.center[1],b.center[2]),a.anchor.frame,c.source_edge,before.camera_quadrant)
+		if not geometry.ok: return _result(Status.ERROR,geometry.issues)
+		return CurveSweep.prove(c.trajectory,a.snapshot.cubes,before.player.location.layer)
 	var points: Array = c.path_points2
 	if _components(points[0]) != a.center or _components(points[-1]) != b.center:
 		return _error(Code.INVALID_ACTION,"fall.path_points2",[connection_id],"Actor-center endpoints do not equal real support poses.")
@@ -401,3 +409,11 @@ static func _fraction_less(a: Array, b: Array) -> bool:
 
 static func _dot_i(a: Vector3i, b: Vector3i) -> int:
 	return int(a.x)*int(b.x)+int(a.y)*int(b.y)+int(a.z)*int(b.z)
+
+static func _roll_rear_separated(pivot: Array, direction: Vector3i, center: Vector3i) -> bool:
+	# The actual directed quarter-turn maps r_d∈[-2,0], r_n∈[0,2] to
+	# r_d*cos(theta)+r_n*sin(theta)≥-2, theta∈[0,pi/2]. This is an exact
+	# half-space separator for ANY rear entity, not an ID/support exemption.
+	var plane := 0
+	for axis in 3: plane += int(pivot[axis])*int(direction[axis])
+	return _dot_i(center,direction)+1 <= plane-2

@@ -175,6 +175,11 @@ func _event(result: Dictionary, desc: Dictionary, phase: String, presentation: V
 	var source: Variant = before.get("player")
 	var target: Variant = result.next_state.get("player") if result.status == 0 and result.next_state is Dictionary else null
 	var event := {"schema_version":1,"contract_version":"game_feel.event.v1","semantic":desc.get("semantic","ACTION_FEEDBACK"),"phase":phase,"event_id":0,"session_id":_session_id,"level_run_id":_run_id,"attempt_id":_attempt.get("id",_attempt_serial),"presentation_identity":presentation,"transition_identity":identity,"result":result.duplicate(true),"reason_category":desc.get("reason_category","UNCLASSIFIED_REJECTION"),"source_pose":source,"target_pose":target,"source_face":source.location if source != null else null,"target_face":target.location if target != null else null,"world_id":source.location.layer if source != null else null,"camera_quadrant":before.get("camera_quadrant"),"authoritative_final_orientation":target.orientation if target != null else null,"intended_move_direction":result.action.face_axis if result.action.get("kind") == 0 and result.action.get("face_axis") in range(4) else null,"interruption_reason":null}
+	# Version only the newly authorized geometry. Completion/interruption copy
+	# this captured envelope; ordinary Roll and neutral feedback remain v1.
+	if event.semantic == "PERSPECTIVE_FALL_APPLIED" and Schema.curved(_session.level):
+		event.schema_version = 2
+		event.contract_version = "game_feel.event.v2"
 	if desc.has("source_frame"): event["source_frame"] = desc.source_frame.duplicate(true)
 	for field in desc.get("motion",{}): event[field] = desc.motion[field].duplicate(true) if desc.motion[field] is Dictionary or desc.motion[field] is Array else desc.motion[field]
 	return event.duplicate(true)

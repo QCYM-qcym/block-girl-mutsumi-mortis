@@ -8,6 +8,8 @@ const QUARTER_TURNS = [2, 3, 22, 18, 9, 12]
 const FACE_NAMES = ["FRONT", "BACK", "LEFT", "RIGHT", "TOP", "BOTTOM"]
 const SCHEMAS = {
 	"fall_connection": Feel.CONNECTION_DATA,
+	"fall_connection_curve": Feel.CURVE_CONNECTION_DATA,
+	"trajectory": Feel.TRAJECTORY_DATA,
 	"level": {
 		"schema_version": "int", "contract_version": "string", "orientation_version": "string",
 		"rule_version": "string", "level_id": "id", "content_hash": "hash", "cell_size": "int",
@@ -58,11 +60,12 @@ const ACTION_FIELDS = {
 
 static func validate_level_shape(level: Dictionary) -> Array[Dictionary]:
 	var issues: Array[Dictionary] = []
-	var opt_in: bool = typeof(level.get("schema_version")) == TYPE_INT and level.schema_version == 2 and typeof(level.get("contract_version")) == TYPE_STRING and level.contract_version == Feel.CONTRACT
+	var kind := Feel.level_kind(level)
+	var opt_in := kind != 0
 	var shape: Dictionary = SCHEMAS.level.duplicate()
-	if opt_in: shape.merge(Feel.LEVEL_FIELDS)
+	if opt_in: shape.merge(Feel.CURVE_LEVEL_FIELDS if kind == 3 else Feel.LEVEL_FIELDS)
 	_check_record(level, shape, "", issues)
-	var versions := {"schema_version": 2 if opt_in else 1, "contract_version": Feel.CONTRACT if opt_in else "foundation.contract.v1", "orientation_version":"cube24.v1", "rule_version": Feel.RULE if opt_in else "foundation.rules.v1"}
+	var versions := {"schema_version":kind if opt_in else 1,"contract_version":Feel.CURVE_CONTRACT if kind == 3 else (Feel.CONTRACT if opt_in else "foundation.contract.v1"),"orientation_version":"cube24.v1","rule_version":Feel.CURVE_RULE if kind == 3 else (Feel.RULE if opt_in else "foundation.rules.v1")}
 	for field in versions:
 		var expected: Variant = versions[field]
 		if typeof(level.get(field)) == typeof(expected) and level[field] != expected:
@@ -495,13 +498,31 @@ static func _validate_falls(level: Dictionary, indexes: Dictionary, issues: Arra
 		for field in ["allowed_camera_quadrants","allowed_world_orientations"]:
 			if c[field].is_empty(): _issue(issues,Code.INVALID_REFERENCE,path + "." + field,"Permission set cannot be empty.")
 			_unique(c[field],path + "." + field,issues)
-		if c.path_points2.size() < 3 or c.path_points2.size() > 64: _issue(issues,Code.INVALID_TYPE,path + ".path_points2","Require 3..64 ordered actor-center points.")
-		for point in c.path_points2:
-			for axis in 3:
-				if absi(int(point[axis])) > 1000000: _issue(issues,Code.ARITHMETIC_OVERFLOW,path + ".path_points2","Path exceeds exact swept arithmetic profile.")
+		if Feel.curved(level):
+			_trajectory_constraints(c.trajectory,path + ".trajectory",issues)
+		else:
+			if c.path_points2.size() < 3 or c.path_points2.size() > 64: _issue(issues,Code.INVALID_TYPE,path + ".path_points2","Require 3..64 ordered actor-center points.")
+			for point in c.path_points2:
+				for axis in 3:
+					if absi(int(point[axis])) > 1000000: _issue(issues,Code.ARITHMETIC_OVERFLOW,path + ".path_points2","Path exceeds exact swept arithmetic profile.")
 		for j in i:
 			var other: Dictionary = level.perspective_falls[j]
 			if c.source_face_id == other.source_face_id and c.source_edge == other.source_edge:
 				var camera_overlap: bool = c.allowed_camera_quadrants.any(func(x):return x in other.allowed_camera_quadrants)
 				var world_overlap: bool = c.allowed_world_orientations.any(func(x):return x in other.allowed_world_orientations)
 				if camera_overlap and world_overlap: _issue(issues,Code.INVALID_REFERENCE,path,"Overlapping connection permissions are ambiguous.")
+
+static func validate_trajectory_shape(trajectory: Dictionary) -> Array[Dictionary]:
+	var issues: Array[Dictionary] = []
+	_check_record(trajectory,Feel.TRAJECTORY_DATA,"trajectory",issues)
+	if issues.is_empty(): _trajectory_constraints(trajectory,"trajectory",issues)
+	return _sorted(issues)
+
+static func _trajectory_constraints(trajectory: Dictionary, path: String, issues: Array[Dictionary]) -> void:
+	if trajectory.trajectory_version != Feel.TRAJECTORY_VERSION: _issue(issues,Code.VERSION_MISMATCH,path + ".trajectory_version","Unknown trajectory version.")
+	for field in ["departure_points2","descent_control_points2"]:
+		var count := 2 if field == "departure_points2" else 4
+		if trajectory[field].size() != count: _issue(issues,Code.INVALID_TYPE,path + "." + field,"Incorrect ordered control count.")
+		for point in trajectory[field]:
+			for axis in 3:
+				if absi(int(point[axis])) > 1000000: _issue(issues,Code.ARITHMETIC_OVERFLOW,path + "." + field,"Control exceeds exact dyadic arithmetic profile.")
