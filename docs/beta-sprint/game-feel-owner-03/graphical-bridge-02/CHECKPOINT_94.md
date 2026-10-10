@@ -2,7 +2,7 @@
 
 52 PASS / 0 FAIL / 42 PENDING. Baseline51 rows keep their original execution identity. Actual integrated Recoil pose is the one new PASS; formal Replayer remains BLOCKED pending01 production commit/intake. No hypothetical formal PASS is published.
 
-759 unique fresh PASS assertions; historical Core69 remains3 rows. Unit38 and behavior RED are separate.
+759 accumulated selected positive assertions across their recorded execution sources; historical Core69 remains3 rows. Unit38 and behavior RED are separate.
 
 | Case | Status | Execution source | Scope |
 |---|---|---|---|

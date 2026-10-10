@@ -1530,11 +1530,46 @@
     "counted_again": false
   },
   "new_pass_receipts": {
-    "c02_natural01": 62,
-    "c02_lifecycle01": 409,
-    "c02_spam01": 22,
-    "c02_audio01": 36,
-    "c02_full_slice01": 230
+    "c02_natural01": {
+      "checks": 62,
+      "execution_source": "3c21f729f129f0e68d58ae970d449d13d4207992",
+      "process": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_natural01/process.json",
+      "process_sha256": "d204f5201d13cbc583dc30e59d5f84b94f8c3aee8f121a463bddd5caca5d0dac",
+      "report": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_natural01/report.json",
+      "report_sha256": "9c2c2ee4094083258a19cc5f1302482181350eae7bcd9378ae0120774a137c8f"
+    },
+    "c02_lifecycle01": {
+      "checks": 409,
+      "execution_source": "3c21f729f129f0e68d58ae970d449d13d4207992",
+      "process": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_lifecycle01/process.json",
+      "process_sha256": "3f738039ab4ca45be03e8e10b3b0c7ad0385dfc0e776fb708a7262f2054839de",
+      "report": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_lifecycle01/report.json",
+      "report_sha256": "4aca07e298055eb897c6907724c471dae902b1c2bed3836902bacd7416a5f8c1"
+    },
+    "c02_spam01": {
+      "checks": 22,
+      "execution_source": "9866cdd56ded37ed7da753d52eb183d11a3c748e",
+      "process": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_spam01/process.json",
+      "process_sha256": "eb96a93ec69857745f5fc0ee56224a351e3ddf07c7a3ebdead64feeee9a3293b",
+      "report": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_spam01/report.json",
+      "report_sha256": "61ce165e13e5b4c4b141fc222f3ba3e45bb2fe381fdf62af4fd01df4ca101704"
+    },
+    "c02_audio01": {
+      "checks": 36,
+      "execution_source": "9866cdd56ded37ed7da753d52eb183d11a3c748e",
+      "process": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_audio01/process.json",
+      "process_sha256": "8b061692e8d3e7a9edeff16665e1452f4828318a8719062b3bf1449167447632",
+      "report": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_audio01/report.json",
+      "report_sha256": "ec5e952b4110e766ac9f12b580a9ecabf10da79349ceb95a5e682f40c80413a0"
+    },
+    "c02_full_slice01": {
+      "checks": 230,
+      "execution_source": "9663baf5bf6e67d56a1d1017085ef10b4af57a37",
+      "process": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_full_slice01/process.json",
+      "process_sha256": "c92fa42cd3112affbb5a52acc2594b3507f513a9e468980a9b1d71dd10bc9944",
+      "report": "docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_full_slice01/matrix.json",
+      "report_sha256": "1f9bbd3d10edb3e45cc5751808c5b987ceb56a4d3a662943f499a240aa5a1bb4"
+    }
   },
   "new_unique_pass_assertions": 759,
   "new_known_failures": "01 WIP lifecycle cleanup defects under Owner repair; not exercised in current intaked gate, no03 production fixes",

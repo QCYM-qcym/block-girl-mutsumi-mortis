@@ -67,9 +67,10 @@ def build(formal_name, lifecycle_name, regressions):
         records[name], reports[name] = receipt(name)
     require({records[n]["job"] for n in regressions} == {"natural", "spam", "lifecycle", "audio_lifecycle", "legacy_pconn", "logical_path", "swept_safety", "legacy_focused", "full_slice_graphical"}, "Require the exact focused regression job set")
     require(all(r["execution_source"] == records[formal_name]["execution_source"] for r in records.values()), "New selected receipts must share the exact candidate execution HEAD")
-    production_roots = ("foundation/", "game/feel/", "game/shell/", "experiments/game_feel_01/", "production/")
-    production = {p: h for p, h in records[formal_name]["source_sha256"].items() if p.startswith(production_roots)}
-    require(all({p: h for p, h in r["source_sha256"].items() if p.startswith(production_roots)} == production for r in records.values()), "New selected receipts must consume identical captured production bytes")
+    # Every captured non-test input participates, including project/input/audio
+    # settings, native player scenes and logical level/camera assets.
+    production = {p: h for p, h in records[formal_name]["source_sha256"].items() if not p.startswith("tests/")}
+    require(all({p: h for p, h in r["source_sha256"].items() if not p.startswith("tests/")} == production for r in records.values()), "New selected receipts must consume identical captured production bytes")
     formal = reports[formal_name]
     lifecycle = reports[lifecycle_name]
     require(records[formal_name]["job"] == "formal_graphical")
