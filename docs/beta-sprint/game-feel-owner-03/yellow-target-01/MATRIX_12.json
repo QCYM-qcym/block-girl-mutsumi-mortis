@@ -1,113 +1,159 @@
 {
   "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
-  "stage": "TEST_PREPARATION",
+  "stage": "TEST_EXECUTED",
   "preparation_base": "01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c",
-  "combined_candidate": null,
+  "combined_candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
   "contract_mismatch": "NONE",
   "contract_registration": "ec826753435458abc41cc365e4b57dba27767fbd",
   "contract_blob_sha256": "4e230017b25b047940c8b6b28d0253e35836c67833ce6698005ff63e24d77a3f",
   "contract_physical_sha256": "4e230017b25b047940c8b6b28d0253e35836c67833ce6698005ff63e24d77a3f",
   "counts": {
-    "PASS": 0,
+    "PASS": 12,
     "FAIL": 0,
-    "PENDING": 12
+    "PENDING": 0
   },
   "cases": [
     {
       "id": "YT01",
       "requirement": "Forward departure and curved Fall lands on yellow TOP",
-      "status": "PENDING",
-      "pending": "PENDING: Owner00/10A actual six-phase A/B render and per-frame capture, canonical new trajectory and natural contact",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_natural_reference_02/consumption.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Official trajectory departure and continuous descent, yellow target/TOP; actual six phases A/B51 external00 checks,209matching production hashes,12rendered images; independent03 formal211."
     },
     {
       "id": "YT02",
       "requirement": "Formal Target Face and FaceAnchor",
-      "status": "PENDING",
-      "pending": "PENDING: actual 09 schema3 target/TOP; official Spatial unique anchor, final actor center = anchor.position2 + normal in doubled units",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Official Spatial unique target/TOP anchors A(-6,1,8),B(-6,9,8); actual actor centers(-3,1,4),(-3,5,4)."
     },
     {
       "id": "YT03",
       "requirement": "Old blue platform cannot be mistakenly selected",
-      "status": "PENDING",
-      "pending": "PENDING: four actual bodies; blue_reference nonwalkable, target cube is target rather than blue_reference, route and natural actor/platform identity",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_natural_reference_02/consumption.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Four authored cubes; blue_reference nonwalkable and visually distinct; actual Runtime target ID and Renderer target mesh, never blue_reference."
     },
     {
       "id": "YT04",
       "requirement": "A physically lower / B physically higher, both descend on screen",
-      "status": "PENDING",
-      "pending": "PENDING: canonical y=0/8 versus source y=4; actual Safety and new rendered trajectory under EAST1 camera; old linear projection inadmissible",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_natural_reference_02/consumption.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Source center2.y=4; A target0 and B target8. Real curve Safety SAFE and native EAST1 rendered net descent A222.377px/B86.452px, monotone sampled screen-v."
     },
     {
       "id": "YT05",
       "requirement": "Fall then U_POS Roll to Goal",
-      "status": "PENDING",
-      "pending": "PENDING: new original FULL_GRAPH two-action witness, validated semantics, logical and formal replay each match two real steps; distinct exit/TOP Goal",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Each original FULL_GRAPH witness MOVE U_NEG Fall then MOVE U_POS Roll Goal; structural+semantic validation. Logical2steps each; newformal8matchedtotal acrossA/B×2."
     },
     {
       "id": "YT06",
       "requirement": "Fall PRESERVE orientation",
-      "status": "PENDING",
-      "pending": "PENDING: source orientation = landed Runtime orientation, actual Fall frames and settled basis, exact cube24 columns",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_input_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Authoritative Fall orientation0 preserved and neutral final visual Basis; ordinary Roll reaches12. World orientations[0,0]/Camera1 remain authoritative."
     },
     {
       "id": "YT07",
       "requirement": "Reset cancels Fall",
-      "status": "PENDING",
-      "pending": "PENDING: native R during new FALL/LANDING, old completion=0, exactly one cancellation, new generation restores full spawn/key/input, no stale callback contamination",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_lifecycle_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_input_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "18 actual lifecycle cases inA/B including nativeR duringFall/Landing, exit/free/remove-readd/timeout;18oldcancellations,0oldlatecompletions,36freshmatchedsteps. Nativehold Reset fullstate/input recovery also verified."
     },
     {
       "id": "YT08",
       "requirement": "Held input cannot repeat Fall",
-      "status": "PENDING",
-      "pending": "PENDING: actual new integrated native WASD hold/spam with one original Fall identity and commit, release/recovery; no queued duplicate Fall or synthetic loop",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_input_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Real Godot native WASD hold/echo+rapid80routingattempts whileFall;A66/B68heldframes spanningFall/Landing/Idle,1STARTED+1COMMITTED identity each, release+Reset+freshinput works. OS/humaninput not inferred."
     },
     {
       "id": "YT09",
       "requirement": "Illegal Camera rejected",
-      "status": "PENDING",
-      "pending": "PENDING: new Runtime rejection with unchanged full state/key/commit count and formal Camera reason; also retain affected old camera regression",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Real publicBaker camera authorvariants0/2/3 forA/B;realFacade rejection formalcamera reason,fullbefore/afterStateKey identical,0commits. No forcedstate mutation."
     },
     {
       "id": "YT10",
       "requirement": "Existing Perspective Connection regression",
-      "status": "PENDING",
-      "pending": "PENDING: real existing production Pconn test on supplied candidate, focused receipt; old 66-check receipt is baseline only",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_pconn_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Fresh actual existing production PerspectiveConnection66checks oncandidate; old66receipt not reused."
     },
     {
       "id": "YT11",
       "requirement": "Pixel/reference Gameplay and 3D full StateKey match",
-      "status": "PENDING",
-      "pending": "PENDING: prepared reference_mode=FORMAL_KERNEL_GAMEPLAY versus actual3D full state/key per original action; new candidate absent. Pixel rendering remains NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK, never inferred from LOGICAL_SESSION",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Explicit FORMAL_KERNEL_GAMEPLAY query reference fullseven-fieldstate/key peroriginalaction matchesactual3Dcompletion; acceptedreferencealternative. Pixel rendering NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK.",
+      "acceptance_mode": "FORMAL_KERNEL_GAMEPLAY_REFERENCE_VS_REAL_3D",
+      "pixel_graphical_status": "NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK"
     },
     {
       "id": "YT12",
       "requirement": "Final Visual Pose exactly matches Target",
-      "status": "PENDING",
-      "pending": "PENDING: independent formal anchor/normal and Orientation columns versus actual settled renderer pose, no residual offsets; Fall settled target is distinct from later Roll exit",
-      "real_evidence": [],
-      "baseline_reuse": false
+      "status": "PASS",
+      "pending": null,
+      "real_evidence": [
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json",
+        "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_natural_reference_02/consumption.json"
+      ],
+      "baseline_reuse": false,
+      "observed": "Actual final fullTransform Basis/position checked against independently derived officialSpatial Anchor+normal and cube24Orientation; nooffset. Falltarget distinctfromlaterRollexit."
     }
   ],
   "existing_94": {
@@ -119,10 +165,75 @@
     },
     "mutated": false
   },
-  "real_new_profile_runtime": "NOT_RUN_DEPENDENCY_PENDING",
-  "real_new_formal_graphical": "NOT_RUN_DEPENDENCY_PENDING",
-  "owner_handoff": "LOCAL_PREPARATION_ARTIFACT_ONLY",
+  "real_new_profile_runtime": "PASS_EXECUTED_SCOPE",
+  "real_new_formal_graphical": "PASS_211_CHECKS_8_MATCHED",
+  "owner_handoff": "READY_FOR_INTEGRATION_PACKAGE_VERIFICATION",
   "push": "NOT_RUN",
   "case11_reference_mode": "FORMAL_KERNEL_GAMEPLAY",
-  "pixel_rendering": "NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK"
+  "pixel_rendering": "NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK",
+  "receipts": {
+    "yt_core_01": {
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json",
+      "sha256": "35b9a5d52a38849933bb6a0e3972bf1458c93914c426622bc29469b2d58f9afd",
+      "checks": 162,
+      "execution_head": "333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9",
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL"
+    },
+    "yt_formal_01": {
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json",
+      "sha256": "4b1ec2d56212b63af9b02a148adc883faccaff0da383f877c20a59c659da3ac0",
+      "checks": 211,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL"
+    },
+    "yt_lifecycle_01": {
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_lifecycle_01/process.json",
+      "sha256": "2369bf849569c3fc654932717fcc5a98f521462fbe22528beda31da7c942409e",
+      "checks": 1017,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL"
+    },
+    "yt_input_01": {
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_input_01/process.json",
+      "sha256": "8ef4948c3810824195f44905ede3d744257a5b5fdb4634b2be7312174262e19a",
+      "checks": 25,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL"
+    },
+    "yt_pconn_01": {
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_pconn_01/process.json",
+      "sha256": "0743e54b283cf257346fd27b7b2c701506fb22d34131d2f09b409a75f30a6352",
+      "checks": 66,
+      "execution_head": "333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9",
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "LEGACY_FOCUSED_REAL"
+    },
+    "yt_legacy_profile_02": {
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_legacy_profile_02/process.json",
+      "sha256": "17c5dac8c0084930b818139af2dad0b45e546482e9d6f40803a4f263252cb789",
+      "checks": 16,
+      "execution_head": "333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9",
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "LEGACY_FOCUSED_REAL"
+    }
+  },
+  "natural_reference": {
+    "scope": "EXTERNAL_OWNER00_REAL_RECEIPT",
+    "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_natural_reference_02/consumption.json",
+    "sha256": "98ab6c1e4e5f17158a99b2a38dcc6f1c43ba3c832148ff349be2b8d801fbc7fe",
+    "external_checks": 51,
+    "independent_03_checks": 0
+  },
+  "not_run": [
+    "SCHEMA3_PIXEL_GRAPHICS",
+    "ART",
+    "HUMAN_QA",
+    "PERFORMANCE_SOAK",
+    "L06",
+    "NEW_PROFILE_INNER_OR_ALL24_ENDPOINTS"
+  ]
 }

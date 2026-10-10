@@ -1,0 +1,280 @@
+{
+  "report": "PFALL_V2_QUALITY_MATRIX_REPORT",
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+  "contract_mismatch": "NONE",
+  "owner03_checks": 1703,
+  "real_receipts": [
+    {
+      "job": "core",
+      "checks": 162,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9",
+      "pid": 21196,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL",
+      "profile": "foundation.game_feel.v2",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_core_01/process.json",
+      "sha256": "35b9a5d52a38849933bb6a0e3972bf1458c93914c426622bc29469b2d58f9afd"
+    },
+    {
+      "job": "formal",
+      "checks": 211,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "pid": 23596,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL",
+      "profile": "foundation.game_feel.v2",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_formal_01/process.json",
+      "sha256": "4b1ec2d56212b63af9b02a148adc883faccaff0da383f877c20a59c659da3ac0"
+    },
+    {
+      "job": "lifecycle",
+      "checks": 1017,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "pid": 27828,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL",
+      "profile": "foundation.game_feel.v2",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_lifecycle_01/process.json",
+      "sha256": "2369bf849569c3fc654932717fcc5a98f521462fbe22528beda31da7c942409e"
+    },
+    {
+      "job": "input",
+      "checks": 25,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "pid": 43040,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "NEW_PROFILE_REAL",
+      "profile": "foundation.game_feel.v2",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_input_01/process.json",
+      "sha256": "8ef4948c3810824195f44905ede3d744257a5b5fdb4634b2be7312174262e19a"
+    },
+    {
+      "job": "legacy_pconn",
+      "checks": 66,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9",
+      "pid": 31648,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "LEGACY_FOCUSED_REAL",
+      "profile": "LEGACY_EXPLICIT",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_pconn_01/process.json",
+      "sha256": "0743e54b283cf257346fd27b7b2c701506fb22d34131d2f09b409a75f30a6352"
+    },
+    {
+      "job": "legacy_profile",
+      "checks": 16,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9",
+      "pid": 42568,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "LEGACY_FOCUSED_REAL",
+      "profile": "LEGACY_EXPLICIT",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_legacy_profile_02/process.json",
+      "sha256": "17c5dac8c0084930b818139af2dad0b45e546482e9d6f40803a4f263252cb789"
+    },
+    {
+      "job": "legacy_graphical",
+      "checks": 206.0,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "capture_verified": true,
+      "execution_head": "18b7206a5a991e18125ad87ddca0bfd94bc14c93",
+      "pid": 25900,
+      "candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+      "scope": "LEGACY_FOCUSED_REAL",
+      "profile": "LEGACY_EXPLICIT",
+      "path": "docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_legacy_graphical_01/process.json",
+      "sha256": "f2686986bbb31082b5cfaf69224231e06ebe42f6d26b381ed17c6035d9c1c12f"
+    }
+  ],
+  "unit": {
+    "checks": 52,
+    "scope": "UNIT_SYNTHETIC_METADATA_AND_TEMP_GIT",
+    "real_pass": false
+  },
+  "old_core69": {
+    "checks": 69,
+    "cases": 3,
+    "matrix_ids": [
+      "CORE_A_NATURAL_FALL",
+      "CORE_B_NATURAL_FALL",
+      "CORE_CAMERA_REJECT"
+    ],
+    "counting": "Each matrix row counted once; assertions belong to shared execution evidence",
+    "receipt": "docs/beta-sprint/game-feel/pfall-first-slice/CORE_PLAYABLE_RECEIPT.json",
+    "receipt_sha256": "99f451290ca277fc069b474f7f0781487f3602eff21a8a51a4a390df963d848b",
+    "registered_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+    "baseline_receipt_commit": "4b90a4bdb102550ad99cb3695fd49e394c1c447c",
+    "rows": [
+      {
+        "case": "CORE_A_NATURAL_FALL",
+        "formal_result": "PASS",
+        "execution_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+        "checks": 26,
+        "failures": [],
+        "doubles": [],
+        "pid": 37820,
+        "stderr_bytes": 0,
+        "exit_code": 0,
+        "physical_checks": 1221,
+        "exact_git_blob_checks": 1152,
+        "raw_status_preserved": "OBSERVATIONS_RECORDED",
+        "raw_report_sha256": "151988a9d079251c9f452590397efce387e853a16b3c6bd5e08e3ef4139df329",
+        "evidence": "docs/beta-sprint/game-feel/pfall-first-slice/evidence/quality_i_a_01"
+      },
+      {
+        "case": "CORE_B_NATURAL_FALL",
+        "formal_result": "PASS",
+        "execution_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+        "checks": 26,
+        "failures": [],
+        "doubles": [],
+        "pid": 41744,
+        "stderr_bytes": 0,
+        "exit_code": 0,
+        "physical_checks": 1221,
+        "exact_git_blob_checks": 1152,
+        "raw_status_preserved": "OBSERVATIONS_RECORDED",
+        "raw_report_sha256": "da91d9bab66fd5db5e541ab06f698a4d5a87b2d65d0f95a69a866b2a4d908ae2",
+        "evidence": "docs/beta-sprint/game-feel/pfall-first-slice/evidence/quality_i_b_01"
+      },
+      {
+        "case": "CORE_CAMERA_REJECT",
+        "formal_result": "PASS",
+        "execution_source": "6074e48a8cfa98e34a2eb8533c37fa3aefdd97be",
+        "checks": 17,
+        "failures": [],
+        "doubles": [],
+        "pid": 43788,
+        "stderr_bytes": 0,
+        "exit_code": 0,
+        "physical_checks": 1221,
+        "exact_git_blob_checks": 1152,
+        "raw_status_preserved": "OBSERVATIONS_RECORDED",
+        "raw_report_sha256": "cb4920a77f4f8b071b71c322fb3dd22969b1c767364918a8b866e183d4de2ad0",
+        "evidence": "docs/beta-sprint/game-feel/pfall-first-slice/evidence/quality_i_cam_01"
+      }
+    ],
+    "counted_again": false
+  },
+  "matrix94": {
+    "PASS": 54,
+    "FAIL": 0,
+    "PENDING": 40,
+    "path": "MATRIX_94.json",
+    "status_upgrades": []
+  },
+  "yellow12": {
+    "PASS": 12,
+    "FAIL": 0,
+    "PENDING": 0,
+    "path": "MATRIX_12.json",
+    "case11": "FORMAL_KERNEL_GAMEPLAY_REFERENCE_VS_REAL_3D"
+  },
+  "formal_graphical": {
+    "status": "PASS",
+    "checks": 211,
+    "matched_steps": 8,
+    "source": "yt_formal_01",
+    "authority": "production TraceReplayer mode1, A/B twice, originalFULL_GRAPH selected witness"
+  },
+  "logical_replay": {
+    "status": "PASS",
+    "matched_steps": 4,
+    "source": "yt_core_01",
+    "authority": "production TraceReplayer mode0, A/B originalwitness"
+  },
+  "natural_presenter": {
+    "status": "PASS_IN_SHARED00_EXECUTED_SCOPE",
+    "external_checks": 51,
+    "independent03_assertions": 0,
+    "source": "yt_natural_reference_02/consumption.json",
+    "images": 12,
+    "source_hashes_compared": 209
+  },
+  "runtime_parity": "MATCH full seven-field states/StateKey/Orientation/World/Camera for all selected originalactions",
+  "graphical_parity": "MATCH real naturalcompletion identity/order/finalpose and full expected/actualstate/key; newGraphical8matched",
+  "lifecycle": {
+    "checks": 1017,
+    "cases": 18,
+    "old_cancelled": 18,
+    "old_late_completion": 0,
+    "fresh_matched_steps": 36
+  },
+  "held_input": {
+    "checks": 25,
+    "held_frames_a": 66,
+    "held_frames_b": 68,
+    "fall_commits_per_map": 1,
+    "input_authority": "Godot Input.parse_input_event; OS/humanNOT_RUN"
+  },
+  "legacy": {
+    "pconn": 66,
+    "schema1_schema2_historical_hashes": 16,
+    "actual_L01_L05_graphical": 206
+  },
+  "new_confirmed_production_defects": [],
+  "raw_failures_retained": [
+    {
+      "path": "evidence/yt_legacy_profile_01",
+      "kind": "03_HARNESS_FIXTURE_WRAPPER_CONSUMPTION",
+      "resolution": "correct official09 .spec; sameproduction GREEN16"
+    },
+    {
+      "path": "evidence/yt_natural_reference_01/attempt.json",
+      "kind": "OFFLINE_READER_PHASE_SPELLING",
+      "resolution": "actual phase FALL_MOVING; noGodot execution; reference02 validated"
+    }
+  ],
+  "owner_handoff": "03 test/docs ready for00 controlled integration/package execution; no01/10A production fix request",
+  "graphical_window": "GRAPHICAL_WINDOW_RELEASED",
+  "not_run": [
+    "SCHEMA3_PIXEL_GRAPHICAL_UNSUPPORTED",
+    "L06_OUT_OF_SCOPE",
+    "ART_GLB_SHADER_VFX",
+    "HUMAN_QA",
+    "PERFORMANCE_SOAK_AND_FRAME_TIME",
+    "OS_MOUSE_DRAG",
+    "COMPLETE_AUDIO_UI_MATRIX",
+    "NEW_PROFILE_ALL24_OR_INNER_PERMISSIONS"
+  ],
+  "push": "NOT_RUN"
+}

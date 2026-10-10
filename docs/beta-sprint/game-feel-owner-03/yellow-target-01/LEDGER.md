@@ -21,3 +21,7 @@ Headless results: yt_core_01 162, yt_pconn_01 66, yt_legacy_profile_02 16; all P
 Harness failure: yt_legacy_profile_01 consumed the formal09 wrapper rather than its .spec; raw4 checks/script errors preserved. Corrected only03 consumer, same candidate GREEN16 with historical schema1/schema2 hashes.
 Wrapper verification: three new official UID sidecars, actual check-only exit0/stderr0. Receipt Unit14 including explicit candidate-bound legacy scope PASS gating; Unit is not Real evidence.
 GRAPHICAL_WINDOW_READY received from00; independent03 formal/lifecycle/input/legacy graphical now authorized. Shared natural/audio/UI receipts remain separate provenance, not independent03 execution.
+
+Execution complete: seven fresh accepted Real receipts1703checks, Unit52 separate. Formal211/8matched; lifecycle1017/18oldcancelled/0late/36newmatched; nativehold25; actualL01-L05legacy206. Graphicalwindowreleased. Natural00 reference51verified against209productionhashes and12images, counted0independent03checks. Old94andbaseSpec sealed. Exact yellow12PASS in permitted scope; Case11referencealternative, realPixel NOT_RUN. External reference reader first wrong phase-name retained as03offlineconsumerdiagnostic; corrected to actualFALL_MOVING, notproduction. Finalreview underway.
+
+Finalreview: noCritical/Important. Minor inherited94top-level execution metadata ambiguity corrected with originalhistoricaltask plus explicitmetadata scope/source and supplemental_task. Oldmatrixbytes untouched. No production/testbehavior change. Finalmanifest/localcommit/cleanverification remain.
