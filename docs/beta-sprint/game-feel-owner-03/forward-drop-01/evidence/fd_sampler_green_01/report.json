@@ -1,0 +1,6562 @@
+{
+	"analysis_mode": "HEADLESS_REAL_AUTHORIZED_SAMPLER_ONLY",
+	"capture": {
+		"authoritative_runtime": true,
+		"display": "headless",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "0a83f217e6260b97e60526c4a840fe5c76e77f46",
+		"fixture_kind": "LEGACY_PRODUCTION_MODULE_UNIT",
+		"input_profile": "FORWARD_DROP_HEADLESS_REAL_AUTHORIZED_SAMPLER",
+		"pid": 36748,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/forward-drop-01/evidence/fd_sampler_green_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"checks": 1020,
+	"doubles": [],
+	"failures": [],
+	"graphical": "NOT_RUN",
+	"profile": "foundation.game_feel.v2",
+	"rows": [
+		{
+			"cadence": {
+				"accelerates": true,
+				"actual_observation_times": [
+					0.423625,
+					0.465125,
+					0.527375,
+					0.568875
+				],
+				"early_parameter_rate": 2.27997518784131,
+				"late_parameter_rate": 4.92665647944232,
+				"ok": true,
+				"parameters": [
+					0.294443715712987,
+					0.389062686008401,
+					0.613369125756435,
+					0.817825369653292
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+			"map": "a",
+			"measurement": {
+				"early_intervals": 21,
+				"early_speed": 5.08303378841707,
+				"first_descent_time": 0.3925,
+				"first_timed_forward": true,
+				"forward_only": true,
+				"late_intervals": 21,
+				"late_speed": 31.6061542857261,
+				"moving_intervals": 240,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 0
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": false,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "FORWARD",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "FORWARD",
+					"position": "(-0.001015, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000021, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "FORWARD",
+					"position": "(-0.002137, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000085, 1)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "FORWARD",
+					"position": "(-0.003365, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000189, 1)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "FORWARD",
+					"position": "(-0.004698, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000332, 1.0)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "FORWARD",
+					"position": "(-0.006135, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000515, 1.0)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "FORWARD",
+					"position": "(-0.007677, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000735, 1.0)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "FORWARD",
+					"position": "(-0.009321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000991, 1.0)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "FORWARD",
+					"position": "(-0.011068, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001283, 0.999999)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "FORWARD",
+					"position": "(-0.012917, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001609, 0.999999)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "FORWARD",
+					"position": "(-0.014866, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001968, 0.999998)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "FORWARD",
+					"position": "(-0.016916, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.002359, 0.999997)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "FORWARD",
+					"position": "(-0.019065, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00278, 0.999996)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "FORWARD",
+					"position": "(-0.021313, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003232, 0.999995)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "FORWARD",
+					"position": "(-0.023659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003712, 0.999993)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "FORWARD",
+					"position": "(-0.026102, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00422, 0.999991)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "FORWARD",
+					"position": "(-0.028642, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.004755, 0.999989)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "FORWARD",
+					"position": "(-0.031277, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005314, 0.999986)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "FORWARD",
+					"position": "(-0.034008, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005898, 0.999983)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "FORWARD",
+					"position": "(-0.036833, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.006506, 0.999979)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "FORWARD",
+					"position": "(-0.039752, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.007135, 0.999975)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "FORWARD",
+					"position": "(-0.042764, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.007785, 0.99997)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "FORWARD",
+					"position": "(-0.045868, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.008455, 0.999964)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "FORWARD",
+					"position": "(-0.049064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009144, 0.999958)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "FORWARD",
+					"position": "(-0.052351, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009851, 0.999951)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "FORWARD",
+					"position": "(-0.055727, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.010574, 0.999944)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "FORWARD",
+					"position": "(-0.059193, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.011312, 0.999936)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "FORWARD",
+					"position": "(-0.062748, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.012065, 0.999927)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "FORWARD",
+					"position": "(-0.06639, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.012831, 0.999918)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "FORWARD",
+					"position": "(-0.07012, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.013609, 0.999907)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "FORWARD",
+					"position": "(-0.073936, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.014398, 0.999896)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "FORWARD",
+					"position": "(-0.077838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.015197, 0.999884)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "FORWARD",
+					"position": "(-0.081825, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016005, 0.999872)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "FORWARD",
+					"position": "(-0.085896, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016821, 0.999858)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "FORWARD",
+					"position": "(-0.090051, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.017643, 0.999844)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "FORWARD",
+					"position": "(-0.094289, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.018471, 0.999829)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "FORWARD",
+					"position": "(-0.098608, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.019303, 0.999814)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "FORWARD",
+					"position": "(-0.10301, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.020139, 0.999797)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "FORWARD",
+					"position": "(-0.107492, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.020976, 0.99978)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "FORWARD",
+					"position": "(-0.112054, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.021815, 0.999762)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "FORWARD",
+					"position": "(-0.116695, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.022654, 0.999743)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "FORWARD",
+					"position": "(-0.121414, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.023491, 0.999724)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "FORWARD",
+					"position": "(-0.126212, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.024327, 0.999704)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "FORWARD",
+					"position": "(-0.131086, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025159, 0.999683)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "FORWARD",
+					"position": "(-0.136037, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025986, 0.999662)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "FORWARD",
+					"position": "(-0.141064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.026808, 0.999641)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "FORWARD",
+					"position": "(-0.146165, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.027624, 0.999618)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "FORWARD",
+					"position": "(-0.151341, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.028431, 0.999596)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "FORWARD",
+					"position": "(-0.15659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.02923, 0.999573)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "FORWARD",
+					"position": "(-0.161912, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030019, 0.999549)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "FORWARD",
+					"position": "(-0.167306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030797, 0.999526)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "FORWARD",
+					"position": "(-0.172771, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.031563, 0.999502)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "FORWARD",
+					"position": "(-0.178307, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.032315, 0.999478)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "FORWARD",
+					"position": "(-0.183913, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033053, 0.999454)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "FORWARD",
+					"position": "(-0.189587, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033776, 0.999429)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "FORWARD",
+					"position": "(-0.19533, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.034482, 0.999405)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "FORWARD",
+					"position": "(-0.201141, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.035171, 0.999381)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "FORWARD",
+					"position": "(-0.207019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.03584, 0.999358)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "FORWARD",
+					"position": "(-0.212963, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.03649, 0.999334)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "FORWARD",
+					"position": "(-0.218973, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.037119, 0.999311)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "FORWARD",
+					"position": "(-0.225047, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.037726, 0.999288)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "FORWARD",
+					"position": "(-0.231186, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038309, 0.999266)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "FORWARD",
+					"position": "(-0.237387, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038869, 0.999244)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "FORWARD",
+					"position": "(-0.243652, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.039403, 0.999223)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "FORWARD",
+					"position": "(-0.249978, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.03991, 0.999203)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "FORWARD",
+					"position": "(-0.256366, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04039, 0.999184)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "FORWARD",
+					"position": "(-0.262814, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.040841, 0.999166)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "FORWARD",
+					"position": "(-0.269321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.041263, 0.999148)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "FORWARD",
+					"position": "(-0.275888, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.041654, 0.999132)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "FORWARD",
+					"position": "(-0.282513, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042012, 0.999117)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "FORWARD",
+					"position": "(-0.289196, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042338, 0.999103)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "FORWARD",
+					"position": "(-0.295935, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042629, 0.999091)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FORWARD",
+					"position": "(-0.302731, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042885, 0.99908)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FORWARD",
+					"position": "(-0.309582, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043105, 0.999071)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FORWARD",
+					"position": "(-0.316488, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043287, 0.999063)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FORWARD",
+					"position": "(-0.323447, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043431, 0.999056)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FORWARD",
+					"position": "(-0.33046, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043535, 0.999052)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FORWARD",
+					"position": "(-0.337526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043598, 0.999049)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FORWARD",
+					"position": "(-0.344643, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FORWARD",
+					"position": "(-0.351811, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FORWARD",
+					"position": "(-0.35903, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FORWARD",
+					"position": "(-0.366298, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FORWARD",
+					"position": "(-0.373615, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FORWARD",
+					"position": "(-0.38098, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FORWARD",
+					"position": "(-0.388393, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FORWARD",
+					"position": "(-0.395853, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FORWARD",
+					"position": "(-0.403358, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FORWARD",
+					"position": "(-0.410909, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FORWARD",
+					"position": "(-0.418505, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FORWARD",
+					"position": "(-0.426144, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FORWARD",
+					"position": "(-0.433826, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FORWARD",
+					"position": "(-0.441551, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FORWARD",
+					"position": "(-0.449317, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FORWARD",
+					"position": "(-0.457125, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FORWARD",
+					"position": "(-0.464972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FORWARD",
+					"position": "(-0.47286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FORWARD",
+					"position": "(-0.480785, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FORWARD",
+					"position": "(-0.488749, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FORWARD",
+					"position": "(-0.496751, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "DEPARTURE",
+					"position": "(-0.504789, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "DEPARTURE",
+					"position": "(-0.512863, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "DEPARTURE",
+					"position": "(-0.520972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "DEPARTURE",
+					"position": "(-0.529115, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "DEPARTURE",
+					"position": "(-0.537292, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "DEPARTURE",
+					"position": "(-0.545503, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "DEPARTURE",
+					"position": "(-0.553745, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "DEPARTURE",
+					"position": "(-0.562019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "DEPARTURE",
+					"position": "(-0.570324, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "DEPARTURE",
+					"position": "(-0.578659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "DEPARTURE",
+					"position": "(-0.587024, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "DEPARTURE",
+					"position": "(-0.595417, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "DEPARTURE",
+					"position": "(-0.603838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "DEPARTURE",
+					"position": "(-0.612286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "DEPARTURE",
+					"position": "(-0.620761, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "DEPARTURE",
+					"position": "(-0.629261, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "DEPARTURE",
+					"position": "(-0.637787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "DEPARTURE",
+					"position": "(-0.646337, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "DEPARTURE",
+					"position": "(-0.654911, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "DEPARTURE",
+					"position": "(-0.663507, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "DEPARTURE",
+					"position": "(-0.672126, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "DEPARTURE",
+					"position": "(-0.680766, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "DEPARTURE",
+					"position": "(-0.689427, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "DEPARTURE",
+					"position": "(-0.698108, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "DEPARTURE",
+					"position": "(-0.706808, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "DEPARTURE",
+					"position": "(-0.715526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "DEPARTURE",
+					"position": "(-0.724263, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "DEPARTURE",
+					"position": "(-0.733017, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "DEPARTURE",
+					"position": "(-0.741787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "DEPARTURE",
+					"position": "(-0.750572, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "DEPARTURE",
+					"position": "(-0.759373, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "DEPARTURE",
+					"position": "(-0.768188, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "DEPARTURE",
+					"position": "(-0.777016, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "DEPARTURE",
+					"position": "(-0.785857, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "DEPARTURE",
+					"position": "(-0.794711, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "DEPARTURE",
+					"position": "(-0.803575, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "DEPARTURE",
+					"position": "(-0.81245, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "DEPARTURE",
+					"position": "(-0.821335, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "DEPARTURE",
+					"position": "(-0.830229, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "DEPARTURE",
+					"position": "(-0.839132, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "DEPARTURE",
+					"position": "(-0.848042, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "DEPARTURE",
+					"position": "(-0.85696, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "DEPARTURE",
+					"position": "(-0.865883, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "DEPARTURE",
+					"position": "(-0.874813, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "DEPARTURE",
+					"position": "(-0.883747, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "DEPARTURE",
+					"position": "(-0.892685, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "DEPARTURE",
+					"position": "(-0.901626, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "DEPARTURE",
+					"position": "(-0.910571, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "DEPARTURE",
+					"position": "(-0.919517, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "DEPARTURE",
+					"position": "(-0.928464, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "DEPARTURE",
+					"position": "(-0.937412, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "DEPARTURE",
+					"position": "(-0.946359, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "DEPARTURE",
+					"position": "(-0.955306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "DEPARTURE",
+					"position": "(-0.964251, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "DEPARTURE",
+					"position": "(-0.973194, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "DEPARTURE",
+					"position": "(-0.982133, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "DEPARTURE",
+					"position": "(-0.991069, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-1.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.009247, 2.999971, 0.000114)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-1.019132, 2.999878, 0.000486)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.029655, 2.999708, 0.001165)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-1.040814, 2.999447, 0.002201)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.052609, 2.999083, 0.003648)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-1.065041, 2.9986, 0.005561)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.078107, 2.997983, 0.007997)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-1.091808, 2.997217, 0.011016)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.106142, 2.996286, 0.014679)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-1.121108, 2.995172, 0.01905)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.136704, 2.993857, 0.024193)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-1.152928, 2.992324, 0.030175)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.16978, 2.990553, 0.037061)",
+					"rotation_offset": "(0, 0, 0.043615, 0.999048)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.187256, 2.988525, 0.044922)",
+					"rotation_offset": "(0, 0, 0.04357, 0.99905)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.205354, 2.986222, 0.053826)",
+					"rotation_offset": "(0, 0, 0.043475, 0.999054)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-1.224071, 2.98362, 0.063842)",
+					"rotation_offset": "(0, 0, 0.043332, 0.999061)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.243404, 2.980702, 0.075042)",
+					"rotation_offset": "(0, 0, 0.043143, 0.999069)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-1.263349, 2.977444, 0.087496)",
+					"rotation_offset": "(0, 0, 0.042909, 0.999079)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.283902, 2.973826, 0.101274)",
+					"rotation_offset": "(0, 0, 0.042631, 0.999091)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-1.30506, 2.969826, 0.116448)",
+					"rotation_offset": "(0, 0, 0.042312, 0.999104)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.326817, 2.96542, 0.133087)",
+					"rotation_offset": "(0, 0, 0.041951, 0.99912)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-1.349167, 2.960586, 0.151261)",
+					"rotation_offset": "(0, 0, 0.041552, 0.999136)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.372105, 2.955302, 0.171039)",
+					"rotation_offset": "(0, 0, 0.041114, 0.999154)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-1.395625, 2.949544, 0.192488)",
+					"rotation_offset": "(0, 0, 0.04064, 0.999174)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.419719, 2.943288, 0.215674)",
+					"rotation_offset": "(0, 0, 0.040131, 0.999194)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-1.44438, 2.936511, 0.240663)",
+					"rotation_offset": "(0, 0, 0.039589, 0.999216)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.469601, 2.929188, 0.267517)",
+					"rotation_offset": "(0, 0, 0.039015, 0.999239)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-1.49537, 2.921296, 0.296296)",
+					"rotation_offset": "(0, 0, 0.03841, 0.999262)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.52168, 2.912811, 0.32706)",
+					"rotation_offset": "(0, 0, 0.037776, 0.999286)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-1.54852, 2.903708, 0.359862)",
+					"rotation_offset": "(0, 0, 0.037114, 0.999311)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.575879, 2.893963, 0.394757)",
+					"rotation_offset": "(0, 0, 0.036426, 0.999336)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-1.603745, 2.883552, 0.431793)",
+					"rotation_offset": "(0, 0, 0.035712, 0.999362)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.632105, 2.87245, 0.471015)",
+					"rotation_offset": "(0, 0, 0.034976, 0.999388)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.660945, 2.860634, 0.512466)",
+					"rotation_offset": "(0, 0, 0.034217, 0.999414)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.69025, 2.84808, 0.556183)",
+					"rotation_offset": "(0, 0, 0.033438, 0.999441)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-1.720006, 2.834763, 0.602198)",
+					"rotation_offset": "(0, 0, 0.03264, 0.999467)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.750195, 2.82066, 0.65054)",
+					"rotation_offset": "(0, 0, 0.031824, 0.999493)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-1.7808, 2.805748, 0.701231)",
+					"rotation_offset": "(0, 0, 0.030991, 0.99952)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.811802, 2.790003, 0.754288)",
+					"rotation_offset": "(0, 0, 0.030144, 0.999546)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-1.84318, 2.773403, 0.809722)",
+					"rotation_offset": "(0, 0, 0.029284, 0.999571)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.874915, 2.755926, 0.867538)",
+					"rotation_offset": "(0, 0, 0.028411, 0.999596)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-1.906982, 2.737549, 0.927734)",
+					"rotation_offset": "(0, 0, 0.027528, 0.999621)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.93936, 2.718251, 0.990302)",
+					"rotation_offset": "(0, 0, 0.026636, 0.999645)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-1.972022, 2.698012, 1.055223)",
+					"rotation_offset": "(0, 0, 0.025736, 0.999669)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.004942, 2.67681, 1.122476)",
+					"rotation_offset": "(0, 0, 0.02483, 0.999692)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.038092, 2.654627, 1.192025)",
+					"rotation_offset": "(0, 0, 0.02392, 0.999714)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.071443, 2.631442, 1.263832)",
+					"rotation_offset": "(0, 0, 0.023006, 0.999735)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.104965, 2.607238, 1.337844)",
+					"rotation_offset": "(0, 0, 0.02209, 0.999756)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.138624, 2.581998, 1.414003)",
+					"rotation_offset": "(0, 0, 0.021173, 0.999776)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.172386, 2.555704, 1.492238)",
+					"rotation_offset": "(0, 0, 0.020258, 0.999795)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206216, 2.528341, 1.57247)",
+					"rotation_offset": "(0, 0, 0.019345, 0.999813)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.240076, 2.499893, 1.654608)",
+					"rotation_offset": "(0, 0, 0.018436, 0.99983)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.273927, 2.470348, 1.73855)",
+					"rotation_offset": "(0, 0, 0.017532, 0.999846)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.307727, 2.439691, 1.824182)",
+					"rotation_offset": "(0, 0, 0.016635, 0.999862)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.341433, 2.407912, 1.911378)",
+					"rotation_offset": "(0, 0, 0.015746, 0.999876)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.375, 2.375, 2.0)",
+					"rotation_offset": "(0, 0, 0.014867, 0.999889)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.408381, 2.340945, 2.089897)",
+					"rotation_offset": "(0, 0, 0.013999, 0.999902)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.441527, 2.30574, 2.180902)",
+					"rotation_offset": "(0, 0, 0.013143, 0.999914)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.474385, 2.269377, 2.272838)",
+					"rotation_offset": "(0, 0, 0.012302, 0.999924)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.506903, 2.231852, 2.365511)",
+					"rotation_offset": "(0, 0, 0.011475, 0.999934)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.539024, 2.19316, 2.458711)",
+					"rotation_offset": "(0, 0, 0.010666, 0.999943)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.57069, 2.1533, 2.552215)",
+					"rotation_offset": "(0, 0, 0.009875, 0.999951)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.601841, 2.11227, 2.645782)",
+					"rotation_offset": "(0, 0, 0.009103, 0.999959)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.632412, 2.070073, 2.739156)",
+					"rotation_offset": "(0, 0, 0.008353, 0.999965)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.662339, 2.026709, 2.832062)",
+					"rotation_offset": "(0, 0, 0.007625, 0.999971)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.691553, 1.982185, 2.924208)",
+					"rotation_offset": "(0, 0, 0.006921, 0.999976)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.719983, 1.936506, 3.015285)",
+					"rotation_offset": "(0, 0, 0.006243, 0.999981)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.747554, 1.88968, 3.104965)",
+					"rotation_offset": "(0, 0, 0.005591, 0.999984)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.774191, 1.841719, 3.192898)",
+					"rotation_offset": "(0, 0, 0.004968, 0.999988)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.799814, 1.792634, 3.278718)",
+					"rotation_offset": "(0, 0, 0.004375, 0.99999)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.82434, 1.74244, 3.362036)",
+					"rotation_offset": "(0, 0, 0.003813, 0.999993)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.847683, 1.691154, 3.442443)",
+					"rotation_offset": "(0, 0, 0.003283, 0.999995)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.869757, 1.638795, 3.519508)",
+					"rotation_offset": "(0, 0, 0.002788, 0.999996)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.890467, 1.585385, 3.592778)",
+					"rotation_offset": "(0, 0, 0.002328, 0.999997)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.90972, 1.530946, 3.661777)",
+					"rotation_offset": "(0, 0, 0.001905, 0.999998)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.927416, 1.475506, 3.726007)",
+					"rotation_offset": "(0, 0, 0.001521, 0.999999)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.943455, 1.419094, 3.784943)",
+					"rotation_offset": "(0, 0, 0.001176, 0.999999)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.95773, 1.361741, 3.838037)",
+					"rotation_offset": "(0, 0, 0.000873, 1.0)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970134, 1.303482, 3.884718)",
+					"rotation_offset": "(0, 0, 0.000612, 1.0)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.980552, 1.244354, 3.924385)",
+					"rotation_offset": "(0, 0, 0.000395, 1.0)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.98887, 1.184397, 3.956414)",
+					"rotation_offset": "(0, 0, 0.000225, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.994967, 1.123654, 3.980151)",
+					"rotation_offset": "(0, 0, 0.000101, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99872, 1.062172, 3.994916)",
+					"rotation_offset": "(0, 0, 0.000025, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 1.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 4, 8)",
+						"(-6, 2, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_a",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "35aee5b332f61b7b9ca1a0b541778c5d",
+				"motion_profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+				"motion_profile_id": "pfall_a_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "35aee5b332f61b7b9ca1a0b541778c5d",
+					"session_id": "b16b424c08c6e5c8c37904174440ced1"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_a",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+						"profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "b16b424c08c6e5c8c37904174440ced1",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "35aee5b332f61b7b9ca1a0b541778c5d",
+					"session_id": "b16b424c08c6e5c8c37904174440ced1",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		},
+		{
+			"cadence": {
+				"accelerates": true,
+				"actual_observation_times": [
+					0.423625,
+					0.465125,
+					0.527375,
+					0.568875
+				],
+				"early_parameter_rate": 2.27997518784131,
+				"late_parameter_rate": 4.92665647944232,
+				"ok": true,
+				"parameters": [
+					0.294443715712987,
+					0.389062686008401,
+					0.613369125756435,
+					0.817825369653292
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+			"map": "a",
+			"measurement": {
+				"early_intervals": 21,
+				"early_speed": 5.08303378841707,
+				"first_descent_time": 0.3925,
+				"first_timed_forward": true,
+				"forward_only": true,
+				"late_intervals": 21,
+				"late_speed": 31.6061542857261,
+				"moving_intervals": 240,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 0
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": true,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "FORWARD",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "FORWARD",
+					"position": "(-0.001015, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "FORWARD",
+					"position": "(-0.002137, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "FORWARD",
+					"position": "(-0.003365, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "FORWARD",
+					"position": "(-0.004698, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "FORWARD",
+					"position": "(-0.006135, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "FORWARD",
+					"position": "(-0.007677, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "FORWARD",
+					"position": "(-0.009321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "FORWARD",
+					"position": "(-0.011068, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "FORWARD",
+					"position": "(-0.012917, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "FORWARD",
+					"position": "(-0.014866, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "FORWARD",
+					"position": "(-0.016916, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "FORWARD",
+					"position": "(-0.019065, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "FORWARD",
+					"position": "(-0.021313, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "FORWARD",
+					"position": "(-0.023659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "FORWARD",
+					"position": "(-0.026102, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "FORWARD",
+					"position": "(-0.028642, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "FORWARD",
+					"position": "(-0.031277, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "FORWARD",
+					"position": "(-0.034008, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "FORWARD",
+					"position": "(-0.036833, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "FORWARD",
+					"position": "(-0.039752, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "FORWARD",
+					"position": "(-0.042764, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "FORWARD",
+					"position": "(-0.045868, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "FORWARD",
+					"position": "(-0.049064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "FORWARD",
+					"position": "(-0.052351, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "FORWARD",
+					"position": "(-0.055727, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "FORWARD",
+					"position": "(-0.059193, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "FORWARD",
+					"position": "(-0.062748, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "FORWARD",
+					"position": "(-0.06639, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "FORWARD",
+					"position": "(-0.07012, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "FORWARD",
+					"position": "(-0.073936, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "FORWARD",
+					"position": "(-0.077838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "FORWARD",
+					"position": "(-0.081825, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "FORWARD",
+					"position": "(-0.085896, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "FORWARD",
+					"position": "(-0.090051, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "FORWARD",
+					"position": "(-0.094289, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "FORWARD",
+					"position": "(-0.098608, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "FORWARD",
+					"position": "(-0.10301, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "FORWARD",
+					"position": "(-0.107492, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "FORWARD",
+					"position": "(-0.112054, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "FORWARD",
+					"position": "(-0.116695, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "FORWARD",
+					"position": "(-0.121414, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "FORWARD",
+					"position": "(-0.126212, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "FORWARD",
+					"position": "(-0.131086, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "FORWARD",
+					"position": "(-0.136037, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "FORWARD",
+					"position": "(-0.141064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "FORWARD",
+					"position": "(-0.146165, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "FORWARD",
+					"position": "(-0.151341, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "FORWARD",
+					"position": "(-0.15659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "FORWARD",
+					"position": "(-0.161912, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "FORWARD",
+					"position": "(-0.167306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "FORWARD",
+					"position": "(-0.172771, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "FORWARD",
+					"position": "(-0.178307, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "FORWARD",
+					"position": "(-0.183913, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "FORWARD",
+					"position": "(-0.189587, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "FORWARD",
+					"position": "(-0.19533, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "FORWARD",
+					"position": "(-0.201141, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "FORWARD",
+					"position": "(-0.207019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "FORWARD",
+					"position": "(-0.212963, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "FORWARD",
+					"position": "(-0.218973, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "FORWARD",
+					"position": "(-0.225047, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "FORWARD",
+					"position": "(-0.231186, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "FORWARD",
+					"position": "(-0.237387, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "FORWARD",
+					"position": "(-0.243652, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "FORWARD",
+					"position": "(-0.249978, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "FORWARD",
+					"position": "(-0.256366, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "FORWARD",
+					"position": "(-0.262814, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "FORWARD",
+					"position": "(-0.269321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "FORWARD",
+					"position": "(-0.275888, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "FORWARD",
+					"position": "(-0.282513, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "FORWARD",
+					"position": "(-0.289196, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "FORWARD",
+					"position": "(-0.295935, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FORWARD",
+					"position": "(-0.302731, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FORWARD",
+					"position": "(-0.309582, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FORWARD",
+					"position": "(-0.316488, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FORWARD",
+					"position": "(-0.323447, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FORWARD",
+					"position": "(-0.33046, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FORWARD",
+					"position": "(-0.337526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FORWARD",
+					"position": "(-0.344643, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FORWARD",
+					"position": "(-0.351811, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FORWARD",
+					"position": "(-0.35903, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FORWARD",
+					"position": "(-0.366298, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FORWARD",
+					"position": "(-0.373615, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FORWARD",
+					"position": "(-0.38098, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FORWARD",
+					"position": "(-0.388393, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FORWARD",
+					"position": "(-0.395853, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FORWARD",
+					"position": "(-0.403358, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FORWARD",
+					"position": "(-0.410909, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FORWARD",
+					"position": "(-0.418505, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FORWARD",
+					"position": "(-0.426144, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FORWARD",
+					"position": "(-0.433826, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FORWARD",
+					"position": "(-0.441551, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FORWARD",
+					"position": "(-0.449317, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FORWARD",
+					"position": "(-0.457125, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FORWARD",
+					"position": "(-0.464972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FORWARD",
+					"position": "(-0.47286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FORWARD",
+					"position": "(-0.480785, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FORWARD",
+					"position": "(-0.488749, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FORWARD",
+					"position": "(-0.496751, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "DEPARTURE",
+					"position": "(-0.504789, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "DEPARTURE",
+					"position": "(-0.512863, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "DEPARTURE",
+					"position": "(-0.520972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "DEPARTURE",
+					"position": "(-0.529115, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "DEPARTURE",
+					"position": "(-0.537292, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "DEPARTURE",
+					"position": "(-0.545503, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "DEPARTURE",
+					"position": "(-0.553745, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "DEPARTURE",
+					"position": "(-0.562019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "DEPARTURE",
+					"position": "(-0.570324, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "DEPARTURE",
+					"position": "(-0.578659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "DEPARTURE",
+					"position": "(-0.587024, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "DEPARTURE",
+					"position": "(-0.595417, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "DEPARTURE",
+					"position": "(-0.603838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "DEPARTURE",
+					"position": "(-0.612286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "DEPARTURE",
+					"position": "(-0.620761, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "DEPARTURE",
+					"position": "(-0.629261, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "DEPARTURE",
+					"position": "(-0.637787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "DEPARTURE",
+					"position": "(-0.646337, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "DEPARTURE",
+					"position": "(-0.654911, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "DEPARTURE",
+					"position": "(-0.663507, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "DEPARTURE",
+					"position": "(-0.672126, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "DEPARTURE",
+					"position": "(-0.680766, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "DEPARTURE",
+					"position": "(-0.689427, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "DEPARTURE",
+					"position": "(-0.698108, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "DEPARTURE",
+					"position": "(-0.706808, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "DEPARTURE",
+					"position": "(-0.715526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "DEPARTURE",
+					"position": "(-0.724263, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "DEPARTURE",
+					"position": "(-0.733017, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "DEPARTURE",
+					"position": "(-0.741787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "DEPARTURE",
+					"position": "(-0.750572, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "DEPARTURE",
+					"position": "(-0.759373, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "DEPARTURE",
+					"position": "(-0.768188, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "DEPARTURE",
+					"position": "(-0.777016, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "DEPARTURE",
+					"position": "(-0.785857, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "DEPARTURE",
+					"position": "(-0.794711, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "DEPARTURE",
+					"position": "(-0.803575, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "DEPARTURE",
+					"position": "(-0.81245, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "DEPARTURE",
+					"position": "(-0.821335, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "DEPARTURE",
+					"position": "(-0.830229, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "DEPARTURE",
+					"position": "(-0.839132, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "DEPARTURE",
+					"position": "(-0.848042, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "DEPARTURE",
+					"position": "(-0.85696, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "DEPARTURE",
+					"position": "(-0.865883, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "DEPARTURE",
+					"position": "(-0.874813, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "DEPARTURE",
+					"position": "(-0.883747, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "DEPARTURE",
+					"position": "(-0.892685, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "DEPARTURE",
+					"position": "(-0.901626, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "DEPARTURE",
+					"position": "(-0.910571, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "DEPARTURE",
+					"position": "(-0.919517, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "DEPARTURE",
+					"position": "(-0.928464, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "DEPARTURE",
+					"position": "(-0.937412, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "DEPARTURE",
+					"position": "(-0.946359, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "DEPARTURE",
+					"position": "(-0.955306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "DEPARTURE",
+					"position": "(-0.964251, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "DEPARTURE",
+					"position": "(-0.973194, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "DEPARTURE",
+					"position": "(-0.982133, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "DEPARTURE",
+					"position": "(-0.991069, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-1.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.009247, 2.999971, 0.000114)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-1.019132, 2.999878, 0.000486)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.029655, 2.999708, 0.001165)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-1.040814, 2.999447, 0.002201)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.052609, 2.999083, 0.003648)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-1.065041, 2.9986, 0.005561)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.078107, 2.997983, 0.007997)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-1.091808, 2.997217, 0.011016)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.106142, 2.996286, 0.014679)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-1.121108, 2.995172, 0.01905)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.136704, 2.993857, 0.024193)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-1.152928, 2.992324, 0.030175)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.16978, 2.990553, 0.037061)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.187256, 2.988525, 0.044922)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.205354, 2.986222, 0.053826)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-1.224071, 2.98362, 0.063842)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.243404, 2.980702, 0.075042)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-1.263349, 2.977444, 0.087496)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.283902, 2.973826, 0.101274)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-1.30506, 2.969826, 0.116448)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.326817, 2.96542, 0.133087)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-1.349167, 2.960586, 0.151261)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.372105, 2.955302, 0.171039)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-1.395625, 2.949544, 0.192488)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.419719, 2.943288, 0.215674)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-1.44438, 2.936511, 0.240663)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.469601, 2.929188, 0.267517)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-1.49537, 2.921296, 0.296296)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.52168, 2.912811, 0.32706)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-1.54852, 2.903708, 0.359862)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.575879, 2.893963, 0.394757)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-1.603745, 2.883552, 0.431793)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.632105, 2.87245, 0.471015)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.660945, 2.860634, 0.512466)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.69025, 2.84808, 0.556183)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-1.720006, 2.834763, 0.602198)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.750195, 2.82066, 0.65054)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-1.7808, 2.805748, 0.701231)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.811802, 2.790003, 0.754288)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-1.84318, 2.773403, 0.809722)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.874915, 2.755926, 0.867538)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-1.906982, 2.737549, 0.927734)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.93936, 2.718251, 0.990302)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-1.972022, 2.698012, 1.055223)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.004942, 2.67681, 1.122476)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.038092, 2.654627, 1.192025)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.071443, 2.631442, 1.263832)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.104965, 2.607238, 1.337844)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.138624, 2.581998, 1.414003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.172386, 2.555704, 1.492238)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206216, 2.528341, 1.57247)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.240076, 2.499893, 1.654608)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.273927, 2.470348, 1.73855)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.307727, 2.439691, 1.824182)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.341433, 2.407912, 1.911378)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.375, 2.375, 2.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.408381, 2.340945, 2.089897)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.441527, 2.30574, 2.180902)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.474385, 2.269377, 2.272838)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.506903, 2.231852, 2.365511)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.539024, 2.19316, 2.458711)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.57069, 2.1533, 2.552215)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.601841, 2.11227, 2.645782)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.632412, 2.070073, 2.739156)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.662339, 2.026709, 2.832062)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.691553, 1.982185, 2.924208)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.719983, 1.936506, 3.015285)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.747554, 1.88968, 3.104965)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.774191, 1.841719, 3.192898)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.799814, 1.792634, 3.278718)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.82434, 1.74244, 3.362036)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.847683, 1.691154, 3.442443)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.869757, 1.638795, 3.519508)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.890467, 1.585385, 3.592778)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.90972, 1.530946, 3.661777)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.927416, 1.475506, 3.726007)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.943455, 1.419094, 3.784943)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.95773, 1.361741, 3.838037)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970134, 1.303482, 3.884718)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.980552, 1.244354, 3.924385)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.98887, 1.184397, 3.956414)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.994967, 1.123654, 3.980151)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99872, 1.062172, 3.994916)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 1.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 4, 8)",
+						"(-6, 2, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_a",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "35aee5b332f61b7b9ca1a0b541778c5d",
+				"motion_profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+				"motion_profile_id": "pfall_a_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "35aee5b332f61b7b9ca1a0b541778c5d",
+					"session_id": "b16b424c08c6e5c8c37904174440ced1"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_a",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+						"profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "b16b424c08c6e5c8c37904174440ced1",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "35aee5b332f61b7b9ca1a0b541778c5d",
+					"session_id": "b16b424c08c6e5c8c37904174440ced1",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		},
+		{
+			"cadence": {
+				"accelerates": true,
+				"actual_observation_times": [
+					0.423625,
+					0.465125,
+					0.527375,
+					0.568875
+				],
+				"early_parameter_rate": 2.27997518784131,
+				"late_parameter_rate": 4.92666777874151,
+				"ok": true,
+				"parameters": [
+					0.294443715712987,
+					0.389062686008401,
+					0.613368611899205,
+					0.817825324716978
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+			"map": "b",
+			"measurement": {
+				"early_intervals": 21,
+				"early_speed": 2.48671433932725,
+				"first_descent_time": 0.3925,
+				"first_timed_forward": true,
+				"forward_only": true,
+				"late_intervals": 21,
+				"late_speed": 18.8687936890693,
+				"moving_intervals": 240,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 0
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": false,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "FORWARD",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "FORWARD",
+					"position": "(-0.001015, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000021, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "FORWARD",
+					"position": "(-0.002137, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000085, 1)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "FORWARD",
+					"position": "(-0.003365, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000189, 1)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "FORWARD",
+					"position": "(-0.004698, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000332, 1.0)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "FORWARD",
+					"position": "(-0.006135, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000515, 1.0)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "FORWARD",
+					"position": "(-0.007677, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000735, 1.0)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "FORWARD",
+					"position": "(-0.009321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000991, 1.0)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "FORWARD",
+					"position": "(-0.011068, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001283, 0.999999)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "FORWARD",
+					"position": "(-0.012917, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001609, 0.999999)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "FORWARD",
+					"position": "(-0.014866, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001968, 0.999998)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "FORWARD",
+					"position": "(-0.016916, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.002359, 0.999997)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "FORWARD",
+					"position": "(-0.019065, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00278, 0.999996)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "FORWARD",
+					"position": "(-0.021313, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003232, 0.999995)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "FORWARD",
+					"position": "(-0.023659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003712, 0.999993)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "FORWARD",
+					"position": "(-0.026102, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00422, 0.999991)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "FORWARD",
+					"position": "(-0.028642, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.004755, 0.999989)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "FORWARD",
+					"position": "(-0.031277, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005314, 0.999986)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "FORWARD",
+					"position": "(-0.034008, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005898, 0.999983)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "FORWARD",
+					"position": "(-0.036833, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.006506, 0.999979)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "FORWARD",
+					"position": "(-0.039752, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.007135, 0.999975)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "FORWARD",
+					"position": "(-0.042764, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.007785, 0.99997)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "FORWARD",
+					"position": "(-0.045868, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.008455, 0.999964)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "FORWARD",
+					"position": "(-0.049064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009144, 0.999958)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "FORWARD",
+					"position": "(-0.052351, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009851, 0.999951)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "FORWARD",
+					"position": "(-0.055727, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.010574, 0.999944)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "FORWARD",
+					"position": "(-0.059193, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.011312, 0.999936)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "FORWARD",
+					"position": "(-0.062748, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.012065, 0.999927)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "FORWARD",
+					"position": "(-0.06639, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.012831, 0.999918)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "FORWARD",
+					"position": "(-0.07012, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.013609, 0.999907)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "FORWARD",
+					"position": "(-0.073936, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.014398, 0.999896)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "FORWARD",
+					"position": "(-0.077838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.015197, 0.999884)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "FORWARD",
+					"position": "(-0.081825, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016005, 0.999872)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "FORWARD",
+					"position": "(-0.085896, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016821, 0.999858)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "FORWARD",
+					"position": "(-0.090051, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.017643, 0.999844)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "FORWARD",
+					"position": "(-0.094289, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.018471, 0.999829)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "FORWARD",
+					"position": "(-0.098608, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.019303, 0.999814)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "FORWARD",
+					"position": "(-0.10301, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.020139, 0.999797)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "FORWARD",
+					"position": "(-0.107492, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.020976, 0.99978)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "FORWARD",
+					"position": "(-0.112054, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.021815, 0.999762)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "FORWARD",
+					"position": "(-0.116695, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.022654, 0.999743)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "FORWARD",
+					"position": "(-0.121414, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.023491, 0.999724)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "FORWARD",
+					"position": "(-0.126212, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.024327, 0.999704)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "FORWARD",
+					"position": "(-0.131086, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025159, 0.999683)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "FORWARD",
+					"position": "(-0.136037, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025986, 0.999662)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "FORWARD",
+					"position": "(-0.141064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.026808, 0.999641)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "FORWARD",
+					"position": "(-0.146165, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.027624, 0.999618)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "FORWARD",
+					"position": "(-0.151341, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.028431, 0.999596)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "FORWARD",
+					"position": "(-0.15659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.02923, 0.999573)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "FORWARD",
+					"position": "(-0.161912, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030019, 0.999549)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "FORWARD",
+					"position": "(-0.167306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030797, 0.999526)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "FORWARD",
+					"position": "(-0.172771, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.031563, 0.999502)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "FORWARD",
+					"position": "(-0.178307, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.032315, 0.999478)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "FORWARD",
+					"position": "(-0.183913, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033053, 0.999454)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "FORWARD",
+					"position": "(-0.189587, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033776, 0.999429)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "FORWARD",
+					"position": "(-0.19533, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.034482, 0.999405)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "FORWARD",
+					"position": "(-0.201141, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.035171, 0.999381)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "FORWARD",
+					"position": "(-0.207019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.03584, 0.999358)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "FORWARD",
+					"position": "(-0.212963, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.03649, 0.999334)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "FORWARD",
+					"position": "(-0.218973, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.037119, 0.999311)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "FORWARD",
+					"position": "(-0.225047, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.037726, 0.999288)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "FORWARD",
+					"position": "(-0.231186, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038309, 0.999266)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "FORWARD",
+					"position": "(-0.237387, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038869, 0.999244)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "FORWARD",
+					"position": "(-0.243652, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.039403, 0.999223)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "FORWARD",
+					"position": "(-0.249978, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.03991, 0.999203)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "FORWARD",
+					"position": "(-0.256366, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04039, 0.999184)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "FORWARD",
+					"position": "(-0.262814, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.040841, 0.999166)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "FORWARD",
+					"position": "(-0.269321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.041263, 0.999148)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "FORWARD",
+					"position": "(-0.275888, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.041654, 0.999132)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "FORWARD",
+					"position": "(-0.282513, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042012, 0.999117)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "FORWARD",
+					"position": "(-0.289196, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042338, 0.999103)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "FORWARD",
+					"position": "(-0.295935, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042629, 0.999091)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FORWARD",
+					"position": "(-0.302731, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042885, 0.99908)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FORWARD",
+					"position": "(-0.309582, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043105, 0.999071)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FORWARD",
+					"position": "(-0.316488, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043287, 0.999063)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FORWARD",
+					"position": "(-0.323447, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043431, 0.999056)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FORWARD",
+					"position": "(-0.33046, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043535, 0.999052)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FORWARD",
+					"position": "(-0.337526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043598, 0.999049)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FORWARD",
+					"position": "(-0.344643, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FORWARD",
+					"position": "(-0.351811, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FORWARD",
+					"position": "(-0.35903, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FORWARD",
+					"position": "(-0.366298, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FORWARD",
+					"position": "(-0.373615, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FORWARD",
+					"position": "(-0.38098, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FORWARD",
+					"position": "(-0.388393, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FORWARD",
+					"position": "(-0.395853, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FORWARD",
+					"position": "(-0.403358, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FORWARD",
+					"position": "(-0.410909, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FORWARD",
+					"position": "(-0.418505, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FORWARD",
+					"position": "(-0.426144, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FORWARD",
+					"position": "(-0.433826, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FORWARD",
+					"position": "(-0.441551, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FORWARD",
+					"position": "(-0.449317, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FORWARD",
+					"position": "(-0.457125, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FORWARD",
+					"position": "(-0.464972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FORWARD",
+					"position": "(-0.47286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FORWARD",
+					"position": "(-0.480785, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FORWARD",
+					"position": "(-0.488749, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FORWARD",
+					"position": "(-0.496751, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "DEPARTURE",
+					"position": "(-0.504789, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "DEPARTURE",
+					"position": "(-0.512863, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "DEPARTURE",
+					"position": "(-0.520972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "DEPARTURE",
+					"position": "(-0.529115, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "DEPARTURE",
+					"position": "(-0.537292, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "DEPARTURE",
+					"position": "(-0.545503, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "DEPARTURE",
+					"position": "(-0.553745, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "DEPARTURE",
+					"position": "(-0.562019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "DEPARTURE",
+					"position": "(-0.570324, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "DEPARTURE",
+					"position": "(-0.578659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "DEPARTURE",
+					"position": "(-0.587024, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "DEPARTURE",
+					"position": "(-0.595417, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "DEPARTURE",
+					"position": "(-0.603838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "DEPARTURE",
+					"position": "(-0.612286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "DEPARTURE",
+					"position": "(-0.620761, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "DEPARTURE",
+					"position": "(-0.629261, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "DEPARTURE",
+					"position": "(-0.637787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "DEPARTURE",
+					"position": "(-0.646337, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "DEPARTURE",
+					"position": "(-0.654911, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "DEPARTURE",
+					"position": "(-0.663507, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "DEPARTURE",
+					"position": "(-0.672126, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "DEPARTURE",
+					"position": "(-0.680766, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "DEPARTURE",
+					"position": "(-0.689427, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "DEPARTURE",
+					"position": "(-0.698108, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "DEPARTURE",
+					"position": "(-0.706808, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "DEPARTURE",
+					"position": "(-0.715526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "DEPARTURE",
+					"position": "(-0.724263, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "DEPARTURE",
+					"position": "(-0.733017, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "DEPARTURE",
+					"position": "(-0.741787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "DEPARTURE",
+					"position": "(-0.750572, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "DEPARTURE",
+					"position": "(-0.759373, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "DEPARTURE",
+					"position": "(-0.768188, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "DEPARTURE",
+					"position": "(-0.777016, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "DEPARTURE",
+					"position": "(-0.785857, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "DEPARTURE",
+					"position": "(-0.794711, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "DEPARTURE",
+					"position": "(-0.803575, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "DEPARTURE",
+					"position": "(-0.81245, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "DEPARTURE",
+					"position": "(-0.821335, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "DEPARTURE",
+					"position": "(-0.830229, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "DEPARTURE",
+					"position": "(-0.839132, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "DEPARTURE",
+					"position": "(-0.848042, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "DEPARTURE",
+					"position": "(-0.85696, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "DEPARTURE",
+					"position": "(-0.865883, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "DEPARTURE",
+					"position": "(-0.874813, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "DEPARTURE",
+					"position": "(-0.883747, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "DEPARTURE",
+					"position": "(-0.892685, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "DEPARTURE",
+					"position": "(-0.901626, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "DEPARTURE",
+					"position": "(-0.910571, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "DEPARTURE",
+					"position": "(-0.919517, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "DEPARTURE",
+					"position": "(-0.928464, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "DEPARTURE",
+					"position": "(-0.937412, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "DEPARTURE",
+					"position": "(-0.946359, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "DEPARTURE",
+					"position": "(-0.955306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "DEPARTURE",
+					"position": "(-0.964251, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "DEPARTURE",
+					"position": "(-0.973194, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "DEPARTURE",
+					"position": "(-0.982133, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "DEPARTURE",
+					"position": "(-0.991069, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-1.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.009247, 3.000114, 0.000114)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-1.019132, 3.000485, 0.000486)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.029655, 3.001163, 0.001165)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-1.040814, 3.002196, 0.002201)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.052609, 3.003637, 0.003648)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-1.065041, 3.00554, 0.005561)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.078107, 3.007962, 0.007997)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-1.091808, 3.010958, 0.011016)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.106142, 3.014591, 0.014679)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-1.121108, 3.018918, 0.01905)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.136704, 3.024004, 0.024193)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-1.152928, 3.029909, 0.030175)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.16978, 3.036698, 0.037061)",
+					"rotation_offset": "(0, 0, 0.043615, 0.999048)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.187256, 3.044434, 0.044922)",
+					"rotation_offset": "(0, 0, 0.04357, 0.99905)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.205354, 3.053181, 0.053826)",
+					"rotation_offset": "(0, 0, 0.043475, 0.999054)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-1.224071, 3.063004, 0.063842)",
+					"rotation_offset": "(0, 0, 0.043332, 0.999061)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.243404, 3.073967, 0.075042)",
+					"rotation_offset": "(0, 0, 0.043143, 0.999069)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-1.263349, 3.086133, 0.087496)",
+					"rotation_offset": "(0, 0, 0.042909, 0.999079)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.283902, 3.099564, 0.101274)",
+					"rotation_offset": "(0, 0, 0.042631, 0.999091)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-1.30506, 3.114323, 0.116448)",
+					"rotation_offset": "(0, 0, 0.042312, 0.999104)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.326817, 3.13047, 0.133087)",
+					"rotation_offset": "(0, 0, 0.041951, 0.99912)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-1.349167, 3.148064, 0.151261)",
+					"rotation_offset": "(0, 0, 0.041552, 0.999136)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.372105, 3.167162, 0.171039)",
+					"rotation_offset": "(0, 0, 0.041114, 0.999154)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-1.395625, 3.187819, 0.192488)",
+					"rotation_offset": "(0, 0, 0.04064, 0.999174)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.419719, 3.210087, 0.215674)",
+					"rotation_offset": "(0, 0, 0.040131, 0.999194)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-1.44438, 3.234016, 0.240663)",
+					"rotation_offset": "(0, 0, 0.039589, 0.999216)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.469601, 3.259652, 0.267517)",
+					"rotation_offset": "(0, 0, 0.039015, 0.999239)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-1.49537, 3.287037, 0.296296)",
+					"rotation_offset": "(0, 0, 0.03841, 0.999262)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.52168, 3.316211, 0.32706)",
+					"rotation_offset": "(0, 0, 0.037776, 0.999286)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-1.54852, 3.34721, 0.359862)",
+					"rotation_offset": "(0, 0, 0.037114, 0.999311)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.575879, 3.380062, 0.394757)",
+					"rotation_offset": "(0, 0, 0.036426, 0.999336)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-1.603745, 3.414793, 0.431793)",
+					"rotation_offset": "(0, 0, 0.035712, 0.999362)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.632105, 3.451424, 0.471015)",
+					"rotation_offset": "(0, 0, 0.034976, 0.999388)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.660945, 3.489968, 0.512466)",
+					"rotation_offset": "(0, 0, 0.034217, 0.999414)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.69025, 3.530434, 0.556183)",
+					"rotation_offset": "(0, 0, 0.033438, 0.999441)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-1.720006, 3.572823, 0.602198)",
+					"rotation_offset": "(0, 0, 0.03264, 0.999467)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.750195, 3.617129, 0.65054)",
+					"rotation_offset": "(0, 0, 0.031824, 0.999493)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-1.7808, 3.663341, 0.701231)",
+					"rotation_offset": "(0, 0, 0.030991, 0.99952)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.811802, 3.711437, 0.754288)",
+					"rotation_offset": "(0, 0, 0.030144, 0.999546)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-1.84318, 3.761389, 0.809722)",
+					"rotation_offset": "(0, 0, 0.029284, 0.999571)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.874915, 3.813158, 0.867538)",
+					"rotation_offset": "(0, 0, 0.028411, 0.999596)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-1.906982, 3.866699, 0.927734)",
+					"rotation_offset": "(0, 0, 0.027528, 0.999621)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.93936, 3.921955, 0.990302)",
+					"rotation_offset": "(0, 0, 0.026636, 0.999645)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-1.972022, 3.978858, 1.055223)",
+					"rotation_offset": "(0, 0, 0.025736, 0.999669)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.004942, 4.037333, 1.122476)",
+					"rotation_offset": "(0, 0, 0.02483, 0.999692)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.038092, 4.097291, 1.192025)",
+					"rotation_offset": "(0, 0, 0.02392, 0.999714)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.071443, 4.158632, 1.263832)",
+					"rotation_offset": "(0, 0, 0.023006, 0.999735)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.104965, 4.221243, 1.337844)",
+					"rotation_offset": "(0, 0, 0.02209, 0.999756)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.138624, 4.285, 1.414003)",
+					"rotation_offset": "(0, 0, 0.021173, 0.999776)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.172386, 4.349765, 1.492238)",
+					"rotation_offset": "(0, 0, 0.020258, 0.999795)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206216, 4.415387, 1.57247)",
+					"rotation_offset": "(0, 0, 0.019345, 0.999813)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.240076, 4.481699, 1.654608)",
+					"rotation_offset": "(0, 0, 0.018436, 0.99983)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.273927, 4.548521, 1.73855)",
+					"rotation_offset": "(0, 0, 0.017532, 0.999846)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.307727, 4.615655, 1.824182)",
+					"rotation_offset": "(0, 0, 0.016635, 0.999862)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.341433, 4.682891, 1.911378)",
+					"rotation_offset": "(0, 0, 0.015746, 0.999876)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.375, 4.75, 2.0)",
+					"rotation_offset": "(0, 0, 0.014867, 0.999889)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.408381, 4.816735, 2.089897)",
+					"rotation_offset": "(0, 0, 0.013999, 0.999902)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.441527, 4.882833, 2.180902)",
+					"rotation_offset": "(0, 0, 0.013143, 0.999914)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.474385, 4.948011, 2.272838)",
+					"rotation_offset": "(0, 0, 0.012302, 0.999924)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.506903, 5.01197, 2.365511)",
+					"rotation_offset": "(0, 0, 0.011475, 0.999934)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.539024, 5.074387, 2.458711)",
+					"rotation_offset": "(0, 0, 0.010666, 0.999943)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.57069, 5.134923, 2.552215)",
+					"rotation_offset": "(0, 0, 0.009875, 0.999951)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.601841, 5.193214, 2.645782)",
+					"rotation_offset": "(0, 0, 0.009103, 0.999959)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.632412, 5.248879, 2.739156)",
+					"rotation_offset": "(0, 0, 0.008353, 0.999965)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.662339, 5.301511, 2.832062)",
+					"rotation_offset": "(0, 0, 0.007625, 0.999971)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.691553, 5.350682, 2.924208)",
+					"rotation_offset": "(0, 0, 0.006921, 0.999976)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.719983, 5.39594, 3.015285)",
+					"rotation_offset": "(0, 0, 0.006243, 0.999981)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.747554, 5.436808, 3.104965)",
+					"rotation_offset": "(0, 0, 0.005591, 0.999984)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.774191, 5.472785, 3.192898)",
+					"rotation_offset": "(0, 0, 0.004968, 0.999988)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.799814, 5.503345, 3.278718)",
+					"rotation_offset": "(0, 0, 0.004375, 0.99999)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.82434, 5.527935, 3.362036)",
+					"rotation_offset": "(0, 0, 0.003813, 0.999993)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.847683, 5.545974, 3.442443)",
+					"rotation_offset": "(0, 0, 0.003283, 0.999995)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.869757, 5.556853, 3.519508)",
+					"rotation_offset": "(0, 0, 0.002788, 0.999996)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.890467, 5.559937, 3.592778)",
+					"rotation_offset": "(0, 0, 0.002328, 0.999997)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.90972, 5.554558, 3.661777)",
+					"rotation_offset": "(0, 0, 0.001905, 0.999998)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.927416, 5.540023, 3.726007)",
+					"rotation_offset": "(0, 0, 0.001521, 0.999999)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.943455, 5.515602, 3.784943)",
+					"rotation_offset": "(0, 0, 0.001176, 0.999999)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.95773, 5.480539, 3.838037)",
+					"rotation_offset": "(0, 0, 0.000873, 1.0)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970134, 5.434041, 3.884718)",
+					"rotation_offset": "(0, 0, 0.000612, 1.0)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.980552, 5.375286, 3.924385)",
+					"rotation_offset": "(0, 0, 0.000395, 1.0)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.98887, 5.303415, 3.956414)",
+					"rotation_offset": "(0, 0, 0.000225, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.994967, 5.217535, 3.980151)",
+					"rotation_offset": "(0, 0, 0.000101, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99872, 5.116719, 3.994916)",
+					"rotation_offset": "(0, 0, 0.000025, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 5.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 14, 8)",
+						"(-6, 10, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "dd490481cccee4941f0c812514ae2cfd",
+				"motion_profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+				"motion_profile_id": "pfall_b_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "dd490481cccee4941f0c812514ae2cfd",
+					"session_id": "c1b80ce42137d4eff1ce10636988e2d4"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+						"profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "c1b80ce42137d4eff1ce10636988e2d4",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "dd490481cccee4941f0c812514ae2cfd",
+					"session_id": "c1b80ce42137d4eff1ce10636988e2d4",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		},
+		{
+			"cadence": {
+				"accelerates": true,
+				"actual_observation_times": [
+					0.423625,
+					0.465125,
+					0.527375,
+					0.568875
+				],
+				"early_parameter_rate": 2.27997518784131,
+				"late_parameter_rate": 4.92666777874151,
+				"ok": true,
+				"parameters": [
+					0.294443715712987,
+					0.389062686008401,
+					0.613368611899205,
+					0.817825324716978
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+			"map": "b",
+			"measurement": {
+				"early_intervals": 21,
+				"early_speed": 2.48671433932725,
+				"first_descent_time": 0.3925,
+				"first_timed_forward": true,
+				"forward_only": true,
+				"late_intervals": 21,
+				"late_speed": 18.8687936890693,
+				"moving_intervals": 240,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 0
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": true,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "FORWARD",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "FORWARD",
+					"position": "(-0.001015, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "FORWARD",
+					"position": "(-0.002137, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "FORWARD",
+					"position": "(-0.003365, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "FORWARD",
+					"position": "(-0.004698, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "FORWARD",
+					"position": "(-0.006135, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "FORWARD",
+					"position": "(-0.007677, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "FORWARD",
+					"position": "(-0.009321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "FORWARD",
+					"position": "(-0.011068, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "FORWARD",
+					"position": "(-0.012917, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "FORWARD",
+					"position": "(-0.014866, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "FORWARD",
+					"position": "(-0.016916, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "FORWARD",
+					"position": "(-0.019065, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "FORWARD",
+					"position": "(-0.021313, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "FORWARD",
+					"position": "(-0.023659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "FORWARD",
+					"position": "(-0.026102, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "FORWARD",
+					"position": "(-0.028642, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "FORWARD",
+					"position": "(-0.031277, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "FORWARD",
+					"position": "(-0.034008, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "FORWARD",
+					"position": "(-0.036833, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "FORWARD",
+					"position": "(-0.039752, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "FORWARD",
+					"position": "(-0.042764, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "FORWARD",
+					"position": "(-0.045868, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "FORWARD",
+					"position": "(-0.049064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "FORWARD",
+					"position": "(-0.052351, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "FORWARD",
+					"position": "(-0.055727, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "FORWARD",
+					"position": "(-0.059193, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "FORWARD",
+					"position": "(-0.062748, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "FORWARD",
+					"position": "(-0.06639, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "FORWARD",
+					"position": "(-0.07012, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "FORWARD",
+					"position": "(-0.073936, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "FORWARD",
+					"position": "(-0.077838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "FORWARD",
+					"position": "(-0.081825, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "FORWARD",
+					"position": "(-0.085896, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "FORWARD",
+					"position": "(-0.090051, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "FORWARD",
+					"position": "(-0.094289, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "FORWARD",
+					"position": "(-0.098608, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "FORWARD",
+					"position": "(-0.10301, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "FORWARD",
+					"position": "(-0.107492, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "FORWARD",
+					"position": "(-0.112054, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "FORWARD",
+					"position": "(-0.116695, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "FORWARD",
+					"position": "(-0.121414, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "FORWARD",
+					"position": "(-0.126212, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "FORWARD",
+					"position": "(-0.131086, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "FORWARD",
+					"position": "(-0.136037, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "FORWARD",
+					"position": "(-0.141064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "FORWARD",
+					"position": "(-0.146165, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "FORWARD",
+					"position": "(-0.151341, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "FORWARD",
+					"position": "(-0.15659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "FORWARD",
+					"position": "(-0.161912, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "FORWARD",
+					"position": "(-0.167306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "FORWARD",
+					"position": "(-0.172771, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "FORWARD",
+					"position": "(-0.178307, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "FORWARD",
+					"position": "(-0.183913, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "FORWARD",
+					"position": "(-0.189587, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "FORWARD",
+					"position": "(-0.19533, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "FORWARD",
+					"position": "(-0.201141, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "FORWARD",
+					"position": "(-0.207019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "FORWARD",
+					"position": "(-0.212963, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "FORWARD",
+					"position": "(-0.218973, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "FORWARD",
+					"position": "(-0.225047, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "FORWARD",
+					"position": "(-0.231186, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "FORWARD",
+					"position": "(-0.237387, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "FORWARD",
+					"position": "(-0.243652, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "FORWARD",
+					"position": "(-0.249978, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "FORWARD",
+					"position": "(-0.256366, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "FORWARD",
+					"position": "(-0.262814, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "FORWARD",
+					"position": "(-0.269321, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "FORWARD",
+					"position": "(-0.275888, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "FORWARD",
+					"position": "(-0.282513, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "FORWARD",
+					"position": "(-0.289196, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "FORWARD",
+					"position": "(-0.295935, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FORWARD",
+					"position": "(-0.302731, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FORWARD",
+					"position": "(-0.309582, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FORWARD",
+					"position": "(-0.316488, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FORWARD",
+					"position": "(-0.323447, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FORWARD",
+					"position": "(-0.33046, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FORWARD",
+					"position": "(-0.337526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FORWARD",
+					"position": "(-0.344643, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FORWARD",
+					"position": "(-0.351811, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FORWARD",
+					"position": "(-0.35903, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FORWARD",
+					"position": "(-0.366298, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FORWARD",
+					"position": "(-0.373615, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FORWARD",
+					"position": "(-0.38098, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FORWARD",
+					"position": "(-0.388393, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FORWARD",
+					"position": "(-0.395853, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FORWARD",
+					"position": "(-0.403358, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FORWARD",
+					"position": "(-0.410909, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FORWARD",
+					"position": "(-0.418505, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FORWARD",
+					"position": "(-0.426144, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FORWARD",
+					"position": "(-0.433826, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FORWARD",
+					"position": "(-0.441551, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FORWARD",
+					"position": "(-0.449317, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FORWARD",
+					"position": "(-0.457125, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FORWARD",
+					"position": "(-0.464972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FORWARD",
+					"position": "(-0.47286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FORWARD",
+					"position": "(-0.480785, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FORWARD",
+					"position": "(-0.488749, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FORWARD",
+					"position": "(-0.496751, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "DEPARTURE",
+					"position": "(-0.504789, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "DEPARTURE",
+					"position": "(-0.512863, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "DEPARTURE",
+					"position": "(-0.520972, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "DEPARTURE",
+					"position": "(-0.529115, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "DEPARTURE",
+					"position": "(-0.537292, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "DEPARTURE",
+					"position": "(-0.545503, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "DEPARTURE",
+					"position": "(-0.553745, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "DEPARTURE",
+					"position": "(-0.562019, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "DEPARTURE",
+					"position": "(-0.570324, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "DEPARTURE",
+					"position": "(-0.578659, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "DEPARTURE",
+					"position": "(-0.587024, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "DEPARTURE",
+					"position": "(-0.595417, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "DEPARTURE",
+					"position": "(-0.603838, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "DEPARTURE",
+					"position": "(-0.612286, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "DEPARTURE",
+					"position": "(-0.620761, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "DEPARTURE",
+					"position": "(-0.629261, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "DEPARTURE",
+					"position": "(-0.637787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "DEPARTURE",
+					"position": "(-0.646337, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "DEPARTURE",
+					"position": "(-0.654911, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "DEPARTURE",
+					"position": "(-0.663507, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "DEPARTURE",
+					"position": "(-0.672126, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "DEPARTURE",
+					"position": "(-0.680766, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "DEPARTURE",
+					"position": "(-0.689427, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "DEPARTURE",
+					"position": "(-0.698108, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "DEPARTURE",
+					"position": "(-0.706808, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "DEPARTURE",
+					"position": "(-0.715526, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "DEPARTURE",
+					"position": "(-0.724263, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "DEPARTURE",
+					"position": "(-0.733017, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "DEPARTURE",
+					"position": "(-0.741787, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "DEPARTURE",
+					"position": "(-0.750572, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "DEPARTURE",
+					"position": "(-0.759373, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "DEPARTURE",
+					"position": "(-0.768188, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "DEPARTURE",
+					"position": "(-0.777016, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "DEPARTURE",
+					"position": "(-0.785857, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "DEPARTURE",
+					"position": "(-0.794711, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "DEPARTURE",
+					"position": "(-0.803575, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "DEPARTURE",
+					"position": "(-0.81245, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "DEPARTURE",
+					"position": "(-0.821335, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "DEPARTURE",
+					"position": "(-0.830229, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "DEPARTURE",
+					"position": "(-0.839132, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "DEPARTURE",
+					"position": "(-0.848042, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "DEPARTURE",
+					"position": "(-0.85696, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "DEPARTURE",
+					"position": "(-0.865883, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "DEPARTURE",
+					"position": "(-0.874813, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "DEPARTURE",
+					"position": "(-0.883747, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "DEPARTURE",
+					"position": "(-0.892685, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "DEPARTURE",
+					"position": "(-0.901626, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "DEPARTURE",
+					"position": "(-0.910571, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "DEPARTURE",
+					"position": "(-0.919517, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "DEPARTURE",
+					"position": "(-0.928464, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "DEPARTURE",
+					"position": "(-0.937412, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "DEPARTURE",
+					"position": "(-0.946359, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "DEPARTURE",
+					"position": "(-0.955306, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "DEPARTURE",
+					"position": "(-0.964251, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "DEPARTURE",
+					"position": "(-0.973194, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "DEPARTURE",
+					"position": "(-0.982133, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "DEPARTURE",
+					"position": "(-0.991069, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-1.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.009247, 3.000114, 0.000114)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-1.019132, 3.000485, 0.000486)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.029655, 3.001163, 0.001165)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-1.040814, 3.002196, 0.002201)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.052609, 3.003637, 0.003648)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-1.065041, 3.00554, 0.005561)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.078107, 3.007962, 0.007997)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-1.091808, 3.010958, 0.011016)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.106142, 3.014591, 0.014679)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-1.121108, 3.018918, 0.01905)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.136704, 3.024004, 0.024193)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-1.152928, 3.029909, 0.030175)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.16978, 3.036698, 0.037061)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.187256, 3.044434, 0.044922)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.205354, 3.053181, 0.053826)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-1.224071, 3.063004, 0.063842)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.243404, 3.073967, 0.075042)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-1.263349, 3.086133, 0.087496)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.283902, 3.099564, 0.101274)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-1.30506, 3.114323, 0.116448)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.326817, 3.13047, 0.133087)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-1.349167, 3.148064, 0.151261)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.372105, 3.167162, 0.171039)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-1.395625, 3.187819, 0.192488)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.419719, 3.210087, 0.215674)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-1.44438, 3.234016, 0.240663)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.469601, 3.259652, 0.267517)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-1.49537, 3.287037, 0.296296)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.52168, 3.316211, 0.32706)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-1.54852, 3.34721, 0.359862)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.575879, 3.380062, 0.394757)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-1.603745, 3.414793, 0.431793)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.632105, 3.451424, 0.471015)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.660945, 3.489968, 0.512466)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.69025, 3.530434, 0.556183)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-1.720006, 3.572823, 0.602198)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.750195, 3.617129, 0.65054)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-1.7808, 3.663341, 0.701231)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.811802, 3.711437, 0.754288)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-1.84318, 3.761389, 0.809722)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.874915, 3.813158, 0.867538)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-1.906982, 3.866699, 0.927734)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.93936, 3.921955, 0.990302)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-1.972022, 3.978858, 1.055223)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.004942, 4.037333, 1.122476)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.038092, 4.097291, 1.192025)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.071443, 4.158632, 1.263832)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.104965, 4.221243, 1.337844)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.138624, 4.285, 1.414003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.172386, 4.349765, 1.492238)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206216, 4.415387, 1.57247)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.240076, 4.481699, 1.654608)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.273927, 4.548521, 1.73855)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.307727, 4.615655, 1.824182)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.341433, 4.682891, 1.911378)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.375, 4.75, 2.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.408381, 4.816735, 2.089897)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.441527, 4.882833, 2.180902)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.474385, 4.948011, 2.272838)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.506903, 5.01197, 2.365511)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.539024, 5.074387, 2.458711)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.57069, 5.134923, 2.552215)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.601841, 5.193214, 2.645782)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.632412, 5.248879, 2.739156)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.662339, 5.301511, 2.832062)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.691553, 5.350682, 2.924208)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.719983, 5.39594, 3.015285)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.747554, 5.436808, 3.104965)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.774191, 5.472785, 3.192898)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.799814, 5.503345, 3.278718)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.82434, 5.527935, 3.362036)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.847683, 5.545974, 3.442443)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.869757, 5.556853, 3.519508)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.890467, 5.559937, 3.592778)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.90972, 5.554558, 3.661777)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.927416, 5.540023, 3.726007)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.943455, 5.515602, 3.784943)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.95773, 5.480539, 3.838037)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970134, 5.434041, 3.884718)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.980552, 5.375286, 3.924385)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.98887, 5.303415, 3.956414)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.994967, 5.217535, 3.980151)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99872, 5.116719, 3.994916)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 5.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 14, 8)",
+						"(-6, 10, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "dd490481cccee4941f0c812514ae2cfd",
+				"motion_profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+				"motion_profile_id": "pfall_b_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "dd490481cccee4941f0c812514ae2cfd",
+					"session_id": "c1b80ce42137d4eff1ce10636988e2d4"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+						"profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "c1b80ce42137d4eff1ce10636988e2d4",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "dd490481cccee4941f0c812514ae2cfd",
+					"session_id": "c1b80ce42137d4eff1ce10636988e2d4",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		}
+	],
+	"scope": "NEW_PROFILE_REAL",
+	"task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01"
+}
