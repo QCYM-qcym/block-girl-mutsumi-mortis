@@ -82,6 +82,7 @@ func _ready() -> void:
 	runtime.transition_started.connect(_on_native_started)
 	runtime.committed.connect(_on_committed)
 	presenter.bind(actor,Fall.new(),Landing.new(),project_pose,runtime.finish_transition)
+	presenter.bind_contact_body(body)
 	presenter.bind_edge(Edge.new())
 	if external_runtime:
 		_build_geometry()
@@ -124,7 +125,7 @@ func project_pose(pose: Dictionary) -> Dictionary:
 	for anchor in resolved.value.anchors:
 		if anchor.face_id==face and anchor.layer==pose.location.layer:
 			var columns: Array=Orientation.columns(pose.orientation)
-			return {"ok":true,"issues":[],"transform":Transform3D(Basis(Vector3(columns[0]),Vector3(columns[1]),Vector3(columns[2])),Vector3(anchor.position2+anchor.frame.normal)*0.5)}
+			return {"ok":true,"issues":[],"transform":Transform3D(Basis(Vector3(columns[0]),Vector3(columns[1]),Vector3(columns[2])),Vector3(anchor.position2+anchor.frame.normal)*0.5),"support_anchor":Vector3(anchor.position2)*0.5,"support_normal":Vector3(anchor.frame.normal)}
 	return {"ok":false,"issues":["Formal player anchor missing."],"transform":null}
 
 func _build_geometry() -> void:
