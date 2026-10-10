@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\build_bridge_matrix_report.py", line 178, in <module>
+    build(args.formal, args.lifecycle, args.regressions)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\build_bridge_matrix_report.py", line 66, in build
+    records[name], reports[name] = receipt(name)
+                                   ~~~~~~~^^^^^^
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\build_bridge_matrix_report.py", line 38, in receipt
+    require(process["status"] == "PASS" and process["exit_code"] == 0)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\build_bridge_matrix_report.py", line 31, in require
+    raise ValueError(message)
+ValueError: Invalid quality evidence

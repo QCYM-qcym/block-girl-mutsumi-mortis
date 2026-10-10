@@ -7,7 +7,12 @@ from v2_reports import classify_execution, legacy_checks, execution_identity_fai
 ROOT = Path(__file__).resolve().parents[3]
 ENGINE = Path("D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe")
 JOBS = {
+    "native_matrix_gaps": ("tests/beta_sprint/game_feel_owner_03/test_v2_native_matrix_gaps.gd", True, "report.json", []),
+    **{f"native_gaps_{batch}": ("tests/beta_sprint/game_feel_owner_03/test_v2_native_matrix_gaps.gd", True, "report.json", [f"--batch={batch}"])
+       for batch in ("base", "control", "exit", "fall")},
     "formal_graphical": ("tests/beta_sprint/game_feel_owner_03/test_v2_graphical_trace.gd", True, "report.json", []),
+    "formal_lifecycle": ("tests/beta_sprint/game_feel_owner_03/test_v2_replay_lifecycle.gd", True, "report.json", []),
+    "full_slice_graphical": ("tests/beta_sprint/game_feel_full_slice/test_matrix.gd", True, "matrix.json", ["--phase=matrix", "--size=1280x720"]),
     "natural": ("tests/beta_sprint/pfall_integration/test_core.gd", True, "report.json", []),
     "spam": ("tests/beta_sprint/pfall_v2_integration/test_spam.gd", True, "report.json", []),
     "lifecycle": ("tests/beta_sprint/game_feel_owner_03/test_v2_lifecycle.gd", True, "report.json", []),
@@ -51,6 +56,7 @@ def run(job, name, profile_from=None):
                     "production/experimental/game_feel_01", "production/ui/beta_shell_01", "game/levels",
                     "production/art_3d", "game/player", "tests/playtest", "tests/beta_sprint/shell_batch_02",
                     "tests/beta_sprint/game_feel_owner_01",
+                    "tests/beta_sprint/game_feel_full_slice", "tests/beta_sprint/graphical_bridge_02",
                     "tests/beta_sprint/game_feel", "tests/beta_sprint/game_feel_owner_03", "tests/beta_sprint/pfall_integration",
                     "tests/beta_sprint/pfall_v2_integration", "tests/beta_sprint/ui_host_integration", "tests/gameplay", "tests/foundation/level"]
     paths = git("ls-files", "--cached", "--others", "--exclude-standard", "-z", "--", *source_roots,
