@@ -64,10 +64,21 @@ func scenario(letter: String, level: Dictionary, witness: Dictionary, phase: Str
 	var identity: Dictionary = snapshot.presenter.transition_identity.duplicate(true)
 	check(not identity.is_empty(), label + " actual in-flight native identity")
 	var old_bridge := bridge_of(driver)
+	var late_completions: Array = []
+	var actual_cancellations: Array = []
+	old_bridge.motion_completed.connect(func(i, e): late_completions.append({"identity": i, "evidence": e}))
+	old_bridge.motion_cancelled.connect(func(i, r): actual_cancellations.append({"identity": i, "reason": r}))
 	var retired: Dictionary = {}
+	var reset_commits: Array = []
 	var next := {"finished": false, "result": {}}
 	if operation == "reset":
+		var bound_runtime: RefCounted = old_bridge.runtime
+		bound_runtime.committed.connect(func(s): reset_commits.append({"state": s.duplicate(true), "scope": bound_runtime.get_presentation_scope(), "commit_count": bound_runtime.get_commit_count(), "idle": bound_runtime.is_idle()}), CONNECT_ONE_SHOT)
 		await native_reset()
+		check(reset_commits.size() == 1, label + " actual native Runtime Reset commit observed")
+		if reset_commits.size() == 1:
+			check(reset_commits[0].state == witness.initial_state and reset_commits[0].commit_count == 0 and reset_commits[0].idle, label + " native Reset restores full spawn and idle with zero commits")
+			check(reset_commits[0].scope.generation == identity.generation + 1 and reset_commits[0].scope.session_id == identity.session_id and reset_commits[0].scope.level_run_id == identity.level_run_id, label + " native Reset advances same-session generation")
 		if is_instance_valid(old_bridge): retired = old_bridge.snapshot()
 		await wait_result(old, label + " old")
 		observe(driver, level, witness, {"mode": 1}, next)
@@ -96,8 +107,13 @@ func scenario(letter: String, level: Dictionary, witness: Dictionary, phase: Str
 		check(cancelled[0].cancelled_order > 0 and cancelled[0].completion_order == 0 and not cancelled[0].delivered, label + " cancellation exclusive with natural completion")
 		if operation == "reset": check(cancelled[0].get("cancellation_reason") == "RESET", label + " native R retains RESET cancellation reason")
 	await verify_new_run(driver, level, witness, next, identity, label)
+	for idle_frame in 3: await process_frame
+	check(late_completions.is_empty(), label + " no late old Bridge completion after new replay")
+	check(actual_cancellations.size() == 1 and actual_cancellations[0].identity == identity, label + " one actual cancellation signal across old/new lifetime")
 	rows.append({"map": letter, "phase": phase, "operation": operation, "old_identity": identity,
 		"old_result": old.result, "retired_bridge": retired, "new_result": next.result,
+		"native_reset_commits": reset_commits,
+		"old_actual_cancellations": actual_cancellations, "old_late_completions": late_completions,
 		"new_steps": driver.get_step_evidence() if driver.has_method("get_step_evidence") else []})
 	driver.free()
 
@@ -108,13 +124,27 @@ func expiry(letter: String, level: Dictionary, witness: Dictionary) -> void:
 	observe(driver, level, witness, {"mode": 1, "step_timeout_ms": 100}, old)
 	var started: Dictionary = await wait_phase(driver, old, "FALL")
 	var identity: Dictionary = started.get("presenter", {}).get("transition_identity", {})
+	var old_bridge := bridge_of(driver)
+	var late_completions: Array = []
+	var actual_cancellations: Array = []
+	if old_bridge != null:
+		old_bridge.motion_completed.connect(func(i, e): late_completions.append({"identity": i, "evidence": e}))
+		old_bridge.motion_cancelled.connect(func(i, r): actual_cancellations.append({"identity": i, "reason": r}))
 	await wait_result(old, letter + " expiry")
 	if old.finished: check(old.result.status == 3 and old.result.matched_steps == 0, letter + " actual in-flight timeout remains INCOMPLETE")
+	var retired: Dictionary = old_bridge.snapshot() if is_instance_valid(old_bridge) else {}
+	var cancelled: Array = retired.get("records", []).filter(func(r): return r.transition_identity == identity)
+	check(cancelled.size() == 1, letter + " expiry owns actual old Bridge record")
+	if cancelled.size() == 1: check(cancelled[0].cancelled_order > 0 and cancelled[0].completion_order == 0 and not cancelled[0].delivered, letter + " actual timeout cleanup cancels without completion")
 	var next := {"finished": false, "result": {}}
 	observe(driver, level, witness, {"mode": 1}, next)
 	await verify_new_run(driver, level, witness, next, identity, letter + " expiry recovery")
+	for idle_frame in 3: await process_frame
+	check(late_completions.is_empty(), letter + " no expired completion after recovery")
+	check(actual_cancellations.size() == 1 and actual_cancellations[0].identity == identity, letter + " one actual expiry cancellation signal")
 	rows.append({"map": letter, "operation": "step_timeout", "old_identity": identity,
-		"old_result": old.result, "new_result": next.result,
+		"old_result": old.result, "retired_bridge": retired, "new_result": next.result,
+		"old_actual_cancellations": actual_cancellations, "old_late_completions": late_completions,
 		"new_steps": driver.get_step_evidence() if driver.has_method("get_step_evidence") else []})
 	driver.free()
 

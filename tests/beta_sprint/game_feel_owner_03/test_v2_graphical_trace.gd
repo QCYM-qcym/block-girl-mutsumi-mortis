@@ -62,8 +62,23 @@ func verify_step(level: Dictionary, witness: Dictionary, step: Dictionary, index
 		check(completion.semantic == "PERSPECTIVE_FALL_APPLIED" and completion.terminal.terminal_phase == "LANDING_SETTLED", label + " semantic Fall waits for actual Landing restoration")
 		check(completion.frames.any(func(f): return f.phase == "FALL") and completion.frames.any(func(f): return f.phase == "LANDING"), label + " real Fall and Landing frames")
 		check(completion.orientation == source.player.orientation, label + " Fall PRESERVE orientation")
+		var fall_frames: Array = completion.frames.filter(func(f): return f.phase == "FALL")
+		var landing_frames: Array = completion.frames.filter(func(f): return f.phase == "LANDING")
+		var source_origin: Vector3 = Vector3.ZERO
+		var source_spatial: Dictionary = Geometry.snapshot(level, source)
+		if source_spatial.ok:
+			for anchor in source_spatial.value.anchors:
+				if anchor.face_id == Geometry.face_id(source.player.location.cube_id, source.player.location.face) and anchor.layer == source.player.location.layer:
+					source_origin = Vector3(anchor.position2 + anchor.frame.normal) * 0.5
+		var target_origin := vector(completion.final_visual_pose.origin)
+		check(fall_frames.filter(func(f): return not vector(f.pose.origin).is_equal_approx(source_origin) and not vector(f.pose.origin).is_equal_approx(target_origin)).size() > 3, label + " actual intermediate Fall positions rather than endpoint snap")
+		var projected: Array = fall_frames.map(func(f): return vector(f.pose.origin).dot(camera_basis.y))
+		check(projected.size() > 3 and projected[-1] < projected[0] - 0.05, label + " actual descending Camera projection across Fall frames")
+		check(landing_frames.any(func(f): return f.pose.basis != completion.final_visual_pose.basis or not vector(f.pose.origin).is_equal_approx(target_origin)), label + " actual Landing deformation before restored pose")
 	else:
 		check(completion.semantic == "MOVE_APPLIED_NORMAL" and completion.terminal.terminal_phase == "ROLL_RESTORED", label + " real ordinary Roll restoration")
+		var roll_frames: Array = completion.frames.filter(func(f): return f.phase == "ROLL")
+		check(roll_frames.size() > 3 and roll_frames.any(func(f): return f.pose.basis != completion.final_visual_pose.basis), label + " actual intermediate Roll rotation frames")
 func run() -> void:
 	check(DisplayServer.get_name() != "headless", "formal graphical attempt runs in actual renderer")
 	for letter in ["a", "b"]:
