@@ -50,11 +50,11 @@ func run() -> void:
 		check(replay.status == 0 and replay.matched_steps == search.solution_trace.total_actions,"formal LOGICAL_SESSION replay matches complete StateKey")
 		var repeated: Dictionary = await replayer.replay(level,search.solution_trace,{"mode":0})
 		check(repeated.status == 0 and repeated.actual_statekey == replay.actual_statekey,"fresh runtime replay is deterministic")
-		var unavailable: Dictionary = await replayer.replay(level,search.solution_trace,{"mode":1})
-		check(unavailable.status == 2 and unavailable.matched_steps == 0 and unavailable.issues[0].message.begins_with("CASE_DEPENDENCY_PENDING:"),"unintegrated Fall graphics cannot pass through legacy linear ghost tween")
+		var graphical: Dictionary = await replayer.replay(level,search.solution_trace,{"mode":1})
+		check(graphical.status == 0 and graphical.matched_steps == search.solution_trace.total_actions and graphical.actual_statekey == replay.actual_statekey,"formal natural Bridge now replays the exact v2 Goal; missing dependency stays covered by Unit")
 		observations.append({"higher":higher,"search":search,"softlock":softlock,"replay":replay})
 		replayer.free()
-	var summary := {"checks":checks,"failures":failures,"doubles":[],"authority":"real Baker/Validator/Explorer/Kernel/Softlock/TraceReplayer; LOGICAL_SESSION only","observations":observations}
+	var summary := {"checks":checks,"failures":failures,"doubles":[],"authority":"real Baker/Validator/Explorer/Kernel/Softlock/TraceReplayer; logical and natural headless Bridge","observations":observations}
 	FileAccess.open(OS.get_environment("FOUNDATION_TEST_EVIDENCE").path_join("results.json"),FileAccess.WRITE).store_string(JSON.stringify(summary))
 	print("SOLVER_REPLAY checks=",checks," failures=",failures)
 	quit(0 if failures.is_empty() else 1)
