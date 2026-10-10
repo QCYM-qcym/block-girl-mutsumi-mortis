@@ -66,10 +66,12 @@ func scenario(letter: String, level: Dictionary, witness: Dictionary, phase: Str
 	var old_bridge := bridge_of(driver)
 	var late_completions: Array = []
 	var actual_cancellations: Array = []
+	var cancellation_snapshots: Array = []
 	old_bridge.motion_completed.connect(func(i, e): late_completions.append({"identity": i, "evidence": e}))
-	old_bridge.motion_cancelled.connect(func(i, r): actual_cancellations.append({"identity": i, "reason": r}))
+	old_bridge.motion_cancelled.connect(func(i, r): actual_cancellations.append({"identity": i, "reason": r}); cancellation_snapshots.append(old_bridge.snapshot()))
 	var retired: Dictionary = {}
 	var reset_commits: Array = []
+	var old_node_freed := false
 	var next := {"finished": false, "result": {}}
 	if operation == "reset":
 		var bound_runtime: RefCounted = old_bridge.runtime
@@ -89,6 +91,15 @@ func scenario(letter: String, level: Dictionary, witness: Dictionary, phase: Str
 		# Start synchronously before the old process-frame await resumes.
 		observe(driver, level, witness, {"mode": 1}, next)
 		await wait_result(old, label + " obsolete await")
+	elif operation == "free_active":
+		var dead: WeakRef = weakref(driver)
+		driver.free()
+		old_node_freed = dead.get_ref() == null
+		check(old_node_freed, label + " active old driver actually freed")
+		retired = cancellation_snapshots[-1] if not cancellation_snapshots.is_empty() else {}
+		driver = Replayer.new()
+		root.add_child(driver)
+		observe(driver, level, witness, {"mode": 1}, next)
 	else:
 		root.remove_child(driver)
 		if is_instance_valid(old_bridge): retired = old_bridge.snapshot()
@@ -114,6 +125,7 @@ func scenario(letter: String, level: Dictionary, witness: Dictionary, phase: Str
 		"old_result": old.result, "retired_bridge": retired, "new_result": next.result,
 		"native_reset_commits": reset_commits,
 		"old_actual_cancellations": actual_cancellations, "old_late_completions": late_completions,
+		"old_node_freed": old_node_freed, "old_coroutine_returned": old.finished,
 		"new_steps": driver.get_step_evidence() if driver.has_method("get_step_evidence") else []})
 	driver.free()
 
@@ -161,7 +173,7 @@ func run() -> void:
 		var witness: Dictionary = solved.solution_trace
 		check(Trace.validate(level, witness).ok and Trace.validate_semantics(level, witness).ok, letter + " original hard witness revalidated")
 		for phase in ["FALL", "LANDING"]:
-			for operation in ["reset", "remove_readd", "exit"]: await scenario(letter, level, witness, phase, operation)
+			for operation in ["reset", "remove_readd", "exit", "free_active"]: await scenario(letter, level, witness, phase, operation)
 		await expiry(letter, level, witness)
 	var capture := Capture.snapshot("FORMAL_GRAPHICAL native R / SceneTree lifecycle / real step timeout")
 	capture.authoritative_runtime = true

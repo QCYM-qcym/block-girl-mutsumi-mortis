@@ -78,7 +78,9 @@ func verify_step(level: Dictionary, witness: Dictionary, step: Dictionary, index
 	else:
 		check(completion.semantic == "MOVE_APPLIED_NORMAL" and completion.terminal.terminal_phase == "ROLL_RESTORED", label + " real ordinary Roll restoration")
 		var roll_frames: Array = completion.frames.filter(func(f): return f.phase == "ROLL")
-		check(roll_frames.size() > 3 and roll_frames.any(func(f): return f.pose.basis != completion.final_visual_pose.basis), label + " actual intermediate Roll rotation frames")
+		var source_columns: Array = Orientation.columns(source.player.orientation)
+		var intermediate: Array = roll_frames.filter(func(f): return not range(3).all(func(i): return vector(f.pose.basis[i]).is_equal_approx(Vector3(source_columns[i]))) and not range(3).all(func(i): return vector(f.pose.basis[i]).is_equal_approx(Vector3(columns[i]))))
+		check(intermediate.size() > 3, label + " actual Roll rotation distinct from both canonical endpoints")
 func run() -> void:
 	check(DisplayServer.get_name() != "headless", "formal graphical attempt runs in actual renderer")
 	for letter in ["a", "b"]:

@@ -1,0 +1,167 @@
+{
+	"authority": "Sole production Replayer/Facade/Bridge. Public native R and Node removal/readdition/exit; no override, adapter, manual finish or synthetic completion",
+	"capture": {
+		"authoritative_runtime": true,
+		"display": "Windows",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "a5642e2f0dac52c11a1f13bce5b86523e14e538b",
+		"fixture_kind": "REAL_CANONICAL_MAP_AB",
+		"input_profile": "FORMAL_GRAPHICAL native R / SceneTree lifecycle / real step timeout",
+		"pid": 47192,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_lifecycle_red04/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"checks": 43,
+	"doubles": [],
+	"failures": [
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches FALL",
+		"a actual in-flight timeout remains INCOMPLETE",
+		"a expiry owns actual old Bridge record",
+		"a expiry recovery new original witness reaches actual Goal",
+		"a expiry recovery public new-run evidence",
+		"a expiry recovery exactly two uncontaminated new steps",
+		"a one actual expiry cancellation signal",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches FALL",
+		"b actual in-flight timeout remains INCOMPLETE",
+		"b expiry owns actual old Bridge record",
+		"b expiry recovery new original witness reaches actual Goal",
+		"b expiry recovery public new-run evidence",
+		"b expiry recovery exactly two uncontaminated new steps",
+		"b one actual expiry cancellation signal"
+	],
+	"rows": [
+		{
+			"map": "a",
+			"new_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"new_steps": [],
+			"old_actual_cancellations": [],
+			"old_identity": {},
+			"old_late_completions": [],
+			"old_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"operation": "step_timeout",
+			"retired_bridge": {}
+		},
+		{
+			"map": "b",
+			"new_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"new_steps": [],
+			"old_actual_cancellations": [],
+			"old_identity": {},
+			"old_late_completions": [],
+			"old_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"operation": "step_timeout",
+			"retired_bridge": {}
+		}
+	]
+}

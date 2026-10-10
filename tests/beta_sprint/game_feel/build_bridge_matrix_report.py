@@ -102,12 +102,15 @@ def build(formal_name, lifecycle_name, regressions):
         require(row["result"]["status"] == 0 and row["result"]["matched_steps"] == 2)
         require(row["result"]["actual_statekey"] == row["trace"]["goal_statekey"])
     expected_lifecycle = {(m, p, op) for m in ("a", "b") for p in ("FALL", "LANDING")
-                          for op in ("reset", "remove_readd", "exit")}
+                          for op in ("reset", "remove_readd", "exit", "free_active")}
     actual_lifecycle = {(r["map"], r.get("phase"), r["operation"]) for r in lifecycle["rows"] if r["operation"] != "step_timeout"}
-    require(actual_lifecycle == expected_lifecycle and len(lifecycle["rows"]) == 14)
+    require(actual_lifecycle == expected_lifecycle and len(lifecycle["rows"]) == 18)
     require({r["map"] for r in lifecycle["rows"] if r["operation"] == "step_timeout"} == {"a", "b"})
     for row in lifecycle["rows"]:
-        require(row["old_result"]["status"] in (2, 3) and row["old_result"]["matched_steps"] == 0)
+        if row["operation"] == "free_active" and not row["old_coroutine_returned"]:
+            require(row["old_node_freed"] and row["old_result"] == {}, "Destroyed coroutine must not invent a replay result")
+        else:
+            require(row["old_result"]["status"] in (2, 3) and row["old_result"]["matched_steps"] == 0)
         require(row["new_result"]["status"] == 0 and row["new_result"]["matched_steps"] == 2)
         require(len(row["new_steps"]) == 2)
         require(all(s["transition_identity"] != row["old_identity"] for s in row["new_steps"]))
@@ -142,7 +145,7 @@ def build(formal_name, lifecycle_name, regressions):
         "counting": "Cumulative 94 distinct predicates; 51 retained baseline rows and 2 upgraded rows. Not 53 fresh candidate executions. Historical Core69 assertions remain exactly three rows; no totals added across shared row references.",
         "upgraded_rows": sorted(upgrades), "formal_graphical": "PASS",
         "formal_graphical_endpoints": endpoints, "formal_graphical_matched_steps": 8,
-        "formal_graphical_lifecycle_new_run_matched_steps": 28,
+        "formal_graphical_lifecycle_new_run_matched_steps": 36,
         "logical_replay": "PASS / separate mode0 / A+B two steps each",
         "natural_presenter": "PASS / focused real candidate regression; separate from FORMAL_GRAPHICAL",
         "runtime_parity": "PASS / original A/B witness complete state, native single commits, full StateKey",
@@ -157,7 +160,7 @@ def build(formal_name, lifecycle_name, regressions):
     (OUT / "MATRIX_94.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     lines = ["# PFALL_V2_QUALITY_MATRIX_REPORT", "",
              "Cumulative matrix: **53 PASS / 0 FAIL / 41 PENDING**. Only FORMAL_REPLAY and CORE_SAFETY_SOLVER_REPLAY are upgraded. The prior 51 rows retain their historical execution identity; this is not a fresh 94-case acceptance.", "",
-             "Formal Graphical: **PASS**, A/B original witness ×2, 8 matched steps. Native Reset, scene exit, remove→readd→immediate new replay and expiry isolation: 14 cases, 28 successful new-run steps. LOGICAL_SESSION and natural Presenter are separately recorded.", "",
+             "Formal Graphical: **PASS**, A/B original witness ×2, 8 matched steps. Native Reset, scene exit, active driver free, remove→readd→immediate new replay and expiry isolation: 18 cases, 36 successful new-run steps. LOGICAL_SESSION and natural Presenter are separately recorded.", "",
              f"New selected receipts: {report['new_unique_pass_assertions']} unique PASS assertions. Historical Core69 remains three rows; neither earlier1311 nor Unit38 is added to this total.", "",
              "| Case | Status | Execution source | Scope / evidence |", "|---|---|---|---|"]
     for row in inventory:
