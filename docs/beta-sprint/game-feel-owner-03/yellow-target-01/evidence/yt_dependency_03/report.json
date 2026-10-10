@@ -1,0 +1,78 @@
+{
+	"authority": "Actual ResourceLoader and author Map versions; availability probes are not gameplay assertions or Real PASS",
+	"capture": {
+		"authoritative_runtime": false,
+		"display": "headless",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "5528e5f40fdfbf6aefa94d078eb8cbf39767bb7b",
+		"fixture_kind": "ACTUAL_AUTHOR_DATA_AND_RESOURCE_AVAILABILITY_PROBE",
+		"input_profile": "NEW_PROFILE_DEPENDENCY_PROBE",
+		"pid": 10524,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/yellow-target-01/evidence/yt_dependency_03/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"checks": 3,
+	"dependency_pending": [
+		"REAL_01_TRAJECTORY_SAMPLER: res://foundation/game_feel/trajectory_profile.gd",
+		"REAL_09_SCHEMA3_MAP_A_AND_BAKER",
+		"REAL_09_SCHEMA3_MAP_B_AND_BAKER"
+	],
+	"doubles": [],
+	"failures": [],
+	"observations": [
+		{
+			"candidate_contract": "foundation.game_feel.v1",
+			"candidate_schema": 2.0,
+			"exit": [
+				-6.0,
+				0.0,
+				8.0
+			],
+			"map": "a",
+			"source": [
+				0.0,
+				4.0,
+				0.0
+			],
+			"target": [
+				-8.0,
+				0.0,
+				8.0
+			]
+		},
+		{
+			"candidate_contract": "foundation.game_feel.v1",
+			"candidate_schema": 2.0,
+			"exit": [
+				-6.0,
+				8.0,
+				8.0
+			],
+			"map": "b",
+			"source": [
+				0.0,
+				4.0,
+				0.0
+			],
+			"target": [
+				-8.0,
+				8.0,
+				8.0
+			]
+		}
+	],
+	"profile": "foundation.game_feel.v2",
+	"sampler_exists": false,
+	"scope": "DEPENDENCY_PROBE"
+}

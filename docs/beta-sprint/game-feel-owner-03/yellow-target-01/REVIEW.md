@@ -1,0 +1,9 @@
+# Preparation review and correction
+
+Fresh reviewer: /root/yellow_target_preparation_review, read-only range01bf8c4..5528e5f, modelgpt-6-astra. No Critical finding. One Important finding: candidate admission omitted deleted paths and drift omitted new source paths. One Minor finding: sampler endpoints/join used approximate comparison.
+
+Admission fix: enumerate candidate and current source sets, reject missing/additional production/dependency paths, reject tracked missing files before capture, and re-enumerate after execution. Only the two03 test roots may legitimately contain preparation changes above the candidate. Other Owner fixture dependencies remain bound. New tests use real temporary Git trees without commits/worktrees; they are Unit metadata/manifest tests, never gameplay evidence. Missing helper RED observed, then thirteen focused Unit tests GREEN. Behavioral baseline-mutation RED and final suite are retained separately below when executed.
+
+Endpoint correction: use direct Vector3 equality for geometry u=0,0.25,1; rational interior samples and derivative estimates retain float tolerance. This is a test predicate correction, not a new sampler implementation. It will be exercised against the actual delivered sampler, with no synthetic Runtime PASS.
+
+Reviewer set aside actual new Owner production and graphical correctness, proof budget/overflow/full obstacle coverage, complete Surface/Inner diagnostics,00 natural six phases/contact, Pixel rendering, future old-version regression, OS/Human/Audio/UI/Art, future candidate/intake/cleanliness, and the two subsequent parent-only receipt folders. These are explicitly pending or outside the review range. Preparation review accepts no Real new-profile result. The subsequently supplied candidate984f275913b1495fc09f92743fb0f665715f50c1 now enables actual Owner03 execution after this correction and clean controlled intake; graphical execution awaits GRAPHICAL_WINDOW_READY.

@@ -20,6 +20,7 @@ JOBS = {
 }
 SOURCE_ROOTS = ["foundation", "game", "experiments/game_feel_01", "prototype/perspective",
                 "production", "tests", "project.godot", "default_bus_layout.tres"]
+OWNER_TEST_ROOTS = ("tests/beta_sprint/game_feel/", "tests/beta_sprint/game_feel_owner_03/")
 
 
 def classify(r):
@@ -49,6 +50,43 @@ def write(path, value):
     path.write_bytes((json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
 
 
+def source_paths(root=ROOT, candidate=None):
+    command = (["ls-tree", "-r", "--name-only", "-z", candidate] if candidate else
+               ["ls-files", "--cached", "--others", "--exclude-standard", "-z"])
+    raw = subprocess.check_output(["git", "-C", str(root), *command, "--", *SOURCE_ROOTS], encoding="utf-8")
+    return {p for p in raw.split("\0") if p and "/evidence/" not in p}
+
+
+def source_snapshot(root=ROOT):
+    paths = source_paths(root)
+    missing = sorted(p for p in paths if not (root / p).is_file())
+    if missing:
+        raise ValueError(f"missing tracked source files: {missing}")
+    return {p: sha(root / p) for p in sorted(paths)}
+
+
+def verify_candidate(candidate, current, root=ROOT):
+    expected_paths = {p for p in source_paths(root, candidate) if not p.startswith(OWNER_TEST_ROOTS)}
+    current_paths = {p for p in current if not p.startswith(OWNER_TEST_ROOTS)}
+    missing = sorted(expected_paths - current_paths)
+    additional = sorted(current_paths - expected_paths)
+    if missing or additional:
+        raise ValueError(f"candidate source set differs; missing={missing}, additional={additional}")
+    for p in sorted(expected_paths):
+        expected = subprocess.check_output(["git", "-C", str(root), "show", f"{candidate}:{p}"])
+        if hashlib.sha256(expected).hexdigest() != current[p]:
+            raise ValueError(f"Production/dependency bytes differ from supplied candidate: {p}")
+
+
+def source_drift(before, root=ROOT):
+    after_paths = source_paths(root)
+    changed = set(before).symmetric_difference(after_paths)
+    for p in set(before).intersection(after_paths):
+        if not (root / p).is_file() or sha(root / p) != before[p]:
+            changed.add(p)
+    return sorted(changed)
+
+
 def run(job, name, candidate=None):
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", name):
         raise ValueError("Fresh simple evidence name required")
@@ -58,16 +96,9 @@ def run(job, name, candidate=None):
             raise ValueError("Real execution requires the supplied combined candidate SHA")
         subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", candidate, "HEAD"], check=True)
     # No intake is performed here. Capture ALL tracked/nonignored source inputs.
-    paths = git("ls-files", "--cached", "--others", "--exclude-standard", "-z", "--", *SOURCE_ROOTS).split("\0")
-    paths = sorted({p for p in paths if p and (ROOT / p).is_file() and "/evidence/" not in p})
-    sources = {p: sha(ROOT / p) for p in paths}
+    sources = source_snapshot()
     if job != "probe":
-        for p in paths:
-            if p.startswith(("tests/",)):
-                continue  # Test preparation may be committed above the candidate.
-            expected = subprocess.check_output(["git", "-C", str(ROOT), "show", f"{candidate}:{p}"])
-            if hashlib.sha256(expected).hexdigest() != sources[p]:
-                raise ValueError(f"Production bytes differ from supplied candidate: {p}")
+        verify_candidate(candidate, sources)
     out = OUT_ROOT / name
     out.mkdir(parents=True, exist_ok=False)
     env = os.environ.copy()
@@ -108,7 +139,7 @@ def run(job, name, candidate=None):
         isolated = False
     receipt.update(exit_code=code, checks=report.get("checks", 0), failures=report.get("failures", ["missing report"]),
                    doubles=report.get("doubles"), stderr_bytes=(out / "stderr.log").stat().st_size,
-                   source_drift=[p for p, digest in sources.items() if not (ROOT / p).exists() or sha(ROOT / p) != digest],
+                   source_drift=source_drift(sources),
                    scope=report.get("scope"), profile=report.get("profile"), dependency_pending=report.get("dependency_pending", []),
                    capture_verified=(capture.get("pid") == proc.pid and capture.get("execution_head") == head and
                                      isolated and (not graphical or capture.get("display") == "Windows")),

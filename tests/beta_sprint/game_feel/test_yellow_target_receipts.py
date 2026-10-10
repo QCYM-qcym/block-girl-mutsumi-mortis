@@ -1,6 +1,9 @@
 """Unit synthetic receipt metadata only; never asserts Real Runtime success."""
 import unittest
-from run_yellow_target import classify
+import subprocess
+import tempfile
+from pathlib import Path
+from run_yellow_target import classify, source_snapshot, verify_candidate, source_drift
 
 
 class ReceiptTests(unittest.TestCase):
@@ -43,6 +46,62 @@ class ReceiptTests(unittest.TestCase):
         r.update(scope="DEPENDENCY_PROBE", dependency_pending=["SAMPLER"], stderr_bytes=9)
         self.assertEqual(classify(r), "FAIL")
 
+
+class SourceAdmissionTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        subprocess.run(["git", "init", "-q", str(self.root)], check=True)
+        self.git("config", "core.autocrlf", "false")
+        self.production = self.root / "foundation/input.gd"
+        self.production.parent.mkdir()
+        self.production.write_bytes(b"actual candidate input\n")
+        self.git("add", "foundation/input.gd")
+        # write-tree needs no synthetic commit or other worktree.
+        self.candidate = self.git("write-tree")
+
+    def git(self, *args):
+        return subprocess.check_output(["git", "-C", str(self.root), *args], encoding="utf-8").strip()
+
+    def test_unstaged_deleted_tracked_source_is_not_omitted(self):
+        self.production.unlink()
+        with self.assertRaisesRegex(ValueError, "missing"):
+            source_snapshot(self.root)
+
+    def test_staged_deletion_is_rejected_against_candidate_tree(self):
+        self.production.unlink()
+        self.git("add", "-u")
+        with self.assertRaisesRegex(ValueError, "missing"):
+            verify_candidate(self.candidate, source_snapshot(self.root), self.root)
+
+    def test_preexisting_rename_cannot_omit_original_candidate_path(self):
+        self.git("mv", "foundation/input.gd", "foundation/renamed.gd")
+        with self.assertRaisesRegex(ValueError, "missing"):
+            verify_candidate(self.candidate, source_snapshot(self.root), self.root)
+
+    def test_new_source_during_run_is_reported_as_drift(self):
+        before = source_snapshot(self.root)
+        (self.root / "foundation/extra.gd").write_bytes(b"added during run\n")
+        self.assertEqual(source_drift(before, self.root), ["foundation/extra.gd"])
+
+    def test_rename_during_run_inventories_both_paths(self):
+        before = source_snapshot(self.root)
+        self.production.rename(self.root / "foundation/new.gd")
+        self.assertEqual(source_drift(before, self.root), ["foundation/input.gd", "foundation/new.gd"])
+
+    def test_owner03_test_preparation_is_allowed_above_candidate(self):
+        test = self.root / "tests/beta_sprint/game_feel_owner_03/new.gd"
+        test.parent.mkdir(parents=True)
+        test.write_bytes(b"new Owner03 test\n")
+        verify_candidate(self.candidate, source_snapshot(self.root), self.root)
+
+    def test_other_owner_dependency_change_is_not_exempt(self):
+        test = self.root / "tests/foundation/level/baker_fixture.gd"
+        test.parent.mkdir(parents=True)
+        test.write_bytes(b"unregistered author dependency\n")
+        with self.assertRaisesRegex(ValueError, "additional"):
+            verify_candidate(self.candidate, source_snapshot(self.root), self.root)
 
 if __name__ == "__main__":
     unittest.main()

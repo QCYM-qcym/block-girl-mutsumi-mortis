@@ -52,7 +52,11 @@ func verify_sampler(trajectory: Dictionary, letter: String) -> void:
 		var actual: Dictionary = sampler.sample_actor_center(trajectory, sample[0])
 		check(actual.size() == 3 and actual.has_all(["ok","position","issues"]), letter + " closed sampler result")
 		check(actual.ok and actual.issues.is_empty() and actual.position is Vector3, letter + " valid public sampling")
-		if actual.position is Vector3: check(actual.position.is_equal_approx(sample[1]), letter + " independently derived sample " + str(sample[0]))
+		if actual.position is Vector3:
+			if sample[0] in [0.0,0.25,1.0]:
+				check(actual.position == sample[1], letter + " exact endpoint/join " + str(sample[0]))
+			else:
+				check(actual.position.is_equal_approx(sample[1]), letter + " independently derived rational sample " + str(sample[0]))
 		check(actual == sampler.sample_actor_center(trajectory, sample[0]), letter + " repeat deterministic pure sampling")
 	for parameter in [-0.01, 1.01, NAN, INF, -INF]:
 		var invalid: Dictionary = sampler.sample_actor_center(trajectory, parameter)
