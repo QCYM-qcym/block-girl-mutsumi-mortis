@@ -31,3 +31,15 @@ static func committed(start: Dictionary) -> Dictionary:
 	result.phase = "COMMITTED"
 	result.event_id += 1
 	return result
+
+static func curve_event(higher: bool = false, orientation: int = 0, attempt: int = 1) -> Dictionary:
+	var result := event(higher, orientation, attempt)
+	result.schema_version = 2
+	result.contract_version = "game_feel.event.v2"
+	result.erase("authorized_path_points2")
+	result.authorized_trajectory = {"trajectory_version": "pfall.departure_cubic.v1",
+		"departure_points2": [Vector3i(0,6,0), Vector3i(-2,6,0)],
+		"descent_control_points2": [Vector3i(-2,6,0), Vector3i(-4,6,0), Vector3i(-6,14 if higher else 4,8), Vector3i(-6,10 if higher else 2,8)]}
+	result.safety_verdict.evidence_ref.kind = "dyadic_cubic_cube_sweep.v1"
+	result.motion_profile_id = "UNIT-curve"
+	return result

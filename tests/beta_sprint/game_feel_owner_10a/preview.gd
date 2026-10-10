@@ -5,11 +5,13 @@ var checks := 0
 var failures: Array = []
 var rows: Array = []
 var screenshots: Array = []
+var curved := false
 
 func _initialize() -> void:
 	Engine.max_fps = 60
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--evidence-dir="): evidence = arg.trim_prefix("--evidence-dir=")
+		if arg == "--curve": curved = true
 	call_deferred("run")
 
 func check(value: bool, text: String) -> void:
@@ -38,11 +40,12 @@ func run() -> void:
 		var letter := "B" if higher else "A"
 		var stage = Stage.new()
 		stage.higher = higher
+		stage.curved = curved
 		root.add_child(stage)
 		await create_timer(0.3).timeout
 		var initial_event: Dictionary = stage.event.duplicate(true)
-		var source: Vector3 = Vector3(stage.event.authorized_path_points2[0]) * 0.5
-		var target: Vector3 = Vector3(stage.event.authorized_path_points2[-1]) * 0.5
+		var source: Vector3 = stage.endpoint(false)
+		var target: Vector3 = stage.endpoint(true)
 		check(target.y - source.y == (2.0 if higher else -2.0), "real height retained " + letter)
 		for quadrant in 4:
 			stage.set_quadrant(quadrant)
@@ -73,6 +76,9 @@ func run() -> void:
 			if not stage.is_committed and stage.elapsed >= 0.5 and not captured.has("MID_FALL"):
 				captured.MID_FALL = true
 				await capture("map_" + letter + "_mid_fall")
+			if curved and not stage.is_committed and stage.elapsed >= 0.74 and not captured.has("NEAR_CONTACT"):
+				captured.NEAR_CONTACT = true
+				await capture("map_" + letter + "_near_contact")
 		check(stage.visual.position == target and stage.visual.basis == stage.authoritative_basis, "exact final rendered transform " + letter)
 		await capture("map_" + letter + "_settled")
 		# Native input delivery into PRIVATE host double, no Runtime Busy proof.

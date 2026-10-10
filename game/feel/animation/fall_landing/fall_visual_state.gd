@@ -34,10 +34,16 @@ static func safe_attestation(event: Dictionary) -> bool:
 		if not text(reference.get(key)): return false
 	return reference.connection_id == event.get("connection_id") and reference.profile_hash == event.get("motion_profile_hash")
 
+static func event_version(event: Dictionary) -> int:
+	if not event.get("schema_version") is int or not text(event.get("contract_version")): return 0
+	if event.get("schema_version") == 1 and event.get("contract_version") == "game_feel.event.v1": return 1
+	if event.get("schema_version") == 2 and event.get("contract_version") == "game_feel.event.v2": return 2
+	return 0
+
 static func event_issues(event: Dictionary, phase: String) -> Array:
 	var result: Array = []
-	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1":
-		result.append({"path": "event", "message": "Expected game_feel.event.v1."})
+	if event_version(event) == 0:
+		result.append({"path": "event", "message": "Expected an explicit matching game_feel.event.v1 or v2 version."})
 	if event.get("semantic") != "PERSPECTIVE_FALL_APPLIED" or event.get("phase") != phase:
 		result.append({"path": "event.phase", "message": "Expected authorized Fall " + phase + "."})
 	var identity: Variant = event.get("presentation_identity")

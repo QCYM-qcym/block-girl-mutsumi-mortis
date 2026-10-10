@@ -4,6 +4,16 @@ Contract baseline: 2938d6e534f5b596bb320ce79d72b69f5923f3cd. No shared-file edit
 
 ## Exact seam
 
+### Registered event.v2 curve seam — PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01
+
+Supplement registration: 00 commit ec826753435458abc41cc365e4b57dba27767fbd, `docs/beta-sprint/game-feel/yellow-target-01/TRAJECTORY_CONTRACT_DELTA.md`. Base contract bytes are frozen. Fall STARTED/COMMITTED use exact schema2 + `game_feel.event.v2`; they are never downgraded to event.v1. Host handles new-profile INTERRUPTED with the same captured identities and existing cancel APIs.
+
+FallMotion v2 requires only `authorized_trajectory`, version `pfall.departure_cubic.v1`, plus structured SAFE evidence kind `dyadic_cubic_cube_sweep.v1` binding the existing connection/profile hashes. Mixed old/new motion fields and unsupported versions/types fail atomically. At begin it lazy-loads **only** `res://foundation/game_feel/trajectory_profile.gd` and calls its static `sample_actor_center(trajectory, parameter)`; missing dependency rejects v2 without breaking v1. It snapshots the profile, validates source/join/target with the formal API and uses that same API for every frame. Returned positions are already ordinary WORLD UNITS; do not divide them again. Production 10A contains no geometric curve evaluator or fallback.
+
+For this profile, DEPARTURE ends at the contract's fixed geometry parameter **0.25**, exactly the provided D/P0. The `departure_path_fraction` experiment continues to apply only to legacy v1 arc length; it cannot relocate the v2 join. Existing duration weights, monotone C1 timing, cue/phase schedules, Reduced Motion and exact endpoints remain available. With 300ms/default weights the boundaries remain 45/90/300ms. Landing begins only after true matching COMMITTED, accepts the untouched v2 envelope, emits no synthetic completion and returns null position. Existing 60/340ms impact/settle and neutral/cancel guarantees are retained.
+
+Owner-local evidence binds actual Owner01 WIP sampler/dependency bytes and SHA, separately from DTO/SAFE/commit/input doubles. This does not constitute an actual Owner01 Runtime/Safety delivery. Once 01 commits, rebind that committed blob and rerun; 00 supplies real Map/Baker/Runtime/Safety/Solver/Replay and natural graphical bottom-contact acceptance.
+
 Preload `game/feel/animation/fall_landing/fall_motion.gd` and `landing_motion.gd`, instantiate once per bound run. Both expose the contracted `begin(event)`, `sample(elapsed_seconds)`, `cancel(presentation_identity)`, `clear()`. `parameters` is a `motion_parameters.gd` Resource. Configure before begin; each begin freezes values and custom timing Curve into a private snapshot. Defaults are experimental, not accepted art values.
 
 00's router must deduplicate `(session_id, level_run_id, event_id)` before begin, including duplicate STARTED/COMMITTED after an effect has cleared. The samplers reject overlapping begin while active; clear/cancel intentionally releases their effect state, and they do not own a lifetime Gameplay event ledger. Add duplicate committed delivery to real host integration tests.

@@ -230,6 +230,9 @@ func run() -> void:
 		landing.sample(t)
 		landing.cancel(event.presentation_identity)
 		check(not landing.sample(t + 1.0).active, "cancel neutral at each Landing phase")
+	if not ResourceLoader.exists("res://foundation/game_feel/trajectory_profile.gd"):
+		var missing_dependency: Dictionary = motion.begin(Fixture.curve_event())
+		check(not missing_dependency.ok and not motion.sample(0.2).active, "v2 missing formal sampler fails closed while v1 remains independent")
 	finish()
 
 func on_path(point: Vector3, points: Array) -> bool:
