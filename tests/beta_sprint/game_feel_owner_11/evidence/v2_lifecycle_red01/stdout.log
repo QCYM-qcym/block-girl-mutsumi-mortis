@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+FAIL: v2 STARTED sounds scoped Fall without landing
+FAIL: v2 matching COMMITTED lands once and stops captured loop
+FAIL: v2 scoped interruption stops without impact: RESET
+FAIL: v2 scoped interruption stops without impact: CANCEL
+FAIL: v2 scoped interruption stops without impact: UNLOAD
+FAIL: v2 scoped interruption stops without impact: QUIT
+FAIL: v2 late old cancel leaves replacement Fall active
+FAIL: v2 replacement commits once after old scoped cancellation
+AUDIO_POLICY checks=101 failures=8

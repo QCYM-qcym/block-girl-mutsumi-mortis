@@ -58,7 +58,7 @@ def main():
                 "dirty": subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True).splitlines(),
                 "source_sha256": source, "engine_sha256": hashlib.sha256(args.godot.read_bytes()).hexdigest(),
                 "profile": str(profile), "fixture_kind": "PRESENTATION_CONTRACT_UNIT", "authoritative_runtime": False,
-                "doubles": ["synthetic game_feel.event.v1 snapshots"], "input": "direct audio API calls; no gameplay/OS input", "human_listening": "NOT_RUN"}
+                "doubles": ["synthetic game_feel.event.v1/v2 snapshots; no Safety proof"], "input": "direct audio API calls; no gameplay/OS input", "human_listening": "NOT_RUN"}
     start = time.monotonic()
     with (evidence / "stdout.log").open("wb") as stdout, (evidence / "stderr.log").open("wb") as stderr:
         child = subprocess.Popen(command, cwd=ROOT, env=env, stdout=stdout, stderr=stderr,

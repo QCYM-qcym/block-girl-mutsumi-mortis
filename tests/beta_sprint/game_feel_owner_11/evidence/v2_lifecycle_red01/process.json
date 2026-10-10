@@ -1,0 +1,56 @@
+{
+  "stage": "policy",
+  "command": [
+    "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+    "--headless",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_11/test_policy.gd",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\v2_lifecycle_red01"
+  ],
+  "cwd": "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+  "head": "7363e9e7d7849018cc456ae866a60e23472591d6",
+  "branch": "feat/game-feel-audio",
+  "dirty": [
+    " M tests/beta_sprint/game_feel_owner_11/test_policy.gd"
+  ],
+  "source_sha256": {
+    "game/feel/audio/audio_director.gd": "cfb498eb5fe2e6f64f017076cc6ba4db789d2fed10fd7e234b7217a58b276df1",
+    "game/feel/audio/audio_director.gd.uid": "9a074897d591d931f97dc4339ffe0764c60f6e06bbba2f1c9cebd48b9475c1cc",
+    "game/feel/audio/event_policy.gd": "341e387a8d520d521e8e85c7793ee67862c84504c0aa788e401cbf94b9532651",
+    "game/feel/audio/event_policy.gd.uid": "9de0a18607acf87517a0582b0f5119c53f6c1a30019afada7abd78ef3b14b9aa",
+    "tests/beta_sprint/game_feel_owner_11/run_validation.py": "c0071e7376a869226163cfa070ee766722658b01fd4b960465fd340c76ba1ca9",
+    "tests/beta_sprint/game_feel_owner_11/test_policy.gd": "7b8e0f442e3a7728391691d2d23977b47dcc3894687527558c30e114adae1cfb"
+  },
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "profile": "E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\v2_lifecycle_red01\\profile",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "synthetic game_feel.event.v1 snapshots"
+  ],
+  "input": "direct audio API calls; no gameplay/OS input",
+  "human_listening": "NOT_RUN",
+  "pid": 41824,
+  "exit_code": 1,
+  "seconds": 0.27144979999866337,
+  "source_drift": false,
+  "stderr_bytes": 0,
+  "status": "FAIL",
+  "evidence_class": "PRESENTATION_CONTRACT_UNIT",
+  "checks": 101,
+  "failures": [
+    "v2 STARTED sounds scoped Fall without landing",
+    "v2 matching COMMITTED lands once and stops captured loop",
+    "v2 scoped interruption stops without impact: RESET",
+    "v2 scoped interruption stops without impact: CANCEL",
+    "v2 scoped interruption stops without impact: UNLOAD",
+    "v2 scoped interruption stops without impact: QUIT",
+    "v2 late old cancel leaves replacement Fall active",
+    "v2 replacement commits once after old scoped cancellation"
+  ],
+  "user_data_dir": "E:/godot/worktrees/block-girl-game-feel-audio/tests/beta_sprint/game_feel_owner_11/evidence/v2_lifecycle_red01/profile/Godot/app_userdata/方块少女-若叶睦",
+  "display": "headless"
+}

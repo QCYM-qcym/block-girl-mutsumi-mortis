@@ -21,6 +21,7 @@ func consume(event: Dictionary, elapsed_seconds: float) -> Dictionary:
 	var id: Dictionary = event.presentation_identity if event.presentation_identity is Dictionary else {}
 	# Interruption addresses captured old identity; it must never rebind a run.
 	if event.semantic == "ANIMATION_INTERRUPTED":
+		if _active.get("key", "") == identity_key(id) and _active.version != event.contract_version: return out
 		cancel(id)
 		out.accepted = true
 		out.stop_identity = id.duplicate(true)
@@ -56,6 +57,8 @@ func consume(event: Dictionary, elapsed_seconds: float) -> Dictionary:
 	if event.phase == "COMMITTED":
 		if _active.is_empty() or _active.key != key or _active.semantic != event.semantic or _active.transition != event.transition_identity:
 			return out
+		if _active.version != event.contract_version: return out
+		if event.contract_version == "game_feel.event.v2" and _active.trajectory != event.authorized_trajectory: return out
 		if _active.source != event.source_pose or _active.target != event.target_pose:
 			return out
 		out.accepted = true
@@ -80,7 +83,7 @@ func consume(event: Dictionary, elapsed_seconds: float) -> Dictionary:
 	if not _active.is_empty():
 		out.stop_identity = _active.identity.duplicate(true)
 		_remember_terminal(_active.key)
-	_active = {"key": key, "identity": id.duplicate(true), "transition": event.transition_identity.duplicate(true), "semantic": event.semantic, "source": event.source_pose.duplicate(true), "target": event.target_pose.duplicate(true)}
+	_active = {"key": key, "identity": id.duplicate(true), "transition": event.transition_identity.duplicate(true), "semantic": event.semantic, "version": event.contract_version, "trajectory": event.authorized_trajectory.duplicate(true) if event.contract_version == "game_feel.event.v2" else {}, "source": event.source_pose.duplicate(true), "target": event.target_pose.duplicate(true)}
 	out.accepted = true
 	out.world_id = event.world_id
 	out.cues = ["fall_start", "fall_whoosh"] if event.semantic == "PERSPECTIVE_FALL_APPLIED" else ["cube_roll"]
@@ -134,7 +137,11 @@ func _pose_valid(pose: Variant) -> bool:
 	return loc.get("layer") is int and loc.layer in [0, 1] and (loc.get("cube_id") is String or loc.get("cube_id") is StringName) and not str(loc.cube_id).is_empty() and loc.get("face") is int and loc.face >= 0 and loc.face < 6 and pose.get("orientation") is int and pose.orientation >= 0 and pose.orientation < 24
 
 func _validate(event: Dictionary) -> String:
-	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1": return "unsupported event version"
+	if not event.get("schema_version") is int or not event.get("contract_version") is String: return "invalid event version types"
+	var v1: bool = event.get("schema_version") == 1 and event.get("contract_version") == "game_feel.event.v1"
+	var v2: bool = event.get("schema_version") == 2 and event.get("contract_version") == "game_feel.event.v2"
+	if not v1 and not v2: return "unsupported event version"
+	if v2 and not event.get("semantic") in ["PERSPECTIVE_FALL_APPLIED", "ANIMATION_INTERRUPTED"]: return "unsupported v2 semantic"
 	if not event.get("event_id") is int or event.event_id < 0: return "event_id must be monotonic integer"
 	if not event.get("session_id") is String or event.session_id.is_empty() or not event.get("level_run_id") is String or event.level_run_id.is_empty(): return "missing run identity"
 	if not event.get("attempt_id") is int or event.attempt_id < 0: return "invalid attempt identity"
@@ -170,17 +177,34 @@ func _validate(event: Dictionary) -> String:
 	if not event.get("transition_identity") is Dictionary: return "missing transition identity"
 	var token: Dictionary = event.transition_identity
 	if token.get("session_id") != id.session_id or token.get("level_run_id") != id.level_run_id or token.get("generation") != id.generation or not token.get("transaction_id") is int or token.transaction_id < 0 or not token.get("is_global") is bool: return "transition identity mismatch"
-	if kind == "PERSPECTIVE_FALL_APPLIED" and phase == "STARTED":
+	if kind == "PERSPECTIVE_FALL_APPLIED" and (phase == "STARTED" or v2):
 		if not _safe_verdict(event) or event.get("orientation_policy") != "PRESERVE" or event.source_pose.orientation != event.target_pose.orientation or event.target_pose.location.layer != event.world_id: return "Fall lacks explicit safe preserved same-world path"
+		if v2 and (not event.safety_verdict is Dictionary or event.safety_verdict.evidence_ref.get("kind") != "dyadic_cubic_cube_sweep.v1"): return "v2 Fall lacks curve Safety evidence"
 		for field in ["connection_id", "motion_profile_id", "motion_profile_hash"]:
 			if not (event.get(field) is String or event.get(field) is StringName) or str(event[field]).is_empty(): return "missing Fall profile identity"
 		if not event.get("source_frame") is Dictionary: return "missing source frame"
-		if not event.get("authorized_path_points2") is Array or event.authorized_path_points2.size() < 2: return "missing authorized path"
-		for point in event.authorized_path_points2:
-			if not point is Vector3i: return "noncanonical path point"
+		if v2:
+			if not _trajectory_valid(event.get("authorized_trajectory")): return "invalid authorized trajectory"
+		else:
+			if not event.get("authorized_path_points2") is Array or event.authorized_path_points2.size() < 2: return "missing authorized path"
+			for point in event.authorized_path_points2:
+				if not point is Vector3i: return "noncanonical path point"
 		var duration = event.get("presentation_duration_seconds")
 		if not (duration is float or duration is int) or not is_finite(float(duration)) or duration <= 0: return "invalid Fall duration"
 	return ""
+
+func _trajectory_valid(value: Variant) -> bool:
+	# Shape gate only. Curve geometry, traversal and continuous Safety remain Owner01.
+	if not value is Dictionary or not value.is_read_only() or value.size() != 3: return false
+	if not value.get("trajectory_version") is String or value.trajectory_version != "pfall.departure_cubic.v1": return false
+	for field in ["departure_points2", "descent_control_points2"]:
+		var points = value.get(field)
+		if not points is Array or not points.is_read_only() or points.size() != (2 if field == "departure_points2" else 4): return false
+		for point in points:
+			if not point is Vector3i: return false
+			for component in [point.x, point.y, point.z]:
+				if component < -1000000 or component > 1000000: return false
+	return true
 
 func _safe_verdict(event: Dictionary) -> bool:
 	var verdict = event.get("safety_verdict")
