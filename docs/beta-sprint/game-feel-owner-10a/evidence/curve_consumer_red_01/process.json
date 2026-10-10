@@ -1,0 +1,138 @@
+{
+  "head": "07bb0afea4b327ca2d3c0bbc5d84c97204e39e7b",
+  "dirty": [
+    " M tests/beta_sprint/game_feel_owner_10a/fixture.gd",
+    " M tests/beta_sprint/game_feel_owner_10a/run.ps1",
+    "?? docs/beta-sprint/game-feel-owner-10a/evidence/curve_consumer_red_01/",
+    "?? tests/beta_sprint/game_feel_owner_10a/curve_unit.gd",
+    "?? tests/beta_sprint/game_feel_owner_10a/trajectory_sampler_double.gd"
+  ],
+  "case": "curve_consumer_red_01",
+  "mode": "curve_unit",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "01 DTO",
+    "Safety attestation",
+    "native commit",
+    "01 trajectory sampler (double)"
+  ],
+  "sources": [
+    {
+      "sha256": "d228a4230a6e8e2c72bde07af030e623bd3363fecaf17010621e54bb25b093f3",
+      "path": "foundation/orientation/discrete_orientation.gd"
+    },
+    {
+      "sha256": "f35216dbdcccaac60ffcfc3e7177aad9aff2fc9777d6b4ac21483f99c2222e14",
+      "path": "game/feel/animation/fall_landing/fall_motion.gd"
+    },
+    {
+      "sha256": "a790b10ae7b5668e3f009a46b3d3d2516f3d2b9508002060b91c99f6cc649b70",
+      "path": "game/feel/animation/fall_landing/fall_motion.gd.uid"
+    },
+    {
+      "sha256": "7b8f2e8e39e05a2046dae83b36cdccdcc7c365e0e1f12cd4a01819b56a6da0b6",
+      "path": "game/feel/animation/fall_landing/fall_visual_state.gd"
+    },
+    {
+      "sha256": "782b143eb4c19d0de4f607b3e843c5e182353911501878f047309a3885823ee9",
+      "path": "game/feel/animation/fall_landing/fall_visual_state.gd.uid"
+    },
+    {
+      "sha256": "3d5773f7a5a1c12ac3c98c87027d3da04ad16b6655a8a0d657aee7ce82e9fd80",
+      "path": "game/feel/animation/fall_landing/landing_motion.gd"
+    },
+    {
+      "sha256": "ff1221de65442a9943d579c784f230bca1a3f635100900497c1ddb026d8b80f5",
+      "path": "game/feel/animation/fall_landing/landing_motion.gd.uid"
+    },
+    {
+      "sha256": "6cacbb2b7e0b78acf61c8d9e4fa06b26a0e6914745c8d2a0361d64dabb68cdc1",
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd"
+    },
+    {
+      "sha256": "507b1eac12ae5d54e79e3f53a44ac0c469cca6d5143805147d7fdd896817054d",
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd.uid"
+    },
+    {
+      "sha256": "74989a81fc2116938c7bc47dc2ff87e5aaeebca3e03c4c36aa5ecf1714b0da87",
+      "path": "tests/beta_sprint/game_feel_owner_10a/curve_unit.gd"
+    },
+    {
+      "sha256": "203305a35c0502f95a5e85bccd3414f4a488b0cbc7d392ef309a77bf49474e85",
+      "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd"
+    },
+    {
+      "sha256": "f053418410686f1347ef68c5392ff2023340fbb1b79b99f390ab20b47f50daca",
+      "path": "tests/beta_sprint/game_feel_owner_10a/fixture.gd.uid"
+    },
+    {
+      "sha256": "dfb3a92472e454033eddde3156e59e3d52d1ff19c1d4a90aac9268224b7a1553",
+      "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd"
+    },
+    {
+      "sha256": "9e58fe40b935ac0ec15c11c072aa6c6f274dd463af94a2583cfab2fc74ac278e",
+      "path": "tests/beta_sprint/game_feel_owner_10a/preview_stage.gd.uid"
+    },
+    {
+      "sha256": "89d0eba5aae1f7f130ed6bbf44ec1635d108a347a6059e38c82f6d4a04083407",
+      "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd"
+    },
+    {
+      "sha256": "df9eec9a499bed24af698e356fabb9d9f214f29ffe0f29f3887ebd32a75b9451",
+      "path": "tests/beta_sprint/game_feel_owner_10a/preview.gd.uid"
+    },
+    {
+      "sha256": "b2cb0f393759016501b5034be7a556020b030a6c130ed8d8311fa574c1649de7",
+      "path": "tests/beta_sprint/game_feel_owner_10a/run.ps1"
+    },
+    {
+      "sha256": "0c4d71dad5af0930d21623c1dd49c6ab37d119b290cb132eddcfa617734a3c64",
+      "path": "tests/beta_sprint/game_feel_owner_10a/trajectory_sampler_double.gd"
+    },
+    {
+      "sha256": "c6c1ceab7906a8468fb79ed20c8fad8084eb25a8afe34767e199c1fd2861e6b8",
+      "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd"
+    },
+    {
+      "sha256": "a4fedbb77aa7ada931787bc993ddab1cdb7db1e6f8e362a8ec20295d53bf224f",
+      "path": "tests/beta_sprint/game_feel_owner_10a/unit.gd.uid"
+    }
+  ],
+  "project_name": "PFALL_10A_dc284f8b52e748bdb1494e0e3154d4c3",
+  "arguments": [
+    "--path",
+    "\"E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\curve_consumer_red_01\\project\"",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_10a/curve_unit.gd",
+    "--headless",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\docs\\beta-sprint\\game-feel-owner-10a\\evidence\\curve_consumer_red_01"
+  ],
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "started": "2026-10-10T14:23:15.1639632+08:00",
+  "status": "FAILED",
+  "dependencies": [
+    {
+      "source": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\tests\\beta_sprint\\game_feel_owner_10a\\trajectory_sampler_double.gd",
+      "destination": "foundation/game_feel/trajectory_profile.gd",
+      "sha256": "0c4d71dad5af0930d21623c1dd49c6ab37d119b290cb132eddcfa617734a3c64",
+      "kind": "TEST_DOUBLE"
+    }
+  ],
+  "pid": 5196,
+  "exit_code": 1,
+  "finished": "2026-10-10T14:23:15.4688895+08:00",
+  "stderr": "FAIL 10A: event.v2 curve begin, height sign=false\r\nFAIL 10A: event.v2 curve begin, height sign=true\r\n",
+  "source_changes": [],
+  "copied_source_changes": [],
+  "dependency_source_changes": [],
+  "dependency_copy_changes": [],
+  "checks": 2,
+  "failures": [
+    "event.v2 curve begin, height sign=false",
+    "event.v2 curve begin, height sign=true"
+  ],
+  "user_data_dir": "C:/Users/QCYM/AppData/Roaming/PFALL_10A_dc284f8b52e748bdb1494e0e3154d4c3",
+  "profile_isolated": true
+}

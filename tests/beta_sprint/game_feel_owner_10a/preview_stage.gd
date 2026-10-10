@@ -5,6 +5,7 @@ const Fall = preload("res://game/feel/animation/fall_landing/fall_motion.gd")
 const Landing = preload("res://game/feel/animation/fall_landing/landing_motion.gd")
 const Orientation = preload("res://foundation/orientation/discrete_orientation.gd")
 var higher := false
+var curved := false
 var event: Dictionary
 var motion = Fall.new()
 var landing = Landing.new()
@@ -24,7 +25,7 @@ var sample_state: Dictionary = {}
 var authoritative_basis := Basis.IDENTITY
 
 func _ready() -> void:
-	event = Fixture.event(higher)
+	event = Fixture.curve_event(higher) if curved else Fixture.event(higher)
 	var columns: Array = Orientation.columns(event.source_pose.orientation)
 	authoritative_basis = Basis(Vector3(columns[0]), Vector3(columns[1]), Vector3(columns[2]))
 	visual.name = "PrivateVisualRoot"
@@ -42,7 +43,7 @@ func _ready() -> void:
 		var material := StandardMaterial3D.new()
 		material.albedo_color = Color("93b7b0") if i == 0 else Color("b2ad91")
 		platform.material_override = material
-		platform.position = Vector3(event.authorized_path_points2[i]) * 0.5 - Vector3.UP
+		platform.position = endpoint(i == -1) - Vector3.UP
 		add_child(platform)
 		var text := Label3D.new()
 		text.text = "SOURCE A" if i == 0 else "TARGET B"
@@ -74,7 +75,15 @@ func _ready() -> void:
 	restore_source()
 
 func set_quadrant(quadrant: int) -> void:
-	var focus := (Vector3(event.authorized_path_points2[0]) + Vector3(event.authorized_path_points2[-1])) * 0.25
+	var focus := (endpoint(false) + endpoint(true)) * 0.5
+	if curved:
+		var rights := [Vector3(1,0,-1), Vector3(1,0,1), Vector3(-1,0,1), Vector3(-1,0,-1)]
+		var downs := [Vector3(2,-3,2), Vector3(-2,-3,2), Vector3(-2,-3,-2), Vector3(2,-3,-2)]
+		var right: Vector3 = rights[quadrant].normalized()
+		var up: Vector3 = -downs[quadrant].normalized()
+		var view := Basis(right, up, right.cross(up))
+		camera.transform = Transform3D(view, focus + view.z * 20.0)
+		return
 	var yaw := PI / 4.0 - float(quadrant) * PI / 2.0
 	camera.position = focus + Vector3(sin(yaw), 0.8 / sqrt(2.0), cos(yaw)) * 20.0
 	camera.look_at(focus)
@@ -95,7 +104,7 @@ func _process(delta: float) -> void:
 		if not is_committed:
 			elapsed += delta
 			sample_state = motion.sample(elapsed)
-			apply(sample_state, Vector3(event.authorized_path_points2[0]) * 0.5)
+			apply(sample_state, endpoint(false))
 			if sample_state.motion_done:
 				# EXPLICIT NATIVE-COMMIT DOUBLE. No legal Fall or real commit claimed.
 				is_committed = true
@@ -104,7 +113,7 @@ func _process(delta: float) -> void:
 		else:
 			landing_elapsed += delta
 			sample_state = landing.sample(landing_elapsed)
-			apply(sample_state, Vector3(event.authorized_path_points2[-1]) * 0.5)
+			apply(sample_state, endpoint(true))
 			if sample_state.motion_done:
 				settled = true
 				running = false
@@ -122,7 +131,12 @@ func restore_source() -> void:
 	motion.cancel(event.presentation_identity)
 	landing.cancel(event.presentation_identity)
 	sample_state = {"phase": "CANCELLED_UNIT"}
-	visual.transform = Transform3D(authoritative_basis, Vector3(event.authorized_path_points2[0]) * 0.5)
+	visual.transform = Transform3D(authoritative_basis, endpoint(false))
+
+func endpoint(target: bool) -> Vector3:
+	if curved:
+		return Vector3(event.authorized_trajectory.descent_control_points2[-1] if target else event.authorized_trajectory.departure_points2[0]) * 0.5
+	return Vector3(event.authorized_path_points2[-1] if target else event.authorized_path_points2[0]) * 0.5
 
 func _input(input: InputEvent) -> void:
 	if input is InputEventKey and input.pressed and not input.echo:
