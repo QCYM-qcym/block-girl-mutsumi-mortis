@@ -1,0 +1,809 @@
+{
+	"authority": "real Main/Shell/AudioDirector/native Input/Runtime/Presenter; no manual completion",
+	"checks": 36,
+	"display": "Windows",
+	"doubles": [],
+	"failures": [],
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"after_reset": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 2,
+					"fall_whoosh": 2,
+					"landing_impact": 1
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 1.84598636627197,
+					"menu": 0.0,
+					"surface": 1.84598636627197
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			},
+			"before": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 0.0348299331963062,
+					"menu": 0.0,
+					"surface": 0.0348299331963062
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			},
+			"cues": [
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_start",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 3297538
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_whoosh",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 3297560
+				},
+				{
+					"actor_origin": "(-3.0, 1.0, 4.0)",
+					"cue": "landing_impact",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 4027381
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_start",
+					"identity": {
+						"attempt_id": 2,
+						"generation": 2,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 4575838
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_whoosh",
+					"identity": {
+						"attempt_id": 2,
+						"generation": 2,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 4575859
+				}
+			],
+			"identity": {
+				"attempt_id": 1,
+				"generation": 1,
+				"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+				"session_id": "21a6d96e0e248e99a0033d810c902a64"
+			},
+			"landed": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 1,
+					"fall_whoosh": 1,
+					"landing_impact": 1
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner",
+					"sfx:landing_impact"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 1.67473924160004,
+					"menu": 0.0,
+					"surface": 1.67473924160004
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			},
+			"map": "a",
+			"paused_players": [
+				{
+					"name": "music_surface",
+					"playing": false,
+					"stream_paused": true
+				},
+				{
+					"name": "music_inner",
+					"playing": false,
+					"stream_paused": true
+				},
+				{
+					"name": "sfx_fall_start",
+					"playing": false,
+					"stream_paused": true
+				},
+				{
+					"name": "sfx_fall_whoosh",
+					"playing": false,
+					"stream_paused": true
+				}
+			],
+			"preview_gains": {
+				"Ambience": -18.9357490539551,
+				"Master": -9.11863899230957,
+				"SFX": -11.1927461624146
+			},
+			"started": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 1,
+					"fall_whoosh": 1
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner",
+					"sfx:fall_start",
+					"sfx:fall_whoosh"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 0.769160985946655,
+					"menu": 0.0,
+					"surface": 0.769160985946655
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			}
+		},
+		{
+			"after_reset": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 4,
+					"fall_whoosh": 4,
+					"landing_impact": 2
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 1.77342402935028,
+					"menu": 0.0,
+					"surface": 1.77342402935028
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			},
+			"before": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 2,
+					"fall_whoosh": 2,
+					"landing_impact": 1
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 0.0116099771112204,
+					"menu": 0.0,
+					"surface": 0.0116099771112204
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			},
+			"cues": [
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_start",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 3297538
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_whoosh",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 3297560
+				},
+				{
+					"actor_origin": "(-3.0, 1.0, 4.0)",
+					"cue": "landing_impact",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 4027381
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_start",
+					"identity": {
+						"attempt_id": 2,
+						"generation": 2,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 4575838
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_whoosh",
+					"identity": {
+						"attempt_id": 2,
+						"generation": 2,
+						"level_run_id": "3b11f3db8a03a8879ef2c7eeceb2bd21",
+						"session_id": "21a6d96e0e248e99a0033d810c902a64"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 4575859
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_start",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 2,
+						"level_run_id": "8cf43ed60fd55ae5571ad72c9687d1f6",
+						"session_id": "3e0b60db0e7d9570715c1bd90c390dee"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 5491610
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_whoosh",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 2,
+						"level_run_id": "8cf43ed60fd55ae5571ad72c9687d1f6",
+						"session_id": "3e0b60db0e7d9570715c1bd90c390dee"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 5491630
+				},
+				{
+					"actor_origin": "(-3.0, 5.0, 4.0)",
+					"cue": "landing_impact",
+					"identity": {
+						"attempt_id": 1,
+						"generation": 2,
+						"level_run_id": "8cf43ed60fd55ae5571ad72c9687d1f6",
+						"session_id": "3e0b60db0e7d9570715c1bd90c390dee"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 6203992
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_start",
+					"identity": {
+						"attempt_id": 2,
+						"generation": 3,
+						"level_run_id": "8cf43ed60fd55ae5571ad72c9687d1f6",
+						"session_id": "3e0b60db0e7d9570715c1bd90c390dee"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 6705710
+				},
+				{
+					"actor_origin": "(0.0, 3.0, 0.0)",
+					"cue": "fall_whoosh",
+					"identity": {
+						"attempt_id": 2,
+						"generation": 3,
+						"level_run_id": "8cf43ed60fd55ae5571ad72c9687d1f6",
+						"session_id": "3e0b60db0e7d9570715c1bd90c390dee"
+					},
+					"runtime_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"time_usec": 6705727
+				}
+			],
+			"identity": {
+				"attempt_id": 1,
+				"generation": 2,
+				"level_run_id": "8cf43ed60fd55ae5571ad72c9687d1f6",
+				"session_id": "3e0b60db0e7d9570715c1bd90c390dee"
+			},
+			"landed": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 3,
+					"fall_whoosh": 3,
+					"landing_impact": 2
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner",
+					"sfx:landing_impact"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 1.64281177520752,
+					"menu": 0.0,
+					"surface": 1.64281177520752
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			},
+			"map": "b",
+			"paused_players": [
+				{
+					"name": "music_surface",
+					"playing": false,
+					"stream_paused": true
+				},
+				{
+					"name": "music_inner",
+					"playing": false,
+					"stream_paused": true
+				},
+				{
+					"name": "sfx_fall_start",
+					"playing": false,
+					"stream_paused": true
+				},
+				{
+					"name": "sfx_fall_whoosh",
+					"playing": false,
+					"stream_paused": true
+				}
+			],
+			"preview_gains": {
+				"Ambience": -18.9357490539551,
+				"Master": -9.11863899230957,
+				"SFX": -11.1927461624146
+			},
+			"started": {
+				"bus_gains": {
+					"Ambience": -12.0,
+					"Master": 0.0,
+					"SFX": -6.0
+				},
+				"context": "exploration",
+				"cue_counts": {
+					"fall_start": 3,
+					"fall_whoosh": 3,
+					"landing_impact": 1
+				},
+				"issues": [],
+				"master_muted": false,
+				"paused": false,
+				"playing": [
+					"music:surface",
+					"music:inner",
+					"sfx:fall_start",
+					"sfx:fall_whoosh"
+				],
+				"positions": {
+					"complete": 0.0,
+					"discovery": 0.0,
+					"inner": 0.748843550682068,
+					"menu": 0.0,
+					"surface": 0.748843550682068
+				},
+				"target_world": 0,
+				"voice_count": 18,
+				"world_blend": 0.0
+			}
+		}
+	],
+	"timing_scope": "cue callback at actual actor contact center; hardware A/V latency and undeclared sync tolerance NOT_ASSESSED; Edge not integrated",
+	"user_data_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/forward-drop-01/evidence/audio_green01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

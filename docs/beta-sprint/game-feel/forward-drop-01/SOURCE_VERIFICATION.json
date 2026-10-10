@@ -1,0 +1,139 @@
+{
+  "status": "CORE_GRAPHICAL_PASS_PACKAGE_AND_QUALITY_PENDING",
+  "production_candidate": "c89a87584d8d5db0916d4b0e516c449860063223",
+  "production": [
+    {
+      "path": "game/feel/animation/fall_landing/fall_motion.gd",
+      "sha256": "ab7b46d282c5c8952866b1d3deb4a663c6f967afdea9e65309ca8c581098001b"
+    },
+    {
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd",
+      "sha256": "e8f15370b962ec84ff8d449a1ae39f191dd1b20702383c08f0347367c4e33add"
+    }
+  ],
+  "graphical_checks": 497,
+  "cold_checks": 27,
+  "formal_matched_steps": 8,
+  "cases": [
+    {
+      "case": "natural_green01",
+      "integration_head": "c89a87584d8d5db0916d4b0e516c449860063223",
+      "checks": 71,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "process_sha256": "a70ce7da624fcf72ceeb2f312d2e5c7d2cd136b7372c28720f8ca5b1b5157a14",
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/natural_green01/process.json"
+    },
+    {
+      "case": "lifecycle_green01",
+      "integration_head": "c89a87584d8d5db0916d4b0e516c449860063223",
+      "checks": 59,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "process_sha256": "d7e42ad613bb48cd01a6fa81bf09b70d42cd943065a02248fdf76b06e7927220",
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/lifecycle_green01/process.json"
+    },
+    {
+      "case": "formal_green01",
+      "integration_head": "c89a87584d8d5db0916d4b0e516c449860063223",
+      "checks": 101,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "process_sha256": "385d7b09cce335897422b1f6f0ad7cb23ee62b39cba24c17b64292947764ccf9",
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/formal_green01/process.json"
+    },
+    {
+      "case": "matrix_exclusive01",
+      "integration_head": "c89a87584d8d5db0916d4b0e516c449860063223",
+      "checks": 230,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "process_sha256": "6dc3a0af1df5e03f3cc6afa957e713c6644b862136126314cf2852b1d4360971",
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/matrix_exclusive01/process.json"
+    },
+    {
+      "case": "audio_green01",
+      "integration_head": "c89a87584d8d5db0916d4b0e516c449860063223",
+      "checks": 36,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "process_sha256": "aefdaa6a0f6e4e7c4bacd97b4ed2cea86b1f9da72087a985ac326661220dc4a9",
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/audio_green01/process.json"
+    }
+  ],
+  "source_cold": [
+    {
+      "phase": "seed",
+      "pid": 30448,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-foundation-4-integration",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/forward-drop-01/evidence/cold_source01",
+        "--phase=seed",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 18,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "cedd0081d75446f4cc7bf683f864b2f29272d98755d8824be577ebffdfb3517b"
+    },
+    {
+      "phase": "restore",
+      "pid": 26096,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-foundation-4-integration",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/forward-drop-01/evidence/cold_source01",
+        "--phase=restore",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 9,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "1959f1194cedfd653016a18728903464379cabbdfdf68932a77df0186723cbcf"
+    }
+  ],
+  "duplicates_excluded": [
+    "matrix_green1280"
+  ],
+  "subjective_human_feel": "NOT_RUN",
+  "parameter_acceleration_not_universal_world_or_screen_acceleration": true
+}
