@@ -1,0 +1,16 @@
+FAIL: known v2 curve Fall reuses the passive existing status
+FAIL: v1 same-identity completion cannot clear active v2 status
+FAIL: v1 same-identity cancellation cannot clear active v2 status
+FAIL: v2 stale attempt completion cannot clear active curve status
+FAIL: v2 stale attempt cancellation cannot clear active curve status
+FAIL: next v2 Fall starts after completion
+SCRIPT ERROR: Invalid operands 'Dictionary' and 'int' in operator '!='.
+   at: consume_event (res://game/feel/ui/game_feel_ui.gd:271)
+   GDScript backtrace (most recent call first):
+       [0] consume_event (res://game/feel/ui/game_feel_ui.gd:271)
+       [1] curve_event_contract_case (res://tests/beta_sprint/game_feel_owner_07/test_ui.gd:354)
+       [2] run (res://tests/beta_sprint/game_feel_owner_07/test_ui.gd:66)
+       [3] settings_case (res://tests/beta_sprint/game_feel_owner_07/test_ui.gd:155)
+       [4] settle (res://tests/beta_sprint/game_feel_owner_07/test_ui.gd:37)
+FAIL: unsupported high-ID envelopes do not suppress a subsequent valid v2 Fall
+FAIL: old-run high-ID event cannot poison new-run v2 deduplication

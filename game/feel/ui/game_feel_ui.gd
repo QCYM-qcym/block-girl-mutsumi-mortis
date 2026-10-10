@@ -34,6 +34,7 @@ var _session := ""
 var _run := ""
 var _last_event := -1
 var _active_identity: Dictionary = {}
+var _active_contract_version := ""
 var _hint := ""
 var _key_hint := ""
 var _mechanism_hint := false
@@ -262,13 +263,14 @@ func bind_context(session_id: String, level_run_id: String) -> void:
 
 func _clear_feedback() -> void:
 	_active_identity = {}
+	_active_contract_version = ""
 	_mechanism_hint = false
 	feedback_panel.hide()
 	status_label.text = ""
 
 func consume_event(event: Dictionary) -> void:
 	# Only the versioned authoritative event port can start feedback. No geometry or key inference.
-	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1": return
+	if not _supported_event(event): return
 	if _session.is_empty() or event.get("session_id") != _session or event.get("level_run_id") != _run: return
 	if not event.get("event_id") is int or event.event_id <= _last_event: return
 	_last_event = event.event_id
@@ -279,13 +281,14 @@ func consume_event(event: Dictionary) -> void:
 		_clear_feedback()
 		return
 	if phase in ["COMMITTED","INTERRUPTED"]:
-		if identity is Dictionary and not _active_identity.is_empty() and identity == _active_identity: _clear_feedback()
+		if identity is Dictionary and not _active_identity.is_empty() and identity == _active_identity and event.contract_version == _active_contract_version: _clear_feedback()
 		return
 	if semantic == "PERSPECTIVE_FALL_APPLIED" and phase == "STARTED" and event.get("reason_category") == "NONE":
 		if not identity is Dictionary or not _valid_identity(identity): return
 		var result: Variant = event.get("result")
 		if not result is Dictionary or result.get("status") != 0 or not _has_safe_verdict(event.get("safety_verdict")) or not event.get("target_pose") is Dictionary: return
 		_active_identity = identity.duplicate(true)
+		_active_contract_version = event.contract_version
 		_mechanism_hint = false
 		status_label.text = "错视坠落中 · 操作暂锁"
 		_update_details()
@@ -297,6 +300,24 @@ func consume_event(event: Dictionary) -> void:
 			_update_details()
 			feedback_panel.show()
 	# Typed EDGE, Busy, invalid/safety/unknown rejections never become blocked-road popups.
+
+func _supported_event(event: Dictionary) -> bool:
+	var schema: Variant = event.get("schema_version")
+	var contract: Variant = event.get("contract_version")
+	if not schema is int or not contract is String: return false
+	if schema == 1 and contract == "game_feel.event.v1": return true
+	if schema != 2 or contract != "game_feel.event.v2": return false
+	var semantic: Variant = event.get("semantic")
+	var phase: Variant = event.get("phase")
+	if not semantic is String or not phase is String: return false
+	if semantic == "ANIMATION_INTERRUPTED": return phase == "INTERRUPTED"
+	if semantic != "PERSPECTIVE_FALL_APPLIED" or phase not in ["STARTED","COMMITTED"]: return false
+	if phase == "COMMITTED": return true
+	# Read only the known trajectory envelope;01 owns its geometry, validity and Safety proof.
+	var trajectory: Variant = event.get("authorized_trajectory")
+	if not trajectory is Dictionary: return false
+	var version: Variant = trajectory.get("trajectory_version")
+	return version is String and version == "pfall.departure_cubic.v1"
 
 func _valid_identity(identity: Dictionary) -> bool:
 	return identity.size() == 4 and identity.get("session_id") == _session and identity.get("level_run_id") == _run and identity.get("generation") is int and identity.get("attempt_id") is int
