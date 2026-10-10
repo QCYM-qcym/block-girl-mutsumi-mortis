@@ -1,0 +1,12 @@
+# SDD ledger — plan: docs/beta-sprint/game-feel-owner-03/yellow-target-01/PLAN.md
+
+BASE: 01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c, test/game-feel-quality, clean.
+
+Pre-flight: Task1 probe feeds Task2 gate and Task3 report; dependency availability cannot issue Real PASS. Task2 mode0/mode1 use the same selected original FULL_GRAPH witness and unchanged public return contracts.
+
+Ruling: Store plan/ledger in Owner03 docs and use native Windows commands rather than skill-default paths/bash scratch — required Owner allowlist — cost if wrong: process artifact relocation only.
+Ruling: Initial count-only component grouping is retained as preparation index; subsequent explicit user list now controls MATRIX_12 — no receipt reused and no PASS manufactured — cost if wrong: case regrouping only, all Real results still pending.
+
+Task1: preparation complete; six classifier Unit tests GREEN after missing-module RED. Actual probe yt_dependency_01: three availability checks, PENDING/exit3, stderr0, no failures/doubles/drift. Actual new sampler absent and current Map opt-in schema2. New combined candidate not supplied.
+Task2: preparation complete; public-consumer core/formal/lifecycle/native-held-input scripts and six official UID sidecars exist. yt_prepare_checks_02: six actual Godot parse checks exit0/stderr0 plus Unit6 GREEN. New-profile behavioral RED/GREEN is dependency PENDING, not complete or silently skipped.
+Task3: final preparation review pending. Existing 94 matrix and original source evidence unchanged.

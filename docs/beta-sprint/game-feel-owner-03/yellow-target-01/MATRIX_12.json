@@ -1,0 +1,126 @@
+{
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "stage": "TEST_PREPARATION",
+  "preparation_base": "01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c",
+  "combined_candidate": null,
+  "contract_mismatch": "NONE",
+  "contract_registration": "ec826753435458abc41cc365e4b57dba27767fbd",
+  "contract_blob_sha256": "4e230017b25b047940c8b6b28d0253e35836c67833ce6698005ff63e24d77a3f",
+  "contract_physical_sha256": "4e230017b25b047940c8b6b28d0253e35836c67833ce6698005ff63e24d77a3f",
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "PENDING": 12
+  },
+  "cases": [
+    {
+      "id": "YT01",
+      "requirement": "Forward departure and curved Fall lands on yellow TOP",
+      "status": "PENDING",
+      "pending": "PENDING: Owner00/10A actual six-phase A/B render and per-frame capture, canonical new trajectory and natural contact",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT02",
+      "requirement": "Formal Target Face and FaceAnchor",
+      "status": "PENDING",
+      "pending": "PENDING: actual 09 schema3 target/TOP; official Spatial unique anchor, final actor center = anchor.position2 + normal in doubled units",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT03",
+      "requirement": "Old blue platform cannot be mistakenly selected",
+      "status": "PENDING",
+      "pending": "PENDING: four actual bodies; blue_reference nonwalkable, target cube is target rather than blue_reference, route and natural actor/platform identity",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT04",
+      "requirement": "A physically lower / B physically higher, both descend on screen",
+      "status": "PENDING",
+      "pending": "PENDING: canonical y=0/8 versus source y=4; actual Safety and new rendered trajectory under EAST1 camera; old linear projection inadmissible",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT05",
+      "requirement": "Fall then U_POS Roll to Goal",
+      "status": "PENDING",
+      "pending": "PENDING: new original FULL_GRAPH two-action witness, validated semantics, logical and formal replay each match two real steps; distinct exit/TOP Goal",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT06",
+      "requirement": "Fall PRESERVE orientation",
+      "status": "PENDING",
+      "pending": "PENDING: source orientation = landed Runtime orientation, actual Fall frames and settled basis, exact cube24 columns",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT07",
+      "requirement": "Reset cancels Fall",
+      "status": "PENDING",
+      "pending": "PENDING: native R during new FALL/LANDING, old completion=0, exactly one cancellation, new generation restores full spawn/key/input, no stale callback contamination",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT08",
+      "requirement": "Held input cannot repeat Fall",
+      "status": "PENDING",
+      "pending": "PENDING: actual new integrated native WASD hold/spam with one original Fall identity and commit, release/recovery; no queued duplicate Fall or synthetic loop",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT09",
+      "requirement": "Illegal Camera rejected",
+      "status": "PENDING",
+      "pending": "PENDING: new Runtime rejection with unchanged full state/key/commit count and formal Camera reason; also retain affected old camera regression",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT10",
+      "requirement": "Existing Perspective Connection regression",
+      "status": "PENDING",
+      "pending": "PENDING: real existing production Pconn test on supplied candidate, focused receipt; old 66-check receipt is baseline only",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT11",
+      "requirement": "Pixel and 3D full StateKey match",
+      "status": "PENDING",
+      "pending": "PENDING: real delivered Pixel/3D consumers on same new level/hash and original actions, full seven-field semantic states/keys; mode0 alone cannot pretend to be Pixel graphical execution",
+      "real_evidence": [],
+      "baseline_reuse": false
+    },
+    {
+      "id": "YT12",
+      "requirement": "Final Visual Pose exactly matches Target",
+      "status": "PENDING",
+      "pending": "PENDING: independent formal anchor/normal and Orientation columns versus actual settled renderer pose, no residual offsets; Fall settled target is distinct from later Roll exit",
+      "real_evidence": [],
+      "baseline_reuse": false
+    }
+  ],
+  "existing_94": {
+    "delivery": "01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c",
+    "counts": {
+      "PASS": 54,
+      "FAIL": 0,
+      "PENDING": 40
+    },
+    "mutated": false
+  },
+  "real_new_profile_runtime": "NOT_RUN_DEPENDENCY_PENDING",
+  "real_new_formal_graphical": "NOT_RUN_DEPENDENCY_PENDING",
+  "owner_handoff": "LOCAL_PREPARATION_ARTIFACT_ONLY",
+  "push": "NOT_RUN"
+}
