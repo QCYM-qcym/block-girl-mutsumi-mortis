@@ -1,6 +1,7 @@
 extends "res://tests/beta_sprint/yellow_target_01/test_audit.gd"
 ## Real runtime, real natural Presenter, support geometry and fresh motion cadence.
 const Profile=preload("res://foundation/game_feel/trajectory_profile.gd")
+const View=preload("res://foundation/game_feel/view_contract.gd")
 
 func image_frame(name:String)->void:
 	await RenderingServer.frame_post_draw
@@ -8,8 +9,8 @@ func image_frame(name:String)->void:
 
 func parameter_at(motion:RefCounted, trajectory:Dictionary, time:float, direction:Vector3)->float:
 	var point:Vector3=motion.sample(time).position
-	# The final cubic tangent has zero forward component. Preserve its exact
-	# endpoint rather than invert float32's flat forward projection there.
+	# Observation uses formal DOWN, strictly monotone on these accepted maps;
+	# it is never a screen-coordinate animation or a permission computation.
 	if point.is_equal_approx(Vector3(trajectory.descent_control_points2[-1])*0.5): return 1.0
 	var low:=0.0
 	var high:=1.0
@@ -34,6 +35,8 @@ func run()->void:
 		check(bridge.bind_runtime(runtime,baked.level).ok,letter+" real registered graphical Presenter")
 		var lab:Node3D=bridge.lab
 		var before:Dictionary=runtime.get_state()
+		var source_basis:Basis=lab.actor.basis
+		var observation:=Vector3(View.DOWN[before.camera_quadrant])
 		var resolved:Dictionary=Geometry.snapshot(baked.level,before)
 		var anchors:Dictionary={}
 		for anchor in resolved.value.anchors: anchors[String(anchor.face_id)]=anchor
@@ -57,18 +60,23 @@ func run()->void:
 		var initial:Dictionary=motion.sample(duration*0.05)
 		var initial_advance:float=(initial.position-source_center).dot(forward)
 		check(initial_advance>0.01,letter+" forward movement starts with initial lean; no stationary anticipation hold")
-		check(initial.rotation_offset.get_angle()>0.005,letter+" initial forward lean is visible during forward motion")
+		check((initial.rotation_offset*normal).dot(forward)>0.005,letter+" initial signed lean is forward, not sideways/backward")
 		var low:=0.0
 		var high:=duration
 		for i in 30:
 			var middle:float=(low+high)*0.5
-			if parameter_at(motion,path,middle,forward)<0.25: low=middle
+			if parameter_at(motion,path,middle,observation)<0.25: low=middle
 			else: high=middle
 		var descend_start:float=(low+high)*0.5
 		var descent_time:=duration-descend_start
-		var early_increment:float=parameter_at(motion,path,descend_start+descent_time*0.35,forward)-parameter_at(motion,path,descend_start+descent_time*0.15,forward)
-		var late_increment:float=parameter_at(motion,path,descend_start+descent_time*0.85,forward)-parameter_at(motion,path,descend_start+descent_time*0.65,forward)
+		var early_increment:float=parameter_at(motion,path,descend_start+descent_time*0.35,observation)-parameter_at(motion,path,descend_start+descent_time*0.15,observation)
+		var late_increment:float=parameter_at(motion,path,descend_start+descent_time*0.85,observation)-parameter_at(motion,path,descend_start+descent_time*0.65,observation)
 		check(late_increment>early_increment*1.2,letter+" descent accelerates along authorized path instead of uniform floating travel")
+		var h:float=duration*0.0001
+		var at_join:Vector3=motion.sample(descend_start).position
+		var join_before:Vector3=(at_join-motion.sample(descend_start-h).position)/h
+		var join_after:Vector3=(motion.sample(descend_start+h).position-at_join)/h
+		check(join_before.length()>0.1 and join_before.normalized().dot(join_after.normalized())>0.999 and absf(join_before.length()-join_after.length())<join_before.length()*0.02,letter+" actual sampler velocity joins continuously with positive forward inertia")
 		var sampled_geometry:=true
 		var pre_edge_plane:=true
 		var continuing:=true
@@ -76,7 +84,7 @@ func run()->void:
 		var cadence:Array=[]
 		for i in range(1,121):
 			var time:float=duration*float(i)/120.0
-			var parameter:=parameter_at(motion,path,time,forward)
+			var parameter:=parameter_at(motion,path,time,observation)
 			var sampled:Dictionary=motion.sample(time)
 			var advance:float=(sampled.position-source_center).dot(forward)
 			var out_of_plane:float=absf((sampled.position-source_center).dot(normal))
@@ -107,14 +115,15 @@ func run()->void:
 			var frame:Dictionary={"phase":view.phase,"elapsed":view.elapsed,"pose":visual_pose(lab.actor.transform),"screen":[screen.x,screen.y],"commits":runtime.get_commit_count(),"statekey":Key.build(baked.level,runtime.get_state()).key,"identity":view.transition_identity}
 			if view.phase=="FALL":
 				var sampled:Dictionary=motion.sample(view.elapsed)
-				var parameter:=parameter_at(motion,path,view.elapsed,forward)
+				var parameter:=parameter_at(motion,path,view.elapsed,observation)
 				var advance:float=(lab.actor.position-source_center).dot(forward)
 				frame.motion_phase=sampled.phase
 				frame.parameter=parameter
 				frame.advance=advance
 				frame.lean=sampled.rotation_offset.get_angle()
+				frame.actual_signed_forward_lean=((lab.actor.basis*source_basis.inverse())*normal).normalized().dot(forward)
 				max_step=maxf(max_step,lab.actor.position.distance_to(previous_position))
-				if advance>0.05 and advance<1.0: forward_lean=forward_lean or frame.lean>0.005
+				if advance>0.05 and advance<1.0: forward_lean=forward_lean or frame.actual_signed_forward_lean>0.005
 				if advance>0.5 and parameter<0.25 and not stages.has("edge"):
 					root.get_texture().get_image().save_png(evidence.path_join(letter+"_02_forward_edge_leave.png"))
 					stages.edge=true
@@ -158,7 +167,7 @@ func run()->void:
 		while lab.presenter.snapshot().phase!="IDLE" and Time.get_ticks_msec()<deadline: await process_frame
 		check(Goal.is_goal(baked.level,runtime.get_state()).is_goal and runtime.get_commit_count()==2,letter+" actual Fall Roll Goal route")
 		check(lab.host_issues.is_empty(),letter+" shared Host no errors")
-		rows.append({"map":letter,"native_identity":started.transition_identity,"source_pose":before.player,"target_pose":landed.player,"source_anchor2":str(source.position2),"target_anchor2":str(target.position2),"forward":v(forward),"support_edge_distance":0.5,"leave_point":v(leave_point),"authorized_trajectory":path,"initial_advance":initial_advance,"descent_start_seconds":descend_start,"early_parameter_increment":early_increment,"late_parameter_increment":late_increment,"cadence":cadence,"samples":frames,"landing_gaps":gaps,"stages":stages,"final_statekey":Key.build(baked.level,landed).key,"goal_statekey":Key.build(baked.level,runtime.get_state()).key})
+		rows.append({"map":letter,"native_identity":started.transition_identity,"source_pose":before.player,"target_pose":landed.player,"source_anchor2":str(source.position2),"target_anchor2":str(target.position2),"forward":v(forward),"support_edge_distance":0.5,"leave_point":v(leave_point),"authorized_trajectory":path,"initial_advance":initial_advance,"descent_start_seconds":descend_start,"early_parameter_increment":early_increment,"late_parameter_increment":late_increment,"join_velocity_before":v(join_before),"join_velocity_after":v(join_after),"cadence":cadence,"samples":frames,"landing_gaps":gaps,"stages":stages,"final_statekey":Key.build(baked.level,landed).key,"goal_statekey":Key.build(baked.level,runtime.get_state()).key})
 		bridge.free()
 		await process_frame
 	FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE).store_string(JSON.stringify({"task":"PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01","checks":checks,"failures":failures,"doubles":[],"rows":rows,"viewport":[root.size.x,root.size.y],"display":DisplayServer.get_name(),"renderer":RenderingServer.get_current_rendering_method(),"user_data_dir":OS.get_user_data_dir(),"authority":"Real public Baker/Runtime/registered natural Presenter; native MOVE and once-only COMMITTED. Dense pure sampler probes observe the accepted motion without changing clock or authority. Per-frame real mesh/contact and six renderer screenshots per map."},"\t"))
