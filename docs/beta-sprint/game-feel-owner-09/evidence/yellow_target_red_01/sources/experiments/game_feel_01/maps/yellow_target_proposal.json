@@ -1,0 +1,87 @@
+{
+  "status": "DESIGN_CANDIDATE_NOT_ACTIVATED",
+  "integration_observed": "264b0c4615c4080457c829a824ac2948e8bb7158",
+  "source_face_id": "source/TOP",
+  "target_face_id": "target/TOP",
+  "goal_face_id": "exit/TOP",
+  "camera_quadrant": 1,
+  "source_edge": 2,
+  "orientation_policy": "PRESERVE",
+  "curve_profile": "PENDING_OWNER01_CONTRACT",
+  "maps": {
+    "a": {
+      "source_center2": [
+        0,
+        4,
+        0
+      ],
+      "target_center2": [
+        -6,
+        0,
+        8
+      ],
+      "target_anchor2": [
+        -6,
+        1,
+        8
+      ],
+      "target_actor_center2": [
+        -6,
+        2,
+        8
+      ],
+      "exit_center2": [
+        -4,
+        0,
+        8
+      ],
+      "reference_cube_id": "blue_reference",
+      "reference_center2": [
+        -8,
+        0,
+        8
+      ],
+      "reference_walkable": false,
+      "reference_visible": true,
+      "exit_visible": true,
+      "real_height_delta": -2
+    },
+    "b": {
+      "source_center2": [
+        0,
+        4,
+        0
+      ],
+      "target_center2": [
+        -6,
+        8,
+        8
+      ],
+      "target_anchor2": [
+        -6,
+        9,
+        8
+      ],
+      "target_actor_center2": [
+        -6,
+        10,
+        8
+      ],
+      "exit_center2": [
+        -4,
+        8,
+        8
+      ],
+      "reference_cube_id": "blue_reference",
+      "reference_center2": [
+        -8,
+        8,
+        8
+      ],
+      "reference_walkable": false,
+      "reference_visible": true,
+      "exit_visible": true,
+      "real_height_delta": 2
+    }
+  }
+}
