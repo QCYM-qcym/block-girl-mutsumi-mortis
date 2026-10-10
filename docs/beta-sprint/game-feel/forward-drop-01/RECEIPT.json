@@ -1,0 +1,229 @@
+{
+  "task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01",
+  "status": "AUTOMATED_FOCUSED_PASS_QA_HANDOFF_READY",
+  "integration_commit": "fe370ad832bb62cd31a6d22909ce1a5bd1fe1311",
+  "build_source_commit": "5d42600c29760a8082edf2a94754252772352846",
+  "animation_commit": "3b60de04f4c14e2d6576550acbf968e7c4b0be51",
+  "animation_evidence_commit": "5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a",
+  "quality_delivery": "fd66bfa08099a0bdc7230b2399ee74766ceff3e2",
+  "runtime_audit": "READ_ONLY_704_PASS_NO_PRODUCTION_CHANGE",
+  "map_audit_commit": "12a16483c56557aa794a7c1b7f52b2b0a348236f",
+  "map_target": "ORIGINAL_YELLOW_TARGET_TOP_UNCHANGED",
+  "forward_advance": "PASS",
+  "edge_leave": "PASS",
+  "descend": "PASS_QUANTITATIVE_CONTINUOUS_DIRECTED_PATH",
+  "land_on_yellow_top": "PASS",
+  "wrong_blue_target": "REJECTED_CURRENT_AUTHORED_MAPS",
+  "landing_feel": "PASS_COMPRESSION_REBOUND_STABILITY",
+  "subjective_human_feel": "NOT_RUN",
+  "orientation": "PASS",
+  "statekey": "MATCH",
+  "single_commit": "PASS",
+  "fall_roll_goal": "PASS",
+  "reset_held_input_illegal_camera": "PASS",
+  "ten_case_matrix": {
+    "PASS": 10,
+    "FAIL": 0,
+    "PENDING": 0
+  },
+  "unit_checks": 13222,
+  "unit_doubles": [
+    "01 DTO",
+    "Safety attestation",
+    "native commit"
+  ],
+  "source_checks": 524,
+  "source_graphical_matched_steps": 8,
+  "independent03_checks": 2761,
+  "independent03_graphical_matched_steps": 8,
+  "independent03_lifecycle": {
+    "cases": 18,
+    "cancelled_steps": 18,
+    "late_completions": 0,
+    "fresh_matched_steps": 36
+  },
+  "package_checks": 430,
+  "package_graphical_matched_steps": 8,
+  "real_doubles": [],
+  "accepted_real_failures": [],
+  "new_confirmed_p0_p1": 0,
+  "build": "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01",
+  "build_kind": "SOURCE_PLAYABLE_REQUIRES_GODOT",
+  "play_script": "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01\\play.ps1",
+  "zip_sha256": "01c23e309f4469c0985fa9884e866f84180b15a7c4db819aef281aa66c3766d9",
+  "visual_evidence": "E:\\godot\\worktrees\\block-girl-foundation-4-integration\\docs\\beta-sprint\\game-feel\\forward-drop-01\\evidence\\package_natural01",
+  "visual_frames": 12,
+  "natural_metrics": [
+    {
+      "map": "a",
+      "source_anchor2": "(0, 5, 0)",
+      "target_anchor2": "(-6, 1, 8)",
+      "source_pose": {
+        "location": {
+          "cube_id": "source",
+          "face": 4,
+          "layer": 0
+        },
+        "orientation": 0
+      },
+      "leave_point": [
+        -1.0,
+        3.0,
+        0.0
+      ],
+      "target_pose": {
+        "location": {
+          "cube_id": "target",
+          "face": 4,
+          "layer": 0
+        },
+        "orientation": 0
+      },
+      "support_edge_distance": 0.5,
+      "initial_advance": 0.0190649591386318,
+      "descent_start_seconds": 0.39000005023554,
+      "early_parameter_increment": 0.0937500009313226,
+      "late_parameter_increment": 0.206249948590994,
+      "join_velocity_before": [
+        -3.57429194450378,
+        0.0,
+        7.15309811383236e-10
+      ],
+      "join_velocity_after": [
+        -3.5703182220459,
+        0.0,
+        0.00102382234763354
+      ],
+      "landing_gaps": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.96046447753906e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -5.96046447753906e-08,
+        -5.96046447753906e-08,
+        0.0,
+        5.96046447753906e-08,
+        5.96046447753906e-08,
+        -5.96046447753906e-08,
+        0.0,
+        -2.98023223876953e-08,
+        0.0
+      ],
+      "stages": {
+        "contact": true,
+        "edge": true,
+        "middle": true,
+        "precontact": true,
+        "source": true,
+        "stable": true
+      }
+    },
+    {
+      "map": "b",
+      "source_anchor2": "(0, 5, 0)",
+      "target_anchor2": "(-6, 9, 8)",
+      "source_pose": {
+        "location": {
+          "cube_id": "source",
+          "face": 4,
+          "layer": 0
+        },
+        "orientation": 0
+      },
+      "leave_point": [
+        -1.0,
+        3.0,
+        0.0
+      ],
+      "target_pose": {
+        "location": {
+          "cube_id": "target",
+          "face": 4,
+          "layer": 0
+        },
+        "orientation": 0
+      },
+      "support_edge_distance": 0.5,
+      "initial_advance": 0.0190649591386318,
+      "descent_start_seconds": 0.39000005023554,
+      "early_parameter_increment": 0.0937502020969987,
+      "late_parameter_increment": 0.206249658949673,
+      "join_velocity_before": [
+        -3.57429194450378,
+        0.0,
+        7.15309811383236e-10
+      ],
+      "join_velocity_after": [
+        -3.5703182220459,
+        0.0,
+        0.00102382234763354
+      ],
+      "landing_gaps": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stages": {
+        "contact": true,
+        "edge": true,
+        "middle": true,
+        "precontact": true,
+        "source": true,
+        "stable": true
+      }
+    }
+  ],
+  "production": [
+    {
+      "path": "game/feel/animation/fall_landing/fall_motion.gd",
+      "sha256": "ab7b46d282c5c8952866b1d3deb4a663c6f967afdea9e65309ca8c581098001b",
+      "package_sha256": "ab7b46d282c5c8952866b1d3deb4a663c6f967afdea9e65309ca8c581098001b"
+    },
+    {
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd",
+      "sha256": "e8f15370b962ec84ff8d449a1ae39f191dd1b20702383c08f0347367c4e33add",
+      "package_sha256": "e8f15370b962ec84ff8d449a1ae39f191dd1b20702383c08f0347367c4e33add"
+    }
+  ],
+  "map_runtime_foundation_art_save_changes": "NONE",
+  "qa_baseline": "PRESERVED_16999_HASH_CHECKS",
+  "human_qa": "NOT_RUN",
+  "formal_integration_ref": "99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff",
+  "formal_promotion": "PENDING_NEXT_WINDOW",
+  "remaining_scope": [
+    "Human feel by08",
+    "Existing connection readiness facade pending",
+    "05 Art expansion pending user review",
+    "Old94 matrix pending items retain their original status"
+  ],
+  "retained_attempts": [
+    "baseline_red01/02/03/04",
+    "matrix_green1280 excluded due overlapped processes",
+    "package_matrix01 excluded due real focus loss and official Shell auto-pause; package_matrix02 passed exclusive rerun"
+  ],
+  "push": "NOT_RUN",
+  "created_utc": "2026-10-10T08:57:04.732959+00:00"
+}
