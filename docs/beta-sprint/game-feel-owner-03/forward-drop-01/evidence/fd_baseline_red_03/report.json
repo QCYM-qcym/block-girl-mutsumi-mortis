@@ -1,0 +1,6569 @@
+{
+	"analysis_mode": "HEADLESS_REAL_AUTHORIZED_SAMPLER_ONLY",
+	"capture": {
+		"authoritative_runtime": true,
+		"display": "headless",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "4506b9b0896fc2d4b31b9a691afb3eb96bf929ef",
+		"fixture_kind": "LEGACY_PRODUCTION_MODULE_UNIT",
+		"input_profile": "FORWARD_DROP_HEADLESS_REAL_AUTHORIZED_SAMPLER",
+		"pid": 41744,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/forward-drop-01/evidence/fd_baseline_red_03/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"checks": 1020,
+	"doubles": [],
+	"failures": [
+		"a reduced=false CASE01 first timed sample already moves forward; no stationary anticipation",
+		"a reduced=false CASE05 no positive-time stationary interval during motion",
+		"a reduced=false CASE05 geometry parameter accelerates over equal descent-time bands; uniform floating timing rejected",
+		"b reduced=false CASE01 first timed sample already moves forward; no stationary anticipation",
+		"b reduced=false CASE05 no positive-time stationary interval during motion",
+		"b reduced=false CASE05 geometry parameter accelerates over equal descent-time bands; uniform floating timing rejected"
+	],
+	"graphical": "NOT_RUN",
+	"profile": "foundation.game_feel.v2",
+	"rows": [
+		{
+			"cadence": {
+				"accelerates": false,
+				"actual_observation_times": [
+					0.245125,
+					0.328625,
+					0.453875,
+					0.537375
+				],
+				"early_parameter_rate": 1.78571444417456,
+				"late_parameter_rate": 1.78571357419659,
+				"ok": true,
+				"parameters": [
+					0.366294598323293,
+					0.515401754411869,
+					0.739062480744906,
+					0.888169564190321
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+			"map": "a",
+			"measurement": {
+				"early_intervals": 42,
+				"early_speed": 7.64239986560175,
+				"first_descent_time": 0.1825,
+				"first_timed_forward": false,
+				"forward_only": true,
+				"late_intervals": 42,
+				"late_speed": 8.77026166944277,
+				"moving_intervals": 204,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 36
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": false,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000099, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000389, 1.0)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000859, 1.0)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001496, 0.999999)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.002291, 0.999997)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003232, 0.999995)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.004308, 0.999991)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005506, 0.999985)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.006818, 0.999977)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00823, 0.999966)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009732, 0.999953)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.011312, 0.999936)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.01296, 0.999916)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.014664, 0.999892)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016412, 0.999865)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.018194, 0.999834)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.019999, 0.9998)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.021815, 0.999762)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.023631, 0.999721)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025435, 0.999676)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.027217, 0.99963)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.028965, 0.99958)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030668, 0.99953)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.032315, 0.999478)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033895, 0.999425)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.035396, 0.999373)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.036807, 0.999322)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038117, 0.999273)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.039316, 0.999227)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04039, 0.999184)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04133, 0.999146)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042124, 0.999112)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042762, 0.999085)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043231, 0.999065)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04352, 0.999053)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "DEPARTURE",
+					"position": "(-0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "DEPARTURE",
+					"position": "(-0.00179, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04352, 0.999053)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "DEPARTURE",
+					"position": "(-0.007042, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043231, 0.999065)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "DEPARTURE",
+					"position": "(-0.015584, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042762, 0.999085)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "DEPARTURE",
+					"position": "(-0.027239, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042124, 0.999112)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "DEPARTURE",
+					"position": "(-0.041834, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04133, 0.999146)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "DEPARTURE",
+					"position": "(-0.059193, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04039, 0.999184)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "DEPARTURE",
+					"position": "(-0.079143, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.039316, 0.999227)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "DEPARTURE",
+					"position": "(-0.101509, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038117, 0.999273)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "DEPARTURE",
+					"position": "(-0.126116, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.036807, 0.999322)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "DEPARTURE",
+					"position": "(-0.15279, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.035396, 0.999373)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "DEPARTURE",
+					"position": "(-0.181356, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033895, 0.999425)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "DEPARTURE",
+					"position": "(-0.21164, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.032315, 0.999478)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "DEPARTURE",
+					"position": "(-0.243467, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030668, 0.99953)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "DEPARTURE",
+					"position": "(-0.276663, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.028965, 0.99958)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "DEPARTURE",
+					"position": "(-0.311053, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.027217, 0.99963)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "DEPARTURE",
+					"position": "(-0.346463, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025435, 0.999676)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "DEPARTURE",
+					"position": "(-0.382718, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.023631, 0.999721)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "DEPARTURE",
+					"position": "(-0.419643, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.021815, 0.999762)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "DEPARTURE",
+					"position": "(-0.457064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.019999, 0.9998)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "DEPARTURE",
+					"position": "(-0.494807, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.018194, 0.999834)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "DEPARTURE",
+					"position": "(-0.532697, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016412, 0.999865)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "DEPARTURE",
+					"position": "(-0.570559, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.014664, 0.999892)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "DEPARTURE",
+					"position": "(-0.608219, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.01296, 0.999916)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "DEPARTURE",
+					"position": "(-0.645503, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.011312, 0.999936)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "DEPARTURE",
+					"position": "(-0.682235, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009732, 0.999953)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "DEPARTURE",
+					"position": "(-0.718242, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00823, 0.999966)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "DEPARTURE",
+					"position": "(-0.753348, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.006818, 0.999977)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "DEPARTURE",
+					"position": "(-0.78738, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005506, 0.999985)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "DEPARTURE",
+					"position": "(-0.820162, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.004308, 0.999991)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "DEPARTURE",
+					"position": "(-0.851521, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003232, 0.999995)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "DEPARTURE",
+					"position": "(-0.881282, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.002291, 0.999997)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "DEPARTURE",
+					"position": "(-0.909269, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001496, 0.999999)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "DEPARTURE",
+					"position": "(-0.935309, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000859, 1.0)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "DEPARTURE",
+					"position": "(-0.959227, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000389, 1.0)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "DEPARTURE",
+					"position": "(-0.980849, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000099, 1)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FALL_MOVING",
+					"position": "(-1.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.017857, 2.999894, 0.000423)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FALL_MOVING",
+					"position": "(-1.035712, 2.999577, 0.001687)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.053566, 2.999049, 0.003781)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FALL_MOVING",
+					"position": "(-1.071415, 2.998313, 0.006695)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.089259, 2.997369, 0.010418)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FALL_MOVING",
+					"position": "(-1.107097, 2.996219, 0.014942)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.124928, 2.994864, 0.020255)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FALL_MOVING",
+					"position": "(-1.142749, 2.993305, 0.026347)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.160561, 2.991544, 0.033209)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FALL_MOVING",
+					"position": "(-1.178361, 2.989582, 0.04083)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.196148, 2.987419, 0.0492)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FALL_MOVING",
+					"position": "(-1.213921, 2.985058, 0.058309)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.231679, 2.9825, 0.068147)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FALL_MOVING",
+					"position": "(-1.249421, 2.979745, 0.078704)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.267145, 2.976796, 0.089969)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FALL_MOVING",
+					"position": "(-1.28485, 2.973653, 0.101933)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.302535, 2.970318, 0.114585)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.320199, 2.966791, 0.127915)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.337839, 2.963075, 0.141914)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FALL_MOVING",
+					"position": "(-1.355456, 2.95917, 0.156571)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.373047, 2.955078, 0.171875)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FALL_MOVING",
+					"position": "(-1.390611, 2.9508, 0.187817)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.408148, 2.946337, 0.204387)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FALL_MOVING",
+					"position": "(-1.425656, 2.941691, 0.221574)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.443133, 2.936862, 0.239369)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FALL_MOVING",
+					"position": "(-1.460579, 2.931853, 0.257761)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.477992, 2.926664, 0.27674)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "FALL_MOVING",
+					"position": "(-1.49537, 2.921296, 0.296296)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.512714, 2.915752, 0.316419)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "FALL_MOVING",
+					"position": "(-1.53002, 2.910031, 0.337099)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.547289, 2.904136, 0.358326)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "FALL_MOVING",
+					"position": "(-1.564518, 2.898067, 0.380089)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.581707, 2.891826, 0.402378)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "FALL_MOVING",
+					"position": "(-1.598854, 2.885415, 0.425184)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.615958, 2.878834, 0.448495)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "FALL_MOVING",
+					"position": "(-1.633018, 2.872084, 0.472303)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.650032, 2.865168, 0.496597)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.666999, 2.858086, 0.521366)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.683918, 2.850839, 0.546602)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "FALL_MOVING",
+					"position": "(-1.700788, 2.84343, 0.572292)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.717608, 2.835857, 0.598429)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "FALL_MOVING",
+					"position": "(-1.734375, 2.828125, 0.625)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.751089, 2.820233, 0.651997)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "FALL_MOVING",
+					"position": "(-1.767749, 2.812183, 0.679408)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.784353, 2.803976, 0.707225)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "FALL_MOVING",
+					"position": "(-1.800901, 2.795613, 0.735436)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.81739, 2.787096, 0.764032)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "FALL_MOVING",
+					"position": "(-1.833819, 2.778426, 0.793003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.850188, 2.769603, 0.822338)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "FALL_MOVING",
+					"position": "(-1.866495, 2.760631, 0.852027)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.882739, 2.751509, 0.882061)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "FALL_MOVING",
+					"position": "(-1.898918, 2.742239, 0.912428)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.915031, 2.732822, 0.94312)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "FALL_MOVING",
+					"position": "(-1.931077, 2.72326, 0.974125)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.947055, 2.713553, 1.005435)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "FALL_MOVING",
+					"position": "(-1.962963, 2.703704, 1.037037)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.9788, 2.693712, 1.068923)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.994566, 2.683581, 1.101083)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.010257, 2.67331, 1.133505)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "FALL_MOVING",
+					"position": "(-2.025875, 2.662901, 1.166181)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.041416, 2.652355, 1.199099)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "FALL_MOVING",
+					"position": "(-2.05688, 2.641675, 1.232251)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.072266, 2.630859, 1.265625)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "FALL_MOVING",
+					"position": "(-2.087572, 2.619911, 1.299212)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.102797, 2.608832, 1.333001)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "FALL_MOVING",
+					"position": "(-2.117939, 2.597622, 1.366982)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.132998, 2.586283, 1.401146)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "FALL_MOVING",
+					"position": "(-2.147973, 2.574816, 1.435482)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.162861, 2.563223, 1.46998)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "FALL_MOVING",
+					"position": "(-2.177662, 2.551505, 1.50463)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.192374, 2.539662, 1.539421)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206997, 2.527697, 1.574344)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.221529, 2.51561, 1.609389)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "FALL_MOVING",
+					"position": "(-2.235968, 2.503403, 1.644544)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.250313, 2.491077, 1.679801)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "FALL_MOVING",
+					"position": "(-2.264564, 2.478634, 1.71515)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.278718, 2.466074, 1.750579)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.292775, 2.453398, 1.786079)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.306734, 2.440609, 1.821639)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "FALL_MOVING",
+					"position": "(-2.320592, 2.427707, 1.857251)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.334349, 2.414695, 1.892903)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "FALL_MOVING",
+					"position": "(-2.348003, 2.401572, 1.928585)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.361554, 2.38834, 1.964287)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-2.375, 2.375, 2.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.38834, 2.361554, 2.035712)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-2.401572, 2.348003, 2.071415)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.414695, 2.334349, 2.107097)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-2.427708, 2.320592, 2.142749)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.440609, 2.306734, 2.17836)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-2.453398, 2.292775, 2.213921)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.466074, 2.278718, 2.249421)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-2.478634, 2.264564, 2.284851)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.491077, 2.250313, 2.320199)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-2.503403, 2.235968, 2.355456)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.51561, 2.221529, 2.390611)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-2.527697, 2.206997, 2.425656)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.539662, 2.192374, 2.460579)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.551505, 2.177662, 2.49537)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.563223, 2.162861, 2.53002)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-2.574816, 2.147973, 2.564518)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.586283, 2.132998, 2.598854)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-2.597622, 2.117939, 2.633018)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.608832, 2.102797, 2.666999)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-2.619911, 2.087572, 2.700788)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.630859, 2.072266, 2.734375)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-2.641675, 2.05688, 2.767749)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.652355, 2.041416, 2.800901)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-2.662901, 2.025875, 2.833819)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.67331, 2.010257, 2.866495)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-2.683581, 1.994566, 2.898918)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.693712, 1.9788, 2.931077)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-2.703704, 1.962963, 2.962963)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.713553, 1.947055, 2.994565)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-2.72326, 1.931077, 3.025875)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.732822, 1.915031, 3.05688)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-2.742239, 1.898918, 3.087572)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.751509, 1.882738, 3.117939)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.760631, 1.866495, 3.147973)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.769603, 1.850188, 3.177662)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-2.778426, 1.833819, 3.206997)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.787096, 1.81739, 3.235968)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-2.795613, 1.800901, 3.264564)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.803976, 1.784353, 3.292775)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-2.812183, 1.767749, 3.320592)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.820233, 1.751089, 3.348003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-2.828125, 1.734375, 3.375)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.835857, 1.717608, 3.401571)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-2.84343, 1.700788, 3.427708)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.850839, 1.683918, 3.453398)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.858086, 1.666999, 3.478634)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.865168, 1.650032, 3.503403)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.872084, 1.633018, 3.527697)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.878834, 1.615958, 3.551505)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.885415, 1.598854, 3.574816)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.891826, 1.581707, 3.597622)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.898067, 1.564518, 3.619911)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.904136, 1.547289, 3.641675)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.910031, 1.53002, 3.662901)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.915751, 1.512714, 3.683581)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.921296, 1.495371, 3.703704)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.926664, 1.477992, 3.72326)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.931853, 1.460579, 3.742239)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.936862, 1.443133, 3.760631)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.941691, 1.425656, 3.778426)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.946337, 1.408148, 3.795613)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.9508, 1.390611, 3.812183)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.955078, 1.373047, 3.828125)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.95917, 1.355456, 3.84343)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.963075, 1.337839, 3.858086)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.966791, 1.320199, 3.872084)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970318, 1.302535, 3.885415)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.973653, 1.28485, 3.898067)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.976796, 1.267145, 3.910031)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.979745, 1.249421, 3.921296)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.9825, 1.231679, 3.931853)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.985058, 1.213921, 3.941691)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.987419, 1.196148, 3.9508)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.989582, 1.178361, 3.95917)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.991544, 1.160561, 3.966791)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.993305, 1.142749, 3.973653)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.994864, 1.124928, 3.979745)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.996219, 1.107097, 3.985058)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.997369, 1.089259, 3.989582)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.998313, 1.071415, 3.993305)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999049, 1.053566, 3.996219)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999577, 1.035712, 3.998313)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999894, 1.017857, 3.999577)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 1.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 4, 8)",
+						"(-6, 2, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_a",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "3814fd19f1422c1f3f403cb271d955e6",
+				"motion_profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+				"motion_profile_id": "pfall_a_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "3814fd19f1422c1f3f403cb271d955e6",
+					"session_id": "9ca9803cdd6abac11c64b3d2082a3e29"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_a",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+						"profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "9ca9803cdd6abac11c64b3d2082a3e29",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "3814fd19f1422c1f3f403cb271d955e6",
+					"session_id": "9ca9803cdd6abac11c64b3d2082a3e29",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		},
+		{
+			"cadence": {
+				"accelerates": false,
+				"actual_observation_times": [
+					0.181375,
+					0.279875,
+					0.427625,
+					0.526125
+				],
+				"early_parameter_rate": 1.5178570325302,
+				"late_parameter_rate": 1.51785708926051,
+				"ok": true,
+				"parameters": [
+					0.364587047952227,
+					0.514095965656452,
+					0.738359339418821,
+					0.887868262710981
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+			"map": "a",
+			"measurement": {
+				"early_intervals": 49,
+				"early_speed": 6.40789217182568,
+				"first_descent_time": 0.1075,
+				"first_timed_forward": true,
+				"forward_only": true,
+				"late_intervals": 49,
+				"late_speed": 7.43473553839995,
+				"moving_intervals": 240,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 0
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": true,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "DEPARTURE",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "DEPARTURE",
+					"position": "(-0.001296, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "DEPARTURE",
+					"position": "(-0.005113, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "DEPARTURE",
+					"position": "(-0.011344, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "DEPARTURE",
+					"position": "(-0.019882, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "DEPARTURE",
+					"position": "(-0.030619, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "DEPARTURE",
+					"position": "(-0.043448, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "DEPARTURE",
+					"position": "(-0.058262, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "DEPARTURE",
+					"position": "(-0.074954, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "DEPARTURE",
+					"position": "(-0.093417, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "DEPARTURE",
+					"position": "(-0.113543, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "DEPARTURE",
+					"position": "(-0.135226, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "DEPARTURE",
+					"position": "(-0.158357, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "DEPARTURE",
+					"position": "(-0.182831, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "DEPARTURE",
+					"position": "(-0.208539, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "DEPARTURE",
+					"position": "(-0.235375, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "DEPARTURE",
+					"position": "(-0.263232, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "DEPARTURE",
+					"position": "(-0.292001, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "DEPARTURE",
+					"position": "(-0.321577, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "DEPARTURE",
+					"position": "(-0.351851, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "DEPARTURE",
+					"position": "(-0.382718, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "DEPARTURE",
+					"position": "(-0.414068, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "DEPARTURE",
+					"position": "(-0.445796, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "DEPARTURE",
+					"position": "(-0.477794, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "DEPARTURE",
+					"position": "(-0.509955, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "DEPARTURE",
+					"position": "(-0.542172, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "DEPARTURE",
+					"position": "(-0.574337, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "DEPARTURE",
+					"position": "(-0.606344, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "DEPARTURE",
+					"position": "(-0.638084, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "DEPARTURE",
+					"position": "(-0.669452, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "DEPARTURE",
+					"position": "(-0.70034, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "DEPARTURE",
+					"position": "(-0.73064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "DEPARTURE",
+					"position": "(-0.760246, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "DEPARTURE",
+					"position": "(-0.78905, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "DEPARTURE",
+					"position": "(-0.816945, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "DEPARTURE",
+					"position": "(-0.843825, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "DEPARTURE",
+					"position": "(-0.86958, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "DEPARTURE",
+					"position": "(-0.894106, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "DEPARTURE",
+					"position": "(-0.917293, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "DEPARTURE",
+					"position": "(-0.939036, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "DEPARTURE",
+					"position": "(-0.959227, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "DEPARTURE",
+					"position": "(-0.977759, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "DEPARTURE",
+					"position": "(-0.994525, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.009821, 2.999968, 0.000128)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "FALL_MOVING",
+					"position": "(-1.024999, 2.999792, 0.000829)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.040176, 2.999464, 0.002133)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "FALL_MOVING",
+					"position": "(-1.055351, 2.998985, 0.004036)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.070523, 2.998354, 0.00653)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "FALL_MOVING",
+					"position": "(-1.085691, 2.997574, 0.009609)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.100855, 2.996645, 0.013268)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.116013, 2.995567, 0.0175)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.131166, 2.994342, 0.022299)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "FALL_MOVING",
+					"position": "(-1.146312, 2.992969, 0.027658)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.161451, 2.991451, 0.033572)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "FALL_MOVING",
+					"position": "(-1.176581, 2.989787, 0.040034)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.191702, 2.987978, 0.047038)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "FALL_MOVING",
+					"position": "(-1.206814, 2.986026, 0.054577)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.221915, 2.983931, 0.062647)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "FALL_MOVING",
+					"position": "(-1.237004, 2.981694, 0.071239)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.252081, 2.979315, 0.080349)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "FALL_MOVING",
+					"position": "(-1.267145, 2.976796, 0.089969)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.282196, 2.974137, 0.100094)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "FALL_MOVING",
+					"position": "(-1.297232, 2.971338, 0.110718)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.312253, 2.968401, 0.121833)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "FALL_MOVING",
+					"position": "(-1.327258, 2.965327, 0.133435)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.342246, 2.962116, 0.145517)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "FALL_MOVING",
+					"position": "(-1.357216, 2.958769, 0.158072)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.372168, 2.955287, 0.171095)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "FALL_MOVING",
+					"position": "(-1.387101, 2.951671, 0.184578)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.402014, 2.94792, 0.198517)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.416906, 2.944037, 0.212904)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.431777, 2.940022, 0.227734)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FALL_MOVING",
+					"position": "(-1.446625, 2.935875, 0.243)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.46145, 2.931598, 0.258696)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FALL_MOVING",
+					"position": "(-1.476252, 2.927191, 0.274816)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.491029, 2.922655, 0.291354)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FALL_MOVING",
+					"position": "(-1.505781, 2.917991, 0.308303)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.520506, 2.913199, 0.325657)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FALL_MOVING",
+					"position": "(-1.535205, 2.908281, 0.34341)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.549875, 2.903237, 0.361556)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FALL_MOVING",
+					"position": "(-1.564518, 2.898067, 0.380089)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.579131, 2.892774, 0.399001)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FALL_MOVING",
+					"position": "(-1.593714, 2.887356, 0.418288)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.608266, 2.881816, 0.437943)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FALL_MOVING",
+					"position": "(-1.622787, 2.876154, 0.45796)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.637275, 2.870371, 0.478331)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FALL_MOVING",
+					"position": "(-1.651731, 2.864467, 0.499053)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.666152, 2.858444, 0.520117)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FALL_MOVING",
+					"position": "(-1.680538, 2.852302, 0.541518)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.69489, 2.846041, 0.563249)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.709204, 2.839664, 0.585305)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.723482, 2.833169, 0.60768)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FALL_MOVING",
+					"position": "(-1.737722, 2.82656, 0.630366)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.751924, 2.819834, 0.653357)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FALL_MOVING",
+					"position": "(-1.766086, 2.812995, 0.676649)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.780208, 2.806042, 0.700233)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FALL_MOVING",
+					"position": "(-1.794289, 2.798977, 0.724105)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.808328, 2.791799, 0.748258)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FALL_MOVING",
+					"position": "(-1.822325, 2.784511, 0.772685)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.836278, 2.777112, 0.79738)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "FALL_MOVING",
+					"position": "(-1.850188, 2.769603, 0.822338)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.864053, 2.761986, 0.847552)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "FALL_MOVING",
+					"position": "(-1.877872, 2.754261, 0.873015)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.891645, 2.746429, 0.898722)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "FALL_MOVING",
+					"position": "(-1.905371, 2.73849, 0.924667)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.919049, 2.730445, 0.950842)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "FALL_MOVING",
+					"position": "(-1.932678, 2.722296, 0.977243)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.946257, 2.714042, 1.003862)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "FALL_MOVING",
+					"position": "(-1.959787, 2.705685, 1.030694)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.973265, 2.697226, 1.057731)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.986692, 2.688664, 1.084969)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.000066, 2.680001, 1.112401)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "FALL_MOVING",
+					"position": "(-2.013387, 2.671239, 1.14002)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.026654, 2.662377, 1.167821)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "FALL_MOVING",
+					"position": "(-2.039865, 2.653416, 1.195797)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.053021, 2.644357, 1.223942)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "FALL_MOVING",
+					"position": "(-2.066121, 2.635201, 1.252249)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.079163, 2.625949, 1.280713)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "FALL_MOVING",
+					"position": "(-2.092148, 2.616601, 1.309328)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.105073, 2.607159, 1.338086)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "FALL_MOVING",
+					"position": "(-2.117939, 2.597622, 1.366982)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.130745, 2.587992, 1.396011)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "FALL_MOVING",
+					"position": "(-2.143489, 2.57827, 1.425164)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.156172, 2.568456, 1.454437)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "FALL_MOVING",
+					"position": "(-2.168792, 2.558551, 1.483822)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.181348, 2.548556, 1.513315)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "FALL_MOVING",
+					"position": "(-2.193841, 2.538471, 1.542907)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206268, 2.528298, 1.572595)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "FALL_MOVING",
+					"position": "(-2.21863, 2.518037, 1.602371)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.230925, 2.507689, 1.632228)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.243152, 2.497255, 1.662161)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.255312, 2.486735, 1.692163)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "FALL_MOVING",
+					"position": "(-2.267402, 2.476131, 1.722229)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.279423, 2.465442, 1.752352)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "FALL_MOVING",
+					"position": "(-2.291374, 2.454671, 1.782526)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.303253, 2.443817, 1.812744)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "FALL_MOVING",
+					"position": "(-2.31506, 2.432882, 1.843001)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.326795, 2.421865, 1.87329)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "FALL_MOVING",
+					"position": "(-2.338456, 2.410769, 1.903605)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.350043, 2.399593, 1.933939)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "FALL_MOVING",
+					"position": "(-2.361554, 2.38834, 1.964287)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.37299, 2.377008, 1.994643)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "FALL_MOVING",
+					"position": "(-2.384349, 2.365599, 2.025)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.395631, 2.354114, 2.055351)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "FALL_MOVING",
+					"position": "(-2.406834, 2.342554, 2.085691)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.417958, 2.330919, 2.116014)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "FALL_MOVING",
+					"position": "(-2.429003, 2.319211, 2.146312)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.439967, 2.307429, 2.176581)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "FALL_MOVING",
+					"position": "(-2.45085, 2.295575, 2.206813)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.46165, 2.283649, 2.237004)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.472368, 2.271653, 2.267145)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.483002, 2.259587, 2.297232)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "FALL_MOVING",
+					"position": "(-2.493552, 2.247452, 2.327258)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.504016, 2.235248, 2.357216)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "FALL_MOVING",
+					"position": "(-2.514395, 2.222977, 2.387101)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.524686, 2.210639, 2.416906)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-2.534891, 2.198234, 2.446625)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.545007, 2.185765, 2.476252)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-2.555033, 2.173231, 2.505781)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.56497, 2.160634, 2.535204)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-2.574816, 2.147973, 2.564518)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.584571, 2.13525, 2.593714)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-2.594234, 2.122466, 2.622787)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.603804, 2.109621, 2.651731)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-2.613279, 2.096716, 2.680538)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.622661, 2.083753, 2.709204)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-2.631947, 2.070731, 2.737722)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.641137, 2.057651, 2.766086)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-2.65023, 2.044515, 2.794289)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.659225, 2.031323, 2.822325)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.668122, 2.018075, 2.850188)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.67692, 2.004774, 2.877872)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-2.685618, 1.991418, 2.905371)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.694215, 1.97801, 2.932678)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-2.702711, 1.96455, 2.959787)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.711104, 1.951038, 2.986692)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-2.719394, 1.937476, 3.013387)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.727581, 1.923865, 3.039865)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-2.735662, 1.910204, 3.066121)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.743639, 1.896495, 3.092148)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-2.751509, 1.882738, 3.117939)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.759272, 1.868936, 3.143489)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-2.766928, 1.855087, 3.168792)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.774475, 1.841193, 3.193841)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-2.781912, 1.827255, 3.218629)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.78924, 1.813273, 3.243152)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-2.796456, 1.799249, 3.267402)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.803561, 1.785182, 3.291374)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-2.810554, 1.771075, 3.31506)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.817433, 1.756926, 3.338456)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.824199, 1.742739, 3.361554)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.83085, 1.728512, 3.384349)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-2.837385, 1.714248, 3.406834)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.843804, 1.699946, 3.429003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-2.850106, 1.685607, 3.45085)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.85629, 1.671233, 3.472368)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-2.862355, 1.656824, 3.493552)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.868301, 1.642381, 3.514395)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-2.874127, 1.627904, 3.534891)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.879832, 1.613395, 3.555033)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-2.885415, 1.598854, 3.574816)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.890876, 1.584281, 3.594234)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.896213, 1.569679, 3.613279)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.901426, 1.555047, 3.631947)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.906515, 1.540386, 3.65023)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.911478, 1.525697, 3.668123)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.916314, 1.510981, 3.685618)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.921023, 1.496238, 3.702711)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.925605, 1.48147, 3.719394)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.930057, 1.466677, 3.735663)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.93438, 1.45186, 3.751509)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.938573, 1.43702, 3.766927)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.942635, 1.422157, 3.781912)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.946565, 1.407272, 3.796456)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.950362, 1.392367, 3.810554)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.954026, 1.377441, 3.824199)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.957556, 1.362495, 3.837385)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.960951, 1.347531, 3.850106)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.96421, 1.332549, 3.862355)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.967332, 1.317551, 3.874127)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970318, 1.302535, 3.885415)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.973165, 1.287504, 3.896213)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.975873, 1.272459, 3.906515)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.978442, 1.257399, 3.916314)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.980871, 1.242327, 3.925605)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.983158, 1.227242, 3.93438)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.985303, 1.212145, 3.942635)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.987306, 1.197037, 3.950362)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.989165, 1.181919, 3.957556)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99088, 1.166792, 3.96421)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99245, 1.151656, 3.970318)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.993874, 1.136513, 3.975873)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.995151, 1.121362, 3.980871)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.996281, 1.106205, 3.985303)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.997263, 1.091043, 3.989165)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.998096, 1.075877, 3.99245)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99878, 1.060706, 3.995151)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999312, 1.045532, 3.997263)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999694, 1.030356, 3.99878)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999923, 1.015178, 3.999694)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 1.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 4, 8)",
+						"(-6, 2, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_a",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "3814fd19f1422c1f3f403cb271d955e6",
+				"motion_profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+				"motion_profile_id": "pfall_a_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "3814fd19f1422c1f3f403cb271d955e6",
+					"session_id": "9ca9803cdd6abac11c64b3d2082a3e29"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_a",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5",
+						"profile_hash": "e8036260244020a0475402b9a160e2d08b2179bce5ca614c6fc271c6cfb86d55",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "9ca9803cdd6abac11c64b3d2082a3e29",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "3814fd19f1422c1f3f403cb271d955e6",
+					"session_id": "9ca9803cdd6abac11c64b3d2082a3e29",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		},
+		{
+			"cadence": {
+				"accelerates": false,
+				"actual_observation_times": [
+					0.245125,
+					0.328625,
+					0.453875,
+					0.537375
+				],
+				"early_parameter_rate": 1.78571337343244,
+				"late_parameter_rate": 1.78571518309816,
+				"ok": true,
+				"parameters": [
+					0.366294553619809,
+					0.515401620301418,
+					0.739062391337939,
+					0.888169609126635
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+			"map": "b",
+			"measurement": {
+				"early_intervals": 42,
+				"early_speed": 2.11467503880461,
+				"first_descent_time": 0.1825,
+				"first_timed_forward": false,
+				"forward_only": true,
+				"late_intervals": 42,
+				"late_speed": 7.36268890045938,
+				"moving_intervals": 204,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 36
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": false,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000099, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000389, 1.0)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000859, 1.0)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001496, 0.999999)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.002291, 0.999997)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003232, 0.999995)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.004308, 0.999991)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005506, 0.999985)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.006818, 0.999977)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00823, 0.999966)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009732, 0.999953)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.011312, 0.999936)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.01296, 0.999916)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.014664, 0.999892)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016412, 0.999865)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.018194, 0.999834)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.019999, 0.9998)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.021815, 0.999762)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.023631, 0.999721)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025435, 0.999676)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.027217, 0.99963)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.028965, 0.99958)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030668, 0.99953)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.032315, 0.999478)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033895, 0.999425)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.035396, 0.999373)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.036807, 0.999322)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038117, 0.999273)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.039316, 0.999227)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04039, 0.999184)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04133, 0.999146)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042124, 0.999112)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042762, 0.999085)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043231, 0.999065)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "ANTICIPATION",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04352, 0.999053)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "DEPARTURE",
+					"position": "(-0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043619, 0.999048)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "DEPARTURE",
+					"position": "(-0.00179, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04352, 0.999053)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "DEPARTURE",
+					"position": "(-0.007042, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.043231, 0.999065)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "DEPARTURE",
+					"position": "(-0.015584, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042762, 0.999085)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "DEPARTURE",
+					"position": "(-0.027239, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.042124, 0.999112)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "DEPARTURE",
+					"position": "(-0.041834, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04133, 0.999146)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "DEPARTURE",
+					"position": "(-0.059193, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.04039, 0.999184)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "DEPARTURE",
+					"position": "(-0.079143, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.039316, 0.999227)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "DEPARTURE",
+					"position": "(-0.101509, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.038117, 0.999273)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "DEPARTURE",
+					"position": "(-0.126116, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.036807, 0.999322)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "DEPARTURE",
+					"position": "(-0.15279, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.035396, 0.999373)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "DEPARTURE",
+					"position": "(-0.181356, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.033895, 0.999425)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "DEPARTURE",
+					"position": "(-0.21164, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.032315, 0.999478)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "DEPARTURE",
+					"position": "(-0.243467, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.030668, 0.99953)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "DEPARTURE",
+					"position": "(-0.276663, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.028965, 0.99958)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "DEPARTURE",
+					"position": "(-0.311053, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.027217, 0.99963)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "DEPARTURE",
+					"position": "(-0.346463, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.025435, 0.999676)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "DEPARTURE",
+					"position": "(-0.382718, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.023631, 0.999721)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "DEPARTURE",
+					"position": "(-0.419643, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.021815, 0.999762)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "DEPARTURE",
+					"position": "(-0.457064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.019999, 0.9998)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "DEPARTURE",
+					"position": "(-0.494807, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.018194, 0.999834)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "DEPARTURE",
+					"position": "(-0.532697, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.016412, 0.999865)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "DEPARTURE",
+					"position": "(-0.570559, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.014664, 0.999892)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "DEPARTURE",
+					"position": "(-0.608219, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.01296, 0.999916)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "DEPARTURE",
+					"position": "(-0.645503, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.011312, 0.999936)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "DEPARTURE",
+					"position": "(-0.682235, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.009732, 0.999953)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "DEPARTURE",
+					"position": "(-0.718242, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.00823, 0.999966)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "DEPARTURE",
+					"position": "(-0.753348, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.006818, 0.999977)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "DEPARTURE",
+					"position": "(-0.78738, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.005506, 0.999985)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "DEPARTURE",
+					"position": "(-0.820162, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.004308, 0.999991)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "DEPARTURE",
+					"position": "(-0.851521, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.003232, 0.999995)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "DEPARTURE",
+					"position": "(-0.881282, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.002291, 0.999997)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "DEPARTURE",
+					"position": "(-0.909269, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.001496, 0.999999)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "DEPARTURE",
+					"position": "(-0.935309, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000859, 1.0)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "DEPARTURE",
+					"position": "(-0.959227, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000389, 1.0)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "DEPARTURE",
+					"position": "(-0.980849, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0.000099, 1)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FALL_MOVING",
+					"position": "(-1.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.017857, 3.000423, 0.000423)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FALL_MOVING",
+					"position": "(-1.035712, 3.001684, 0.001687)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.053566, 3.00377, 0.003781)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FALL_MOVING",
+					"position": "(-1.071415, 3.006668, 0.006695)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.089259, 3.010366, 0.010418)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FALL_MOVING",
+					"position": "(-1.107097, 3.014851, 0.014942)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.124928, 3.02011, 0.020255)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FALL_MOVING",
+					"position": "(-1.142749, 3.026131, 0.026347)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.160561, 3.032901, 0.033209)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FALL_MOVING",
+					"position": "(-1.178361, 3.040408, 0.04083)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.196148, 3.048639, 0.0492)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FALL_MOVING",
+					"position": "(-1.213921, 3.05758, 0.058309)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.231679, 3.06722, 0.068147)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FALL_MOVING",
+					"position": "(-1.249421, 3.077546, 0.078704)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.267145, 3.088546, 0.089969)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FALL_MOVING",
+					"position": "(-1.28485, 3.100205, 0.101933)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.302535, 3.112513, 0.114585)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.320199, 3.125456, 0.127915)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.337839, 3.139021, 0.141914)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FALL_MOVING",
+					"position": "(-1.355456, 3.153196, 0.156571)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.373047, 3.167969, 0.171875)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FALL_MOVING",
+					"position": "(-1.390611, 3.183326, 0.187817)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.408148, 3.199255, 0.204387)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FALL_MOVING",
+					"position": "(-1.425656, 3.215743, 0.221574)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.443133, 3.232779, 0.239369)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FALL_MOVING",
+					"position": "(-1.460579, 3.250348, 0.257761)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.477992, 3.268438, 0.27674)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "FALL_MOVING",
+					"position": "(-1.49537, 3.287037, 0.296296)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.512714, 3.306132, 0.316419)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "FALL_MOVING",
+					"position": "(-1.53002, 3.325711, 0.337099)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.547289, 3.34576, 0.358326)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "FALL_MOVING",
+					"position": "(-1.564518, 3.366267, 0.380089)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.581707, 3.38722, 0.402378)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "FALL_MOVING",
+					"position": "(-1.598854, 3.408605, 0.425184)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.615958, 3.430411, 0.448495)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "FALL_MOVING",
+					"position": "(-1.633018, 3.452624, 0.472303)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.650032, 3.475232, 0.496597)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.666999, 3.498222, 0.521366)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.683918, 3.521581, 0.546602)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "FALL_MOVING",
+					"position": "(-1.700788, 3.545297, 0.572292)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.717608, 3.569358, 0.598429)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "FALL_MOVING",
+					"position": "(-1.734375, 3.59375, 0.625)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.751089, 3.618461, 0.651997)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "FALL_MOVING",
+					"position": "(-1.767749, 3.643478, 0.679408)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.784353, 3.668789, 0.707225)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "FALL_MOVING",
+					"position": "(-1.800901, 3.694381, 0.735436)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.81739, 3.72024, 0.764032)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "FALL_MOVING",
+					"position": "(-1.833819, 3.746356, 0.793003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.850188, 3.772714, 0.822338)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "FALL_MOVING",
+					"position": "(-1.866495, 3.799303, 0.852027)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.882739, 3.826109, 0.882061)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "FALL_MOVING",
+					"position": "(-1.898918, 3.853121, 0.912428)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.915031, 3.880324, 0.94312)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "FALL_MOVING",
+					"position": "(-1.931077, 3.907708, 0.974125)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.947055, 3.935258, 1.005435)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "FALL_MOVING",
+					"position": "(-1.962963, 3.962963, 1.037037)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.9788, 3.990809, 1.068923)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.994566, 4.018785, 1.101083)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.010257, 4.046877, 1.133505)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "FALL_MOVING",
+					"position": "(-2.025875, 4.075073, 1.166181)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.041416, 4.10336, 1.199099)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "FALL_MOVING",
+					"position": "(-2.05688, 4.131725, 1.232251)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.072266, 4.160156, 1.265625)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "FALL_MOVING",
+					"position": "(-2.087572, 4.188641, 1.299212)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.102797, 4.217165, 1.333001)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "FALL_MOVING",
+					"position": "(-2.117939, 4.245718, 1.366982)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.132998, 4.274286, 1.401146)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "FALL_MOVING",
+					"position": "(-2.147973, 4.302856, 1.435482)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.162861, 4.331416, 1.46998)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "FALL_MOVING",
+					"position": "(-2.177662, 4.359953, 1.50463)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.192374, 4.388456, 1.539421)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206997, 4.41691, 1.574344)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.221529, 4.445303, 1.609389)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "FALL_MOVING",
+					"position": "(-2.235968, 4.473622, 1.644544)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.250313, 4.501856, 1.679801)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "FALL_MOVING",
+					"position": "(-2.264564, 4.529991, 1.71515)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.278718, 4.558015, 1.750579)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.292775, 4.585915, 1.786079)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.306734, 4.613678, 1.821639)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "FALL_MOVING",
+					"position": "(-2.320592, 4.641291, 1.857251)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.334349, 4.668743, 1.892903)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "FALL_MOVING",
+					"position": "(-2.348003, 4.69602, 1.928585)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.361554, 4.72311, 1.964287)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-2.375, 4.75, 2.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.38834, 4.776677, 2.035712)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-2.401572, 4.803129, 2.071415)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.414695, 4.829343, 2.107097)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-2.427708, 4.855308, 2.142749)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.440609, 4.881008, 2.17836)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-2.453398, 4.906432, 2.213921)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.466074, 4.931569, 2.249421)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-2.478634, 4.956403, 2.284851)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.491077, 4.980924, 2.320199)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-2.503403, 5.005119, 2.355456)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.51561, 5.028974, 2.390611)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-2.527697, 5.052478, 2.425656)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.539662, 5.075617, 2.460579)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.551505, 5.09838, 2.49537)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.563223, 5.120752, 2.53002)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-2.574816, 5.142722, 2.564518)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.586283, 5.164277, 2.598854)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-2.597622, 5.185405, 2.633018)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.608832, 5.206091, 2.666999)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-2.619911, 5.226326, 2.700788)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.630859, 5.246094, 2.734375)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-2.641675, 5.265384, 2.767749)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.652355, 5.284183, 2.800901)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-2.662901, 5.302478, 2.833819)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.67331, 5.320257, 2.866495)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-2.683581, 5.337507, 2.898918)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.693712, 5.354216, 2.931077)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-2.703704, 5.37037, 2.962963)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.713553, 5.385958, 2.994565)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-2.72326, 5.400966, 3.025875)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.732822, 5.415381, 3.05688)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-2.742239, 5.429192, 3.087572)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.751509, 5.442386, 3.117939)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.760631, 5.454949, 3.147973)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.769603, 5.466869, 3.177662)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-2.778426, 5.478134, 3.206997)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.787096, 5.48873, 3.235968)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-2.795613, 5.498647, 3.264564)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.803976, 5.50787, 3.292775)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-2.812183, 5.516386, 3.320592)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.820233, 5.524184, 3.348003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-2.828125, 5.53125, 3.375)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.835857, 5.537572, 3.401571)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-2.84343, 5.543138, 3.427708)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.850839, 5.547935, 3.453398)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.858086, 5.551949, 3.478634)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.865168, 5.555168, 3.503403)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.872084, 5.55758, 3.527697)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.878834, 5.559172, 3.551505)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.885415, 5.559932, 3.574816)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.891826, 5.559846, 3.597622)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.898067, 5.558903, 3.619911)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.904136, 5.557089, 3.641675)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.910031, 5.554391, 3.662901)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.915751, 5.550798, 3.683581)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.921296, 5.546296, 3.703704)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.926664, 5.540873, 3.72326)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.931853, 5.534516, 3.742239)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.936862, 5.527213, 3.760631)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.941691, 5.51895, 3.778426)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.946337, 5.509716, 3.795613)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.9508, 5.499497, 3.812183)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.955078, 5.488281, 3.828125)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.95917, 5.476056, 3.84343)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.963075, 5.462808, 3.858086)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.966791, 5.448524, 3.872084)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970318, 5.433193, 3.885415)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.973653, 5.416802, 3.898067)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.976796, 5.399337, 3.910031)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.979745, 5.380787, 3.921296)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.9825, 5.361138, 3.931853)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.985058, 5.340379, 3.941691)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.987419, 5.318496, 3.9508)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.989582, 5.295476, 3.95917)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.991544, 5.271308, 3.966791)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.993305, 5.245978, 3.973653)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.994864, 5.219473, 3.979745)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.996219, 5.191782, 3.985058)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.997369, 5.162891, 3.989582)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.998313, 5.132788, 3.993305)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999049, 5.10146, 3.996219)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999577, 5.068894, 3.998313)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999894, 5.035079, 3.999577)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 5.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 14, 8)",
+						"(-6, 10, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "9481bc873c8548ae4185a7ad0421f9f9",
+				"motion_profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+				"motion_profile_id": "pfall_b_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "9481bc873c8548ae4185a7ad0421f9f9",
+					"session_id": "08de99d831c6669489e4f295fadd0b1d"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+						"profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "08de99d831c6669489e4f295fadd0b1d",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "9481bc873c8548ae4185a7ad0421f9f9",
+					"session_id": "08de99d831c6669489e4f295fadd0b1d",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		},
+		{
+			"cadence": {
+				"accelerates": false,
+				"actual_observation_times": [
+					0.181375,
+					0.279875,
+					0.427625,
+					0.526125
+				],
+				"early_parameter_rate": 1.51785476331783,
+				"late_parameter_rate": 1.51785708926051,
+				"ok": true,
+				"parameters": [
+					0.364587047952227,
+					0.514095742139034,
+					0.738359339418821,
+					0.887868262710981
+				]
+			},
+			"forward": "(-1.0, 0.0, 0.0)",
+			"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+			"map": "b",
+			"measurement": {
+				"early_intervals": 49,
+				"early_speed": 1.82279775641402,
+				"first_descent_time": 0.1075,
+				"first_timed_forward": true,
+				"forward_only": true,
+				"late_intervals": 49,
+				"late_speed": 6.27671552403849,
+				"moving_intervals": 240,
+				"screen_descending": true,
+				"source_edge_before_descent": true,
+				"stationary_intervals": 0
+			},
+			"normal": "(0.0, 1.0, 0.0)",
+			"reduced": true,
+			"samples": [
+				{
+					"elapsed": 0.0,
+					"phase": "DEPARTURE",
+					"position": "(0.0, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0025,
+					"phase": "DEPARTURE",
+					"position": "(-0.001296, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.005,
+					"phase": "DEPARTURE",
+					"position": "(-0.005113, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0075,
+					"phase": "DEPARTURE",
+					"position": "(-0.011344, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.01,
+					"phase": "DEPARTURE",
+					"position": "(-0.019882, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0125,
+					"phase": "DEPARTURE",
+					"position": "(-0.030619, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.015,
+					"phase": "DEPARTURE",
+					"position": "(-0.043448, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0175,
+					"phase": "DEPARTURE",
+					"position": "(-0.058262, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.02,
+					"phase": "DEPARTURE",
+					"position": "(-0.074954, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0225,
+					"phase": "DEPARTURE",
+					"position": "(-0.093417, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.025,
+					"phase": "DEPARTURE",
+					"position": "(-0.113543, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0275,
+					"phase": "DEPARTURE",
+					"position": "(-0.135226, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.03,
+					"phase": "DEPARTURE",
+					"position": "(-0.158357, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0325,
+					"phase": "DEPARTURE",
+					"position": "(-0.182831, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.035,
+					"phase": "DEPARTURE",
+					"position": "(-0.208539, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0375,
+					"phase": "DEPARTURE",
+					"position": "(-0.235375, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.04,
+					"phase": "DEPARTURE",
+					"position": "(-0.263232, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0425,
+					"phase": "DEPARTURE",
+					"position": "(-0.292001, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.045,
+					"phase": "DEPARTURE",
+					"position": "(-0.321577, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0475,
+					"phase": "DEPARTURE",
+					"position": "(-0.351851, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.05,
+					"phase": "DEPARTURE",
+					"position": "(-0.382718, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0525,
+					"phase": "DEPARTURE",
+					"position": "(-0.414068, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.055,
+					"phase": "DEPARTURE",
+					"position": "(-0.445796, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0575,
+					"phase": "DEPARTURE",
+					"position": "(-0.477794, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.06,
+					"phase": "DEPARTURE",
+					"position": "(-0.509955, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0625,
+					"phase": "DEPARTURE",
+					"position": "(-0.542172, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.065,
+					"phase": "DEPARTURE",
+					"position": "(-0.574337, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0675,
+					"phase": "DEPARTURE",
+					"position": "(-0.606344, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.07,
+					"phase": "DEPARTURE",
+					"position": "(-0.638084, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0725,
+					"phase": "DEPARTURE",
+					"position": "(-0.669452, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.075,
+					"phase": "DEPARTURE",
+					"position": "(-0.70034, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0775,
+					"phase": "DEPARTURE",
+					"position": "(-0.73064, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.08,
+					"phase": "DEPARTURE",
+					"position": "(-0.760246, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0825,
+					"phase": "DEPARTURE",
+					"position": "(-0.78905, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.085,
+					"phase": "DEPARTURE",
+					"position": "(-0.816945, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0875,
+					"phase": "DEPARTURE",
+					"position": "(-0.843825, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.09,
+					"phase": "DEPARTURE",
+					"position": "(-0.86958, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0925,
+					"phase": "DEPARTURE",
+					"position": "(-0.894106, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.095,
+					"phase": "DEPARTURE",
+					"position": "(-0.917293, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.0975,
+					"phase": "DEPARTURE",
+					"position": "(-0.939036, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1,
+					"phase": "DEPARTURE",
+					"position": "(-0.959227, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1025,
+					"phase": "DEPARTURE",
+					"position": "(-0.977759, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.105,
+					"phase": "DEPARTURE",
+					"position": "(-0.994525, 3.0, 0.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.009821, 3.000128, 0.000128)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.11,
+					"phase": "FALL_MOVING",
+					"position": "(-1.024999, 3.000828, 0.000829)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.040176, 3.002128, 0.002133)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.115,
+					"phase": "FALL_MOVING",
+					"position": "(-1.055351, 3.004023, 0.004036)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.070523, 3.006504, 0.00653)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.12,
+					"phase": "FALL_MOVING",
+					"position": "(-1.085691, 3.009563, 0.009609)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.100855, 3.013192, 0.013268)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.116013, 3.017384, 0.0175)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.131166, 3.022131, 0.022299)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.13,
+					"phase": "FALL_MOVING",
+					"position": "(-1.146312, 3.027426, 0.027658)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.161451, 3.033259, 0.033572)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.135,
+					"phase": "FALL_MOVING",
+					"position": "(-1.176581, 3.039624, 0.040034)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.191702, 3.046514, 0.047038)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.14,
+					"phase": "FALL_MOVING",
+					"position": "(-1.206814, 3.053919, 0.054577)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.221915, 3.061832, 0.062647)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.145,
+					"phase": "FALL_MOVING",
+					"position": "(-1.237004, 3.070247, 0.071239)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.252081, 3.079154, 0.080349)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.15,
+					"phase": "FALL_MOVING",
+					"position": "(-1.267145, 3.088546, 0.089969)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.282196, 3.098414, 0.100094)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.155,
+					"phase": "FALL_MOVING",
+					"position": "(-1.297232, 3.108753, 0.110718)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.312253, 3.119554, 0.121833)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.16,
+					"phase": "FALL_MOVING",
+					"position": "(-1.327258, 3.130808, 0.133435)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.342246, 3.142508, 0.145517)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.165,
+					"phase": "FALL_MOVING",
+					"position": "(-1.357216, 3.154647, 0.158072)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.372168, 3.167216, 0.171095)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.17,
+					"phase": "FALL_MOVING",
+					"position": "(-1.387101, 3.180208, 0.184578)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.402014, 3.193615, 0.198517)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.416906, 3.20743, 0.212904)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1775,
+					"phase": "FALL_MOVING",
+					"position": "(-1.431777, 3.221644, 0.227734)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.18,
+					"phase": "FALL_MOVING",
+					"position": "(-1.446625, 3.23625, 0.243)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1825,
+					"phase": "FALL_MOVING",
+					"position": "(-1.46145, 3.25124, 0.258696)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.185,
+					"phase": "FALL_MOVING",
+					"position": "(-1.476252, 3.266606, 0.274816)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1875,
+					"phase": "FALL_MOVING",
+					"position": "(-1.491029, 3.28234, 0.291354)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.19,
+					"phase": "FALL_MOVING",
+					"position": "(-1.505781, 3.298435, 0.308303)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1925,
+					"phase": "FALL_MOVING",
+					"position": "(-1.520506, 3.314883, 0.325657)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.195,
+					"phase": "FALL_MOVING",
+					"position": "(-1.535205, 3.331676, 0.34341)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.1975,
+					"phase": "FALL_MOVING",
+					"position": "(-1.549875, 3.348807, 0.361556)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2,
+					"phase": "FALL_MOVING",
+					"position": "(-1.564518, 3.366267, 0.380089)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2025,
+					"phase": "FALL_MOVING",
+					"position": "(-1.579131, 3.384049, 0.399001)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.205,
+					"phase": "FALL_MOVING",
+					"position": "(-1.593714, 3.402145, 0.418288)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2075,
+					"phase": "FALL_MOVING",
+					"position": "(-1.608266, 3.420547, 0.437943)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.21,
+					"phase": "FALL_MOVING",
+					"position": "(-1.622787, 3.439248, 0.45796)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2125,
+					"phase": "FALL_MOVING",
+					"position": "(-1.637275, 3.458239, 0.478331)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.215,
+					"phase": "FALL_MOVING",
+					"position": "(-1.651731, 3.477514, 0.499053)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2175,
+					"phase": "FALL_MOVING",
+					"position": "(-1.666152, 3.497063, 0.520117)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.22,
+					"phase": "FALL_MOVING",
+					"position": "(-1.680538, 3.51688, 0.541518)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.69489, 3.536957, 0.563249)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.225,
+					"phase": "FALL_MOVING",
+					"position": "(-1.709204, 3.557286, 0.585305)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.723482, 3.577858, 0.60768)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.23,
+					"phase": "FALL_MOVING",
+					"position": "(-1.737722, 3.598667, 0.630366)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2325,
+					"phase": "FALL_MOVING",
+					"position": "(-1.751924, 3.619705, 0.653357)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.235,
+					"phase": "FALL_MOVING",
+					"position": "(-1.766086, 3.640963, 0.676649)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2375,
+					"phase": "FALL_MOVING",
+					"position": "(-1.780208, 3.662434, 0.700233)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.24,
+					"phase": "FALL_MOVING",
+					"position": "(-1.794289, 3.684111, 0.724105)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2425,
+					"phase": "FALL_MOVING",
+					"position": "(-1.808328, 3.705985, 0.748258)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.245,
+					"phase": "FALL_MOVING",
+					"position": "(-1.822325, 3.728048, 0.772685)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2475,
+					"phase": "FALL_MOVING",
+					"position": "(-1.836278, 3.750294, 0.79738)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.25,
+					"phase": "FALL_MOVING",
+					"position": "(-1.850188, 3.772714, 0.822338)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2525,
+					"phase": "FALL_MOVING",
+					"position": "(-1.864053, 3.7953, 0.847552)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.255,
+					"phase": "FALL_MOVING",
+					"position": "(-1.877872, 3.818045, 0.873015)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2575,
+					"phase": "FALL_MOVING",
+					"position": "(-1.891645, 3.840941, 0.898722)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.26,
+					"phase": "FALL_MOVING",
+					"position": "(-1.905371, 3.86398, 0.924667)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2625,
+					"phase": "FALL_MOVING",
+					"position": "(-1.919049, 3.887154, 0.950842)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.265,
+					"phase": "FALL_MOVING",
+					"position": "(-1.932678, 3.910455, 0.977243)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2675,
+					"phase": "FALL_MOVING",
+					"position": "(-1.946257, 3.933877, 1.003862)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.27,
+					"phase": "FALL_MOVING",
+					"position": "(-1.959787, 3.95741, 1.030694)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2725,
+					"phase": "FALL_MOVING",
+					"position": "(-1.973265, 3.981048, 1.057731)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.275,
+					"phase": "FALL_MOVING",
+					"position": "(-1.986692, 4.004782, 1.084969)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.000066, 4.028605, 1.112401)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.28,
+					"phase": "FALL_MOVING",
+					"position": "(-2.013387, 4.052508, 1.14002)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.026654, 4.076485, 1.167821)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.285,
+					"phase": "FALL_MOVING",
+					"position": "(-2.039865, 4.100527, 1.195797)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.053021, 4.124627, 1.223942)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.29,
+					"phase": "FALL_MOVING",
+					"position": "(-2.066121, 4.148777, 1.252249)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.079163, 4.172968, 1.280713)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.295,
+					"phase": "FALL_MOVING",
+					"position": "(-2.092148, 4.197194, 1.309328)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.2975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.105073, 4.221447, 1.338086)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3,
+					"phase": "FALL_MOVING",
+					"position": "(-2.117939, 4.245718, 1.366982)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.130745, 4.27, 1.396011)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.305,
+					"phase": "FALL_MOVING",
+					"position": "(-2.143489, 4.294285, 1.425164)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.156172, 4.318566, 1.454437)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.31,
+					"phase": "FALL_MOVING",
+					"position": "(-2.168792, 4.342834, 1.483822)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.181348, 4.367083, 1.513315)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.315,
+					"phase": "FALL_MOVING",
+					"position": "(-2.193841, 4.391304, 1.542907)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.206268, 4.415488, 1.572595)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.32,
+					"phase": "FALL_MOVING",
+					"position": "(-2.21863, 4.43963, 1.602371)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.230925, 4.46372, 1.632228)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.243152, 4.487751, 1.662161)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.255312, 4.511715, 1.692163)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.33,
+					"phase": "FALL_MOVING",
+					"position": "(-2.267402, 4.535605, 1.722229)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.279423, 4.559413, 1.752352)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.335,
+					"phase": "FALL_MOVING",
+					"position": "(-2.291374, 4.583131, 1.782526)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.303253, 4.60675, 1.812744)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.34,
+					"phase": "FALL_MOVING",
+					"position": "(-2.31506, 4.630264, 1.843001)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.326795, 4.653666, 1.87329)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.345,
+					"phase": "FALL_MOVING",
+					"position": "(-2.338456, 4.676945, 1.903605)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.350043, 4.700096, 1.933939)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.35,
+					"phase": "FALL_MOVING",
+					"position": "(-2.361554, 4.72311, 1.964287)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.37299, 4.74598, 1.994643)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.355,
+					"phase": "FALL_MOVING",
+					"position": "(-2.384349, 4.768697, 2.025)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.395631, 4.791255, 2.055351)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.36,
+					"phase": "FALL_MOVING",
+					"position": "(-2.406834, 4.813644, 2.085691)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.417958, 4.835858, 2.116014)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.365,
+					"phase": "FALL_MOVING",
+					"position": "(-2.429003, 4.857889, 2.146312)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.439967, 4.879729, 2.176581)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.37,
+					"phase": "FALL_MOVING",
+					"position": "(-2.45085, 4.90137, 2.206813)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.46165, 4.922804, 2.237004)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.472368, 4.944024, 2.267145)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.483002, 4.965022, 2.297232)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.38,
+					"phase": "FALL_MOVING",
+					"position": "(-2.493552, 4.98579, 2.327258)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.504016, 5.00632, 2.357216)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.385,
+					"phase": "FALL_MOVING",
+					"position": "(-2.514395, 5.026605, 2.387101)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.524686, 5.046636, 2.416906)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.39,
+					"phase": "FALL_MOVING",
+					"position": "(-2.534891, 5.066406, 2.446625)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.545007, 5.085908, 2.476252)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.395,
+					"phase": "FALL_MOVING",
+					"position": "(-2.555033, 5.105133, 2.505781)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.3975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.56497, 5.124074, 2.535204)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4,
+					"phase": "FALL_MOVING",
+					"position": "(-2.574816, 5.142722, 2.564518)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.584571, 5.161071, 2.593714)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.405,
+					"phase": "FALL_MOVING",
+					"position": "(-2.594234, 5.179112, 2.622787)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.603804, 5.196837, 2.651731)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.41,
+					"phase": "FALL_MOVING",
+					"position": "(-2.613279, 5.21424, 2.680538)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.622661, 5.231312, 2.709204)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.415,
+					"phase": "FALL_MOVING",
+					"position": "(-2.631947, 5.248044, 2.737722)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.641137, 5.264431, 2.766086)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.42,
+					"phase": "FALL_MOVING",
+					"position": "(-2.65023, 5.280463, 2.794289)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.659225, 5.296133, 2.822325)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.668122, 5.311433, 2.850188)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.67692, 5.326356, 2.877872)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.43,
+					"phase": "FALL_MOVING",
+					"position": "(-2.685618, 5.340893, 2.905371)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.694215, 5.355037, 2.932678)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.435,
+					"phase": "FALL_MOVING",
+					"position": "(-2.702711, 5.36878, 2.959787)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.711104, 5.382115, 2.986692)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.44,
+					"phase": "FALL_MOVING",
+					"position": "(-2.719394, 5.395033, 3.013387)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.727581, 5.407527, 3.039865)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.445,
+					"phase": "FALL_MOVING",
+					"position": "(-2.735662, 5.419589, 3.066121)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.743639, 5.431211, 3.092148)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.45,
+					"phase": "FALL_MOVING",
+					"position": "(-2.751509, 5.442386, 3.117939)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.759272, 5.453105, 3.143489)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.455,
+					"phase": "FALL_MOVING",
+					"position": "(-2.766928, 5.463361, 3.168792)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.774475, 5.473147, 3.193841)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.46,
+					"phase": "FALL_MOVING",
+					"position": "(-2.781912, 5.482454, 3.218629)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.78924, 5.491274, 3.243152)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.465,
+					"phase": "FALL_MOVING",
+					"position": "(-2.796456, 5.4996, 3.267402)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.803561, 5.507425, 3.291374)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.47,
+					"phase": "FALL_MOVING",
+					"position": "(-2.810554, 5.51474, 3.31506)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.817433, 5.521537, 3.338456)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.824199, 5.527809, 3.361554)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.83085, 5.533548, 3.384349)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.48,
+					"phase": "FALL_MOVING",
+					"position": "(-2.837385, 5.538746, 3.406834)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.843804, 5.543396, 3.429003)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.485,
+					"phase": "FALL_MOVING",
+					"position": "(-2.850106, 5.54749, 3.45085)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.85629, 5.551019, 3.472368)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.49,
+					"phase": "FALL_MOVING",
+					"position": "(-2.862355, 5.553976, 3.493552)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.868301, 5.556354, 3.514395)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.495,
+					"phase": "FALL_MOVING",
+					"position": "(-2.874127, 5.558145, 3.534891)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.4975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.879832, 5.55934, 3.555033)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5,
+					"phase": "FALL_MOVING",
+					"position": "(-2.885415, 5.559932, 3.574816)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5025,
+					"phase": "FALL_MOVING",
+					"position": "(-2.890876, 5.559914, 3.594234)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.505,
+					"phase": "FALL_MOVING",
+					"position": "(-2.896213, 5.559277, 3.613279)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5075,
+					"phase": "FALL_MOVING",
+					"position": "(-2.901426, 5.558014, 3.631947)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.51,
+					"phase": "FALL_MOVING",
+					"position": "(-2.906515, 5.556117, 3.65023)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5125,
+					"phase": "FALL_MOVING",
+					"position": "(-2.911478, 5.553577, 3.668123)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.515,
+					"phase": "FALL_MOVING",
+					"position": "(-2.916314, 5.550389, 3.685618)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5175,
+					"phase": "FALL_MOVING",
+					"position": "(-2.921023, 5.546543, 3.702711)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.52,
+					"phase": "FALL_MOVING",
+					"position": "(-2.925605, 5.542032, 3.719394)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5225,
+					"phase": "FALL_MOVING",
+					"position": "(-2.930057, 5.536848, 3.735663)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.93438, 5.530984, 3.751509)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5275,
+					"phase": "FALL_MOVING",
+					"position": "(-2.938573, 5.524431, 3.766927)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.53,
+					"phase": "FALL_MOVING",
+					"position": "(-2.942635, 5.517181, 3.781912)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5325,
+					"phase": "FALL_MOVING",
+					"position": "(-2.946565, 5.509229, 3.796456)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.535,
+					"phase": "FALL_MOVING",
+					"position": "(-2.950362, 5.500564, 3.810554)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5375,
+					"phase": "FALL_MOVING",
+					"position": "(-2.954026, 5.491179, 3.824199)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.54,
+					"phase": "FALL_MOVING",
+					"position": "(-2.957556, 5.481068, 3.837385)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5425,
+					"phase": "FALL_MOVING",
+					"position": "(-2.960951, 5.470222, 3.850106)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.545,
+					"phase": "FALL_MOVING",
+					"position": "(-2.96421, 5.458632, 3.862355)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5475,
+					"phase": "FALL_MOVING",
+					"position": "(-2.967332, 5.446291, 3.874127)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.55,
+					"phase": "FALL_MOVING",
+					"position": "(-2.970318, 5.433193, 3.885415)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5525,
+					"phase": "FALL_MOVING",
+					"position": "(-2.973165, 5.419328, 3.896213)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.555,
+					"phase": "FALL_MOVING",
+					"position": "(-2.975873, 5.40469, 3.906515)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.978442, 5.38927, 3.916314)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.56,
+					"phase": "FALL_MOVING",
+					"position": "(-2.980871, 5.37306, 3.925605)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5625,
+					"phase": "FALL_MOVING",
+					"position": "(-2.983158, 5.356053, 3.93438)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.565,
+					"phase": "FALL_MOVING",
+					"position": "(-2.985303, 5.338242, 3.942635)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5675,
+					"phase": "FALL_MOVING",
+					"position": "(-2.987306, 5.319616, 3.950362)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.57,
+					"phase": "FALL_MOVING",
+					"position": "(-2.989165, 5.300172, 3.957556)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5725,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99088, 5.279898, 3.96421)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.575,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99245, 5.258789, 3.970318)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5775,
+					"phase": "FALL_MOVING",
+					"position": "(-2.993874, 5.236835, 3.975873)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.58,
+					"phase": "FALL_MOVING",
+					"position": "(-2.995151, 5.21403, 3.980871)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5825,
+					"phase": "FALL_MOVING",
+					"position": "(-2.996281, 5.190366, 3.985303)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.585,
+					"phase": "FALL_MOVING",
+					"position": "(-2.997263, 5.165834, 3.989165)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5875,
+					"phase": "FALL_MOVING",
+					"position": "(-2.998096, 5.140428, 3.99245)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.59,
+					"phase": "FALL_MOVING",
+					"position": "(-2.99878, 5.114139, 3.995151)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5925,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999312, 5.086959, 3.997263)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.595,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999694, 5.058881, 3.99878)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.5975,
+					"phase": "FALL_MOVING",
+					"position": "(-2.999923, 5.029898, 3.999694)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				},
+				{
+					"elapsed": 0.6,
+					"phase": "AWAITING_COMMIT",
+					"position": "(-3.0, 5.0, 4.0)",
+					"rotation_offset": "(0, 0, 0, 1)"
+				}
+			],
+			"source": "(0.0, 3.0, 0.0)",
+			"started": {
+				"attempt_id": 1,
+				"authoritative_final_orientation": 0,
+				"authorized_trajectory": {
+					"departure_points2": [
+						"(0, 6, 0)",
+						"(-2, 6, 0)"
+					],
+					"descent_control_points2": [
+						"(-2, 6, 0)",
+						"(-4, 6, 0)",
+						"(-6, 14, 8)",
+						"(-6, 10, 8)"
+					],
+					"trajectory_version": "pfall.departure_cubic.v1"
+				},
+				"camera_quadrant": 1,
+				"connection_id": "pfall_b",
+				"contract_version": "game_feel.event.v2",
+				"event_id": 1,
+				"intended_move_direction": 2,
+				"interruption_reason": null,
+				"level_run_id": "9481bc873c8548ae4185a7ad0421f9f9",
+				"motion_profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+				"motion_profile_id": "pfall_b_yellow_departure_cubic_v1",
+				"orientation_policy": "PRESERVE",
+				"phase": "STARTED",
+				"presentation_duration_seconds": 0.6,
+				"presentation_identity": {
+					"attempt_id": 1,
+					"generation": 1,
+					"level_run_id": "9481bc873c8548ae4185a7ad0421f9f9",
+					"session_id": "08de99d831c6669489e4f295fadd0b1d"
+				},
+				"reason_category": "NONE",
+				"result": {
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"changed": true,
+					"global_kind": 0,
+					"issues": [],
+					"next_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"previous_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"rejection_code": 0,
+					"status": 0
+				},
+				"safety_verdict": {
+					"evidence_ref": {
+						"after_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"before_statekey": "statekey.game_feel.v1:{\"level_hash\":\"331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+						"connection_id": "pfall_b",
+						"kind": "dyadic_cubic_cube_sweep.v1",
+						"level_hash": "331725e09d6af1ee57193f540c7e1d2487f469e8ea947ec54553ecb363f977ce",
+						"profile_hash": "b61ae174b424a89031646066e692b48df8d12af20557bec563b1fac63b2573f4",
+						"query": "Safety.validate_perspective_motion"
+					},
+					"issues": [],
+					"status": "SAFE"
+				},
+				"schema_version": 2,
+				"semantic": "PERSPECTIVE_FALL_APPLIED",
+				"session_id": "08de99d831c6669489e4f295fadd0b1d",
+				"source_face": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"source_frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"source_pose": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"target_face": {
+					"cube_id": "target",
+					"face": 4,
+					"layer": 0
+				},
+				"target_pose": {
+					"location": {
+						"cube_id": "target",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"transition_identity": {
+					"generation": 1,
+					"is_global": false,
+					"level_run_id": "9481bc873c8548ae4185a7ad0421f9f9",
+					"session_id": "08de99d831c6669489e4f295fadd0b1d",
+					"transaction_id": 1
+				},
+				"world_id": 0
+			},
+			"support_half_extent": 0.5
+		}
+	],
+	"scope": "NEW_PROFILE_REAL",
+	"task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01"
+}

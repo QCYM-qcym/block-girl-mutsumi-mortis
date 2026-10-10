@@ -1,0 +1,85 @@
+{
+  "task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01",
+  "status": "TEST_PREPARATION_READY_WITH_EXPECTED_BEHAVIOR_RED",
+  "cases": {
+    "PASS": 0,
+    "FAIL": 0,
+    "PENDING": 10
+  },
+  "baseline_red": {
+    "checks": 1020,
+    "exit_code": 1,
+    "stderr_bytes": 0,
+    "doubles": [],
+    "source_drift": [],
+    "status": "EXPECTED_BEHAVIOR_RED",
+    "failures": 6,
+    "source_head": "4506b9b0896fc2d4b31b9a691afb3eb96bf929ef",
+    "production_candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+    "path": "docs/beta-sprint/game-feel-owner-03/forward-drop-01/evidence/fd_baseline_red_03/process.json",
+    "process_sha256": "88dba239ca050a408208d454cfb3e4e199db0256c706a45aeec01c85c94e764d",
+    "accepts_new_task": false,
+    "observations": [
+      {
+        "map": "a",
+        "initial_timed_forward": false,
+        "stationary_intervals": 36,
+        "stationary_seconds": 0.09,
+        "early_geometry_rate": 1.78571444417456,
+        "late_geometry_rate": 1.78571357419659,
+        "cadence_accelerates": false,
+        "source_edge_before_descent": true,
+        "target": {
+          "location": {
+            "cube_id": "target",
+            "face": 4,
+            "layer": 0
+          },
+          "orientation": 0
+        }
+      },
+      {
+        "map": "b",
+        "initial_timed_forward": false,
+        "stationary_intervals": 36,
+        "stationary_seconds": 0.09,
+        "early_geometry_rate": 1.78571337343244,
+        "late_geometry_rate": 1.78571518309816,
+        "cadence_accelerates": false,
+        "source_edge_before_descent": true,
+        "target": {
+          "location": {
+            "cube_id": "target",
+            "face": 4,
+            "layer": 0
+          },
+          "orientation": 0
+        }
+      }
+    ]
+  },
+  "unit": [
+    {
+      "checks": 8,
+      "scope": "UNIT_ONLY",
+      "real_pass": false
+    },
+    {
+      "checks": 52,
+      "scope": "UNIT_ONLY",
+      "real_pass": false
+    }
+  ],
+  "script_parse": "fourOwner03GDScripts actualengineexit0/stderr0; fourofficialUIDsidecars",
+  "formal_graphical": "NOT_RUN_WINDOW_PENDING",
+  "natural_graphical": "NOT_RUN_NEW_CANDIDATE_PENDING",
+  "dependency_pending": [],
+  "production_changes": [],
+  "old_evidence_reuse": false,
+  "contract_mismatch": "NONE",
+  "push": "NOT_RUN",
+  "delivered_animation_commit": "3b60de04f4c14e2d6576550acbf968e7c4b0be51",
+  "combined_candidate": "c89a87584d8d5db0916d4b0e516c449860063223",
+  "graphical_window": "AUTHORIZED_BY00_FOR_THIS_CANDIDATE",
+  "execution_pending": true
+}

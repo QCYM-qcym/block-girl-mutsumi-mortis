@@ -1,0 +1,230 @@
+{
+  "task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01",
+  "stage": "NEW_CANDIDATE_REAL_COMPLETE",
+  "quality_base": "4506b9b0896fc2d4b31b9a691afb3eb96bf929ef",
+  "observed00baseline": "44f3d3db190b616f4121516576337ed8d40f6ae4",
+  "new_animation_commit": "3b60de04f4c14e2d6576550acbf968e7c4b0be51",
+  "combined_candidate": "c89a87584d8d5db0916d4b0e516c449860063223",
+  "counts": {
+    "PASS": 10,
+    "FAIL": 0,
+    "PENDING": 0
+  },
+  "cases": [
+    {
+      "id": "CASE01",
+      "requirement": "Input direction advances first",
+      "expected": "First positive-time actual10A/realRenderer sample moves forward; realMapper/nativeWASD identity.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_sampler_green_01/process.json",
+        "evidence/fd_formal_green_01/process.json",
+        "evidence/fd_input_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "baseline_behavior": "FAIL_REPRODUCED_BY_REAL_AUTHORIZED_SAMPLER; FINAL_ACCEPTANCE_PENDING_DELIVERY_AND_GRAPHICS",
+      "actual": "First positive-time sample and actual rendered frame move in the formal input direction; native held input exercised separately.",
+      "shared_natural_reference": "evidence/fd_natural_reference_03/reference_receipt.json",
+      "shared_checks_counted_as_independent": false
+    },
+    {
+      "id": "CASE02",
+      "requirement": "Leave source support edge before descent",
+      "expected": "FormalSpatial source unitcube halfextent0.5; COM forward projection>0.5 before leaving source supportplane; Runtime STARTED remains reservedsingleTransition.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_sampler_green_01/process.json",
+        "evidence/fd_formal_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "Actual center clears the formal half-unit source edge before leaving the support plane; Runtime still reserves one native transition.",
+      "shared_natural_reference": "evidence/fd_natural_reference_03/reference_receipt.json",
+      "shared_checks_counted_as_independent": false
+    },
+    {
+      "id": "CASE03",
+      "requirement": "Yellow platform TOP landing",
+      "expected": "Formaltarget/TOP/Anchor and actualbottom support contact, impact/rebound/settled finalpose.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_core_green_01/process.json",
+        "evidence/fd_formal_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "Target/TOP and final pose match Runtime; shared current-candidate natural capture has maximum bottom contact error 5.96e-8.",
+      "shared_natural_reference": "evidence/fd_natural_reference_03/reference_receipt.json",
+      "shared_checks_counted_as_independent": false
+    },
+    {
+      "id": "CASE04",
+      "requirement": "Wrong blue is not a legal target",
+      "expected": "Actualfourcubes; blue_reference nonwalkable and formalconnection targets target/TOP; no fabricated auxiliaryblock.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_core_green_01/process.json",
+        "evidence/fd_formal_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "Four visible canonical cubes, nonwalkable blue_reference, authoritative target/TOP; no animation retargeting.",
+      "shared_natural_reference": "evidence/fd_natural_reference_03/reference_receipt.json",
+      "shared_checks_counted_as_independent": false
+    },
+    {
+      "id": "CASE05",
+      "requirement": "No floating or intermediate pause",
+      "expected": "Actualpositive-time motion; early/later descent speed recorded againstofficialView; source-forward-edge-drop-contact rendered phases. Humanfeel remainsNOT_RUN.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_sampler_green_01/process.json",
+        "evidence/fd_formal_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "baseline_behavior": "FAIL_REPRODUCED_BY_REAL_AUTHORIZED_SAMPLER; FINAL_ACCEPTANCE_PENDING_DELIVERY_AND_GRAPHICS",
+      "actual": "No positive-time stationary interval; all four formal rendered runs have late geometry-parameter rate more than1.2 times the early rate. This does not claim globally monotone physical/screen speed or Human Feel.",
+      "shared_natural_reference": "evidence/fd_natural_reference_03/reference_receipt.json",
+      "shared_checks_counted_as_independent": false
+    },
+    {
+      "id": "CASE06",
+      "requirement": "Fall then Roll to Goal",
+      "expected": "OriginalFULL_GRAPH selectedvalidatedwitness, realmode1Fall/Landing/Roll/Goal and exactfullstate/key/orientation.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_core_green_01/process.json",
+        "evidence/fd_formal_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "Fresh UNFILTERED FULL_GRAPH original witness, Trace.validate and validate_semantics, distinct mode0 and real mode1 Fall/Landing/Roll/Goal."
+    },
+    {
+      "id": "CASE07",
+      "requirement": "Reset cancels Fall and restores state",
+      "expected": "NativeR duringnewmotion Fall/Landing; actualcancellation/generation/noLate; exactspawn/input recovery.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_lifecycle_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "18 lifecycle cases:18 cancelled old steps,0 late completions,36 fresh matched steps; native Reset and scene exit restore scoped state."
+    },
+    {
+      "id": "CASE08",
+      "requirement": "Held input cannot duplicate Fall",
+      "expected": "RealGodotnativeWASD hold/spam/release/reset; oneFall identity/commit and subsequent input usable.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_input_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "25 checks against native held/spammed WASD;66/68 observed frames across Fall/Landing/Idle; one Fall start/commit and fresh input after release/reset."
+    },
+    {
+      "id": "CASE09",
+      "requirement": "Illegal camera and connection rejected",
+      "expected": "Realcamera authorvariants0/2/3 and absent/invalidconnection; unchangedstate/key/zeroCommit; noUnitdoubles asReal.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_core_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "Actual illegal camera0/2/3 and missing/invalid connection rejection; no state mutation or premature commit."
+    },
+    {
+      "id": "CASE10",
+      "requirement": "Old Fall and L01-L05 regression",
+      "expected": "Freshschema1/schema2 historicalhash/pathreplay, realPconn andnativeShellL01-L05 focused; notFoundationfullmatrix.",
+      "status": "PASS",
+      "dependency_pending": [],
+      "new_real_evidence": [
+        "evidence/fd_legacy_profile_green_01/process.json",
+        "evidence/fd_legacy_pconn_green_01/process.json",
+        "evidence/fd_legacy_graphical_green_01/process.json"
+      ],
+      "old_result_reuse": false,
+      "actual": "Fresh old schema1/schema2 profile16, Perspective Connection66 and actual Shell/P01/L01-L05 focused graphical206 checks."
+    }
+  ],
+  "baseline_sampler_red": {
+    "checks": 1020,
+    "exit_code": 1,
+    "stderr_bytes": 0,
+    "doubles": [],
+    "source_drift": [],
+    "status": "EXPECTED_BEHAVIOR_RED",
+    "failures": 6,
+    "source_head": "4506b9b0896fc2d4b31b9a691afb3eb96bf929ef",
+    "production_candidate": "984f275913b1495fc09f92743fb0f665715f50c1",
+    "path": "docs/beta-sprint/game-feel-owner-03/forward-drop-01/evidence/fd_baseline_red_03/process.json",
+    "process_sha256": "88dba239ca050a408208d454cfb3e4e199db0256c706a45aeec01c85c94e764d",
+    "accepts_new_task": false,
+    "observations": [
+      {
+        "map": "a",
+        "initial_timed_forward": false,
+        "stationary_intervals": 36,
+        "stationary_seconds": 0.09,
+        "early_geometry_rate": 1.78571444417456,
+        "late_geometry_rate": 1.78571357419659,
+        "cadence_accelerates": false,
+        "source_edge_before_descent": true,
+        "target": {
+          "location": {
+            "cube_id": "target",
+            "face": 4,
+            "layer": 0
+          },
+          "orientation": 0
+        }
+      },
+      {
+        "map": "b",
+        "initial_timed_forward": false,
+        "stationary_intervals": 36,
+        "stationary_seconds": 0.09,
+        "early_geometry_rate": 1.78571337343244,
+        "late_geometry_rate": 1.78571518309816,
+        "cadence_accelerates": false,
+        "source_edge_before_descent": true,
+        "target": {
+          "location": {
+            "cube_id": "target",
+            "face": 4,
+            "layer": 0
+          },
+          "orientation": 0
+        }
+      }
+    ]
+  },
+  "formal_graphical": "PASS_8_MATCHED_STEPS",
+  "natural_graphical": "PASS_SHARED00_REFERENCE_12_ACTUALLY_VIEWED_FRAMES",
+  "human_feel": "NOT_RUN",
+  "build": "NOT_CREATED_BY03",
+  "contract_mismatch": "NONE",
+  "pixel_case": "NOT_IN_THIS10CASE_TASK",
+  "push": "NOT_RUN",
+  "measurement_unit": {
+    "checks": 8,
+    "scope": "UNIT_ONLY",
+    "real_pass": false
+  },
+  "python_unit": {
+    "checks": 52,
+    "scope": "UNIT_ONLY",
+    "real_pass": false
+  },
+  "delivered_animation_commit": "3b60de04f4c14e2d6576550acbf968e7c4b0be51",
+  "graphical_window": "RELEASED",
+  "dependency_pending": [],
+  "execution_pending": false,
+  "scope": "TEN_CASE_QUANTITATIVE_REAL; NOT_FULL94_OR_HUMAN_FEEL_ACCEPTANCE"
+}

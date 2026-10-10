@@ -1,0 +1,27 @@
+{
+  "scope": "PARSE_ONLY",
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "jobs": [
+    {
+      "job": "uid",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "job": "forward_drop_observations",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "job": "test_forward_drop_sampler",
+      "exit": 1,
+      "stderr_bytes": 409
+    },
+    {
+      "job": "test_forward_drop_graphical",
+      "exit": 0,
+      "stderr_bytes": 0
+    }
+  ],
+  "runtime_pass": false
+}
