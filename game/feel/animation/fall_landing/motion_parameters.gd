@@ -30,14 +30,15 @@ func issues() -> Array:
 	return result
 
 func timing_table() -> Dictionary:
-	# Custom curves are frozen into a monotone piecewise-linear timing table.
-	# This makes the entire applied easing provably bounded, including intervals
-	# between knots; the original cubic Curve is never used after begin().
+	# Freeze authored values. FallMotion interpolates these monotonically with
+	# bounded Hermite slopes; this changes timing, never the authorized geometry.
+	# A default two-knot interval spreads acceleration across the whole fall.
+	if fall_curve == null: return {"ok": true, "issues": [], "values": PackedFloat64Array([0.0, 1.0])}
 	var values: PackedFloat64Array = []
 	var previous := 0.0
 	for i in 257:
 		var t := float(i) / 256.0
-		var value := t * t if fall_curve == null else fall_curve.sample(t)
+		var value := fall_curve.sample(t)
 		if not is_finite(value) or value < 0.0 or value > 1.0 or (i > 0 and value < previous):
 			return {"ok": false, "issues": [{"path": "parameters.fall_curve", "message": "Curve must be finite, monotone and bounded by [0,1]."}]}
 		values.append(value)

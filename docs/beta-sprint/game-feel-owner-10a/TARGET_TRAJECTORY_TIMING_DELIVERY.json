@@ -1,0 +1,68 @@
+{
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "base_sha": "4781dfcf16757ccbde13e54ee449f1cf00174944",
+  "status": "TIMING_READY_CURVE_PENDING",
+  "push": "NOT_RUN",
+  "authority": false,
+  "source_bindings": [
+    {
+      "sha256": "f35216dbdcccaac60ffcfc3e7177aad9aff2fc9777d6b4ac21483f99c2222e14",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\fall_motion.gd"
+    },
+    {
+      "sha256": "a790b10ae7b5668e3f009a46b3d3d2516f3d2b9508002060b91c99f6cc649b70",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\fall_motion.gd.uid"
+    },
+    {
+      "sha256": "7b8f2e8e39e05a2046dae83b36cdccdcc7c365e0e1f12cd4a01819b56a6da0b6",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\fall_visual_state.gd"
+    },
+    {
+      "sha256": "782b143eb4c19d0de4f607b3e843c5e182353911501878f047309a3885823ee9",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\fall_visual_state.gd.uid"
+    },
+    {
+      "sha256": "3d5773f7a5a1c12ac3c98c87027d3da04ad16b6655a8a0d657aee7ce82e9fd80",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\landing_motion.gd"
+    },
+    {
+      "sha256": "ff1221de65442a9943d579c784f230bca1a3f635100900497c1ddb026d8b80f5",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\landing_motion.gd.uid"
+    },
+    {
+      "sha256": "6cacbb2b7e0b78acf61c8d9e4fa06b26a0e6914745c8d2a0361d64dabb68cdc1",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\motion_parameters.gd"
+    },
+    {
+      "sha256": "507b1eac12ae5d54e79e3f53a44ac0c469cca6d5143805147d7fdd896817054d",
+      "path": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation\\game\\feel\\animation\\fall_landing\\motion_parameters.gd.uid"
+    }
+  ],
+  "evidence": [
+    {
+      "source_changes": [],
+      "checks": 4430,
+      "profile_isolated": true,
+      "process_sha256": "d891fd32095936ea4c58ed6c05368daf2bedc8209849476875ac91c5182bdbb8",
+      "case": "trajectory_timing_delivery_unit_01",
+      "status": "PASS",
+      "failures": [],
+      "copied_source_changes": []
+    },
+    {
+      "source_changes": [],
+      "checks": 251,
+      "profile_isolated": true,
+      "process_sha256": "5e0bc4df201d9da49e4195fbca691a04d6a6b29b56ed372fb803ab92c8a2b4de",
+      "case": "trajectory_timing_delivery_preview_01",
+      "status": "PASS",
+      "failures": [],
+      "copied_source_changes": []
+    }
+  ],
+  "pending": [
+    "01 delivered curved SAFE profile",
+    "09 yellow target maps",
+    "00 natural graphical bottom contact"
+  ]
+}
