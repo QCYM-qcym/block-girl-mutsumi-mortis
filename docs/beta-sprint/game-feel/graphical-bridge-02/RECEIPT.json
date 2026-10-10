@@ -1,0 +1,47 @@
+{
+  "task": "PFALL_GRAPHICAL_COMPLETION_BRIDGE_02",
+  "status": "FORMAL_GRAPHICAL_COMPLETION_BRIDGE_VERIFIED",
+  "integration_candidate": "85bcb100dc069e726d5a3997a06b4b406479ccb5",
+  "branch": "feat/game-feel-full-slice-01",
+  "validated_production_source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+  "production_diff_after_validation": [],
+  "owner01": "c60912b494baccb942e3f37f7c28d0c0c035dcc8",
+  "owner03": "01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c",
+  "owner10A": "4781dfcf16757ccbde13e54ee449f1cf00174944; unchanged",
+  "contract": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "contract_mismatch": "NONE",
+  "formal_graphical": {
+    "status": "PASS",
+    "matched_steps_per_independent_repeat_run": 8,
+    "maps": "A/B each2 repeats,2 steps per route",
+    "00_checks": 101,
+    "03_checks": 213,
+    "doubles": []
+  },
+  "00_post_merge_checks": 469,
+  "03_selected_checks": 2403,
+  "matrix": {
+    "PASS": 54,
+    "FAIL": 0,
+    "PENDING": 40,
+    "path": "docs/beta-sprint/game-feel-owner-03/graphical-bridge-02/MATRIX_94.json",
+    "sha256": "4a74ab8c9b15c8ba61cce07398277833bc478b9c6bc1bc850f425fb984846b17"
+  },
+  "reset_cancellation_orientation_statekey_visual_pose": "PASS in executed scope",
+  "new_confirmed_open_p0_p1": [
+    0,
+    0
+  ],
+  "open_p2": [
+    "PFALL_BRIDGE_RESET_REASON_02 diagnostic directFacade.reset label; nativeKEY_R RESET and authoritative state correct"
+  ],
+  "unknown_pause_observation": "03 first full_slice230/8fail retained; same production rerun230PASS; first cause not evidenced; extra Native focus interrupted cases remainPENDING",
+  "preservation_checks": 13325,
+  "old_qa_builds": "UNCHANGED; this fix not substituted into old packages",
+  "logical_natural_formal": "SEPARATE",
+  "human_qa": "NOT_RUN for this source change",
+  "formal_integration_ref": "99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff",
+  "formal_promotion": "NEXT_WINDOW_PENDING; today2closed windows",
+  "superseding_additional_design_task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01 pending independent new design acceptance; oldCore/Replay PASS not that acceptance",
+  "push": "NOT_RUN"
+}
