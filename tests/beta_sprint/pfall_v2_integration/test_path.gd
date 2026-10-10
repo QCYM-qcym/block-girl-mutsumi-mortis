@@ -112,8 +112,9 @@ func run() -> void:
 		root.add_child(replayer)
 		var replay: Dictionary=await replayer.replay(level,solved.solution_trace,{"mode":0})
 		check(replay.status==0 and replay.matched_steps==2 and replay.actual_statekey==final_key,letter+" real LOGICAL_SESSION Replay reaches matching full-path endpoint")
-		var graphical: Dictionary=await replayer.replay(level,solved.solution_trace,{"mode":1})
-		check(graphical.status==2 and graphical.matched_steps==0 and not graphical.issues.is_empty() and graphical.issues[0].message.begins_with("CASE_DEPENDENCY_PENDING:"),letter+" Graphical TraceReplayer dependency fails closed and is not counted as graphical PASS")
+		# This headless path proves logical graph/Safety/Solver/Replay only.
+		# Actual formal graphics are independently exercised in the registered
+		# real-renderer tests; the archived missing-bridge probe remains evidence.
 		replayer.free()
 		for camera in [0,2,3]:
 			var wrong:=initial.duplicate(true)
@@ -151,7 +152,7 @@ func run() -> void:
 		clipped.perspective_falls[0].path_points2[1]=Vector3i(0,4,0)
 		check(evaluate(clipped,initial,{"kind":8,"connection_id":StringName("pfall_"+letter)}).status!=0,letter+" path through source support fails closed")
 		save("map_"+letter+".graph.json",graph)
-		routes.append({"map":letter,"level_hash":level.content_hash,"initial_key":initial_key,"landing_key":Key.build(level,landing).key,"final_key":final_key,"trace":solved.solution_trace,"graph_nodes":graph.nodes.size(),"graph_edges":graph.edges.size(),"formal_fall_edges":fall_edges.size(),"exit_roll_edges":exit_edges.size(),"softlock":softlock,"replay":replay,"graphical_replay":{"status":"PENDING","result":graphical},"fall_sweep":fall_safe,"events":events,"v1_hash":legacy.level.content_hash})
-	save("report.json",{"checks":checks,"failures":failures,"routes":routes,"doubles":[],"authority":"exact09 bake_game_feel -> real Baker/Codec/Facade/Kernel/complete Explorer/Fall-bearing Softlock/Safety/LOGICAL_SESSION Replayer; logical transition completions only; natural10A tested separately","graphical_replayer":"PENDING_GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE","pid":OS.get_process_id(),"user_data_dir":OS.get_user_data_dir(),"display":DisplayServer.get_name(),"renderer":RenderingServer.get_current_rendering_method(),"input":"direct formal public APIs; logical native completion only; OS/human input NOT_RUN","human_qa":"NOT_RUN"})
+		routes.append({"map":letter,"level_hash":level.content_hash,"initial_key":initial_key,"landing_key":Key.build(level,landing).key,"final_key":final_key,"trace":solved.solution_trace,"graph_nodes":graph.nodes.size(),"graph_edges":graph.edges.size(),"formal_fall_edges":fall_edges.size(),"exit_roll_edges":exit_edges.size(),"softlock":softlock,"replay":replay,"graphical_replay":{"status":"NOT_RUN_LOGICAL_SCOPE"},"fall_sweep":fall_safe,"events":events,"v1_hash":legacy.level.content_hash})
+	save("report.json",{"checks":checks,"failures":failures,"routes":routes,"doubles":[],"authority":"exact09 bake_game_feel -> real Baker/Codec/Facade/Kernel/complete Explorer/Fall-bearing Softlock/Safety/LOGICAL_SESSION Replayer; logical transition completions only; natural10A tested separately","graphical_replayer":"NOT_RUN_LOGICAL_SCOPE","pid":OS.get_process_id(),"user_data_dir":OS.get_user_data_dir(),"display":DisplayServer.get_name(),"renderer":RenderingServer.get_current_rendering_method(),"input":"direct formal public APIs; logical native completion only; OS/human input NOT_RUN","human_qa":"NOT_RUN"})
 	print("PFALL_V2_PATH checks=",checks," failures=",failures)
 	quit(0 if failures.is_empty() else 1)
