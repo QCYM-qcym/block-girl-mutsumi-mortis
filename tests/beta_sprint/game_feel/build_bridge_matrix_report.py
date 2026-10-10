@@ -34,7 +34,8 @@ def require(condition, message="Invalid quality evidence"):
 def receipt(name):
     folder = OLD / "evidence" / name
     process = read(folder / "process.json")
-    raw = read(folder / "report.json")
+    raw_path = folder / ("matrix.json" if process["job"] == "full_slice_graphical" else "report.json")
+    raw = read(raw_path)
     require(process["status"] == "PASS" and process["exit_code"] == 0)
     require(type(process["checks"]) is int and process["checks"] > 0)
     require(process["checks"] == raw["checks"] and raw["failures"] == process["failures"] == [])
@@ -48,7 +49,7 @@ def receipt(name):
         "name": name, "job": process["job"], "execution_source": process["execution_head"],
         "checks": process["checks"], "status": "PASS", "mode": process["mode"], "pid": process["pid"],
         "process": relative(folder / "process.json"), "process_sha256": sha(folder / "process.json"),
-        "report": relative(folder / "report.json"), "report_sha256": sha(folder / "report.json"),
+        "report": relative(raw_path), "report_sha256": sha(raw_path),
         "source_sha256": process["source_sha256"], "doubles": [], "stderr_bytes": 0,
     }, raw
 
@@ -64,7 +65,7 @@ def build(formal_name, lifecycle_name, regressions):
     records, reports = {}, {}
     for name in names:
         records[name], reports[name] = receipt(name)
-    require({records[n]["job"] for n in regressions} == {"natural", "spam", "lifecycle", "audio_lifecycle", "legacy_pconn", "logical_path", "swept_safety", "legacy_focused"}, "Require the exact focused regression job set")
+    require({records[n]["job"] for n in regressions} == {"natural", "spam", "lifecycle", "audio_lifecycle", "legacy_pconn", "logical_path", "swept_safety", "legacy_focused", "full_slice_graphical"}, "Require the exact focused regression job set")
     require(all(r["execution_source"] == records[formal_name]["execution_source"] for r in records.values()), "New selected receipts must share the exact candidate execution HEAD")
     production_roots = ("foundation/", "game/feel/", "game/shell/", "experiments/game_feel_01/", "production/")
     production = {p: h for p, h in records[formal_name]["source_sha256"].items() if p.startswith(production_roots)}
@@ -116,8 +117,11 @@ def build(formal_name, lifecycle_name, regressions):
         require(all(s["transition_identity"] != row["old_identity"] for s in row["new_steps"]))
         require(row["old_late_completions"] == [])
         require(len(row["old_actual_cancellations"]) == 1 and row["old_actual_cancellations"][0]["identity"] == row["old_identity"])
+    full_name = next(n for n in regressions if records[n]["job"] == "full_slice_graphical")
+    full = reports[full_name]
+    require({(r["map"], r["reduced_motion"]) for r in full["observations"]["routes"]} == {("a", False), ("a", True), ("b", False), ("b", True)}, "Require actual A/B normal/reduced full-slice paths")
     inventory = deepcopy(baseline["cases"])
-    upgrades = {"FORMAL_REPLAY", "CORE_SAFETY_SOLVER_REPLAY"}
+    upgrades = {"FORMAL_REPLAY", "CORE_SAFETY_SOLVER_REPLAY", "A_POSE_EDGE_RECOIL"}
     for row in inventory:
         row["baseline_evidence"] = deepcopy(row["evidence"])
         row["evidence"] = [relative(OLD / "evidence" / name) for name in row["evidence"]]
@@ -127,22 +131,27 @@ def build(formal_name, lifecycle_name, regressions):
             row["previous_status"] = "PENDING"
             row["status"] = "PASS"
             row["execution_source"] = records[formal_name]["execution_source"]
-            row["evidence"] += [records[formal_name]["report"], records[lifecycle_name]["report"]]
-            row["evidence_origin"] = "Baseline real Solver/Safety plus new formal graphical original-witness proof"
-            row["scope_or_missing"] = "Actual original FULL_GRAPH witness; A/B Fall→natural Landing→Roll U_POS→Goal, two matched steps/map, repeated deterministic state/key with fresh identity; public native Reset/exit/remove-readd/timeout isolation. No algorithm doubles."
+            if row["id"] == "A_POSE_EDGE_RECOIL":
+                row["evidence"] += [records[full_name]["report"]]
+                row["evidence_origin"] = "Actual integrated10B shared Presenter; real Shell inputs and renderer"
+                row["scope_or_missing"] = "Actual A/B normal/reduced EDGE lean and neutral endpoint; complete StateKey/Orientation unchanged, actual physical source transform restored. Release/rearm, Reset, Fall and Roll preemption observed. This pose row does not establish all Edge input/audio/VFX predicates."
+            else:
+                row["evidence"] += [records[formal_name]["report"], records[lifecycle_name]["report"]]
+                row["evidence_origin"] = "Baseline real Solver/Safety plus new formal graphical original-witness proof"
+                row["scope_or_missing"] = "Actual original FULL_GRAPH witness; A/B Fall→natural Landing→Roll U_POS→Goal, two matched steps/map, repeated deterministic state/key with fresh identity; public native Reset/exit/remove-readd/timeout isolation. No algorithm doubles."
             row["dependencies"] = []
         elif row["status"] == "PENDING":
             row["current_scope_note"] = "Pending complete row evidence. Bridge/Replayer are now delivered; baseline missing-dependency text is historical. Native lifecycle assertions alone do not establish full VFX/audio/drag/focus/Human predicates. Integrated 10B/Audio/UI availability does not confer Real PASS."
     counts = dict(Counter(r["status"] for r in inventory))
     counts.setdefault("FAIL", 0)
-    require(counts == {"PASS": 53, "PENDING": 41, "FAIL": 0})
+    require(counts == {"PASS": 54, "PENDING": 40, "FAIL": 0})
     report = {
         "task": "PFALL_GRAPHICAL_COMPLETION_BRIDGE_02", "report": "PFALL_V2_QUALITY_MATRIX_REPORT",
         "contract_mismatch": "NONE", "contract_sha256": CONTRACT_SHA256,
         "sealed_baseline": {"path": relative(baseline_path), "sha256": sha(baseline_path),
                             "execution_source": baseline["execution_source"], "counts": baseline["matrix_counts"]},
         "core_69": baseline["core_69"], "matrix_counts": counts, "cases": inventory,
-        "counting": "Cumulative 94 distinct predicates; 51 retained baseline rows and 2 upgraded rows. Not 53 fresh candidate executions. Historical Core69 assertions remain exactly three rows; no totals added across shared row references.",
+        "counting": "Cumulative 94 distinct predicates; 51 retained baseline rows and 3 upgraded rows. Not 54 fresh candidate executions. Historical Core69 assertions remain exactly three rows; no totals added across shared row references.",
         "upgraded_rows": sorted(upgrades), "formal_graphical": "PASS",
         "formal_graphical_endpoints": endpoints, "formal_graphical_matched_steps": 8,
         "formal_graphical_lifecycle_new_run_matched_steps": 36,
@@ -159,7 +168,7 @@ def build(formal_name, lifecycle_name, regressions):
     OUT.mkdir(exist_ok=True, parents=True)
     (OUT / "MATRIX_94.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     lines = ["# PFALL_V2_QUALITY_MATRIX_REPORT", "",
-             "Cumulative matrix: **53 PASS / 0 FAIL / 41 PENDING**. Only FORMAL_REPLAY and CORE_SAFETY_SOLVER_REPLAY are upgraded. The prior 51 rows retain their historical execution identity; this is not a fresh 94-case acceptance.", "",
+             "Cumulative matrix: **54 PASS / 0 FAIL / 40 PENDING**. FORMAL_REPLAY, CORE_SAFETY_SOLVER_REPLAY and A_POSE_EDGE_RECOIL are upgraded. The prior 51 rows retain their historical execution identity; this is not a fresh 94-case acceptance.", "",
              "Formal Graphical: **PASS**, A/B original witness ×2, 8 matched steps. Native Reset, scene exit, active driver free, remove→readd→immediate new replay and expiry isolation: 18 cases, 36 successful new-run steps. LOGICAL_SESSION and natural Presenter are separately recorded.", "",
              f"New selected receipts: {report['new_unique_pass_assertions']} unique PASS assertions. Historical Core69 remains three rows; neither earlier1311 nor Unit38 is added to this total.", "",
              "| Case | Status | Execution source | Scope / evidence |", "|---|---|---|---|"]
