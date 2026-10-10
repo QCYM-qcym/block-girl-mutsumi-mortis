@@ -70,7 +70,7 @@ func run() -> void:
 			rows.append({"map": letter, "elapsed": stage.elapsed, "landing_elapsed": stage.landing_elapsed,
 				"phase": phase, "position": str(stage.visual.position), "screen": [screen.x, screen.y],
 				"scale": str(stage.visual.scale), "commit_kind": "SYNTHETIC_DOUBLE"})
-			if phase in ["ANTICIPATION", "DEPARTURE", "FALL_MOVING", "LANDING_IMPACT", "LANDING_REBOUND"] and not captured.has(phase):
+			if phase in ["ANTICIPATION", "FORWARD", "DEPARTURE", "FALL_MOVING", "LANDING_IMPACT", "LANDING_REBOUND"] and not captured.has(phase):
 				captured[phase] = true
 				await capture("map_" + letter + "_" + phase.to_lower())
 			if not stage.is_committed and stage.elapsed >= 0.5 and not captured.has("MID_FALL"):

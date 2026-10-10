@@ -1,0 +1,852 @@
+{
+  "task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01",
+  "original_task": "PFALL_ANIMATION_LANDING_01",
+  "owner10a_code_sha": "3b60de04f4c14e2d6576550acbf968e7c4b0be51",
+  "baseline_sha": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+  "actual_owner01_delivery_sha": "fd22434d3eb0de52a764cb98222371a39412635a",
+  "status": "PRESENTATION_HEADLESS_PASS_RUNTIME_REAL_AND_HUMAN_FEEL_PENDING",
+  "authoritative_runtime": false,
+  "graphical_run_this_task": false,
+  "screenshot_video_this_task": [],
+  "push": "NOT_RUN",
+  "code": [
+    {
+      "path": "game/feel/animation/fall_landing/fall_motion.gd",
+      "commit_blob_oid": "4b0fd871b19369d914e9fd4780be0ff90a8ff6e2",
+      "sha256": "ab7b46d282c5c8952866b1d3deb4a663c6f967afdea9e65309ca8c581098001b"
+    },
+    {
+      "path": "game/feel/animation/fall_landing/motion_parameters.gd",
+      "commit_blob_oid": "104f8bfd5e3325f239f2f72b299c08e8510d7831",
+      "sha256": "e8f15370b962ec84ff8d449a1ae39f191dd1b20702383c08f0347367c4e33add"
+    }
+  ],
+  "evidence": [
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 6856,
+      "case": "forward_drop_curve_regression_01",
+      "process_sha256": "1657b0b7d0ed338ba01d20fb44ba1d1cb4f2ddb0592509378d21d811db9a204a",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 1911,
+      "case": "forward_drop_custom_reduced_green_01",
+      "process_sha256": "8f500b7c5fe67c36b76eb8f6f2fd27e9e411e7c23a3089fd571656c2cefe7cfc",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "FAILED",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "BEHAVIORAL_RED",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 239,
+      "checks": 1911,
+      "case": "forward_drop_custom_reduced_red_01",
+      "process_sha256": "02ac98a4f0071287a1330fc2eb225c0e4f1a8a7b7ed79675bf232d44774582a9",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 1351,
+      "case": "forward_drop_extended_green_02",
+      "process_sha256": "df030ba26263bf0aa2a62dcc42ddee6f1fce1a08c974a9eefbb6f137d87724f9",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 6856,
+      "case": "forward_drop_final_curve_regression_01",
+      "process_sha256": "c615c82707c20932ad4143e5e353f7d80b6b50cfe33c5c438492b5f19cbd014c",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 4431,
+      "case": "forward_drop_final_v1_regression_01",
+      "process_sha256": "dfcbc3bd1724525581c0bf5c71b269cec101328a5fcf3d027c8d03d4b59a011b",
+      "dependencies": [],
+      "mode": "unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "FAILED",
+      "authoritative_runtime": false,
+      "profile_isolated": null,
+      "classification": "HARNESS_FAILURE",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 1,
+      "checks": 0,
+      "case": "forward_drop_owner_acceptance_01",
+      "process_sha256": "33e213cf69bfbbaf74c722ac3146036973f215b6f0ccdad7facf8451a68001be",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 1425,
+      "case": "forward_drop_owner_acceptance_02",
+      "process_sha256": "63e92c7caa1f441060ed86541cdd6306836c652d1fadc156cc2c1342c1e55bb3",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "FAILED",
+      "authoritative_runtime": false,
+      "profile_isolated": null,
+      "classification": "HARNESS_FAILURE",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 1,
+      "checks": 0,
+      "case": "forward_drop_owner_extended_green_01",
+      "process_sha256": "64b1b7dac62236b59c82afe640244e798f3d564aad92898ea72a674ef648916d",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 830,
+      "case": "forward_drop_owner_green_01",
+      "process_sha256": "5414302c35b222ffabad888cfe399c4a959a5eaa4a63b7498f78b59add309cdc",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "FAILED",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "BEHAVIORAL_RED",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 40,
+      "checks": 788,
+      "case": "forward_drop_owner_red_01",
+      "process_sha256": "ca1f8542620ac7945ed90546083a93bf8c4c5c428d6aeb062ebe416e0daab899",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": true,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 1935,
+      "case": "forward_drop_parameter_bounds_green_01",
+      "process_sha256": "0d0a501ec1ad45bf78d04ca623845b142d91ae241ece458d65fc0489578e1242",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "FAILED",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "BEHAVIORAL_RED",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 6,
+      "checks": 1935,
+      "case": "forward_drop_parameter_bounds_red_01",
+      "process_sha256": "793dd851d54a850cffa99ade8da7599294579c556d02401f2f1a0fea45ba5b3e",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_forward_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": true,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 6856,
+      "case": "forward_drop_release_curve_regression_01",
+      "process_sha256": "3c4a667e451af7321c9040c7d6945d8b978f9c3f0555c3f5830d21d4f643f5eb",
+      "dependencies": [
+        {
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c"
+        },
+        {
+          "path": "foundation/contracts/contract_validation.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2"
+        },
+        {
+          "path": "foundation/contracts/foundation_types.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e"
+        },
+        {
+          "path": "foundation/game_feel/view_contract.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231"
+        },
+        {
+          "path": "foundation/game_feel/schema.gd",
+          "exact_commit_bytes": true,
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc"
+        }
+      ],
+      "mode": "curve_unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": true,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 4431,
+      "case": "forward_drop_release_v1_regression_01",
+      "process_sha256": "d86cf358ede2e8907ae2dcb490463998f900f5f825fd948b3f09e6d259195e61",
+      "dependencies": [],
+      "mode": "unit"
+    },
+    {
+      "source_changes": [],
+      "source_snapshot_head": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+      "dependency_copy_changes": [],
+      "dependency_source_changes": [],
+      "status": "PASS",
+      "authoritative_runtime": false,
+      "profile_isolated": true,
+      "classification": "GREEN",
+      "final_acceptance": false,
+      "copied_source_changes": [],
+      "failure_count": 0,
+      "checks": 4431,
+      "case": "forward_drop_v1_regression_01",
+      "process_sha256": "25e909b20ee5eb41842ae367deddb27613e0ee3c050c75ee92e76e3d52c18891",
+      "dependencies": [],
+      "mode": "unit"
+    }
+  ],
+  "pending": [
+    "00 actual Runtime/Presenter graph",
+    "00 real yellow-platform bottom contact and natural interruption/input arbitration",
+    "08 human visual feel and new video"
+  ]
+}

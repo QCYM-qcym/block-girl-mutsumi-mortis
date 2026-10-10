@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('unit','preview','curve_unit','curve_preview')][string]$Mode = 'unit',
+    [ValidateSet('unit','preview','curve_unit','curve_preview','curve_forward_unit')][string]$Mode = 'unit',
     [Parameter(Mandatory)][ValidatePattern('^[a-zA-Z0-9_-]+$')][string]$Case,
     [string]$Godot = 'D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe',
     [switch]$UseTrajectoryDouble,
@@ -51,7 +51,7 @@ $motionConfig = "config_version=5`n[application]`nconfig/name=`"$motionName`"`nc
 [IO.File]::WriteAllText((Join-Path $motionProject 'project.godot'), $motionConfig, [Text.UTF8Encoding]::new($false))
 $motionScript = if($Mode -eq 'curve_preview'){'preview'}else{$Mode}
 $motionArgs = @('--path',('"'+$motionProject+'"'),'--script',"res://tests/beta_sprint/game_feel_owner_10a/$motionScript.gd")
-if ($Mode -in @('unit','curve_unit')) { $motionArgs += '--headless' }
+if ($Mode -in @('unit','curve_unit','curve_forward_unit')) { $motionArgs += '--headless' }
 $motionArgs += @('--',('--evidence-dir='+$motionOut))
 if($Mode -eq 'curve_preview') { $motionArgs += '--curve' }
 $motionRecord = [ordered]@{head=(& git -C $motionRoot rev-parse HEAD).Trim();dirty=@(& git -C $motionRoot status --short);case=$Case;mode=$Mode;fixture_kind='PRESENTATION_CONTRACT_UNIT';authoritative_runtime=$false;doubles=@('01 DTO','Safety attestation','native commit');sources=$motionSources;project_name=$motionName;arguments=$motionArgs;engine_sha256=(Get-FileHash -LiteralPath $Godot).Hash.ToLowerInvariant();started=(Get-Date -Format o);status='RUNNING'}
