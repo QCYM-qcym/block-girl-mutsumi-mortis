@@ -27,3 +27,7 @@ Import preflight: engine exit0, old SVG dimension WARNING retained. Generated ne
 Task 4: event mapping, settings contract, integration request, independent review and actual evidence complete. Commit and final scope/hash/clean checks follow; formal host/Fall/Shell UI/Human listening remain case_pending.
 
 2026-10-10 incremental DTO compatibility: verified Runtime candidate26387d6 native Safety dictionary, null rejection next_state, nullable kind8 direction and StringName connection/profile ids. RED runtime_shapes_red_01:79checks/3behavioral failures. GREEN policy79 + physical playback48 + unchanged SaveStore10 + native Facade API16 =153 checks,0 failures. Exact candidate files copied only into owner-local isolated evidence project; no Runtime merge or modification. Audio assets and original evidence unchanged. Native direct completion is API/DTO evidence, motion/Graphical NOT_RUN. Initial native harness cleanup error preserved separately. Details: DTO_COMPATIBILITY_20261010.md.
+
+## 2026-10-10 — explicit curve event.v2 consumer delta
+
+Implemented only Owner11 event-policy compatibility against supplemental registration ec826753435458abc41cc365e4b57dba27767fbd. Final202 checks PASS; actual new-curve Runtime and graphical contact remain pending01/00/10A. Original63 audio files and all baseline files unchanged. See V2_EVENT_COMPATIBILITY.md; original receipts/evidence remain historical and untouched. No push.
