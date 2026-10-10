@@ -20,7 +20,12 @@ env['FOUNDATION_TEST_EVIDENCE']=str(out)
 def digest(path):
     with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 source_dirs=['foundation','game/feel','experiments/game_feel_01','tests/beta_sprint/pfall_integration','tests/beta_sprint/pfall_v2_integration','tests/beta_sprint/game_feel_full_slice','tests/beta_sprint/graphical_bridge_02','tests/beta_sprint/yellow_target_01','tests/beta_sprint/game_feel_owner_10a','tests/beta_sprint/game_feel_owner_01','tests/beta_sprint/game_feel_owner_03','game/shell','tests/foundation/level']
-sources={p.relative_to(PROJECT).as_posix():digest(p) for directory in source_dirs for p in (PROJECT/directory).rglob('*') if p.is_file()}
+def source_files():
+    paths={p.relative_to(PROJECT).as_posix():p for directory in source_dirs for p in (PROJECT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts}
+    for name in ['project.godot','default_bus_layout.tres','icon.svg']:
+        if (PROJECT/name).is_file(): paths[name]=PROJECT/name
+    return paths
+sources={name:digest(path) for name,path in source_files().items()}
 for name in ['project.godot','default_bus_layout.tres','icon.svg']:
     if (PROJECT/name).is_file(): sources[name]=digest(PROJECT/name)
 args=[str(ENGINE)]+(['--headless'] if mode=='headless' else [])+['--max-fps','60','--path',str(PROJECT),'--script',script,'--','--evidence='+out.as_posix(),'--evidence-dir='+out.as_posix(),'--profile='+profile.as_posix()]+sys.argv[5:]
@@ -38,7 +43,9 @@ path=out/'report.json'
 if not path.exists(): path=out/'unit.json'
 if not path.exists(): path=out/'results.json'
 report=json.loads(path.read_text(encoding='utf-8-sig')) if path.exists() else {}
-record.update({'checks':report.get('checks',0),'failures':report.get('failures',['missing report']),'doubles':report.get('doubles'),'stderr_bytes':(out/'stderr.log').stat().st_size,'source_drift':[p for p,sha in sources.items() if not (PROJECT/p).is_file() or digest(PROJECT/p)!=sha],'finished_utc':datetime.now(timezone.utc).isoformat()})
+after=source_files()
+drift=sorted(set(after).symmetric_difference(sources))+[p for p,sha in sources.items() if p in after and digest(after[p])!=sha]
+record.update({'checks':report.get('checks',0),'failures':report.get('failures',['missing report']),'doubles':report.get('doubles'),'stderr_bytes':(out/'stderr.log').stat().st_size,'source_drift':drift,'finished_utc':datetime.now(timezone.utc).isoformat()})
 observations = report.get('observations', {})
 if not isinstance(observations, dict): observations = {}
 record.update({'display':report.get('display'),'renderer':report.get('renderer',observations.get('renderer')),'user_data_dir':report.get('user_data_dir'),'input':report.get('input','Declared in script authority and per-route rows'),'authority':report.get('authority'),'engine_version':next((line for line in (out/'stdout.log').read_text(encoding='utf-8',errors='replace').splitlines() if line.startswith('Godot Engine')),'UNAVAILABLE')})
