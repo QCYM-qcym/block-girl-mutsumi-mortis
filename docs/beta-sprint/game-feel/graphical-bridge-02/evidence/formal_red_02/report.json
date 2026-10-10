@@ -1,0 +1,278 @@
+{
+	"authority": "formal production Replayer mode1 + actual public Baker/Solver, no overrides or manual completion",
+	"checks": 9,
+	"display": "Windows",
+	"doubles": [],
+	"failures": [
+		"a formal graphical MATCH",
+		"a Fall then Roll both matched",
+		"b formal graphical MATCH",
+		"b Fall then Roll both matched"
+	],
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"map": "a",
+			"result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"steps": [],
+			"trace": {
+				"goal_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"initial_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"initial_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"level_hash": "f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772",
+				"policy_descriptor": {
+					"filter_descriptor": {
+						"disabled_mechanics": [],
+						"filter_id": "UNFILTERED",
+						"filter_version": "1"
+					},
+					"mode": 1,
+					"strategy": "BFS",
+					"validation_options": {
+						"max_checks": 100000,
+						"max_configurations": 4096
+					}
+				},
+				"rule_version": "foundation.rules.game_feel.v1",
+				"shortest": true,
+				"steps": [
+					{
+						"action": {
+							"face_axis": 2,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "target",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 1,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+					},
+					{
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "exit",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 2,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+					}
+				],
+				"total_actions": 2,
+				"trace_version": "solutiontrace.game_feel.v1"
+			}
+		},
+		{
+			"map": "b",
+			"result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"steps": [],
+			"trace": {
+				"goal_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+				"initial_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"initial_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"level_hash": "ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4",
+				"policy_descriptor": {
+					"filter_descriptor": {
+						"disabled_mechanics": [],
+						"filter_id": "UNFILTERED",
+						"filter_version": "1"
+					},
+					"mode": 1,
+					"strategy": "BFS",
+					"validation_options": {
+						"max_checks": 100000,
+						"max_configurations": 4096
+					}
+				},
+				"rule_version": "foundation.rules.game_feel.v1",
+				"shortest": true,
+				"steps": [
+					{
+						"action": {
+							"face_axis": 2,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "target",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 1,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+					},
+					{
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "exit",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 2,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+					}
+				],
+				"total_actions": 2,
+				"trace_version": "solutiontrace.game_feel.v1"
+			}
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/graphical-bridge-02/evidence/formal_red_02/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

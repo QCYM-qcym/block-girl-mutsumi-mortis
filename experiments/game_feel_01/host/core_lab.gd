@@ -8,6 +8,7 @@ const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
 const Orientation = preload("res://foundation/orientation/discrete_orientation.gd")
 const Goal = preload("res://foundation/rules/goal_evaluator.gd")
 var runtime: RefCounted
+var external_runtime := false
 var presenter := Presenter.new()
 var actor: Node3D
 var camera: Camera3D
@@ -73,7 +74,7 @@ func _ready() -> void:
 		_record_issue("01 formal Runtime delivery is not integrated; CORE NOT_READY.")
 		return
 	_view=load(view_path)
-	runtime=load(facade_path).new()
+	if runtime==null: runtime=load(facade_path).new()
 	if not runtime.has_method("get_presentation_scope"):
 		_record_issue("01 read-only presentation scope is not integrated; CORE NOT_READY.")
 		return
@@ -82,10 +83,13 @@ func _ready() -> void:
 	runtime.committed.connect(_on_committed)
 	presenter.bind(actor,Fall.new(),Landing.new(),project_pose,runtime.finish_transition)
 	presenter.bind_edge(Edge.new())
-	load_map("a")
+	if external_runtime:
+		_build_geometry()
+		_on_committed(runtime.get_state())
+	else: load_map("a")
 
 func load_map(letter: String) -> void:
-	if runtime==null: return
+	if runtime==null or _closed or external_runtime: return
 	var factory_path:="res://experiments/game_feel_01/maps/map_factory.gd"
 	var factory: Script=load(factory_path)
 	if not factory.has_method("bake_game_feel"):
@@ -98,6 +102,7 @@ func load_map(letter: String) -> void:
 	_camera_motion={}
 	_scope={}
 	presenter.bind_scope({})
+	if _closed: return
 	paused=false
 	presenter.set_paused(false)
 	runtime.set_paused(false)
@@ -157,6 +162,14 @@ func _on_event(event: Dictionary) -> void:
 	events.append(event.duplicate(true))
 	var result: Dictionary=presenter.consume_event(event)
 	if not result.ok: _record_issue(str(result.issues))
+	if _closed: return
+	# Native CANCEL advances generation without a committed signal. Retire the
+	# old presentation first, then bind the actual surviving authoritative scope.
+	if event.semantic=="ANIMATION_INTERRUPTED" and not _closed:
+		if runtime.is_loaded(): _on_committed(runtime.get_state())
+		else:
+			_scope={}
+			presenter.bind_scope({})
 	_update_status(event.reason_category)
 
 func _on_native_started(result: Dictionary, transaction_id: int, generation: int, is_global: bool) -> void:
@@ -169,9 +182,11 @@ func _on_native_started(result: Dictionary, transaction_id: int, generation: int
 	_camera_motion={"token":token.duplicate(true),"source":camera.basis,"target":_view.basis(result.next_state.camera_quadrant),"elapsed":0.0}
 
 func _on_committed(state: Dictionary) -> void:
-	if _closed: return
-	_scope=runtime.get_presentation_scope()
+	if _closed or not runtime.is_loaded(): return
+	var captured_scope:Dictionary=runtime.get_presentation_scope()
+	_scope=captured_scope
 	presenter.bind_scope(_scope)
+	if _closed or not runtime.is_loaded() or runtime.get_presentation_scope()!=captured_scope or runtime.get_state()!=state or _scope!=captured_scope: return
 	var projected: Dictionary=presenter.sync_pose(state.player)
 	if not projected.ok: _record_issue(str(projected.issues))
 	if _camera_motion.is_empty(): _place_camera(_view.basis(state.camera_quadrant))
@@ -181,7 +196,19 @@ func _place_camera(basis: Basis) -> void:
 	camera.transform=Transform3D(basis,_camera_center+basis.z*25.0)
 
 func _process(delta: float) -> void:
-	if runtime==null or not runtime.is_loaded() or paused: return
+	if runtime==null: return
+	if not runtime.is_loaded():
+		_scope={}
+		_camera_motion={}
+		presenter.clear("UNLOAD")
+		presenter.bind_scope({})
+		return
+	# Landing is committed decoration, so a native CANCEL/UNLOAD may have no
+	# pending presentation event. Observe the real lifecycle scope every frame.
+	if runtime.get_presentation_scope()!=_scope:
+		_camera_motion={}
+		_on_committed(runtime.get_state())
+	if paused: return
 	presenter.tick(delta)
 	if _camera_motion.is_empty(): return
 	var scope: Dictionary=runtime.get_presentation_scope()
@@ -201,7 +228,9 @@ func reset_lab() -> void:
 	if runtime==null or not runtime.is_loaded(): return
 	_camera_motion={}
 	_scope={}
+	presenter.clear("RESET")
 	presenter.bind_scope({})
+	if _closed or not runtime.is_loaded(): return
 	runtime.reset()
 	_on_committed(runtime.get_state())
 
@@ -224,7 +253,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_Q,KEY_E:
 			var change:=1 if event.physical_keycode==KEY_E else -1
 			runtime.request_action({"kind":9,"camera_quadrant":posmod(runtime.get_state().camera_quadrant+change,4)})
-		KEY_SPACE: _update_status("World Shift is not supported in this isolated Core lab.")
+		KEY_SPACE: runtime.request_action({"kind":1})
 		KEY_A,KEY_LEFT: runtime.request_move(Vector2.LEFT)
 		KEY_D,KEY_RIGHT: runtime.request_move(Vector2.RIGHT)
 		KEY_W,KEY_UP: runtime.request_move(Vector2.UP)
@@ -246,9 +275,13 @@ func _close(reason: String) -> void:
 	_closed=true
 	_scope={}
 	_camera_motion={}
+	presenter.clear(reason)
 	presenter.bind_scope({})
 	if runtime!=null: runtime.interrupt(reason)
 	presenter.dispose()
+	if runtime!=null:
+		for pair in [[runtime.game_feel_event,_on_event],[runtime.transition_started,_on_native_started],[runtime.committed,_on_committed]]:
+			if pair[0].is_connected(pair[1]): pair[0].disconnect(pair[1])
 
 func _update_status(reason: String) -> void:
 	if runtime==null or not runtime.is_loaded(): return

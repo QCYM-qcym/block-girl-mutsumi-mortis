@@ -2,6 +2,8 @@ extends RefCounted
 ## One writer for the real actor. Never grants movement or changes Runtime state.
 const State = preload("res://game/feel/animation/fall_landing/fall_visual_state.gd")
 const EdgeEvent = preload("res://game/feel/animation/edge_recoil/edge_event.gd")
+signal motion_completed(identity: Dictionary, evidence: Dictionary)
+signal motion_cancelled(identity: Dictionary, reason: String)
 var _actor: Node3D
 var _fall: RefCounted
 var _landing: RefCounted
@@ -58,9 +60,9 @@ func bind_scope(scope: Dictionary) -> void:
 	if scope.has_all(["session_id","level_run_id","generation"]):
 		for key in ["session_id","level_run_id","generation"]: next[key]=scope[key]
 	if next!=_scope:
+		_scope=next
 		clear()
 		if _edge != null: _edge.clear()
-	_scope=next
 
 func sync_pose(pose: Dictionary) -> Dictionary:
 	var projected: Dictionary=_project(pose)
@@ -92,7 +94,7 @@ func consume_event(event: Dictionary) -> Dictionary:
 	_seen[key] = true
 	var identity: Variant = event.get("presentation_identity")
 	if event.get("semantic") == "ANIMATION_INTERRUPTED":
-		if identity is Dictionary and identity == _presentation: clear()
+		if identity is Dictionary and identity == _presentation: clear(str(event.get("interruption_reason","CANCEL")))
 		return {"ok":true,"issues":[]}
 	if event.get("semantic") == "MOVE_APPLIED_NORMAL": return _consume_roll(event)
 	if event.get("semantic") == "MOVE_REJECTED_EDGE": return _consume_edge(event)
@@ -115,7 +117,9 @@ func consume_event(event: Dictionary) -> Dictionary:
 			return _failure("Missing canonical actor-center path.")
 		if not (Vector3(points[0])*0.5).is_equal_approx(source.origin) or not (Vector3(points[-1])*0.5).is_equal_approx(target.origin):
 			return _failure("Canonical path endpoints must equal independently projected formal centers.")
+		var replacement_epoch:=_epoch
 		clear()
+		if _epoch!=replacement_epoch+1 or not _current(identity): return {"ok":true,"ignored":true,"issues":[]}
 		_fall = staged
 		_presentation = event.presentation_identity.duplicate(true)
 		_token = event.transition_identity.duplicate(true)
@@ -175,7 +179,7 @@ func _consume_roll(event: Dictionary) -> Dictionary:
 		var projected: Dictionary=_project(event.target_pose)
 		if not projected.ok: return projected
 		_base = projected.transform
-		clear()
+		_complete_motion("ROLL_RESTORED")
 		return {"ok":true,"issues":[]}
 	if event.get("phase") != "STARTED": return _failure("Unexpected ordinary Roll lifecycle phase.")
 	var result: Variant = event.get("result")
@@ -197,7 +201,9 @@ func _consume_roll(event: Dictionary) -> Dictionary:
 	var displacement := target.origin-source.origin
 	if not is_equal_approx(normal.length(),1.0) or not is_equal_approx(displacement.length(),1.0) or not is_zero_approx(normal.dot(displacement)):
 		return _failure("Ordinary display Roll requires adjacent coplanar formal actor centers.")
+	var replacement_epoch:=_epoch
 	clear()
+	if _epoch!=replacement_epoch+1 or not _current(identity): return {"ok":true,"ignored":true,"issues":[]}
 	_source=source
 	_target=target
 	_roll_pivot=(source.origin+target.origin)*0.5-normal*0.5
@@ -245,13 +251,14 @@ func tick(delta: float) -> void:
 			# Nothing from this sample may write/clear after that callback.
 		return
 	if _epoch == captured_epoch:
-		_landing.cancel(_presentation)
-		_phase = "IDLE"
-		_presentation = {}
-		_token = {}
-		_started = {}
-		_elapsed = 0.0
-		_write(_base)
+		_complete_motion("LANDING_SETTLED")
+
+func _complete_motion(terminal_phase: String) -> void:
+	# Capture before clearing; listeners may synchronously Reset or unload.
+	var identity:=_token.duplicate(true)
+	var evidence:={"presentation_identity":_presentation.duplicate(true),"semantic":_started.get("semantic"),"source_pose":_started.get("source_pose"),"target_pose":_started.get("target_pose"),"terminal_phase":terminal_phase}
+	clear("")
+	if not identity.is_empty(): motion_completed.emit(identity,evidence)
 
 func _apply_sample(sampled: Dictionary, authoritative_basis: Basis, fallback_origin: Vector3) -> void:
 	var origin := fallback_origin
@@ -265,9 +272,10 @@ func _write(value: Transform3D) -> void:
 func set_paused(paused: bool) -> void:
 	_paused = paused
 
-func clear() -> void:
+func clear(reason: String = "CANCEL") -> void:
 	_epoch += 1
 	var previous := _presentation.duplicate(true)
+	var previous_token:=_token.duplicate(true)
 	_presentation = {}
 	_token = {}
 	_started = {}
@@ -278,6 +286,7 @@ func clear() -> void:
 	if _landing != null: _landing.cancel(previous)
 	if _edge != null: _edge.cancel(previous)
 	_write(_base)
+	if not reason.is_empty() and not previous_token.is_empty(): motion_cancelled.emit(previous_token,reason)
 
 func dispose() -> void:
 	clear()

@@ -1,0 +1,4499 @@
+{
+	"authority": "Real default Facade, real registered production Bridge/CoreLab/10A sampler; no manual finish or synthetic events",
+	"checks": 19,
+	"display": "Windows",
+	"doubles": [],
+	"failures": [],
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"closed": false,
+			"host_issues": [],
+			"presenter": {
+				"elapsed": 0.0,
+				"finish_sent": false,
+				"paused": false,
+				"phase": "IDLE",
+				"presentation_identity": {},
+				"transition_identity": {}
+			},
+			"records": [
+				{
+					"camera_quadrant": 1,
+					"cancelled_order": 0,
+					"commit_count": 1,
+					"committed_order": 2,
+					"completion_order": 3,
+					"delivered": true,
+					"expected_visual_pose": {
+						"basis": [
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								1.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-4.0,
+							1.0,
+							4.0
+						]
+					},
+					"final_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"final_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"final_visual_pose": {
+						"basis": [
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								1.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-4.0,
+							1.0,
+							4.0
+						]
+					},
+					"frames": [
+						{
+							"elapsed": 0.0,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									0.0,
+									3.0,
+									0.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.15,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.999872028827667,
+										0.0159966722130775,
+										0.000127963125123642
+									],
+									[
+										-0.0159966722130775,
+										0.999744057655334,
+										0.0159966722130775
+									],
+									[
+										0.000127963125123642,
+										-0.0159966722130775,
+										0.999872028827667
+									]
+								],
+								"origin": [
+									-0.473205089569092,
+									3.0,
+									0.473205089569092
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.270789666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.89777147769928,
+									3.0,
+									0.89777147769928
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.274241666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.912337064743042,
+									3.0,
+									0.912337064743042
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.287431666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.972991764545441,
+									3.0,
+									0.972991764545441
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.304096666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.06096959114075,
+									3.0,
+									1.06096959114075
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.320762666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.16161596775055,
+									3.0,
+									1.16161596775055
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.337429333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.27493071556091,
+									3.0,
+									1.27493071556091
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.354096,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.40092420578003,
+									3.0,
+									1.40092420578003
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.370762666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.53958749771118,
+									3.0,
+									1.53958749771118
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.387429333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.69091558456421,
+									3.0,
+									1.69091558456421
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.404093666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.85488426685333,
+									3.0,
+									1.85488426685333
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.420759666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.03153228759766,
+									3.0,
+									2.03153228759766
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.437425666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.22084403038025,
+									3.0,
+									2.22084403038025
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.454092333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.42283582687378,
+									3.0,
+									2.42283582687378
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.470757666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.63748574256897,
+									3.0,
+									2.63748574256897
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.487424333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.86481690406799,
+									3.0,
+									2.86481690406799
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.504088666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.06049370765686,
+									2.8790123462677,
+									3.06049370765686
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.520754666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.20636034011841,
+									2.58727931976318,
+									3.20636034011841
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.537421333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.35954451560974,
+									2.28091096878052,
+									3.35954451560974
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.554086666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.52002859115601,
+									1.95994281768799,
+									3.52002859115601
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.570752666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.68784046173096,
+									1.62431919574738,
+									3.68784046173096
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.587419333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.86297059059143,
+									1.27405869960785,
+									3.86297059059143
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0166656666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00522708892822,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.989627361297607,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00522708892822
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0333306666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.01642644405365,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.967939138412476,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.01642644405365
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0499973333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.02647757530212,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.949076056480408,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.02647757530212
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.066664,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.0235321521759,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.954546213150024,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0235321521759
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0833286666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.01246905326843,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.975520789623261,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.01246905326843
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0999953333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00473415851593,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.990598380565643,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00473415851593
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.116660666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00018239021301,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.99963515996933,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00018239021301
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.133327333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.998071312904358,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0038685798645,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.998071312904358
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.149994,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.99753338098526,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00495147705078,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.99753338098526
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.166660666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.997823655605316,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00436699390411,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.997823655605316
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.183326666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.998416244983673,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00317513942719,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.998416244983673
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.199991666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999005496501923,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00199198722839,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999005496501923
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.216656666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999457716941834,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00108551979065,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999457716941834
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.233323333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999748289585114,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00050365924835,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999748289585114
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.249988666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999906420707703,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00018715858459,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999906420707703
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.266654666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999977231025696,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00004553794861,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999977231025696
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.283320666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000059604645,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999998807907104,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000059604645
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.299987333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000381469727,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999992430210114,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000381469727
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.316652666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000166893005,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999996721744537,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000166893005
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.333319333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000011920929,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999999761581421,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000011920929
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						}
+					],
+					"orientation": 0,
+					"presentation_identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+						"session_id": "bac56f9077fd5b385b69b745cbffd451"
+					},
+					"result": {
+						"action": {
+							"connection_id": "pfall_a",
+							"kind": 8
+						},
+						"changed": true,
+						"global_kind": 0,
+						"issues": [],
+						"next_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "target",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"previous_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "source",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"rejection_code": 0,
+						"status": 0
+					},
+					"semantic": "PERSPECTIVE_FALL_APPLIED",
+					"source_pose": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"started_order": 1,
+					"target_pose": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"terminal": {
+						"presentation_identity": {
+							"attempt_id": 1,
+							"generation": 1,
+							"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+							"session_id": "bac56f9077fd5b385b69b745cbffd451"
+						},
+						"semantic": "PERSPECTIVE_FALL_APPLIED",
+						"source_pose": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"target_pose": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"terminal_phase": "LANDING_SETTLED"
+					},
+					"transition_identity": {
+						"generation": 1,
+						"is_global": false,
+						"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+						"session_id": "bac56f9077fd5b385b69b745cbffd451",
+						"transaction_id": 1
+					},
+					"world_id": 0
+				},
+				{
+					"camera_quadrant": 1,
+					"cancelled_order": 0,
+					"commit_count": 2,
+					"committed_order": 5,
+					"completion_order": 6,
+					"delivered": true,
+					"expected_visual_pose": {
+						"basis": [
+							[
+								0.0,
+								-1.0,
+								0.0
+							],
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-3.0,
+							1.0,
+							4.0
+						]
+					},
+					"final_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "exit",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 12
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"final_statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"final_visual_pose": {
+						"basis": [
+							[
+								0.0,
+								-1.0,
+								0.0
+							],
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-3.0,
+							1.0,
+							4.0
+						]
+					},
+					"frames": [
+						{
+							"elapsed": 0.0,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-4.0,
+									1.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0166646666666667,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.999765276908875,
+										-0.0216667577624321,
+										0.0
+									],
+									[
+										0.0216667577624321,
+										0.999765276908875,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.98904919624329,
+									1.0107159614563,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0540843333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.97939395904541,
+										-0.201959073543549,
+										0.0
+									],
+									[
+										0.201959073543549,
+										0.97939395904541,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.88871741294861,
+									1.0906765460968,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.070751,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.946351885795593,
+										-0.323137879371643,
+										0.0
+									],
+									[
+										0.323137879371643,
+										0.946351885795593,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.81160688400269,
+									1.13474488258362,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.087416,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.890038192272186,
+										-0.455886006355286,
+										0.0
+									],
+									[
+										0.455886006355286,
+										0.890038192272186,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.71707606315613,
+									1.17296206951141,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.104081,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.808009505271912,
+										-0.589169442653656,
+										0.0
+									],
+									[
+										0.589169442653656,
+										0.808009505271912,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.60942006111145,
+									1.19858944416046,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.120747666666667,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.70189756155014,
+										-0.712277889251709,
+										0.0
+									],
+									[
+										0.712277889251709,
+										0.70189756155014,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.49480986595154,
+									1.20708775520325,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.137414,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.577478468418121,
+										-0.816405892372131,
+										0.0
+									],
+									[
+										0.816405892372131,
+										0.577478468418121,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.38053631782532,
+									1.19694221019745,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.154080666666667,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.44377589225769,
+										-0.896137773990631,
+										0.0
+									],
+									[
+										0.896137773990631,
+										0.44377589225769,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.27381896972656,
+									1.16995680332184,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.170747333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.311610400676727,
+										-0.950209975242615,
+										0.0
+									],
+									[
+										0.950209975242615,
+										0.311610400676727,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.18070030212402,
+									1.13091015815735,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.187413,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.191995143890381,
+										-0.981395900249481,
+										0.0
+									],
+									[
+										0.981395900249481,
+										0.191995143890381,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.10529971122742,
+									1.08669555187225,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.204079,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.0948877707123756,
+										-0.995487987995148,
+										0.0
+									],
+									[
+										0.995487987995148,
+										0.0948877707123756,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.0496997833252,
+									1.04518795013428,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.220745,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.028706019744277,
+										-0.999587893486023,
+										0.0
+									],
+									[
+										0.999587893486023,
+										0.028706019744277,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.01455903053284,
+									1.01414704322815,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.237409,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.000545219576451927,
+										-0.99999988079071,
+										0.0
+									],
+									[
+										0.99999988079071,
+										0.000545219576451927,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.00027275085449,
+									1.00027251243591,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"f4a5e058ba97ec32edf24116b0a91d6e9196e613ed28fc93d3d71902d4357772\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						}
+					],
+					"orientation": 12,
+					"presentation_identity": {
+						"attempt_id": 2,
+						"generation": 1,
+						"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+						"session_id": "bac56f9077fd5b385b69b745cbffd451"
+					},
+					"result": {
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"changed": true,
+						"global_kind": 0,
+						"issues": [],
+						"next_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "exit",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"previous_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "target",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"rejection_code": 0,
+						"status": 0
+					},
+					"semantic": "MOVE_APPLIED_NORMAL",
+					"source_pose": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"started_order": 4,
+					"target_pose": {
+						"location": {
+							"cube_id": "exit",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"terminal": {
+						"presentation_identity": {
+							"attempt_id": 2,
+							"generation": 1,
+							"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+							"session_id": "bac56f9077fd5b385b69b745cbffd451"
+						},
+						"semantic": "MOVE_APPLIED_NORMAL",
+						"source_pose": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"target_pose": {
+							"location": {
+								"cube_id": "exit",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 12
+						},
+						"terminal_phase": "ROLL_RESTORED"
+					},
+					"transition_identity": {
+						"generation": 1,
+						"is_global": false,
+						"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+						"session_id": "bac56f9077fd5b385b69b745cbffd451",
+						"transaction_id": 2
+					},
+					"world_id": 0
+				}
+			],
+			"scope": {
+				"generation": 1,
+				"level_run_id": "adc5e509a46d6d2908d312b630d2e89d",
+				"session_id": "bac56f9077fd5b385b69b745cbffd451"
+			}
+		},
+		{
+			"closed": false,
+			"host_issues": [],
+			"presenter": {
+				"elapsed": 0.0,
+				"finish_sent": false,
+				"paused": false,
+				"phase": "IDLE",
+				"presentation_identity": {},
+				"transition_identity": {}
+			},
+			"records": [
+				{
+					"camera_quadrant": 1,
+					"cancelled_order": 0,
+					"commit_count": 1,
+					"committed_order": 2,
+					"completion_order": 3,
+					"delivered": true,
+					"expected_visual_pose": {
+						"basis": [
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								1.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-4.0,
+							5.0,
+							4.0
+						]
+					},
+					"final_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"final_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"final_visual_pose": {
+						"basis": [
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								1.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-4.0,
+							5.0,
+							4.0
+						]
+					},
+					"frames": [
+						{
+							"elapsed": 0.0,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									0.0,
+									3.0,
+									0.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0166666666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.999984502792358,
+										0.00556461280211806,
+										0.0000154826993821189
+									],
+									[
+										-0.00556461280211806,
+										0.999969005584717,
+										0.00556461280211806
+									],
+									[
+										0.0000154826993821189,
+										-0.00556461280211806,
+										0.999984502792358
+									]
+								],
+								"origin": [
+									0.0,
+									3.0,
+									0.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.084131,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.998143494129181,
+										0.0608782581984997,
+										0.00185652764048427
+									],
+									[
+										-0.0608782581984997,
+										0.996286928653717,
+										0.0608782581984997
+									],
+									[
+										0.00185652764048427,
+										-0.0608782581984997,
+										0.998143494129181
+									]
+								],
+								"origin": [
+									0.0,
+									3.0,
+									0.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0918523333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.998102128505707,
+										0.0615513771772385,
+										0.00189788790885359
+									],
+									[
+										-0.0615513771772385,
+										0.996204197406769,
+										0.0615513771772385
+									],
+									[
+										0.00189788790885359,
+										-0.0615513771772385,
+										0.998102128505707
+									]
+								],
+								"origin": [
+									-0.0137365637347102,
+									3.0,
+									0.0137365637347102
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.108519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.99849134683609,
+										0.0548886582255363,
+										0.00150865863543004
+									],
+									[
+										-0.0548886582255363,
+										0.99698269367218,
+										0.0548886582255363
+									],
+									[
+										0.00150865863543004,
+										-0.0548886582255363,
+										0.99849134683609
+									]
+								],
+								"origin": [
+									-0.137333497405052,
+									3.0,
+									0.137333497405052
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.125185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.999168455600739,
+										0.0407642163336277,
+										0.000831552082672715
+									],
+									[
+										-0.0407642163336277,
+										0.998336911201477,
+										0.0407642163336277
+									],
+									[
+										0.000831552082672715,
+										-0.0407642163336277,
+										0.999168455600739
+									]
+								],
+								"origin": [
+									-0.260930448770523,
+									3.0,
+									0.260930448770523
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.141852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.999715387821198,
+										0.0238560512661934,
+										0.000284636567812413
+									],
+									[
+										-0.0238560512661934,
+										0.99943071603775,
+										0.0238560512661934
+									],
+									[
+										0.000284636567812413,
+										-0.0238560512661934,
+										0.999715387821198
+									]
+								],
+								"origin": [
+									-0.384527385234833,
+									3.0,
+									0.384527385234833
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.158519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.999960660934448,
+										0.00886749662458897,
+										0.0000393177942896727
+									],
+									[
+										-0.00886749662458897,
+										0.999921381473541,
+										0.00886749662458897
+									],
+									[
+										0.0000393177942896727,
+										-0.00886749662458897,
+										0.999960660934448
+									]
+								],
+								"origin": [
+									-0.50812429189682,
+									3.0,
+									0.50812429189682
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.175185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										0.99999988079071,
+										0.00051082280697301,
+										0.000000130469999248817
+									],
+									[
+										-0.00051082280697301,
+										0.999999761581421,
+										0.00051082280697301
+									],
+									[
+										0.000000130469999248817,
+										-0.00051082280697301,
+										0.99999988079071
+									]
+								],
+								"origin": [
+									-0.631721258163452,
+									3.0,
+									0.631721258163452
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.191852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.670445382595062,
+									3.0,
+									0.670445382595062
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.208519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.684875190258026,
+									3.0,
+									0.684875190258026
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.225185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.711213350296021,
+									3.0,
+									0.711213350296021
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.241852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.74945992231369,
+									3.0,
+									0.74945992231369
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.258519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.799614787101746,
+									3.0,
+									0.799614787101746
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.275185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.861680150032043,
+									3.0,
+									0.861680150032043
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.291852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-0.935670077800751,
+									3.0,
+									0.935670077800751
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.308519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.01761054992676,
+									3.01761054992676,
+									1.01761054992676
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.325185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.09746932983398,
+									3.09746932983398,
+									1.09746932983398
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.341852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.18705129623413,
+									3.18705129623413,
+									1.18705129623413
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.358519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.28635632991791,
+									3.2863564491272,
+									1.28635632991791
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.375185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.3953845500946,
+									3.3953845500946,
+									1.3953845500946
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.391852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.51414799690247,
+									3.51414799690247,
+									1.51414799690247
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.408519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.6426374912262,
+									3.6426374912262,
+									1.6426374912262
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.425185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.78085017204285,
+									3.78085017204285,
+									1.78085017204285
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.441852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-1.92878580093384,
+									3.92878580093384,
+									1.92878580093384
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.458519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.08644461631775,
+									4.08644485473633,
+									2.08644461631775
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.475185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.25382661819458,
+									4.25382661819458,
+									2.25382661819458
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.491852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.43093943595886,
+									4.43093967437744,
+									2.43093943595886
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.508519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.61778259277344,
+									4.61778259277344,
+									2.61778259277344
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.525185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-2.81434917449951,
+									4.81434917449951,
+									2.81434917449951
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.541852333333333,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.02527689933777,
+									5.0,
+									3.02527689933777
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.558519,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.28983736038208,
+									5.0,
+									3.28983736038208
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.575185666666667,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.56630611419678,
+									5.0,
+									3.56630611419678
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.591852333333334,
+							"phase": "FALL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.85468697547913,
+									5.0,
+									3.85468697547913
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0166666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00522756576538,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.989626169204712,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00522756576538
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0333333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.01642835140228,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.967935502529144,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.01642835140228
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.05,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.02647864818573,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.949074029922485,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.02647864818573
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0666666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.02353024482727,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.95455002784729,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.02353024482727
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0833333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.01246643066406,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.975525915622711,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.01246643066406
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.1,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00473248958588,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.990601778030396,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00473248958588
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.116666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00018131732941,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999637544155121,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00018131732941
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.133333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.998070895671844,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00386941432953,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.998070895671844
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.15,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.99753338098526,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00495159626007,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.99753338098526
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.166666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.99782383441925,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00436663627625,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.99782383441925
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.183333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.998416483402252,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00317466259003,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.998416483402252
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.2,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999005734920502,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00199151039124,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999005734920502
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.216666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999457895755768,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00108504295349,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999457895755768
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.233333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999748408794403,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00050342082977,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999748408794403
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.25,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999906480312347,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00018703937531,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999906480312347
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.266666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										0.999977290630341,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.00004553794861,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										0.999977290630341
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.283333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000059604645,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.99999874830246,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000059604645
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.3,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000381469727,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999992430210114,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000381469727
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.316666666666667,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000166893005,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999996721744537,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000166893005
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.333333333333333,
+							"phase": "LANDING",
+							"pose": {
+								"basis": [
+									[
+										1.00000011920929,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										0.999999761581421,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.00000011920929
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						}
+					],
+					"orientation": 0,
+					"presentation_identity": {
+						"attempt_id": 1,
+						"generation": 1,
+						"level_run_id": "fb9f251510a841dbdda9465684543370",
+						"session_id": "afbda355dd1995f914f7b2f02df3d324"
+					},
+					"result": {
+						"action": {
+							"connection_id": "pfall_b",
+							"kind": 8
+						},
+						"changed": true,
+						"global_kind": 0,
+						"issues": [],
+						"next_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "target",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"previous_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "source",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"rejection_code": 0,
+						"status": 0
+					},
+					"semantic": "PERSPECTIVE_FALL_APPLIED",
+					"source_pose": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"started_order": 1,
+					"target_pose": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"terminal": {
+						"presentation_identity": {
+							"attempt_id": 1,
+							"generation": 1,
+							"level_run_id": "fb9f251510a841dbdda9465684543370",
+							"session_id": "afbda355dd1995f914f7b2f02df3d324"
+						},
+						"semantic": "PERSPECTIVE_FALL_APPLIED",
+						"source_pose": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"target_pose": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"terminal_phase": "LANDING_SETTLED"
+					},
+					"transition_identity": {
+						"generation": 1,
+						"is_global": false,
+						"level_run_id": "fb9f251510a841dbdda9465684543370",
+						"session_id": "afbda355dd1995f914f7b2f02df3d324",
+						"transaction_id": 1
+					},
+					"world_id": 0
+				},
+				{
+					"camera_quadrant": 1,
+					"cancelled_order": 0,
+					"commit_count": 2,
+					"committed_order": 5,
+					"completion_order": 6,
+					"delivered": true,
+					"expected_visual_pose": {
+						"basis": [
+							[
+								0.0,
+								-1.0,
+								0.0
+							],
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-3.0,
+							5.0,
+							4.0
+						]
+					},
+					"final_state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "a"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "exit",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 12
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"final_statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"exit\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"final_visual_pose": {
+						"basis": [
+							[
+								0.0,
+								-1.0,
+								0.0
+							],
+							[
+								1.0,
+								0.0,
+								0.0
+							],
+							[
+								0.0,
+								0.0,
+								1.0
+							]
+						],
+						"origin": [
+							-3.0,
+							5.0,
+							4.0
+						]
+					},
+					"frames": [
+						{
+							"elapsed": 0.0,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										1.0,
+										0.0,
+										0.0
+									],
+									[
+										0.0,
+										1.0,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-4.0,
+									5.0,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0166666666666667,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.999765157699585,
+										-0.0216718316078186,
+										0.0
+									],
+									[
+										0.0216718316078186,
+										0.999765157699585,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.98904657363892,
+									5.01071834564209,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.05,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.98453027009964,
+										-0.17521458864212,
+										0.0
+									],
+									[
+										0.17521458864212,
+										0.98453027009964,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.90465784072876,
+									5.07987260818481,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0608673333333334,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.968452095985413,
+										-0.249199733138084,
+										0.0
+									],
+									[
+										0.249199733138084,
+										0.968452095985413,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.85962629318237,
+									5.10882568359375,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0753333333333334,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.933359146118164,
+										-0.35894387960434,
+										0.0
+									],
+									[
+										0.35894387960434,
+										0.933359146118164,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.78720760345459,
+									5.14615154266357,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.0920000000000001,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.870047569274902,
+										-0.492967814207077,
+										0.0
+									],
+									[
+										0.492967814207077,
+										0.870047569274902,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.68853998184204,
+									5.18150758743286,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.108666333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.781043648719788,
+										-0.624476432800293,
+										0.0
+									],
+									[
+										0.624476432800293,
+										0.781043648719788,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.5782835483551,
+									5.20276021957397,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.125331333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.669170796871185,
+										-0.743108630180359,
+										0.0
+									],
+									[
+										0.743108630180359,
+										0.669170796871185,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.46303105354309,
+									5.20613956451416,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.141998,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.541190683841705,
+										-0.840899884700775,
+										0.0
+									],
+									[
+										0.840899884700775,
+										0.541190683841705,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.35014533996582,
+									5.19104528427124,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.158664333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.406799226999283,
+										-0.913517594337463,
+										0.0
+									],
+									[
+										0.913517594337463,
+										0.406799226999283,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.24664068222046,
+									5.16015815734863,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.175331,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.277012795209885,
+										-0.960866212844849,
+										0.0
+									],
+									[
+										0.960866212844849,
+										0.277012795209885,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.15807342529297,
+									5.11893939971924,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.191995333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.162666097283363,
+										-0.986681163311005,
+										0.0
+									],
+									[
+										0.986681163311005,
+										0.162666097283363,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.08799242973328,
+									5.07467365264893,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.208661333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.0732885524630547,
+										-0.997310757637024,
+										0.0
+									],
+									[
+										0.997310757637024,
+										0.0732885524630547,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.03798890113831,
+									5.03529977798462,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						},
+						{
+							"elapsed": 0.225327333333333,
+							"phase": "ROLL",
+							"pose": {
+								"basis": [
+									[
+										0.0168944466859102,
+										-0.999857306480408,
+										0.0
+									],
+									[
+										0.999857306480408,
+										0.0168944466859102,
+										0.0
+									],
+									[
+										0.0,
+										0.0,
+										1.0
+									]
+								],
+								"origin": [
+									-3.0085186958313,
+									5.008376121521,
+									4.0
+								]
+							},
+							"statekey": "statekey.game_feel.v1:{\"level_hash\":\"ecbc83dc793ffd9dcbf1ed91f7b1aba647453ac3fd42e1e15dd9469f08dddaf4\",\"rule_version\":\"foundation.rules.game_feel.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						}
+					],
+					"orientation": 12,
+					"presentation_identity": {
+						"attempt_id": 2,
+						"generation": 1,
+						"level_run_id": "fb9f251510a841dbdda9465684543370",
+						"session_id": "afbda355dd1995f914f7b2f02df3d324"
+					},
+					"result": {
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"changed": true,
+						"global_kind": 0,
+						"issues": [],
+						"next_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "exit",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"previous_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "target",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"rejection_code": 0,
+						"status": 0
+					},
+					"semantic": "MOVE_APPLIED_NORMAL",
+					"source_pose": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"started_order": 4,
+					"target_pose": {
+						"location": {
+							"cube_id": "exit",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"terminal": {
+						"presentation_identity": {
+							"attempt_id": 2,
+							"generation": 1,
+							"level_run_id": "fb9f251510a841dbdda9465684543370",
+							"session_id": "afbda355dd1995f914f7b2f02df3d324"
+						},
+						"semantic": "MOVE_APPLIED_NORMAL",
+						"source_pose": {
+							"location": {
+								"cube_id": "target",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 0
+						},
+						"target_pose": {
+							"location": {
+								"cube_id": "exit",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 12
+						},
+						"terminal_phase": "ROLL_RESTORED"
+					},
+					"transition_identity": {
+						"generation": 1,
+						"is_global": false,
+						"level_run_id": "fb9f251510a841dbdda9465684543370",
+						"session_id": "afbda355dd1995f914f7b2f02df3d324",
+						"transaction_id": 2
+					},
+					"world_id": 0
+				}
+			],
+			"scope": {
+				"generation": 1,
+				"level_run_id": "fb9f251510a841dbdda9465684543370",
+				"session_id": "afbda355dd1995f914f7b2f02df3d324"
+			}
+		}
+	]
+}
