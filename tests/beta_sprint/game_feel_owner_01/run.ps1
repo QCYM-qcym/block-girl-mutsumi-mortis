@@ -21,7 +21,8 @@ if($LASTEXITCODE -ne 0){throw 'Map input acquisition failed'}
 }
 if($Import){$Script='EDITOR_IMPORT'}
 $source=@(& git -C $taskRoot status --short --untracked-files=all)
-$shaFiles=@(Get-ChildItem -LiteralPath "$taskRoot/foundation","$taskRoot/tests/beta_sprint/game_feel_owner_01" -Recurse -File | Where-Object Extension -EQ '.gd' | ForEach-Object {@{path=$_.FullName.Replace($taskRoot,'');sha256=(Get-FileHash -LiteralPath $_.FullName).Hash.ToLowerInvariant()}})
+$shaRoots=@("$taskRoot/foundation","$taskRoot/tests/beta_sprint/game_feel_owner_01","$taskRoot/game/feel","$taskRoot/experiments/game_feel_01") | Where-Object {Test-Path -LiteralPath $_}
+$shaFiles=@(Get-ChildItem -LiteralPath $shaRoots -Recurse -File | Where-Object Extension -EQ '.gd' | ForEach-Object {@{path=$_.FullName.Replace($taskRoot,'');sha256=(Get-FileHash -LiteralPath $_.FullName).Hash.ToLowerInvariant()}})
 $exe='D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe'
 @{head=(& git -C $taskRoot rev-parse HEAD);dirty=$source;script=$Script;input= $(if($Script.StartsWith('res://tests/beta_sprint/game_feel_owner_01/')){'semantic actions'}else{'LEGACY_SCRIPT_DECLARED_INPUT'});source_sha=$shaFiles;engine=$exe;engine_sha=(Get-FileHash -LiteralPath $exe).Hash.ToLowerInvariant()} | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath "$ev/source.json"
 $info=[Diagnostics.ProcessStartInfo]::new($exe)

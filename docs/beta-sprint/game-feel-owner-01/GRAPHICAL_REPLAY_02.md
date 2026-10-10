@@ -1,0 +1,12 @@
+# PFALL_GRAPHICAL_COMPLETION_BRIDGE_02 — Owner01 scope
+
+Approved task interface received from 00: fixed production Node3D at res://game/feel/graphical_completion_bridge.gd; bind_runtime(facade,level) -> {ok,issues}; motion_completed(identity,evidence), motion_cancelled(identity,reason); snapshot() -> Dictionary. 00 owns the Bridge/Presenter/CoreLab/10A integration. Owner01 changes only formal Replay routing, Owner-local tests and documentation.
+
+Baseline consumed normally: fcee3299020caf99e396bbb5659d6f630b202f0f. Existing Runtime worktree, no recreation or discarded WIP. Original production candidate 26387d6c34a869ad7035ee13ee77d8d5c24d796a remains in ancestry.
+
+1. RED: an explicit tests-only completion-signal adapter exercises the real Facade/Kernel and formal Replay. It is Unit lifecycle evidence, never natural graphical proof. Test two-step completion, exactly one commit, absent completion timeout, early completion, cancellation/reset/unload, duplicate/foreign/old identities, closed options and missing dependency.
+2. GREEN: opt-in v2 + mode1 creates one Facade and binds the fixed Bridge to it. Capture full native identity in STARTED, before COMMITTED clears pending. Only the matching live-run Bridge completion sets completion_received. Keep existing state/key/commit-count/idle and timeout checks. Cancellation stays distinct. Never call logical finish or the legacy prototype tween for v2 graphical replay.
+3. Real RED/GREEN: after normal consumption of 00's Bridge commit, use the unchanged public replay(level,trace,{mode:1}) with real A/B Bake, Solver trace, Facade and natural Bridge. Capture actual step keys, native identities, commit delta and opaque Bridge motion evidence/snapshot. No doubles, direct state/transform writes or simulated finished callbacks.
+4. Regression/review: v1 logical and graphical parity, existing Owner contracts/rules/runtime/solver/maps. Keep the frozen four options and eight result fields. Missing or invalid Bridge never falls back. Reset/unload/removal cancels only the owned run; obsolete callbacks cannot alter a reused driver. Local commit with exact file hashes and raw evidence; no push.
+
+Progress and execution evidence live in the ignored .godot/game-feel-owner-01/b02_* directories. The existing Replay options/result shape, Fall permission, Kernel/Safety, shared contract and other Owner files remain unchanged. get_step_evidence() adds read-only deep-copy observation for the actual replay steps.
