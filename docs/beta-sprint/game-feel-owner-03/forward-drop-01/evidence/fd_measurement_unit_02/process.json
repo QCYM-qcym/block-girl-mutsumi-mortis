@@ -1,0 +1,96 @@
+{
+  "scope": "UNIT_AND_PARSE_ONLY",
+  "jobs": [
+    {
+      "job": "forward_drop_observations",
+      "pid": 51668,
+      "arguments": [
+        "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-game-feel-quality",
+        "--check-only",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_03/forward_drop_observations.gd"
+      ],
+      "exit": 0,
+      "stderr_bytes": 0,
+      "source_sha256": "6bbf01f18706cabc63c616f22253249760904741fc67939275db27131f589b4d"
+    },
+    {
+      "job": "test_forward_drop_sampler",
+      "pid": 37156,
+      "arguments": [
+        "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-game-feel-quality",
+        "--check-only",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_03/test_forward_drop_sampler.gd"
+      ],
+      "exit": 0,
+      "stderr_bytes": 0,
+      "source_sha256": "c3bc24394afa3d300759c1f9074a566fa8fc1ad58d6a6f2cd9de6e61babd9760"
+    },
+    {
+      "job": "test_forward_drop_graphical",
+      "pid": 17920,
+      "arguments": [
+        "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-game-feel-quality",
+        "--check-only",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_03/test_forward_drop_graphical.gd"
+      ],
+      "exit": 0,
+      "stderr_bytes": 0,
+      "source_sha256": "4c2a5a9b2d1d605061ea09ff82f2899cbad52f2c250248ff41c57034ee9d910d"
+    },
+    {
+      "job": "test_forward_drop_measurements",
+      "pid": 43160,
+      "arguments": [
+        "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-game-feel-quality",
+        "--check-only",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_03/test_forward_drop_measurements.gd"
+      ],
+      "exit": 0,
+      "stderr_bytes": 0,
+      "source_sha256": "c4d9d05abfaa48bcacde560a0ab0d6d5d0b220aaf3ccedb2d4526bacddb78ec9"
+    },
+    {
+      "job": "unit",
+      "pid": 38136,
+      "arguments": [
+        "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\worktrees\\block-girl-game-feel-quality",
+        "--script",
+        "res://tests/beta_sprint/game_feel_owner_03/test_forward_drop_measurements.gd",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/forward-drop-01/evidence/fd_measurement_unit_02"
+      ],
+      "exit": 0,
+      "stderr_bytes": 0,
+      "source_sha256": "c4d9d05abfaa48bcacde560a0ab0d6d5d0b220aaf3ccedb2d4526bacddb78ec9"
+    }
+  ],
+  "real_pass": false,
+  "checks": 8,
+  "failures": [],
+  "profile_environment": {
+    "APPDATA": "E:\\godot\\worktrees\\block-girl-game-feel-quality\\docs\\beta-sprint\\game-feel-owner-03\\forward-drop-01\\evidence\\fd_measurement_unit_02\\profile\\Roaming",
+    "LOCALAPPDATA": "E:\\godot\\worktrees\\block-girl-game-feel-quality\\docs\\beta-sprint\\game-feel-owner-03\\forward-drop-01\\evidence\\fd_measurement_unit_02\\profile\\Local",
+    "TEMP": "E:\\godot\\worktrees\\block-girl-game-feel-quality\\docs\\beta-sprint\\game-feel-owner-03\\forward-drop-01\\evidence\\fd_measurement_unit_02\\profile\\Temp",
+    "TMP": "E:\\godot\\worktrees\\block-girl-game-feel-quality\\docs\\beta-sprint\\game-feel-owner-03\\forward-drop-01\\evidence\\fd_measurement_unit_02\\profile\\Temp"
+  },
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+}
