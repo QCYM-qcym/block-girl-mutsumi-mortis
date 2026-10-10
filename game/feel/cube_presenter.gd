@@ -16,6 +16,9 @@ var _base := Transform3D.IDENTITY
 var _source := Transform3D.IDENTITY
 var _target := Transform3D.IDENTITY
 var _path_offset := Vector3.ZERO
+var _contact_points := PackedVector3Array()
+var _support_anchor := Vector3.ZERO
+var _support_normal := Vector3.ZERO
 var _presentation: Dictionary = {}
 var _token: Dictionary = {}
 var _started: Dictionary = {}
@@ -47,6 +50,7 @@ func release_edge_intent() -> void:
 func bind(actor: Node3D, fall: RefCounted, landing: RefCounted, projection: Callable, finish_transition: Callable) -> void:
 	clear()
 	_actor = actor
+	_contact_points.clear()
 	_fall = fall
 	_landing = landing
 	_projection = projection
@@ -54,6 +58,16 @@ func bind(actor: Node3D, fall: RefCounted, landing: RefCounted, projection: Call
 	_base = actor.transform
 	_seen.clear()
 	_paused = false
+
+func bind_contact_body(body: MeshInstance3D) -> void:
+	# Capture real body geometry in actor-local coordinates. It never selects a face.
+	_contact_points.clear()
+	if not is_instance_valid(body) or body.get_parent() != _actor or body.mesh == null: return
+	var box := body.get_aabb()
+	for x in [0.0,1.0]:
+		for y in [0.0,1.0]:
+			for z in [0.0,1.0]:
+				_contact_points.append(body.transform * (box.position + box.size * Vector3(x,y,z)))
 
 func bind_scope(scope: Dictionary) -> void:
 	var next: Dictionary={}
@@ -85,7 +99,8 @@ func _current(identity: Variant) -> bool:
 	return true
 
 func consume_event(event: Dictionary) -> Dictionary:
-	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1":
+	var version := State.event_version(event)
+	if version==0 or (version==2 and event.get("semantic") not in ["PERSPECTIVE_FALL_APPLIED","ANIMATION_INTERRUPTED"]):
 		return _failure("Expected versioned Runtime presentation event.")
 	if event.get("phase") in ["STARTED","COMMITTED","REJECTED"] and not _current(event.get("presentation_identity")):
 		return {"ok":true,"ignored":true,"issues":[]}
@@ -94,6 +109,8 @@ func consume_event(event: Dictionary) -> Dictionary:
 	_seen[key] = true
 	var identity: Variant = event.get("presentation_identity")
 	if event.get("semantic") == "ANIMATION_INTERRUPTED":
+		if identity==_presentation and _started.has("contract_version") and event.contract_version!=_started.contract_version:
+			return _failure("Interruption must retain the captured event version.")
 		if identity is Dictionary and identity == _presentation: clear(str(event.get("interruption_reason","CANCEL")))
 		return {"ok":true,"issues":[]}
 	if event.get("semantic") == "MOVE_APPLIED_NORMAL": return _consume_roll(event)
@@ -112,10 +129,13 @@ func consume_event(event: Dictionary) -> Dictionary:
 		if not source_result.ok or not target_result.ok: return _failure("Missing formal source or target projection.")
 		var source: Transform3D = source_result.transform
 		var target: Transform3D = target_result.transform
-		var points: Variant = event.get("authorized_path_points2")
-		if not points is Array or points.size() < 2 or not points[0] is Vector3i or not points[-1] is Vector3i:
-			return _failure("Missing canonical actor-center path.")
-		if not (Vector3(points[0])*0.5).is_equal_approx(source.origin) or not (Vector3(points[-1])*0.5).is_equal_approx(target.origin):
+		# The Owner sampler validates explicit versions and consumes only the
+		# authorized geometry. Host independently resolves the real support poses.
+		var first: Dictionary=staged.sample(0.0)
+		var last: Dictionary=staged.sample(begin.duration_seconds)
+		if not first.get("position") is Vector3 or not last.get("position") is Vector3:
+			return _failure("Missing canonical actor-center geometry endpoints.")
+		if not first.position.is_equal_approx(source.origin) or not last.position.is_equal_approx(target.origin):
 			return _failure("Canonical path endpoints must equal independently projected formal centers.")
 		var replacement_epoch:=_epoch
 		clear()
@@ -133,10 +153,17 @@ func consume_event(event: Dictionary) -> Dictionary:
 	if event.get("phase") == "COMMITTED":
 		if _phase != "FALL" or identity != _presentation or event.get("transition_identity") != _token:
 			return {"ok":true,"ignored":true,"issues":[]}
+		if event.contract_version!=_started.contract_version or (version==2 and event.get("authorized_trajectory")!=_started.get("authorized_trajectory")):
+			return _failure("Committed Fall geometry/version differs from captured STARTED.")
 		if event.get("source_pose")!=_started.source_pose or event.get("target_pose")!=_started.target_pose: return _failure("Committed Fall endpoints differ from captured STARTED.")
 		_landing.parameters.reduced_motion = _fall.parameters.reduced_motion
 		var target_result: Dictionary=_project(event.target_pose)
 		if not target_result.ok: return target_result
+		if not _contact_points.is_empty():
+			if not target_result.get("support_anchor") is Vector3 or not target_result.get("support_normal") is Vector3 or not is_equal_approx(target_result.support_normal.length(),1.0):
+				return _failure("Landing contact requires the projected formal support plane.")
+			_support_anchor=target_result.support_anchor
+			_support_normal=target_result.support_normal
 		var committed := event.duplicate(true)
 		if not committed.has("source_frame") and _started.has("source_frame"):
 			committed.source_frame = _started.source_frame.duplicate(true)
@@ -264,6 +291,13 @@ func _apply_sample(sampled: Dictionary, authoritative_basis: Basis, fallback_ori
 	var origin := fallback_origin
 	if sampled.position is Vector3: origin = sampled.position + _path_offset
 	var basis := Basis(sampled.rotation_offset) * Basis.from_scale(sampled.scale_multiplier) * authoritative_basis
+	if _phase == "LANDING" and not _contact_points.is_empty():
+		# Squash/rock around a center otherwise lifts or penetrates the support.
+		# Only the visual normal offset changes; neutral restores the exact base pose.
+		var minimum := INF
+		for point in _contact_points: minimum=minf(minimum,_support_normal.dot(basis*point))
+		var clearance := _support_normal.dot(origin-_support_anchor)+minimum
+		origin -= _support_normal*clearance
 	_write(Transform3D(basis,origin))
 
 func _write(value: Transform3D) -> void:
@@ -279,6 +313,8 @@ func clear(reason: String = "CANCEL") -> void:
 	_presentation = {}
 	_token = {}
 	_started = {}
+	_support_anchor = Vector3.ZERO
+	_support_normal = Vector3.ZERO
 	_phase = "IDLE"
 	_elapsed = 0.0
 	_finish_sent = false

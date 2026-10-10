@@ -1,0 +1,60 @@
+{
+  "stage": "policy",
+  "command": [
+    "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+    "--headless",
+    "--script",
+    "res://tests/beta_sprint/game_feel_owner_11/test_policy.gd",
+    "--",
+    "--evidence-dir=E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\v2_final_policy02"
+  ],
+  "cwd": "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+  "head": "7363e9e7d7849018cc456ae866a60e23472591d6",
+  "branch": "feat/game-feel-audio",
+  "dirty": [
+    " M docs/beta-sprint/game-feel-owner-11/verify_delivery.py",
+    " M game/feel/audio/event_policy.gd",
+    " M tests/beta_sprint/game_feel_owner_11/run_validation.py",
+    " M tests/beta_sprint/game_feel_owner_11/test_director.gd",
+    " M tests/beta_sprint/game_feel_owner_11/test_policy.gd",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_final_director01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_final_policy01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_final_settings01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_legacy_native01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_lifecycle_green01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_lifecycle_green02/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_lifecycle_red01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_trajectory_green01/",
+    "?? tests/beta_sprint/game_feel_owner_11/evidence/v2_trajectory_red01/"
+  ],
+  "source_sha256": {
+    "game/feel/audio/audio_director.gd": "cfb498eb5fe2e6f64f017076cc6ba4db789d2fed10fd7e234b7217a58b276df1",
+    "game/feel/audio/audio_director.gd.uid": "9a074897d591d931f97dc4339ffe0764c60f6e06bbba2f1c9cebd48b9475c1cc",
+    "game/feel/audio/event_policy.gd": "153e31cc7c9535952b2e227974417b13c3b27bbc2dc72e54d4463754f31b2ee0",
+    "game/feel/audio/event_policy.gd.uid": "9de0a18607acf87517a0582b0f5119c53f6c1a30019afada7abd78ef3b14b9aa",
+    "tests/beta_sprint/game_feel_owner_11/run_validation.py": "957736e03c6126f67469ab4d7230b0085ef569b6a58fc77762d5afd69485ade1",
+    "tests/beta_sprint/game_feel_owner_11/test_policy.gd": "dccfd4ea361836b3fcb32a90fc4d6d414d31ea5dd5efb7c1a0ae9297bee1a840"
+  },
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "profile": "E:\\godot\\worktrees\\block-girl-game-feel-audio\\tests\\beta_sprint\\game_feel_owner_11\\evidence\\v2_final_policy02\\profile",
+  "fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+  "authoritative_runtime": false,
+  "doubles": [
+    "synthetic game_feel.event.v1/v2 snapshots; no Safety proof"
+  ],
+  "input": "direct audio API calls; no gameplay/OS input",
+  "human_listening": "NOT_RUN",
+  "pid": 50264,
+  "exit_code": 0,
+  "seconds": 0.2713664000038989,
+  "source_drift": false,
+  "stderr_bytes": 0,
+  "status": "PASS",
+  "evidence_class": "PRESENTATION_CONTRACT_UNIT",
+  "checks": 116,
+  "failures": [],
+  "user_data_dir": "E:/godot/worktrees/block-girl-game-feel-audio/tests/beta_sprint/game_feel_owner_11/evidence/v2_final_policy02/profile/Godot/app_userdata/方块少女-若叶睦",
+  "display": "headless"
+}

@@ -1,0 +1,14 @@
+{
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "owner": "07",
+  "owner_unit_ready": true,
+  "overall_ready": false,
+  "curve_contract_reference_sha": "ec826753435458abc41cc365e4b57dba27767fbd",
+  "curve_contract_reference_only": true,
+  "cases": [
+    {"id":"new_curve_native_event_ui_consumption","owner":"00/01/07","status":"case_pending","checks":0,"runtime_dependency_sha":null,"candidate_sha":null,"reason":"Owner-local readonly synthetic DTO tests pass; new Runtime/Host candidate must produce and route actual SAFE event.v2 Fall/COMMITTED/Reset."},
+    {"id":"new_curve_build_three_resolutions_visual_regression","owner":"00/03/08","status":"case_pending","checks":0,"build_sha":null,"reason":"Fresh new-profile integrated Build required; retained headless/old graphical size evidence does not accept this candidate."},
+    {"id":"new_curve_human_acceptance","owner":"08","status":"NOT_RUN","checks":0,"build_sha":null,"reason":"WAITING_FOR_NEW_INTEGRATED_BUILD"}
+  ],
+  "push": "NOT_RUN"
+}

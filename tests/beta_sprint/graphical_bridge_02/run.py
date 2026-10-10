@@ -39,7 +39,9 @@ if not path.exists(): path=out/'unit.json'
 if not path.exists(): path=out/'results.json'
 report=json.loads(path.read_text(encoding='utf-8-sig')) if path.exists() else {}
 record.update({'checks':report.get('checks',0),'failures':report.get('failures',['missing report']),'doubles':report.get('doubles'),'stderr_bytes':(out/'stderr.log').stat().st_size,'source_drift':[p for p,sha in sources.items() if not (PROJECT/p).is_file() or digest(PROJECT/p)!=sha],'finished_utc':datetime.now(timezone.utc).isoformat()})
-record.update({'display':report.get('display'),'renderer':report.get('renderer',report.get('observations',{}).get('renderer')),'user_data_dir':report.get('user_data_dir'),'input':report.get('input','Declared in script authority and per-route rows'),'authority':report.get('authority'),'engine_version':next((line for line in (out/'stdout.log').read_text(encoding='utf-8',errors='replace').splitlines() if line.startswith('Godot Engine')),'UNAVAILABLE')})
+observations = report.get('observations', {})
+if not isinstance(observations, dict): observations = {}
+record.update({'display':report.get('display'),'renderer':report.get('renderer',observations.get('renderer')),'user_data_dir':report.get('user_data_dir'),'input':report.get('input','Declared in script authority and per-route rows'),'authority':report.get('authority'),'engine_version':next((line for line in (out/'stdout.log').read_text(encoding='utf-8',errors='replace').splitlines() if line.startswith('Godot Engine')),'UNAVAILABLE')})
 record['status']='PASS' if record['exit_code']==0 and record['checks']>0 and record['failures']==[] and record['doubles']==[] and record['stderr_bytes']==0 and not record['source_drift'] else 'FAIL'
 (out/'process.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({k:record[k] for k in ['case','pid','exit_code','checks','failures','doubles','stderr_bytes','source_drift','status']},ensure_ascii=False))

@@ -1,0 +1,33 @@
+{
+	"authoritative_runtime": false,
+	"checks": 101,
+	"display": "headless",
+	"doubles": [
+		"synthetic game_feel.event.v1 snapshots"
+	],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [
+		"v2 STARTED sounds scoped Fall without landing",
+		"v2 matching COMMITTED lands once and stops captured loop",
+		"v2 scoped interruption stops without impact: RESET",
+		"v2 scoped interruption stops without impact: CANCEL",
+		"v2 scoped interruption stops without impact: UNLOAD",
+		"v2 scoped interruption stops without impact: QUIT",
+		"v2 late old cancel leaves replacement Fall active",
+		"v2 replacement commits once after old scoped cancellation"
+	],
+	"fixture_kind": "PRESENTATION_CONTRACT_UNIT",
+	"input": "direct immutable unit fixtures",
+	"pid": 41824,
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-audio/tests/beta_sprint/game_feel_owner_11/evidence/v2_lifecycle_red01/profile/Godot/app_userdata/方块少女-若叶睦"
+}

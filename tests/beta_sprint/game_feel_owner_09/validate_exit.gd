@@ -6,6 +6,7 @@ const Records = preload("res://foundation/contracts/contract_records.gd")
 const Solver = preload("res://foundation/solver/bfs_solver.gd")
 const Search = preload("res://foundation/solver/search_records.gd")
 const Replay = preload("res://foundation/parity/trace_replayer.gd")
+const Session = preload("res://foundation/runtime/runtime_session.gd")
 var checks := 0
 var failures: Array = []
 var rows: Array = []
@@ -50,7 +51,11 @@ func run() -> void:
 		check(exit_anchor.position2==target.position2+2*target.frame.u and exit_anchor.frame.normal==target.frame.normal,"formal TOP U_POS adjacency")
 		var solved: Dictionary = Solver.solve(baked.level,Records.initial_state(baked.level),Search.default_policy(0),Search.default_budget())
 		check(solved.status==0 and solved.solution_trace.total_actions==1,"one ordinary roll reaches Goal")
-		if solved.status!=0: continue
+		if solved.status!=0:
+			var session=Session.new()
+			session.load_level(baked.level)
+			rows.append({"map":letter,"solver":solved,"move_probe":session.request_action({"kind":0,"face_axis":0})})
+			continue
 		var action: Dictionary = solved.solution_trace.steps[0].action
 		check(action.kind==0 and action.face_axis==0,"formal MOVE U_POS")
 		var replayer=Replay.new()

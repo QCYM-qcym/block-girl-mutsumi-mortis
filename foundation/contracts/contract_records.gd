@@ -1,5 +1,6 @@
 extends RefCounted
 ## Pure record factories. Shape validation is a separate boundary.
+const Feel = preload("res://foundation/game_feel/schema.gd")
 
 
 static func make_player_location(layer: int, cube_id: StringName, face: int) -> Dictionary:
@@ -40,6 +41,6 @@ static func initial_state(level: Dictionary) -> Dictionary:
 		"mechanism_states": mechanism_states,
 		"level_flags": level_flags,
 	}
-	if level.get("schema_version") == 2:
+	if Feel.enabled(level):
 		result["camera_quadrant"] = level.camera_initial_quadrant
 	return result

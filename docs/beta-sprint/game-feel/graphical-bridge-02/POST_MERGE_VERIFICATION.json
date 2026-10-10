@@ -1,0 +1,66 @@
+{
+  "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+  "owner_01": "c60912b494baccb942e3f37f7c28d0c0c035dcc8",
+  "cases": [
+    {
+      "case": "formal_integrated_01",
+      "checks": 101,
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+      "script": "res://tests/beta_sprint/graphical_bridge_02/test_formal.gd",
+      "process_sha256": "8ec16404995843595f0cf6fd7e5d842b48d59dbf86a5f9712f2ae194760d34f2",
+      "evidence": "docs/beta-sprint/game-feel/graphical-bridge-02/evidence/formal_integrated_01/process.json",
+      "status": "PASS"
+    },
+    {
+      "case": "formal_life_integrated_02",
+      "checks": 48,
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+      "script": "res://tests/beta_sprint/game_feel_owner_01/test_graphical_replay_lifecycle.gd",
+      "process_sha256": "ed5a1798b5bf11de74c0359957bda7d2ad62c3d8c25085d00a2993ec4f6c9cd2",
+      "evidence": "docs/beta-sprint/game-feel/graphical-bridge-02/evidence/formal_life_integrated_02/process.json",
+      "status": "PASS"
+    },
+    {
+      "case": "cancel_integrated_01",
+      "checks": 67,
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+      "script": "res://tests/beta_sprint/graphical_bridge_02/test_cancel.gd",
+      "process_sha256": "545edd4ab476af7794c2d82a74210e0d1afcdebbca981fde6713fcdc9f245260",
+      "evidence": "docs/beta-sprint/game-feel/graphical-bridge-02/evidence/cancel_integrated_01/process.json",
+      "status": "PASS"
+    },
+    {
+      "case": "interrupt_integrated_01",
+      "checks": 59,
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+      "script": "res://tests/beta_sprint/graphical_bridge_02/test_interrupt.gd",
+      "process_sha256": "90c914a55eaf8b838c840e3e2415f8e2174c24d9aac9d35eee8cdb3c0def1d50",
+      "evidence": "docs/beta-sprint/game-feel/graphical-bridge-02/evidence/interrupt_integrated_01/process.json",
+      "status": "PASS"
+    },
+    {
+      "case": "logical_integrated_01",
+      "checks": 132,
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+      "script": "res://tests/beta_sprint/pfall_v2_integration/test_path.gd",
+      "process_sha256": "22f8a31ab009cbb1acafc8b0455f84362bd474cc7578ded6b7ae85819268c614",
+      "evidence": "docs/beta-sprint/game-feel/graphical-bridge-02/evidence/logical_integrated_01/process.json",
+      "status": "PASS"
+    },
+    {
+      "case": "natural_integrated_01",
+      "checks": 62,
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4",
+      "script": "res://tests/beta_sprint/pfall_integration/test_core.gd",
+      "process_sha256": "2898c1874048c18961681b5f3867ef6264b488f03eeff711b4fbef6ab018ae45",
+      "evidence": "docs/beta-sprint/game-feel/graphical-bridge-02/evidence/natural_integrated_01/process.json",
+      "status": "PASS"
+    }
+  ],
+  "accepted_assertions": 469,
+  "formal_matched_steps": 8,
+  "logical_natural_formal": "SEPARATE",
+  "unit_adapter": "EXCLUDED",
+  "harness_schema_case": "formal_life_integrated_01 retained, excluded; observations-list reader corrected by00",
+  "strict_gate": "checks>0;failures=[];doubles=[];exit0;stderr0;source_drift=[]"
+}

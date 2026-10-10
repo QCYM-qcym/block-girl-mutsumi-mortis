@@ -10,6 +10,8 @@ Phase pairing follows the committed contract: non-edge ACTION_FEEDBACK uses FEED
 
 Fall STARTED consumes01's structured safety_verdict: dictionary status=SAFE, empty issues Array and nonempty opaque evidence_ref Dictionary. Scalar SAFE is rejected. The UI does not evaluate Safety or reinterpret proof references. See STRUCTURED_SAFETY_FIX.md; Owner tests are synthetic DTO compatibility, while00's real Facade delivery remains the source of authority.
 
+For the registered curve supplement ec826753435458abc41cc365e4b57dba27767fbd, route the original schema2/game_feel.event.v2 Fall STARTED/COMMITTED and captured ANIMATION_INTERRUPTED/INTERRUPTED directly. Do not rewrite v2 as v1. New STARTED needs authorized_trajectory with known pfall.departure_cubic.v1 envelope; no old-path fallback. UI remains a passive consumer of01's existing native result/SAFE/target/identity. Cleanup matches full identity plus captured event version; Reset with null target still clears. Old Roll/Edge/non-Fall events continue to use v1. See CURVE_EVENT_V2_COMPATIBILITY.md and CURVE_CASE_PENDING.json for bounded Unit evidence and new-candidate dependencies.
+
 Open with open_settings(actual_saved_settings). Connect:
 
 - settings_preview(values) → delivered11 AudioDirector.apply_settings(values) and existing fullscreen lifecycle. Audio ignores fullscreen. Preview must not write Save.

@@ -27,7 +27,7 @@ for name in paths:
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_bytes((root / name).read_bytes())
 script = sys.argv[2] if len(sys.argv)>2 else 'validate_maps.gd'
-if script not in ['validate_maps.gd','validate_exit.gd']:
+if script not in ['validate_maps.gd','validate_exit.gd','validate_yellow_proposal.gd']:
     raise SystemExit('Unknown Owner09 test script')
 args = [str(engine), '--headless', '--path', str(root), '--script', 'res://tests/beta_sprint/game_feel_owner_09/'+script, '--', '--evidence='+out.as_posix(), '--profile='+profile.as_posix()]
 record = {'head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip(), 'dirty': subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).decode(), 'sources_sha256': sources, 'engine_sha256': digest(engine), 'arguments': args, 'profile_environment': {k: env[k] for k in ['APPDATA','LOCALAPPDATA']}, 'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'doubles': []}

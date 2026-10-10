@@ -1,0 +1,22 @@
+SCRIPT ERROR: Parse Error: Cannot infer the type of "v1" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://game/feel/audio/event_policy.gd:138)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "v2" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://game/feel/audio/event_policy.gd:139)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:0)
+ERROR: Failed to load script "res://tests/beta_sprint/game_feel_owner_11/test_policy.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: check_v2_lifecycle (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:211)
+   GDScript backtrace (most recent call first):
+       [0] check_v2_lifecycle (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:211)
+       [1] run (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:37)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: check_runtime_shapes (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:161)
+   GDScript backtrace (most recent call first):
+       [0] check_runtime_shapes (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:161)
+       [1] run (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:38)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: run (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:39)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/beta_sprint/game_feel_owner_11/test_policy.gd:39)

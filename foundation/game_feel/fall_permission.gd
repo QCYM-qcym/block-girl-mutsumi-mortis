@@ -10,6 +10,8 @@ const Key = preload("res://foundation/contracts/state_key.gd")
 const Safety = preload("res://foundation/validation/safety_queries.gd")
 const Codec = preload("res://foundation/level/level_codec.gd")
 const View = preload("res://foundation/game_feel/view_contract.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
+const Trajectory = preload("res://foundation/game_feel/trajectory_profile.gd")
 const Code = Types.ValidationCode
 const FALL_NOT_AVAILABLE = 2100
 const CAMERA_NOT_ALLOWED = 2101
@@ -60,7 +62,7 @@ static func evaluate(level: Dictionary, state: Dictionary, action: Dictionary) -
 		return _reject(state,action,FALL_NOT_AVAILABLE,"FALL_NOT_AVAILABLE","Translation-only profile cannot silently omit or invent an ENTER effect.")
 	for flag in c.required_flags:
 		if not state.level_flags[flag]: return _reject(state,action,Code.UNAUTHORIZED_MECHANISM,"MECHANISM_LOCKED","Connection is locked by its authored flag.")
-	if not View.descending(c.path_points2,state.camera_quadrant):
+	if (Feel.curved(level) and not Trajectory.screen_descends(c.trajectory,state.camera_quadrant)) or (not Feel.curved(level) and not View.descending(c.path_points2,state.camera_quadrant)):
 		return _reject(state,action,CAMERA_NOT_ALLOWED,"CAMERA_NOT_ALLOWED","Path must descend continuously in the fixed orthographic screen column.")
 	var next := state.duplicate(true)
 	next.player.location = {"layer":layer,"cube_id":target.cube_id,"face":target.face}
@@ -84,9 +86,12 @@ static func motion(level: Dictionary, before: Dictionary, after: Dictionary, act
 		var frame := Derived.snapshot(level,before)
 		if not frame.ok: return {}
 		var anchor := _find(frame.value.anchors,"face_id",c.source_face_id)
-		var profile: Dictionary = Codec._to_wire(c,"fall_connection")
+		var profile: Dictionary = Codec._to_wire(c,Feel.connection_descriptor(level))
 		profile["view_contract"] = View.VERSION
-		return {"connection_id":c.connection_id,"authorized_path_points2":c.path_points2.duplicate(),"motion_profile_id":c.motion_profile_id,"motion_profile_hash":Codec._json(profile).sha256_text(),"safety_verdict":{"status":"SAFE","issues":[],"evidence_ref":{"kind":"exact_linear_cube_sweep.v1","query":"Safety.validate_perspective_motion","before_statekey":Key.build(level,before).key,"after_statekey":Key.build(level,after).key,"level_hash":level.content_hash,"connection_id":c.connection_id,"profile_hash":Codec._json(profile).sha256_text()}},"orientation_policy":"PRESERVE","presentation_duration_seconds":float(c.presentation_duration_ms)/1000.0,"source_frame":anchor.frame.duplicate(true)}
+		var motion := {"connection_id":c.connection_id,"motion_profile_id":c.motion_profile_id,"motion_profile_hash":Codec._json(profile).sha256_text(),"safety_verdict":{"status":"SAFE","issues":[],"evidence_ref":{"kind":"dyadic_cubic_cube_sweep.v1" if Feel.curved(level) else "exact_linear_cube_sweep.v1","query":"Safety.validate_perspective_motion","before_statekey":Key.build(level,before).key,"after_statekey":Key.build(level,after).key,"level_hash":level.content_hash,"connection_id":c.connection_id,"profile_hash":Codec._json(profile).sha256_text()}},"orientation_policy":"PRESERVE","presentation_duration_seconds":float(c.presentation_duration_ms)/1000.0,"source_frame":anchor.frame.duplicate(true)}
+		if Feel.curved(level): motion["authorized_trajectory"] = c.trajectory.duplicate(true)
+		else: motion["authorized_path_points2"] = c.path_points2.duplicate()
+		return motion
 	return {}
 
 static func description(level: Dictionary, state: Dictionary, action: Dictionary, result: Dictionary) -> Dictionary:

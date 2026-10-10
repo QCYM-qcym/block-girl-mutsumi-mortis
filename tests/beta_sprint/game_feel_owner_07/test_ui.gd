@@ -5,6 +5,7 @@ const Store = preload("res://game/shell/save_store.gd")
 const AudioDirector = preload("res://game/feel/audio/audio_director.gd")
 const AUDIO_COMMIT := "4afbd068fae74a826dae4db04c2c612af23fa861"
 const RUNTIME_DTO_REFERENCE := "26387d6c34a869ad7035ee13ee77d8d5c24d796a"
+const CURVE_CONTRACT_REFERENCE := "ec826753435458abc41cc365e4b57dba27767fbd"
 var checks := 0
 var failures: Array[String] = []
 var evidence := ""
@@ -63,6 +64,7 @@ func run() -> void:
 		await event_case()
 		feedback_contract_case()
 		safety_contract_case()
+		curve_event_contract_case()
 	else: await restore_case()
 	await finish()
 
@@ -276,6 +278,123 @@ func safety_contract_case() -> void:
 		ui.consume_event(cue(id+1,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
 		id += 2
 
+func curve_cue(event_id: int, semantic: String, phase_name: String, transaction := 5) -> Dictionary:
+	# Approved01 profile shape; these points/evidence are synthetic UI fixtures, not proven paths.
+	var event := cue(event_id,semantic,phase_name,"NONE",transaction)
+	event.schema_version = 2
+	event.contract_version = "game_feel.event.v2"
+	event.erase("authorized_path_points2")
+	event.authorized_trajectory = {"trajectory_version":"pfall.departure_cubic.v1",
+		"departure_points2":[Vector3i(0,6,0),Vector3i(-2,6,0)],
+		"descent_control_points2":[Vector3i(-2,6,0),Vector3i(-4,6,0),Vector3i(-6,4,8),Vector3i(-6,2,8)]}
+	return event
+
+func freeze_fixture(value: Variant) -> void:
+	if value is Dictionary:
+		for child in value.values(): freeze_fixture(child)
+		value.make_read_only()
+	elif value is Array:
+		for child in value: freeze_fixture(child)
+		value.make_read_only()
+
+func curve_event_contract_case() -> void:
+	ui.bind_context("unit_session","curve_unit_run")
+	ui.bind_context("unit_session","unit_run")
+	var start := curve_cue(1,"PERSPECTIVE_FALL_APPLIED","STARTED")
+	var before := start.duplicate(true)
+	freeze_fixture(start)
+	ui.consume_event(start)
+	check(ui.feedback_panel.visible and ui.status_label.text == "错视坠落中 · 操作暂锁", "known v2 curve Fall reuses the passive existing status")
+	check(start == before and start.is_read_only() and start.authorized_trajectory.is_read_only() and start.authorized_trajectory.descent_control_points2.is_read_only(), "v2 event, native result and nested readonly trajectory remain untouched")
+	ui.consume_event(cue(2,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+	check(ui.feedback_panel.visible, "v1 same-identity completion cannot clear active v2 status")
+	var old_cancel := cue(3,"ANIMATION_INTERRUPTED","INTERRUPTED")
+	old_cancel.interruption_reason = "RESET"
+	ui.consume_event(old_cancel)
+	check(ui.feedback_panel.visible, "v1 same-identity cancellation cannot clear active v2 status")
+	ui.consume_event(curve_cue(4,"PERSPECTIVE_FALL_APPLIED","COMMITTED",4))
+	check(ui.feedback_panel.visible, "v2 stale attempt completion cannot clear active curve status")
+	var stale_cancel := curve_cue(5,"ANIMATION_INTERRUPTED","INTERRUPTED",4)
+	stale_cancel.interruption_reason = "RESET"
+	ui.consume_event(stale_cancel)
+	check(ui.feedback_panel.visible, "v2 stale attempt cancellation cannot clear active curve status")
+	ui.consume_event(curve_cue(6,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+	check(not ui.feedback_panel.visible, "matching v2 COMMITTED clears curve status")
+	var restarted := curve_cue(7,"PERSPECTIVE_FALL_APPLIED","STARTED",6)
+	ui.consume_event(restarted)
+	check(ui.feedback_panel.visible, "next v2 Fall starts after completion")
+	var reset := curve_cue(8,"ANIMATION_INTERRUPTED","INTERRUPTED",6)
+	reset.interruption_reason = "RESET"
+	reset.target_pose = null
+	reset.target_face = null
+	reset.authoritative_final_orientation = null
+	freeze_fixture(reset)
+	ui.consume_event(reset)
+	check(not ui.feedback_panel.visible, "matching v2 Reset interruption clears without an accepted target")
+	ui.consume_event(restarted)
+	check(not ui.feedback_panel.visible, "duplicate v2 STARTED cannot resurrect an interrupted curve")
+	# Known versions are closed; unsupported versions/kinds must not poison event deduplication.
+	ui.bind_context("unit_session","unknown_curve_run")
+	ui.bind_context("unit_session","unit_run")
+	ui.set_authored_hint("fixture key hint", "existing authored mechanism explanation")
+	ui.set_accessibility({"hint_strength":2,"reduced_motion":false})
+	var negatives := [
+		{"name":"schema2/v1 mismatch","field":"contract_version","value":"game_feel.event.v1"},
+		{"name":"schema1/v2 mismatch","field":"schema_version","value":1},
+		{"name":"unknown event schema","field":"schema_version","value":3},
+		{"name":"unknown event contract","field":"contract_version","value":"game_feel.event.v3"},
+		{"name":"noninteger event schema","field":"schema_version","value":{}},
+		{"name":"nonstring event contract","field":"contract_version","value":{}},
+		{"name":"empty trajectory","field":"authorized_trajectory","value":{}},
+		{"name":"nonrecord trajectory","field":"authorized_trajectory","value":"fixture_only"},
+		{"name":"unknown trajectory version","field":"authorized_trajectory","value":{"trajectory_version":"pfall.departure_cubic.v2"}},
+		{"name":"missing trajectory version","field":"authorized_trajectory","value":{"departure_points2":[]}}]
+	for negative in negatives:
+		var event := curve_cue(1000,"PERSPECTIVE_FALL_APPLIED","STARTED")
+		event[negative.field] = negative.value
+		ui.consume_event(event)
+		check(not ui.feedback_panel.visible, "v2 closed envelope rejects " + negative.name)
+	var no_trajectory := curve_cue(1000,"PERSPECTIVE_FALL_APPLIED","STARTED")
+	no_trajectory.erase("authorized_trajectory")
+	no_trajectory.authorized_path_points2 = [Vector3i.ZERO,Vector3i.ONE]
+	ui.consume_event(no_trajectory)
+	check(not ui.feedback_panel.visible, "v2 missing trajectory cannot fall back to old authorized path")
+	for pair in [["MOVE_APPLIED_NORMAL","STARTED"],["MOVE_REJECTED_EDGE","REJECTED"],["ACTION_FEEDBACK","FEEDBACK"],["PERSPECTIVE_FALL_APPLIED","REJECTED"],["PERSPECTIVE_FALL_APPLIED","INTERRUPTED"],["ANIMATION_INTERRUPTED","COMMITTED"]]:
+		var event := curve_cue(1000,pair[0],pair[1])
+		event.reason_category = "MECHANISM_LOCKED" if pair[0] == "ACTION_FEEDBACK" else "NONE"
+		ui.consume_event(event)
+		check(not ui.feedback_panel.visible, "v2 does not expand unrelated semantic/phase: " + pair[0] + "/" + pair[1])
+	ui.consume_event(curve_cue(1,"PERSPECTIVE_FALL_APPLIED","STARTED"))
+	check(ui.feedback_panel.visible, "unsupported high-ID envelopes do not suppress a subsequent valid v2 Fall")
+	ui.consume_event(curve_cue(2,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+	for negative in [{"field":"safety_verdict","value":{"status":"UNPROVEN","issues":[],"evidence_ref":{"kind":"fixture_only"}}},{"field":"result","value":{"status":1}},{"field":"target_pose","value":null}]:
+		var event := curve_cue(3,"PERSPECTIVE_FALL_APPLIED","STARTED")
+		event[negative.field] = negative.value
+		ui.consume_event(event)
+		check(not ui.feedback_panel.visible, "v2 retains existing authoritative gate: " + negative.field)
+		ui.consume_event(curve_cue(4,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+		ui.bind_context("unit_session","isolate_curve_negative")
+		ui.bind_context("unit_session","unit_run")
+	ui.consume_event(curve_cue(1,"PERSPECTIVE_FALL_APPLIED","STARTED"))
+	ui.bind_context("unit_session","curve_new_run")
+	check(not ui.feedback_panel.visible, "new run clears v2 status and captured event version")
+	var foreign := curve_cue(1000,"PERSPECTIVE_FALL_APPLIED","STARTED")
+	ui.consume_event(foreign)
+	check(not ui.feedback_panel.visible, "v2 old-run delivery stays isolated")
+	var current := curve_cue(1,"PERSPECTIVE_FALL_APPLIED","STARTED")
+	current.level_run_id = "curve_new_run"
+	current.presentation_identity.level_run_id = "curve_new_run"
+	current.transition_identity.level_run_id = "curve_new_run"
+	ui.consume_event(current)
+	check(ui.feedback_panel.visible, "old-run high-ID event cannot poison new-run v2 deduplication")
+	ui.bind_context("unit_session","unit_run")
+	ui.consume_event(cue(1,"PERSPECTIVE_FALL_APPLIED","STARTED"))
+	check(ui.feedback_panel.visible, "legacy v1 Fall remains accepted after v2 context cleanup")
+	ui.consume_event(curve_cue(2,"ANIMATION_INTERRUPTED","INTERRUPTED"))
+	check(ui.feedback_panel.visible, "v2 same-identity cancellation cannot clear active legacy v1 status")
+	ui.consume_event(cue(3,"PERSPECTIVE_FALL_APPLIED","COMMITTED"))
+	check(not ui.feedback_panel.visible, "legacy v1 completion still clears its own status")
+
 func restore_case() -> void:
 	check(FileAccess.file_exists(save_path) and AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")), "independent cold process loads actual saved Master mute")
 	ui.open_settings(progress.settings)
@@ -288,7 +407,7 @@ func finish() -> void:
 	var api_status := "NOT_RUN"
 	if is_instance_valid(audio): api_status = "ACTUAL_API_OWNER_PASS" if failures.is_empty() else "ACTUAL_API_OWNER_FAIL"
 	var fault_exercises := ["injected host write failure","deferred host acknowledgement","external programmatic slider mutation during deferred host acknowledgement"] if phase == "seed" else []
-	var report := {"phase":phase,"pid":OS.get_process_id(),"checks":checks,"failures":failures,"fixture_kind":"PRESENTATION_CONTRACT_UNIT","authoritative_runtime":false,"doubles":["immutable cue DTO fixtures with explicitly synthetic structured Safety evidence","test-only00 host Save/Audio routing bridge"],"fault_exercises":fault_exercises,"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"input":"Control interaction signals; actual storage and AudioDirector bus queries","human_acceptance":"NOT_RUN","formal_runtime":"NOT_IN_THIS_OWNER_CHECKOUT; Real wiring PENDING_00","runtime_dto_reference_sha":RUNTIME_DTO_REFERENCE,"audio_dependency_sha":AUDIO_COMMIT,"formal_audio":api_status,"production_audio_host":"PENDING_00","save_path":save_path,"user_data_dir":OS.get_user_data_dir()}
+	var report := {"phase":phase,"pid":OS.get_process_id(),"checks":checks,"failures":failures,"fixture_kind":"PRESENTATION_CONTRACT_UNIT","authoritative_runtime":false,"doubles":["immutable cue DTO fixtures with explicitly synthetic structured Safety evidence","test-only00 host Save/Audio routing bridge"],"fault_exercises":fault_exercises,"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"input":"Control interaction signals; actual storage and AudioDirector bus queries","human_acceptance":"NOT_RUN","formal_runtime":"NOT_IN_THIS_OWNER_CHECKOUT; Real wiring PENDING_00","runtime_dto_reference_sha":RUNTIME_DTO_REFERENCE,"curve_contract_reference_sha":CURVE_CONTRACT_REFERENCE,"curve_contract_reference_only":true,"curve_geometry_proof":"NOT_RUN; synthetic readonly UI fixture only","audio_dependency_sha":AUDIO_COMMIT,"formal_audio":api_status,"production_audio_host":"PENDING_00","save_path":save_path,"user_data_dir":OS.get_user_data_dir()}
 	DirAccess.make_dir_recursive_absolute(evidence)
 	var file := FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify(report,"\t")); file.close()

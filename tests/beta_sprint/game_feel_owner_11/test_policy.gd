@@ -34,6 +34,7 @@ func event(semantic: String, phase: String, number: int, attempt: int = 1, gener
 		"motion_profile_id": "fixture-safe", "motion_profile_hash": "unit-hash", "safety_verdict": "SAFE", "orientation_policy": "PRESERVE", "presentation_duration_seconds": 0.8}
 
 func run() -> void:
+	check_v2_lifecycle()
 	check_runtime_shapes()
 	var p = Policy.new()
 	var start := event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
@@ -136,7 +137,7 @@ func run() -> void:
 	foreign_world.target_face = foreign_world.target_pose.location.duplicate(true)
 	foreign_world.result.next_state.player = foreign_world.target_pose.duplicate(true)
 	check(p.consume(foreign_world, 0.0).cues.is_empty(), "cross-world Fall cannot sound accepted")
-	var report := {"fixture_kind": "PRESENTATION_CONTRACT_UNIT", "authoritative_runtime": false, "doubles": ["synthetic game_feel.event.v1 snapshots"], "checks": checks, "failures": failures, "pid": OS.get_process_id(), "engine": Engine.get_version_info(), "user_data_dir": OS.get_user_data_dir(), "display": DisplayServer.get_name(), "input": "direct immutable unit fixtures"}
+	var report := {"fixture_kind": "PRESENTATION_CONTRACT_UNIT", "authoritative_runtime": false, "doubles": ["synthetic game_feel.event.v1/v2 snapshots; no Safety proof"], "checks": checks, "failures": failures, "pid": OS.get_process_id(), "engine": Engine.get_version_info(), "user_data_dir": OS.get_user_data_dir(), "display": DisplayServer.get_name(), "input": "direct immutable unit fixtures"}
 	if not output.is_empty():
 		var file := FileAccess.open(output.path_join("policy.json"), FileAccess.WRITE)
 		file.store_string(JSON.stringify(report, "\t"))
@@ -192,3 +193,105 @@ func check_runtime_shapes() -> void:
 	var bad_move := event("MOVE_APPLIED_NORMAL", "STARTED", 1)
 	bad_move.intended_move_direction = null
 	check(p.consume(bad_move, 0.0).cues.is_empty(), "ordinary MOVE still requires mapped direction")
+
+func v2_event(semantic: String, phase: String, number: int, attempt: int = 1) -> Dictionary:
+	# Owner01 PROFILE_DELTA_03 literal A shape; synthetic authorization, not Safety proof.
+	var sample := runtime_shape_event(semantic, phase, number)
+	sample.schema_version = 2
+	sample.contract_version = "game_feel.event.v2"
+	sample.attempt_id = attempt
+	sample.presentation_identity.attempt_id = attempt
+	if sample.transition_identity is Dictionary: sample.transition_identity.transaction_id = attempt
+	sample.erase("authorized_path_points2")
+	var trajectory := {"trajectory_version": "pfall.departure_cubic.v1", "departure_points2": [Vector3i(0, 6, 0), Vector3i(-2, 6, 0)], "descent_control_points2": [Vector3i(-2, 6, 0), Vector3i(-4, 6, 0), Vector3i(-6, 4, 8), Vector3i(-6, 2, 8)]}
+	trajectory.departure_points2.make_read_only()
+	trajectory.descent_control_points2.make_read_only()
+	trajectory.make_read_only()
+	sample.authorized_trajectory = trajectory
+	if semantic == "PERSPECTIVE_FALL_APPLIED": sample.safety_verdict.evidence_ref.kind = "dyadic_cubic_cube_sweep.v1"
+	return sample
+
+func check_v2_lifecycle() -> void:
+	var p = Policy.new()
+	var start := v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
+	var frozen := start.duplicate(true)
+	var answer: Dictionary = p.consume(start, 0.0)
+	check(answer.accepted and answer.cues == ["fall_start", "fall_whoosh"], "v2 STARTED sounds scoped Fall without landing")
+	check(start == frozen and start.schema_version == 2 and start.contract_version == "game_feel.event.v2", "v2 envelope and authorized trajectory never rewritten to v1")
+	check(p.consume(start, 0.1).cues.is_empty(), "v2 duplicate STARTED ignored")
+	check(p.consume(runtime_shape_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 2), 0.8).cues.is_empty(), "v1 COMMITTED cannot finish captured v2 Fall")
+	var commit := v2_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 3)
+	answer = p.consume(commit, 0.8)
+	check(answer.cues == ["landing_impact"] and answer.stop_identity == identity(), "v2 matching COMMITTED lands once and stops captured loop")
+	commit.event_id = 4
+	check(p.consume(commit, 0.9).cues.is_empty(), "v2 duplicate COMMITTED with fresh event id ignored")
+	for reason in ["RESET", "CANCEL", "UNLOAD", "QUIT"]:
+		p = Policy.new()
+		p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1), 0.0)
+		var interrupt := v2_event("ANIMATION_INTERRUPTED", "INTERRUPTED", 2)
+		interrupt.interruption_reason = reason
+		answer = p.consume(interrupt, 0.1)
+		check(answer.accepted and answer.stop_identity == identity() and answer.cues.is_empty(), "v2 scoped interruption stops without impact: " + reason)
+		check(p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 3), 0.8).cues.is_empty(), "v2 no ghost landing after " + reason)
+	p = Policy.new()
+	p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1), 0.0)
+	p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 2, 2), 0.1)
+	var old_interrupt := v2_event("ANIMATION_INTERRUPTED", "INTERRUPTED", 3)
+	old_interrupt.interruption_reason = "CANCEL"
+	p.consume(old_interrupt, 0.2)
+	check(p.is_active(identity(2)), "v2 late old cancel leaves replacement Fall active")
+	check(p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 4, 2), 0.8).cues == ["landing_impact"], "v2 replacement commits once after old scoped cancellation")
+	for semantic in ["MOVE_APPLIED_NORMAL", "MOVE_REJECTED_EDGE", "ACTION_FEEDBACK"]:
+		p = Policy.new()
+		var wrong_kind := v2_event(semantic, "STARTED", 1)
+		check(not p.consume(wrong_kind, 0.0).accepted, "v2 does not silently expand old semantic: " + semantic)
+	for version in [[1, "game_feel.event.v2"], [2, "game_feel.event.v1"], [3, "game_feel.event.v3"]]:
+		p = Policy.new()
+		var unknown := v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
+		unknown.schema_version = version[0]
+		unknown.contract_version = version[1]
+		check(not p.consume(unknown, 0.0).accepted, "unknown/mismatched version pair fails closed: " + str(version))
+	for fault in ["missing", "unknown", "extra_field", "short_departure", "short_descent", "noncanonical", "out_of_range", "mutable", "string_safe", "wrong_evidence"]:
+		p = Policy.new()
+		var bad := v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
+		var trajectory: Dictionary = bad.authorized_trajectory.duplicate(true)
+		match fault:
+			"missing": bad.erase("authorized_trajectory")
+			"unknown": trajectory.trajectory_version = "pfall.unknown.v9"
+			"extra_field": trajectory.extra = true
+			"short_departure": trajectory.departure_points2 = [Vector3i.ZERO]
+			"short_descent": trajectory.descent_control_points2 = [Vector3i.ZERO]
+			"noncanonical": trajectory.departure_points2[0] = Vector3.ZERO
+			"out_of_range": trajectory.departure_points2[0] = Vector3i(1000001, 0, 0)
+			"string_safe": bad.safety_verdict = "SAFE"
+			"wrong_evidence": bad.safety_verdict.evidence_ref.kind = "exact_linear_cube_sweep.v1"
+		if fault != "missing":
+			if fault != "mutable":
+				trajectory.departure_points2.make_read_only()
+				trajectory.descent_control_points2.make_read_only()
+				trajectory.make_read_only()
+			bad.authorized_trajectory = trajectory
+		# An old polyline never rescues a missing/unsupported v2 trajectory.
+		bad.authorized_path_points2 = [Vector3i.ZERO, Vector3i.ONE]
+		check(not p.consume(bad, 0.0).accepted, "v2 curve authority fails closed with no legacy fallback: " + fault)
+	p = Policy.new()
+	p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1), 0.0)
+	var changed := v2_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 2)
+	var changed_trajectory: Dictionary = changed.authorized_trajectory.duplicate(true)
+	changed_trajectory.descent_control_points2[1] = Vector3i(-4, 8, 0)
+	changed_trajectory.departure_points2.make_read_only()
+	changed_trajectory.descent_control_points2.make_read_only()
+	changed_trajectory.make_read_only()
+	changed.authorized_trajectory = changed_trajectory
+	check(p.consume(changed, 0.8).cues.is_empty(), "v2 same token cannot land with a changed authorized curve")
+	check(p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 3), 0.8).cues == ["landing_impact"], "v2 original authorized curve remains committable after rejected mismatch")
+	p = Policy.new()
+	p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1), 0.0)
+	var wrong_version_interrupt := event("ANIMATION_INTERRUPTED", "INTERRUPTED", 2)
+	wrong_version_interrupt.interruption_reason = "CANCEL"
+	check(not p.consume(wrong_version_interrupt, 0.1).accepted and p.is_active(identity()), "v1 interruption cannot cancel a live v2 captured identity")
+	check(p.consume(v2_event("PERSPECTIVE_FALL_APPLIED", "COMMITTED", 3), 0.8).cues == ["landing_impact"], "v2 Fall remains committable after wrong-version interruption")
+	p = Policy.new()
+	var numeric_version := v2_event("PERSPECTIVE_FALL_APPLIED", "STARTED", 1)
+	numeric_version.schema_version = 2.0
+	check(not p.consume(numeric_version, 0.0).accepted, "floating schema value cannot impersonate exact integer version")

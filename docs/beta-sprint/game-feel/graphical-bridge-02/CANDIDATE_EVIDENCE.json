@@ -1,0 +1,119 @@
+{
+  "candidate": "264b0c4615c4080457c829a824ac2948e8bb7158",
+  "branch": "feat/game-feel-full-slice-01",
+  "production_sha256": {
+    "experiments/game_feel_01/host/core_lab.gd": "166f0bde7f66288e97df2a73ada18e69e6e099cb798451dd6052b5471b082122",
+    "game/feel/cube_presenter.gd": "848fcdb2a88ad3deb75f26c73cc07ace65e3ab0674e587b021811d3f9a4d46e0",
+    "game/feel/graphical_completion_bridge.gd": "ac58fcda903e7a120cc3df9403a2ae55ed8185aae9fb734ad6cf3aaaefdd2cbb",
+    "foundation/parity/trace_replayer.gd": "7770168092f3e056b80b32dab93e9400c976a1fc461c7b2d67f61eb27c66682b"
+  },
+  "owner_intakes": {
+    "01": "c60912b494baccb942e3f37f7c28d0c0c035dcc8",
+    "10A": "4781dfcf16757ccbde13e54ee449f1cf00174944",
+    "03_before_bridge": "2c9d4502dc47dcfe132a19cc76e442458dbf3319"
+  },
+  "tests": [
+    {
+      "case": "formal_integrated_01",
+      "status": "PASS",
+      "checks": 101,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4"
+    },
+    {
+      "case": "formal_life_integrated_02",
+      "status": "PASS",
+      "checks": 48,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4"
+    },
+    {
+      "case": "interrupt_integrated_01",
+      "status": "PASS",
+      "checks": 59,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4"
+    },
+    {
+      "case": "cancel_integrated_01",
+      "status": "PASS",
+      "checks": 67,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4"
+    },
+    {
+      "case": "logical_integrated_01",
+      "status": "PASS",
+      "checks": 132,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4"
+    },
+    {
+      "case": "natural_integrated_01",
+      "status": "PASS",
+      "checks": 62,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "f3bd68a3919b06c05294923b0cc6d17adbf8b3d4"
+    },
+    {
+      "case": "legacy5_01",
+      "status": "PASS",
+      "checks": 82,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "44d76b0ab49afa36a52e871cae4b7f69d9ef599d"
+    },
+    {
+      "case": "legacy_pconn_bridge01",
+      "status": "PASS",
+      "checks": 66,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "3c21f729f129f0e68d58ae970d449d13d4207992"
+    },
+    {
+      "case": "legacy_safety_bridge01",
+      "status": "PASS",
+      "checks": 161,
+      "exit": 0,
+      "stderr": 0,
+      "source_drift": [],
+      "doubles": [],
+      "source": "3c21f729f129f0e68d58ae970d449d13d4207992"
+    }
+  ],
+  "formal_matched_steps": 8,
+  "preservation": "PRESERVATION_01.json",
+  "quality_closeout": "AWAITING_03_DELIVERY",
+  "formal_promotion": "NEXT_WINDOW_PENDING; integration/foundation-4-authoring retained at99f2f1d; daily two-window policy",
+  "open_diagnostic_p2": {
+    "id": "PFALL_BRIDGE_RESET_REASON_02",
+    "actual": "direct Facade.reset may label cancellation CANCEL before RESET; native Host KEY_R reports RESET",
+    "impact": "diagnostic label only; no duplicate completion/commit, state or pose error",
+    "owner": "00",
+    "status": "BACKLOG"
+  },
+  "push": "NOT_RUN"
+}

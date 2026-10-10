@@ -27,7 +27,8 @@ func begin(event: Dictionary) -> Dictionary:
 	_axis = State.lean_axis(event, Vector3.ZERO) if event.has("source_frame") else Vector3.RIGHT
 	_duration = _config.impact_duration + _config.settle_duration
 	return {"ok": true, "issues": [], "duration_seconds": _duration,
-		"cue_schedule": {"LandingImpact": 0.0, "LandingSettled": _duration}}
+		"cue_schedule": {"LandingImpact": 0.0, "LandingSettled": _duration},
+		"phase_schedule": {"LANDING_IMPACT": 0.0, "LANDING_REBOUND": _config.impact_duration, "LANDING_SETTLED": _duration}}
 
 func sample(elapsed_seconds: float) -> Dictionary:
 	if _identity.is_empty() or not is_finite(elapsed_seconds): return State.neutral()
@@ -35,11 +36,11 @@ func sample(elapsed_seconds: float) -> Dictionary:
 	var offset := Quaternion.IDENTITY
 	var scale := Vector3.ONE
 	var phase := "LANDING_SETTLED" if t >= _duration else "LANDING_REBOUND"
+	if t < _config.impact_duration: phase = "LANDING_IMPACT"
 	if t < _duration and not _config.reduced_motion:
 		var deformation := 0.0
 		var rock := 0.0
 		if t < _config.impact_duration:
-			phase = "LANDING_IMPACT"
 			var amount := smoothstep(0.0, _config.impact_duration, t)
 			deformation = -_config.impact_compression * amount
 			rock = amount

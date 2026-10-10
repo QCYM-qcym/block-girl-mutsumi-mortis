@@ -1,0 +1,154 @@
+{
+	"checks": 15,
+	"doubles": [],
+	"failures": [
+		"a actual Fall target must bind existing yellow location",
+		"actual exit at approved new position",
+		"original blue structure is a real visible cube",
+		"production target Anchor",
+		"b actual Fall target must bind existing yellow location",
+		"actual exit at approved new position",
+		"original blue structure is a real visible cube",
+		"production target Anchor"
+	],
+	"fall_safety": "PENDING",
+	"input": "direct Baker/Geometry; no graphics or Runtime Fall",
+	"pid": 50548,
+	"rows": [
+		{
+			"actual_target_center2": [
+				-8.0,
+				0.0,
+				8.0
+			],
+			"approved_geometry": {
+				"exit_center2": [
+					-4.0,
+					0.0,
+					8.0
+				],
+				"exit_visible": true,
+				"real_height_delta": -2.0,
+				"reference_center2": [
+					-8.0,
+					0.0,
+					8.0
+				],
+				"reference_cube_id": "blue_reference",
+				"reference_visible": true,
+				"reference_walkable": false,
+				"source_center2": [
+					0.0,
+					4.0,
+					0.0
+				],
+				"target_actor_center2": [
+					-6.0,
+					2.0,
+					8.0
+				],
+				"target_anchor2": [
+					-6.0,
+					1.0,
+					8.0
+				],
+				"target_center2": [
+					-6.0,
+					0.0,
+					8.0
+				]
+			},
+			"exit_anchor": {
+				"face_id": "exit/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-6, 1, 8)"
+			},
+			"map": "a",
+			"production_bake_hash": "8c2c341aeca6aae2137b95da95752fd43ef95ffbb40623fc8f77e3cd992997f4",
+			"scope": "production v1 geometry; not curve Safety",
+			"target_anchor": {
+				"face_id": "target/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-8, 1, 8)"
+			}
+		},
+		{
+			"actual_target_center2": [
+				-8.0,
+				8.0,
+				8.0
+			],
+			"approved_geometry": {
+				"exit_center2": [
+					-4.0,
+					8.0,
+					8.0
+				],
+				"exit_visible": true,
+				"real_height_delta": 2.0,
+				"reference_center2": [
+					-8.0,
+					8.0,
+					8.0
+				],
+				"reference_cube_id": "blue_reference",
+				"reference_visible": true,
+				"reference_walkable": false,
+				"source_center2": [
+					0.0,
+					4.0,
+					0.0
+				],
+				"target_actor_center2": [
+					-6.0,
+					10.0,
+					8.0
+				],
+				"target_anchor2": [
+					-6.0,
+					9.0,
+					8.0
+				],
+				"target_center2": [
+					-6.0,
+					8.0,
+					8.0
+				]
+			},
+			"exit_anchor": {
+				"face_id": "exit/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-6, 9, 8)"
+			},
+			"map": "b",
+			"production_bake_hash": "a02ae685981ce0d9735111886dc23738485184f6872804140cdf4cada3b168a1",
+			"scope": "production v1 geometry; not curve Safety",
+			"target_anchor": {
+				"face_id": "target/TOP",
+				"frame": {
+					"normal": "(0, 1, 0)",
+					"u": "(1, 0, 0)",
+					"v": "(0, 0, -1)"
+				},
+				"layer": 0,
+				"position2": "(-8, 9, 8)"
+			}
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-map/docs/beta-sprint/game-feel-owner-09/evidence/yellow_production_red_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

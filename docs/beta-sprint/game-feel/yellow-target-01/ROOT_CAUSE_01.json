@@ -1,0 +1,93 @@
+{
+  "baseline": "6ac8ca4",
+  "diagnosis": {
+    "A": "author target/TOP blue and rendered yellow exit/TOP identify different native anchors",
+    "B": "formal Actor final pose correctly projects old target; no misprojected target",
+    "C": "authorized same-column polyline produces zero horizontal departure; timing seam independently diagnosed10A",
+    "D": "actor AuthoritativeCubePose and map target/exit MeshInstances are separate actual Nodes",
+    "E": "actual eight body vertices show center-pivot landing gaps; fixed visual support-normal compensation"
+  },
+  "real_readonly_audit": {
+    "checks": 27,
+    "expected_failures": 6,
+    "stderr": 0,
+    "doubles": []
+  },
+  "contact_red": {
+    "checks": 23,
+    "expected_failures": 2
+  },
+  "contact_green": {
+    "checks": 23,
+    "failures": [],
+    "scope": "old real A/B contact only; new yellow target/curve acceptance NOT_RUN"
+  },
+  "observations": [
+    {
+      "case": "audit_red01",
+      "map": "a",
+      "target_anchor2": "(-8, 1, 8)",
+      "yellow_anchor2": "(-6, 1, 8)",
+      "departure_horizontal_pixels": 0.0,
+      "support_gap_min": -0.00322270393371582,
+      "support_gap_max": 0.0107359886169434,
+      "actor": "/root/@Node3D@2/FormalGraphicalView/AuthoritativeCubePose",
+      "platform": "/root/@Node3D@2/FormalGraphicalView/@Node3D@5/target"
+    },
+    {
+      "case": "audit_red01",
+      "map": "b",
+      "target_anchor2": "(-8, 9, 8)",
+      "yellow_anchor2": "(-6, 9, 8)",
+      "departure_horizontal_pixels": 0.0,
+      "support_gap_min": -0.00322294235229492,
+      "support_gap_max": 0.0107364654541016,
+      "actor": "/root/@Node3D@14/FormalGraphicalView/AuthoritativeCubePose",
+      "platform": "/root/@Node3D@14/FormalGraphicalView/@Node3D@17/target"
+    },
+    {
+      "case": "contact_red01",
+      "map": "a",
+      "target_anchor2": "(-8, 1, 8)",
+      "yellow_anchor2": "(-6, 1, 8)",
+      "departure_horizontal_pixels": 0.0,
+      "support_gap_min": -0.0032227635383606,
+      "support_gap_max": 0.010736346244812,
+      "actor": "/root/@Node3D@2/FormalGraphicalView/AuthoritativeCubePose",
+      "platform": "/root/@Node3D@2/FormalGraphicalView/@Node3D@5/target"
+    },
+    {
+      "case": "contact_red01",
+      "map": "b",
+      "target_anchor2": "(-8, 9, 8)",
+      "yellow_anchor2": "(-6, 9, 8)",
+      "departure_horizontal_pixels": 0.0,
+      "support_gap_min": -0.00323915481567383,
+      "support_gap_max": 0.0109429359436035,
+      "actor": "/root/@Node3D@14/FormalGraphicalView/AuthoritativeCubePose",
+      "platform": "/root/@Node3D@14/FormalGraphicalView/@Node3D@17/target"
+    },
+    {
+      "case": "contact_green01",
+      "map": "a",
+      "target_anchor2": "(-8, 1, 8)",
+      "yellow_anchor2": "(-6, 1, 8)",
+      "departure_horizontal_pixels": 0.0,
+      "support_gap_min": -5.96046447753906e-08,
+      "support_gap_max": 5.96046447753906e-08,
+      "actor": "/root/@Node3D@2/FormalGraphicalView/AuthoritativeCubePose",
+      "platform": "/root/@Node3D@2/FormalGraphicalView/@Node3D@5/target"
+    },
+    {
+      "case": "contact_green01",
+      "map": "b",
+      "target_anchor2": "(-8, 9, 8)",
+      "yellow_anchor2": "(-6, 9, 8)",
+      "departure_horizontal_pixels": 0.0,
+      "support_gap_min": 0.0,
+      "support_gap_max": 0.0,
+      "actor": "/root/@Node3D@14/FormalGraphicalView/AuthoritativeCubePose",
+      "platform": "/root/@Node3D@14/FormalGraphicalView/@Node3D@17/target"
+    }
+  ]
+}

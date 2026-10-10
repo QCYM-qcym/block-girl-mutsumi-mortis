@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb" id="1_rcql0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bfhd7"]
+
+[node name="BG_CH_WAKABA_CUBE_001" type="CharacterBody3D" unique_id=2020142042]
+collision_layer = 2
+metadata/asset_id = "BG_CH_WAKABA_CUBE_001"
+metadata/revision = 2.0
+
+[node name="Visual" type="Node3D" parent="." unique_id=79607255 instance=ExtResource("1_rcql0")]
+
+[node name="Collision_logical_cube" type="CollisionShape3D" parent="." unique_id=1734533367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_bfhd7")
+
+[node name="ConnectionPoints" type="Node3D" parent="." unique_id=485013536]
+
+[node name="RollPivot" type="Marker3D" parent="." unique_id=710010474]
