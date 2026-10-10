@@ -7,6 +7,8 @@ var _identity: Dictionary = {}
 var _points: PackedVector3Array = []
 var _distances: PackedFloat64Array = []
 var _curve: PackedFloat64Array = []
+var _curve_slopes: PackedFloat64Array = []
+var _join_speed := 0.0
 var _config: Resource
 var _axis := Vector3.ZERO
 var _total := 0.0
@@ -32,8 +34,8 @@ func begin(event: Dictionary) -> Dictionary:
 	if not State.text(event.get("connection_id")) or not State.text(event.get("motion_profile_id")) or not State.text(event.get("motion_profile_hash")) or not State.safe_attestation(event):
 		issues.append({"path": "event.motion_profile", "message": "Explicit SAFE attestation and profile identity required; animation never supplies proof."})
 	var duration: Variant = event.get("presentation_duration_seconds")
-	if not (duration is float or duration is int) or not is_finite(float(duration)) or float(duration) <= 0.0 or float(duration) > 30.0:
-		issues.append({"path": "event.presentation_duration_seconds", "message": "Finite duration in (0,30] required."})
+	if not (duration is float or duration is int) or not is_finite(float(duration)) or float(duration) < 0.001 or float(duration) > 30.0:
+		issues.append({"path": "event.presentation_duration_seconds", "message": "Finite duration in [0.001,30] required (Runtime millisecond resolution)."})
 	if not issues.is_empty(): return {"ok": false, "issues": issues}
 	var timing: Dictionary = parameters.timing_table()
 	if not timing.ok: return {"ok": false, "issues": timing.issues}
@@ -58,8 +60,22 @@ func begin(event: Dictionary) -> Dictionary:
 	var weight: float = anticipation_weight + _config.departure_duration + _config.fall_duration
 	_anticipation = _total * anticipation_weight / weight
 	_departure = _total * _config.departure_duration / weight
+	# Positive shared velocity across the departure/main phase boundary.
+	# Each normalized Hermite slope is <= its interval's secant, so the timing
+	# remains bounded and monotone. Flat custom intervals remain intentional.
+	if _config.reduced_motion:
+		_curve = [0.0, 1.0]
+	var intervals := _curve.size() - 1
+	var secants: PackedFloat64Array = []
+	for i in intervals: secants.append((_curve[i + 1] - _curve[i]) * float(intervals))
+	var fall_time := _total - _anticipation - _departure
+	_join_speed = minf(_config.departure_path_fraction / _departure, (1.0 - _config.departure_path_fraction) * secants[0] / fall_time)
+	_curve_slopes = [_join_speed * fall_time / (1.0 - _config.departure_path_fraction)]
+	for i in range(1, intervals): _curve_slopes.append(minf(secants[i - 1], secants[i]))
+	_curve_slopes.append(secants[-1])
 	return {"ok": true, "issues": [], "duration_seconds": _total,
-		"cue_schedule": {"FallStart": 0.0, "LeavePlatform": _anticipation, "FallMoving": _anticipation + _departure}}
+		"cue_schedule": {"FallStart": 0.0, "LeavePlatform": _anticipation, "FallMoving": _anticipation + _departure},
+		"phase_schedule": {"ANTICIPATION": 0.0, "DEPARTURE": _anticipation, "FALL_MOVING": _anticipation + _departure, "AWAITING_COMMIT": _total}}
 
 func sample(elapsed_seconds: float) -> Dictionary:
 	if _identity.is_empty() or not is_finite(elapsed_seconds): return State.neutral()
@@ -74,11 +90,11 @@ func sample(elapsed_seconds: float) -> Dictionary:
 	elif t < _anticipation + _departure:
 		phase = "DEPARTURE"
 		var progress := (t - _anticipation) / _departure
-		fraction = _config.departure_path_fraction * progress
+		fraction = _hermite(0.0, _config.departure_path_fraction, 0.0, _join_speed * _departure, progress)
 		if not _config.reduced_motion and not _axis.is_zero_approx(): offset = Quaternion(_axis, deg_to_rad(_config.anticipation_angle_degrees) * (1.0 - smoothstep(0.0, 1.0, progress)))
 	elif t < _total:
 		var progress := (t - _anticipation - _departure) / (_total - _anticipation - _departure)
-		var eased := progress if _config.reduced_motion else _ease(progress)
+		var eased := _ease(progress)
 		fraction = _config.departure_path_fraction + (1.0 - _config.departure_path_fraction) * eased
 	else:
 		phase = "AWAITING_COMMIT"
@@ -90,7 +106,13 @@ func sample(elapsed_seconds: float) -> Dictionary:
 func _ease(t: float) -> float:
 	var index := t * float(_curve.size() - 1)
 	var lower := mini(int(index), _curve.size() - 2)
-	return lerpf(_curve[lower], _curve[lower + 1], index - float(lower))
+	var width := 1.0 / float(_curve.size() - 1)
+	return _hermite(_curve[lower], _curve[lower + 1], _curve_slopes[lower] * width, _curve_slopes[lower + 1] * width, index - float(lower))
+
+func _hermite(a: float, b: float, da: float, db: float, t: float) -> float:
+	var t2 := t * t
+	var t3 := t2 * t
+	return (2.0 * t3 - 3.0 * t2 + 1.0) * a + (t3 - 2.0 * t2 + t) * da + (-2.0 * t3 + 3.0 * t2) * b + (t3 - t2) * db
 
 func _position(fraction: float) -> Vector3:
 	if fraction <= 0.0: return _points[0]
@@ -109,6 +131,8 @@ func clear() -> void:
 	_points = []
 	_distances = []
 	_curve = []
+	_curve_slopes = []
+	_join_speed = 0.0
 	_config = null
 	_axis = Vector3.ZERO
 	_total = 0.0

@@ -31,6 +31,24 @@ func run() -> void:
 	var motion = Fall.new()
 	var landing = Landing.new()
 	var Orientation = load("res://foundation/orientation/discrete_orientation.gd")
+	# A phase label must not restart path velocity or create an air pause.
+	for duration in [0.3, 0.8]:
+		for reduced in [false, true]:
+			var continuity_event := Fixture.event()
+			continuity_event.presentation_duration_seconds = duration
+			motion.parameters.reduced_motion = reduced
+			var started: Dictionary = motion.begin(continuity_event)
+			check(started.ok, "timing continuity starts")
+			var join: float = started.cue_schedule.FallMoving
+			var step: float = duration * 0.0001
+			var center: Vector3 = motion.sample(join).position
+			var before_velocity: Vector3 = (center - motion.sample(join - step).position) / step
+			var after_velocity: Vector3 = (motion.sample(join + step).position - center) / step
+			print("10A_JOIN duration=", duration, " reduced=", reduced, " before=", before_velocity.length(), " after=", after_velocity.length())
+			check(before_velocity.length() > 0.1 and after_velocity.length() > 0.1, "no air pause at departure/fall boundary")
+			check(before_velocity.distance_to(after_velocity) < maxf(before_velocity.length(), after_velocity.length()) * 0.04, "departure/fall velocity continuous")
+			motion.clear()
+	motion.parameters.reduced_motion = false
 	for higher in [false, true]:
 		var event := Fixture.event(higher)
 		var original := event.duplicate(true)
@@ -38,12 +56,16 @@ func run() -> void:
 		var first: Dictionary = motion.sample(0.0)
 		check(first.position == Vector3(event.authorized_path_points2[0]) * 0.5, "exact source center")
 		var previous: Vector3 = first.position
+		var previous_phase: String = first.phase
 		for i in range(1, 241):
 			var sampled: Dictionary = motion.sample(event.presentation_duration_seconds * float(i) / 240.0)
 			check(sampled.identity == event.presentation_identity and sampled.position.is_finite(), "captured identity and finite path")
 			check(sampled.position.distance_to(previous) < 0.2, "continuous path without teleport")
+			if sampled.phase in ["DEPARTURE", "FALL_MOVING"] and sampled.phase == previous_phase:
+				check(sampled.position.distance_to(previous) > 0.000001, "default moving phases have no internal air pause")
 			check(on_path(sampled.position, event.authorized_path_points2), "sampling stays on authorized polyline, no generated control point")
 			previous = sampled.position
+			previous_phase = sampled.phase
 		var end: Dictionary = motion.sample(event.presentation_duration_seconds)
 		check(end.motion_done and end.position == Vector3(event.authorized_path_points2[-1]) * 0.5, "exact authorized target")
 		check(end.rotation_offset == Quaternion.IDENTITY and end.scale_multiplier == Vector3.ONE, "fall ends neutral")
@@ -112,7 +134,10 @@ func run() -> void:
 		check(reduced.rotation_offset == Quaternion.IDENTITY and reduced.scale_multiplier == Vector3.ONE and on_path(reduced.position, event.authorized_path_points2), "Reduced Motion continuous path, no lean")
 	motion.clear()
 	landing.parameters.reduced_motion = true
-	check(landing.begin(Fixture.committed(event)).ok, "Reduced Motion landing begins")
+	var reduced_landing_begin: Dictionary = landing.begin(Fixture.committed(event))
+	check(reduced_landing_begin.ok, "Reduced Motion landing begins")
+	check(landing.sample(0.04).phase == "LANDING_IMPACT", "Reduced Motion retains real impact phase marker")
+	check(reduced_landing_begin.get("phase_schedule", {}).get("LANDING_REBOUND", -1.0) == 0.06, "landing rebound capture boundary supplied")
 	check(landing.sample(0.04).scale_multiplier == Vector3.ONE and landing.sample(0.12).rotation_offset == Quaternion.IDENTITY, "Reduced Motion neutral landing")
 	landing.cancel(event.presentation_identity)
 	check(not landing.sample(0.1).active and landing.sample(0.1).position == null, "landing cancelled neutral")
@@ -137,6 +162,10 @@ func run() -> void:
 	rejected.result.status = 1
 	check(not motion.begin(rejected).ok, "rejected Runtime result cannot play Fall")
 	var degenerate := Fixture.event()
+	var underflow_duration := Fixture.event()
+	underflow_duration.presentation_duration_seconds = 0.000000001
+	check(not motion.begin(underflow_duration).ok and not motion.sample(0.0).active, "sub-millisecond duration fails atomically before derived speed overflow")
+	motion.clear()
 	degenerate.authorized_path_points2 = [Vector3i.ZERO, Vector3i.ZERO]
 	check(not motion.begin(degenerate).ok, "zero-length path rejected")
 	var cornered := Fixture.event()
@@ -150,6 +179,13 @@ func run() -> void:
 	motion.parameters.fall_curve.add_point(Vector2(0.5,0.8))
 	motion.parameters.fall_curve.add_point(Vector2(1,1))
 	check(motion.begin(event).ok, "valid authored monotone easing accepted")
+	var timing_start: Dictionary = motion.sample(0.0)
+	var last_position: Vector3 = timing_start.position
+	for i in range(1, 1001):
+		var timed: Dictionary = motion.sample(event.presentation_duration_seconds * float(i) / 1000.0)
+		check(on_path(timed.position, event.authorized_path_points2), "monotone Hermite timing stays on authorized geometry")
+		check(timed.position.distance_to(last_position) < 0.05, "custom timing no teleport between knots")
+		last_position = timed.position
 	motion.clear()
 	motion.parameters.fall_curve = Curve.new()
 	motion.parameters.fall_curve.add_point(Vector2(0,0))
