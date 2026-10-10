@@ -18,10 +18,12 @@ static func authoring(data: Dictionary) -> Dictionary:
 	level.cubes = [Base.cube(&"source", int(data.source_layer), vector(data.source_center2)), Base.cube(&"target", int(data.target_layer), vector(data.target_center2))]
 	if data.has("exit_center2"):
 		level.cubes.append(Base.cube(&"exit",int(data.target_layer),vector(data.exit_center2)))
+	if data.has("blue_reference_center2"):
+		level.cubes.append(Base.cube(&"blue_reference",int(data.target_layer),vector(data.blue_reference_center2)))
 	level.faces = []
 	for cube in level.cubes:
 		for face in Geometry.make_face_nodes(cube.cube_id):
-			face.walkable = face.face == 4
+			face.walkable = face.face == 4 and cube.cube_id != &"blue_reference"
 			level.faces.append(face)
 	level.spawn = Records.make_player_state(Records.make_player_location(int(data.source_layer), &"source", 4), 0)
 	level.goal.face_id = &"exit/TOP" if data.has("exit_center2") else &"target/TOP"
@@ -43,15 +45,26 @@ static func opt_in_authoring_candidate(data: Dictionary) -> Dictionary:
 	level.rule_version = String(candidate.rule_version)
 	level["camera_initial_quadrant"] = int(candidate.camera_initial_quadrant)
 	var raw: Dictionary = candidate.connection
-	var points: Array[Vector3i] = []
-	for p in raw.path_points2: points.append(vector(p))
 	var quadrants: Array[int] = []
 	for q in raw.allowed_camera_quadrants: quadrants.append(int(q))
 	var orientations: Array[int] = []
 	for o in raw.allowed_world_orientations: orientations.append(int(o))
 	var flags: Array[StringName] = []
 	for flag in raw.required_flags: flags.append(StringName(flag))
-	level["perspective_falls"] = [{"connection_id":StringName(raw.connection_id),"source_face_id":StringName(raw.source_face_id),"source_edge":int(raw.source_edge),"target_face_id":StringName(raw.target_face_id),"allowed_camera_quadrants":quadrants,"allowed_world_orientations":orientations,"required_flags":flags,"path_points2":points,"orientation_policy":StringName(raw.orientation_policy),"motion_profile_id":StringName(raw.motion_profile_id),"presentation_duration_ms":int(raw.presentation_duration_ms)}]
+	var connection: Dictionary = {"connection_id":StringName(raw.connection_id),"source_face_id":StringName(raw.source_face_id),"source_edge":int(raw.source_edge),"target_face_id":StringName(raw.target_face_id),"allowed_camera_quadrants":quadrants,"allowed_world_orientations":orientations,"required_flags":flags,"orientation_policy":StringName(raw.orientation_policy),"motion_profile_id":StringName(raw.motion_profile_id),"presentation_duration_ms":int(raw.presentation_duration_ms)}
+	if level.schema_version==2:
+		var points: Array[Vector3i] = []
+		for p in raw.path_points2: points.append(vector(p))
+		connection["path_points2"]=points
+	elif level.schema_version==3:
+		var departure: Array[Vector3i] = []
+		for p in raw.trajectory.departure_points2: departure.append(vector(p))
+		var controls: Array[Vector3i] = []
+		for p in raw.trajectory.descent_control_points2: controls.append(vector(p))
+		connection["trajectory"]={"trajectory_version":String(raw.trajectory.trajectory_version),"departure_points2":departure,"descent_control_points2":controls}
+	else:
+		return {} # Unsupported author schema; real Baker reports invalid data.
+	level["perspective_falls"] = [connection]
 	return level
 
 static func bake_game_feel(data: Dictionary) -> Dictionary:

@@ -32,13 +32,22 @@ func run() -> void:
 		return
 	check(OS.get_user_data_dir().replace("\\","/").begins_with(profile.replace("\\","/")+"/"),"isolated user data directory")
 	for letter in ["a","b"]:
+		var legacy: Dictionary = Factory.spec("res://tests/beta_sprint/game_feel_owner_09/fixtures/legacy_"+letter+".json")
+		var old_author: Dictionary = Factory.opt_in_authoring_candidate(legacy.spec)
+		check(old_author.schema_version==2 and old_author.perspective_falls[0].has("path_points2") and not old_author.perspective_falls[0].has("trajectory"),"legacy schema2 author shape remains polyline")
+		var old_bake: Dictionary = Factory.bake(legacy.spec)
+		check(old_bake.ok and old_bake.level.content_hash==legacy.expected_v1_hash,"legacy v1 bake exactly preserves recorded content hash")
 		var spec: Dictionary = Factory.read_spec(letter)
 		# Author-data type/shape checks only, not formal v2 acceptance or Safety.
 		var candidate: Dictionary = Factory.opt_in_authoring_candidate(spec)
 		var fall: Dictionary = candidate.perspective_falls[0]
-		check(candidate.schema_version==2 and candidate.goal.face_id==&"exit/TOP" and candidate.cubes.size()==3,"candidate retains opt-in schema and exit route")
-		check(fall.path_points2[0]==Factory.vector(spec.source_center2)+Vector3i(0,2,0) and fall.path_points2[-1]==Factory.vector(spec.target_center2)+Vector3i(0,2,0),"candidate canonical actor-center endpoints")
-		check(typeof(fall.source_edge)==TYPE_INT and typeof(fall.path_points2[1])==TYPE_VECTOR3I and fall.source_face_id==&"source/TOP" and fall.target_face_id==&"target/TOP","candidate native field conversion")
+		check(candidate.schema_version==3 and candidate.contract_version=="foundation.game_feel.v2" and candidate.rule_version=="foundation.rules.game_feel.v2" and candidate.goal.face_id==&"exit/TOP" and candidate.cubes.size()==4,"schema3 and four-platform route")
+		var trajectory: Dictionary = fall.get("trajectory",{})
+		var departure: Array = trajectory.get("departure_points2",[])
+		var controls: Array = trajectory.get("descent_control_points2",[])
+		check(departure.size()==2 and controls.size()==4 and departure[0]==Factory.vector(spec.source_center2)+Vector3i(0,2,0) and controls[3]==Factory.vector(spec.target_center2)+Vector3i(0,2,0),"curve canonical endpoints and cardinalities")
+		check(trajectory.get("trajectory_version")=="pfall.departure_cubic.v1" and not fall.has("path_points2") and typeof(fall.source_edge)==TYPE_INT and fall.source_face_id==&"source/TOP" and fall.target_face_id==&"target/TOP","explicit curve version with no polyline fallback")
+		check(departure.size()==2 and controls.size()==4 and typeof(controls[0])==TYPE_VECTOR3I and controls[0]==departure[1] and controls[1]-controls[0]==departure[1]-departure[0],"authored exact join and C1 control relation; not motion Safety")
 		check(Factory.authoring(spec).schema_version==1 and not Factory.authoring(spec).has("perspective_falls"),"baseline never auto-activates candidate")
 		var opt_in_bake: Dictionary = Factory.bake_game_feel(spec)
 		check(not opt_in_bake.ok and not opt_in_bake.issues.is_empty(),"baseline Baker honestly rejects undelivered v2; reclassify this case after 01 merge")
@@ -79,6 +88,7 @@ func run() -> void:
 	var control: Dictionary = Factory.read_spec("a")
 	control.id="owner09_adjacent_control"
 	control.erase("exit_center2") # Preserve the original two-cube ordinary-move control.
+	control.erase("blue_reference_center2")
 	control.target_center2=[2,4,0]
 	var baked: Dictionary = Factory.bake(control)
 	check(baked.ok,"ordinary adjacent control bake")

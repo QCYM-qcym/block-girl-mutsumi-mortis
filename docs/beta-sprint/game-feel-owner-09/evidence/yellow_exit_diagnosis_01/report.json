@@ -1,0 +1,281 @@
+{
+	"checks": 13,
+	"display": "headless",
+	"doubles": [],
+	"failures": [
+		"one ordinary roll reaches Goal",
+		"one ordinary roll reaches Goal"
+	],
+	"fall_checks": 0,
+	"fall_status": "case_pending",
+	"input": "direct Solver and actual Runtime Replay; landing is an authored spawn, not Fall acceptance",
+	"pid": 49916,
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"map": "a",
+			"move_probe": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1601,
+						"details": {},
+						"entity_ids": [
+							"blue_reference"
+						],
+						"message": "Roll swept enclosure is not separated from an unrelated Cube.",
+						"path": "safety.motion",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2000,
+				"status": 1
+			},
+			"solver": {
+				"budget_reason": 0,
+				"graph": {
+					"complete": true,
+					"edges": [],
+					"forward": {
+						"statekey.v1:{\"level_hash\":\"101d2db476d35b675519ce92aed9615976a35d97087965c3b4d506e901127c5c\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}": []
+					},
+					"graph_version": "stategraph.v1",
+					"initial_key": "statekey.v1:{\"level_hash\":\"101d2db476d35b675519ce92aed9615976a35d97087965c3b4d506e901127c5c\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"level_hash": "101d2db476d35b675519ce92aed9615976a35d97087965c3b4d506e901127c5c",
+					"nodes": {
+						"statekey.v1:{\"level_hash\":\"101d2db476d35b675519ce92aed9615976a35d97087965c3b4d506e901127c5c\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}": {
+							"depth": 0,
+							"expanded": true,
+							"is_goal": false,
+							"predecessor_edge": null,
+							"state": {
+								"celestial": {
+									"slot_id": "a"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "target",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 0
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							},
+							"state_key": "statekey.v1:{\"level_hash\":\"101d2db476d35b675519ce92aed9615976a35d97087965c3b4d506e901127c5c\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						}
+					},
+					"policy_descriptor": {
+						"filter_descriptor": {
+							"disabled_mechanics": [],
+							"filter_id": "UNFILTERED",
+							"filter_version": "1"
+						},
+						"mode": 0,
+						"strategy": "BFS",
+						"validation_options": {
+							"max_checks": 100000,
+							"max_configurations": 4096
+						}
+					},
+					"reverse": {
+						"statekey.v1:{\"level_hash\":\"101d2db476d35b675519ce92aed9615976a35d97087965c3b4d506e901127c5c\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}": []
+					},
+					"rule_version": "foundation.rules.v1",
+					"stop_reason": 0
+				},
+				"issues": [],
+				"metrics": {
+					"action_evaluations": 5,
+					"duplicate_states": 0,
+					"elapsed_ms": 122,
+					"explored_states": 1,
+					"filtered_edges": 0,
+					"generated_edges": 0,
+					"goal_states": 0,
+					"max_depth_reached": 0,
+					"no_op_actions": 0,
+					"rejected_actions": 5,
+					"safety_unproven_rejections": 1,
+					"shortest_solution_count": null,
+					"shortest_solution_count_complete": false,
+					"solution_length": null,
+					"visited_states": 1
+				},
+				"solution_trace": null,
+				"status": 1,
+				"validation": {
+					"checks_performed": 39,
+					"configurations_checked": 1,
+					"issues": [],
+					"status": 0
+				}
+			}
+		},
+		{
+			"map": "b",
+			"move_probe": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1601,
+						"details": {},
+						"entity_ids": [
+							"blue_reference"
+						],
+						"message": "Roll swept enclosure is not separated from an unrelated Cube.",
+						"path": "safety.motion",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2000,
+				"status": 1
+			},
+			"solver": {
+				"budget_reason": 0,
+				"graph": {
+					"complete": true,
+					"edges": [],
+					"forward": {
+						"statekey.v1:{\"level_hash\":\"f9d46c9ac49d0ea4f7b9aacdbbb4c530c0629ef4088c6f5c9bbfc63d346df26b\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}": []
+					},
+					"graph_version": "stategraph.v1",
+					"initial_key": "statekey.v1:{\"level_hash\":\"f9d46c9ac49d0ea4f7b9aacdbbb4c530c0629ef4088c6f5c9bbfc63d346df26b\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"level_hash": "f9d46c9ac49d0ea4f7b9aacdbbb4c530c0629ef4088c6f5c9bbfc63d346df26b",
+					"nodes": {
+						"statekey.v1:{\"level_hash\":\"f9d46c9ac49d0ea4f7b9aacdbbb4c530c0629ef4088c6f5c9bbfc63d346df26b\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}": {
+							"depth": 0,
+							"expanded": true,
+							"is_goal": false,
+							"predecessor_edge": null,
+							"state": {
+								"celestial": {
+									"slot_id": "a"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "target",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 0
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							},
+							"state_key": "statekey.v1:{\"level_hash\":\"f9d46c9ac49d0ea4f7b9aacdbbb4c530c0629ef4088c6f5c9bbfc63d346df26b\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+						}
+					},
+					"policy_descriptor": {
+						"filter_descriptor": {
+							"disabled_mechanics": [],
+							"filter_id": "UNFILTERED",
+							"filter_version": "1"
+						},
+						"mode": 0,
+						"strategy": "BFS",
+						"validation_options": {
+							"max_checks": 100000,
+							"max_configurations": 4096
+						}
+					},
+					"reverse": {
+						"statekey.v1:{\"level_hash\":\"f9d46c9ac49d0ea4f7b9aacdbbb4c530c0629ef4088c6f5c9bbfc63d346df26b\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}": []
+					},
+					"rule_version": "foundation.rules.v1",
+					"stop_reason": 0
+				},
+				"issues": [],
+				"metrics": {
+					"action_evaluations": 5,
+					"duplicate_states": 0,
+					"elapsed_ms": 126,
+					"explored_states": 1,
+					"filtered_edges": 0,
+					"generated_edges": 0,
+					"goal_states": 0,
+					"max_depth_reached": 0,
+					"no_op_actions": 0,
+					"rejected_actions": 5,
+					"safety_unproven_rejections": 1,
+					"shortest_solution_count": null,
+					"shortest_solution_count_complete": false,
+					"solution_length": null,
+					"visited_states": 1
+				},
+				"solution_trace": null,
+				"status": 1,
+				"validation": {
+					"checks_performed": 39,
+					"configurations_checked": 1,
+					"issues": [],
+					"status": 0
+				}
+			}
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-map/docs/beta-sprint/game-feel-owner-09/evidence/yellow_exit_diagnosis_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

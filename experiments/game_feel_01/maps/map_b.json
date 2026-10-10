@@ -7,7 +7,7 @@
     0
   ],
   "target_center2": [
-    -8,
+    -6,
     8,
     8
   ],
@@ -18,7 +18,7 @@
   "candidate_camera": 1,
   "candidate_entry_axis": "U_NEG",
   "candidate_pose_policy": "PRESERVE - requires Owner01 contract",
-  "status": "DIAGNOSTIC_ONLY_RUNTIME_EXTENSION_REQUIRED",
+  "status": "SCHEMA3_AUTHORING_READY_FORMAL_ACCEPTANCE_PENDING",
   "connection": {
     "connection_id": "pfall_b",
     "source": {
@@ -40,10 +40,10 @@
     "authorizes_traversal": false,
     "safety_status": "UNPROVEN",
     "path_design": "clear source edge, then continuous screen-space descent, then exact target support; canonical path authored/validated by 01",
-    "runtime_schema": "PENDING_OWNER01"
+    "runtime_schema": "foundation.game_feel.v2"
   },
   "exit_center2": [
-    -6,
+    -4,
     8,
     8
   ],
@@ -57,9 +57,9 @@
     "requires_fall_before_route": true
   },
   "opt_in_candidate": {
-    "schema_version": 2,
-    "contract_version": "foundation.game_feel.v1",
-    "rule_version": "foundation.rules.game_feel.v1",
+    "schema_version": 3,
+    "contract_version": "foundation.game_feel.v2",
+    "rule_version": "foundation.rules.game_feel.v2",
     "camera_initial_quadrant": 1,
     "connection": {
       "connection_id": "pfall_b",
@@ -73,32 +73,52 @@
         0
       ],
       "required_flags": [],
-      "path_points2": [
-        [
-          0,
-          6,
-          0
-        ],
-        [
-          -2,
-          6,
-          2
-        ],
-        [
-          -6,
-          10,
-          6
-        ],
-        [
-          -8,
-          10,
-          8
-        ]
-      ],
       "orientation_policy": "PRESERVE",
-      "motion_profile_id": "pfall_b_edge_clear_v1",
-      "presentation_duration_ms": 600
+      "motion_profile_id": "pfall_b_yellow_departure_cubic_v1",
+      "presentation_duration_ms": 600,
+      "trajectory": {
+        "trajectory_version": "pfall.departure_cubic.v1",
+        "departure_points2": [
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            -2,
+            6,
+            0
+          ]
+        ],
+        "descent_control_points2": [
+          [
+            -2,
+            6,
+            0
+          ],
+          [
+            -4,
+            6,
+            0
+          ],
+          [
+            -6,
+            14,
+            8
+          ],
+          [
+            -6,
+            10,
+            8
+          ]
+        ]
+      }
     },
-    "authority": "CANDIDATE_ONLY_RUNTIME_DELIVERY_PENDING"
-  }
+    "authority": "CONTRACT_REGISTERED_RUNTIME_SAFETY_DELIVERY_PENDING"
+  },
+  "blue_reference_center2": [
+    -8,
+    8,
+    8
+  ]
 }
