@@ -45,15 +45,26 @@ static func opt_in_authoring_candidate(data: Dictionary) -> Dictionary:
 	level.rule_version = String(candidate.rule_version)
 	level["camera_initial_quadrant"] = int(candidate.camera_initial_quadrant)
 	var raw: Dictionary = candidate.connection
-	var points: Array[Vector3i] = []
-	for p in raw.path_points2: points.append(vector(p))
 	var quadrants: Array[int] = []
 	for q in raw.allowed_camera_quadrants: quadrants.append(int(q))
 	var orientations: Array[int] = []
 	for o in raw.allowed_world_orientations: orientations.append(int(o))
 	var flags: Array[StringName] = []
 	for flag in raw.required_flags: flags.append(StringName(flag))
-	level["perspective_falls"] = [{"connection_id":StringName(raw.connection_id),"source_face_id":StringName(raw.source_face_id),"source_edge":int(raw.source_edge),"target_face_id":StringName(raw.target_face_id),"allowed_camera_quadrants":quadrants,"allowed_world_orientations":orientations,"required_flags":flags,"path_points2":points,"orientation_policy":StringName(raw.orientation_policy),"motion_profile_id":StringName(raw.motion_profile_id),"presentation_duration_ms":int(raw.presentation_duration_ms)}]
+	var connection: Dictionary = {"connection_id":StringName(raw.connection_id),"source_face_id":StringName(raw.source_face_id),"source_edge":int(raw.source_edge),"target_face_id":StringName(raw.target_face_id),"allowed_camera_quadrants":quadrants,"allowed_world_orientations":orientations,"required_flags":flags,"orientation_policy":StringName(raw.orientation_policy),"motion_profile_id":StringName(raw.motion_profile_id),"presentation_duration_ms":int(raw.presentation_duration_ms)}
+	if level.schema_version==2:
+		var points: Array[Vector3i] = []
+		for p in raw.path_points2: points.append(vector(p))
+		connection["path_points2"]=points
+	elif level.schema_version==3:
+		var departure: Array[Vector3i] = []
+		for p in raw.trajectory.departure_points2: departure.append(vector(p))
+		var controls: Array[Vector3i] = []
+		for p in raw.trajectory.descent_control_points2: controls.append(vector(p))
+		connection["trajectory"]={"trajectory_version":String(raw.trajectory.trajectory_version),"departure_points2":departure,"descent_control_points2":controls}
+	else:
+		return {} # Unsupported author schema; real Baker reports invalid data.
+	level["perspective_falls"] = [connection]
 	return level
 
 static func bake_game_feel(data: Dictionary) -> Dictionary:

@@ -1,0 +1,332 @@
+{
+	"authority": "real baseline Baker/Runtime/Safety/Solver/Replay; map metadata grants no permission",
+	"checks": 46,
+	"display": "headless",
+	"doubles": [],
+	"failures": [],
+	"input": "direct formal API; no graphical/native input claim",
+	"ordinary_replay": {
+		"action": null,
+		"actual_statekey": "statekey.v1:{\"level_hash\":\"b99e4e09b1db4fd205549dd0318303748833b6e223db01247d3abe9c454459fa\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+		"divergence_step": null,
+		"expected_statekey": "statekey.v1:{\"level_hash\":\"b99e4e09b1db4fd205549dd0318303748833b6e223db01247d3abe9c454459fa\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"target\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+		"issues": [],
+		"matched_steps": 1,
+		"status": 0,
+		"trace_length": 1
+	},
+	"pending": [
+		{
+			"case_id": "fall_a",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_b",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_camera_gate",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_wrong_world",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_path_safety",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_orientation_24",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_reset_inflight",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_solver",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_replay",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_graphical",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		},
+		{
+			"case_id": "fall_no_softlock",
+			"checks": 0,
+			"delivery_sha": null,
+			"dependency": "01 versioned Fall delivery + 00 host where applicable",
+			"status": "case_pending"
+		}
+	],
+	"pid": 47924,
+	"renderer": "forward_plus",
+	"rows": [
+		{
+			"after_StateKey": "statekey.v1:{\"level_hash\":\"03ecfa1e2b0d75ebd5e279b3a726af45a4fe518015819c2af42ef6a4dadefdc5\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"before_StateKey": "statekey.v1:{\"level_hash\":\"03ecfa1e2b0d75ebd5e279b3a726af45a4fe518015819c2af42ef6a4dadefdc5\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"invalid_landing": {
+				"issues": [
+					{
+						"code": 1204,
+						"details": {},
+						"entity_ids": [
+							"target/FRONT"
+						],
+						"message": "Player requires a walkable support face.",
+						"path": "player.location",
+						"severity": 0
+					}
+				],
+				"status": 1
+			},
+			"level_hash": "03ecfa1e2b0d75ebd5e279b3a726af45a4fe518015819c2af42ef6a4dadefdc5",
+			"map": "a",
+			"move": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": null,
+				"previous_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2000,
+				"status": 1
+			},
+			"shift": {
+				"action": {
+					"kind": 1
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1400,
+						"details": {},
+						"entity_ids": [],
+						"message": "No geometric shift mapping exists.",
+						"path": "mapping",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 1400,
+				"status": 1
+			},
+			"solver_metrics": {
+				"action_evaluations": 5,
+				"duplicate_states": 0,
+				"elapsed_ms": 115,
+				"explored_states": 1,
+				"filtered_edges": 0,
+				"generated_edges": 0,
+				"goal_states": 0,
+				"max_depth_reached": 0,
+				"no_op_actions": 0,
+				"rejected_actions": 5,
+				"safety_unproven_rejections": 0,
+				"shortest_solution_count": null,
+				"shortest_solution_count_complete": false,
+				"solution_length": null,
+				"visited_states": 1
+			},
+			"solver_status": 1,
+			"static_landing": {
+				"issues": [],
+				"status": 0
+			}
+		},
+		{
+			"after_StateKey": "statekey.v1:{\"level_hash\":\"e042f95a229f7cda95b73f056a6885532954fd917f7f66a022c88305623c576f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"before_StateKey": "statekey.v1:{\"level_hash\":\"e042f95a229f7cda95b73f056a6885532954fd917f7f66a022c88305623c576f\",\"rule_version\":\"foundation.rules.v1\",\"state\":{\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"invalid_landing": {
+				"issues": [
+					{
+						"code": 1204,
+						"details": {},
+						"entity_ids": [
+							"target/FRONT"
+						],
+						"message": "Player requires a walkable support face.",
+						"path": "player.location",
+						"severity": 0
+					}
+				],
+				"status": 1
+			},
+			"level_hash": "e042f95a229f7cda95b73f056a6885532954fd917f7f66a022c88305623c576f",
+			"map": "b",
+			"move": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": null,
+				"previous_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2000,
+				"status": 1
+			},
+			"shift": {
+				"action": {
+					"kind": 1
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1400,
+						"details": {},
+						"entity_ids": [],
+						"message": "No geometric shift mapping exists.",
+						"path": "mapping",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 1400,
+				"status": 1
+			},
+			"solver_metrics": {
+				"action_evaluations": 5,
+				"duplicate_states": 0,
+				"elapsed_ms": 112,
+				"explored_states": 1,
+				"filtered_edges": 0,
+				"generated_edges": 0,
+				"goal_states": 0,
+				"max_depth_reached": 0,
+				"no_op_actions": 0,
+				"rejected_actions": 5,
+				"safety_unproven_rejections": 0,
+				"shortest_solution_count": null,
+				"shortest_solution_count_complete": false,
+				"solution_length": null,
+				"visited_states": 1
+			},
+			"solver_status": 1,
+			"static_landing": {
+				"issues": [],
+				"status": 0
+			}
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-map/docs/beta-sprint/game-feel-owner-09/evidence/curve_legacy_green_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}
