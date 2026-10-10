@@ -156,6 +156,12 @@ func _build_geometry() -> void:
 func _on_event(event: Dictionary) -> void:
 	if _closed: return
 	if event.semantic!="ANIMATION_INTERRUPTED":
+		# A new input can arrive in the same frame as native CANCEL, before
+		# _process observes the generation change. Bind authority before gating.
+		if runtime.is_loaded() and runtime.get_presentation_scope()!=_scope:
+			_camera_motion={}
+			_on_committed(runtime.get_state())
+		if _closed or not runtime.is_loaded(): return
 		if event.get("session_id")!=_scope.get("session_id") or event.get("level_run_id")!=_scope.get("level_run_id"): return
 		var identity: Variant=event.get("transition_identity")
 		if identity is Dictionary and identity.get("generation")!=_scope.get("generation"): return

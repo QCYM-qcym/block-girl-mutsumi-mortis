@@ -64,7 +64,7 @@ func _process(_delta:float)->void:
 	if view.transition_identity.is_empty(): return
 	var record:=_find(view.transition_identity)
 	if record.is_empty(): return
-	record.frames.append({"phase":view.phase,"elapsed":view.elapsed,"pose":_pose(lab.actor.transform),"statekey":Key.build(runtime.get_level(),runtime.get_state()).get("key","")})
+	record.frames.append({"phase":view.phase,"elapsed":view.elapsed,"pose":_pose(lab.actor.transform),"camera_pose":_pose(lab.camera.transform),"statekey":Key.build(runtime.get_level(),runtime.get_state()).get("key","")})
 
 func _on_terminal(identity:Dictionary,evidence:Dictionary)->void:
 	if not _current(identity): return
@@ -91,6 +91,7 @@ func _flush(record:Dictionary)->void:
 	record.commit_count=runtime.get_commit_count()
 	record.final_visual_pose=_pose(lab.actor.transform)
 	record.expected_visual_pose=_pose(projected.transform)
+	record.final_camera_pose=_pose(lab.camera.transform)
 	record.camera_quadrant=state.camera_quadrant
 	record.world_id=state.player.location.layer
 	record.orientation=state.player.orientation

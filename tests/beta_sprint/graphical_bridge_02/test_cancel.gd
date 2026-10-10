@@ -34,6 +34,28 @@ func run()->void:
 					check(completed.size()==1 and runtime.get_commit_count()==1,letter+" real input restored after CANCEL")
 				rows.append({"map":letter,"phase":phase,"reason":reason,"cancelled":cancelled,"snapshot":bridge.snapshot()})
 				bridge.free()
+		# No frame and no Reset between committed decoration cancellation and
+		# the next actual accepted action; Host must bind the new native scope.
+		var immediate_bake:Dictionary=Maps.bake_game_feel(Maps.read_spec(letter))
+		var immediate_runtime:=Facade.new()
+		immediate_runtime.load_level(immediate_bake.level)
+		var immediate_bridge:=Bridge.new()
+		root.add_child(immediate_bridge)
+		immediate_bridge.bind_runtime(immediate_runtime,immediate_bake.level)
+		var immediate_completed:Array=[]
+		var immediate_cancelled:Array=[]
+		immediate_bridge.motion_completed.connect(func(i,e):immediate_completed.append(i))
+		immediate_bridge.motion_cancelled.connect(func(i,r):immediate_cancelled.append(i))
+		key(KEY_F)
+		await wait_phase(immediate_bridge,"LANDING")
+		immediate_runtime.interrupt("CANCEL")
+		var immediate_roll:Dictionary=immediate_runtime.request_action({"kind":0,"face_axis":0})
+		check(immediate_roll.status==0 and immediate_roll.changed and immediate_bridge.lab.presenter.snapshot().phase=="ROLL",letter+" same-frame native CANCEL then Roll accepted and displayed")
+		await wait_until_idle(immediate_bridge,immediate_runtime)
+		check(immediate_completed.size()==1 and immediate_cancelled.size()==1 and immediate_runtime.get_commit_count()==2,letter+" same-frame cancellation distinct; new Roll naturally completes")
+		check(immediate_runtime.get_state()==immediate_roll.next_state and immediate_bridge.lab.actor.transform.is_equal_approx(immediate_bridge.lab.project_pose(immediate_roll.next_state.player).transform),letter+" same-frame follow-up final native and visual pose")
+		rows.append({"map":letter,"scope":"same-frame native CANCEL then actual Roll","snapshot":immediate_bridge.snapshot()})
+		immediate_bridge.free()
 		# A cancellation observer unloads synchronously during real Landing->Roll
 		# preemption. The outer STARTED must never install an obsolete motion.
 		var baked:Dictionary=Maps.bake_game_feel(Maps.read_spec(letter))
