@@ -95,9 +95,9 @@
     },
     {
       "id": "YT11",
-      "requirement": "Pixel and 3D full StateKey match",
+      "requirement": "Pixel/reference Gameplay and 3D full StateKey match",
       "status": "PENDING",
-      "pending": "PENDING: real delivered Pixel/3D consumers on same new level/hash and original actions, full seven-field semantic states/keys; mode0 alone cannot pretend to be Pixel graphical execution",
+      "pending": "PENDING: prepared reference_mode=FORMAL_KERNEL_GAMEPLAY versus actual3D full state/key per original action; new candidate absent. Pixel rendering remains NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK, never inferred from LOGICAL_SESSION",
       "real_evidence": [],
       "baseline_reuse": false
     },
@@ -122,5 +122,7 @@
   "real_new_profile_runtime": "NOT_RUN_DEPENDENCY_PENDING",
   "real_new_formal_graphical": "NOT_RUN_DEPENDENCY_PENDING",
   "owner_handoff": "LOCAL_PREPARATION_ARTIFACT_ONLY",
-  "push": "NOT_RUN"
+  "push": "NOT_RUN",
+  "case11_reference_mode": "FORMAL_KERNEL_GAMEPLAY",
+  "pixel_rendering": "NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK"
 }

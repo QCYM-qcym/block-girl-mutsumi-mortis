@@ -14,6 +14,8 @@ The exact subsequently supplied user twelve-case list is mapped in MATRIX_12.md/
 
 Legacy receipts stay sealed: old 94 matrix 54 PASS / 40 PENDING, Core69 A26+B26+Camera17 counted as three rows, delivery01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c. Old actual formal replay eight matched steps remain old-profile PASS only. No old QA package, save, screenshot, source receipt or matrix was rewritten.
 
+Case11 scope clarification: formal TraceReplayer exposes only LOGICAL_SESSION/GRAPHICAL. The legacy prototype/puzzle_01 Pixel uses the old gameplay stack. Prepared reference_mode=FORMAL_KERNEL_GAMEPLAY consumes the same production Kernel and records every original action, complete resulting state and StateKey for comparison with actual3D completion. This can later attest reference Gameplay/3D parity only. Pixel rendering remains NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK; no mode0 or pure query is described as Pixel graphics. The new candidate is still absent, so even the scoped reference/3D parity is PENDING now.
+
 Next execution point: receive the true combined candidate SHA, verify clean/ownership/history and controlled intake, bind production bytes, then run new-profile core, formal and native lifecycle plus affected old-version/Pconn/L01–L05 regression with isolated profiles. No automatic candidate merge, cross-owner edit or outbound thread message is performed by preparation.
 
 Commit: the preparation commit containing this file (resolve with `git log -1 --format=%H -- <this path>`). Push: NOT_RUN. Owner handoff: LOCAL_PREPARATION_ARTIFACT_ONLY; no production issue ticket sent.

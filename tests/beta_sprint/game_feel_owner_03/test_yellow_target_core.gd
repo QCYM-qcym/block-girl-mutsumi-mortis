@@ -91,6 +91,28 @@ func verify_permissions(level: Dictionary, initial: Dictionary, letter: String) 
 		wrong.camera_quadrant = quadrant
 		var denied := eval_action(level, wrong, action)
 		check(denied.status == 1 and not denied.changed and denied.next_state == null, letter + " illegal Camera rejected " + str(quadrant))
+		var author_variant := level.duplicate(true)
+		author_variant.erase("content_hash")
+		author_variant.camera_initial_quadrant = quadrant
+		var baked_variant := Baker.bake(author_variant,{"max_configurations":4096,"max_checks":100000})
+		check(baked_variant.ok, letter + " actual Baker accepts authored illegal-view initial observation")
+		if not baked_variant.ok: continue
+		var camera_runtime := Facade.new()
+		var camera_events: Array = []
+		camera_runtime.game_feel_event.connect(func(event): camera_events.append(event.duplicate(true)))
+		var loaded := camera_runtime.load_level(baked_variant.level)
+		check(loaded.ok, letter + " actual illegal-view Runtime loaded")
+		if not loaded.ok: continue
+		var actual_before := camera_runtime.get_state()
+		var actual_key: String = Key.build(baked_variant.level,actual_before).key
+		var rejected := camera_runtime.request_action(action)
+		check(rejected.status == 1 and not rejected.changed and rejected.next_state == null and camera_runtime.get_state() == actual_before and camera_runtime.get_commit_count() == 0 and Key.build(baked_variant.level,camera_runtime.get_state()).key == actual_key, letter + " real Camera rejection leaves full authoritative state/key unchanged")
+		check(camera_events.size() == 1 and camera_events[0].phase == "FEEDBACK" and camera_events[0].reason_category == "CAMERA_NOT_ALLOWED", letter + " original formal Camera diagnostic retained")
+		rows.append({"scope":"NEGATIVE_AUTHORED_CAMERA_VARIANT","map":letter,"camera":quadrant,
+			"level_hash":baked_variant.level.content_hash,"before":actual_before,"after":camera_runtime.get_state(),
+			"before_key":actual_key,"after_key":Key.build(baked_variant.level,camera_runtime.get_state()).key,
+			"result":rejected,"events":camera_events})
+		camera_runtime.interrupt("UNLOAD")
 	var absent := level.duplicate(true)
 	absent.perspective_falls = []
 	absent.content_hash = Codec.compute_content_hash(absent).content_hash
