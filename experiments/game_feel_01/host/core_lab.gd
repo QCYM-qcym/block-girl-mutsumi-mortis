@@ -29,6 +29,7 @@ func _ready() -> void:
 	actor.name="AuthoritativeCubePose"
 	add_child(actor)
 	var body:=MeshInstance3D.new()
+	body.name="CubeBody"
 	body.mesh=BoxMesh.new()
 	var material:=StandardMaterial3D.new()
 	material.albedo_color=Color(0.45,0.78,0.5)
@@ -44,6 +45,7 @@ func _ready() -> void:
 	front.material_override=front_material
 	actor.add_child(front)
 	geometry_root=Node3D.new()
+	geometry_root.name="FormalPlatforms"
 	add_child(geometry_root)
 	camera=Camera3D.new()
 	camera.projection=Camera3D.PROJECTION_ORTHOGONAL
@@ -133,12 +135,16 @@ func _build_geometry() -> void:
 		geometry_root.remove_child(child)
 		child.queue_free()
 	var state: Dictionary=runtime.get_state()
-	var resolved: Dictionary=Geometry.snapshot(runtime.get_level(),state)
+	var level: Dictionary=runtime.get_level()
+	var resolved: Dictionary=Geometry.snapshot(level,state)
 	if not resolved.ok:
 		_record_issue(str(resolved.issues))
 		return
 	var bounds:=AABB()
 	var first:=true
+	var target_faces:Array=[]
+	if level.schema_version==3:
+		for connection in level.perspective_falls: target_faces.append(connection.target_face_id)
 	for cube in resolved.value.cubes:
 		var block:=MeshInstance3D.new()
 		block.name=String(cube.cube_id)
@@ -147,7 +153,17 @@ func _build_geometry() -> void:
 		block.transform=Transform3D(Basis(Vector3(columns[0]),Vector3(columns[1]),Vector3(columns[2])),Vector3(cube.center2)*0.5)
 		var material:=StandardMaterial3D.new()
 		material.albedo_color=Color(0.25,0.4,0.65) if cube.layer==0 else Color(0.45,0.3,0.55)
-		if cube.cube_id==&"exit": material.albedo_color=Color(0.8,0.7,0.25)
+		var support_face:StringName=Geometry.face_id(cube.cube_id,4)
+		block.set_meta("cube_id",cube.cube_id)
+		block.set_meta("top_face_id",support_face)
+		if target_faces.has(support_face):
+			# Presentation follows the authored formal target; color grants no move.
+			material.albedo_color=Color(0.8,0.7,0.25)
+			block.set_meta("presentation_role","FALL_TARGET_SUPPORT")
+		elif level.schema_version==3 and support_face==level.goal.face_id:
+			material.albedo_color=Color(0.35,0.65,0.52)
+			block.set_meta("presentation_role","EXIT_GOAL")
+		elif cube.cube_id==&"exit": material.albedo_color=Color(0.8,0.7,0.25)
 		block.material_override=material
 		geometry_root.add_child(block)
 		bounds=AABB(block.position,Vector3.ZERO) if first else bounds.expand(block.position)

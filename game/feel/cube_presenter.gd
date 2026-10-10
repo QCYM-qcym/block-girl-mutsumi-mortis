@@ -99,7 +99,8 @@ func _current(identity: Variant) -> bool:
 	return true
 
 func consume_event(event: Dictionary) -> Dictionary:
-	if event.get("schema_version") != 1 or event.get("contract_version") != "game_feel.event.v1":
+	var version := State.event_version(event)
+	if version==0 or (version==2 and event.get("semantic") not in ["PERSPECTIVE_FALL_APPLIED","ANIMATION_INTERRUPTED"]):
 		return _failure("Expected versioned Runtime presentation event.")
 	if event.get("phase") in ["STARTED","COMMITTED","REJECTED"] and not _current(event.get("presentation_identity")):
 		return {"ok":true,"ignored":true,"issues":[]}
@@ -108,6 +109,8 @@ func consume_event(event: Dictionary) -> Dictionary:
 	_seen[key] = true
 	var identity: Variant = event.get("presentation_identity")
 	if event.get("semantic") == "ANIMATION_INTERRUPTED":
+		if identity==_presentation and _started.has("contract_version") and event.contract_version!=_started.contract_version:
+			return _failure("Interruption must retain the captured event version.")
 		if identity is Dictionary and identity == _presentation: clear(str(event.get("interruption_reason","CANCEL")))
 		return {"ok":true,"issues":[]}
 	if event.get("semantic") == "MOVE_APPLIED_NORMAL": return _consume_roll(event)
@@ -126,10 +129,13 @@ func consume_event(event: Dictionary) -> Dictionary:
 		if not source_result.ok or not target_result.ok: return _failure("Missing formal source or target projection.")
 		var source: Transform3D = source_result.transform
 		var target: Transform3D = target_result.transform
-		var points: Variant = event.get("authorized_path_points2")
-		if not points is Array or points.size() < 2 or not points[0] is Vector3i or not points[-1] is Vector3i:
-			return _failure("Missing canonical actor-center path.")
-		if not (Vector3(points[0])*0.5).is_equal_approx(source.origin) or not (Vector3(points[-1])*0.5).is_equal_approx(target.origin):
+		# The Owner sampler validates explicit versions and consumes only the
+		# authorized geometry. Host independently resolves the real support poses.
+		var first: Dictionary=staged.sample(0.0)
+		var last: Dictionary=staged.sample(begin.duration_seconds)
+		if not first.get("position") is Vector3 or not last.get("position") is Vector3:
+			return _failure("Missing canonical actor-center geometry endpoints.")
+		if not first.position.is_equal_approx(source.origin) or not last.position.is_equal_approx(target.origin):
 			return _failure("Canonical path endpoints must equal independently projected formal centers.")
 		var replacement_epoch:=_epoch
 		clear()
@@ -147,6 +153,8 @@ func consume_event(event: Dictionary) -> Dictionary:
 	if event.get("phase") == "COMMITTED":
 		if _phase != "FALL" or identity != _presentation or event.get("transition_identity") != _token:
 			return {"ok":true,"ignored":true,"issues":[]}
+		if event.contract_version!=_started.contract_version or (version==2 and event.get("authorized_trajectory")!=_started.get("authorized_trajectory")):
+			return _failure("Committed Fall geometry/version differs from captured STARTED.")
 		if event.get("source_pose")!=_started.source_pose or event.get("target_pose")!=_started.target_pose: return _failure("Committed Fall endpoints differ from captured STARTED.")
 		_landing.parameters.reduced_motion = _fall.parameters.reduced_motion
 		var target_result: Dictionary=_project(event.target_pose)
