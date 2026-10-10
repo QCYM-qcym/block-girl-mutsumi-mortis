@@ -1,0 +1,89 @@
+test_new_source_during_run_is_reported_as_drift (test_yellow_target_receipts.SourceAdmissionTests.test_new_source_during_run_is_reported_as_drift) ... FAIL
+test_other_owner_dependency_change_is_not_exempt (test_yellow_target_receipts.SourceAdmissionTests.test_other_owner_dependency_change_is_not_exempt) ... FAIL
+test_owner03_test_preparation_is_allowed_above_candidate (test_yellow_target_receipts.SourceAdmissionTests.test_owner03_test_preparation_is_allowed_above_candidate) ... ok
+test_preexisting_rename_cannot_omit_original_candidate_path (test_yellow_target_receipts.SourceAdmissionTests.test_preexisting_rename_cannot_omit_original_candidate_path) ... ERROR
+test_rename_during_run_inventories_both_paths (test_yellow_target_receipts.SourceAdmissionTests.test_rename_during_run_inventories_both_paths) ... FAIL
+test_staged_deletion_is_rejected_against_candidate_tree (test_yellow_target_receipts.SourceAdmissionTests.test_staged_deletion_is_rejected_against_candidate_tree) ... FAIL
+test_unstaged_deleted_tracked_source_is_not_omitted (test_yellow_target_receipts.SourceAdmissionTests.test_unstaged_deleted_tracked_source_is_not_omitted) ... FAIL
+
+======================================================================
+ERROR: test_preexisting_rename_cannot_omit_original_candidate_path (test_yellow_target_receipts.SourceAdmissionTests.test_preexisting_rename_cannot_omit_original_candidate_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_yellow_target_receipts.py", line 81, in test_preexisting_rename_cannot_omit_original_candidate_path
+    verify_candidate(self.candidate, source_snapshot(self.root), self.root)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<stdin>", line 13, in old_verify
+  File "C:\Users\QCYM\AppData\Local\Programs\Python\Python314\Lib\subprocess.py", line 472, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "C:\Users\QCYM\AppData\Local\Programs\Python\Python314\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', 'C:\\Users\\QCYM\\AppData\\Local\\Temp\\tmp6apoy7w_', 'show', '8d173ee2be63ef0e2a3190d785e4aba506f19637:foundation/renamed.gd']' returned non-zero exit status 128.
+
+======================================================================
+FAIL: test_new_source_during_run_is_reported_as_drift (test_yellow_target_receipts.SourceAdmissionTests.test_new_source_during_run_is_reported_as_drift)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_yellow_target_receipts.py", line 86, in test_new_source_during_run_is_reported_as_drift
+    self.assertEqual(source_drift(before, self.root), ["foundation/extra.gd"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['foundation/extra.gd']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'foundation/extra.gd'
+
+- []
++ ['foundation/extra.gd']
+
+======================================================================
+FAIL: test_other_owner_dependency_change_is_not_exempt (test_yellow_target_receipts.SourceAdmissionTests.test_other_owner_dependency_change_is_not_exempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_yellow_target_receipts.py", line 103, in test_other_owner_dependency_change_is_not_exempt
+    with self.assertRaisesRegex(ValueError, "additional"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_rename_during_run_inventories_both_paths (test_yellow_target_receipts.SourceAdmissionTests.test_rename_during_run_inventories_both_paths)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_yellow_target_receipts.py", line 91, in test_rename_during_run_inventories_both_paths
+    self.assertEqual(source_drift(before, self.root), ["foundation/input.gd", "foundation/new.gd"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['foundation/input.gd'] != ['foundation/input.gd', 'foundation/new.gd']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'foundation/new.gd'
+
+- ['foundation/input.gd']
++ ['foundation/input.gd', 'foundation/new.gd']
+
+======================================================================
+FAIL: test_staged_deletion_is_rejected_against_candidate_tree (test_yellow_target_receipts.SourceAdmissionTests.test_staged_deletion_is_rejected_against_candidate_tree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_yellow_target_receipts.py", line 75, in test_staged_deletion_is_rejected_against_candidate_tree
+    with self.assertRaisesRegex(ValueError, "missing"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unstaged_deleted_tracked_source_is_not_omitted (test_yellow_target_receipts.SourceAdmissionTests.test_unstaged_deleted_tracked_source_is_not_omitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\block-girl-game-feel-quality\tests\beta_sprint\game_feel\test_yellow_target_receipts.py", line 69, in test_unstaged_deleted_tracked_source_is_not_omitted
+    with self.assertRaisesRegex(ValueError, "missing"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.382s
+
+FAILED (failures=5, errors=1)

@@ -1,0 +1,19 @@
+test_absent_dependencies_remain_pending (test_yellow_target_receipts.ReceiptTests.test_absent_dependencies_remain_pending) ... ok
+test_bound_new_profile_receipt_qualifies_only_its_job (test_yellow_target_receipts.ReceiptTests.test_bound_new_profile_receipt_qualifies_only_its_job) ... ok
+test_fail_closed_corrupted_receipts (test_yellow_target_receipts.ReceiptTests.test_fail_closed_corrupted_receipts) ... ok
+test_legacy_job_requires_explicit_profile_and_candidate (test_yellow_target_receipts.ReceiptTests.test_legacy_job_requires_explicit_profile_and_candidate) ... ok
+test_old_profile_and_old_matches_do_not_qualify (test_yellow_target_receipts.ReceiptTests.test_old_profile_and_old_matches_do_not_qualify) ... ok
+test_preparation_probe_cannot_issue_real_pass (test_yellow_target_receipts.ReceiptTests.test_preparation_probe_cannot_issue_real_pass) ... ok
+test_script_error_is_not_hidden_as_dependency_pending (test_yellow_target_receipts.ReceiptTests.test_script_error_is_not_hidden_as_dependency_pending) ... ok
+test_new_source_during_run_is_reported_as_drift (test_yellow_target_receipts.SourceAdmissionTests.test_new_source_during_run_is_reported_as_drift) ... ok
+test_other_owner_dependency_change_is_not_exempt (test_yellow_target_receipts.SourceAdmissionTests.test_other_owner_dependency_change_is_not_exempt) ... ok
+test_owner03_test_preparation_is_allowed_above_candidate (test_yellow_target_receipts.SourceAdmissionTests.test_owner03_test_preparation_is_allowed_above_candidate) ... ok
+test_preexisting_rename_cannot_omit_original_candidate_path (test_yellow_target_receipts.SourceAdmissionTests.test_preexisting_rename_cannot_omit_original_candidate_path) ... ok
+test_rename_during_run_inventories_both_paths (test_yellow_target_receipts.SourceAdmissionTests.test_rename_during_run_inventories_both_paths) ... ok
+test_staged_deletion_is_rejected_against_candidate_tree (test_yellow_target_receipts.SourceAdmissionTests.test_staged_deletion_is_rejected_against_candidate_tree) ... ok
+test_unstaged_deleted_tracked_source_is_not_omitted (test_yellow_target_receipts.SourceAdmissionTests.test_unstaged_deleted_tracked_source_is_not_omitted) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.520s
+
+OK
