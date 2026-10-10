@@ -1,5 +1,7 @@
 # Owner 09 — independent Fall author data
 
+Current yellow-target correction supersedes the original layout below: target center2 [-6,y,8], exit [-4,y,8], visible nonwalkable blue_reference [-8,y,8], y=0/8 for A/B. See `docs/beta-sprint/game-feel-owner-09/YELLOW_TARGET_PRODUCTION_DELIVERY.md`. Geometry checks pass; ordinary target→exit Roll currently rejects against blue_reference and new curve permission is pending. The following text describes historical initial delivery, not current full-route acceptance.
+
 Base: `2938d6e534f5b596bb320ce79d72b69f5923f3cd`; shared `game_feel.event.v1` contract. Owner 09 grants no traversal permission.
 
 | Map | Source center2 | Target center2 | Real height delta | Candidate view |

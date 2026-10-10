@@ -18,10 +18,12 @@ static func authoring(data: Dictionary) -> Dictionary:
 	level.cubes = [Base.cube(&"source", int(data.source_layer), vector(data.source_center2)), Base.cube(&"target", int(data.target_layer), vector(data.target_center2))]
 	if data.has("exit_center2"):
 		level.cubes.append(Base.cube(&"exit",int(data.target_layer),vector(data.exit_center2)))
+	if data.has("blue_reference_center2"):
+		level.cubes.append(Base.cube(&"blue_reference",int(data.target_layer),vector(data.blue_reference_center2)))
 	level.faces = []
 	for cube in level.cubes:
 		for face in Geometry.make_face_nodes(cube.cube_id):
-			face.walkable = face.face == 4
+			face.walkable = face.face == 4 and cube.cube_id != &"blue_reference"
 			level.faces.append(face)
 	level.spawn = Records.make_player_state(Records.make_player_location(int(data.source_layer), &"source", 4), 0)
 	level.goal.face_id = &"exit/TOP" if data.has("exit_center2") else &"target/TOP"

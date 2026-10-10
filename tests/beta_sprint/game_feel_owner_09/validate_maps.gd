@@ -36,7 +36,7 @@ func run() -> void:
 		# Author-data type/shape checks only, not formal v2 acceptance or Safety.
 		var candidate: Dictionary = Factory.opt_in_authoring_candidate(spec)
 		var fall: Dictionary = candidate.perspective_falls[0]
-		check(candidate.schema_version==2 and candidate.goal.face_id==&"exit/TOP" and candidate.cubes.size()==3,"candidate retains opt-in schema and exit route")
+		check(candidate.schema_version==2 and candidate.goal.face_id==&"exit/TOP" and candidate.cubes.size()==4,"candidate retains opt-in schema and visible four-platform route")
 		check(fall.path_points2[0]==Factory.vector(spec.source_center2)+Vector3i(0,2,0) and fall.path_points2[-1]==Factory.vector(spec.target_center2)+Vector3i(0,2,0),"candidate canonical actor-center endpoints")
 		check(typeof(fall.source_edge)==TYPE_INT and typeof(fall.path_points2[1])==TYPE_VECTOR3I and fall.source_face_id==&"source/TOP" and fall.target_face_id==&"target/TOP","candidate native field conversion")
 		check(Factory.authoring(spec).schema_version==1 and not Factory.authoring(spec).has("perspective_falls"),"baseline never auto-activates candidate")
@@ -79,6 +79,7 @@ func run() -> void:
 	var control: Dictionary = Factory.read_spec("a")
 	control.id="owner09_adjacent_control"
 	control.erase("exit_center2") # Preserve the original two-cube ordinary-move control.
+	control.erase("blue_reference_center2")
 	control.target_center2=[2,4,0]
 	var baked: Dictionary = Factory.bake(control)
 	check(baked.ok,"ordinary adjacent control bake")

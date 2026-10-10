@@ -7,7 +7,7 @@
     0
   ],
   "target_center2": [
-    -8,
+    -6,
     0,
     8
   ],
@@ -18,7 +18,7 @@
   "candidate_camera": 1,
   "candidate_entry_axis": "U_NEG",
   "candidate_pose_policy": "PRESERVE - requires Owner01 contract",
-  "status": "DIAGNOSTIC_ONLY_RUNTIME_EXTENSION_REQUIRED",
+  "status": "YELLOW_TARGET_GEOMETRY_READY_CURVE_PROFILE_PENDING",
   "connection": {
     "connection_id": "pfall_a",
     "source": {
@@ -43,7 +43,7 @@
     "runtime_schema": "PENDING_OWNER01"
   },
   "exit_center2": [
-    -6,
+    -4,
     0,
     8
   ],
@@ -90,15 +90,20 @@
           6
         ],
         [
-          -8,
+          -6,
           2,
           8
         ]
       ],
       "orientation_policy": "PRESERVE",
-      "motion_profile_id": "pfall_a_edge_clear_v1",
+      "motion_profile_id": "pfall_a_yellow_curve_pending",
       "presentation_duration_ms": 600
     },
-    "authority": "CANDIDATE_ONLY_RUNTIME_DELIVERY_PENDING"
-  }
+    "authority": "GEOMETRY_READY_OLD_POLYLINE_NOT_VALID_FOR_NEW_TARGET"
+  },
+  "blue_reference_center2": [
+    -8,
+    0,
+    8
+  ]
 }
