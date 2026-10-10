@@ -1,0 +1,120 @@
+{
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "owner10a_code_sha": "f2ec5c08dbc3fb5b0fba0cce709376ddcd443e96",
+  "actual_owner01_delivery_sha": "fd22434d3eb0de52a764cb98222371a39412635a",
+  "status": "COMMITTED_SAMPLER_CONSUMPTION_PASS_RUNTIME_REAL_PENDING",
+  "authoritative_runtime": false,
+  "push": "NOT_RUN",
+  "evidence": [
+    {
+      "dependencies": [
+        {
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "path": "foundation/contracts/contract_validation.gd",
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "path": "foundation/contracts/foundation_types.gd",
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "path": "foundation/game_feel/view_contract.gd",
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "path": "foundation/game_feel/schema.gd",
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "exact_commit_bytes": true
+        }
+      ],
+      "dependency_copy_changes": [],
+      "checks": 7556,
+      "process_sha256": "be18da3ce9c69ed09f2f29bacdde5accd29ee3a79101e4fede6cbd9ea18bf167",
+      "status": "PASS",
+      "scope": "PRESENTATION_CONTRACT_UNIT_OR_PRIVATE_PREVIEW",
+      "profile_isolated": true,
+      "source_changes": [],
+      "case": "curve_committed_sampler_unit_01",
+      "copied_source_changes": [],
+      "failures": [],
+      "dependency_source_changes": []
+    },
+    {
+      "dependencies": [
+        {
+          "copied_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "sha256": "02f2f3f3660cbffd31d72acd7dae3f99a8f91249cfd9672734297862230c711c",
+          "commit_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "path": "foundation/game_feel/trajectory_profile.gd",
+          "source_blob_oid": "3bd7d54c5e7577d88873d909e2afdc77e1c42245",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "sha256": "4355e4eee412b2be08bc35b31a765eb499950eb4585bfc6d6bca0e0da9f29bc2",
+          "commit_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "path": "foundation/contracts/contract_validation.gd",
+          "source_blob_oid": "bdcb25cd6725939e8a023d5d76449ef9458fab40",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e",
+          "commit_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "path": "foundation/contracts/foundation_types.gd",
+          "source_blob_oid": "253cfa45f1799947b5b2e75c09b9429698c457a9",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231",
+          "commit_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "path": "foundation/game_feel/view_contract.gd",
+          "source_blob_oid": "916b21c57edc87a06650733e3da0fc6531b87157",
+          "exact_commit_bytes": true
+        },
+        {
+          "copied_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "sha256": "9458d45553bfe2ee262378e17b03be9f7692ed0ee99d684052937c9408ba48bc",
+          "commit_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "path": "foundation/game_feel/schema.gd",
+          "source_blob_oid": "cc8657dbfdd6f992c33ef97c94c28916959ec8e2",
+          "exact_commit_bytes": true
+        }
+      ],
+      "dependency_copy_changes": [],
+      "checks": 249,
+      "process_sha256": "f3116d1b7a2c7f7d86268a2bba054c7a4caec63d2393c3bbba3df5864bbe8433",
+      "status": "PASS",
+      "scope": "PRESENTATION_CONTRACT_UNIT_OR_PRIVATE_PREVIEW",
+      "profile_isolated": true,
+      "source_changes": [],
+      "case": "curve_committed_sampler_preview_01",
+      "copied_source_changes": [],
+      "failures": [],
+      "dependency_source_changes": []
+    }
+  ]
+}
