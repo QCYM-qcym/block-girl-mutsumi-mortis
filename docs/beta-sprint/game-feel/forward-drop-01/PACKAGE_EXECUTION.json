@@ -1,0 +1,190 @@
+{
+  "task": "PFALL_FORWARD_THEN_DROP_TO_YELLOW_FIX_01",
+  "status": "REAL_PACKAGE_PASS",
+  "source_commit": "5d42600c29760a8082edf2a94754252772352846",
+  "build": "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01",
+  "zip_sha256": "01c23e309f4469c0985fa9884e866f84180b15a7c4db819aef281aa66c3766d9",
+  "manifest_files_after_execution": 1022,
+  "zip_members_verified": 1025,
+  "graphical_checks": 403,
+  "cold_checks": 27,
+  "total_checks": 430,
+  "formal_graphical_matched_steps": 8,
+  "graphical": [
+    {
+      "case": "package_natural01",
+      "project": "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01\\project",
+      "build_identity": "5d42600c29760a8082edf2a94754252772352846",
+      "checks": 72,
+      "pid": 41744,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "started_utc": "2026-10-10T08:47:00.782711+00:00",
+      "finished_utc": "2026-10-10T08:47:05.817849+00:00",
+      "process": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/process.json",
+      "process_sha256": "9659cabc1badd4f8977c7b92717cde41be0b6380575d7af25b89726cc2e3b2da"
+    },
+    {
+      "case": "package_formal01",
+      "project": "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01\\project",
+      "build_identity": "5d42600c29760a8082edf2a94754252772352846",
+      "checks": 101,
+      "pid": 31420,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "started_utc": "2026-10-10T08:47:06.520668+00:00",
+      "finished_utc": "2026-10-10T08:47:16.876495+00:00",
+      "process": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_formal01/process.json",
+      "process_sha256": "dd903a815d60718e0d33e22e7452c89d157ff82e2edf1c21a56929ac1f1b3d71"
+    },
+    {
+      "case": "package_matrix02",
+      "project": "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01\\project",
+      "build_identity": "5d42600c29760a8082edf2a94754252772352846",
+      "checks": 230,
+      "pid": 23868,
+      "exit_code": 0,
+      "failures": [],
+      "doubles": [],
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "status": "PASS",
+      "started_utc": "2026-10-10T08:48:55.582516+00:00",
+      "finished_utc": "2026-10-10T08:49:35.096633+00:00",
+      "process": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_matrix02/process.json",
+      "process_sha256": "465d29e5141b4bedd086633851af3c1c327dc1174b11c24b0244f6925c2a08c2"
+    }
+  ],
+  "cold_process": "docs/beta-sprint/game-feel/forward-drop-01/evidence/cold_package01/process.json",
+  "cold_process_sha256": "8673a083c9a69e0036208c2a15f2554f177c2477ee522035bb723ecf9c1c673a",
+  "cold_runs": [
+    {
+      "phase": "seed",
+      "pid": 46648,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/forward-drop-01/evidence/cold_package01",
+        "--phase=seed",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 18,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "1af61e1615d354c414f24721f0d767083debacbc9def66df6fbc2a829826524a"
+    },
+    {
+      "phase": "restore",
+      "pid": 37680,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_pfall_forward_drop_20261010_01\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/forward-drop-01/evidence/cold_package01",
+        "--phase=restore",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 9,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "6219eee29cc87d162ceb3f1cd37c3a172bf30a0cdfc31b03f25162b8786b3bab"
+    }
+  ],
+  "visual_evidence": [
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/a_01_source.png",
+      "sha256": "e84bf7dbae9d631376b641d88b2daa00e50ebe01070c8146e95ffe553d1606d0"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/a_02_forward_edge_leave.png",
+      "sha256": "5e0924bf9eae9d070ce02cea6b7eabd8f985f043cf2a99edfd7dcd81137cd69f"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/a_03_descend_middle.png",
+      "sha256": "69c7a5dae5fa91a495fcbc6efc6f2c8532f23d5e51c10156b5946273fc1b6041"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/a_04_pre_yellow_contact.png",
+      "sha256": "11f52ae00938100e2a60465632ddd8047395baf788c5d1c7405a29c52ab3f776"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/a_05_yellow_landing.png",
+      "sha256": "5bc22877c81a0ab13521abe3d450df73fd889eb050c186dc99cbc49b0ab886ae"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/a_06_stable.png",
+      "sha256": "5bc22877c81a0ab13521abe3d450df73fd889eb050c186dc99cbc49b0ab886ae"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/b_01_source.png",
+      "sha256": "9bf227f398f7fc415605864234225b1660c1c1103d9715b5af2fc94656aed58b"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/b_02_forward_edge_leave.png",
+      "sha256": "f54309b2ba69cf9dff5da0a39c8c35d1eb32e6f8b20a9394ecf55e6a531f9d20"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/b_03_descend_middle.png",
+      "sha256": "6469425047e3d24c8e32b5a4a261a3a710d47a245025441fb747187be60bc7d4"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/b_04_pre_yellow_contact.png",
+      "sha256": "2193cef56d06563dcafb5b28eddb2fb56f5e57557f8fb6d1fd792041711d0bff"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/b_05_yellow_landing.png",
+      "sha256": "058341b5d010ec55bcc3d0f703992622c72349a54b5fe58ac91732ada987ac36"
+    },
+    {
+      "path": "docs/beta-sprint/game-feel/forward-drop-01/evidence/package_natural01/b_06_stable.png",
+      "sha256": "058341b5d010ec55bcc3d0f703992622c72349a54b5fe58ac91732ada987ac36"
+    }
+  ],
+  "excluded_attempts": [
+    {
+      "case": "package_matrix01",
+      "classification": "REAL_WINDOW_FOCUS_OUT_AUTO_PAUSED_SHELL",
+      "time_msec": 35256,
+      "failures": [
+        "native Fall -> Roll -> Goal",
+        "ordinary Roll changes orientation by native rule",
+        "one writer has no lifecycle issue",
+        "one native Roll and one formal Goal audio",
+        "Reset restores formal start",
+        "illegal Camera cannot trigger Fall or lean",
+        "Reset cancels actual active Fall",
+        "Normal/Reduced complete StateKey parity 1"
+      ],
+      "rerun": "package_matrix02",
+      "production_changes": "NONE"
+    }
+  ],
+  "qa_profile_exists": false,
+  "human_qa": "NOT_RUN",
+  "verified_utc": "2026-10-10T08:51:07.987315+00:00"
+}
