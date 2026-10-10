@@ -1,0 +1,114 @@
+{
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "package": "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01",
+  "integration_commit": "a741ee5e29dd2a849df13ff40100c08a9f1a2dc7",
+  "graphical_runs": [
+    {
+      "case": "package_natural01",
+      "checks": 51,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "build_identity": "a741ee5e29dd2a849df13ff40100c08a9f1a2dc7",
+      "project": "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01\\project",
+      "pid": 23940,
+      "process_sha256": "815c0bd3ad87d65595172da87eed6809b6f76c22040b2e2c6cc26759ae34c72b"
+    },
+    {
+      "case": "package_formal01",
+      "checks": 101,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "build_identity": "a741ee5e29dd2a849df13ff40100c08a9f1a2dc7",
+      "project": "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01\\project",
+      "pid": 50816,
+      "process_sha256": "68be329f66c215081a5a14b2bdbde49937568736a7dc7186202c25e3270e7d9c"
+    },
+    {
+      "case": "package_matrix01",
+      "checks": 230,
+      "status": "PASS",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "build_identity": "a741ee5e29dd2a849df13ff40100c08a9f1a2dc7",
+      "project": "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01\\project",
+      "pid": 44368,
+      "process_sha256": "979a259914d9a221c75ec0f1574fa580974e0c10d320de8a7b9ce48373172d48"
+    }
+  ],
+  "cold_processes": [
+    {
+      "phase": "seed",
+      "pid": 49536,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/yellow-target-01/evidence/cold_package01",
+        "--phase=seed",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 18,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "d86033a5253a25b58261652b78b866370696a3985b363e431dac8a24b2abb3da"
+    },
+    {
+      "phase": "restore",
+      "pid": 49980,
+      "arguments": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--headless",
+        "--path",
+        "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01\\project",
+        "--script",
+        "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+        "--max-fps",
+        "60",
+        "--",
+        "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/yellow-target-01/evidence/cold_package01",
+        "--phase=restore",
+        "--shell-save=user://ui_host/progress.json"
+      ],
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "checks": 9,
+      "failures": [],
+      "doubles": [],
+      "report_sha256": "9c7dc081f7d57205acab18ebe644629dd4a8ad715aae6d8e51aa2dbb68942b63"
+    }
+  ],
+  "actual_package_checks": 409,
+  "formal_graphical_matched_steps": 8,
+  "manifest_archive_production_checks": 2716,
+  "active_production_files": 719,
+  "failures": [],
+  "archive_sha256": "921b2c1bae7d9e8025ec47ca42a118530fe8dfee04969a2014121309141e961c",
+  "qa_profile_untouched": true,
+  "kind": "SOURCE_PLAYABLE_REQUIRES_GODOT",
+  "working_tree": [
+    "?? docs/beta-sprint/game-feel/yellow-target-01/BUILD_ASSEMBLY.json",
+    "?? docs/beta-sprint/game-feel/yellow-target-01/PRESERVATION_FINAL.json",
+    "?? docs/beta-sprint/game-feel/yellow-target-01/evidence/cold_package01/",
+    "?? docs/beta-sprint/game-feel/yellow-target-01/evidence/package_formal01/",
+    "?? docs/beta-sprint/game-feel/yellow-target-01/evidence/package_matrix01/",
+    "?? docs/beta-sprint/game-feel/yellow-target-01/evidence/package_natural01/"
+  ],
+  "human_qa": "NOT_RUN",
+  "push": "NOT_RUN"
+}

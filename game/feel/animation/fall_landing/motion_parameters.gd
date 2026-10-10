@@ -13,6 +13,10 @@ extends Resource
 @export_range(0.01, 0.2) var impact_duration := 0.06
 @export_range(0.01, 0.5) var departure_path_fraction := 0.15
 @export var reduced_motion := false
+# event.v2 timing experiments. These never alter the authorized geometry.
+@export_range(0.25, 8.0) var forward_duration_multiplier := 13.0 / 3.0
+@export_range(0.05, 0.8) var forward_start_speed_ratio := 0.15
+@export_range(0.05, 0.9) var fall_entry_speed_ratio := 0.25
 
 func issues() -> Array:
 	var result: Array = []
@@ -26,6 +30,13 @@ func issues() -> Array:
 	for key in ranges:
 		var value: float = get(key)
 		if not is_finite(value) or value < ranges[key].x or value > ranges[key].y:
+			result.append({"path": "parameters." + key, "message": "Outside finite experimental range."})
+	# New float64 properties need float64 bounds; Vector2 rounds 0.05/0.9.
+	var v2_ranges := {"forward_duration_multiplier": [0.25, 8.0],
+		"forward_start_speed_ratio": [0.05, 0.8], "fall_entry_speed_ratio": [0.05, 0.9]}
+	for key in v2_ranges:
+		var value: float = get(key)
+		if not is_finite(value) or value < v2_ranges[key][0] or value > v2_ranges[key][1]:
 			result.append({"path": "parameters." + key, "message": "Outside finite experimental range."})
 	return result
 

@@ -19,6 +19,9 @@ var _length := 0.0
 var _trajectory: Dictionary = {}
 var _trajectory_sampler: Script
 var _departure_fraction := 0.15
+var _edge_fraction := 0.0
+var _edge_time := 0.0
+var _lean_rise := 0.0
 
 func begin(event: Dictionary) -> Dictionary:
 	if not _identity.is_empty(): return {"ok": false, "issues": [{"path": "motion", "message": "Clear/cancel active identity before beginning another motion."}]}
@@ -68,11 +71,17 @@ func begin(event: Dictionary) -> Dictionary:
 	if not issues.is_empty(): return {"ok": false, "issues": issues}
 	var timing: Dictionary = parameters.timing_table()
 	if not timing.ok: return {"ok": false, "issues": timing.issues}
+	if curved and parameters.fall_curve != null:
+		for i in range(1, timing.values.size()):
+			if timing.values[i] <= timing.values[i - 1]:
+				return {"ok": false, "issues": [{"path": "parameters.fall_curve", "message": "V2 timing must strictly advance; flat custom intervals create air pauses."}]}
 	var staged_points: PackedVector3Array = []
 	var staged_distances: PackedFloat64Array = [0.0]
 	var length := 0.0
 	if curved:
 		staged_points = trajectory_points
+		if staged_points[0].distance_to(staged_points[1]) < 1.0:
+			return {"ok": false, "issues": [{"path": "event.authorized_trajectory.departure_points2", "message": "Declared departure must clear the formal unit support before descent."}]}
 		length = 1.0 # Geometry parameter, not approximated cubic arc length.
 	else:
 		for point in points:
@@ -92,6 +101,11 @@ func begin(event: Dictionary) -> Dictionary:
 	_identity = event.presentation_identity.duplicate(true)
 	_axis = State.lean_axis(event, _points[1] - _points[0])
 	_total = float(duration)
+	if curved:
+		_configure_forward_drop()
+		return {"ok": true, "issues": [], "duration_seconds": _total,
+			"cue_schedule": {"FallStart": 0.0, "LeavePlatform": _edge_time, "FallMoving": _departure},
+			"phase_schedule": {"FORWARD": 0.0, "DEPARTURE": _edge_time, "FALL_MOVING": _departure, "AWAITING_COMMIT": _total}}
 	var anticipation_weight: float = 0.0 if _config.reduced_motion else _config.anticipation_duration
 	var weight: float = anticipation_weight + _config.departure_duration + _config.fall_duration
 	_anticipation = _total * anticipation_weight / weight
@@ -119,7 +133,21 @@ func sample(elapsed_seconds: float) -> Dictionary:
 	var offset := Quaternion.IDENTITY
 	var phase := "FALL_MOVING"
 	var fraction := 0.0
-	if t < _anticipation:
+	if _trajectory_sampler != null:
+		if t < _departure:
+			fraction = _forward_parameter(t / _departure)
+			phase = "FORWARD" if fraction < _edge_fraction else "DEPARTURE"
+			if not _config.reduced_motion and not _axis.is_zero_approx() and _lean_rise > 0.0:
+				offset = Quaternion(_axis, deg_to_rad(_config.anticipation_angle_degrees) * smoothstep(0.0, _lean_rise, t))
+		elif t < _total:
+			var progress := (t - _departure) / (_total - _departure)
+			fraction = _departure_fraction + (1.0 - _departure_fraction) * _ease(progress)
+			if not _config.reduced_motion and not _axis.is_zero_approx() and _lean_rise > 0.0:
+				offset = Quaternion(_axis, deg_to_rad(_config.anticipation_angle_degrees) * (1.0 - smoothstep(0.15, 1.0, progress)))
+		else:
+			phase = "AWAITING_COMMIT"
+			fraction = 1.0
+	elif t < _anticipation:
 		phase = "ANTICIPATION"
 		var progress := smoothstep(0.0, _anticipation, t)
 		if not _axis.is_zero_approx(): offset = Quaternion(_axis, deg_to_rad(_config.anticipation_angle_degrees) * progress)
@@ -144,6 +172,45 @@ func sample(elapsed_seconds: float) -> Dictionary:
 	return {"active": true, "identity": _identity.duplicate(true), "phase": phase,
 		"progress": t / _total, "motion_done": t >= _total, "position": position,
 		"rotation_offset": offset, "scale_multiplier": Vector3.ONE}
+
+func _configure_forward_drop() -> void:
+	# Anticipation is now a moving lean-in on v2's authorized horizontal line.
+	# Preserve v1 timing separately. Default forward/drop weights give 65/35.
+	var forward_weight: float = (_config.anticipation_duration + _config.departure_duration) * _config.forward_duration_multiplier
+	_departure = _total * forward_weight / (forward_weight + _config.fall_duration)
+	_anticipation = 0.0
+	_lean_rise = _departure * _config.anticipation_duration / (_config.anticipation_duration + _config.departure_duration)
+	var fall_time := _total - _departure
+	var launch: float = _config.forward_start_speed_ratio
+	# The departure Hermite's derivative has nonnegative Bernstein coefficients
+	# (launch, 3-launch-terminal, terminal), guaranteeing forward-only movement.
+	var maximum_entry := (3.0 - launch) * _departure_fraction * fall_time / (_departure * (1.0 - _departure_fraction))
+	if _config.fall_curve == null:
+		_curve = [0.0, 1.0]
+		var entry := minf(_config.fall_entry_speed_ratio, maximum_entry)
+		_curve_slopes = [entry, 2.0 - entry] # entry*p + (1-entry)*p*p
+	else:
+		var intervals := _curve.size() - 1
+		var secants: PackedFloat64Array = []
+		for i in intervals: secants.append((_curve[i + 1] - _curve[i]) * float(intervals))
+		_curve_slopes = [minf(secants[0], maximum_entry)]
+		for i in range(1, intervals): _curve_slopes.append(minf(secants[i - 1], secants[i]))
+		_curve_slopes.append(secants[-1])
+	_join_speed = (1.0 - _departure_fraction) * _curve_slopes[0] / fall_time
+	# Formal supports are unit cubes. Their boundary is half a world unit from
+	# the supplied source actor center along the already-authorized departure.
+	# This derives a stage timestamp only; it never creates geometry/permission.
+	_edge_fraction = _departure_fraction * 0.5 / _points[0].distance_to(_points[1])
+	var low := 0.0
+	var high := 1.0
+	for i in 40:
+		var middle := (low + high) * 0.5
+		if _forward_parameter(middle) < _edge_fraction: low = middle
+		else: high = middle
+	_edge_time = _departure * (low + high) * 0.5
+
+func _forward_parameter(progress: float) -> float:
+	return _hermite(0.0, _departure_fraction, _departure_fraction * _config.forward_start_speed_ratio, _join_speed * _departure, progress)
 
 func _ease(t: float) -> float:
 	var index := t * float(_curve.size() - 1)
@@ -180,6 +247,11 @@ func clear() -> void:
 	_trajectory_sampler = null
 	_curve_slopes = []
 	_join_speed = 0.0
+	_edge_fraction = 0.0
+	_edge_time = 0.0
+	_lean_rise = 0.0
+	_anticipation = 0.0
+	_departure = 0.0
 	_config = null
 	_axis = Vector3.ZERO
 	_total = 0.0

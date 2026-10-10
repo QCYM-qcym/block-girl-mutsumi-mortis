@@ -17,6 +17,8 @@ func press_key(code:int)->void:
 	input_key(code,false)
 
 func wait_idle(bridge:Node,runtime:RefCounted)->void:
+	# Input.parse_input_event is queued; observe actual native dispatch first.
+	await process_frame
 	var deadline:=Time.get_ticks_msec()+4000
 	while (not runtime.is_idle() or bridge.lab.presenter.snapshot().phase!="IDLE") and Time.get_ticks_msec()<deadline: await process_frame
 	check(runtime.is_idle() and bridge.lab.presenter.snapshot().phase=="IDLE","natural native completion before next action")
@@ -39,8 +41,11 @@ func run()->void:
 		var cancelled:Array=[]
 		bridge.motion_completed.connect(func(id,ev):completed.append({"identity":id,"evidence":ev}))
 		bridge.motion_cancelled.connect(func(id,reason):cancelled.append({"identity":id,"reason":reason}))
+		await process_frame
+		await RenderingServer.frame_post_draw
 		input_key(KEY_A)
 		await process_frame
+		await RenderingServer.frame_post_draw
 		check(lab.presenter.snapshot().phase=="FALL",letter+" actual held movement key starts formal Fall")
 		var old:Dictionary=lab.presenter.snapshot().transition_identity
 		for index in 80: input_key(KEY_A,true,true)

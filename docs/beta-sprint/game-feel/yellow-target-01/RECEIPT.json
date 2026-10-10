@@ -1,0 +1,279 @@
+{
+  "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+  "status": "PFALL_YELLOW_PLATFORM_LANDING_PASS",
+  "production_candidate": "9faf8659b220857ecbf2e9b91f3b1413e7771f38",
+  "verified_candidate_commit": "77378f3dfad15f2cc5ffd447c6a775b0024bf9ad",
+  "base_contract_commit": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+  "trajectory_contract_commit": "ec826753435458abc41cc365e4b57dba27767fbd",
+  "owners": {
+    "01": "fd22434d3eb0de52a764cb98222371a39412635a",
+    "09": "36f46a1659db7339bd27a53338959adf57452e61",
+    "10A": "f2ec5c08dbc3fb5b0fba0cce709376ddcd443e96",
+    "10A_formal_sampler_binding": "09f1f681575674a49a75402e7ea4d922c6d8d72b",
+    "11": "2f98464f4d5349d3ab8463bd4de3c9532c480b0c",
+    "07": "3e75c9b135a40f13c83af8f4bb9fe65f87b159e1"
+  },
+  "root_verification": {
+    "task": "PFALL_TARGET_PLATFORM_AND_TRAJECTORY_FIX_01",
+    "production_candidate": "9faf8659b220857ecbf2e9b91f3b1413e7771f38",
+    "graphical_checks": 1000,
+    "graphical_cases": [
+      {
+        "case": "natural_curve01",
+        "integration_head": "984f275913b1495fc09f92743fb0f665715f50c1",
+        "checks": 51,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "01e34acde4866e9fb42eb7a58a5df0f4541f96416fb12a20c8be2eb162b91335",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/natural_curve01/process.json"
+      },
+      {
+        "case": "lifecycle_curve02",
+        "integration_head": "984f275913b1495fc09f92743fb0f665715f50c1",
+        "checks": 59,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "284c9488f74a748da57c9d80576af91845a6321ea2b155567de368e29def0828",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/lifecycle_curve02/process.json"
+      },
+      {
+        "case": "formal_curve01",
+        "integration_head": "984f275913b1495fc09f92743fb0f665715f50c1",
+        "checks": 101,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "008e534dac146f084ad18b61c2592ea8bf1762413db3d4e8912c4554e6e6b1da",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/formal_curve01/process.json"
+      },
+      {
+        "case": "interrupt_curve01",
+        "integration_head": "984f275913b1495fc09f92743fb0f665715f50c1",
+        "checks": 59,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "162108c18c4b756c2254008f8bf1d4a90a4a8d38bbd8d4c317d863e03c764b27",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/interrupt_curve01/process.json"
+      },
+      {
+        "case": "matrix_curve1920",
+        "integration_head": "984f275913b1495fc09f92743fb0f665715f50c1",
+        "checks": 230,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "252fdb156eb4fabfcc9bd1f6266c91296d3eb7808fe3c3efa237cb3f01903be0",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/matrix_curve1920/process.json"
+      },
+      {
+        "case": "matrix_curve1280c",
+        "integration_head": "9faf8659b220857ecbf2e9b91f3b1413e7771f38",
+        "checks": 230,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "55eef75c78853064b02ec19e5e91ac879bd8bad20727f1c2fb5b9bab7a305666",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/matrix_curve1280c/process.json"
+      },
+      {
+        "case": "matrix_curve960",
+        "integration_head": "9faf8659b220857ecbf2e9b91f3b1413e7771f38",
+        "checks": 230,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "16afe39b04a36bb129f018fc82d149325b37fb3a00497556fb62768479d38ad4",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/matrix_curve960/process.json"
+      },
+      {
+        "case": "audio_curve01",
+        "integration_head": "9faf8659b220857ecbf2e9b91f3b1413e7771f38",
+        "checks": 36,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "97f044a54c072a43c7d214ebae37f8baa3e95f1f4e760a40886bb71617662db3",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/audio_curve01/process.json"
+      },
+      {
+        "case": "legacy_audio_curve01",
+        "integration_head": "9faf8659b220857ecbf2e9b91f3b1413e7771f38",
+        "checks": 4,
+        "status": "PASS",
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "doubles": [],
+        "failures": [],
+        "source_drift": [],
+        "process_sha256": "408a7a2a24dca9ec26101bacc5b44f9df54e1eac10374c3022a0bf936f1efb59",
+        "path": "docs/beta-sprint/game-feel/yellow-target-01/evidence/legacy_audio_curve01/process.json"
+      }
+    ],
+    "cold_processes": [
+      {
+        "phase": "seed",
+        "pid": 10852,
+        "arguments": [
+          "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+          "--headless",
+          "--path",
+          "E:\\godot\\worktrees\\block-girl-foundation-4-integration",
+          "--script",
+          "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+          "--max-fps",
+          "60",
+          "--",
+          "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/yellow-target-01/evidence/cold_curve01",
+          "--phase=seed",
+          "--shell-save=user://ui_host/progress.json"
+        ],
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "checks": 18,
+        "failures": [],
+        "doubles": [],
+        "report_sha256": "65c620445977a26613943df35e9071097a21c27fb501965fc248a26606df7df4"
+      },
+      {
+        "phase": "restore",
+        "pid": 27520,
+        "arguments": [
+          "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+          "--headless",
+          "--path",
+          "E:\\godot\\worktrees\\block-girl-foundation-4-integration",
+          "--script",
+          "res://tests/beta_sprint/ui_host_integration/test_host.gd",
+          "--max-fps",
+          "60",
+          "--",
+          "--evidence=E:/godot/worktrees/block-girl-foundation-4-integration/docs/beta-sprint/game-feel/yellow-target-01/evidence/cold_curve01",
+          "--phase=restore",
+          "--shell-save=user://ui_host/progress.json"
+        ],
+        "exit_code": 0,
+        "stderr_bytes": 0,
+        "checks": 9,
+        "failures": [],
+        "doubles": [],
+        "report_sha256": "2efef6b8c3068fb8cc4b74a9c43ad07175c2c9c7fec4b6d5e8751df15e354fdc"
+      }
+    ],
+    "cold_checks": 27,
+    "formal_graphical_matched_steps": 8,
+    "formal_graphical": "PASS",
+    "scope": "New yellow-target curve profile; actual Runtime/Presenter; formal Graphical is separate from logical and natural capture. Independent03 and package proof pending.",
+    "quality03": "RUNNING",
+    "package": "NOT_CREATED",
+    "human_qa": "NOT_RUN"
+  },
+  "independent03": {
+    "status": "PASS",
+    "commit": "4506b9b0896fc2d4b31b9a691afb3eb96bf929ef",
+    "checks": 1703,
+    "yellow12": {
+      "PASS": 12,
+      "FAIL": 0,
+      "PENDING": 0,
+      "path": "MATRIX_12.json",
+      "case11": "FORMAL_KERNEL_GAMEPLAY_REFERENCE_VS_REAL_3D"
+    },
+    "old94": {
+      "PASS": 54,
+      "FAIL": 0,
+      "PENDING": 40,
+      "path": "MATRIX_94.json",
+      "status_upgrades": []
+    },
+    "formal_graphical": {
+      "status": "PASS",
+      "checks": 211,
+      "matched_steps": 8,
+      "source": "yt_formal_01",
+      "authority": "production TraceReplayer mode1, A/B twice, originalFULL_GRAPH selected witness"
+    }
+  },
+  "case11": {
+    "formal_kernel_reference_vs_actual_graphical": "MATCH full seven-field state and full StateKey per actual action",
+    "pixel_graphical": "NOT_RUN_UNSUPPORTED_SCHEMA3_PIXEL_STACK",
+    "scope": "Formal Gameplay/3D full state and StateKey MATCH is verified. Actual Pixel stack comparison remains pending as a single user case; no blanket original12/12 claim.",
+    "actual_pixel_stack_statekey_parity": "PENDING_DEPENDENCY_NO_OFFICIAL_SCHEMA3_PIXEL_STACK"
+  },
+  "art_source_changes": "NONE",
+  "foundation_changes": "AUTHORIZED_VERSIONED_TRAJECTORY_CODEC_PROOF_SUPPORT; old v1/schema2 preserved",
+  "save_store_changes": "NONE",
+  "five_level_content_changes": "NONE",
+  "new_confirmed_P0": 0,
+  "new_confirmed_P1": 0,
+  "human_qa": "NOT_RUN",
+  "new_build": {
+    "status": "REAL_PACKAGE_EXECUTION_PASS",
+    "path": "E:\\godot\\beta-sprint-builds\\beta_pfall_yellow_target_20261010_01",
+    "integration_commit": "a741ee5e29dd2a849df13ff40100c08a9f1a2dc7",
+    "kind": "SOURCE_PLAYABLE_REQUIRES_GODOT",
+    "actual_checks": 409,
+    "archive_sha256": "921b2c1bae7d9e8025ec47ca42a118530fe8dfee04969a2014121309141e961c",
+    "launch": "E:/godot/beta-sprint-builds/beta_pfall_yellow_target_20261010_01/play.ps1",
+    "qa_profile": "UNCREATED_RESERVED_FOR_08"
+  },
+  "formal_ref": "99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff",
+  "formal_ref_promotion": "PENDING_NEXT_PERMITTED_INTEGRATION_WINDOW",
+  "push": "NOT_RUN",
+  "integration_commit": "a741ee5e29dd2a849df13ff40100c08a9f1a2dc7",
+  "quality_merge": "bf7f2a51e2ad8a9c54a91199d61b1b12c4e5632c",
+  "package_proof": "PACKAGE_EXECUTION.json",
+  "production_matches_quality_merge": true,
+  "old_qa_preservation": {
+    "checks": 16001,
+    "failures": [],
+    "evidence": "PRESERVATION_FINAL.json"
+  },
+  "quality_previous_receipt_files_unchanged": 250,
+  "qa_handoff": {
+    "status": "SENT_TO_EXISTING08_TASK",
+    "thread_id": "01a1112c-8568-7de1-80b2-6ab782c2094d",
+    "recorded_utc": "2026-10-10T07:39:03.451608+00:00",
+    "human_qa": "NOT_RUN",
+    "case11_literal_pixel": "PENDING_DEPENDENCY"
+  },
+  "working_tree_at_build_commit": "CLEAN at a741ee5e29dd2a849df13ff40100c08a9f1a2dc7; final closeout checked after commit",
+  "foundation_stair_clearance": "PARTIAL_PASS",
+  "foundation_stair_traversal": "NOT_RUN",
+  "runtime_readiness": "PENDING_RUNTIME_INTERFACE",
+  "art_extension_01": "PENDING_USER_REVIEW",
+  "new_confirmed_production_defects": [],
+  "user_case_matrix": {
+    "PASS": 11,
+    "FAIL": 0,
+    "PENDING": 1,
+    "pending_case": "CASE11 real schema3 Pixel/3D stack comparison; formal Gameplay-reference variant MATCH",
+    "owner03_reference_matrix": "12/12 PASS in the documented FORMAL_KERNEL_GAMEPLAY alternative scope"
+  }
+}

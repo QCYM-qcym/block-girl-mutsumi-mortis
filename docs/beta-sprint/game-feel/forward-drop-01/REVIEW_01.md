@@ -1,0 +1,5 @@
+# Read-only review and verification strengthening
+
+Reviewer bridge_review inspected 54a6eb17a2b8f0f7b9ff50f1eefc8646d1befe4a. No production P0/P1; six baseline behavior failures are real and fully source-bound. Two material test gaps were addressed before GREEN: signed formal-forward leaning now uses the actual actor basis in rendered frames, and departure/descent positive C1 velocity is measured by finite differences. Parameter inversion now observes the formal strictly monotone DOWN basis, avoiding the endpoint's zero forward tangent. This is observation only, never screen-coordinate animation or permission.
+
+Updated baseline_red03:58 checks/6 expected failures, real renderer, exit1, stderr0, drift0, doubles[]. New signed-direction and positive join checks pass on baseline; the cadence failures remain. Initial positive-progress failure is stationary anticipation, not evidence of an existing midair relay stop. End-to-end cadence and subjective weight are distinct: sampler/actual frame measures prove geometry, directed movement, continuity and timing; Human feel remains NOT_RUN until08.
