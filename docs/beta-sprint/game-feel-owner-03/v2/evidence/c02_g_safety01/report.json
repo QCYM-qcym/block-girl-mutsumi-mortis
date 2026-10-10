@@ -1,0 +1,413 @@
+{
+	"authority": "formal production Safety/Kernel/Facade; delivered 01 fixture DATA plus explicit obstacle; no Runtime state assignment or copied volume/sweep algorithm",
+	"checks": 12,
+	"display": "headless",
+	"doubles": [],
+	"failures": [],
+	"pid": 39264,
+	"rows": [
+		{
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "floor",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "floor",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"events": [
+				{
+					"attempt_id": 1,
+					"authoritative_final_orientation": null,
+					"camera_quadrant": 1,
+					"contract_version": "game_feel.event.v1",
+					"event_id": 1,
+					"intended_move_direction": null,
+					"interruption_reason": null,
+					"level_run_id": "9b53366b4952d2bda7cb359252ace07f",
+					"phase": "FEEDBACK",
+					"presentation_identity": null,
+					"reason_category": "SAFETY_REJECTED",
+					"result": {
+						"action": {
+							"connection_id": "edge_a",
+							"kind": 8
+						},
+						"changed": false,
+						"global_kind": 0,
+						"issues": [
+							{
+								"code": 1204,
+								"details": {},
+								"entity_ids": [
+									"edge_a",
+									"obstacle"
+								],
+								"message": "Swept actor open interior intersects a platform/obstacle.",
+								"path": "fall.path_points2",
+								"severity": 0
+							}
+						],
+						"next_state": null,
+						"previous_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "floor",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"rejection_code": 2103,
+						"status": 1
+					},
+					"schema_version": 1,
+					"semantic": "ACTION_FEEDBACK",
+					"session_id": "212a24f5e2b3d738437d4cbf2d735728",
+					"source_face": {
+						"cube_id": "floor",
+						"face": 4,
+						"layer": 0
+					},
+					"source_frame": {
+						"normal": "(0, 1, 0)",
+						"u": "(1, 0, 0)",
+						"v": "(0, 0, -1)"
+					},
+					"source_pose": {
+						"location": {
+							"cube_id": "floor",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"target_face": null,
+					"target_pose": null,
+					"transition_identity": null,
+					"world_id": 0
+				}
+			],
+			"higher": false,
+			"level_hash": "60678ad8cbaa340e0b43bfb222703d63631ca6462e7f881ecbbb0927e7d2cbc9",
+			"load": {
+				"issues": [],
+				"ok": true
+			},
+			"native": {
+				"action": {
+					"connection_id": "edge_a",
+					"kind": 8
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1204,
+						"details": {},
+						"entity_ids": [
+							"edge_a",
+							"obstacle"
+						],
+						"message": "Swept actor open interior intersects a platform/obstacle.",
+						"path": "fall.path_points2",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "floor",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2103,
+				"status": 1
+			},
+			"runtime_negative": "EXECUTED",
+			"safe": {
+				"issues": [],
+				"status": 0
+			},
+			"unsafe": {
+				"issues": [
+					{
+						"code": 1204,
+						"details": {},
+						"entity_ids": [
+							"edge_a",
+							"obstacle"
+						],
+						"message": "Swept actor open interior intersects a platform/obstacle.",
+						"path": "fall.path_points2",
+						"severity": 0
+					}
+				],
+				"status": 1
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "floor",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"before": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "floor",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"events": [
+				{
+					"attempt_id": 1,
+					"authoritative_final_orientation": null,
+					"camera_quadrant": 1,
+					"contract_version": "game_feel.event.v1",
+					"event_id": 1,
+					"intended_move_direction": null,
+					"interruption_reason": null,
+					"level_run_id": "f335870439ff43800ecbf6f9edf7fed3",
+					"phase": "FEEDBACK",
+					"presentation_identity": null,
+					"reason_category": "SAFETY_REJECTED",
+					"result": {
+						"action": {
+							"connection_id": "edge_a",
+							"kind": 8
+						},
+						"changed": false,
+						"global_kind": 0,
+						"issues": [
+							{
+								"code": 1204,
+								"details": {},
+								"entity_ids": [
+									"edge_a",
+									"obstacle"
+								],
+								"message": "Swept actor open interior intersects a platform/obstacle.",
+								"path": "fall.path_points2",
+								"severity": 0
+							}
+						],
+						"next_state": null,
+						"previous_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "a"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "floor",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 0
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"rejection_code": 2103,
+						"status": 1
+					},
+					"schema_version": 1,
+					"semantic": "ACTION_FEEDBACK",
+					"session_id": "5d8c8f8d7b0fd52977978dbc6eeca990",
+					"source_face": {
+						"cube_id": "floor",
+						"face": 4,
+						"layer": 0
+					},
+					"source_frame": {
+						"normal": "(0, 1, 0)",
+						"u": "(1, 0, 0)",
+						"v": "(0, 0, -1)"
+					},
+					"source_pose": {
+						"location": {
+							"cube_id": "floor",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"target_face": null,
+					"target_pose": null,
+					"transition_identity": null,
+					"world_id": 0
+				}
+			],
+			"higher": true,
+			"level_hash": "1111617359588b1eac67e429b117d23a1cf71e1bc4aabdce0c10259a2824e131",
+			"load": {
+				"issues": [],
+				"ok": true
+			},
+			"native": {
+				"action": {
+					"connection_id": "edge_a",
+					"kind": 8
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1204,
+						"details": {},
+						"entity_ids": [
+							"edge_a",
+							"obstacle"
+						],
+						"message": "Swept actor open interior intersects a platform/obstacle.",
+						"path": "fall.path_points2",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "a"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "floor",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2103,
+				"status": 1
+			},
+			"runtime_negative": "EXECUTED",
+			"safe": {
+				"issues": [],
+				"status": 0
+			},
+			"unsafe": {
+				"issues": [
+					{
+						"code": 1204,
+						"details": {},
+						"entity_ids": [
+							"edge_a",
+							"obstacle"
+						],
+						"message": "Swept actor open interior intersects a platform/obstacle.",
+						"path": "fall.path_points2",
+						"severity": 0
+					}
+				],
+				"status": 1
+			}
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_g_safety01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}

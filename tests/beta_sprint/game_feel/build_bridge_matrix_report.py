@@ -121,6 +121,18 @@ def build(formal_name, lifecycle_name, regressions):
     full_name = next(n for n in regressions if records[n]["job"] == "full_slice_graphical")
     full = reports[full_name]
     require({(r["map"], r["reduced_motion"]) for r in full["observations"]["routes"]} == {("a", False), ("a", True), ("b", False), ("b", True)}, "Require actual A/B normal/reduced full-slice paths")
+    unsuccessful = []
+    for name in ("c02_replay_lifecycle_green01", "c02_g_fullslice01", "c02_native_gaps_red01", "c02_native_gaps_green01", "c02_native_gaps_green02", "c02_native_base_green01"):
+        folder = OLD / "evidence" / name
+        process = read(folder / "process.json")
+        require(process["status"] == "FAIL", "Historical failed attempts must retain their actual result")
+        unsuccessful.append({"name": name, "execution_source": process["execution_head"], "status": process["status"], "checks": process["checks"],
+                             "failures": process["failures"], "stderr_bytes": process["stderr_bytes"],
+                             "process": relative(folder / "process.json"), "process_sha256": sha(folder / "process.json"),
+                             "classification": "HARNESS_PREPARATION" if name in ("c02_replay_lifecycle_green01", "c02_native_gaps_red01") else ("OBSERVED_PAUSE_CAUSE_UNPROVEN" if name == "c02_g_fullslice01" else ("ENVIRONMENT_INTERRUPTED_AND_HARNESS_PREPARATION" if name == "c02_native_base_green01" else "ENVIRONMENT_INTERRUPTED / recorded FOCUS_OUT/Pause; no confirmed production defect"))})
+    pending_attempts = {"A_INPUT_EDGE_RECOIL_" + item for item in ("HELD_WASD", "EDGE_SPAM", "REVERSE", "CAMERA_QE", "SPACE", "RESET", "PAUSE", "EXIT_LEVEL")}
+    pending_attempts |= {"A_INPUT_" + phase + "_" + item for phase in ("FALL", "LANDING") for item in ("SPACE", "EXIT_LEVEL")}
+    pending_attempts.add("G_EVENT_UNCLASSIFIED_REJECTION")
     inventory = deepcopy(baseline["cases"])
     upgrades = {"FORMAL_REPLAY", "CORE_SAFETY_SOLVER_REPLAY", "A_POSE_EDGE_RECOIL"}
     for row in inventory:
@@ -143,6 +155,11 @@ def build(formal_name, lifecycle_name, regressions):
             row["dependencies"] = []
         elif row["status"] == "PENDING":
             row["current_scope_note"] = "Pending complete row evidence. Bridge/Replayer are now delivered; baseline missing-dependency text is historical. Native lifecycle assertions alone do not establish full VFX/audio/drag/focus/Human predicates. Integrated 10B/Audio/UI availability does not confer Real PASS."
+            if row["id"] in pending_attempts:
+                row["baseline_scope_or_missing"] = row["scope_or_missing"]
+                row["scope_or_missing"] = "Integrated native inputs attempted; no strict whole-job GREEN receipt. Preserve original Focus/Pause interruptions and harness preparation failures. Real Space UNCLASSIFIED_REJECTION1400 was observed, but partial rows from failed jobs do not confer Real PASS. Latest assertion guards are parse-checked only."
+                row["evidence"] += [relative(OLD / "evidence" / item["name"]) for item in unsuccessful if item["name"].startswith("c02_native")]
+                row["dependencies"] = ["STABLE_NATIVE_INPUT_EXECUTION_RECEIPT; whole row predicates"]
     counts = dict(Counter(r["status"] for r in inventory))
     counts.setdefault("FAIL", 0)
     require(counts == {"PASS": 54, "PENDING": 40, "FAIL": 0})
@@ -161,6 +178,9 @@ def build(formal_name, lifecycle_name, regressions):
         "runtime_parity": "PASS / original A/B witness complete state, native single commits, full StateKey",
         "graphical_parity": "PASS / actual native Bridge Fall/Landing/Roll completion, physical Pose and Camera direction",
         "executions": records, "new_unique_pass_assertions": sum(r["checks"] for r in records.values()),
+        "unsuccessful_attempts_retained": unsuccessful,
+        "attempted_pending_rows": sorted(pending_attempts),
+        "focus_observation": "Full Slice first run: ReducedMotion A entered Pause during Roll; no focus notification recorder in that receipt, cause remains unproven. Same exact production source rerun passed230. Separate NativeMatrix attempts record actual FOCUS_OUT during failing motion/recovery and actual paused Runtime/audio. They remain PENDING; no automatic resume or mock is used to turn an interrupted run into PASS.",
         "new_confirmed_runtime_presenter_failures": [],
         "known_owner_observation": "00 reported direct Facade.reset cancellation label CANCEL vs native Runtime RESET; native keyR is checked separately. No new 03 production defect inferred.",
         "not_run": ["Full 94-case acceptance", "100-cycle and30-minute soak", "Fresh GLB import/whole VFX lifecycle", "Full Audio/UI/drag/focus predicates", "conditional L06", "Human visual/audio acceptance", "formal Integration ref promotion", "push"],
@@ -172,6 +192,7 @@ def build(formal_name, lifecycle_name, regressions):
              "Cumulative matrix: **54 PASS / 0 FAIL / 40 PENDING**. FORMAL_REPLAY, CORE_SAFETY_SOLVER_REPLAY and A_POSE_EDGE_RECOIL are upgraded. The prior 51 rows retain their historical execution identity; this is not a fresh 94-case acceptance.", "",
              "Formal Graphical: **PASS**, A/B original witness ×2, 8 matched steps. Native Reset, scene exit, active driver free, remove→readd→immediate new replay and expiry isolation: 18 cases, 36 successful new-run steps. LOGICAL_SESSION and natural Presenter are separately recorded.", "",
              f"New selected receipts: {report['new_unique_pass_assertions']} unique PASS assertions. Historical Core69 remains three rows; neither earlier1311 nor Unit38 is added to this total.", "",
+             "Failed attempts are retained separately. Full Slice first run230/8fail entered real Pause on reduced A Roll (cause unproven); same-source rerun230 PASS. Native input attempts recorded FOCUS_OUT/Pause and lack a strict GREEN receipt, so all13 attempted pending rows remain PENDING. No partial rows from failed jobs are promoted.", "",
              "| Case | Status | Execution source | Scope / evidence |", "|---|---|---|---|"]
     for row in inventory:
         scope = row["scope_or_missing"].replace("|", "/").replace("\n", " ")

@@ -112,6 +112,9 @@ func scenario(letter: String, level: Dictionary, witness: Dictionary, phase: Str
 		observe(driver, level, witness, {"mode": 1}, next)
 	if old.finished:
 		check(old.result.status in [2, 3] and old.result.matched_steps == 0, label + " cancelled old run never becomes MATCH")
+	# The production Replayer disposes its retired Bridge before returning.
+	# Preserve the public record at the actual cancellation signal, while alive.
+	retired = cancellation_snapshots[-1] if not cancellation_snapshots.is_empty() else retired
 	var cancelled: Array = retired.get("records", []).filter(func(r): return r.transition_identity == identity)
 	check(cancelled.size() == 1, label + " one actual old Bridge record")
 	if cancelled.size() == 1:
@@ -139,12 +142,13 @@ func expiry(letter: String, level: Dictionary, witness: Dictionary) -> void:
 	var old_bridge := bridge_of(driver)
 	var late_completions: Array = []
 	var actual_cancellations: Array = []
+	var cancellation_snapshots: Array = []
 	if old_bridge != null:
 		old_bridge.motion_completed.connect(func(i, e): late_completions.append({"identity": i, "evidence": e}))
-		old_bridge.motion_cancelled.connect(func(i, r): actual_cancellations.append({"identity": i, "reason": r}))
+		old_bridge.motion_cancelled.connect(func(i, r): actual_cancellations.append({"identity": i, "reason": r}); cancellation_snapshots.append(old_bridge.snapshot()))
 	await wait_result(old, letter + " expiry")
 	if old.finished: check(old.result.status == 3 and old.result.matched_steps == 0, letter + " actual in-flight timeout remains INCOMPLETE")
-	var retired: Dictionary = old_bridge.snapshot() if is_instance_valid(old_bridge) else {}
+	var retired: Dictionary = cancellation_snapshots[-1] if not cancellation_snapshots.is_empty() else {}
 	var cancelled: Array = retired.get("records", []).filter(func(r): return r.transition_identity == identity)
 	check(cancelled.size() == 1, letter + " expiry owns actual old Bridge record")
 	if cancelled.size() == 1: check(cancelled[0].cancelled_order > 0 and cancelled[0].completion_order == 0 and not cancelled[0].delivered, letter + " actual timeout cleanup cancels without completion")

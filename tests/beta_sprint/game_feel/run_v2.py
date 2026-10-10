@@ -7,6 +7,9 @@ from v2_reports import classify_execution, legacy_checks, execution_identity_fai
 ROOT = Path(__file__).resolve().parents[3]
 ENGINE = Path("D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe")
 JOBS = {
+    "native_matrix_gaps": ("tests/beta_sprint/game_feel_owner_03/test_v2_native_matrix_gaps.gd", True, "report.json", []),
+    **{f"native_gaps_{batch}": ("tests/beta_sprint/game_feel_owner_03/test_v2_native_matrix_gaps.gd", True, "report.json", [f"--batch={batch}"])
+       for batch in ("base", "control", "exit", "fall")},
     "formal_graphical": ("tests/beta_sprint/game_feel_owner_03/test_v2_graphical_trace.gd", True, "report.json", []),
     "formal_lifecycle": ("tests/beta_sprint/game_feel_owner_03/test_v2_replay_lifecycle.gd", True, "report.json", []),
     "full_slice_graphical": ("tests/beta_sprint/game_feel_full_slice/test_matrix.gd", True, "matrix.json", ["--phase=matrix", "--size=1280x720"]),
