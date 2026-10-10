@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[3]
 ENGINE = Path("D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe")
 JOBS = {
     "formal_graphical": ("tests/beta_sprint/game_feel_owner_03/test_v2_graphical_trace.gd", True, "report.json", []),
+    "formal_lifecycle": ("tests/beta_sprint/game_feel_owner_03/test_v2_replay_lifecycle.gd", True, "report.json", []),
     "natural": ("tests/beta_sprint/pfall_integration/test_core.gd", True, "report.json", []),
     "spam": ("tests/beta_sprint/pfall_v2_integration/test_spam.gd", True, "report.json", []),
     "lifecycle": ("tests/beta_sprint/game_feel_owner_03/test_v2_lifecycle.gd", True, "report.json", []),

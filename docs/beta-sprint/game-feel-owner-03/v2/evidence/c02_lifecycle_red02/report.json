@@ -1,0 +1,153 @@
+{
+	"authority": "Sole production Replayer/Facade/Bridge. Public native R and Node removal/readdition/exit; no override, adapter, manual finish or synthetic completion",
+	"capture": {
+		"authoritative_runtime": true,
+		"display": "Windows",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "d3179c6c4c2b1bce6969d29f5e6a96611ff81bc0",
+		"fixture_kind": "REAL_CANONICAL_MAP_AB",
+		"input_profile": "FORMAL_GRAPHICAL native R / SceneTree lifecycle / real step timeout",
+		"pid": 37804,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-game-feel-quality/docs/beta-sprint/game-feel-owner-03/v2/evidence/c02_lifecycle_red02/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"checks": 33,
+	"doubles": [],
+	"failures": [
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches FALL",
+		"a actual in-flight timeout remains INCOMPLETE",
+		"a expiry recovery new original witness reaches actual Goal",
+		"a expiry recovery public new-run evidence",
+		"a expiry recovery exactly two uncontaminated new steps",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches FALL",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches LANDING",
+		"actual formal replay reaches FALL",
+		"b actual in-flight timeout remains INCOMPLETE",
+		"b expiry recovery new original witness reaches actual Goal",
+		"b expiry recovery public new-run evidence",
+		"b expiry recovery exactly two uncontaminated new steps"
+	],
+	"rows": [
+		{
+			"map": "a",
+			"new_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"new_steps": [],
+			"old_identity": {},
+			"old_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"operation": "step_timeout"
+		},
+		{
+			"map": "b",
+			"new_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"new_steps": [],
+			"old_identity": {},
+			"old_result": {
+				"action": null,
+				"actual_statekey": "",
+				"divergence_step": null,
+				"expected_statekey": "",
+				"issues": [
+					{
+						"code": 3016,
+						"details": {
+							"owner": "00+10A",
+							"required": "authorized path sampling + natural completion bridge"
+						},
+						"message": "CASE_DEPENDENCY_PENDING: GAME_FEEL_GRAPHICAL_COMPLETION_BRIDGE",
+						"path": "dependencies.GameFeelPresenter",
+						"severity": 0,
+						"upstream": []
+					}
+				],
+				"matched_steps": 0,
+				"status": 2,
+				"trace_length": 2
+			},
+			"operation": "step_timeout"
+		}
+	]
+}
