@@ -1,0 +1,60 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT",
+  "request_sha256": "ed3fd6ba8f8adc864e95225350deaf08f3c150c1d838213a8356b4a133f3e293",
+  "base": "58a157ea9680159b76410c2929c1636b3ccdbe61",
+  "existing_build": "E:/godot/beta-sprint-builds/beta_spatial_puzzle_batch_01_20261011_01",
+  "existing_build_policy": "IMMUTABLE; historical scope only",
+  "order": [
+    "13_DESIGN",
+    "09_MAP",
+    "01_RUNTIME",
+    "03_QUALITY",
+    "00_INTEGRATION",
+    "08_HUMAN_QA"
+  ],
+  "scope": {
+    "13": [
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/SPATIAL_PUZZLE_BATCH_01_DESIGN_SPEC.md",
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/SPATIAL_PUZZLE_BATCH_01_DESIGN_SOURCES.json"
+    ],
+    "09": [
+      "experiments/spatial_puzzle_batch_01/maps/**",
+      "tests/beta_sprint/spatial_owner_09/**",
+      "docs/beta-sprint/spatial-puzzle-batch-01/maps/**"
+    ],
+    "01": [
+      "foundation/authoring/** only proven compatibility gaps",
+      "tests/beta_sprint/spatial_owner_01/**",
+      "docs/beta-sprint/spatial-puzzle-batch-01/runtime/**"
+    ],
+    "03": [
+      "tests/beta_sprint/spatial_quality/**",
+      "docs/beta-sprint/spatial-puzzle-batch-01/quality/**"
+    ],
+    "00": [
+      "experiments/spatial_puzzle_batch_01/host/**",
+      "tests/beta_sprint/spatial_integration/**",
+      "docs/beta-sprint/spatial-puzzle-batch-01/full-development/**",
+      "integration receipts/package only"
+    ],
+    "07": [
+      "tests/beta_sprint/spatial_owner_07/**",
+      "docs/beta-sprint/spatial-puzzle-batch-01/ui/**"
+    ],
+    "05": "Read-only existing research support; no production Art",
+    "10A_10B": "Reuse existing verified motion modules; production change only if actual regression proven",
+    "11": "Existing AudioDirector APIs/cues reused; no new system",
+    "08": "Immutable new build Human QA; retain NOT_RUN without an eligible tester"
+  },
+  "no_new_runtime_rules": true,
+  "production_restrictions": [
+    "main",
+    "release tags",
+    "L01-L05",
+    "frozen Art",
+    "SaveStore semantics"
+  ],
+  "owner_stage_delivery": "COMMIT -> ORDINARY_PUSH -> REMOTE_SHA_VERIFY -> HANDOFF",
+  "authoring_gap": "Replace executable map data assembly with saved formal author resources and real adapter. Preserve schema3 Loop/Fork and schema4 Gate/Lock/Combined",
+  "audio_gap": "Host routing to existing AudioDirector; committed lock/shift feedback, real Fall event lifecycle"
+}
