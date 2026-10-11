@@ -1,0 +1,20 @@
+{
+  "status": "SPATIAL_RUNTIME_CORE_GREEN",
+  "contract_ancestor": "7442e8172e865d093ff1e73570d891f60d9134af",
+  "interface_commit": "5664a32a33eb178934e3233cc59c938132622fc0",
+  "new_checks": {"contracts":44,"rules":57,"runtime_lifecycle":24,"typed_authoring":10},
+  "new_total": 135,
+  "affected_legacy_checks": {"kernel_real":532,"game_feel_contracts":35,"game_feel_rules":59,"game_feel_runtime":63,"curve_profile":62,"curve_runtime":96,"curve_safety":47},
+  "affected_legacy_total": 894,
+  "failures": [],
+  "stderr": "EMPTY in all selected passing runs",
+  "doubles": [],
+  "behavior_red": {"contracts_red01":2,"rules_red01":5,"rules_green01_classifier_red":3,"authoring_red01":4,"contacts_red02":2,"runtime_red03":1},
+  "excluded_invalid_attempts": ["runtime_red01: test type inference parse errors", "runtime_red02: incorrect test calls to Facade is_goal/unload", "legacy_contracts01: wrapper did not recognize JSON checks; actual suite rerun as legacy_contracts02"],
+  "raw_evidence_root": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01",
+  "runtime_proven": ["fixed gate", "off-point UNIQUE mapping denied", "locked/unlocked gate", "exact target binding", "Shadow retained", "exit/entry blockers retained", "wrong face MOVE without latch", "post-roll correct local face latch", "repeat latch idempotent", "latch persists after leave/Shift", "actual local/global token identity", "single authoritative commit", "Busy spam rejection", "Reset", "stale completion", "unload", "real typed Node/Resource projection -> Adapter -> Reader -> Baker -> SourceMap"],
+  "pending_at_this_core_commit": ["full graph Search/Softlock/Trace/Replay and ablation evidence", "final whole-branch review", "Owner09 authored maps", "Coordinator00 graphical Host/build and independent Owner03 acceptance", "Human QA"],
+  "changed_scope": "Foundation opt-in profile and affected formal consumers; Owner01 tests/docs only",
+  "host_or_map_changes": [],
+  "push": "NOT_RUN"
+}

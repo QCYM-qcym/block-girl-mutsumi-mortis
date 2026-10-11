@@ -1,6 +1,7 @@
 extends RefCounted
 const Types = preload("res://foundation/contracts/foundation_types.gd")
 const Math = preload("res://foundation/orientation/discrete_orientation.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const IntentTypes = preload("res://foundation/quality/intent/intent_types.gd")
 ## Closed author declarations. Spatial legality, rules and hashes belong to existing modules.
 const SCRIPTS := {
@@ -26,6 +27,8 @@ const FIELDS := {
 	"MILESTONE": {"milestone_id": TYPE_STRING_NAME, "required": TYPE_BOOL, "predicate": TYPE_DICTIONARY},
 	"BYPASS": {"bypass_id": TYPE_STRING_NAME, "disabled_mechanics": TYPE_ARRAY}
 }
+const SPATIAL_LEVEL_TYPES := {"camera_initial_quadrant":TYPE_INT,"perspective_falls":TYPE_ARRAY,"shift_gates":TYPE_ARRAY}
+const LOCK_CONFIG_TYPES := {"required_local_face":TYPE_INT,"activation_mode":TYPE_STRING_NAME,"latched_state":TYPE_STRING_NAME}
 const DOCUMENT_FIELDS := ["authoring_version", "document_uri", "document_authoring_id", "kind", "root_transform", "records", "resources", "dependencies", "override_paths"]
 const RESOURCE_FIELDS := ["authoring_id", "kind", "document_uri", "resource_uid", "fields"]
 const RECORD_FIELDS := ["kind", "authoring_id", "node_path", "label", "fields"]
@@ -71,7 +74,9 @@ static func kind_of(script: Variant) -> String:
 
 static func field_types(kind: String, declarations: Dictionary = {}) -> Dictionary:
 	var fields: Dictionary = FIELDS[kind].duplicate()
+	if kind == "LEVEL" and Feel.spatial(declarations): fields.merge(SPATIAL_LEVEL_TYPES)
 	if kind == "MECHANISM_CONFIG":
+		if declarations.get("kind") == Types.PuzzleActionKind.TRIGGER_MECHANISM: fields.merge(LOCK_CONFIG_TYPES)
 		if declarations.get("kind") == Types.PuzzleActionKind.LOCAL_GROUP_ROTATE:
 			fields["rotation_delta"] = TYPE_INT
 		elif declarations.get("kind") == Types.PuzzleActionKind.MOVE_CELESTIAL:
@@ -86,6 +91,12 @@ static func property_list(kind: String, declarations: Dictionary = {}) -> Array[
 		for key in ["rotation_delta", "celestial_op"]:
 			if declarations.has(key):
 				fields[key] = TYPE_INT
+	if kind == "LEVEL":
+		for key in SPATIAL_LEVEL_TYPES:
+			if declarations.has(key): fields[key]=SPATIAL_LEVEL_TYPES[key]
+	if kind == "MECHANISM_CONFIG":
+		for key in LOCK_CONFIG_TYPES:
+			if declarations.has(key): fields[key]=LOCK_CONFIG_TYPES[key]
 	for key in fields:
 		if key == "transform":
 			continue
@@ -126,8 +137,10 @@ static func fields_valid(kind: String, fields: Variant) -> bool:
 		if key.ends_with("_id") and not valid_id(fields[key]):
 			return false
 	if kind == "LEVEL":
-		if fields.authoring_version != "levelauthoring.v1" or fields.schema_version != 1 or fields.contract_version != "foundation.contract.v1" or fields.orientation_version != "cube24.v1" or fields.rule_version != "foundation.rules.v1" or fields.cell_size <= 0:
+		var spatial := Feel.spatial(fields)
+		if fields.authoring_version != "levelauthoring.v1" or fields.orientation_version != "cube24.v1" or fields.cell_size <= 0 or (not spatial and (fields.schema_version != 1 or fields.contract_version != "foundation.contract.v1" or fields.rule_version != "foundation.rules.v1")):
 			return false
+		if spatial and fields.camera_initial_quadrant not in range(4): return false
 		if not exact(fields.spawn, ["face_ref", "orientation"]) or not face_ref(fields.spawn.face_ref) or not orientation(fields.spawn.orientation) or not exact(fields.goal, ["face_ref", "required_flags"]) or not face_ref(fields.goal.face_ref) or not id_array(fields.goal.required_flags):
 			return false
 		if not exact(fields.celestial, ["slot_order", "wrap", "initial_slot_id", "edges"]) or not id_array(fields.celestial.slot_order) or typeof(fields.celestial.wrap) != TYPE_BOOL or not valid_id(fields.celestial.initial_slot_id) or not fields.celestial.edges is Array:
@@ -161,6 +174,8 @@ static func fields_valid(kind: String, fields: Variant) -> bool:
 	if kind == "TRANSITION":
 		return face_ref(fields.source) and face_ref(fields.target) and fields.entry_axis in Types.FaceAxis.values() and fields.exit_axis in Types.FaceAxis.values() and id_array(fields.required_flags) and enum_array(fields.rotation_steps, quarter_values(), false)
 	if kind == "MECHANISM_CONFIG":
+		if fields.kind == Types.PuzzleActionKind.TRIGGER_MECHANISM:
+			return fields.initial_state != &"" and fields.latched_state != &"" and fields.initial_state != fields.latched_state and fields.allowed_states == [fields.initial_state,fields.latched_state] and fields.required_local_face in range(6) and fields.activation_mode == &"LATCH_ON_SUCCESS"
 		if fields.initial_state == &"" or fields.allowed_states.size() != 1 or typeof(fields.allowed_states[0]) != TYPE_STRING_NAME or fields.allowed_states[0] != fields.initial_state:
 			return false
 		match fields.kind:
@@ -396,7 +411,9 @@ static func _validate(payload: Dictionary) -> Dictionary:
 				if not cubes.has(f.host_face.cube_id) or cubes[f.host_face.cube_id].document_uri != doc.document_uri or resources[f.config.resource_ref].kind != "MECHANISM_CONFIG":
 					return failure("INVALID_REFERENCE", record.authoring_id, "Mechanism host and config must resolve.")
 				var kind: int = resources[f.config.resource_ref].fields.kind
-				var target_fields: Array = {Types.PuzzleActionKind.LOCAL_GROUP_ROTATE: ["group_id"], Types.PuzzleActionKind.MOVE_CELESTIAL: ["target_slot_id", "alternate_slot_id"], Types.PuzzleActionKind.USE_FACE_TRANSITION: ["transition_id"]}[kind]
+				if kind == Types.PuzzleActionKind.TRIGGER_MECHANISM and (not Feel.spatial(level_fields) or f.trigger != &"ENTER"):
+					return failure("INVALID_REFERENCE",record.authoring_id,"Face Lock requires the opt-in Level and ENTER trigger.")
+				var target_fields: Array = {Types.PuzzleActionKind.TRIGGER_MECHANISM:[],Types.PuzzleActionKind.LOCAL_GROUP_ROTATE: ["group_id"], Types.PuzzleActionKind.MOVE_CELESTIAL: ["target_slot_id", "alternate_slot_id"], Types.PuzzleActionKind.USE_FACE_TRANSITION: ["transition_id"]}[kind]
 				if not exact(f.target_bindings, target_fields):
 					return failure("INVALID_REFERENCE", record.authoring_id, "Instance target fields do not match config kind.")
 				for field in target_fields:

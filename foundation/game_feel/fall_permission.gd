@@ -6,6 +6,7 @@ const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
 const Derived = preload("res://foundation/rules/derived_state_resolver.gd")
 const Connectivity = preload("res://foundation/rules/connectivity_resolver.gd")
 const Effects = preload("res://foundation/rules/mechanism_effects.gd")
+const SpatialRules = preload("res://foundation/rules/spatial_puzzle_rules.gd")
 const Key = preload("res://foundation/contracts/state_key.gd")
 const Safety = preload("res://foundation/validation/safety_queries.gd")
 const Codec = preload("res://foundation/level/level_codec.gd")
@@ -109,6 +110,8 @@ static func description(level: Dictionary, state: Dictionary, action: Dictionary
 			description.motion = path
 	elif result.rejection_code == Code.GLOBAL_TRANSITION_BUSY: description.reason_category = "BUSY"
 	elif result.rejection_code == Code.UNAUTHORIZED_MECHANISM: description.reason_category = "MECHANISM_LOCKED"
+	elif result.rejection_code == SpatialRules.SpatialRejectionCode.SHIFT_GATE_LOCKED: description.reason_category = "MECHANISM_LOCKED"
+	elif result.rejection_code in [SpatialRules.SpatialRejectionCode.SHIFT_GATE_NOT_FOUND,SpatialRules.SpatialRejectionCode.SHIFT_GATE_TARGET_MISMATCH]: description.reason_category = "WORLD_NOT_ALLOWED"
 	elif result.rejection_code == CAMERA_NOT_ALLOWED: description.reason_category = "CAMERA_NOT_ALLOWED"
 	elif result.rejection_code == WORLD_NOT_ALLOWED: description.reason_category = "WORLD_NOT_ALLOWED"
 	elif result.rejection_code == FALL_SAFETY_REJECTED: description.reason_category = "SAFETY_REJECTED"
