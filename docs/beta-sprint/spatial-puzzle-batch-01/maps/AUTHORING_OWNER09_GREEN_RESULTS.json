@@ -1,0 +1,85 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT",
+  "owner": "09",
+  "status": "GREEN",
+  "candidate": "a2a716734dab0a63ff8de397087665ef704337fd",
+  "dependency": "859c5ac9601d624eb0666f4c333336ec1774ab47",
+  "total_new_checks": 537,
+  "tests": [
+    {
+      "case": "authoring_owner09_green_01",
+      "checks": 236,
+      "status": "PASS",
+      "pid": 38940,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "report_sha256": "70fc7e5017d7fffd4b98acdcfd14caf8aebc901d5ab9aacc8281617cd5a1587a",
+      "process_sha256": "9e4fa75126e3e03bbf5bb6dcae499d1b2f54f18b99fdc727a30bf6fe174a9012"
+    },
+    {
+      "case": "authoring_owner09_typed_01",
+      "checks": 264,
+      "status": "PASS",
+      "pid": 46308,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "report_sha256": "627b5998daa11ce2e5a338fa3690f98e299a6edd2c7455c4b8cd53e2363f479f",
+      "process_sha256": "52f5028a8ab8a0ddbabc8995e6d8f311bde0552e4879b9b36f54526a9c877152"
+    },
+    {
+      "case": "authoring_owner09_fork_01",
+      "checks": 37,
+      "status": "PASS",
+      "pid": 17276,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "source_drift": [],
+      "report_sha256": "c68b92158511823fdf01314903eb9109971a0a67d50817ff36c714fe9168666f",
+      "process_sha256": "7cd4bbab16e09e040319e60d029418612be67d51f62e3f33865ec85cf4e08cbc"
+    }
+  ],
+  "levels": [
+    {
+      "id": "world_shift_gate_lab",
+      "schema": 4,
+      "content_hash": "7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4",
+      "canonical_equal": true,
+      "source_identity_errors": []
+    },
+    {
+      "id": "orientation_loop_lab",
+      "schema": 3,
+      "content_hash": "45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70",
+      "canonical_equal": true,
+      "source_identity_errors": []
+    },
+    {
+      "id": "face_lock_lab",
+      "schema": 4,
+      "content_hash": "8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5",
+      "canonical_equal": true,
+      "source_identity_errors": []
+    },
+    {
+      "id": "perspective_fork_lab",
+      "schema": 3,
+      "content_hash": "8b485492113fec9f1ee74d347b88d31a6012f50359b97f9d26fee4c1e603054a",
+      "canonical_equal": true,
+      "source_identity_errors": []
+    },
+    {
+      "id": "rubik_spatial_puzzle_01",
+      "schema": 4,
+      "content_hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+      "canonical_equal": true,
+      "source_identity_errors": []
+    }
+  ],
+  "owner09_maps_and_tests_changed": false,
+  "combined_graph": "HISTORICAL_REFERENCE_ONLY; 908 states / 3916 edges; 0 new assertions",
+  "graphical_qa": "NOT_RUN",
+  "human_qa": "NOT_RUN",
+  "integration": "PENDING_00"
+}
