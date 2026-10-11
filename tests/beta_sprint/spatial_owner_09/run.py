@@ -32,12 +32,12 @@ if script not in ['maps_test.gd', 'gated_test.gd', 'fork_matrix.gd']:
 args = [str(engine), '--headless', '--path', str(root), '--script', 'res://tests/beta_sprint/spatial_owner_09/'+script, '--', out.as_posix(), profile.as_posix()]
 if script == 'gated_test.gd':
     args.append(sys.argv[3])
-record = {'head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip(), 'dirty': subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).decode(), 'sources_sha256': sources, 'engine_sha256': digest(engine), 'arguments': args, 'profile_environment': {k: env[k] for k in ['APPDATA','LOCALAPPDATA']}, 'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'doubles': []}
+record = {'head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip(), 'dirty': subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).decode(), 'sources_sha256': sources, 'engine_sha256': digest(engine), 'arguments': args, 'profile_environment': {k: env[k] for k in ['APPDATA','LOCALAPPDATA']}, 'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'doubles': [], 'timeout_seconds': 900}
 with (out/'stdout.log').open('wb') as stdout, (out/'stderr.log').open('wb') as stderr:
     process = subprocess.Popen(args, cwd=root, env=env, stdout=stdout, stderr=stderr, creationflags=subprocess.CREATE_NO_WINDOW)
     record['pid'] = process.pid
     try:
-        record['exit_code'] = process.wait(timeout=300)
+        record['exit_code'] = process.wait(timeout=record["timeout_seconds"])
     except subprocess.TimeoutExpired:
         process.kill(); process.wait(); record['exit_code'] = 'TIMEOUT'
 record['finished_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
@@ -45,7 +45,7 @@ record['source_drift'] = [p for p, sha in sources.items() if digest(root/p) != s
 report_file = out/'report.json'
 report = json.loads(report_file.read_text(encoding='utf-8')) if report_file.exists() else {}
 record['checks'] = report.get('checks', 0)
-record['failures'] = report.get('failures', ['missing report / parser or dependency failure'])
+record['failures'] = report.get('failures', ['process timeout before final report' if record['exit_code']=='TIMEOUT' else 'missing report / parser or dependency failure'])
 record['status'] = 'PASS' if record['exit_code'] == 0 and record['checks'] > 0 and not record['failures'] and not record['source_drift'] and not (out/'stderr.log').read_bytes() else 'FAILED'
 (out/'process.json').write_bytes((json.dumps(record, indent=2, ensure_ascii=False)+'\n').encode())
 print(case, record['status'], record['checks'], record['failures'], 'PID', process.pid)
