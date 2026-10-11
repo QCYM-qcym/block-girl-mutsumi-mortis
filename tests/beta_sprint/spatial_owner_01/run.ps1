@@ -27,5 +27,12 @@ Get-Content -LiteralPath "$ev/stderr.log"
 Get-Content -LiteralPath "$ev/stdout.log" -Tail 4
 if([IO.File]::ReadAllText("$ev/stderr.log") -match 'SCRIPT ERROR:|ERROR:'){exit 1}
 $countMatch=[regex]::Match([IO.File]::ReadAllText("$ev/stdout.log"),'(?:checks=|"checks"\s*:\s*)(\d+)')
-if(-not $countMatch.Success -or [int]$countMatch.Groups[1].Value -le 0){throw 'No behavior checks: normal quit-after guard is not PASS'}
+$checks=if($countMatch.Success){[int]$countMatch.Groups[1].Value}else{0}
+if(Test-Path -LiteralPath "$ev/results.json"){
+    $summary=Get-Content -Raw -LiteralPath "$ev/results.json" | ConvertFrom-Json
+    $checks=[int]$summary.checks
+    if($summary.failures.Count -gt 0){$summary | ConvertTo-Json -Depth 3;exit 1}
+    if(-not $countMatch.Success){@{checks=$checks;failures=$summary.failures;doubles=$summary.doubles} | ConvertTo-Json -Compress}
+}
+if($checks -le 0){throw 'No behavior checks: normal quit-after guard is not PASS'}
 exit $ec

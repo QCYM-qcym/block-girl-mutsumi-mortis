@@ -41,6 +41,17 @@ func _initialize() -> void:
 		check(baked.validation.checks_performed > 0,"real static validation ran")
 		var found := Sources.locate(baked.source_map,{"path":"face_locks[0].required_local_face","entity_ids":[]},"CANONICAL")
 		check(found.ok and not found.value.is_empty() and found.value[0].authoring_id == F.uuid(220),"lock field resolves to actual bound config resource")
+		for phase in ["READER","CANONICAL"]:
+			var identity := Sources.locate(baked.source_map,{"path":"face_locks[0].mechanism_id","entity_ids":[]},phase)
+			check(identity.ok and not identity.value.is_empty() and identity.value[0].authoring_id==F.uuid(230),"projected lock identity resolves to actual author Node " + phase)
+		var reordered := payload.duplicate(true)
+		for doc in reordered.documents:
+			for resource in doc.resources:
+				if resource.kind=="MECHANISM_CONFIG": resource.fields.allowed_states.reverse()
+		reordered.resource_table=[]
+		for doc in reordered.documents: reordered.resource_table.append_array(doc.resources)
+		var rebaked := Adapter.bake_authoring(reordered,F.options(),F.identity())
+		check(rebaked.ok and rebaked.level.mechanisms[0].allowed_states==[&"latched",&"inactive"],"typed author state domain permits either order and preserves authored order")
 		var legacy := payload.duplicate(true)
 		var root_fields: Dictionary = legacy.documents[0].records[0].fields
 		root_fields.schema_version=1;root_fields.contract_version="foundation.contract.v1";root_fields.rule_version="foundation.rules.v1"

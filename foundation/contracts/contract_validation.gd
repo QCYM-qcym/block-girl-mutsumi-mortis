@@ -529,8 +529,8 @@ static func _validate_spatial(level: Dictionary, indexes: Dictionary, issues: Ar
 			if other.face_id == mechanism.face_id and other.trigger == &"ENTER": enter_count += 1
 		if enter_count != 1:
 			_issue(issues,Code.MULTIPLE_GLOBAL_MUTATIONS,path + ".mechanism_id","Latch sensor cannot mix ENTER effects.")
-		if lock.latched_state == &"" or mechanism.initial_state == &"" or lock.latched_state == mechanism.initial_state or mechanism.allowed_states != [mechanism.initial_state,lock.latched_state]:
-			_issue(issues,Code.INVALID_REFERENCE,path + ".latched_state","Latch requires distinct initial/latched states in that order.")
+		if lock.latched_state == &"" or mechanism.initial_state == &"" or lock.latched_state == mechanism.initial_state or mechanism.allowed_states.size() != 2 or mechanism.initial_state not in mechanism.allowed_states or lock.latched_state not in mechanism.allowed_states:
+			_issue(issues,Code.INVALID_REFERENCE,path + ".latched_state","Latch requires exactly the distinct initial and latched states.")
 		if mechanism.trigger != &"ENTER" or mechanism.action != {"kind":5,"mechanism_id":lock.mechanism_id}:
 			_issue(issues,Code.INVALID_ACTION,path + ".mechanism_id","Latch requires an ENTER-only self-bound mechanism.")
 
