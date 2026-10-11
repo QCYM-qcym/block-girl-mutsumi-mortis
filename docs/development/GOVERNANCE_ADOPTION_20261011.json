@@ -1,0 +1,715 @@
+{
+  "task": "GITHUB_GOVERNANCE_INTEGRATION_01",
+  "recorded_at": "2026-10-11T22:12:31.363886+08:00",
+  "source": "01d51343dd032e15d80b702f04072c7e3e96754c",
+  "source_remote_verified": true,
+  "target_branch": "feat/spatial-puzzle-batch-01",
+  "adoption_commit": "199a255b6831399066039521fb85ea89620dbfc1",
+  "note": "Receipt records verified adoption commits. Later 00 documentation-only receipt HEAD is published and independently verified in final handoff; no self-referential commit SHA invented.",
+  "policy_active_branches": [
+    "docs/github-delivery-governance-20261011",
+    "feat/edge-recoil-animation",
+    "feat/game-feel-audio",
+    "feat/pfall-animation",
+    "feat/spatial-map-01",
+    "feat/spatial-puzzle-batch-01",
+    "feat/spatial-runtime-01",
+    "feat/spatial-ui-01"
+  ],
+  "owner_adoptions": [
+    {
+      "owner": "00",
+      "worktree": "E:\\godot\\worktrees\\block-girl-spatial-puzzle-batch-01",
+      "branch": "feat/spatial-puzzle-batch-01",
+      "base": "1c995a7ad70fc72e35eb864023835669fdf1e31d",
+      "commit": "199a255b6831399066039521fb85ea89620dbfc1",
+      "push": "SUCCESS",
+      "remote_sha": "199a255b6831399066039521fb85ea89620dbfc1",
+      "verified": true,
+      "production_changes": 0,
+      "policy_files": 7,
+      "working_tree": "CLEAN"
+    },
+    {
+      "owner": "01",
+      "worktree": "E:\\godot\\worktrees\\block-girl-spatial-runtime-01",
+      "branch": "feat/spatial-runtime-01",
+      "base": "b78d07cc6bf9e43db723a010af102d9320266f43",
+      "commit": "19af09d09233cc168e428683f8d8645f514dc216",
+      "production_changes": 0,
+      "policy_files": 7,
+      "source_blobs": "MATCH",
+      "push": "SUCCESS",
+      "remote_sha": "19af09d09233cc168e428683f8d8645f514dc216",
+      "verified": true,
+      "working_tree": "CLEAN",
+      "retry": "Initial schannel TLS handshake failed; ordinary retry succeeded without changing security settings"
+    },
+    {
+      "owner": "07",
+      "worktree": "E:\\godot\\worktrees\\block-girl-spatial-ui-01",
+      "branch": "feat/spatial-ui-01",
+      "base": "656bfbcac16f476c1ce6ac6fd654abd1b332dd07",
+      "commit": "340b88b078833f38678b423b61503944c3e66e2e",
+      "production_changes": 0,
+      "policy_files": 7,
+      "source_blobs": "MATCH",
+      "push": "SUCCESS",
+      "remote_sha": "340b88b078833f38678b423b61503944c3e66e2e",
+      "verified": true,
+      "working_tree": "CLEAN"
+    },
+    {
+      "owner": "09",
+      "worktree": "E:\\godot\\worktrees\\block-girl-spatial-map-01",
+      "branch": "feat/spatial-map-01",
+      "base": "fd162d5c430d0cd9201a878b9e5c261d493fbf14",
+      "commit": "c2cbcac02399ac60bb1445385507d218a87cd5d8",
+      "production_changes": 0,
+      "policy_files": 7,
+      "source_blobs": "MATCH",
+      "push": "SUCCESS",
+      "remote_sha": "c2cbcac02399ac60bb1445385507d218a87cd5d8",
+      "verified": true,
+      "working_tree": "CLEAN"
+    },
+    {
+      "owner": "10A",
+      "worktree": "E:\\godot\\worktrees\\block-girl-game-feel-fall-animation",
+      "branch": "feat/pfall-animation",
+      "base": "5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a",
+      "commit": "96f54e5ecfe68f23d6cf54edcbfcda5fec968670",
+      "production_changes": 0,
+      "policy_files": 7,
+      "source_blobs": "MATCH",
+      "push": "SUCCESS",
+      "remote_sha": "96f54e5ecfe68f23d6cf54edcbfcda5fec968670",
+      "verified": true,
+      "working_tree": "CLEAN"
+    },
+    {
+      "owner": "10B",
+      "worktree": "E:\\godot\\worktrees\\block-girl-game-feel-edge-animation",
+      "branch": "feat/edge-recoil-animation",
+      "base": "285896da24b4f5ec223fe8bf3f75e29fa1d18381",
+      "commit": "de110711c1a8508b343de74fbc644e7c80629f33",
+      "production_changes": 0,
+      "policy_files": 7,
+      "source_blobs": "MATCH",
+      "push": "SUCCESS",
+      "remote_sha": "de110711c1a8508b343de74fbc644e7c80629f33",
+      "verified": true,
+      "working_tree": "CLEAN"
+    },
+    {
+      "owner": "11",
+      "worktree": "E:\\godot\\worktrees\\block-girl-game-feel-audio",
+      "branch": "feat/game-feel-audio",
+      "base": "2f98464f4d5349d3ab8463bd4de3c9532c480b0c",
+      "commit": "66885052790b215b83d005aaed26bf7011ae1b63",
+      "production_changes": 0,
+      "policy_files": 7,
+      "source_blobs": "MATCH",
+      "push": "SUCCESS",
+      "remote_sha": "66885052790b215b83d005aaed26bf7011ae1b63",
+      "verified": true,
+      "working_tree": "CLEAN"
+    }
+  ],
+  "worktrees": [
+    {
+      "branch": "main",
+      "worktree": "E:/godot/若叶睦/方块少女-若叶睦",
+      "baseline_sha": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+      "classification": "DIRTY",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 162,
+      "policy": "PENDING",
+      "reason": "Existing changes preserved; no automatic adoption"
+    },
+    {
+      "branch": "feat/beta-3d-integration-02",
+      "worktree": "E:/godot/worktrees/block-girl-beta-3d-integration-02",
+      "baseline_sha": "b910167becee2194c0cfc724d8f0fe47578836a9",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "test/beta-3d02-focused-qa",
+      "worktree": "E:/godot/worktrees/block-girl-beta-3d02-focused-qa",
+      "baseline_sha": "b910167becee2194c0cfc724d8f0fe47578836a9",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/beta-content-batch-02",
+      "worktree": "E:/godot/worktrees/block-girl-beta-content-batch-02",
+      "baseline_sha": "9482e7279acd2cc99af0f7b2211790ab2eace815",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "06 confirmed frozen"
+    },
+    {
+      "branch": "feat/beta-content-batch-03",
+      "worktree": "E:/godot/worktrees/block-girl-beta-content-batch-03",
+      "baseline_sha": "7d4a050c68dd6c9a6527486c1dbded5c61ec0c6d",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "06 confirmed frozen; delivered L06 still pending integration; no push retroactively claimed"
+    },
+    {
+      "branch": "feat/beta-game-content",
+      "worktree": "E:/godot/worktrees/block-girl-beta-game-content",
+      "baseline_sha": "608a18a8c0627bb8a8a57f3cde554e723016dbb7",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "06 confirmed frozen"
+    },
+    {
+      "branch": "fix/beta-pause-text-20261009",
+      "worktree": "E:/godot/worktrees/block-girl-beta-game-shell",
+      "baseline_sha": "56b70f96be3a05bb45e20cf90f50d99826af3945",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/beta-shell-batch-02",
+      "worktree": "E:/godot/worktrees/block-girl-beta-shell-batch-02",
+      "baseline_sha": "d22e3999282ffb48b7c2047c4365623b3b1e32bb",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "design/rubiks-spatial-puzzles",
+      "worktree": "E:/godot/worktrees/block-girl-design-mechanics",
+      "baseline_sha": "25de1f6202c764e4003634a387ae05e38bd387c4",
+      "classification": "DIRTY",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 1,
+      "policy": "PENDING",
+      "reason": "13 confirmed frozen Git line; current work is external Obsidian"
+    },
+    {
+      "branch": "dev/godot-editor-playable",
+      "worktree": "E:/godot/worktrees/block-girl-editor-dev",
+      "baseline_sha": "2cadbb134459d5384741607c14bd6d42b393708d",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/beta-five-level-3d",
+      "worktree": "E:/godot/worktrees/block-girl-five-level-3d",
+      "baseline_sha": "2cfc4d2ef221c450ad9024c8ea3a72d69e4fcf63",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "integration/foundation-3-solver-quality",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-3-integration",
+      "baseline_sha": "bfcc6c004db232ca2f4ea4d409c98bda0dc6d165",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/game-feel-full-slice-01",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-4-integration",
+      "baseline_sha": "d1277ec90b5a739efd4862d314e6c29ac5ac1eda",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-authoring-data",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-data",
+      "baseline_sha": "8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "docs/foundation-4-authoring-design",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-design",
+      "baseline_sha": "55d1edbafcfa507cc55ef9c0dda79f3d57e80e82",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-authoring-quality",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-quality",
+      "baseline_sha": "bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-authoring-runtime",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-runtime",
+      "baseline_sha": "7836de52866255dd6f9684214b014d9703e7854d",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "01 confirmed frozen Foundation delivery"
+    },
+    {
+      "branch": "feat/foundation-level-baker",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-baker",
+      "baseline_sha": "f5e72665f8f099f5103a49b9de58b72e45c90c66",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-celestial-lighting",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-celestial",
+      "baseline_sha": "84781cc6b7e00b96c60c69f15ea16adbe06bd4ee",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-data-contracts",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-contracts",
+      "baseline_sha": "38894843c682be7f42be8fe4dad0c512d87ffebf",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-editor-tools",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-editor-tools",
+      "baseline_sha": "98db5f1fdef9b396d786225214d62d1216c17e62",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "debug/foundation-4-baseline-f2-graphical",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-f2-baseline-debug",
+      "baseline_sha": "bd393303d3a21ae3ddebc6643a94a114437365a3",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-puzzle-intent-ablation",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-intent",
+      "baseline_sha": "70500cbf576e9f21c9238a7728916b41bd45b4e7",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "integration/foundation-2-kernel-safety",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-kernel-safety",
+      "baseline_sha": "a0699debe42cf880d25ddda57d46c123bc912b4c",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-orientation-math",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-orientation",
+      "baseline_sha": "10b1fb1a564c500d58b7d8ecc2343baef74942e3",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-runtime-parity",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-parity",
+      "baseline_sha": "e6f7083be9cccef05642a7fcdb7c9f3c2f5870b2",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-rule-kernel",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-rule-kernel",
+      "baseline_sha": "384696f3708504d806c630b7e57a898139780695",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-runtime-prototype",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-runtime",
+      "baseline_sha": "aa5362f04dfb0477f7234c8f96bc48773a305de2",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-runtime-saved-closure",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-runtime-saved-closure",
+      "baseline_sha": "7493ab31cf6a71ca9b4778bfe871f33bba2e586d",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-runtime-stage-result",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-runtime-stage-result",
+      "baseline_sha": "8f7fb52f029053bda10b965da840c6763fc13bf0",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-softlock-analysis",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-softlock",
+      "baseline_sha": "f41fa732bb6e1a0f4e0be3c703e5364bc9aab2e2",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-state-explorer-bfs",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-solver",
+      "baseline_sha": "f34dd271adabcc4b724eb55b5fff1cb35f532e59",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-spatial-model",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-spatial",
+      "baseline_sha": "ebeabef11adcc5aa588a74ef290748b14a455c3a",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/foundation-static-validator",
+      "worktree": "E:/godot/worktrees/block-girl-foundation-validator",
+      "baseline_sha": "f530e2fe16c64880812b1b20a06504798a477b6b",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "feat/game-feel-audio",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-audio",
+      "baseline_sha": "2f98464f4d5349d3ab8463bd4de3c9532c480b0c",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "feat/edge-recoil-animation",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-edge-animation",
+      "baseline_sha": "285896da24b4f5ec223fe8bf3f75e29fa1d18381",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "feat/pfall-animation",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-fall-animation",
+      "baseline_sha": "5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "feat/pfall-map",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-map",
+      "baseline_sha": "12a16483c56557aa794a7c1b7f52b2b0a348236f",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "09 confirmed superseded map line"
+    },
+    {
+      "branch": "test/game-feel-quality",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-quality",
+      "baseline_sha": "fd66bfa08099a0bdc7230b2399ee74766ceff3e2",
+      "classification": "UNCONFIRMED",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "No current Owner active-line confirmation; preserved without propagation"
+    },
+    {
+      "branch": "test/game-feel-quality-01",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-quality-01",
+      "baseline_sha": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+      "classification": "DIRTY",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 13,
+      "policy": "PENDING",
+      "reason": "Existing changes preserved; no automatic adoption"
+    },
+    {
+      "branch": "feat/pfall-runtime",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-runtime",
+      "baseline_sha": "fd22434d3eb0de52a764cb98222371a39412635a",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "01 confirmed superseded Runtime line"
+    },
+    {
+      "branch": "feat/game-feel-ui",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-ui",
+      "baseline_sha": "3e75c9b135a40f13c83af8f4bb9fe65f87b159e1",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "07 confirmed superseded UI line"
+    },
+    {
+      "branch": "feat/game-feel-ui-extension-01",
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-ui-extension-01",
+      "baseline_sha": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+      "classification": "DIRTY",
+      "lifecycle": "UNCONFIRMED",
+      "dirty_entries": 40,
+      "policy": "PENDING",
+      "reason": "Existing changes preserved; no automatic adoption"
+    },
+    {
+      "branch": "docs/github-delivery-governance-20261011",
+      "worktree": "E:/godot/worktrees/block-girl-git-governance-12",
+      "baseline_sha": "01d51343dd032e15d80b702f04072c7e3e96754c",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "fix/l04-inner-movement-p1",
+      "worktree": "E:/godot/worktrees/block-girl-l04-inner-movement-p1",
+      "baseline_sha": "a80a28b4edafda1faa5be4e890e0b61447afc716",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "06 confirmed frozen"
+    },
+    {
+      "branch": "feat/l06-preproduction",
+      "worktree": "E:/godot/worktrees/block-girl-l06-preproduction",
+      "baseline_sha": "d2b78e183839e078c9a28074b2e25359a40608c4",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "06 confirmed frozen"
+    },
+    {
+      "branch": "prototype/perspective-fall-01",
+      "worktree": "E:/godot/worktrees/block-girl-map-spatial-design",
+      "baseline_sha": "d5d63f37af8624f332ed4e9ab90b096cab891ff9",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "09 confirmed historical prototype"
+    },
+    {
+      "branch": "feat/spatial-map-01",
+      "worktree": "E:/godot/worktrees/block-girl-spatial-map-01",
+      "baseline_sha": "fd162d5c430d0cd9201a878b9e5c261d493fbf14",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "feat/spatial-puzzle-batch-01",
+      "worktree": "E:/godot/worktrees/block-girl-spatial-puzzle-batch-01",
+      "baseline_sha": "1c995a7ad70fc72e35eb864023835669fdf1e31d",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "test/spatial-quality-01",
+      "worktree": "E:/godot/worktrees/block-girl-spatial-quality-01",
+      "baseline_sha": "d1827fe593b5ad50f951879bb9cadc2e18623aae",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "03 confirmed delivered and integrated; no ongoing task"
+    },
+    {
+      "branch": "feat/spatial-runtime-01",
+      "worktree": "E:/godot/worktrees/block-girl-spatial-runtime-01",
+      "baseline_sha": "b78d07cc6bf9e43db723a010af102d9320266f43",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "feat/spatial-ui-01",
+      "worktree": "E:/godot/worktrees/block-girl-spatial-ui-01",
+      "baseline_sha": "656bfbcac16f476c1ce6ac6fd654abd1b332dd07",
+      "classification": "ACTIVE",
+      "lifecycle": "ACTIVE",
+      "dirty_entries": 0,
+      "policy": "ACTIVE",
+      "reason": "Owner confirmed current line"
+    },
+    {
+      "branch": "release/beta-game-feel-20261010",
+      "worktree": "E:/godot/worktrees/release-12",
+      "baseline_sha": "25de1f6202c764e4003634a387ae05e38bd387c4",
+      "classification": "HISTORICAL_FROZEN",
+      "lifecycle": "HISTORICAL_FROZEN",
+      "dirty_entries": 0,
+      "policy": "PENDING",
+      "reason": "Fixed published baseline; user prohibits release changes"
+    }
+  ],
+  "external_owners": [
+    {
+      "owner": "05",
+      "classification": "EXTERNAL",
+      "policy": "PENDING",
+      "location": "E:/Study/方块娘项目/若叶睦/model",
+      "git_branch": null,
+      "related_dirty_branch": "main",
+      "delivery": "Only explicit licensed asset manifest and minimal approved documentation via a designated clean branch. No bulk Art upload; no root AGENTS written to external resource folder."
+    },
+    {
+      "owner": "08",
+      "classification": "EXTERNAL",
+      "policy": "PENDING",
+      "location": "E:/godot/beta-sprint-builds",
+      "git_branch": null,
+      "delivery": "Only redacted QA report, screenshot list and hashes via a designated 00 documentation branch. Original builds/screenshots/logs/saves stay local; no directory upload."
+    },
+    {
+      "owner": "13",
+      "classification": "EXTERNAL",
+      "policy": "PENDING",
+      "location": "E:/obsdian/青澄的水泥房/方块娘/若叶睦/核心机制/13-游戏设计与机制研究",
+      "git_branch": null,
+      "delivery": "Only three approved mechanism Markdown files and hashes via a designated 00 documentation branch. No vault/attachment/cache upload; no mechanism documents copied for this governance task."
+    }
+  ],
+  "validation": {
+    "source": "01d51343dd032e15d80b702f04072c7e3e96754c",
+    "target": "feat/spatial-puzzle-batch-01",
+    "adoption_commit": "199a255b6831399066039521fb85ea89620dbfc1",
+    "files": [
+      "AGENTS.md",
+      "docs/development/GIT_WORKFLOW.md",
+      "docs/development/GOVERNANCE_AUDIT_REPORT.md",
+      "docs/development/GOVERNANCE_ROLLOUT.md",
+      "docs/development/OWNER_BRANCH_POLICY.md",
+      "docs/development/OWNER_WORKTREE_SNAPSHOT.json",
+      "docs/development/STAGE_DELIVERY_TEMPLATE.md"
+    ],
+    "source_blob_identity": "7/7 MATCH",
+    "internal_links_checked": 18,
+    "markdown_json_integrity": "PASS",
+    "owner_coverage": "15/15",
+    "existing_root_agents": "ABSENT before adoption; no original rules overwritten",
+    "contracts_and_owner_permissions": "Preserved by policy and no production diff",
+    "gameplay_art_runtime_save_changed": 0,
+    "godot_tests": "NOT_RUN documentation-only"
+  },
+  "publication_audit": {
+    "high_confidence_secret_findings": 0,
+    "new_blobs_over_50_mib": 0,
+    "history_profile_review": "Isolated automated runner logs and generated v2_quality_legacy_focused fixture saves; not human saves. Retained history, no rewrite. No new production assets in outgoing spatial delivery.",
+    "tls_retry": "01 first push failed schannel handshake; ordinary retry succeeded; no TLS/security setting changed"
+  },
+  "protected": {
+    "main": "UNCHANGED",
+    "main_preexisting_files_verified": 162,
+    "release_heads": "UNCHANGED",
+    "all_tags": "UNCHANGED",
+    "production_diff": "NONE"
+  },
+  "human_qa": "N/A for documentation; existing NOT_RUN/PENDING unchanged",
+  "godot_tests": "NOT_RUN documentation-only"
+}
