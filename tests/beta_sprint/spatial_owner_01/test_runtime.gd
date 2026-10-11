@@ -36,10 +36,12 @@ func _run(level: Dictionary) -> void:
 	var latched_key: String = Key.build(level,runtime.get_state()).key
 	check(runtime.finish_transition(token).ignored and runtime.get_commit_count() == 1 and Key.build(level,runtime.get_state()).key == latched_key,"duplicate callback ignored")
 	_finish(runtime,{"kind":0,"face_axis":2},false)
-	_finish(runtime,{"kind":1},true)
+	var old_global := _finish(runtime,{"kind":1},true)
+	check(not old_global.is_empty() and old_global.is_global,"retained actual accepted global identity")
 	check(runtime.get_state().player.location.cube_id == &"mirror" and runtime.get_state().player.orientation == 0 and runtime.get_commit_count() == 3,"unlocked Shift preserves pose and exact count")
 	check(runtime.finish_transition(token).ignored and runtime.get_commit_count() == 3,"old local token cannot finish newer global")
 	_finish(runtime,{"kind":0,"face_axis":2},false)
+	check(runtime.finish_transition(old_global).ignored and runtime.get_commit_count()==4,"duplicate old global cannot alter later local commit")
 	check(Goal.is_goal(level,runtime.get_state()).is_goal and runtime.get_commit_count() == 4,"real formal Goal")
 	runtime.reset()
 	check(Key.build(level,runtime.get_state()).key == initial and runtime.get_state().mechanism_states.face_lock == &"inactive" and runtime.get_commit_count() == 0,"Reset restores exact initial core/latch/key")
@@ -51,12 +53,13 @@ func _run(level: Dictionary) -> void:
 	var exiting := runtime.get_pending_identity(transitions[-1].id,transitions[-1].generation,transitions[-1].is_global)
 	runtime.interrupt("UNLOAD")
 	check(runtime.finish_transition(exiting).ignored and not runtime.is_loaded(),"unload cancels pending commit")
-func _finish(runtime: RefCounted, action: Dictionary, global: bool) -> void:
+func _finish(runtime: RefCounted, action: Dictionary, global: bool) -> Dictionary:
 	var count: int = runtime.get_commit_count()
 	var result: Dictionary = runtime.request_action(action)
 	check(result.status == 0,"real action accepted " + str(action))
-	if result.status != 0: return
+	if result.status != 0: return {}
 	var started: Dictionary = transitions[-1]
 	check(started.is_global == global,"actual transition kind")
 	var identity: Dictionary = runtime.get_pending_identity(started.id,started.generation,started.is_global)
 	check(not runtime.finish_transition(identity).ignored and runtime.get_commit_count() == count + 1,"one native authoritative commit")
+	return identity

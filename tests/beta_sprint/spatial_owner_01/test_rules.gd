@@ -45,6 +45,11 @@ func _fixed() -> void:
 		check(applied.next_state.player.location == {"layer":1,"cube_id":&"mirror","face":4},"exact mapped target")
 		check(applied.next_state.player.orientation == 0 and applied.next_state.camera_quadrant == 1,"Shift preserves orientation and camera")
 		check(Safety.validate_motion(level,state,applied.next_state,{"kind":1}).status == 0,"real shift Safety")
+	for orientation in 24:
+		var posed := state.duplicate(true)
+		posed.player.orientation=orientation
+		var shifted := run_action(level,posed,{"kind":1})
+		check(shifted.status==0 and shifted.next_state.player.orientation==orientation and shifted.next_state.camera_quadrant==1,"all24 SAME_NORMAL pose identities preserved")
 	var missing := level.duplicate(true)
 	missing.shift_gates = []
 	check(Derived.shift_mapping(missing,state).status == 1,"off-point has real UNIQUE mapping")
@@ -81,6 +86,11 @@ func _latch() -> void:
 	if correct.status != 0: return
 	check(correct.next_state.player.orientation == 12,"post-roll golden orientation")
 	check(correct.next_state.mechanism_states.face_lock == &"latched","correct local RIGHT face contact latches")
+	for direction in 6:
+		var variant := level.duplicate(true)
+		variant.face_locks[0].required_local_face=direction
+		var contact := run_action(variant,initial,{"kind":0,"face_axis":0})
+		check(contact.status==0 and (contact.next_state.mechanism_states.face_lock == &"latched") == (direction==3),"six distinct local faces use physical arrived contact " + str(direction))
 	check(correct.global_kind == 0 and correct.next_state.level_flags == initial.level_flags,"single local candidate and flags unchanged")
 	check(Safety.validate_motion(level,initial,correct.next_state,correct.action).status == 0,"Roll+latch real Safety")
 	var classification := Classifier.classify_transition(level,correct)

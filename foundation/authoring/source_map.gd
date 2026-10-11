@@ -4,8 +4,10 @@ const Schema = preload("res://foundation/authoring/authoring_schema.gd")
 const IntentTypes = preload("res://foundation/quality/intent/intent_types.gd")
 const COLLECTIONS := {"CUBE": ["cubes", "cube_id"], "FACE": ["faces", "face_id"], "SLOT": ["celestial.slots", "slot_id"], "GROUP": ["groups", "group_id"], "MECHANISM": ["mechanisms", "mechanism_id"], "TRANSITION": ["face_transitions", "transition_id"]}
 
-static func capture(map: Dictionary, doc: Dictionary, record: Dictionary, kind: String, id: Variant, path: String) -> void:
+static func capture(map: Dictionary, doc: Dictionary, record: Dictionary, kind: String, id: Variant, path: String, lock_path: String = "") -> void:
 	_append(map, record.authoring_id, doc.document_uri, record.node_path, null, null, null, kind, id, "", path)
+	if kind == "MECHANISM" and not lock_path.is_empty():
+		_append(map, record.authoring_id, doc.document_uri, record.node_path, null, null, null, kind, id, "mechanism_id", lock_path + ".mechanism_id")
 	if kind == "LEVEL":
 		_append(map, record.authoring_id, doc.document_uri, record.node_path, null, null, null, kind, id, "root_transform", "root.transform")
 	for field in record.fields:
@@ -51,7 +53,7 @@ static func complete(map: Dictionary, level: Dictionary, payload: Dictionary) ->
 			for i in range(entities.size()):
 				if entities[i][pair[1]] == entry.entity_id:
 					prefix = "%s[%d]" % [pair[0], i]
-		if entry.entity_kind == "MECHANISM" and entry.field in Schema.LOCK_CONFIG_TYPES:
+		if entry.entity_kind == "MECHANISM" and (entry.field in Schema.LOCK_CONFIG_TYPES or (entry.reader_path != null and entry.reader_path.begins_with("face_locks["))):
 			prefix = null
 			for i in level.get("face_locks",[]).size():
 				if level.face_locks[i].mechanism_id == entry.entity_id: prefix = "face_locks[%d]" % i

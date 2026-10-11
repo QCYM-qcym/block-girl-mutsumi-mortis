@@ -175,7 +175,7 @@ static func fields_valid(kind: String, fields: Variant) -> bool:
 		return face_ref(fields.source) and face_ref(fields.target) and fields.entry_axis in Types.FaceAxis.values() and fields.exit_axis in Types.FaceAxis.values() and id_array(fields.required_flags) and enum_array(fields.rotation_steps, quarter_values(), false)
 	if kind == "MECHANISM_CONFIG":
 		if fields.kind == Types.PuzzleActionKind.TRIGGER_MECHANISM:
-			return fields.initial_state != &"" and fields.latched_state != &"" and fields.initial_state != fields.latched_state and fields.allowed_states == [fields.initial_state,fields.latched_state] and fields.required_local_face in range(6) and fields.activation_mode == &"LATCH_ON_SUCCESS"
+			return fields.initial_state != &"" and fields.latched_state != &"" and fields.initial_state != fields.latched_state and fields.allowed_states.size() == 2 and fields.initial_state in fields.allowed_states and fields.latched_state in fields.allowed_states and fields.required_local_face in range(6) and fields.activation_mode == &"LATCH_ON_SUCCESS"
 		if fields.initial_state == &"" or fields.allowed_states.size() != 1 or typeof(fields.allowed_states[0]) != TYPE_STRING_NAME or fields.allowed_states[0] != fields.initial_state:
 			return false
 		match fields.kind:
