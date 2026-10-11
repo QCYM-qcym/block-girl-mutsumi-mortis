@@ -1,0 +1,11 @@
+FAIL: native mouse reaches Pause with actual Goal-save error visible
+WARNING: This control can't grab focus. Use set_focus_mode() and set_focus_behavior_recursive() to allow a control to get focus.
+   at: grab_focus (scene/gui/control.cpp:3011)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/beta_sprint/spatial_owner_07/test_menu.gd:160)
+       [1] click (res://tests/beta_sprint/spatial_owner_07/test_menu.gd:47)
+       [2] settle (res://tests/beta_sprint/spatial_owner_07/test_menu.gd:26)
+FAIL: paused keyboard focus reaches actual Goal-save retry
+FAIL: menu retains unsaved actual Goal and retry
+FAIL: menu keyboard focus includes retained Goal-save retry
+FAIL: keyboard Goal retry returns confirmed progress without restarting a scene

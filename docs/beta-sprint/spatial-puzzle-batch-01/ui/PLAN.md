@@ -37,7 +37,7 @@ Produces: begin_level(id)->bool, mark_goal(id)->bool, retry()->bool, continue_id
 Files: ui/main.tscn, ui/main.gd; tests/spatial_owner_07/test_menu.gd; UI API/receipt/evidence docs.
 Consumes: actual09 Factory and actual00 Host, plus Task1's adapter.
 Produces: five independent buttons/metadata, Continue, Save error/retry, old Shell switch, pause/Reset/Hint/Reduced Motion/menu return. Slot at bottom reserved for toolbar.
-- [ ] RED: scene presence and actual control/lifecycle assertions. Missing Factory remains a real dependency, never replaced with a production dummy.
-- [ ] Implement menu with approved theme/native controls, read-only Host event routes, captured-node stale signal guards and lifecycle cleanup.
-- [ ] GREEN: real Factory/Host seam where delivered, real storage/cold restore, affected legacy regressions and three measured headless viewports. Separate new gameplay/graphical acceptance from these assertions.
+- [x] RED: scene presence and actual control/lifecycle assertions. Missing Factory remains a real dependency, never replaced with a production dummy.
+- [x] Implement menu with approved theme/native controls, read-only Host event routes, captured-node stale signal guards and lifecycle cleanup.
+- [x] GREEN: real Factory/Host seam where delivered, real storage/cold restore, affected legacy regressions and three measured headless viewports. Separate new gameplay/graphical acceptance from these assertions.
 - [ ] Fresh read-only branch review, resolve actual findings with RED/GREEN, commit and bind tested/live/Git blob hashes. Report exact source/dependency/HEAD/CLEAN/Push NOT_RUN.
