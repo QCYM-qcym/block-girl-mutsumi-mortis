@@ -1,7 +1,7 @@
 """Immutable, exact Git source package plus declared existing Godot import artifacts."""
 from pathlib import Path
 from datetime import datetime, timezone
-import hashlib, io, json, re, subprocess, sys, tarfile, zipfile
+import hashlib, io, json, os, re, subprocess, sys, tarfile, tempfile, zipfile
 
 root=Path(__file__).resolve().parents[3]
 target=Path(sys.argv[1]).resolve()
@@ -44,7 +44,7 @@ for path in project.rglob('*.import'):
         imports[relative]=source_match[1] if source_match else None
         import_metadata[relative]=path.relative_to(project)
 owners=json.loads((root/'docs/beta-sprint/game-feel/WORKTREES.json').read_text(encoding='utf-8-sig'))['owners']
-cache_roots=[root,Path('E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01/project')]+[Path(x['worktree']) for x in owners]
+cache_roots=[root,Path('E:/godot/worktrees/block-girl-foundation-4-integration'),Path('E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01/project')]+[Path(x['worktree']) for x in owners]
 for relative in sorted(imports):
     asset=imports[relative]
     candidates=[p/relative for p in cache_roots if asset and (p/asset).is_file() and (p/asset).read_bytes()==(project/asset).read_bytes() and (p/import_metadata[relative]).is_file() and (p/import_metadata[relative]).read_bytes()==(project/import_metadata[relative]).read_bytes()]
@@ -53,12 +53,41 @@ for relative in sorted(imports):
     data=source.read_bytes();destination=project/relative
     destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(data)
     files.append({'path':'project/'+relative,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'kind':'existing_import','source':str(source)})
-for relative in ['.godot/uid_cache.bin','.godot/global_script_class_cache.cfg']:
+for relative in ['.godot/global_script_class_cache.cfg']:
     source=root/relative
     if source.is_file():
         data=source.read_bytes();destination=project/relative
         destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(data)
         files.append({'path':'project/'+relative,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'kind':'existing_cache'})
+# Cached GLB resources refer to declared UIDs; a clean source archive has no editor cache.
+# Copy a prior derived cache and verify every declared import using actual Godot APIs.
+uid_rows=[]
+for item in list(files):
+    if item['kind']!='git_source': continue
+    path=target/item['path']
+    if path.suffix=='.import':
+        metadata=path.read_text(encoding='utf-8-sig')
+        uid=re.search(r'^uid="([^"\n]+)"',metadata,re.M)
+        source=re.search(r'^source_file="([^"\n]+)"',metadata,re.M)
+        if uid and source: uid_rows.append({'uid':uid[1],'path':source[1]})
+uid_manifest=target/'UID_MANIFEST.json'
+uid_manifest.write_text(json.dumps(uid_rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+uid_source=next((p/'.godot/uid_cache.bin' for p in [root,Path('E:/godot/worktrees/block-girl-game-feel-audio')]+cache_roots if (p/'.godot/uid_cache.bin').is_file()),None)
+if uid_source is None: raise SystemExit('Missing existing UID cache')
+(project/'.godot/uid_cache.bin').write_bytes(uid_source.read_bytes())
+engine=Path('D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe')
+with tempfile.TemporaryDirectory(prefix='spatial_build_uid_') as scratch:
+    env=os.environ.copy()
+    for key in ['APPDATA','LOCALAPPDATA','TEMP','TMP']: env[key]=scratch
+    args=[str(engine),'--headless','--path',str(project),'--script','res://tests/beta_sprint/spatial_integration/prepare_uid_cache.gd','--','--uid-manifest='+str(uid_manifest)]
+    result=subprocess.run(args,env=env,capture_output=True,timeout=60,creationflags=subprocess.CREATE_NO_WINDOW)
+(target/'CACHE_PREPARATION.stdout.log').write_bytes(result.stdout)
+(target/'CACHE_PREPARATION.stderr.log').write_bytes(result.stderr)
+if result.returncode!=0 or result.stderr: raise SystemExit('UID preparation failed; preserved candidate and raw logs')
+validation=next((json.loads(line) for line in result.stdout.decode('utf-8').splitlines() if line.startswith('{')), {})
+if validation.get('status')!='PASS' or validation.get('verified_import_uids')!=len({r['uid'] for r in uid_rows}): raise SystemExit('Missing full UID validation result')
+for path,kind in [(uid_manifest,'declared_uid_manifest'),(project/'.godot/uid_cache.bin','verified_existing_uid_cache')]:
+    data=path.read_bytes();files.append({'path':path.relative_to(target).as_posix(),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'kind':kind,'cache_source':str(uid_source) if kind=='verified_existing_uid_cache' else 'exact committed import metadata'})
 play='''param([string]$Godot="D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe", [switch]$Headless, [int]$QuitAfterFrames=0)
 $ErrorActionPreference="Stop"
 $uiProject=Join-Path $PSScriptRoot "project"
