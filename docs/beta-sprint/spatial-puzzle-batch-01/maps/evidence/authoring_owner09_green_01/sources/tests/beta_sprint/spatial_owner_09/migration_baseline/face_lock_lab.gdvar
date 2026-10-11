@@ -1,0 +1,740 @@
+{
+"level": {
+"build_info": {},
+"camera_initial_quadrant": 1,
+"celestial": {
+"edges": [],
+"initial_slot_id": &"sky",
+"slot_order": [&"sky"],
+"slots": [{
+"position2": Vector3i(0, 30, 0),
+"slot_id": &"sky"
+}],
+"wrap": false
+},
+"cell_size": 1,
+"content_hash": "8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5",
+"contract_version": "foundation.spatial_puzzle.v1",
+"cubes": [{
+"center2": Vector3i(2, 4, 2),
+"cube_id": &"corner",
+"group_id": &"",
+"layer": 0,
+"occludes_light": true,
+"orientation": 0,
+"tags": []
+}, {
+"center2": Vector3i(2, 4, 0),
+"cube_id": &"east",
+"group_id": &"",
+"layer": 0,
+"occludes_light": true,
+"orientation": 0,
+"tags": []
+}, {
+"center2": Vector3i(0, 4, 0),
+"cube_id": &"goal",
+"group_id": &"",
+"layer": 1,
+"occludes_light": true,
+"orientation": 0,
+"tags": []
+}, {
+"center2": Vector3i(0, 12, 0),
+"cube_id": &"roof",
+"group_id": &"",
+"layer": 0,
+"occludes_light": true,
+"orientation": 0,
+"tags": []
+}, {
+"center2": Vector3i(0, 4, 0),
+"cube_id": &"source",
+"group_id": &"",
+"layer": 0,
+"occludes_light": true,
+"orientation": 0,
+"tags": []
+}, {
+"center2": Vector3i(0, 4, 2),
+"cube_id": &"south",
+"group_id": &"",
+"layer": 0,
+"occludes_light": true,
+"orientation": 0,
+"tags": []
+}],
+"face_locks": [{
+"activation_mode": &"LATCH_ON_SUCCESS",
+"latched_state": &"latched",
+"mechanism_id": &"contact_lock",
+"required_local_face": 3
+}],
+"face_transitions": [],
+"faces": [{
+"cube_id": &"corner",
+"face": 1,
+"face_id": &"corner/BACK",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"corner",
+"face": 5,
+"face_id": &"corner/BOTTOM",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"corner",
+"face": 0,
+"face_id": &"corner/FRONT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"corner",
+"face": 2,
+"face_id": &"corner/LEFT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"corner",
+"face": 3,
+"face_id": &"corner/RIGHT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"corner",
+"face": 4,
+"face_id": &"corner/TOP",
+"mechanism_ids": [&"contact_lock"],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": true
+}, {
+"cube_id": &"east",
+"face": 1,
+"face_id": &"east/BACK",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"east",
+"face": 5,
+"face_id": &"east/BOTTOM",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"east",
+"face": 0,
+"face_id": &"east/FRONT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"east",
+"face": 2,
+"face_id": &"east/LEFT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"east",
+"face": 3,
+"face_id": &"east/RIGHT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"east",
+"face": 4,
+"face_id": &"east/TOP",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": true
+}, {
+"cube_id": &"goal",
+"face": 1,
+"face_id": &"goal/BACK",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"goal",
+"face": 5,
+"face_id": &"goal/BOTTOM",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"goal",
+"face": 0,
+"face_id": &"goal/FRONT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"goal",
+"face": 2,
+"face_id": &"goal/LEFT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"goal",
+"face": 3,
+"face_id": &"goal/RIGHT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"goal",
+"face": 4,
+"face_id": &"goal/TOP",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": true
+}, {
+"cube_id": &"roof",
+"face": 1,
+"face_id": &"roof/BACK",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"roof",
+"face": 5,
+"face_id": &"roof/BOTTOM",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"roof",
+"face": 0,
+"face_id": &"roof/FRONT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"roof",
+"face": 2,
+"face_id": &"roof/LEFT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"roof",
+"face": 3,
+"face_id": &"roof/RIGHT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"roof",
+"face": 4,
+"face_id": &"roof/TOP",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"source",
+"face": 1,
+"face_id": &"source/BACK",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"source",
+"face": 5,
+"face_id": &"source/BOTTOM",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"source",
+"face": 0,
+"face_id": &"source/FRONT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"source",
+"face": 2,
+"face_id": &"source/LEFT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"source",
+"face": 3,
+"face_id": &"source/RIGHT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"source",
+"face": 4,
+"face_id": &"source/TOP",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": true
+}, {
+"cube_id": &"south",
+"face": 1,
+"face_id": &"south/BACK",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"south",
+"face": 5,
+"face_id": &"south/BOTTOM",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"south",
+"face": 0,
+"face_id": &"south/FRONT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"south",
+"face": 2,
+"face_id": &"south/LEFT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"south",
+"face": 3,
+"face_id": &"south/RIGHT",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": false
+}, {
+"cube_id": &"south",
+"face": 4,
+"face_id": &"south/TOP",
+"mechanism_ids": [],
+"shift_entry_blocked": false,
+"shift_exit_blocked": false,
+"walkable": true
+}],
+"flag_definitions": [],
+"goal": {
+"face_id": &"goal/TOP",
+"required_flags": []
+},
+"groups": [],
+"level_id": &"face_lock_lab",
+"mechanisms": [{
+"action": {
+"kind": 5,
+"mechanism_id": &"contact_lock"
+},
+"allowed_states": [&"idle", &"latched"],
+"face_id": &"corner/TOP",
+"initial_state": &"idle",
+"mechanism_id": &"contact_lock",
+"priority": 0,
+"trigger": &"ENTER"
+}],
+"orientation_version": "cube24.v1",
+"perspective_falls": [],
+"rule_version": "foundation.rules.spatial_puzzle.v1",
+"schema_version": 4,
+"shift_compatibilities": [0],
+"shift_gates": [{
+"gate_id": &"enter",
+"required_flags": [],
+"required_mechanism_states": [{
+"mechanism_id": &"contact_lock",
+"state": &"latched"
+}],
+"source_face_id": &"source/TOP",
+"target_face_id": &"goal/TOP"
+}, {
+"gate_id": &"leave",
+"required_flags": [],
+"required_mechanism_states": [],
+"source_face_id": &"goal/TOP",
+"target_face_id": &"source/TOP"
+}],
+"spawn": {
+"location": {
+"cube_id": &"source",
+"face": 4,
+"layer": 0
+},
+"orientation": 0
+},
+"worlds": [{
+"allowed_rotation_deltas": [],
+"allowed_rotation_intents": [],
+"allowed_states": [0],
+"initial_orientation": 0,
+"layer": 0,
+"pivot2": Vector3i(0, 0, 0)
+}, {
+"allowed_rotation_deltas": [],
+"allowed_rotation_intents": [],
+"allowed_states": [0],
+"initial_orientation": 0,
+"layer": 1,
+"pivot2": Vector3i(0, 0, 0)
+}]
+},
+"traces": {
+"correct_face": [{
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"source",
+"face": 4,
+"layer": 0
+},
+"orientation": 0
+},
+"world_orientations": Array[int]([0, 0])
+}
+}, {
+"action": {
+"face_axis": 3,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"south",
+"face": 4,
+"layer": 0
+},
+"orientation": 2
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}, {
+"action": {
+"face_axis": 0,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"latched"
+},
+"player": {
+"location": {
+"cube_id": &"corner",
+"face": 4,
+"layer": 0
+},
+"orientation": 14
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}],
+"solution": [{
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"source",
+"face": 4,
+"layer": 0
+},
+"orientation": 0
+},
+"world_orientations": Array[int]([0, 0])
+}
+}, {
+"action": {
+"face_axis": 3,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"south",
+"face": 4,
+"layer": 0
+},
+"orientation": 2
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}, {
+"action": {
+"face_axis": 0,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"latched"
+},
+"player": {
+"location": {
+"cube_id": &"corner",
+"face": 4,
+"layer": 0
+},
+"orientation": 14
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}, {
+"action": {
+"face_axis": 1,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"latched"
+},
+"player": {
+"location": {
+"cube_id": &"east",
+"face": 4,
+"layer": 0
+},
+"orientation": 18
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}, {
+"action": {
+"face_axis": 2,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"latched"
+},
+"player": {
+"location": {
+"cube_id": &"source",
+"face": 4,
+"layer": 0
+},
+"orientation": 17
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}, {
+"action": {
+"kind": 1
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"latched"
+},
+"player": {
+"location": {
+"cube_id": &"goal",
+"face": 4,
+"layer": 1
+},
+"orientation": 17
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}],
+"wrong_face": [{
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"source",
+"face": 4,
+"layer": 0
+},
+"orientation": 0
+},
+"world_orientations": Array[int]([0, 0])
+}
+}, {
+"action": {
+"face_axis": 0,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"east",
+"face": 4,
+"layer": 0
+},
+"orientation": 12
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}, {
+"action": {
+"face_axis": 3,
+"kind": 0
+},
+"key": "statekey.game_feel.v1:{\"level_hash\":\"8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"idle\"},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+"state": {
+"camera_quadrant": 1,
+"celestial": {
+"slot_id": &"sky"
+},
+"group_orientations": {},
+"level_flags": {},
+"mechanism_states": {
+&"contact_lock": &"idle"
+},
+"player": {
+"location": {
+"cube_id": &"corner",
+"face": 4,
+"layer": 0
+},
+"orientation": 20
+},
+"world_orientations": Array[int]([0, 0])
+},
+"status": 0
+}]
+}
+}

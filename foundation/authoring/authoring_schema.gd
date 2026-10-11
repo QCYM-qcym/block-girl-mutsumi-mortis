@@ -27,6 +27,7 @@ const FIELDS := {
 	"MILESTONE": {"milestone_id": TYPE_STRING_NAME, "required": TYPE_BOOL, "predicate": TYPE_DICTIONARY},
 	"BYPASS": {"bypass_id": TYPE_STRING_NAME, "disabled_mechanics": TYPE_ARRAY}
 }
+const CURVED_LEVEL_TYPES := {"camera_initial_quadrant":TYPE_INT,"perspective_falls":TYPE_ARRAY}
 const SPATIAL_LEVEL_TYPES := {"camera_initial_quadrant":TYPE_INT,"perspective_falls":TYPE_ARRAY,"shift_gates":TYPE_ARRAY}
 const LOCK_CONFIG_TYPES := {"required_local_face":TYPE_INT,"activation_mode":TYPE_STRING_NAME,"latched_state":TYPE_STRING_NAME}
 const DOCUMENT_FIELDS := ["authoring_version", "document_uri", "document_authoring_id", "kind", "root_transform", "records", "resources", "dependencies", "override_paths"]
@@ -74,7 +75,9 @@ static func kind_of(script: Variant) -> String:
 
 static func field_types(kind: String, declarations: Dictionary = {}) -> Dictionary:
 	var fields: Dictionary = FIELDS[kind].duplicate()
-	if kind == "LEVEL" and Feel.spatial(declarations): fields.merge(SPATIAL_LEVEL_TYPES)
+	if kind == "LEVEL":
+		if Feel.curved(declarations): fields.merge(CURVED_LEVEL_TYPES)
+		if Feel.spatial(declarations): fields["shift_gates"] = TYPE_ARRAY
 	if kind == "MECHANISM_CONFIG":
 		if declarations.get("kind") == Types.PuzzleActionKind.TRIGGER_MECHANISM: fields.merge(LOCK_CONFIG_TYPES)
 		if declarations.get("kind") == Types.PuzzleActionKind.LOCAL_GROUP_ROTATE:
@@ -137,10 +140,10 @@ static func fields_valid(kind: String, fields: Variant) -> bool:
 		if key.ends_with("_id") and not valid_id(fields[key]):
 			return false
 	if kind == "LEVEL":
-		var spatial := Feel.spatial(fields)
-		if fields.authoring_version != "levelauthoring.v1" or fields.orientation_version != "cube24.v1" or fields.cell_size <= 0 or (not spatial and (fields.schema_version != 1 or fields.contract_version != "foundation.contract.v1" or fields.rule_version != "foundation.rules.v1")):
+		var curved := Feel.curved(fields)
+		if fields.authoring_version != "levelauthoring.v1" or fields.orientation_version != "cube24.v1" or fields.cell_size <= 0 or (not curved and (fields.schema_version != 1 or fields.contract_version != "foundation.contract.v1" or fields.rule_version != "foundation.rules.v1")):
 			return false
-		if spatial and fields.camera_initial_quadrant not in range(4): return false
+		if curved and fields.camera_initial_quadrant not in range(4): return false
 		if not exact(fields.spawn, ["face_ref", "orientation"]) or not face_ref(fields.spawn.face_ref) or not orientation(fields.spawn.orientation) or not exact(fields.goal, ["face_ref", "required_flags"]) or not face_ref(fields.goal.face_ref) or not id_array(fields.goal.required_flags):
 			return false
 		if not exact(fields.celestial, ["slot_order", "wrap", "initial_slot_id", "edges"]) or not id_array(fields.celestial.slot_order) or typeof(fields.celestial.wrap) != TYPE_BOOL or not valid_id(fields.celestial.initial_slot_id) or not fields.celestial.edges is Array:

@@ -1,0 +1,946 @@
+{
+	"checks": 153,
+	"failures": [
+		"orientation_loop_lab diagnostic projection level.tscn",
+		"perspective_fork_lab diagnostic projection level.tscn"
+	],
+	"production_acceptance": false,
+	"rows": [
+		{
+			"assembly": {
+				"issues": [],
+				"ok": true
+			},
+			"bake": {
+				"issues": [],
+				"ok": true
+			},
+			"baseline_hash": "7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4",
+			"canonical_equal": true,
+			"hash": "7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4",
+			"id": "world_shift_gate_lab",
+			"locations": {
+				"camera_initial_quadrant": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "d725dd06-62f6-65f4-26ea-6dbd5d5b0b86",
+							"canonical_path": "camera_initial_quadrant",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/level.tscn",
+							"entity_id": "world_shift_gate_lab",
+							"entity_kind": "LEVEL",
+							"field": "camera_initial_quadrant",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "camera_initial_quadrant",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"shift_gates": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "d725dd06-62f6-65f4-26ea-6dbd5d5b0b86",
+							"canonical_path": "shift_gates",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/level.tscn",
+							"entity_id": "world_shift_gate_lab",
+							"entity_kind": "LEVEL",
+							"field": "shift_gates",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "shift_gates",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"spawn": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "d725dd06-62f6-65f4-26ea-6dbd5d5b0b86",
+							"canonical_path": "spawn",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/level.tscn",
+							"entity_id": "world_shift_gate_lab",
+							"entity_kind": "LEVEL",
+							"field": "spawn",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "spawn",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				}
+			},
+			"projections": [
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/inner.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/intent.tres"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/level.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn"
+				}
+			],
+			"typed_level_fields": {
+				"authoring_version": "levelauthoring.v1",
+				"build_info": {},
+				"camera_initial_quadrant": 1,
+				"celestial": {
+					"edges": [],
+					"initial_slot_id": "sky",
+					"slot_order": [
+						"sky"
+					],
+					"wrap": false
+				},
+				"cell_size": 1,
+				"contract_version": "foundation.spatial_puzzle.v1",
+				"flag_definitions": [],
+				"goal": {
+					"face_ref": {
+						"cube_id": "goal",
+						"face": 4
+					},
+					"required_flags": []
+				},
+				"inner_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/inner.tscn",
+				"intent": {
+					"resource_ref": "538a8128-2784-7cc4-be88-f32e1f695133"
+				},
+				"level_id": "world_shift_gate_lab",
+				"orientation_version": "cube24.v1",
+				"perspective_falls": [],
+				"rule_version": "foundation.rules.spatial_puzzle.v1",
+				"schema_version": 4,
+				"shift_compatibilities": [
+					0
+				],
+				"shift_gates": [
+					{
+						"gate_id": "enter",
+						"required_flags": [],
+						"required_mechanism_states": [],
+						"source_face_id": "gate/TOP",
+						"target_face_id": "inner_gate/TOP"
+					},
+					{
+						"gate_id": "leave",
+						"required_flags": [],
+						"required_mechanism_states": [],
+						"source_face_id": "inner_gate/TOP",
+						"target_face_id": "gate/TOP"
+					}
+				],
+				"spawn": {
+					"face_ref": {
+						"cube_id": "source",
+						"face": 4
+					},
+					"orientation": 0
+				},
+				"surface_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn"
+			},
+			"typed_level_valid": true
+		},
+		{
+			"id": "orientation_loop_lab",
+			"projections": [
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/orientation_loop_lab/inner.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/orientation_loop_lab/intent.tres"
+				},
+				{
+					"issues": [
+						{
+							"code": "INVALID_RECORD",
+							"message": "Node declaration is missing, unknown or mistyped.",
+							"path": ".",
+							"source_refs": [],
+							"stage": "AUTHORING",
+							"upstream": []
+						},
+						{
+							"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+							"message": "Nested scene instances inside World are unsupported.",
+							"path": "Surface",
+							"source_refs": [],
+							"stage": "AUTHORING",
+							"upstream": []
+						},
+						{
+							"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+							"message": "Nested scene instances inside World are unsupported.",
+							"path": "Inner",
+							"source_refs": [],
+							"stage": "AUTHORING",
+							"upstream": []
+						}
+					],
+					"ok": false,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/orientation_loop_lab/level.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/orientation_loop_lab/surface.tscn"
+				}
+			],
+			"typed_level_fields": {
+				"authoring_version": "levelauthoring.v1",
+				"build_info": {},
+				"camera_initial_quadrant": 0,
+				"celestial": {
+					"edges": [],
+					"initial_slot_id": "sky",
+					"slot_order": [
+						"sky"
+					],
+					"wrap": false
+				},
+				"cell_size": 1,
+				"contract_version": "foundation.game_feel.v2",
+				"flag_definitions": [],
+				"goal": {
+					"face_ref": {
+						"cube_id": "goal",
+						"face": 4
+					},
+					"required_flags": []
+				},
+				"inner_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/orientation_loop_lab/inner.tscn",
+				"intent": {
+					"resource_ref": "992751f2-bfed-597a-cb59-682e4c87be31"
+				},
+				"level_id": "orientation_loop_lab",
+				"orientation_version": "cube24.v1",
+				"perspective_falls": [
+					{
+						"allowed_camera_quadrants": [
+							0
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "loop_exit",
+						"motion_profile_id": "loop_exit_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 0,
+						"source_face_id": "corner/TOP",
+						"target_face_id": "goal/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(2, 6, 2)",
+								"(4, 6, 2)"
+							],
+							"descent_control_points2": [
+								"(4, 6, 2)",
+								"(6, 6, 2)",
+								"(8, 4, 10)",
+								"(8, 2, 10)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					}
+				],
+				"rule_version": "foundation.rules.game_feel.v2",
+				"schema_version": 3,
+				"shift_compatibilities": [
+					0
+				],
+				"spawn": {
+					"face_ref": {
+						"cube_id": "source",
+						"face": 4
+					},
+					"orientation": 0
+				},
+				"surface_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/orientation_loop_lab/surface.tscn"
+			},
+			"typed_level_valid": false
+		},
+		{
+			"assembly": {
+				"issues": [],
+				"ok": true
+			},
+			"bake": {
+				"issues": [],
+				"ok": true
+			},
+			"baseline_hash": "8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5",
+			"canonical_equal": true,
+			"hash": "8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5",
+			"id": "face_lock_lab",
+			"locations": {
+				"camera_initial_quadrant": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "fb74893d-70e5-dd50-040f-605e5b8d45a4",
+							"canonical_path": "camera_initial_quadrant",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/level.tscn",
+							"entity_id": "face_lock_lab",
+							"entity_kind": "LEVEL",
+							"field": "camera_initial_quadrant",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "camera_initial_quadrant",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"face_locks[0].required_local_face": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "8f4a1357-511f-2496-7bcd-973ea182e051",
+							"canonical_path": "face_locks[0].required_local_face",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/contact_lock.tres",
+							"entity_id": "contact_lock",
+							"entity_kind": "MECHANISM",
+							"field": "required_local_face",
+							"local_face": null,
+							"node_path_at_capture": null,
+							"reader_path": "face_locks[0].required_local_face",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"shift_gates": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "fb74893d-70e5-dd50-040f-605e5b8d45a4",
+							"canonical_path": "shift_gates",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/level.tscn",
+							"entity_id": "face_lock_lab",
+							"entity_kind": "LEVEL",
+							"field": "shift_gates",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "shift_gates",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"spawn": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "fb74893d-70e5-dd50-040f-605e5b8d45a4",
+							"canonical_path": "spawn",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/level.tscn",
+							"entity_id": "face_lock_lab",
+							"entity_kind": "LEVEL",
+							"field": "spawn",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "spawn",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				}
+			},
+			"projections": [
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/contact_lock.tres"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/inner.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/intent.tres"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/level.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/surface.tscn"
+				}
+			],
+			"typed_level_fields": {
+				"authoring_version": "levelauthoring.v1",
+				"build_info": {},
+				"camera_initial_quadrant": 1,
+				"celestial": {
+					"edges": [],
+					"initial_slot_id": "sky",
+					"slot_order": [
+						"sky"
+					],
+					"wrap": false
+				},
+				"cell_size": 1,
+				"contract_version": "foundation.spatial_puzzle.v1",
+				"flag_definitions": [],
+				"goal": {
+					"face_ref": {
+						"cube_id": "goal",
+						"face": 4
+					},
+					"required_flags": []
+				},
+				"inner_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/inner.tscn",
+				"intent": {
+					"resource_ref": "27b3e00c-1c04-ae1a-6198-69e7356bf228"
+				},
+				"level_id": "face_lock_lab",
+				"orientation_version": "cube24.v1",
+				"perspective_falls": [],
+				"rule_version": "foundation.rules.spatial_puzzle.v1",
+				"schema_version": 4,
+				"shift_compatibilities": [
+					0
+				],
+				"shift_gates": [
+					{
+						"gate_id": "enter",
+						"required_flags": [],
+						"required_mechanism_states": [
+							{
+								"mechanism_id": "contact_lock",
+								"state": "latched"
+							}
+						],
+						"source_face_id": "source/TOP",
+						"target_face_id": "goal/TOP"
+					},
+					{
+						"gate_id": "leave",
+						"required_flags": [],
+						"required_mechanism_states": [],
+						"source_face_id": "goal/TOP",
+						"target_face_id": "source/TOP"
+					}
+				],
+				"spawn": {
+					"face_ref": {
+						"cube_id": "source",
+						"face": 4
+					},
+					"orientation": 0
+				},
+				"surface_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/surface.tscn"
+			},
+			"typed_level_valid": true
+		},
+		{
+			"id": "perspective_fork_lab",
+			"projections": [
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/inner.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/intent.tres"
+				},
+				{
+					"issues": [
+						{
+							"code": "INVALID_RECORD",
+							"message": "Node declaration is missing, unknown or mistyped.",
+							"path": ".",
+							"source_refs": [],
+							"stage": "AUTHORING",
+							"upstream": []
+						},
+						{
+							"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+							"message": "Nested scene instances inside World are unsupported.",
+							"path": "Surface",
+							"source_refs": [],
+							"stage": "AUTHORING",
+							"upstream": []
+						},
+						{
+							"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+							"message": "Nested scene instances inside World are unsupported.",
+							"path": "Inner",
+							"source_refs": [],
+							"stage": "AUTHORING",
+							"upstream": []
+						}
+					],
+					"ok": false,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/level.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/surface.tscn"
+				}
+			],
+			"typed_level_fields": {
+				"authoring_version": "levelauthoring.v1",
+				"build_info": {},
+				"camera_initial_quadrant": 1,
+				"celestial": {
+					"edges": [],
+					"initial_slot_id": "sky",
+					"slot_order": [
+						"sky"
+					],
+					"wrap": false
+				},
+				"cell_size": 1,
+				"contract_version": "foundation.game_feel.v2",
+				"flag_definitions": [],
+				"goal": {
+					"face_ref": {
+						"cube_id": "goal",
+						"face": 4
+					},
+					"required_flags": []
+				},
+				"inner_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/inner.tscn",
+				"intent": {
+					"resource_ref": "2de7db3b-bc05-eb45-a81c-bb282a254040"
+				},
+				"level_id": "perspective_fork_lab",
+				"orientation_version": "cube24.v1",
+				"perspective_falls": [
+					{
+						"allowed_camera_quadrants": [
+							1
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "fork_a",
+						"motion_profile_id": "fork_a_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 2,
+						"source_face_id": "source/TOP",
+						"target_face_id": "target_a/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(0, 6, 0)",
+								"(-2, 6, 0)"
+							],
+							"descent_control_points2": [
+								"(-2, 6, 0)",
+								"(-4, 6, 0)",
+								"(-6, 4, 8)",
+								"(-6, 2, 8)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					},
+					{
+						"allowed_camera_quadrants": [
+							2
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "fork_b",
+						"motion_profile_id": "fork_b_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 2,
+						"source_face_id": "source/TOP",
+						"target_face_id": "target_b/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(0, 6, 0)",
+								"(-2, 6, 0)"
+							],
+							"descent_control_points2": [
+								"(-2, 6, 0)",
+								"(-4, 6, 0)",
+								"(-6, 4, -12)",
+								"(-6, 2, -12)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					},
+					{
+						"allowed_camera_quadrants": [
+							0
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "return_path",
+						"motion_profile_id": "return_path_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 0,
+						"source_face_id": "return/TOP",
+						"target_face_id": "source/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(-4, 2, -12)",
+								"(-2, 2, -12)"
+							],
+							"descent_control_points2": [
+								"(-2, 2, -12)",
+								"(0, 2, -12)",
+								"(0, 8, 0)",
+								"(0, 6, 0)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					}
+				],
+				"rule_version": "foundation.rules.game_feel.v2",
+				"schema_version": 3,
+				"shift_compatibilities": [
+					0
+				],
+				"spawn": {
+					"face_ref": {
+						"cube_id": "source",
+						"face": 4
+					},
+					"orientation": 0
+				},
+				"surface_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/surface.tscn"
+			},
+			"typed_level_valid": false
+		},
+		{
+			"assembly": {
+				"issues": [],
+				"ok": true
+			},
+			"bake": {
+				"issues": [],
+				"ok": true
+			},
+			"baseline_hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+			"canonical_equal": true,
+			"hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+			"id": "rubik_spatial_puzzle_01",
+			"locations": {
+				"camera_initial_quadrant": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "3c7b8479-e99c-7a49-f0b8-1c3a782c2be9",
+							"canonical_path": "camera_initial_quadrant",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/level.tscn",
+							"entity_id": "rubik_spatial_puzzle_01",
+							"entity_kind": "LEVEL",
+							"field": "camera_initial_quadrant",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "camera_initial_quadrant",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"face_locks[0].required_local_face": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "c1078f1c-32d5-b964-f733-efea82fc8f95",
+							"canonical_path": "face_locks[0].required_local_face",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/contact_lock.tres",
+							"entity_id": "contact_lock",
+							"entity_kind": "MECHANISM",
+							"field": "required_local_face",
+							"local_face": null,
+							"node_path_at_capture": null,
+							"reader_path": "face_locks[0].required_local_face",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"perspective_falls": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "3c7b8479-e99c-7a49-f0b8-1c3a782c2be9",
+							"canonical_path": "perspective_falls",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/level.tscn",
+							"entity_id": "rubik_spatial_puzzle_01",
+							"entity_kind": "LEVEL",
+							"field": "perspective_falls",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "perspective_falls",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"shift_gates": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "3c7b8479-e99c-7a49-f0b8-1c3a782c2be9",
+							"canonical_path": "shift_gates",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/level.tscn",
+							"entity_id": "rubik_spatial_puzzle_01",
+							"entity_kind": "LEVEL",
+							"field": "shift_gates",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "shift_gates",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				},
+				"spawn": {
+					"issues": [],
+					"ok": true,
+					"value": [
+						{
+							"authoring_id": "3c7b8479-e99c-7a49-f0b8-1c3a782c2be9",
+							"canonical_path": "spawn",
+							"document_uri": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/level.tscn",
+							"entity_id": "rubik_spatial_puzzle_01",
+							"entity_kind": "LEVEL",
+							"field": "spawn",
+							"local_face": null,
+							"node_path_at_capture": ".",
+							"reader_path": "spawn",
+							"resource_subpath": null,
+							"resource_uid": null
+						}
+					]
+				}
+			},
+			"projections": [
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/contact_lock.tres"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/inner.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/intent.tres"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/level.tscn"
+				},
+				{
+					"issues": [],
+					"ok": true,
+					"path": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/surface.tscn"
+				}
+			],
+			"typed_level_fields": {
+				"authoring_version": "levelauthoring.v1",
+				"build_info": {},
+				"camera_initial_quadrant": 1,
+				"celestial": {
+					"edges": [],
+					"initial_slot_id": "sky",
+					"slot_order": [
+						"sky"
+					],
+					"wrap": false
+				},
+				"cell_size": 1,
+				"contract_version": "foundation.spatial_puzzle.v1",
+				"flag_definitions": [],
+				"goal": {
+					"face_ref": {
+						"cube_id": "goal",
+						"face": 4
+					},
+					"required_flags": []
+				},
+				"inner_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/inner.tscn",
+				"intent": {
+					"resource_ref": "26c4b09f-80e6-1ecb-c890-7b28c4f7f49c"
+				},
+				"level_id": "rubik_spatial_puzzle_01",
+				"orientation_version": "cube24.v1",
+				"perspective_falls": [
+					{
+						"allowed_camera_quadrants": [
+							1
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "fork_a",
+						"motion_profile_id": "fork_a_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 2,
+						"source_face_id": "inner_source/TOP",
+						"target_face_id": "target_a/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(0, 6, 0)",
+								"(-2, 6, 0)"
+							],
+							"descent_control_points2": [
+								"(-2, 6, 0)",
+								"(-4, 6, 0)",
+								"(-6, 4, 8)",
+								"(-6, 2, 8)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					},
+					{
+						"allowed_camera_quadrants": [
+							2
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "fork_b",
+						"motion_profile_id": "fork_b_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 2,
+						"source_face_id": "inner_source/TOP",
+						"target_face_id": "target_b/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(0, 6, 0)",
+								"(-2, 6, 0)"
+							],
+							"descent_control_points2": [
+								"(-2, 6, 0)",
+								"(-4, 6, 0)",
+								"(-6, 4, -12)",
+								"(-6, 2, -12)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					},
+					{
+						"allowed_camera_quadrants": [
+							0
+						],
+						"allowed_world_orientations": [
+							0
+						],
+						"connection_id": "return_path",
+						"motion_profile_id": "return_path_cubic",
+						"orientation_policy": "PRESERVE",
+						"presentation_duration_ms": 600,
+						"required_flags": [],
+						"source_edge": 0,
+						"source_face_id": "return/TOP",
+						"target_face_id": "inner_source/TOP",
+						"trajectory": {
+							"departure_points2": [
+								"(-4, 2, -12)",
+								"(-2, 2, -12)"
+							],
+							"descent_control_points2": [
+								"(-2, 2, -12)",
+								"(0, 2, -12)",
+								"(0, 8, 0)",
+								"(0, 6, 0)"
+							],
+							"trajectory_version": "pfall.departure_cubic.v1"
+						}
+					}
+				],
+				"rule_version": "foundation.rules.spatial_puzzle.v1",
+				"schema_version": 4,
+				"shift_compatibilities": [
+					0
+				],
+				"shift_gates": [
+					{
+						"gate_id": "enter",
+						"required_flags": [],
+						"required_mechanism_states": [
+							{
+								"mechanism_id": "contact_lock",
+								"state": "latched"
+							}
+						],
+						"source_face_id": "source/TOP",
+						"target_face_id": "inner_source/TOP"
+					},
+					{
+						"gate_id": "leave",
+						"required_flags": [],
+						"required_mechanism_states": [],
+						"source_face_id": "inner_source/TOP",
+						"target_face_id": "source/TOP"
+					}
+				],
+				"spawn": {
+					"face_ref": {
+						"cube_id": "source",
+						"face": 4
+					},
+					"orientation": 0
+				},
+				"surface_source": "res://experiments/spatial_puzzle_batch_01/maps/authoring/rubik_spatial_puzzle_01/surface.tscn"
+			},
+			"typed_level_valid": true
+		}
+	]
+}

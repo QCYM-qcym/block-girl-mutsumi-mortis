@@ -1,0 +1,129 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/world_authoring_root.gd" id="1_qv1h1"]
+[ext_resource type="Script" path="res://foundation/authoring/cube_authoring_node.gd" id="2_ewywg"]
+[ext_resource type="Script" path="res://foundation/authoring/face_authoring_resource.gd" id="3_bh62f"]
+
+[sub_resource type="Resource" id="Resource_86oxp"]
+script = ExtResource("3_bh62f")
+authoring_id = "82769817-2c00-98dd-9de6-b02910efbe98"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_5ehsx"]
+script = ExtResource("3_bh62f")
+authoring_id = "638836de-7d11-047c-45ec-4f003bab0b4b"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_4ug0y"]
+script = ExtResource("3_bh62f")
+authoring_id = "44d8b3dc-24c7-4d03-714f-75c28bf53efc"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_atukh"]
+script = ExtResource("3_bh62f")
+authoring_id = "66e573e3-c72d-1286-60cd-bb2bcaaa6d5b"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_tje0s"]
+script = ExtResource("3_bh62f")
+authoring_id = "2856136b-1a3f-2092-a2d2-484b04cda0d6"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_ngcrn"]
+script = ExtResource("3_bh62f")
+authoring_id = "e4636849-6ca6-e9fb-7ed8-4dbc2fc1fedd"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_4s0l0"]
+script = ExtResource("3_bh62f")
+authoring_id = "a35940e0-6500-8ac8-a809-c95994d52d3d"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_be3t8"]
+script = ExtResource("3_bh62f")
+authoring_id = "029d1044-4ce1-ef79-1628-6732b718d759"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_iieyw"]
+script = ExtResource("3_bh62f")
+authoring_id = "053719ad-cef0-a883-30ef-a90676dd1602"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_uq5tl"]
+script = ExtResource("3_bh62f")
+authoring_id = "2a0eb80b-572b-e4e5-46be-4ed929a799c6"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_qvanh"]
+script = ExtResource("3_bh62f")
+authoring_id = "2e26dcde-f299-9b12-cd9c-5b835b3b81e3"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_qsbsh"]
+script = ExtResource("3_bh62f")
+authoring_id = "6b7ce275-ba21-4350-6beb-5c542559d86d"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[node name="Inner" type="Node3D" unique_id=929977087]
+script = ExtResource("1_qv1h1")
+authoring_id = "68d7425d-e048-14c0-5798-1e00d1d159d9"
+layer = 1
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
+
+[node name="goal" type="Node3D" parent="." unique_id=1638955928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 1)
+script = ExtResource("2_ewywg")
+authoring_id = "f130fb8d-2118-160d-9c7b-1f442346fa02"
+cube_id = &"goal"
+occludes_light = true
+tags = []
+faces = [SubResource("Resource_86oxp"), SubResource("Resource_5ehsx"), SubResource("Resource_4ug0y"), SubResource("Resource_atukh"), SubResource("Resource_tje0s"), SubResource("Resource_ngcrn")]
+
+[node name="inner_gate" type="Node3D" parent="." unique_id=1779796626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
+script = ExtResource("2_ewywg")
+authoring_id = "f994d0aa-361d-dab0-0176-c90fa9cb84fa"
+cube_id = &"inner_gate"
+occludes_light = true
+tags = []
+faces = [SubResource("Resource_4s0l0"), SubResource("Resource_be3t8"), SubResource("Resource_iieyw"), SubResource("Resource_uq5tl"), SubResource("Resource_qvanh"), SubResource("Resource_qsbsh")]

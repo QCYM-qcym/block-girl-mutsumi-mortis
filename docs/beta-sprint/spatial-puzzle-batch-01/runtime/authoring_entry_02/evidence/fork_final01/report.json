@@ -1,0 +1,413 @@
+{
+	"checks": 37,
+	"doubles": [],
+	"failures": [],
+	"pid": 16652,
+	"rows": [
+		{
+			"after": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 0,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "CAMERA_NOT_ALLOWED"
+						},
+						"entity_ids": [],
+						"message": "Author did not permit this quadrant.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2101,
+				"status": 1
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target_a",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 1,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target_a",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 2,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target_b",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 2,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target_b",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 3,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 3,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "CAMERA_NOT_ALLOWED"
+						},
+						"entity_ids": [],
+						"message": "Author did not permit this quadrant.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2101,
+				"status": 1
+			}
+		},
+		{
+			"bake_ok": true,
+			"mutation": "cross_world",
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "WORLD_NOT_ALLOWED"
+						},
+						"entity_ids": [],
+						"message": "Connection cannot change World or bypass its authored permission.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2102,
+				"status": 1
+			}
+		},
+		{
+			"bake_ok": true,
+			"mutation": "unwalkable",
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "INVALID_FACE"
+						},
+						"entity_ids": [],
+						"message": "Initial Fall profile requires legal TOP support faces.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2100,
+				"status": 1
+			}
+		},
+		{
+			"bake": {
+				"issues": [
+					{
+						"code": 1006,
+						"details": {},
+						"entity_ids": [],
+						"message": "Overlapping connection permissions are ambiguous.",
+						"path": "perspective_falls[1]",
+						"severity": 0
+					}
+				],
+				"level": null,
+				"ok": false,
+				"validation": null
+			},
+			"mutation": "overlap"
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/bg-authoring-rt02/.godot/ae02/fork_final01/p/Godot/app_userdata/Mutsumi Veilshift - Spatial Puzzle Batch 01"
+}

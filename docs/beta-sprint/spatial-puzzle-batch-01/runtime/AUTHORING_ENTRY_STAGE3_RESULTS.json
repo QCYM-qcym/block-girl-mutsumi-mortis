@@ -1,0 +1,109 @@
+{
+  "base_sha": "a2a716734dab0a63ff8de397087665ef704337fd",
+  "branch": "fix/spatial-authoring-entry-02",
+  "final_checks": 901,
+  "final_cases": {
+    "entry_final01": {
+      "checks": 99,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "saved_final01": {
+      "checks": 236,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "typed_final01": {
+      "checks": 264,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "fork_final01": {
+      "checks": 37,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "consumers_final01": {
+      "checks": 37,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "docs_final01": {
+      "checks": 110,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "bake_final01": {
+      "checks": 105,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    },
+    "typed_reg_final01": {
+      "checks": 13,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "source_drift": []
+    }
+  },
+  "canonical_levels": [
+    {
+      "level_id": "world_shift_gate_lab",
+      "schema_version": 4,
+      "contract_version": "foundation.spatial_puzzle.v1",
+      "rule_version": "foundation.rules.spatial_puzzle.v1",
+      "content_hash": "7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4",
+      "canonical_equal": true
+    },
+    {
+      "level_id": "orientation_loop_lab",
+      "schema_version": 3,
+      "contract_version": "foundation.game_feel.v2",
+      "rule_version": "foundation.rules.game_feel.v2",
+      "content_hash": "45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70",
+      "canonical_equal": true
+    },
+    {
+      "level_id": "face_lock_lab",
+      "schema_version": 4,
+      "contract_version": "foundation.spatial_puzzle.v1",
+      "rule_version": "foundation.rules.spatial_puzzle.v1",
+      "content_hash": "8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5",
+      "canonical_equal": true
+    },
+    {
+      "level_id": "perspective_fork_lab",
+      "schema_version": 3,
+      "contract_version": "foundation.game_feel.v2",
+      "rule_version": "foundation.rules.game_feel.v2",
+      "content_hash": "8b485492113fec9f1ee74d347b88d31a6012f50359b97f9d26fee4c1e603054a",
+      "canonical_equal": true
+    },
+    {
+      "level_id": "rubik_spatial_puzzle_01",
+      "schema_version": 4,
+      "contract_version": "foundation.spatial_puzzle.v1",
+      "rule_version": "foundation.rules.spatial_puzzle.v1",
+      "content_hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+      "canonical_equal": true
+    }
+  ],
+  "integration_status": "PENDING_00",
+  "graphical": "NOT_RUN",
+  "human_qa": "NOT_RUN",
+  "doubles": []
+}

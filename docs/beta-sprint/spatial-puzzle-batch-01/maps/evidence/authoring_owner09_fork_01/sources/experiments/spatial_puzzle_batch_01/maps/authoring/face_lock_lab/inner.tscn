@@ -1,0 +1,72 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/world_authoring_root.gd" id="1_psgrb"]
+[ext_resource type="Script" path="res://foundation/authoring/cube_authoring_node.gd" id="2_akqlb"]
+[ext_resource type="Script" path="res://foundation/authoring/face_authoring_resource.gd" id="3_7is2e"]
+
+[sub_resource type="Resource" id="Resource_juq5o"]
+script = ExtResource("3_7is2e")
+authoring_id = "5e89e5b0-39fa-a119-bc5d-b2044114016a"
+face = 1
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_b25so"]
+script = ExtResource("3_7is2e")
+authoring_id = "4f2d8000-644e-696a-c7c5-3bb81e236978"
+face = 5
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_fvql7"]
+script = ExtResource("3_7is2e")
+authoring_id = "4b96a451-b075-3995-429e-7807c14bdb40"
+face = 0
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_xnno5"]
+script = ExtResource("3_7is2e")
+authoring_id = "bd49295c-03dd-1045-03a1-acd1142e98f2"
+face = 2
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_2q0kj"]
+script = ExtResource("3_7is2e")
+authoring_id = "e19c7d16-3495-ec30-c968-c6535a522041"
+face = 3
+walkable = false
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[sub_resource type="Resource" id="Resource_br3t7"]
+script = ExtResource("3_7is2e")
+authoring_id = "16142b7b-5f33-85ea-9bac-5adfdd918f68"
+face = 4
+walkable = true
+shift_exit_blocked = false
+shift_entry_blocked = false
+
+[node name="Inner" type="Node3D" unique_id=1060475533]
+script = ExtResource("1_psgrb")
+authoring_id = "047d46ff-4515-dbc2-2440-272798c926bd"
+layer = 1
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
+
+[node name="goal" type="Node3D" parent="." unique_id=435022867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("2_akqlb")
+authoring_id = "277d16e0-3d57-6e00-bfd9-498360a34bc0"
+cube_id = &"goal"
+occludes_light = true
+tags = []
+faces = [SubResource("Resource_juq5o"), SubResource("Resource_b25so"), SubResource("Resource_fvql7"), SubResource("Resource_xnno5"), SubResource("Resource_2q0kj"), SubResource("Resource_br3t7")]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/mechanism_config.gd" id="1_3rr4n"]
+
+[resource]
+script = ExtResource("1_3rr4n")
+authoring_id = "c1078f1c-32d5-b964-f733-efea82fc8f95"
+kind = 5
+initial_state = &"idle"
+allowed_states = [&"idle", &"latched"]
+required_local_face = 3
+activation_mode = &"LATCH_ON_SUCCESS"
+latched_state = &"latched"

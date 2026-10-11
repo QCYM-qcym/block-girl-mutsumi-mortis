@@ -47,7 +47,9 @@ func run()->void:
 			session.reset()
 			check(Key.build(baked.level,session.state).key==original,"Reset restores exact initial key")
 	for mutation in ["cross_world","unwalkable","overlap"]:
-		var source:Dictionary=Factory.authoring(&"perspective_fork_lab")
+		if not baked.ok:break
+		var source:Dictionary=baked.level.duplicate(true)
+		source.erase("content_hash")
 		if mutation=="cross_world":
 			for cube in source.cubes:
 				if cube.cube_id==&"target_b":cube.layer=1

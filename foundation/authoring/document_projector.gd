@@ -261,8 +261,9 @@ func _scene(state: SceneState) -> void:
 		if kind.is_empty() or kind in Schema.RESOURCE_KINDS:
 			continue
 		var declared := {}
+		var field_types := Schema.field_types(kind, properties)
 		for key in properties:
-			if key == "authoring_id" or Schema.FIELDS[kind].has(key):
+			if key == "authoring_id" or field_types.has(key):
 				declared[key] = properties[key]
 			elif not _is_native_property(key):
 				_fail("INVALID_FIELD", path + "." + key, "Unsupported stored node property.")
