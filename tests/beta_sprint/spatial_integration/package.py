@@ -59,7 +59,7 @@ for relative in ['.godot/uid_cache.bin','.godot/global_script_class_cache.cfg']:
         data=source.read_bytes();destination=project/relative
         destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(data)
         files.append({'path':'project/'+relative,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'kind':'existing_cache'})
-play='''param([string]$Godot="D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe")
+play='''param([string]$Godot="D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe", [switch]$Headless, [int]$QuitAfterFrames=0)
 $ErrorActionPreference="Stop"
 $uiProject=Join-Path $PSScriptRoot "project"
 $uiProfile=Join-Path $PSScriptRoot "qa-profile"
@@ -68,7 +68,10 @@ $env:LOCALAPPDATA=Join-Path $uiProfile "Local"
 $env:TEMP=Join-Path $uiProfile "Temp"
 $env:TMP=$env:TEMP
 New-Item -ItemType Directory -Force -Path $env:APPDATA,$env:LOCALAPPDATA,$env:TEMP | Out-Null
-& $Godot --path $uiProject
+$spatialLaunchArgs=@("--path",$uiProject)
+if ($Headless) { $spatialLaunchArgs+="--headless" }
+if ($QuitAfterFrames -gt 0) { $spatialLaunchArgs+=@("--quit-after",[string]$QuitAfterFrames) }
+& $Godot @spatialLaunchArgs
 exit $LASTEXITCODE
 '''
 (target/'play.ps1').write_bytes(play.encode('utf-8'))

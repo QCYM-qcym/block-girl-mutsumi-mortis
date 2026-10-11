@@ -32,7 +32,9 @@ Owner07 menu c4b119601ad2f92000500b60c36d28e0d1fa9c11 is integrated. Existing Sa
 
 Owner07 final tests949ed7f3c6ff1a4d4d1ca07ed34e933299ddd629 are integrated:236 headless assertions across five processes (29 store seed,6 cold restore,171 actual five-entry menu/lifecycle,11 separate-process actual menu Cold Continue,19 old Save regression). Actual renderer219 assertions and24 PNGs at1920×1080/1280×720/960×720, Windows/D3D12/Forward+/RTX5060Ti, exit0/stderr0/doubles[]/no drift. Menus, all five actual starts, pause, focus, mouse/keyboard reset/return and real Goal-save failure/retry are covered. See ui/RECEIPT.md. Original PNG review withdrew a false control-text truncation suspicion; no Host change was needed.
 
-03 Quality's final formal graphical and affected old-level results are still being integrated. This document is not yet a final playable acceptance declaration.
+03 formal graphical delivery60643e7a06872258ca602beb411d6f8e5dd729a2 is integrated. Actual registered mode1 TraceReplayer repeats each original selected trace twice: Loop77, Fork55, Gate73, FaceLock117, combined165 =487 checks; old Camera trace44 additional checks. All pass with exit0/stderr0/drift[]/doubles[]. Actual rendered captures and per-step identity/StateKey/Camera/World/orientation/final-pose evidence are in quality/evidence/*graphical*. Combined FIRST_SHORTEST is a selected replay witness, while its universal softlock/bypass claims use09's complete graph separately.
+
+03 is finishing the old five-level affected regression and additional natural lifecycle coverage. Package launch verification is still pending. This document is not yet a final playable acceptance declaration.
 
 ## Protected scope and human limits
 
