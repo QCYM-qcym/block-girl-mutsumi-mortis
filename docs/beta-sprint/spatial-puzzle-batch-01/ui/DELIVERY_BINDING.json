@@ -1,0 +1,51 @@
+{
+  "source_commit": "949ed7f3c6ff1a4d4d1ca07ed34e933299ddd629",
+  "worktree": "E:\\godot\\worktrees\\block-girl-spatial-ui-01",
+  "branch": "feat/spatial-ui-01",
+  "base": "7442e8172e865d093ff1e73570d891f60d9134af",
+  "integrated_dependency": "9386f4a084cbd1132c94ab9277a40106cd1d2cb7",
+  "status": "TESTED_LIVE_GIT_BLOBS_MATCH",
+  "unique_source_files": 325,
+  "runs": [
+    {
+      "run": "integrated_final_headless_01",
+      "report_sha256": "3f2e34097d730e25da7c911a7f50d68481a878ca91953fe62b172495470b85cc",
+      "execution_head": "b547fd8fa0f2decd3e515614df70924f9677fcd4",
+      "execution_dirty": [
+        " M tests/beta_sprint/spatial_owner_07/run.ps1",
+        " M tests/beta_sprint/spatial_owner_07/test_menu.gd",
+        "?? tests/beta_sprint/spatial_owner_07/test_menu_restore.gd"
+      ],
+      "checks": 236,
+      "display": "headless",
+      "tested_live_git_blob_matches": 325,
+      "import_cache_matches": 18,
+      "processes_exited": true,
+      "source_drift": false,
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "human_qa": "NOT_RUN"
+    },
+    {
+      "run": "integrated_renderer_02",
+      "report_sha256": "ae04316674eddb75132a26bb712cc00d92a201bbe89073d8c1a21d67f999a417",
+      "execution_head": "b547fd8fa0f2decd3e515614df70924f9677fcd4",
+      "execution_dirty": [
+        " M tests/beta_sprint/spatial_owner_07/run.ps1",
+        " M tests/beta_sprint/spatial_owner_07/test_menu.gd",
+        "?? tests/beta_sprint/spatial_owner_07/test_menu_restore.gd"
+      ],
+      "checks": 219,
+      "display": "Windows",
+      "tested_live_git_blob_matches": 325,
+      "import_cache_matches": 18,
+      "processes_exited": true,
+      "source_drift": false,
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+      "human_qa": "NOT_RUN"
+    }
+  ],
+  "approved_save_store_and_ui_tokens_unchanged": true,
+  "owner_scope": "07 Menu/Save/UI lifecycle only",
+  "full_batch_acceptance": "Coordinator/QA responsibility",
+  "push": "NOT_RUN"
+}
