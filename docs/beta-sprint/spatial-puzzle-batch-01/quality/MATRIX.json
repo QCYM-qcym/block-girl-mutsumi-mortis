@@ -1,0 +1,941 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01",
+  "old_94_matrix": "UNCHANGED; no historical checks promoted",
+  "counting": "Case rows are distinct predicates; engine checks are assertions, never matrix row counts",
+  "cases": [
+    {
+      "id": "gate.bake",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "UNIT",
+      "predicate": "Canonical real Bake repeats and hash binds all rules",
+      "dependency": "REAL_09_MAPS",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.runtime_route",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Original solved route uses real native identities, logical phase completion and Reset",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.full_graph",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FULL_GRAPH complete and SOLVED; hard trace revalidated",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.graph_permissions",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "SOLVER",
+      "predicate": "Original graph contains required actual mechanic edges and no unauthorized gate edges",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.safe_edges",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "SAFETY",
+      "predicate": "Selected original trace motions have actual SAFE verdicts",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.softlock",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "SOLVER",
+      "predicate": "Same live original graph; zero undesigned softlocks; Reset does not subtract counts",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.budget",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "SOLVER",
+      "predicate": "Actual max_states=1 preserves BUDGET_EXCEEDED",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.logical_replay",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "LOGICAL_REPLAY",
+      "predicate": "Production Replayer mode0 matches original trace and Goal key",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.formal_replay",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "FORMAL_GRAPHICAL",
+      "predicate": "Production mode1, real renderer, native completion and pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/gate_graphical_01/process.json",
+      "assertions": 73,
+      "candidate": "dee229c76f48b2fa3dbfaaa30bebed7e982f63ce"
+    },
+    {
+      "id": "gate.natural_pose",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Actual Host/Presenter full route, six face marks and state/pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.lifecycle",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Native held/repeated/opposite input, Pause, Reset and unload retire old identities",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.integration",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "INTEGRATION",
+      "predicate": "Real menu entry, fixed F action, hints and isolated Continue start",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.human",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "HUMAN_QA",
+      "predicate": "Eligible human tests the actual supplied Build",
+      "dependency": "HUMAN_TESTER",
+      "status": "NOT_RUN",
+      "receipt": null
+    },
+    {
+      "id": "loop.bake",
+      "mechanism": "orientation_loop_lab",
+      "facet": "UNIT",
+      "predicate": "Canonical real Bake repeats and hash binds all rules",
+      "dependency": "REAL_09_MAPS",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 5,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.runtime_route",
+      "mechanism": "orientation_loop_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Original solved route uses real native identities, logical phase completion and Reset",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 21,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.full_graph",
+      "mechanism": "orientation_loop_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FULL_GRAPH complete and SOLVED; hard trace revalidated",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 3,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.graph_permissions",
+      "mechanism": "orientation_loop_lab",
+      "facet": "SOLVER",
+      "predicate": "Original graph contains required actual mechanic edges and no unauthorized gate edges",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 1,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.safe_edges",
+      "mechanism": "orientation_loop_lab",
+      "facet": "SAFETY",
+      "predicate": "Selected original trace motions have actual SAFE verdicts",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 3,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.softlock",
+      "mechanism": "orientation_loop_lab",
+      "facet": "SOLVER",
+      "predicate": "Same live original graph; zero undesigned softlocks; Reset does not subtract counts",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 2,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.budget",
+      "mechanism": "orientation_loop_lab",
+      "facet": "SOLVER",
+      "predicate": "Actual max_states=1 preserves BUDGET_EXCEEDED",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 1,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.logical_replay",
+      "mechanism": "orientation_loop_lab",
+      "facet": "LOGICAL_REPLAY",
+      "predicate": "Production Replayer mode0 matches original trace and Goal key",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_core_02/process.json",
+      "assertions": 1,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "loop.formal_replay",
+      "mechanism": "orientation_loop_lab",
+      "facet": "FORMAL_GRAPHICAL",
+      "predicate": "Production mode1, real renderer, native completion and pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/loop_graphical_02/process.json",
+      "assertions": 77,
+      "candidate": "dee229c76f48b2fa3dbfaaa30bebed7e982f63ce"
+    },
+    {
+      "id": "loop.natural_pose",
+      "mechanism": "orientation_loop_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Actual Host/Presenter full route, six face marks and state/pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.lifecycle",
+      "mechanism": "orientation_loop_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Native held/repeated/opposite input, Pause, Reset and unload retire old identities",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.integration",
+      "mechanism": "orientation_loop_lab",
+      "facet": "INTEGRATION",
+      "predicate": "Real menu entry, fixed F action, hints and isolated Continue start",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.human",
+      "mechanism": "orientation_loop_lab",
+      "facet": "HUMAN_QA",
+      "predicate": "Eligible human tests the actual supplied Build",
+      "dependency": "HUMAN_TESTER",
+      "status": "NOT_RUN",
+      "receipt": null
+    },
+    {
+      "id": "lock.bake",
+      "mechanism": "face_lock_lab",
+      "facet": "UNIT",
+      "predicate": "Canonical real Bake repeats and hash binds all rules",
+      "dependency": "REAL_09_MAPS",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.runtime_route",
+      "mechanism": "face_lock_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Original solved route uses real native identities, logical phase completion and Reset",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.full_graph",
+      "mechanism": "face_lock_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FULL_GRAPH complete and SOLVED; hard trace revalidated",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.graph_permissions",
+      "mechanism": "face_lock_lab",
+      "facet": "SOLVER",
+      "predicate": "Original graph contains required actual mechanic edges and no unauthorized gate edges",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.safe_edges",
+      "mechanism": "face_lock_lab",
+      "facet": "SAFETY",
+      "predicate": "Selected original trace motions have actual SAFE verdicts",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.softlock",
+      "mechanism": "face_lock_lab",
+      "facet": "SOLVER",
+      "predicate": "Same live original graph; zero undesigned softlocks; Reset does not subtract counts",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.budget",
+      "mechanism": "face_lock_lab",
+      "facet": "SOLVER",
+      "predicate": "Actual max_states=1 preserves BUDGET_EXCEEDED",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.logical_replay",
+      "mechanism": "face_lock_lab",
+      "facet": "LOGICAL_REPLAY",
+      "predicate": "Production Replayer mode0 matches original trace and Goal key",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.formal_replay",
+      "mechanism": "face_lock_lab",
+      "facet": "FORMAL_GRAPHICAL",
+      "predicate": "Production mode1, real renderer, native completion and pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/lock_graphical_01/process.json",
+      "assertions": 117,
+      "candidate": "dee229c76f48b2fa3dbfaaa30bebed7e982f63ce"
+    },
+    {
+      "id": "lock.natural_pose",
+      "mechanism": "face_lock_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Actual Host/Presenter full route, six face marks and state/pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.lifecycle",
+      "mechanism": "face_lock_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Native held/repeated/opposite input, Pause, Reset and unload retire old identities",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.integration",
+      "mechanism": "face_lock_lab",
+      "facet": "INTEGRATION",
+      "predicate": "Real menu entry, fixed F action, hints and isolated Continue start",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.human",
+      "mechanism": "face_lock_lab",
+      "facet": "HUMAN_QA",
+      "predicate": "Eligible human tests the actual supplied Build",
+      "dependency": "HUMAN_TESTER",
+      "status": "NOT_RUN",
+      "receipt": null
+    },
+    {
+      "id": "fork.bake",
+      "mechanism": "perspective_fork_lab",
+      "facet": "UNIT",
+      "predicate": "Canonical real Bake repeats and hash binds all rules",
+      "dependency": "REAL_09_MAPS",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 5,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.runtime_route",
+      "mechanism": "perspective_fork_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Original solved route uses real native identities, logical phase completion and Reset",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 15,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.full_graph",
+      "mechanism": "perspective_fork_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FULL_GRAPH complete and SOLVED; hard trace revalidated",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 3,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.graph_permissions",
+      "mechanism": "perspective_fork_lab",
+      "facet": "SOLVER",
+      "predicate": "Original graph contains required actual mechanic edges and no unauthorized gate edges",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 2,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.safe_edges",
+      "mechanism": "perspective_fork_lab",
+      "facet": "SAFETY",
+      "predicate": "Selected original trace motions have actual SAFE verdicts",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 2,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.softlock",
+      "mechanism": "perspective_fork_lab",
+      "facet": "SOLVER",
+      "predicate": "Same live original graph; zero undesigned softlocks; Reset does not subtract counts",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 2,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.budget",
+      "mechanism": "perspective_fork_lab",
+      "facet": "SOLVER",
+      "predicate": "Actual max_states=1 preserves BUDGET_EXCEEDED",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 1,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.logical_replay",
+      "mechanism": "perspective_fork_lab",
+      "facet": "LOGICAL_REPLAY",
+      "predicate": "Production Replayer mode0 matches original trace and Goal key",
+      "dependency": "REAL_01_09",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_core_02/process.json",
+      "assertions": 1,
+      "candidate": "d897be888b480d09d0864efa92f1249d4e8879fb"
+    },
+    {
+      "id": "fork.formal_replay",
+      "mechanism": "perspective_fork_lab",
+      "facet": "FORMAL_GRAPHICAL",
+      "predicate": "Production mode1, real renderer, native completion and pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/fork_graphical_02/process.json",
+      "assertions": 55,
+      "candidate": "dee229c76f48b2fa3dbfaaa30bebed7e982f63ce"
+    },
+    {
+      "id": "fork.natural_pose",
+      "mechanism": "perspective_fork_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Actual Host/Presenter full route, six face marks and state/pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.lifecycle",
+      "mechanism": "perspective_fork_lab",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Native held/repeated/opposite input, Pause, Reset and unload retire old identities",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.integration",
+      "mechanism": "perspective_fork_lab",
+      "facet": "INTEGRATION",
+      "predicate": "Real menu entry, fixed F action, hints and isolated Continue start",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.human",
+      "mechanism": "perspective_fork_lab",
+      "facet": "HUMAN_QA",
+      "predicate": "Eligible human tests the actual supplied Build",
+      "dependency": "HUMAN_TESTER",
+      "status": "NOT_RUN",
+      "receipt": null
+    },
+    {
+      "id": "combined.bake",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "UNIT",
+      "predicate": "Canonical real Bake repeats and hash binds all rules",
+      "dependency": "REAL_09_MAPS",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.runtime_route",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Original solved route uses real native identities, logical phase completion and Reset",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.full_graph",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FULL_GRAPH complete and SOLVED; hard trace revalidated",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.graph_permissions",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SOLVER",
+      "predicate": "Original graph contains required actual mechanic edges and no unauthorized gate edges",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.safe_edges",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SAFETY",
+      "predicate": "Selected original trace motions have actual SAFE verdicts",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.softlock",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SOLVER",
+      "predicate": "Same live original graph; zero undesigned softlocks; Reset does not subtract counts",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.budget",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SOLVER",
+      "predicate": "Actual max_states=1 preserves BUDGET_EXCEEDED",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.logical_replay",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "LOGICAL_REPLAY",
+      "predicate": "Production Replayer mode0 matches original trace and Goal key",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.formal_replay",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "FORMAL_GRAPHICAL",
+      "predicate": "Production mode1, real renderer, native completion and pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/combined_graphical_01/process.json",
+      "assertions": 165,
+      "candidate": "dee229c76f48b2fa3dbfaaa30bebed7e982f63ce"
+    },
+    {
+      "id": "combined.natural_pose",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Actual Host/Presenter full route, six face marks and state/pose parity",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.lifecycle",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Native held/repeated/opposite input, Pause, Reset and unload retire old identities",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.integration",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "INTEGRATION",
+      "predicate": "Real menu entry, fixed F action, hints and isolated Continue start",
+      "dependency": "REAL_00_01_09_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.human",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "HUMAN_QA",
+      "predicate": "Eligible human tests the actual supplied Build",
+      "dependency": "HUMAN_TESTER",
+      "status": "NOT_RUN",
+      "receipt": null
+    },
+    {
+      "id": "loop.unit.local_faces",
+      "mechanism": "orientation_loop_lab",
+      "facet": "UNIT",
+      "predicate": "Frozen six physical local faces and actual quarter turn",
+      "dependency": "AVAILABLE_BASELINE",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/orientation_01/process.json",
+      "assertions": 14,
+      "candidate": "5664a32a33eb178934e3233cc59c938132622fc0"
+    },
+    {
+      "id": "loop.unit.camera_mapping",
+      "mechanism": "orientation_loop_lab",
+      "facet": "UNIT",
+      "predicate": "Four actual formal Camera bases map literal screen inputs",
+      "dependency": "AVAILABLE_BASELINE",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/orientation_01/process.json",
+      "assertions": 16,
+      "candidate": "5664a32a33eb178934e3233cc59c938132622fc0"
+    },
+    {
+      "id": "loop.unit.invalid_input",
+      "mechanism": "orientation_loop_lab",
+      "facet": "UNIT",
+      "predicate": "Zero/nonfinite observation cannot become an action",
+      "dependency": "AVAILABLE_BASELINE",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/orientation_01/process.json",
+      "assertions": 3,
+      "candidate": "5664a32a33eb178934e3233cc59c938132622fc0"
+    },
+    {
+      "id": "gate.negative",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Off-point/locked/direct bypass rejected; exact state and zero commit unchanged",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.mapping",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Fixed/unlocked mapped target, Shadow, SAME_NORMAL and camera preserved",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.routes",
+      "mechanism": "orientation_loop_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Two authored routes share position but different pose; closed loop changes pose",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.camera",
+      "mechanism": "orientation_loop_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Actual Q/E actions preserve final cube orientation",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.contact",
+      "mechanism": "face_lock_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Wrong-face MOVE succeeds without latch; post-roll correct contact latches once",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.reentry",
+      "mechanism": "face_lock_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Leaving and repeated contact preserve latch; direct USE rejected; Reset clears",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.selection",
+      "mechanism": "perspective_fork_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Same formal U_NEG input and source/pose/world; Camera A/B select distinct unique targets",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.negative",
+      "mechanism": "perspective_fork_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Invalid Camera/target, ambiguous/missing/cross-world/unsafe authored edges fail closed",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.order",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Full route and alternate legal route; latch-before-Shift and actual Inner Fork",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.bypass",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SOLVER",
+      "predicate": "Full graph has no Goal bypass of required latch/gate and recoverable exploratory branch",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "legacy.core",
+      "mechanism": "LEGACY_FOCUSED",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Existing MAP A/B real Baker/Kernel/Safety/Explorer/Softlock/logical replay",
+      "dependency": "AVAILABLE_BASELINE",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/legacy_core_01/process.json",
+      "assertions": 162,
+      "candidate": "5664a32a33eb178934e3233cc59c938132622fc0"
+    },
+    {
+      "id": "legacy.profile",
+      "mechanism": "LEGACY_FOCUSED",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Legacy schema1/2/3 profile behavior remains explicit",
+      "dependency": "AVAILABLE_BASELINE",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "legacy.pconn",
+      "mechanism": "LEGACY_FOCUSED",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Existing Perspective Connection affected regression",
+      "dependency": "AVAILABLE_BASELINE",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "legacy.graphical",
+      "mechanism": "LEGACY_FOCUSED",
+      "facet": "NATURAL_GRAPHICAL",
+      "predicate": "Actual L01-L05 Shell/native keys/Orientation/Shift/Reset affected regression",
+      "dependency": "REAL_00_BRIDGE_WINDOW",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "legacy.camera_formal",
+      "mechanism": "LEGACY_FOCUSED",
+      "facet": "FORMAL_GRAPHICAL",
+      "predicate": "Original MAP A/B Solver traces plus revalidated camera roundtrip use formal mode1",
+      "dependency": "REAL_00_BRIDGE_WINDOW",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/legacy_camera_graphical_01/process.json",
+      "assertions": 44,
+      "candidate": "dee229c76f48b2fa3dbfaaa30bebed7e982f63ce"
+    },
+    {
+      "id": "gate.mechanic_bake",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "UNIT",
+      "predicate": "Actual delivered map Baker for native tests",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.runtime_lifecycle",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Actual pending identities, logical busy spam, Pause, Reset, stale/unload callbacks; not animation",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "gate.selected_trace",
+      "mechanism": "world_shift_gate_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FIRST_SHORTEST hard witness only; no universal graph conclusion",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.mechanic_bake",
+      "mechanism": "orientation_loop_lab",
+      "facet": "UNIT",
+      "predicate": "Actual delivered map Baker for native tests",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.runtime_lifecycle",
+      "mechanism": "orientation_loop_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Actual pending identities, logical busy spam, Pause, Reset, stale/unload callbacks; not animation",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "loop.selected_trace",
+      "mechanism": "orientation_loop_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FIRST_SHORTEST hard witness only; no universal graph conclusion",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.mechanic_bake",
+      "mechanism": "face_lock_lab",
+      "facet": "UNIT",
+      "predicate": "Actual delivered map Baker for native tests",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.runtime_lifecycle",
+      "mechanism": "face_lock_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Actual pending identities, logical busy spam, Pause, Reset, stale/unload callbacks; not animation",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "lock.selected_trace",
+      "mechanism": "face_lock_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FIRST_SHORTEST hard witness only; no universal graph conclusion",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.mechanic_bake",
+      "mechanism": "perspective_fork_lab",
+      "facet": "UNIT",
+      "predicate": "Actual delivered map Baker for native tests",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.runtime_lifecycle",
+      "mechanism": "perspective_fork_lab",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Actual pending identities, logical busy spam, Pause, Reset, stale/unload callbacks; not animation",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "fork.selected_trace",
+      "mechanism": "perspective_fork_lab",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FIRST_SHORTEST hard witness only; no universal graph conclusion",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.mechanic_bake",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "UNIT",
+      "predicate": "Actual delivered map Baker for native tests",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.runtime_lifecycle",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "REAL_RUNTIME",
+      "predicate": "Actual pending identities, logical busy spam, Pause, Reset, stale/unload callbacks; not animation",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    },
+    {
+      "id": "combined.selected_trace",
+      "mechanism": "rubik_spatial_puzzle_01",
+      "facet": "SOLVER",
+      "predicate": "Original UNFILTERED FIRST_SHORTEST hard witness only; no universal graph conclusion",
+      "dependency": "REAL_01_09",
+      "status": "PENDING",
+      "receipt": null
+    }
+  ]
+}
