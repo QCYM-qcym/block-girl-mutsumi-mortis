@@ -41,3 +41,7 @@ Owner07 final tests949ed7f3c6ff1a4d4d1ca07ed34e933299ddd629 are integrated:236 h
 No production Art files, old game/levels data, or game/shell/save_store.gd changes relative to base d1277ec90b5a739efd4862d314e6c29ac5ac1eda. Four protected main/editor/release/tag refs still match BASELINE.json. No push or main merge.
 
 HUMAN_QA = NOT_RUN. First-time comprehension requires an eligible player and separate evidence. Primitive experiment geometry and existing approved UI are not new formal Art approval. Audio/Art polish, global Reduced Motion persistence and later mechanism batches are outside this delivery. Existing stair statuses remain unchanged.
+
+## Copied candidate package verification
+
+Candidate beta_spatial_puzzle_batch_01_20261011_rc01 was assembled from exactd3a13d15546ad85e7571ed7761565313f596fcb2:1314 committed source files and150 byte-matched derived imports. Its actual play.ps1 -Headless -QuitAfterFrames30 started the configured spatial Main Scene, exit0/stderr0; all1464 manifest file hashes matched before launch. The copied-project actual Menu case passed171 headless checks, exit0/stderr0/doubles[]/no source drift. This candidate is retained independently; final QA identity and renderer verification are registered separately after completion. See evidence/package_start_rc01 and package_menu_rc01.

@@ -1,0 +1,69 @@
+{
+	"authority": "actual Factory/Baker + Host + Facade + natural Presenter + unchanged SaveStore; no finish injection",
+	"case_scope": "actual Menu entry/Pause/Reset/return at three sizes; formal mechanism acceptance belongs to Runtime/Map/QA Owners",
+	"checks": 171,
+	"display": "headless",
+	"doubles": [],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"evidence_type": "UI_HEADLESS_WITH_REAL_LOOP_LIFECYCLE",
+	"failures": [],
+	"fault_exercises": [
+		"injected wrong-level Goal signal",
+		"injected Goal signal from removed old Host",
+		"actual blocked backup directory",
+		"actual Goal backup-directory write failure",
+		"actual Goal save failure retained across menu return",
+		"actual future-version menu save"
+	],
+	"graphical": "NOT_RUN",
+	"human_qa": "NOT_RUN",
+	"input": "native Input.parse_input_event mouse/Tab/Esc; formal real Loop witness actions for natural Goal",
+	"new_gate_face_lock_fork": "NOT_ATTESTED_BY_THIS_UI_CASE",
+	"observations": [
+		{
+			"measured": "[P: (0.0, 0.0), S: (1920.0, 1080.0)]",
+			"menu": "[P: (530.0, 24.0), S: (860.0, 1032.0)]",
+			"requested": "(1920, 1080)",
+			"scroll": "[P: (554.0, 48.0), S: (812.0, 980.0)]"
+		},
+		{
+			"measured": "[P: (0.0, 0.0), S: (1280.0, 720.0)]",
+			"menu": "[P: (210.0, 24.0), S: (860.0, 672.0)]",
+			"requested": "(1280, 720)",
+			"scroll": "[P: (234.0, 48.0), S: (812.0, 620.0)]"
+		},
+		{
+			"measured": "[P: (0.0, 0.0), S: (960.0, 720.0)]",
+			"menu": "[P: (50.0, 24.0), S: (860.0, 672.0)]",
+			"requested": "(960, 720)",
+			"scroll": "[P: (74.0, 48.0), S: (812.0, 620.0)]"
+		},
+		{
+			"case": "goal_save_failure",
+			"error": "[P: (50.0, 482.0), S: (860.0, 146.0)]",
+			"error_min": "(104.0, 96.0)",
+			"pause": "[P: (536.0, 652.0), S: (44.0, 44.0)]",
+			"return": "[P: (840.0, 652.0), S: (88.0, 44.0)]",
+			"toolbar": "[P: (24.0, 644.0), S: (912.0, 64.0)]"
+		},
+		{
+			"case": "return_goal_save_failure",
+			"error": "[P: (50.0, 482.0), S: (860.0, 146.0)]",
+			"return": "[P: (840.0, 652.0), S: (88.0, 44.0)]",
+			"toolbar": "[P: (24.0, 644.0), S: (912.0, 64.0)]"
+		}
+	],
+	"pid": 21256,
+	"save_path": "user://spatial_puzzle_batch_01/tests/package_rc01/menu_progress.json",
+	"user_data_dir": "E:/godot/worktrees/block-girl-spatial-puzzle-batch-01/docs/beta-sprint/spatial-puzzle-batch-01/evidence/package_menu_rc01/profile/Roaming/Godot/app_userdata/Mutsumi Veilshift - Spatial Puzzle Batch 01"
+}
