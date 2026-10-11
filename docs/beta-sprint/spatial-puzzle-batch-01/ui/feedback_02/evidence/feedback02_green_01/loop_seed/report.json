@@ -1,0 +1,314 @@
+{
+	"authority": "actual Menu/Factory/Baker/Host/Facade/StateKey/original SaveStore and natural Presenter; no positive event or finish injection",
+	"checks": 32,
+	"display": "headless",
+	"doubles": [],
+	"engine": {
+		"build": "steam",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (steam)",
+		"timestamp": 0
+	},
+	"failures": [],
+	"graphical": "NOT_RUN",
+	"human_qa": "NOT_RUN",
+	"loop": {
+		"commits": 4,
+		"initial_key": "statekey.game_feel.v1:{\"level_hash\":\"45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+		"initial_state": {
+			"camera_quadrant": 0,
+			"celestial": {
+				"slot_id": "sky"
+			},
+			"group_orientations": {},
+			"level_flags": {},
+			"mechanism_states": {},
+			"player": {
+				"location": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"orientation": 0
+			},
+			"world_orientations": [
+				0,
+				0
+			]
+		},
+		"level_content_hash": "45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70",
+		"looped_key": "statekey.game_feel.v1:{\"level_hash\":\"45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+		"looped_state": {
+			"camera_quadrant": 0,
+			"celestial": {
+				"slot_id": "sky"
+			},
+			"group_orientations": {},
+			"level_flags": {},
+			"mechanism_states": {},
+			"player": {
+				"location": {
+					"cube_id": "source",
+					"face": 4,
+					"layer": 0
+				},
+				"orientation": 15
+			},
+			"world_orientations": [
+				0,
+				0
+			]
+		},
+		"save_sha256": "bd4cc21f753132562abd55d5f33544b3c4b93b5370fdc541aea4edaaf5cf1142",
+		"seed_pid": 27420,
+		"seed_user_data_dir": "E:/godot/worktrees/block-girl-spatial-ui-feedback-02/.godot/spatial-ui-feedback-02/feedback02_green_01/profile/Godot/app_userdata/Mutsumi Veilshift - Spatial Puzzle Batch 01"
+	},
+	"phase": "loop_seed",
+	"pid": 27420,
+	"rows": [
+		{
+			"case": "actual Orientation closed loop",
+			"commits": 1,
+			"input": "actual Facade action API",
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "east",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_key": "statekey.game_feel.v1:{\"level_hash\":\"45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+		},
+		{
+			"case": "actual Orientation closed loop",
+			"commits": 2,
+			"input": "actual Facade action API",
+			"result": {
+				"action": {
+					"face_axis": 3,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "corner",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 20
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "east",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_key": "statekey.game_feel.v1:{\"level_hash\":\"45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}"
+		},
+		{
+			"case": "actual Orientation closed loop",
+			"commits": 3,
+			"input": "actual Facade action API",
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "south",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 22
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "corner",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 20
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_key": "statekey.game_feel.v1:{\"level_hash\":\"45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}"
+		},
+		{
+			"case": "actual Orientation closed loop",
+			"commits": 4,
+			"input": "actual Facade action API",
+			"result": {
+				"action": {
+					"face_axis": 1,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 15
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "south",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 22
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_key": "statekey.game_feel.v1:{\"level_hash\":\"45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}"
+		}
+	],
+	"save_path": "user://spatial_puzzle_batch_01/tests/feedback02_green_01/loop.json",
+	"scope": "pre-migration baseline feedback and actual process-level Continue; final migrated integration is PENDING_00",
+	"user_data_dir": "E:/godot/worktrees/block-girl-spatial-ui-feedback-02/.godot/spatial-ui-feedback-02/feedback02_green_01/profile/Godot/app_userdata/Mutsumi Veilshift - Spatial Puzzle Batch 01"
+}
