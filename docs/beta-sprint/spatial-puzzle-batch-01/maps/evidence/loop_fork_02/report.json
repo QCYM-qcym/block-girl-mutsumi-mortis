@@ -1,0 +1,933 @@
+{
+	"checks": 39,
+	"doubles": [],
+	"failures": [
+		"witness action APPLIED",
+		"witness action APPLIED",
+		"witness reaches Goal",
+		"same location distinct orientations",
+		"real Baker perspective_fork_lab"
+	],
+	"maps": [
+		{
+			"graph_complete": true,
+			"id": "orientation_loop_lab",
+			"level_hash": "84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e",
+			"replay": {
+				"action": null,
+				"actual_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+				"divergence_step": null,
+				"expected_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+				"issues": [],
+				"matched_steps": 3,
+				"status": 0,
+				"trace_length": 3
+			},
+			"softlock": {
+				"goal_reachable_states": [
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}"
+				],
+				"initial_key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"issues": [],
+				"metrics": {
+					"edges_checked": 240,
+					"elapsed_ms": 687,
+					"nodes_checked": 60
+				},
+				"reachable_states": [
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":14},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":4},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":18},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":7},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":6},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":8},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":17},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":13},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+					"statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}"
+				],
+				"reset_classification": 0,
+				"reset_recoverable_count": 0,
+				"softlock_count": 0,
+				"softlock_states": [],
+				"status": 0,
+				"unknown_states": [],
+				"witnesses": []
+			},
+			"solver_metrics": {
+				"action_evaluations": 432,
+				"duplicate_states": 181,
+				"elapsed_ms": 12087,
+				"explored_states": 60,
+				"filtered_edges": 0,
+				"generated_edges": 240,
+				"goal_states": 12,
+				"max_depth_reached": 12,
+				"no_op_actions": 48,
+				"rejected_actions": 144,
+				"safety_unproven_rejections": 12,
+				"shortest_solution_count": null,
+				"shortest_solution_count_complete": false,
+				"solution_length": 3,
+				"visited_states": 60
+			},
+			"trace": {
+				"goal_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+				"initial_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"initial_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+				"level_hash": "84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e",
+				"policy_descriptor": {
+					"filter_descriptor": {
+						"disabled_mechanics": [],
+						"filter_id": "UNFILTERED",
+						"filter_version": "1"
+					},
+					"mode": 1,
+					"strategy": "BFS",
+					"validation_options": {
+						"max_checks": 100000,
+						"max_configurations": 4096
+					}
+				},
+				"rule_version": "foundation.rules.game_feel.v2",
+				"shortest": true,
+				"steps": [
+					{
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "sky"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "east",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 12
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 1,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+					},
+					{
+						"action": {
+							"face_axis": 3,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "sky"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "corner",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 20
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 2,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}"
+					},
+					{
+						"action": {
+							"face_axis": 0,
+							"kind": 0
+						},
+						"expected_state": {
+							"camera_quadrant": 1,
+							"celestial": {
+								"slot_id": "sky"
+							},
+							"group_orientations": {},
+							"level_flags": {},
+							"mechanism_states": {},
+							"player": {
+								"location": {
+									"cube_id": "goal",
+									"face": 4,
+									"layer": 0
+								},
+								"orientation": 23
+							},
+							"world_orientations": [
+								0,
+								0
+							]
+						},
+						"global_kind": 0,
+						"index": 3,
+						"resulting_statekey": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}"
+					}
+				],
+				"total_actions": 3,
+				"trace_version": "solutiontrace.game_feel.v1"
+			},
+			"witnesses": {
+				"closed_loop": {
+					"is_goal": false,
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "sky"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "source",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 15
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"steps": [
+						{
+							"action": {
+								"face_axis": 0,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "east",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 12
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 3,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "corner",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 20
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 2,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":22},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "south",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 22
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 1,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":15},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "source",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 15
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				},
+				"route_a": {
+					"is_goal": false,
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "sky"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "corner",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 20
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"steps": [
+						{
+							"action": {
+								"face_axis": 0,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "east",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 12
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 3,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "corner",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 20
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				},
+				"route_b": {
+					"is_goal": false,
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "sky"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "south",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 2
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"steps": [
+						{
+							"action": {
+								"face_axis": 3,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "south",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 2
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 0,
+								"kind": 0
+							},
+							"changed": false,
+							"global_kind": 0,
+							"issues": [
+								{
+									"code": 1601,
+									"details": {},
+									"entity_ids": [
+										"goal"
+									],
+									"message": "Roll swept enclosure is not separated from an unrelated Cube.",
+									"path": "safety.motion",
+									"severity": 0
+								}
+							],
+							"next_state": null,
+							"previous_state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "south",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 2
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							},
+							"rejection_code": 2000,
+							"status": 1
+						}
+					]
+				},
+				"solution_a": {
+					"is_goal": true,
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "sky"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "goal",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 23
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"steps": [
+						{
+							"action": {
+								"face_axis": 0,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"east\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "east",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 12
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 3,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"corner\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":20},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "corner",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 20
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 0,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":23},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "goal",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 23
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						}
+					]
+				},
+				"solution_b": {
+					"is_goal": false,
+					"state": {
+						"camera_quadrant": 1,
+						"celestial": {
+							"slot_id": "sky"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {},
+						"player": {
+							"location": {
+								"cube_id": "south",
+								"face": 4,
+								"layer": 0
+							},
+							"orientation": 2
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"steps": [
+						{
+							"action": {
+								"face_axis": 3,
+								"kind": 0
+							},
+							"key": "statekey.game_feel.v1:{\"level_hash\":\"84150f319b3fdd36baf80f871111f5ae004ed7f240dffc3484a5ea3cac50b50e\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"south\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":2},\"world_orientations\":[0,0]}}",
+							"state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "south",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 2
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							}
+						},
+						{
+							"action": {
+								"face_axis": 0,
+								"kind": 0
+							},
+							"changed": false,
+							"global_kind": 0,
+							"issues": [
+								{
+									"code": 1601,
+									"details": {},
+									"entity_ids": [
+										"goal"
+									],
+									"message": "Roll swept enclosure is not separated from an unrelated Cube.",
+									"path": "safety.motion",
+									"severity": 0
+								}
+							],
+							"next_state": null,
+							"previous_state": {
+								"camera_quadrant": 1,
+								"celestial": {
+									"slot_id": "sky"
+								},
+								"group_orientations": {},
+								"level_flags": {},
+								"mechanism_states": {},
+								"player": {
+									"location": {
+										"cube_id": "south",
+										"face": 4,
+										"layer": 0
+									},
+									"orientation": 2
+								},
+								"world_orientations": [
+									0,
+									0
+								]
+							},
+							"rejection_code": 2000,
+							"status": 1
+						}
+					]
+				}
+			}
+		},
+		{
+			"bake": {
+				"issues": [
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[13].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[14].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[15].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[16].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[17].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[2].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[3].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[8].cube_id",
+						"severity": 0
+					},
+					{
+						"code": 1004,
+						"details": {},
+						"entity_ids": [],
+						"message": "Expected a lowercase identifier.",
+						"path": "cubes[9].cube_id",
+						"severity": 0
+					}
+				],
+				"level": null,
+				"ok": false,
+				"validation": null
+			},
+			"id": "perspective_fork_lab"
+		}
+	],
+	"pid": 17148,
+	"scope": "Baker + logical Runtime + complete Solver + logical Replay; no graphical/human claims",
+	"user_data_dir": "E:/godot/worktrees/block-girl-spatial-map-01/docs/beta-sprint/spatial-puzzle-batch-01/maps/evidence/loop_fork_02/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}
