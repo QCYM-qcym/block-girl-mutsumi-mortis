@@ -75,6 +75,10 @@ func _process(_delta:float)->void:
 		if record.get("native",false) or record.transition_identity==view.transition_identity:
 			record.frames.append({"phase":record.semantic if record.get("native",false) else view.phase,"elapsed":view.elapsed,"pose":_pose(lab.actor.transform),"camera_pose":_pose(lab.camera.transform),"statekey":Key.build(runtime.get_level(),runtime.get_state()).get("key","")})
 
+		# Camera may settle during Landing. Retry its already-observed terminal
+		# after the real shared visual lifecycle settles; never synthesize one.
+		if not record.terminal.is_empty(): _flush(record)
+
 func _on_native_started(result:Dictionary,id:int,generation:int,is_global:bool)->void:
 	if _closed or result.get("status")!=0 or not result.get("changed",false): return
 	var kind:int=result.get("action",{}).get("kind",-1)
