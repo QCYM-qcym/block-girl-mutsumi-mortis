@@ -16,9 +16,11 @@ if 'run/main_scene="res://experiments/spatial_puzzle_batch_01/ui/main.tscn"' not
 if 'config/name="Mutsumi Veilshift - Spatial Puzzle Batch 01"' not in config:
     raise SystemExit('Build requires isolated F5 project identity')
 roots=['tools/foundation','docs/beta-sprint/game-feel/CORE_PLAYABLE_QUALITY_BINDINGS.json','docs/beta-sprint/spatial-puzzle-batch-01','foundation','game','production','prototype','experiments/game_feel_01','experiments/spatial_puzzle_batch_01','tests/beta_sprint/spatial_integration','tests/beta_sprint/spatial_owner_01','tests/beta_sprint/spatial_owner_09','tests/beta_sprint/spatial_owner_07','tests/beta_sprint/spatial_quality','tests/foundation','tests/shell','tests/playtest','tests/gameplay','tests/beta_sprint/shell_batch_02','tests/beta_sprint/game_feel_owner_01','tests/beta_sprint/game_feel_owner_10a','tests/beta_sprint/game_feel_owner_10b','tests/beta_sprint/ui_host_integration','tests/beta_sprint/pfall_integration','tests/beta_sprint/pfall_v2_integration','tests/beta_sprint/game_feel_full_slice','tests/beta_sprint/graphical_bridge_02','tests/beta_sprint/yellow_target_01','tests/beta_sprint/forward_drop_01','tests/beta_sprint/game_feel_owner_03','project.godot','default_bus_layout.tres','icon.svg','icon.svg.import']
-selected=git('ls-tree','-r','--name-only',head,'--',*roots).decode('utf-8').splitlines()
-selected=[p for p in selected if not any(s in p.split('/') for s in ['evidence','receipts','profile','__pycache__']) and not p.endswith(('.log','.zip','.tmp'))]
+selected=git('ls-tree','-r','-z','--name-only',head,'--',*roots).decode('utf-8').split('\0')
+selected=[p for p in selected if p and not any(s in p.split('/') for s in ['evidence','receipts','profile','__pycache__']) and not p.endswith(('.log','.zip','.tmp'))]
 files=[]
+for required in ['docs/beta-sprint/spatial-puzzle-batch-01/QA_HANDOFF.md','docs/beta-sprint/spatial-puzzle-batch-01/TEST_REPORT.md','experiments/spatial_puzzle_batch_01/ui/main.tscn']:
+    if required not in selected: raise SystemExit('Missing committed delivery input: '+required)
 target.mkdir(parents=True,exist_ok=False)
 project=target/'project'
 payload=git('archive','--format=tar',head,*roots) # Stay below Windows command-line length.
@@ -34,15 +36,18 @@ with tarfile.open(fileobj=io.BytesIO(payload)) as source:
 
 # Reuse existing compiled imports. No editor/import command rewrites frozen sources.
 imports={}
+import_metadata={}
 for path in project.rglob('*.import'):
     metadata=path.read_text(encoding='utf-8-sig')
     source_match=re.search(r'source_file="res://([^"]+)"',metadata)
-    for relative in re.findall(r'res://(\.godot/imported/[^"\s]+)',metadata): imports[relative]=source_match[1] if source_match else None
+    for relative in re.findall(r'res://(\.godot/imported/[^"\s]+)',metadata):
+        imports[relative]=source_match[1] if source_match else None
+        import_metadata[relative]=path.relative_to(project)
 owners=json.loads((root/'docs/beta-sprint/game-feel/WORKTREES.json').read_text(encoding='utf-8-sig'))['owners']
 cache_roots=[root,Path('E:/godot/beta-sprint-builds/beta_five_level_3d_20261009_01/project')]+[Path(x['worktree']) for x in owners]
 for relative in sorted(imports):
     asset=imports[relative]
-    candidates=[p/relative for p in cache_roots if asset and (p/asset).is_file() and (p/asset).read_bytes()==(project/asset).read_bytes()]
+    candidates=[p/relative for p in cache_roots if asset and (p/asset).is_file() and (p/asset).read_bytes()==(project/asset).read_bytes() and (p/import_metadata[relative]).is_file() and (p/import_metadata[relative]).read_bytes()==(project/import_metadata[relative]).read_bytes()]
     source=next((p for p in candidates if p.is_file()),None)
     if source is None: raise SystemExit('Missing existing import artifact: '+relative)
     data=source.read_bytes();destination=project/relative
