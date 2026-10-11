@@ -1,0 +1,1294 @@
+{
+	"checks": 31,
+	"doubles": [],
+	"failures": [
+		"Baker rejects cross_world",
+		"Baker rejects unwalkable"
+	],
+	"pid": 3008,
+	"rows": [
+		{
+			"after": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 0,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "CAMERA_NOT_ALLOWED"
+						},
+						"entity_ids": [],
+						"message": "Author did not permit this quadrant.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2101,
+				"status": 1
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 1,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target_a",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 1,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target_a",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 2,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "target_b",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 2,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "target_b",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			}
+		},
+		{
+			"after": {
+				"camera_quadrant": 3,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"camera": 3,
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": false,
+				"global_kind": 0,
+				"issues": [
+					{
+						"code": 1502,
+						"details": {
+							"reason_category": "CAMERA_NOT_ALLOWED"
+						},
+						"entity_ids": [],
+						"message": "Author did not permit this quadrant.",
+						"path": "perspective_fall",
+						"severity": 0
+					}
+				],
+				"next_state": null,
+				"previous_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 2101,
+				"status": 1
+			}
+		},
+		{
+			"bake": {
+				"issues": [],
+				"level": {
+					"build_info": {},
+					"camera_initial_quadrant": 1,
+					"celestial": {
+						"edges": [],
+						"initial_slot_id": "sky",
+						"slot_order": [
+							"sky"
+						],
+						"slots": [
+							{
+								"position2": "(0, 30, 0)",
+								"slot_id": "sky"
+							}
+						],
+						"wrap": false
+					},
+					"cell_size": 1,
+					"content_hash": "2b6dc8a944c87bba0393fb441bda8e6848ba60e6cb084e540d1001f863b5d602",
+					"contract_version": "foundation.game_feel.v2",
+					"cubes": [
+						{
+							"center2": "(-4, 0, 8)",
+							"cube_id": "goal",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(-4, 0, -12)",
+							"cube_id": "return",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(0, 4, 0)",
+							"cube_id": "source",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(-6, 0, 8)",
+							"cube_id": "target_a",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(-6, 0, -12)",
+							"cube_id": "target_b",
+							"group_id": "",
+							"layer": 1,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						}
+					],
+					"face_transitions": [],
+					"faces": [
+						{
+							"cube_id": "goal",
+							"face": 1,
+							"face_id": "goal/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 5,
+							"face_id": "goal/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 0,
+							"face_id": "goal/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 2,
+							"face_id": "goal/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 3,
+							"face_id": "goal/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 4,
+							"face_id": "goal/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "return",
+							"face": 1,
+							"face_id": "return/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 5,
+							"face_id": "return/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 0,
+							"face_id": "return/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 2,
+							"face_id": "return/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 3,
+							"face_id": "return/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 4,
+							"face_id": "return/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "source",
+							"face": 1,
+							"face_id": "source/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 5,
+							"face_id": "source/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 0,
+							"face_id": "source/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 2,
+							"face_id": "source/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 3,
+							"face_id": "source/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 4,
+							"face_id": "source/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "target_a",
+							"face": 1,
+							"face_id": "target_a/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 5,
+							"face_id": "target_a/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 0,
+							"face_id": "target_a/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 2,
+							"face_id": "target_a/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 3,
+							"face_id": "target_a/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 4,
+							"face_id": "target_a/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "target_b",
+							"face": 1,
+							"face_id": "target_b/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 5,
+							"face_id": "target_b/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 0,
+							"face_id": "target_b/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 2,
+							"face_id": "target_b/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 3,
+							"face_id": "target_b/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 4,
+							"face_id": "target_b/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						}
+					],
+					"flag_definitions": [],
+					"goal": {
+						"face_id": "goal/TOP",
+						"required_flags": []
+					},
+					"groups": [],
+					"level_id": "perspective_fork_lab",
+					"mechanisms": [],
+					"orientation_version": "cube24.v1",
+					"perspective_falls": [
+						{
+							"allowed_camera_quadrants": [
+								1
+							],
+							"allowed_world_orientations": [
+								0
+							],
+							"connection_id": "fork_a",
+							"motion_profile_id": "fork_a_cubic",
+							"orientation_policy": "PRESERVE",
+							"presentation_duration_ms": 600,
+							"required_flags": [],
+							"source_edge": 2,
+							"source_face_id": "source/TOP",
+							"target_face_id": "target_a/TOP",
+							"trajectory": {
+								"departure_points2": [
+									"(0, 6, 0)",
+									"(-2, 6, 0)"
+								],
+								"descent_control_points2": [
+									"(-2, 6, 0)",
+									"(-4, 6, 0)",
+									"(-6, 4, 8)",
+									"(-6, 2, 8)"
+								],
+								"trajectory_version": "pfall.departure_cubic.v1"
+							}
+						},
+						{
+							"allowed_camera_quadrants": [
+								2
+							],
+							"allowed_world_orientations": [
+								0
+							],
+							"connection_id": "fork_b",
+							"motion_profile_id": "fork_b_cubic",
+							"orientation_policy": "PRESERVE",
+							"presentation_duration_ms": 600,
+							"required_flags": [],
+							"source_edge": 2,
+							"source_face_id": "source/TOP",
+							"target_face_id": "target_b/TOP",
+							"trajectory": {
+								"departure_points2": [
+									"(0, 6, 0)",
+									"(-2, 6, 0)"
+								],
+								"descent_control_points2": [
+									"(-2, 6, 0)",
+									"(-4, 6, 0)",
+									"(-6, 4, -12)",
+									"(-6, 2, -12)"
+								],
+								"trajectory_version": "pfall.departure_cubic.v1"
+							}
+						},
+						{
+							"allowed_camera_quadrants": [
+								0
+							],
+							"allowed_world_orientations": [
+								0
+							],
+							"connection_id": "return_path",
+							"motion_profile_id": "return_path_cubic",
+							"orientation_policy": "PRESERVE",
+							"presentation_duration_ms": 600,
+							"required_flags": [],
+							"source_edge": 0,
+							"source_face_id": "return/TOP",
+							"target_face_id": "source/TOP",
+							"trajectory": {
+								"departure_points2": [
+									"(-4, 2, -12)",
+									"(-2, 2, -12)"
+								],
+								"descent_control_points2": [
+									"(-2, 2, -12)",
+									"(0, 2, -12)",
+									"(0, 8, 0)",
+									"(0, 6, 0)"
+								],
+								"trajectory_version": "pfall.departure_cubic.v1"
+							}
+						}
+					],
+					"rule_version": "foundation.rules.game_feel.v2",
+					"schema_version": 3,
+					"shift_compatibilities": [
+						0
+					],
+					"spawn": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"worlds": [
+						{
+							"allowed_rotation_deltas": [],
+							"allowed_rotation_intents": [],
+							"allowed_states": [
+								0
+							],
+							"initial_orientation": 0,
+							"layer": 0,
+							"pivot2": "(0, 0, 0)"
+						},
+						{
+							"allowed_rotation_deltas": [],
+							"allowed_rotation_intents": [],
+							"allowed_states": [
+								0
+							],
+							"initial_orientation": 0,
+							"layer": 1,
+							"pivot2": "(0, 0, 0)"
+						}
+					]
+				},
+				"ok": true,
+				"validation": {
+					"checks_performed": 51,
+					"configurations_checked": 1,
+					"issues": [],
+					"status": 0
+				}
+			},
+			"mutation": "cross_world"
+		},
+		{
+			"bake": {
+				"issues": [],
+				"level": {
+					"build_info": {},
+					"camera_initial_quadrant": 1,
+					"celestial": {
+						"edges": [],
+						"initial_slot_id": "sky",
+						"slot_order": [
+							"sky"
+						],
+						"slots": [
+							{
+								"position2": "(0, 30, 0)",
+								"slot_id": "sky"
+							}
+						],
+						"wrap": false
+					},
+					"cell_size": 1,
+					"content_hash": "c6d18135b53cfba36b4915254c2cb51f71b5392b6d30f7a389635392897e603f",
+					"contract_version": "foundation.game_feel.v2",
+					"cubes": [
+						{
+							"center2": "(-4, 0, 8)",
+							"cube_id": "goal",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(-4, 0, -12)",
+							"cube_id": "return",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(0, 4, 0)",
+							"cube_id": "source",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(-6, 0, 8)",
+							"cube_id": "target_a",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						},
+						{
+							"center2": "(-6, 0, -12)",
+							"cube_id": "target_b",
+							"group_id": "",
+							"layer": 0,
+							"occludes_light": true,
+							"orientation": 0,
+							"tags": []
+						}
+					],
+					"face_transitions": [],
+					"faces": [
+						{
+							"cube_id": "goal",
+							"face": 1,
+							"face_id": "goal/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 5,
+							"face_id": "goal/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 0,
+							"face_id": "goal/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 2,
+							"face_id": "goal/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 3,
+							"face_id": "goal/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "goal",
+							"face": 4,
+							"face_id": "goal/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "return",
+							"face": 1,
+							"face_id": "return/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 5,
+							"face_id": "return/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 0,
+							"face_id": "return/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 2,
+							"face_id": "return/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 3,
+							"face_id": "return/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "return",
+							"face": 4,
+							"face_id": "return/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "source",
+							"face": 1,
+							"face_id": "source/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 5,
+							"face_id": "source/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 0,
+							"face_id": "source/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 2,
+							"face_id": "source/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 3,
+							"face_id": "source/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "source",
+							"face": 4,
+							"face_id": "source/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						},
+						{
+							"cube_id": "target_a",
+							"face": 1,
+							"face_id": "target_a/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 5,
+							"face_id": "target_a/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 0,
+							"face_id": "target_a/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 2,
+							"face_id": "target_a/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 3,
+							"face_id": "target_a/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_a",
+							"face": 4,
+							"face_id": "target_a/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 1,
+							"face_id": "target_b/BACK",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 5,
+							"face_id": "target_b/BOTTOM",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 0,
+							"face_id": "target_b/FRONT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 2,
+							"face_id": "target_b/LEFT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 3,
+							"face_id": "target_b/RIGHT",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": false
+						},
+						{
+							"cube_id": "target_b",
+							"face": 4,
+							"face_id": "target_b/TOP",
+							"mechanism_ids": [],
+							"shift_entry_blocked": false,
+							"shift_exit_blocked": false,
+							"walkable": true
+						}
+					],
+					"flag_definitions": [],
+					"goal": {
+						"face_id": "goal/TOP",
+						"required_flags": []
+					},
+					"groups": [],
+					"level_id": "perspective_fork_lab",
+					"mechanisms": [],
+					"orientation_version": "cube24.v1",
+					"perspective_falls": [
+						{
+							"allowed_camera_quadrants": [
+								1
+							],
+							"allowed_world_orientations": [
+								0
+							],
+							"connection_id": "fork_a",
+							"motion_profile_id": "fork_a_cubic",
+							"orientation_policy": "PRESERVE",
+							"presentation_duration_ms": 600,
+							"required_flags": [],
+							"source_edge": 2,
+							"source_face_id": "source/TOP",
+							"target_face_id": "target_a/TOP",
+							"trajectory": {
+								"departure_points2": [
+									"(0, 6, 0)",
+									"(-2, 6, 0)"
+								],
+								"descent_control_points2": [
+									"(-2, 6, 0)",
+									"(-4, 6, 0)",
+									"(-6, 4, 8)",
+									"(-6, 2, 8)"
+								],
+								"trajectory_version": "pfall.departure_cubic.v1"
+							}
+						},
+						{
+							"allowed_camera_quadrants": [
+								2
+							],
+							"allowed_world_orientations": [
+								0
+							],
+							"connection_id": "fork_b",
+							"motion_profile_id": "fork_b_cubic",
+							"orientation_policy": "PRESERVE",
+							"presentation_duration_ms": 600,
+							"required_flags": [],
+							"source_edge": 2,
+							"source_face_id": "source/TOP",
+							"target_face_id": "target_b/TOP",
+							"trajectory": {
+								"departure_points2": [
+									"(0, 6, 0)",
+									"(-2, 6, 0)"
+								],
+								"descent_control_points2": [
+									"(-2, 6, 0)",
+									"(-4, 6, 0)",
+									"(-6, 4, -12)",
+									"(-6, 2, -12)"
+								],
+								"trajectory_version": "pfall.departure_cubic.v1"
+							}
+						},
+						{
+							"allowed_camera_quadrants": [
+								0
+							],
+							"allowed_world_orientations": [
+								0
+							],
+							"connection_id": "return_path",
+							"motion_profile_id": "return_path_cubic",
+							"orientation_policy": "PRESERVE",
+							"presentation_duration_ms": 600,
+							"required_flags": [],
+							"source_edge": 0,
+							"source_face_id": "return/TOP",
+							"target_face_id": "source/TOP",
+							"trajectory": {
+								"departure_points2": [
+									"(-4, 2, -12)",
+									"(-2, 2, -12)"
+								],
+								"descent_control_points2": [
+									"(-2, 2, -12)",
+									"(0, 2, -12)",
+									"(0, 8, 0)",
+									"(0, 6, 0)"
+								],
+								"trajectory_version": "pfall.departure_cubic.v1"
+							}
+						}
+					],
+					"rule_version": "foundation.rules.game_feel.v2",
+					"schema_version": 3,
+					"shift_compatibilities": [
+						0
+					],
+					"spawn": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"worlds": [
+						{
+							"allowed_rotation_deltas": [],
+							"allowed_rotation_intents": [],
+							"allowed_states": [
+								0
+							],
+							"initial_orientation": 0,
+							"layer": 0,
+							"pivot2": "(0, 0, 0)"
+						},
+						{
+							"allowed_rotation_deltas": [],
+							"allowed_rotation_intents": [],
+							"allowed_states": [
+								0
+							],
+							"initial_orientation": 0,
+							"layer": 1,
+							"pivot2": "(0, 0, 0)"
+						}
+					]
+				},
+				"ok": true,
+				"validation": {
+					"checks_performed": 48,
+					"configurations_checked": 1,
+					"issues": [],
+					"status": 0
+				}
+			},
+			"mutation": "unwalkable"
+		},
+		{
+			"bake": {
+				"issues": [
+					{
+						"code": 1006,
+						"details": {},
+						"entity_ids": [],
+						"message": "Overlapping connection permissions are ambiguous.",
+						"path": "perspective_falls[1]",
+						"severity": 0
+					}
+				],
+				"level": null,
+				"ok": false,
+				"validation": null
+			},
+			"mutation": "overlap"
+		}
+	],
+	"user_data_dir": "E:/godot/worktrees/block-girl-spatial-map-01/docs/beta-sprint/spatial-puzzle-batch-01/maps/evidence/fork_matrix_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+}
