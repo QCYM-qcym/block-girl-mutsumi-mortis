@@ -187,7 +187,7 @@ func fork_cases(definition: Dictionary) -> void:
 	var obstacle: Dictionary = Maps.authoring(&"perspective_fork_lab")
 	obstacle.cubes.append({"cube_id":&"quality_cubic_blocker","layer":0,"center2":Vector3i(-4,6,2),"orientation":0,"group_id":&"","occludes_light":true,"tags":[]})
 	obstacle.faces.append_array(Geometry.make_face_nodes(&"quality_cubic_blocker"))
-	obstacle.content_hash = "0".repeat(64)
+	obstacle["content_hash"] = "0".repeat(64)
 	var obstacle_hash := Codec.compute_content_hash(obstacle)
 	check(obstacle_hash.ok,"adversarial blocker canonical hash computes: " + str(obstacle_hash.issues))
 	rows.append({"adversarial_blocker_hash":obstacle_hash})
@@ -202,7 +202,7 @@ func fork_cases(definition: Dictionary) -> void:
 	var road_faces := Geometry.make_face_nodes(&"quality_roll_neighbor")
 	for face in road_faces: face.walkable = face.face == 4
 	road.faces.append_array(road_faces)
-	road.content_hash = "0".repeat(64)
+	road["content_hash"] = "0".repeat(64)
 	var road_hash := Codec.compute_content_hash(road)
 	check(road_hash.ok,"adversarial ordinary-road canonical hash computes")
 	road.content_hash = road_hash.content_hash
@@ -243,8 +243,20 @@ func lifecycle(definition: Dictionary, prefix: String) -> void:
 	await process_frame
 	await process_frame
 	check(runtime.get_commit_count() == 1,"busy input was never queued/deferred")
+	# Capture a NEW live identity: neither Reset nor logical completion retires it
+	# before the UNLOAD boundary under test.
+	runtime.reset()
+	var starts_before: int = native.size()
+	var unloading: Dictionary = runtime.request_action({"kind":0,"face_axis":2} if prefix == "fork" else {"kind":0,"face_axis":0})
+	check(unloading.status == 0 and unloading.changed and native.size() == starts_before+1 and not runtime.is_idle(),"unload test begins with a fresh accepted pending transition")
+	if native.size() != starts_before+1: return
+	var unload_identity: Dictionary = native[-1].identity
+	check(not runtime.get_pending_identity(unload_identity.transaction_id,unload_identity.generation,unload_identity.is_global).is_empty(),"fresh token is live immediately before UNLOAD")
+	var unload_commits: int = runtime.get_commit_count()
 	runtime.interrupt("UNLOAD")
-	check(runtime.finish_transition(old).get("ignored",false),"unload leaves original callback invalid")
+	check(not runtime.is_loaded() and runtime.get_pending_identity(unload_identity.transaction_id,unload_identity.generation,unload_identity.is_global).is_empty(),"UNLOAD retires the actual pending identity and session")
+	check(runtime.finish_transition(unload_identity).get("ignored",false) and runtime.get_commit_count() == unload_commits,"formerly live unload callback cannot commit")
+	rows.append({"coverage":"pending_unload_identity","map":prefix,"identity":unload_identity,"is_loaded":runtime.is_loaded(),"commits":runtime.get_commit_count()})
 
 func run() -> void:
 	for id in Maps.ids():
