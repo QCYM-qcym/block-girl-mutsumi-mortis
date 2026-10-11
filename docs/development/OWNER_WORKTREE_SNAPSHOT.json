@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "task": "GITHUB_DEVELOPMENT_GOVERNANCE_01",
+  "captured_at": "2026-10-11T19:26:36.011926+08:00",
+  "scope": "Pre-governance snapshot; branch identities are not production authorization",
+  "repository": "E:/godot/若叶睦/方块少女-若叶睦",
+  "remote": "https://github.com/QCYM-qcym/block-girl-mutsumi-mortis.git",
+  "base_sha": "8a77874cc18ceb654664c3e9aeb10a2ccd318048",
+  "governance_branch": "docs/github-delivery-governance-20261011",
+  "governance_worktree": "E:/godot/worktrees/block-girl-git-governance-12",
+  "observed_existing_branch_count": 58,
+  "observed_existing_worktree_count": 52,
+  "branches": {
+    "debug/foundation-4-baseline-f2-graphical": "bd393303d3a21ae3ddebc6643a94a114437365a3",
+    "design/rubiks-spatial-puzzles": "25de1f6202c764e4003634a387ae05e38bd387c4",
+    "dev/godot-editor-playable": "2cadbb134459d5384741607c14bd6d42b393708d",
+    "docs/foundation-4-authoring-design": "55d1edbafcfa507cc55ef9c0dda79f3d57e80e82",
+    "feat/beta-3d-integration-02": "b910167becee2194c0cfc724d8f0fe47578836a9",
+    "feat/beta-content-batch-02": "9482e7279acd2cc99af0f7b2211790ab2eace815",
+    "feat/beta-content-batch-03": "7d4a050c68dd6c9a6527486c1dbded5c61ec0c6d",
+    "feat/beta-five-level-3d": "2cfc4d2ef221c450ad9024c8ea3a72d69e4fcf63",
+    "feat/beta-game-content": "608a18a8c0627bb8a8a57f3cde554e723016dbb7",
+    "feat/beta-game-shell": "7abf98d1e184fda5801c9271ebf02951ed6ecadd",
+    "feat/beta-map-spatial-design": "8a80fbb64eca7e6d7449654f4ace39a35e0f6d41",
+    "feat/beta-shell-batch-02": "d22e3999282ffb48b7c2047c4365623b3b1e32bb",
+    "feat/edge-recoil-animation": "285896da24b4f5ec223fe8bf3f75e29fa1d18381",
+    "feat/foundation-authoring-data": "8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2",
+    "feat/foundation-authoring-quality": "bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1",
+    "feat/foundation-authoring-runtime": "7836de52866255dd6f9684214b014d9703e7854d",
+    "feat/foundation-celestial-lighting": "84781cc6b7e00b96c60c69f15ea16adbe06bd4ee",
+    "feat/foundation-core": "821bce29fc94dbed42fafbe3f4a720b4715d4aa3",
+    "feat/foundation-data-contracts": "38894843c682be7f42be8fe4dad0c512d87ffebf",
+    "feat/foundation-editor-tools": "98db5f1fdef9b396d786225214d62d1216c17e62",
+    "feat/foundation-level-baker": "f5e72665f8f099f5103a49b9de58b72e45c90c66",
+    "feat/foundation-orientation-math": "10b1fb1a564c500d58b7d8ecc2343baef74942e3",
+    "feat/foundation-puzzle-intent-ablation": "70500cbf576e9f21c9238a7728916b41bd45b4e7",
+    "feat/foundation-rule-kernel": "384696f3708504d806c630b7e57a898139780695",
+    "feat/foundation-runtime-parity": "e6f7083be9cccef05642a7fcdb7c9f3c2f5870b2",
+    "feat/foundation-runtime-prototype": "aa5362f04dfb0477f7234c8f96bc48773a305de2",
+    "feat/foundation-runtime-saved-closure": "7493ab31cf6a71ca9b4778bfe871f33bba2e586d",
+    "feat/foundation-runtime-stage-result": "8f7fb52f029053bda10b965da840c6763fc13bf0",
+    "feat/foundation-softlock-analysis": "f41fa732bb6e1a0f4e0be3c703e5364bc9aab2e2",
+    "feat/foundation-spatial-model": "ebeabef11adcc5aa588a74ef290748b14a455c3a",
+    "feat/foundation-state-explorer-bfs": "f34dd271adabcc4b724eb55b5fff1cb35f532e59",
+    "feat/foundation-static-validator": "f530e2fe16c64880812b1b20a06504798a477b6b",
+    "feat/game-feel-audio": "2f98464f4d5349d3ab8463bd4de3c9532c480b0c",
+    "feat/game-feel-full-slice-01": "d1277ec90b5a739efd4862d314e6c29ac5ac1eda",
+    "feat/game-feel-ui": "3e75c9b135a40f13c83af8f4bb9fe65f87b159e1",
+    "feat/game-feel-ui-extension-01": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+    "feat/l06-preproduction": "d2b78e183839e078c9a28074b2e25359a40608c4",
+    "feat/pfall-animation": "5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a",
+    "feat/pfall-map": "12a16483c56557aa794a7c1b7f52b2b0a348236f",
+    "feat/pfall-runtime": "fd22434d3eb0de52a764cb98222371a39412635a",
+    "feat/playable-puzzle-p01": "549a2402089c4b4915f318c9ed29a50ed4a2256f",
+    "feat/playable-puzzle-p02": "4643062e83a962000d14f0e1dbfbece6e310d4ed",
+    "feat/spatial-map-01": "0f26b64956c6b055f5f1ead49e7b8aee1146d0f8",
+    "feat/spatial-puzzle-batch-01": "9386f4a084cbd1132c94ab9277a40106cd1d2cb7",
+    "feat/spatial-runtime-01": "697a31ed85e29b1d37ec882e712d323751bd90a1",
+    "feat/spatial-ui-01": "f53ddce0342ff1bf5d80322d8a90d9e0ddee7748",
+    "fix/beta-pause-text-20261009": "56b70f96be3a05bb45e20cf90f50d99826af3945",
+    "fix/l04-inner-movement-p1": "a80a28b4edafda1faa5be4e890e0b61447afc716",
+    "integration/foundation-2-kernel-safety": "a0699debe42cf880d25ddda57d46c123bc912b4c",
+    "integration/foundation-3-solver-quality": "bfcc6c004db232ca2f4ea4d409c98bda0dc6d165",
+    "integration/foundation-4-authoring": "99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff",
+    "main": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "prototype/perspective-fall-01": "d5d63f37af8624f332ed4e9ab90b096cab891ff9",
+    "release/beta-game-feel-20261010": "25de1f6202c764e4003634a387ae05e38bd387c4",
+    "test/beta-3d02-focused-qa": "b910167becee2194c0cfc724d8f0fe47578836a9",
+    "test/game-feel-quality": "fd66bfa08099a0bdc7230b2399ee74766ceff3e2",
+    "test/game-feel-quality-01": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "test/spatial-quality-01": "cd1989d1803c1ef9e2695bda6e398ffa97299e6e"
+  },
+  "worktrees": [
+    {
+      "worktree": "E:/godot/若叶睦/方块少女-若叶睦",
+      "branch": "main",
+      "head": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-3d-integration-02",
+      "branch": "feat/beta-3d-integration-02",
+      "head": "b910167becee2194c0cfc724d8f0fe47578836a9",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-3d02-focused-qa",
+      "branch": "test/beta-3d02-focused-qa",
+      "head": "b910167becee2194c0cfc724d8f0fe47578836a9",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-content-batch-02",
+      "branch": "feat/beta-content-batch-02",
+      "head": "9482e7279acd2cc99af0f7b2211790ab2eace815",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-content-batch-03",
+      "branch": "feat/beta-content-batch-03",
+      "head": "7d4a050c68dd6c9a6527486c1dbded5c61ec0c6d",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-game-content",
+      "branch": "feat/beta-game-content",
+      "head": "608a18a8c0627bb8a8a57f3cde554e723016dbb7",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-game-shell",
+      "branch": "fix/beta-pause-text-20261009",
+      "head": "56b70f96be3a05bb45e20cf90f50d99826af3945",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-beta-shell-batch-02",
+      "branch": "feat/beta-shell-batch-02",
+      "head": "d22e3999282ffb48b7c2047c4365623b3b1e32bb",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-design-mechanics",
+      "branch": "design/rubiks-spatial-puzzles",
+      "head": "25de1f6202c764e4003634a387ae05e38bd387c4",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-editor-dev",
+      "branch": "dev/godot-editor-playable",
+      "head": "2cadbb134459d5384741607c14bd6d42b393708d",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-five-level-3d",
+      "branch": "feat/beta-five-level-3d",
+      "head": "2cfc4d2ef221c450ad9024c8ea3a72d69e4fcf63",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-3-integration",
+      "branch": "integration/foundation-3-solver-quality",
+      "head": "bfcc6c004db232ca2f4ea4d409c98bda0dc6d165",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-4-integration",
+      "branch": "feat/game-feel-full-slice-01",
+      "head": "d1277ec90b5a739efd4862d314e6c29ac5ac1eda",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-data",
+      "branch": "feat/foundation-authoring-data",
+      "head": "8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-design",
+      "branch": "docs/foundation-4-authoring-design",
+      "head": "55d1edbafcfa507cc55ef9c0dda79f3d57e80e82",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-quality",
+      "branch": "feat/foundation-authoring-quality",
+      "head": "bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-authoring-runtime",
+      "branch": "feat/foundation-authoring-runtime",
+      "head": "7836de52866255dd6f9684214b014d9703e7854d",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-baker",
+      "branch": "feat/foundation-level-baker",
+      "head": "f5e72665f8f099f5103a49b9de58b72e45c90c66",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-celestial",
+      "branch": "feat/foundation-celestial-lighting",
+      "head": "84781cc6b7e00b96c60c69f15ea16adbe06bd4ee",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-contracts",
+      "branch": "feat/foundation-data-contracts",
+      "head": "38894843c682be7f42be8fe4dad0c512d87ffebf",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-editor-tools",
+      "branch": "feat/foundation-editor-tools",
+      "head": "98db5f1fdef9b396d786225214d62d1216c17e62",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-f2-baseline-debug",
+      "branch": "debug/foundation-4-baseline-f2-graphical",
+      "head": "bd393303d3a21ae3ddebc6643a94a114437365a3",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-intent",
+      "branch": "feat/foundation-puzzle-intent-ablation",
+      "head": "70500cbf576e9f21c9238a7728916b41bd45b4e7",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-kernel-safety",
+      "branch": "integration/foundation-2-kernel-safety",
+      "head": "a0699debe42cf880d25ddda57d46c123bc912b4c",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-orientation",
+      "branch": "feat/foundation-orientation-math",
+      "head": "10b1fb1a564c500d58b7d8ecc2343baef74942e3",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-parity",
+      "branch": "feat/foundation-runtime-parity",
+      "head": "e6f7083be9cccef05642a7fcdb7c9f3c2f5870b2",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-rule-kernel",
+      "branch": "feat/foundation-rule-kernel",
+      "head": "384696f3708504d806c630b7e57a898139780695",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-runtime",
+      "branch": "feat/foundation-runtime-prototype",
+      "head": "aa5362f04dfb0477f7234c8f96bc48773a305de2",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-runtime-saved-closure",
+      "branch": "feat/foundation-runtime-saved-closure",
+      "head": "7493ab31cf6a71ca9b4778bfe871f33bba2e586d",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-runtime-stage-result",
+      "branch": "feat/foundation-runtime-stage-result",
+      "head": "8f7fb52f029053bda10b965da840c6763fc13bf0",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-softlock",
+      "branch": "feat/foundation-softlock-analysis",
+      "head": "f41fa732bb6e1a0f4e0be3c703e5364bc9aab2e2",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-solver",
+      "branch": "feat/foundation-state-explorer-bfs",
+      "head": "f34dd271adabcc4b724eb55b5fff1cb35f532e59",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-spatial",
+      "branch": "feat/foundation-spatial-model",
+      "head": "ebeabef11adcc5aa588a74ef290748b14a455c3a",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-foundation-validator",
+      "branch": "feat/foundation-static-validator",
+      "head": "f530e2fe16c64880812b1b20a06504798a477b6b",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-audio",
+      "branch": "feat/game-feel-audio",
+      "head": "2f98464f4d5349d3ab8463bd4de3c9532c480b0c",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-edge-animation",
+      "branch": "feat/edge-recoil-animation",
+      "head": "285896da24b4f5ec223fe8bf3f75e29fa1d18381",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-fall-animation",
+      "branch": "feat/pfall-animation",
+      "head": "5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-map",
+      "branch": "feat/pfall-map",
+      "head": "12a16483c56557aa794a7c1b7f52b2b0a348236f",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-quality",
+      "branch": "test/game-feel-quality",
+      "head": "fd66bfa08099a0bdc7230b2399ee74766ceff3e2",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-quality-01",
+      "branch": "test/game-feel-quality-01",
+      "head": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-runtime",
+      "branch": "feat/pfall-runtime",
+      "head": "fd22434d3eb0de52a764cb98222371a39412635a",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-ui",
+      "branch": "feat/game-feel-ui",
+      "head": "3e75c9b135a40f13c83af8f4bb9fe65f87b159e1",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-game-feel-ui-extension-01",
+      "branch": "feat/game-feel-ui-extension-01",
+      "head": "2938d6e534f5b596bb320ce79d72b69f5923f3cd",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-l04-inner-movement-p1",
+      "branch": "fix/l04-inner-movement-p1",
+      "head": "a80a28b4edafda1faa5be4e890e0b61447afc716",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-l06-preproduction",
+      "branch": "feat/l06-preproduction",
+      "head": "d2b78e183839e078c9a28074b2e25359a40608c4",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-map-spatial-design",
+      "branch": "prototype/perspective-fall-01",
+      "head": "d5d63f37af8624f332ed4e9ab90b096cab891ff9",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-spatial-map-01",
+      "branch": "feat/spatial-map-01",
+      "head": "0f26b64956c6b055f5f1ead49e7b8aee1146d0f8",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-spatial-puzzle-batch-01",
+      "branch": "feat/spatial-puzzle-batch-01",
+      "head": "9386f4a084cbd1132c94ab9277a40106cd1d2cb7",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-spatial-quality-01",
+      "branch": "test/spatial-quality-01",
+      "head": "cd1989d1803c1ef9e2695bda6e398ffa97299e6e",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-spatial-runtime-01",
+      "branch": "feat/spatial-runtime-01",
+      "head": "697a31ed85e29b1d37ec882e712d323751bd90a1",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/block-girl-spatial-ui-01",
+      "branch": "feat/spatial-ui-01",
+      "head": "f53ddce0342ff1bf5d80322d8a90d9e0ddee7748",
+      "working_tree": "DIRTY",
+      "root_agents_present_at_audit": false
+    },
+    {
+      "worktree": "E:/godot/worktrees/release-12",
+      "branch": "release/beta-game-feel-20261010",
+      "head": "25de1f6202c764e4003634a387ae05e38bd387c4",
+      "working_tree": "CLEAN",
+      "root_agents_present_at_audit": false
+    }
+  ],
+  "policy_active_branches": [
+    "docs/github-delivery-governance-20261011"
+  ],
+  "policy_pending_branches": [
+    "debug/foundation-4-baseline-f2-graphical",
+    "design/rubiks-spatial-puzzles",
+    "dev/godot-editor-playable",
+    "docs/foundation-4-authoring-design",
+    "feat/beta-3d-integration-02",
+    "feat/beta-content-batch-02",
+    "feat/beta-content-batch-03",
+    "feat/beta-five-level-3d",
+    "feat/beta-game-content",
+    "feat/beta-game-shell",
+    "feat/beta-map-spatial-design",
+    "feat/beta-shell-batch-02",
+    "feat/edge-recoil-animation",
+    "feat/foundation-authoring-data",
+    "feat/foundation-authoring-quality",
+    "feat/foundation-authoring-runtime",
+    "feat/foundation-celestial-lighting",
+    "feat/foundation-core",
+    "feat/foundation-data-contracts",
+    "feat/foundation-editor-tools",
+    "feat/foundation-level-baker",
+    "feat/foundation-orientation-math",
+    "feat/foundation-puzzle-intent-ablation",
+    "feat/foundation-rule-kernel",
+    "feat/foundation-runtime-parity",
+    "feat/foundation-runtime-prototype",
+    "feat/foundation-runtime-saved-closure",
+    "feat/foundation-runtime-stage-result",
+    "feat/foundation-softlock-analysis",
+    "feat/foundation-spatial-model",
+    "feat/foundation-state-explorer-bfs",
+    "feat/foundation-static-validator",
+    "feat/game-feel-audio",
+    "feat/game-feel-full-slice-01",
+    "feat/game-feel-ui",
+    "feat/game-feel-ui-extension-01",
+    "feat/l06-preproduction",
+    "feat/pfall-animation",
+    "feat/pfall-map",
+    "feat/pfall-runtime",
+    "feat/playable-puzzle-p01",
+    "feat/playable-puzzle-p02",
+    "feat/spatial-map-01",
+    "feat/spatial-puzzle-batch-01",
+    "feat/spatial-runtime-01",
+    "feat/spatial-ui-01",
+    "fix/beta-pause-text-20261009",
+    "fix/l04-inner-movement-p1",
+    "integration/foundation-2-kernel-safety",
+    "integration/foundation-3-solver-quality",
+    "integration/foundation-4-authoring",
+    "main",
+    "prototype/perspective-fall-01",
+    "release/beta-game-feel-20261010",
+    "test/beta-3d02-focused-qa",
+    "test/game-feel-quality",
+    "test/game-feel-quality-01",
+    "test/spatial-quality-01"
+  ],
+  "release_tag": {
+    "name": "v0.3-beta-game-feel",
+    "tag_object": "29c573a54aaa11def8c7001a7e78d291df82d8ce",
+    "peeled_commit": "25de1f6202c764e4003634a387ae05e38bd387c4",
+    "backport": "NOT_PLANNED"
+  },
+  "external_owners_pending_registration": [
+    "05 Art external environment",
+    "08 QA independent Build/evidence environment"
+  ]
+}
