@@ -30,7 +30,9 @@ Detailed source identities, paths, hashes and failed prior runs are in maps/MAP_
 
 Owner07 menu c4b119601ad2f92000500b60c36d28e0d1fa9c11 is integrated. Existing SaveStore source is unchanged; the adapter uses a separate experiment save and restores level start. Coordinator evidence/integration_menu_01 independently passes135 checks: menu81, store seed29, separate-process cold restore6, legacy Save19. Every process exit0/stderr0; source driftfalse. Unique project name and new main_scene isolate direct F5 user data, with launch-script profile isolation in addition.
 
-Owner07 final renderer and03 Quality receipts are still being integrated. This document is not yet a final playable acceptance declaration.
+Owner07 final tests949ed7f3c6ff1a4d4d1ca07ed34e933299ddd629 are integrated:236 headless assertions across five processes (29 store seed,6 cold restore,171 actual five-entry menu/lifecycle,11 separate-process actual menu Cold Continue,19 old Save regression). Actual renderer219 assertions and24 PNGs at1920×1080/1280×720/960×720, Windows/D3D12/Forward+/RTX5060Ti, exit0/stderr0/doubles[]/no drift. Menus, all five actual starts, pause, focus, mouse/keyboard reset/return and real Goal-save failure/retry are covered. See ui/RECEIPT.md. Original PNG review withdrew a false control-text truncation suspicion; no Host change was needed.
+
+03 Quality's final formal graphical and affected old-level results are still being integrated. This document is not yet a final playable acceptance declaration.
 
 ## Protected scope and human limits
 
