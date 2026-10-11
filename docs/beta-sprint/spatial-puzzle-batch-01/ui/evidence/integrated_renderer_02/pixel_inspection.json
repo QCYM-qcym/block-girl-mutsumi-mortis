@@ -1,0 +1,39 @@
+{
+  "method": "read-only raw PNG pixel inspection; no image editing",
+  "finding": "operation-region pixels exactly match complete Gate hint; preview truncation suspicion withdrawn",
+  "human_qa": "NOT_RUN",
+  "rows": [
+    {
+      "file": "orientation_loop_lab_960x720.png",
+      "png_sha256": "456137eba10ea0729a8869b69a3ef39ecd2e6c08ea5d74692e2185c28c20227a",
+      "region": "x400..769,y74..98; native BGRA/int32 little-endian",
+      "background_argb": -11776948,
+      "non_background_pixels_after_qe": 3390,
+      "operation_region_sha256": "78118b50f8bb73b846bcb4c90c6c7bd5729f78b436208157011f4caff0123971"
+    },
+    {
+      "file": "face_lock_lab_960x720.png",
+      "png_sha256": "1b271d1f1a52c8969dfca504c482a3d73dd6d45287d35b2c503422c2545f3f62",
+      "region": "x400..769,y74..98; native BGRA/int32 little-endian",
+      "background_argb": -11776948,
+      "non_background_pixels_after_qe": 3390,
+      "operation_region_sha256": "78118b50f8bb73b846bcb4c90c6c7bd5729f78b436208157011f4caff0123971"
+    },
+    {
+      "file": "rubik_spatial_puzzle_01_960x720.png",
+      "png_sha256": "0eb81d93762edb748934a6fc2342f4081dea02ec5bfcc989f32dbfbfe4ba4700",
+      "region": "x400..769,y74..98; native BGRA/int32 little-endian",
+      "background_argb": -11776948,
+      "non_background_pixels_after_qe": 3390,
+      "operation_region_sha256": "78118b50f8bb73b846bcb4c90c6c7bd5729f78b436208157011f4caff0123971"
+    },
+    {
+      "file": "world_shift_gate_lab_960x720.png",
+      "png_sha256": "9e96c974a3e7bc601ce14f56fe2e6163c466fdd47fbc0a5152d342b571cb394f",
+      "region": "x400..769,y74..98; native BGRA/int32 little-endian",
+      "background_argb": -11776948,
+      "non_background_pixels_after_qe": 3390,
+      "operation_region_sha256": "78118b50f8bb73b846bcb4c90c6c7bd5729f78b436208157011f4caff0123971"
+    }
+  ]
+}

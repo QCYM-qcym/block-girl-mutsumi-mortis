@@ -1,10 +1,12 @@
 param(
  [string]$Godot='D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe',
  [string]$EvidenceName=('spatial07_'+(Get-Date -Format 'yyyyMMdd_HHmmss')+'_'+[guid]::NewGuid().ToString('N').Substring(0,8)),
- [string[]]$Cases=@('progress_seed','progress_restore','baseline_save')
+ [string[]]$Cases=@('progress_seed','progress_restore','baseline_save'),
+ [switch]$Graphical
 )
 $ErrorActionPreference='Stop'
 if ($Cases.Count -eq 0 -or $EvidenceName -notmatch '^[a-zA-Z0-9_-]+$') { throw 'Select behavioral cases and a fresh simple name' }
+if ($Graphical -and ($Cases.Count -ne 1 -or $Cases[0] -ne 'menu')) { throw 'Graphical slot is for the actual menu case only' }
 $spatialUiRoot=(Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '../../..')).Path
 $spatialUiEvidence=Join-Path $spatialUiRoot ".godot/spatial-ui/$EvidenceName"
 if (Test-Path -LiteralPath $spatialUiEvidence) { throw 'Evidence is append-only' }
@@ -15,19 +17,22 @@ $spatialUiSources=@(git -C $spatialUiRoot ls-files --cached --others --exclude-s
 $spatialUiHashes=@($spatialUiSources | Sort-Object -Unique | ForEach-Object { [ordered]@{path=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $spatialUiRoot $_)).Hash.ToLowerInvariant()} })
 $spatialUiCache=@(Get-ChildItem -LiteralPath (Join-Path $spatialUiRoot '.godot/imported') -File -ErrorAction SilentlyContinue | ForEach-Object { [ordered]@{path=[IO.Path]::GetRelativePath($spatialUiRoot,$_.FullName).Replace('\','/');sha256=(Get-FileHash -LiteralPath $_.FullName).Hash.ToLowerInvariant()} })
 $spatialUiReport=[ordered]@{head=(git -C $spatialUiRoot rev-parse HEAD).Trim();dirty=@(git -C $spatialUiRoot status --porcelain);source_files=$spatialUiHashes;import_cache_files=$spatialUiCache;status='RUNNING';stages=@();engine_path=$Godot;engine_sha256=(Get-FileHash -LiteralPath $Godot).Hash.ToLowerInvariant();display='headless';profile=$spatialUiProfile;source_drift=$null;human_qa='NOT_RUN';graphical='NOT_RUN'}
+if ($Graphical) { $spatialUiReport.display='Windows'; $spatialUiReport.graphical='AUTOMATED_REAL_RENDERER' }
 $spatialUiStages=[Collections.Generic.List[object]]::new()
 function Save-SpatialUiReport { $spatialUiReport.stages=@($spatialUiStages.ToArray()); [IO.File]::WriteAllText((Join-Path $spatialUiEvidence 'run_report.json'),($spatialUiReport | ConvertTo-Json -Depth 12).Replace("`r`n","`n")+"`n",[Text.UTF8Encoding]::new($false)) }
 try {
  foreach ($spatialUiCase in $Cases) {
-  $spatialUiArgs=@('--headless','--path',('"'+$spatialUiRoot+'"'))
+  $spatialUiArgs=@('--path',('"'+$spatialUiRoot+'"'))
+  if (-not $Graphical) { $spatialUiArgs=@('--headless')+$spatialUiArgs }
   if ($spatialUiCase -eq 'baseline_save') { $spatialUiArgs+=@('--script','res://tests/shell/test_save.gd') }
-  elseif ($spatialUiCase -in @('progress_seed','progress_restore','menu')) { $spatialUiScript=if ($spatialUiCase -eq 'menu') {'test_menu.gd'} else {'test_progress.gd'}; $spatialUiArgs+=@('--script',('res://tests/beta_sprint/spatial_owner_07/'+$spatialUiScript),'--',"--phase=$spatialUiCase",('--evidence-dir="'+(Join-Path $spatialUiEvidence $spatialUiCase)+'"'),"--shell-save=user://spatial_puzzle_batch_01/tests/$EvidenceName/progress.json") }
+  elseif ($spatialUiCase -in @('progress_seed','progress_restore','menu','menu_restore')) { $spatialUiScript=switch ($spatialUiCase) { 'menu' {'test_menu.gd'} 'menu_restore' {'test_menu_restore.gd'} default {'test_progress.gd'} }; $spatialUiArgs+=@('--script',('res://tests/beta_sprint/spatial_owner_07/'+$spatialUiScript),'--',"--phase=$spatialUiCase",('--evidence-dir="'+(Join-Path $spatialUiEvidence $spatialUiCase)+'"'),"--shell-save=user://spatial_puzzle_batch_01/tests/$EvidenceName/progress.json") }
   else { throw 'Unknown case' }
+  if ($Graphical) { $spatialUiArgs+=@('--graphical') }
   $spatialUiOut=Join-Path $spatialUiEvidence "$spatialUiCase.stdout.log"; $spatialUiErr=Join-Path $spatialUiEvidence "$spatialUiCase.stderr.log"
   $spatialUiStage=[ordered]@{name=$spatialUiCase;args=$spatialUiArgs;pid=$null;exit_code=$null;stderr_bytes=$null;checks=0;status='RUNNING'}; $spatialUiStages.Add($spatialUiStage); Save-SpatialUiReport
   $spatialUiProcess=Start-Process -FilePath $Godot -ArgumentList $spatialUiArgs -WindowStyle Hidden -PassThru -Environment @{APPDATA=$spatialUiProfile;LOCALAPPDATA=$spatialUiProfile} -RedirectStandardOutput $spatialUiOut -RedirectStandardError $spatialUiErr
   $spatialUiStage.pid=$spatialUiProcess.Id; Save-SpatialUiReport
-  if (-not $spatialUiProcess.WaitForExit(45000)) { $spatialUiProcess.Kill(); $spatialUiProcess.WaitForExit(); throw 'Own headless process timed out' }; $spatialUiProcess.WaitForExit()
+  if (-not $spatialUiProcess.WaitForExit(90000)) { $spatialUiProcess.Kill(); $spatialUiProcess.WaitForExit(); throw 'Own test process timed out' }; $spatialUiProcess.WaitForExit()
   $spatialUiStage.exit_code=$spatialUiProcess.ExitCode; $spatialUiStage.stderr_bytes=(Get-Item -LiteralPath $spatialUiErr).Length
   $spatialUiText=Get-Content -LiteralPath $spatialUiOut -Raw
   if ($spatialUiStage.exit_code -ne 0 -or $spatialUiStage.stderr_bytes -ne 0 -or $spatialUiText -match 'SCRIPT ERROR:|ERROR:|FAIL:') { $spatialUiStage.status='FAIL'; throw 'Case failed; raw output retained' }
@@ -37,5 +42,5 @@ try {
  }
  foreach ($spatialUiSource in @($spatialUiHashes)+@($spatialUiCache)) { if ((Get-FileHash -LiteralPath (Join-Path $spatialUiRoot $spatialUiSource.path)).Hash.ToLowerInvariant() -ne $spatialUiSource.sha256) { throw 'Source/cache drift' } }
  $spatialUiTotal=0; foreach ($spatialUiStage in $spatialUiStages) { $spatialUiTotal+=[int]$spatialUiStage.checks }; if ($spatialUiTotal -le 0) { throw 'No executed assertions' }
- $spatialUiReport.behavioral_checks=$spatialUiTotal; $spatialUiReport.source_drift=$false; $spatialUiReport.status='PASS'; Save-SpatialUiReport; Write-Output "SPATIAL_OWNER07_HEADLESS_PASS $spatialUiEvidence"
+ $spatialUiReport.behavioral_checks=$spatialUiTotal; $spatialUiReport.source_drift=$false; $spatialUiReport.status='PASS'; Save-SpatialUiReport; Write-Output "SPATIAL_OWNER07_AUTOMATED_PASS display=$($spatialUiReport.display) $spatialUiEvidence"
 } catch { $spatialUiReport.status='FAIL'; $spatialUiReport.failure=$_.Exception.Message; Save-SpatialUiReport; throw }

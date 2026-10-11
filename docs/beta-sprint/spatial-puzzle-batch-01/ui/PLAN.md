@@ -40,4 +40,4 @@ Produces: five independent buttons/metadata, Continue, Save error/retry, old She
 - [x] RED: scene presence and actual control/lifecycle assertions. Missing Factory remains a real dependency, never replaced with a production dummy.
 - [x] Implement menu with approved theme/native controls, read-only Host event routes, captured-node stale signal guards and lifecycle cleanup.
 - [x] GREEN: real Factory/Host seam where delivered, real storage/cold restore, affected legacy regressions and three measured headless viewports. Separate new gameplay/graphical acceptance from these assertions.
-- [ ] Fresh read-only branch review, resolve actual findings with RED/GREEN, commit and bind tested/live/Git blob hashes. Report exact source/dependency/HEAD/CLEAN/Push NOT_RUN.
+- [x] Fresh read-only branch review, resolve actual findings with RED/GREEN, commit and bind tested/live/Git blob hashes. Report exact source/dependency/HEAD/CLEAN/Push NOT_RUN. Final source commit and metadata binding are recorded in RECEIPT / DELIVERY_BINDING; graphical219 and cold headless236 are separate scopes.
