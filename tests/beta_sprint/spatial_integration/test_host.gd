@@ -30,6 +30,7 @@ func run()->void:
 	check(host.actor.has_node("LocalFaceMarks"),"physical cube exposes six distinct local faces")
 	if host.actor.has_node("LocalFaceMarks"):
 		check(host.actor.get_node("LocalFaceMarks").get_child_count()==6,"all six local faces visible as marks")
+	check(host.geometry_root.has_node("ActionMarkers"),"authored movement edge has a visible in-world teaching marker")
 	var deadline:=Time.get_ticks_msec()+3500
 	while not runtime.is_idle() and Time.get_ticks_msec()<deadline: await process_frame
 	check(runtime.is_idle() and runtime.get_commit_count()==1,"natural animation completes one real commit")
