@@ -1,0 +1,21 @@
+{
+  "scope": "QUALITY_RECEIPT_COVERAGE_UNIT_ONLY",
+  "checks": 10,
+  "failures": [
+    "gate: held_input_natural_completion missing from claimed receipt",
+    "loop: held_input_natural_completion missing from claimed receipt",
+    "lock: held_input_natural_completion missing from claimed receipt",
+    "fork: held_input_natural_completion missing from claimed receipt",
+    "combined: held_input_natural_completion missing from claimed receipt",
+    "gate: pending_unload_identity missing from claimed receipt",
+    "loop: pending_unload_identity missing from claimed receipt",
+    "lock: pending_unload_identity missing from claimed receipt",
+    "fork: pending_unload_identity missing from claimed receipt",
+    "combined: pending_unload_identity missing from claimed receipt"
+  ],
+  "gameplay_pass_added": 0,
+  "inputs": [
+    "natural_all_01",
+    "mechanics_05"
+  ]
+}

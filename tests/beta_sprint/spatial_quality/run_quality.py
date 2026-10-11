@@ -23,6 +23,7 @@ JOBS = {
     "maps": (OWNER + "test_maps.gd", False),
     "mechanics": (OWNER + "test_mechanics.gd", False),
     "formal": (OWNER + "test_graphical.gd", True),
+    "natural": (OWNER + "test_natural.gd", True),
     "camera_graphical": (OWNER + "test_graphical_camera.gd", True),
     "legacy_core": ("tests/beta_sprint/game_feel_owner_03/test_yellow_target_core.gd", False),
     "legacy_profile": ("tests/beta_sprint/game_feel_owner_03/test_yellow_target_legacy_profile.gd", False),
