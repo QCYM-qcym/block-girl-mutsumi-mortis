@@ -1,0 +1,29 @@
+# SPATIAL_PUZZLE_BATCH_01_OWNER03_QUALITY_REPORT
+
+03 Quality delivered the bounded test implementation and measured receipts on `test/spatial-quality-01`, `E:/godot/worktrees/block-girl-spatial-quality-01`. Production sources are unchanged by03. Shared contract baseline7442e8172e865d093ff1e73570d891f60d9134af; approved00 integration0075819b2f6f7c93fa38c733792afff5d094dc93, including01finalb78d07c,09finalfd162d5 and Bridge27f57be, was normally merged. Delivery commits include60643e7a06872258ca602beb411d6f8e5dd729a2 and480bf4cc09157325b8d4a8b28a059981f77c28fb; the final receipt commit follows these without rewriting history.
+
+Selected fresh independent03 receipts contain **2547 assertions**, exit0, empty stderr, no doubles, no source drift and verified actual process/source capture. Counts are assertions, not matrix rows. [FINAL_BINDING.json](FINAL_BINDING.json) records exact candidates, PIDs, raw hashes and current Owner-source hashes; [MATRIX.json](MATRIX.json) lists all98 predicates:80 independentPASS,8 explicitREFERENCE_PASS and10NOT_RUN. The old94 matrix and69 Core receipts remain unchanged and are not added to this count.
+
+| Evidence facet | Independent03 assertions | Actual scope |
+|---|---:|---|
+| UNIT |30| Real canonical Baker inputs; Python12 admission tests and10 coverage UNIT checks are separate |
+| REAL_RUNTIME |712| Native500; five original routes; schema compatibility and existing Perspective Connection |
+| SOLVER |96| Four complete original graphs; combined FIRST_SHORTEST witness and real max_states=1 budget outcomes |
+| SAFETY |20| Selected real motions; Fall uses formal cubic motion Safety, Camera preserves physical state |
+| LOGICAL_REPLAY |5| Production mode0, selected original witness per map |
+| FORMAL_GRAPHICAL |531| Five production mode1 traces repeated twice:487; old MAP A/B camera extension44 |
+| NATURAL_GRAPHICAL |1153| Five-map natural947 plus actual L01–L05 focused206 |
+
+All five maps have independent canonical Bake, Runtime positive/negative, Safety, logical Replay, formal graphical Replay, natural route/pose and input/lifecycle coverage. Gate/Lock/Loop/Fork have independent FULL_GRAPH/live-graph Softlock checks. Combined complete908-state/3916-edge graph, zero undesigned softlocks and zero unlatched Inner bypasses reference09's formal103-check same-process report. Its canonical level hash matches the current selected run. No disk graph was loaded, no graph rebuilt for Softlock and no09 assertions were added to03. The historical graph precedes01's final classifier/domain fixes;01 explicitly records unchanged idle/latched authored topology. Exact provenance/limitations are in [EXTERNAL_REFERENCES.json](EXTERNAL_REFERENCES.json).
+
+Five menu/Continue integration predicates reference07's real219-check Windows rendering and separate cold-start persistence processes. Current Host/Map/UI production hashes match that external receipt. This is external Owner evidence, not independent03 GUI or Human QA.00 owns packaged-project verification.
+
+Formal Graphical TraceReplayer, Natural Presenter and Logical Replay remain distinct. Graphics use the actual Windows Forward+ renderer, production Runtime/Presenter/Bridge, full transition identities, authoritative StateKey/World/Orientation/Camera and native completion. No graphical completion or actor/state pose is injected. Natural screenshots19 were retained; combined Surface spawn and Inner Goal were visually inspected. L01–L05 use the actual frozen `game_feel_shell.tscn` and native input recipes,15 screenshots and P01 observable identity rather than claiming Foundation StateKey parity. GLB/import source bytes were unchanged:149 verified derived cache/source pairs and real `.import` UID registration support the script-run environment.
+
+Fresh whole-branch review found two Important evidence gaps and no Critical/Minor findings. One fix pass added held physical input through natural completion without Reset masking queues, and a new live pending identity invalidated by UNLOAD. Receipt coverage RED10→GREEN10, native500 and natural947 verify both fixes. Natural Host exit observes unloaded Runtime and an empty public pending identity without completion injection. Source diagnostics, wrong-view setup failures, invalid UID warnings, missing capture/count metadata and the combined240-second timeout are retained in their original failed runs; they are not promoted to PASS. No independently established new production Runtime/Presenter failure remains.
+
+NOT_RUN is explicit: five Human QA cases; four redundant alternative FIRST_SHORTEST runs where FULL_GRAPH already ran; and combined independent03 full-edge permission census.09's complete graph proves its recorded latch-bypass predicate, not that unexecuted exact census. Combined's selected FIRST_SHORTEST graphical trace is a witness, never a universal graph proof. These are not fabricated missing dependencies. No whole Foundation regression or L06 was run.
+
+Rulings: keep the ledger inside03's allowed directory; run only affected regressions under the user instruction; keep synthetic receipt tests UNIT-only; accept the delivered schema3 Loop/Fork profile; reuse09's expensive original graph as an explicit reference with zero added count; and select the frozen real legacy Shell in the test process because the new experiment owns main_scene. Their limits are retained in [PROGRESS.md](PROGRESS.md). Other Owners' production correctness, package completeness and eligible Human QA remain their responsibility; no overall playable-build acceptance is signed here. Deferred minors: NONE.
+
+GUI: RELEASED to00. Working tree must be verified clean after the final local commit. Only newly introduced derived test profiles are removed from tracking, physically preserved and ignored; raw reports/processes/stdout/stderr/screenshots remain. No old worktree or QA data was cleaned. Push: NOT_RUN. Merge to main/Core: NOT_RUN. CONTRACT_MISMATCH: NONE.
