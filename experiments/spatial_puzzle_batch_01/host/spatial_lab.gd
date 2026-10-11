@@ -97,6 +97,12 @@ func _build_geometry() -> void:
 		var face=block.get_meta("top_face_id")
 		for cube in level.get("cubes",[]):
 			if cube.cube_id==id: block.visible=cube.layer==state.player.location.layer
+		var has_walkable_face:=false
+		for authored_face in level.faces:
+			if authored_face.cube_id==id and authored_face.walkable: has_walkable_face=true
+		if not has_walkable_face:
+			block.material_override.albedo_color=Color("424b5b")
+			block.set_meta("presentation_role","NON_WALKABLE_OCCLUDER")
 		if targets.has(face):
 			block.material_override.albedo_color=Color("ebcb4d")
 			block.set_meta("presentation_role","FALL_TARGET_SUPPORT")
@@ -154,7 +160,7 @@ func _marker(parent:Node3D,position:Vector3,text:String,color:Color,kind:String,
 	marker.add_child(dot)
 	var label:=Label3D.new()
 	label.text=text;label.font_size=32;label.pixel_size=0.008
-	label.position.y=0.35
+	label.position.y=1.65 if kind=="SHIFT_GATE" else (1.15 if kind=="FACE_LOCK" else 0.35)
 	label.billboard=BaseMaterial3D.BILLBOARD_ENABLED
 	label.modulate=color;label.outline_modulate=Color("15232a")
 	marker.add_child(label)
@@ -274,7 +280,9 @@ func _update_status(reason:String) -> void:
 	if not is_instance_valid(status) or runtime==null or not runtime.is_loaded(): return
 	var state:Dictionary=runtime.get_state()
 	var result:Dictionary=Goal.is_goal(runtime.get_level(),state)
-	status.text="%s  |  %s  |  视角 %s\n%s\nWASD / 方向键：翻滚   F：向标记边缘前进   Q/E：视角   Space：转换   R：重置   Esc：暂停   H：提示\n%s"%[_description.get("title",String(lab_id)),"表世界" if state.player.location.layer==0 else "里世界",["北","东","南","西"][state.camera_quadrant],_description.get("objective","观察实体六面与正式路线"),"已抵达目标" if result.ok and result.is_goal else ("暂停" if paused else ("" if reason=="NONE" else reason))]
+	var messages:={"NONE":"","EDGE":"","BUSY":"动作进行中","MECHANISM_LOCKED":"机关尚未激活","WORLD_NOT_ALLOWED":"请到标记的转换点确认","CAMERA_NOT_ALLOWED":"当前视角没有合法连接","SAFETY_REJECTED":"当前路径不可安全通行","FALL_NOT_AVAILABLE":"此边缘没有合法连接","INVALID_FACE":"当前位置不可执行此动作","ERROR":"关卡状态异常，请重置","PAUSED":"暂停"}
+	var feedback:String=str(messages.get(reason,"当前操作未成立"))
+	status.text="%s  |  %s  |  视角 %s\n%s\nWASD / 方向键：翻滚   F：向标记边缘前进   Q/E：视角   Space：转换   R：重置   Esc：暂停   H：提示\n%s"%[_description.get("title",String(lab_id)),"表世界" if state.player.location.layer==0 else "里世界",["北","东","南","西"][state.camera_quadrant],_description.get("objective","观察实体六面与正式路线"),"已抵达目标" if result.ok and result.is_goal else ("暂停" if paused else feedback)]
 	if _hint_visible: status.text+="\n提示："+str(_description.get("hint","观察落脚面、转换标记与相机方向。"))
 
 func _close(reason:String) -> void:
