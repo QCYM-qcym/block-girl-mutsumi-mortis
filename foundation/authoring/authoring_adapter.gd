@@ -94,11 +94,11 @@ static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapsh
 				"MECHANISM":
 					var config: Dictionary = resources[f.config.resource_ref]
 					var path := "mechanisms[%d]" % template.mechanisms.size()
-					Sources.capture(map, doc, record, "MECHANISM", f.mechanism_id, path)
 					var lock_path := ""
 					if config.fields.kind == Types.PuzzleActionKind.TRIGGER_MECHANISM:
 						lock_path = "face_locks[%d]" % template.face_locks.size()
 						template.face_locks.append({"mechanism_id":f.mechanism_id,"required_local_face":config.fields.required_local_face,"activation_mode":config.fields.activation_mode,"latched_state":config.fields.latched_state})
+					Sources.capture(map, doc, record, "MECHANISM", f.mechanism_id, path, lock_path)
 					Sources.capture_resource(map, config, record, "MECHANISM", f.mechanism_id, path, null, lock_path)
 					var action: Dictionary = f.target_bindings.duplicate(true)
 					action["kind"] = config.fields.kind

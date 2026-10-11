@@ -1,0 +1,806 @@
+{
+  "status": "OWNER_01_RUNTIME_VERIFIED",
+  "branch": "feat/spatial-runtime-01",
+  "contract_ancestor": "7442e8172e865d093ff1e73570d891f60d9134af",
+  "interface_commit": "5664a32a33eb178934e3233cc59c938132622fc0",
+  "core_commit": "697a31ed85e29b1d37ec882e712d323751bd90a1",
+  "tested_head": "697a31ed85e29b1d37ec882e712d323751bd90a1",
+  "tested_source": "Head plus reviewed Owner01 working changes identified by file hashes; final commit contains these changes. SHA-256 is measured filesystem bytes; Git filtered blob SHA-1 identifies committed content after repository text normalization. This receipt does not hash itself.",
+  "tests": [
+    {
+      "suite": "contracts",
+      "evidence_name": "contracts_review_green01",
+      "checks": 48,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "rules",
+      "evidence_name": "rules_review_green01",
+      "checks": 117,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "runtime_lifecycle",
+      "evidence_name": "runtime_final02",
+      "checks": 26,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "typed_authoring",
+      "evidence_name": "authoring_final02",
+      "checks": 13,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "review_regressions",
+      "evidence_name": "review_green02",
+      "checks": 11,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "solver_safety_trace_replay_ablation",
+      "evidence_name": "analysis_final01",
+      "checks": 38,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_kernel",
+      "evidence_name": "legacy_kernel_final01",
+      "checks": 532,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_codec",
+      "evidence_name": "legacy_codec_final01",
+      "checks": 75,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_classifier",
+      "evidence_name": "legacy_classifier_final01",
+      "checks": 66,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_authoring",
+      "evidence_name": "legacy_authoring_final01",
+      "checks": 105,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_game_feel_contracts",
+      "evidence_name": "legacy_contracts_final01",
+      "checks": 35,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_game_feel_rules",
+      "evidence_name": "legacy_rules_final01",
+      "checks": 59,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_game_feel_runtime",
+      "evidence_name": "legacy_runtime_final01",
+      "checks": 63,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_curve_profile",
+      "evidence_name": "legacy_curve_final01",
+      "checks": 62,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_curve_runtime",
+      "evidence_name": "legacy_curve_runtime_final01",
+      "checks": 96,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    },
+    {
+      "suite": "legacy_curve_safety",
+      "evidence_name": "legacy_curve_safety_final01",
+      "checks": 47,
+      "exit_code": 0,
+      "stderr": "EMPTY",
+      "failures": [],
+      "source_hashes_match_current": true
+    }
+  ],
+  "new_checks": 253,
+  "affected_legacy_checks": 1140,
+  "total_checks": 1393,
+  "failures": [],
+  "stderr": "EMPTY",
+  "doubles": [],
+  "targeted_review_red": {
+    "review_red01": {
+      "checks": 7,
+      "failures": 4
+    },
+    "authoring_review_red01": {
+      "checks": 13,
+      "failures": 3
+    }
+  },
+  "review": {
+    "critical": 0,
+    "important": 2,
+    "minor": 1,
+    "resolved": 3,
+    "blocking_findings_remaining": 0,
+    "mode": "Fresh whole-branch read-only review plus targeted fix verification"
+  },
+  "fixes": [
+    {
+      "issue": "Lexically earlier latched state rejected by StaticValidator private sorting",
+      "resolution": "Validate exactly the distinct initial/latched members without requiring order; typed authoring agrees; existing LevelCodec authored-order identity remains unchanged."
+    },
+    {
+      "issue": "MOVE+ENTER FaceTransition classification used final landing instead of physical Roll entry",
+      "resolution": "After exact authoritative Kernel-result comparison, use formal Connectivity.query_move target for ENTER metadata. No second legality algorithm."
+    },
+    {
+      "issue": "Projected lock identity lacked SourceMap link",
+      "resolution": "Map face_locks.mechanism_id to captured MechanismAuthoringNode document and NodePath; canonical join by mechanism ID."
+    }
+  ],
+  "current_map_impact": {
+    "idle_latched_maps": "Existing inactive/latched or idle/latched definitions already satisfy the same exact two-state membership. No changes to their authored content hashes, state transitions, action candidates, or state graph topology.",
+    "classification": "MOVE+ENTER that ends on another face now retains MECHANISM_TRIGGER/FACE_TRANSITION. Correct/wrong/repeated FaceLock classifications remain proven in 117 checks.",
+    "long_combined_fullgraph": "NOT_RERUN by Owner01; fixed path, small complete graph and affected consumers tested; large authored-map graphs belong to Owner09/03."
+  },
+  "analysis": {
+    "level_hash": "89f3544c6da2c13eb72ed8beee29cc348951cc6749cb7b172b7eeea27ee21b07",
+    "initial_statekey": "statekey.game_feel.v1:{\"level_hash\":\"89f3544c6da2c13eb72ed8beee29cc348951cc6749cb7b172b7eeea27ee21b07\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"face_lock\":\"inactive\"},\"player\":{\"location\":{\"cube_id\":\"floor\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+    "final_statekey": "statekey.game_feel.v1:{\"level_hash\":\"89f3544c6da2c13eb72ed8beee29cc348951cc6749cb7b172b7eeea27ee21b07\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"face_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":9},\"world_orientations\":[0,0]}}",
+    "graph_nodes": 20,
+    "graph_edges": 72,
+    "solution_actions": 4,
+    "softlock_count": 0,
+    "logical_replays": "2 real LOGICAL_SESSION MATCH runs, 4 steps each, equal final full StateKey",
+    "ablation": "WORLD_SHIFT and MECHANISM_TRIGGER both essential, no bypass",
+    "orientation_loop": {
+      "final": {
+        "location": {
+          "cube_id": "floor",
+          "face": 4,
+          "layer": 0
+        },
+        "orientation": 14
+      },
+      "initial": {
+        "location": {
+          "cube_id": "floor",
+          "face": 4,
+          "layer": 0
+        },
+        "orientation": 0
+      }
+    },
+    "fall": "Existing cubic lower/higher visual Fall and camera behavior accepted by schema4 through formal Kernel/Safety; no duplicate algorithm"
+  },
+  "lifecycle": "Wrong-face MOVE applied without latch; correct latch one local commit; gate one global commit; pose preserved all24; six physical faces distinct; Busy, Reset, unload and retained actual stale local/global identities tested. No Presenter/Host or animation changes.",
+  "graphical": "NOT_RUN_BY_OWNER01; Coordinator00/Owner03 consume final SHA for their actual natural graphics, formal graphical replay and build evidence. This receipt is not graphical or Human QA acceptance.",
+  "source_files": [
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/RUNTIME_INTERFACE.md",
+      "tested_worktree_sha256": "d26f1c3f2d6425d2e090a0e6e325394483e258f374ba3a1dd24794b69248ad82",
+      "git_filtered_blob_sha1": "caadfadbf4fe85847edd13a4afcb7c220ee62af0"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/runtime/CORE_DELIVERY.json",
+      "tested_worktree_sha256": "0a880ee8cd106ecc78b069c74cf7d4a04572a966764e4c559e58871df86a4de5",
+      "git_filtered_blob_sha1": "c8114680c08fb07d433c64b2f99d00562857c0e3"
+    },
+    {
+      "path": "foundation/authoring/authoring_adapter.gd",
+      "tested_worktree_sha256": "1b7db8427254b13903b0a100b0f17e50bdabc73c5807871e8050b459ed2d8e2b",
+      "git_filtered_blob_sha1": "831057d34ad3298acc1e6b47a9aaaf3413a5567e"
+    },
+    {
+      "path": "foundation/authoring/authoring_schema.gd",
+      "tested_worktree_sha256": "c648c2556d33d37381399e321889048148d5c0f53337711141d7fd7587080d2b",
+      "git_filtered_blob_sha1": "dda37124f35a6d082415385cfa6de8e1afc1eaa8"
+    },
+    {
+      "path": "foundation/authoring/level_authoring_root.gd",
+      "tested_worktree_sha256": "5f86706e69ddc64eab7ac1d6a5e0a38a74411e2cb1689c739ce523cc713455f3",
+      "git_filtered_blob_sha1": "4716484b4d772b498b79d71bbf032b235dd495ed"
+    },
+    {
+      "path": "foundation/authoring/mechanism_config.gd",
+      "tested_worktree_sha256": "4dd1a37d548e739949361fc9ff1b46114d292e4c4ca290081051d18c209cc5c3",
+      "git_filtered_blob_sha1": "3a9a9ac920df821ace3f069512aff37529c6725a"
+    },
+    {
+      "path": "foundation/authoring/source_map.gd",
+      "tested_worktree_sha256": "668c2ed56cefb8875aa85c02eb65058e5df8c42eeb3146e9a5cf0970c27c02a2",
+      "git_filtered_blob_sha1": "7ed434071cabce7223b1c15fc1bd3756b8394f63"
+    },
+    {
+      "path": "foundation/contracts/contract_validation.gd",
+      "tested_worktree_sha256": "3b7ccd9ba45c064e2225367421053870e26d877b575d254032a28507fea42920",
+      "git_filtered_blob_sha1": "0cc7ab877f2a2a49cc757717ac19c47942bc8398"
+    },
+    {
+      "path": "foundation/game_feel/fall_permission.gd",
+      "tested_worktree_sha256": "30527b686665545f3ada8898913f10a087cb04d10bd3a8e1dd814e2dfa18aec7",
+      "git_filtered_blob_sha1": "c6a1372b766a94dd56f1795e87d433bd6d6a2515"
+    },
+    {
+      "path": "foundation/game_feel/schema.gd",
+      "tested_worktree_sha256": "1cbe22d5e9a3445bea2b268673d6bd05e34bdbbb647766fdc016600ef63ffbfb",
+      "git_filtered_blob_sha1": "d25bd69e4a018bdd570fd8513bda8d4dcf8743df"
+    },
+    {
+      "path": "foundation/level/level_codec.gd",
+      "tested_worktree_sha256": "9f4bab34593101a640a21d032ed47609e61d5fcd229645e0767047f0cf599469",
+      "git_filtered_blob_sha1": "0db452a6f942af794548f7b2858b04d3a08a9dbf"
+    },
+    {
+      "path": "foundation/quality/intent/mechanic_classifier.gd",
+      "tested_worktree_sha256": "ddca87bbf8b44a1f1c5920ed65f0023b665b37bc4931dd307809f09ff6d8032e",
+      "git_filtered_blob_sha1": "19dc9979953cc02d6e94f6cb8544f1a9af99b87a"
+    },
+    {
+      "path": "foundation/rules/mechanism_effects.gd",
+      "tested_worktree_sha256": "6e4e610182d919c9697a1c895bd8cf23d16612a5c3c02b7484e65eaf68f9147d",
+      "git_filtered_blob_sha1": "12516c10a7d8bed81f120b18a1a4a239e7de7e64"
+    },
+    {
+      "path": "foundation/rules/puzzle_rule_kernel.gd",
+      "tested_worktree_sha256": "3ab4237593c01dafa17c66f750cd69f7eee46a6d2b9727d634a0d740fd45020a",
+      "git_filtered_blob_sha1": "560b8d864cf8a2e2f14960555e3e6036d41d92c6"
+    },
+    {
+      "path": "foundation/rules/spatial_puzzle_rules.gd",
+      "tested_worktree_sha256": "a1f00394d9c0ff5f23f819ee3d075961ad7e3d6efc425fec8e707ae196086846",
+      "git_filtered_blob_sha1": "3dc055c88a1677c028f5f94b613e488941362977"
+    },
+    {
+      "path": "foundation/rules/spatial_puzzle_rules.gd.uid",
+      "tested_worktree_sha256": "491b7f48872b71defd0040866f2b863075376e5415ceaa4139b82d169fb398e0",
+      "git_filtered_blob_sha1": "338a3607f3dddf0b9621a69d6d05d78af6dfd334"
+    },
+    {
+      "path": "foundation/validation/static_validator.gd",
+      "tested_worktree_sha256": "ba1f9d657e73b132f0f0ef6716358e0f63e9a586ca719a7ef2f72235df57f79a",
+      "git_filtered_blob_sha1": "37dced66006bbe28407b95d5cc17fd9d35250678"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/fixtures.gd",
+      "tested_worktree_sha256": "3fb7813a660a36635fee7c183f3a8b61c9917e9c4666ac0370dd8f2358a6daf0",
+      "git_filtered_blob_sha1": "6fbaf65b1af0c141acf3c80b68eea618c22409cb"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/fixtures.gd.uid",
+      "tested_worktree_sha256": "a280051c8209b1d583ce9e61b1acb967099b3e88d1df95ea6b751aa7724d2446",
+      "git_filtered_blob_sha1": "bbb22276cd357310242c76aeb8b8e0d14aa9e031"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/run.ps1",
+      "tested_worktree_sha256": "a188b3e0c3bbe48a4186601ca6963831a397bb4ad969a27a15399fbd1312df78",
+      "git_filtered_blob_sha1": "9950eb0cda11d61c09335379ab7714eb1af340fd"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_analysis.gd",
+      "tested_worktree_sha256": "07a772c67256691881fdfa53de316d3b4d869f71f7865f74a26292fe5f7bb4e3",
+      "git_filtered_blob_sha1": "92b2f59153a58d1dbb11ecc923564193785c6b97"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_analysis.gd.uid",
+      "tested_worktree_sha256": "20b327eb0dfbd7b42b5410eb58533d48ae03a02225d7aef0ff3f4699ed30386d",
+      "git_filtered_blob_sha1": "7b26a9063d62d65ae0a361ae2277a424340f7a45"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_authoring.gd",
+      "tested_worktree_sha256": "462f8949cc25b03e00b4447945c540368541656990af6b303421118fd50e2ae5",
+      "git_filtered_blob_sha1": "7b94d0200f057e3e451e23d9a97596de31646c67"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_authoring.gd.uid",
+      "tested_worktree_sha256": "db9ecff087b07b6015001a6d181e1c39030c2ca81a0ed9454ba291ed3ba2ef4b",
+      "git_filtered_blob_sha1": "1bca17b12a77611a819580035f46440bef3b6ba0"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_contracts.gd",
+      "tested_worktree_sha256": "a6c4200cd4c216216e46dbac190791fcb4675763d21d6173b21d18accc059b91",
+      "git_filtered_blob_sha1": "64869bc26f6ec99cda267cb3a2c020ca886bb6ad"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_contracts.gd.uid",
+      "tested_worktree_sha256": "b269033bf421f06c847ed498eeb5a941ee407ebd0504c3c7ec2a8d3c6e9c8ead",
+      "git_filtered_blob_sha1": "64b95832941ba37394f354f8e789508c5d09dbe5"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_review_regressions.gd",
+      "tested_worktree_sha256": "7bdf1da7ec45dffa637203fba02fdac89307ddce3bb03172d1081a137031d4d3",
+      "git_filtered_blob_sha1": "c90a137107a22759a69db20c155eed1343d86baf"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_review_regressions.gd.uid",
+      "tested_worktree_sha256": "31e489a1d3a7d05076bb0cbe707e5222152efa5213db2bb2378524cd543cc844",
+      "git_filtered_blob_sha1": "4755bdde6055ef65cf38176c402f35ee7b122000"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_rules.gd",
+      "tested_worktree_sha256": "a9533276639f9b3cf0863ae3a99f6b82fb66805ee722bc13be3383358b3b44a0",
+      "git_filtered_blob_sha1": "d45224540d1b8a6b2d2d06ddbd4edd3c9901bcc2"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_rules.gd.uid",
+      "tested_worktree_sha256": "7cb2bd8b409b111fae469cfd790b0da80ae67a369f61c62fce9991e649067da2",
+      "git_filtered_blob_sha1": "b73a98bba6764e1d93d1b797dac82d50a41f71db"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_runtime.gd",
+      "tested_worktree_sha256": "a12dfb60837883907862cea0cdb1e08af9c157031f303e329e066b5af063cc80",
+      "git_filtered_blob_sha1": "406e4958086ba10178401616f3189dd5599156ba"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_01/test_runtime.gd.uid",
+      "tested_worktree_sha256": "b66dc8c8ce23de78cd21b6ff4f31136a68ef12d2120f1cd8d6691dde4f51edb2",
+      "git_filtered_blob_sha1": "cfb73992fe207ea22478921b1c7f6649725ae438"
+    }
+  ],
+  "raw_evidence_root": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01",
+  "raw_evidence_artifacts": [
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/contracts_review_green01/source.json",
+      "bytes": 13829,
+      "sha256": "c820bd1277df9ad22a79a1635262eca4e11c715b4eae7d26f99a66516636df73"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/contracts_review_green01/process.json",
+      "bytes": 276,
+      "sha256": "49e2ac1e5568cac016c94f981a48fdc945f69ef7fdd1567360cab20da11cc100"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/contracts_review_green01/stdout.log",
+      "bytes": 124,
+      "sha256": "61bbe0700104a4084f30da2e403c9e36e0743c0ffcd2cd99a726964c28942400"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/contracts_review_green01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/rules_review_green01/source.json",
+      "bytes": 13825,
+      "sha256": "f1dcbe1c9f8d9d317f36c555de17054587617ea6342a5e2fa21171c9f1e3f058"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/rules_review_green01/process.json",
+      "bytes": 272,
+      "sha256": "62ab94551abaf849e688021aaee2c09d3c3784c34b605eddc9a798802899d9f3"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/rules_review_green01/stdout.log",
+      "bytes": 121,
+      "sha256": "4920d832de16b4719525502cb722b440acff9ef2cd6c3c5e1e0f4ed23733c847"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/rules_review_green01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/runtime_final02/source.json",
+      "bytes": 13827,
+      "sha256": "beabc360fe2f4d50e4ba59ce4ab0fac881cbfbf12006459e02956d07fd02f09f"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/runtime_final02/process.json",
+      "bytes": 274,
+      "sha256": "8d939e0c4f7439f1c507f0457a8013794c8dfb90f4e48e6a46d96ab7b4de8184"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/runtime_final02/stdout.log",
+      "bytes": 122,
+      "sha256": "a3bd40299905d6a6f7fc4865724fb566471e498501aeb8d806e00d1b38ddff90"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/runtime_final02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_final02/source.json",
+      "bytes": 13829,
+      "sha256": "a447c6c322e338c781d7364aa188cecd523c1fbad36f5b0f378e25b24d2bbca2"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_final02/process.json",
+      "bytes": 276,
+      "sha256": "e283e39bc8b62ec53e2563b597edc4e21bc56cbf14ca0e6126c4cfa787679a09"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_final02/stdout.log",
+      "bytes": 124,
+      "sha256": "7daa57589d95ca06a927283d110ec16bb99dfcffd58740b03d148eaeed261df5"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_final02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_green02/source.json",
+      "bytes": 13838,
+      "sha256": "4865240508894d75f163884acf4550b66535980aeb35118245c4e5eb7ebf1ecd"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_green02/process.json",
+      "bytes": 285,
+      "sha256": "c216acc44ffab1e0121b147d74480f03b5fcfb992e7351e2dc9a29ab856c80a2"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_green02/stdout.log",
+      "bytes": 121,
+      "sha256": "efb79b89ca50df21816c02ccccfba6def4be6347ca238fa687a64f93513655e2"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_green02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/analysis_final01/source.json",
+      "bytes": 13828,
+      "sha256": "a21f93426e5f43b09cc75ddbd9c6d53d14d2998f0072cb7bd4da5913a027e73d"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/analysis_final01/process.json",
+      "bytes": 274,
+      "sha256": "4194d9b36bc954ee532c67a938b302dab2c1185ea22ba2965d7d61f25126319c"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/analysis_final01/stdout.log",
+      "bytes": 123,
+      "sha256": "e226fab5903219d1204b19c6511de0ce37f0efd97988a20c4b5ee5ba6eb8abf3"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/analysis_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/analysis_final01/results.json",
+      "bytes": 153334,
+      "sha256": "ac49277e9024319b03cc96e05afe9311647ee363e4139c131c1fb1e53af218b3"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_kernel_final01/source.json",
+      "bytes": 13819,
+      "sha256": "17ad90b4792d2586944197268fa9e4ee8829fbfbaf0eaaa97a04ac249c75f475"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_kernel_final01/process.json",
+      "bytes": 266,
+      "sha256": "2c61ab40e218c78bdf06808393ee741bf33326e3c565f076ebb714980db8c07a"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_kernel_final01/stdout.log",
+      "bytes": 137,
+      "sha256": "eafc7c6c182d9a1bd2bce5b37658a064d0208fbe16c85244c466086a7e774a7f"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_kernel_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_codec_final01/source.json",
+      "bytes": 13819,
+      "sha256": "082626fe763f0efa90bc5da9bec4a9007ea2f2cca972abbabd88f4256637bd0c"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_codec_final01/process.json",
+      "bytes": 266,
+      "sha256": "1bc93947194e6209afbaf03d46fe1b32764642bc43def51a3d3e26106929c3a1"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_codec_final01/stdout.log",
+      "bytes": 111,
+      "sha256": "fd6531f8f95244e6789e56d5256f1ca4756a6ba515ba86b50014226ddfd00c11"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_codec_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_classifier_final01/source.json",
+      "bytes": 13836,
+      "sha256": "0b9f6f0282ee78d9988ce13713323117510bdf212822a76ec50e78c7dab102cc"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_classifier_final01/process.json",
+      "bytes": 283,
+      "sha256": "d01b39ed6e69e6d3adc17a07de01e723bd446f4fa30fc7e3aca262dc89471258"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_classifier_final01/stdout.log",
+      "bytes": 141,
+      "sha256": "52675087e67641e1638453b9e4b943ab6abcaf4a13598bfcbda1b5f2bbba4aae"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_classifier_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_authoring_final01/source.json",
+      "bytes": 13826,
+      "sha256": "3e9fbcb51d793b6bff7cfb2cee3290f45879e8afe9d7b7b2ec07f663f113bf06"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_authoring_final01/process.json",
+      "bytes": 273,
+      "sha256": "91bbf4fd0e52e574bf9898f9dae74b3f8e9ac81ddc60b26069f2701a0a5ad1e7"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_authoring_final01/stdout.log",
+      "bytes": 72,
+      "sha256": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_authoring_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_authoring_final01/results.json",
+      "bytes": 72,
+      "sha256": "72ef704d1eb90b91e1bc1d60d6684515b51561cfed40a0f0312f0fcd0febb8dc"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_contracts_final01/source.json",
+      "bytes": 13831,
+      "sha256": "47830cee0ac28be39bc123bbeaef31e93f963549a3c0f30daa5a08f0a3276527"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_contracts_final01/process.json",
+      "bytes": 278,
+      "sha256": "c6b46bbf2197e007ae5c6354090c5b71d557623a59172a212a7c8c3c684d3d31"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_contracts_final01/stdout.log",
+      "bytes": 282,
+      "sha256": "dbc5a2f5c077d337fb0c3b27a5e0a51b2fc3f96bd0e79e46fa7a0d30d8525336"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_contracts_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_contracts_final01/results.json",
+      "bytes": 208,
+      "sha256": "d389b444fe4394b93c99ac9a7a4a7930dfed6004c8c9bc3e56a6ed79e3d6803b"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_rules_final01/source.json",
+      "bytes": 13827,
+      "sha256": "15146de2aad829d22a32728d29d13ceb5a79ea535640f2c713fc05c2a4678df0"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_rules_final01/process.json",
+      "bytes": 274,
+      "sha256": "9b97b237894c996cf2c22161bf1f25663480992e1c778bbef99b28df9dbd2dee"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_rules_final01/stdout.log",
+      "bytes": 101,
+      "sha256": "e9a024d7a407e898b3918d3f23e22aecb39df75ec7a4fc98db4d54dc9d97acac"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_rules_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_rules_final01/results.json",
+      "bytes": 1421,
+      "sha256": "a11162ab68a99f141529ad485daf9d1b6de04955d77d055cf913c996ae58f3db"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_runtime_final01/source.json",
+      "bytes": 13829,
+      "sha256": "82540d1fbbc1273780b9c92c1d9a7b5f36b25e9b9481b4b28449e02034ef45ad"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_runtime_final01/process.json",
+      "bytes": 276,
+      "sha256": "118f2841f79efe9d019e8cf6b828839076a15512b3e3474c28d7d45a2ed4e09f"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_runtime_final01/stdout.log",
+      "bytes": 103,
+      "sha256": "1e4ce1dbe6e9d71fccc863bc4efb9d000c0e3b64888b40fb04f0afe3a23074cd"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_runtime_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_runtime_final01/results.json",
+      "bytes": 44417,
+      "sha256": "5da3a5a9efb6d2fcd140df03a4574ed7cc97fbcf48ecd196c067351208ddf932"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_final01/source.json",
+      "bytes": 13835,
+      "sha256": "889ee72fa7e0c4f451e6d2b4b2baf1fd76695d70e3f5115c9ebbb6902eeb8442"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_final01/process.json",
+      "bytes": 282,
+      "sha256": "92cdda674e917c44f3579c870ea90238f5b6ed6c2254fcdde98d4306600ece55"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_final01/stdout.log",
+      "bytes": 109,
+      "sha256": "f33d55abd07e5706f58c94941765c11249f191534afeb1b2881ea6f98ee67d53"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_final01/results.json",
+      "bytes": 7258,
+      "sha256": "2e49ba7b599c43713cc6be3e613a9d55cf2cd675ff2323a297e4efb5eaaa46e9"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_runtime_final01/source.json",
+      "bytes": 13835,
+      "sha256": "e3ae23ffebf907ad1714c776504cd470cf7099b7708281b0be12bdac0c01cdcc"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_runtime_final01/process.json",
+      "bytes": 282,
+      "sha256": "5c94a8cbf20a72722f6ccc8f3eb1b6907d75a9818bdc49919e435429abd29d8c"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_runtime_final01/stdout.log",
+      "bytes": 109,
+      "sha256": "60cc73ec28eb81840d8b7c37af9dcd4f2f77055161f3794c8f4e9430e64fe3e0"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_runtime_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_runtime_final01/results.json",
+      "bytes": 127139,
+      "sha256": "3f1c7a574d8cfe3d7bd6d16c6677e88ec4d9eed3bba2cc68118675febf8b7bd7"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_safety_final01/source.json",
+      "bytes": 13834,
+      "sha256": "36e8bc6715f176f6768849e38c0acca1dae735a292177f1a8b656948e736d626"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_safety_final01/process.json",
+      "bytes": 281,
+      "sha256": "fed872871df2436948f1506e1825e982b60d8971535d6fcb5e9256feb697c9f0"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_safety_final01/stdout.log",
+      "bytes": 108,
+      "sha256": "05eef825e2379a4a05a5ddf15f0251c44b82bd219734cebfd0fbacedd04a9f97"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_safety_final01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/legacy_curve_safety_final01/results.json",
+      "bytes": 2546,
+      "sha256": "948aa6f49b2c005f9f9490634259c922027d0463f358f6bfaecd7115d7e71430"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_red01/source.json",
+      "bytes": 13499,
+      "sha256": "56cf7d69f26a76eaab9da0f4c79e6d0bdf80d3f20a2f744040e97c784bd6e8de"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_red01/process.json",
+      "bytes": 285,
+      "sha256": "b42373152ac2af9a7b10ff71bf0b7924443a27a20590e6743b64e7b68ae2494c"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_red01/stdout.log",
+      "bytes": 871,
+      "sha256": "8f19ed8e81176f2e2cb18cc6953235cdad446d80c8e8bb29812b2dc590538092"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/review_red01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_review_red01/source.json",
+      "bytes": 13490,
+      "sha256": "19c087988490e0216e3f9ed7aaeacdf5e9de3283023bd4b75234d3265280b62f"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_review_red01/process.json",
+      "bytes": 276,
+      "sha256": "1ae6ffdc6580addfb3945a2d6ab280941e314d4c305a67fa0c5804993322827b"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_review_red01/stdout.log",
+      "bytes": 310,
+      "sha256": "b3439823cfc18bc5a228660357d48c985d62f26225508def94031e91ed9368f1"
+    },
+    {
+      "path": "E:/godot/worktrees/block-girl-spatial-runtime-01/.godot/spatial-01/authoring_review_red01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "all_attempts_preserved": true,
+  "excluded_attempts": [
+    "runtime_red01: test inference parse error, not behavior RED",
+    "runtime_red02: incorrect Facade test APIs, not behavior RED",
+    "analysis_green01: test constant collided with native Curve class, not behavior RED",
+    "legacy_contracts01/legacy_authoring01: wrapper check-count format rejection; successful suite rerun with corrected wrapper",
+    "review_green01/authoring_final01: test expected allowed_states canonical sorting, contradicting existing LevelCodec author-order contract; corrected expectation with no codec change"
+  ],
+  "scope": "Foundation opt-in profile and formal consumers; Owner01 tests, interface and runtime docs only. No p01, Host, maps, entry scene, UI, animation or shared integration edits.",
+  "contract_mismatch": "NONE",
+  "push": "NOT_RUN"
+}

@@ -111,7 +111,14 @@ static func _classify_spatial(level: Dictionary, result: Dictionary) -> Dictiona
 	var effect: Dictionary = action
 	if action.kind == 0:
 		tags.append(T.MechanicTag.MOVE)
-		for mechanism in Effects.enter_effects(level,_face(before.player.location),_face(after.player.location)):
+		# ENTER belongs to the physical Roll arrival, before a compound effect
+		# transports the player. A Fall has no ordinary Roll entry or ENTER effect.
+		var move := Connectivity.query_move(level,before,action.face_axis)
+		if not move.ok: return _failure("result.action",move.issues)
+		var entering: Array = []
+		if move.target_location != null:
+			entering = Effects.enter_effects(level,_face(before.player.location),_face(move.target_location))
+		for mechanism in entering:
 			if SpatialRules.is_lock(level,mechanism.mechanism_id):
 				if before.mechanism_states[mechanism.mechanism_id] != after.mechanism_states[mechanism.mechanism_id]: ids.append(mechanism.mechanism_id)
 			else:

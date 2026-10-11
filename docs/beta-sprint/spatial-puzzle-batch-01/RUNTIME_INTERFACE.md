@@ -34,7 +34,7 @@ IDs are StringName using the existing ID/Face ID grammar. Every requirement refe
  "activation_mode": &"LATCH_ON_SUCCESS", "latched_state": &"latched"}
 ```
 
-`required_local_face` uses the frozen six FaceDirection values (FRONT0/BACK1/LEFT2/RIGHT3/TOP4/BOTTOM5). It is the player's physical local face, **not** the host surface Face. The referenced existing MechanismDefinition must have `trigger=&"ENTER"`, self-bound `action={"kind":5,"mechanism_id":&"lock_name"}`, distinct initial/latched states, and exactly `allowed_states=[initial_state,latched_state]`. One ENTER mechanism per sensor Face; first profile does not mix latch and other ENTER effects.
+`required_local_face` uses the frozen six FaceDirection values (FRONT0/BACK1/LEFT2/RIGHT3/TOP4/BOTTOM5). It is the player's physical local face, **not** the host surface Face. The referenced existing MechanismDefinition must have `trigger=&"ENTER"`, self-bound `action={"kind":5,"mechanism_id":&"lock_name"}`, distinct initial/latched states, and exactly those two members in `allowed_states`. Either order is valid: the explicit initial_state/latched_state fields determine their roles. The existing LevelCodec retains authored allowed_states order in content identity; StaticValidator may sort its private validation copy. One ENTER mechanism per sensor Face; first profile does not mix latch and other ENTER effects.
 
 ## Gate permission and rejection
 
@@ -63,7 +63,7 @@ LevelCodec sorts gates by gate_id, requirements by mechanism_id, face_locks by m
 
 The existing levelauthoring.v1 document envelope remains. A LEVEL declaration opts in using the exact four versions above and declares `camera_initial_quadrant`, cubic `perspective_falls`, and `shift_gates` in addition to its existing fields. `face_locks` are projected from existing MechanismAuthoringNode + MechanismConfig resources, not a second independent author declaration.
 
-For the new self-bound kind5 config only, declare `kind=5`, `initial_state`, `allowed_states=[initial_state,latched_state]`, `required_local_face`, `activation_mode=&"LATCH_ON_SUCCESS"`, `latched_state`. MechanismAuthoringNode retains stable mechanism_id, host_face, trigger ENTER, priority and `target_bindings={}`. The existing Adapter binds action identity and projects one FaceLock record. Legacy authoring kinds remain unchanged. Reader/Baker/SourceMap stay authoritative.
+For the new self-bound kind5 config only, declare `kind=5`, `initial_state`, `allowed_states` containing exactly initial_state and latched_state in either order, `required_local_face`, `activation_mode=&"LATCH_ON_SUCCESS"`, `latched_state`. MechanismAuthoringNode retains stable mechanism_id, host_face, trigger ENTER, priority and `target_bindings={}`. The existing Adapter binds action identity and projects one FaceLock record. Legacy authoring kinds remain unchanged. Reader/Baker/SourceMap stay authoritative.
 
 ## Ownership
 

@@ -56,9 +56,35 @@ func _initialize() -> void:
 		_bad(value,"legacy version rejects new fields",func(x):x.schema_version=3;x.contract_version="foundation.game_feel.v2";x.rule_version="foundation.rules.game_feel.v2")
 		_bad(value,"unknown rule",func(x):x.rule_version="foundation.rules.spatial_puzzle.v2")
 		_bad(value,"missing opt-in field",func(x):x.erase("shift_gates"))
+	_canonical_maps()
 	print("SPATIAL_CONTRACTS checks=",checks," failures=",failures," doubles=[]")
 	quit(0 if failures.is_empty() else 1)
 func _bad(value: Dictionary, label: String, mutate: Callable) -> void:
 	var bad := value.duplicate(true)
 	mutate.call(bad)
 	check(not Data.validate_level_shape(bad).is_empty(),label)
+func _canonical_maps() -> void:
+	var value := F.level(true)
+	var second: Dictionary = value.mechanisms[0].duplicate(true)
+	second.mechanism_id=&"another_lock";second.action.mechanism_id=&"another_lock";second.face_id=&"floor/TOP"
+	value.mechanisms.append(second)
+	F.face(value,&"floor/TOP").mechanism_ids.append(&"another_lock")
+	var lock: Dictionary = value.face_locks[0].duplicate(true)
+	lock.mechanism_id=&"another_lock";value.face_locks.append(lock)
+	value.shift_gates[0].required_mechanism_states.append({"mechanism_id":&"another_lock","state":&"latched"})
+	var identity := Codec.compute_content_hash(value)
+	check(identity.ok,"multi-record canonical DATA identity")
+	if not identity.ok: return
+	value.content_hash=identity.content_hash
+	var reordered := value.duplicate(true)
+	reordered.mechanisms.reverse();reordered.face_locks.reverse();reordered.shift_gates.reverse()
+	for gate in reordered.shift_gates: gate.required_mechanism_states.reverse()
+	check(Codec.encode(value).text == Codec.encode(reordered).text,"all gates/locks/requirements canonical independent of insertion")
+	var initial := Records.initial_state(value)
+	var inverted := Records.initial_state(reordered)
+	var reversed_map := {}
+	var names: Array = initial.mechanism_states.keys();names.reverse()
+	for name in names: reversed_map[name]=initial.mechanism_states[name]
+	inverted.mechanism_states=reversed_map
+	check(Key.build(value,initial).key == Key.build(reordered,inverted).key,"StateKey canonical mechanism map insertion order")
+	_bad(value,"duplicate requirement",func(x):x.shift_gates[0].required_mechanism_states.append(x.shift_gates[0].required_mechanism_states[0].duplicate(true)))
