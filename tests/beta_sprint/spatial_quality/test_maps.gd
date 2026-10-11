@@ -108,6 +108,14 @@ func run() -> void:
 			rows.append({"map":id,"bake":baked})
 			continue
 		var level: Dictionary = baked.level
+		# Complete typed canonical identity, not content_hash alone, gates references.
+		var golden: Dictionary = str_to_var(FileAccess.get_file_as_string("res://tests/beta_sprint/spatial_owner_09/migration_baseline/" + String(id) + ".gdvar"))
+		check(level == golden.level,"entire current saved canonical level equals frozen pre-migration level")
+		var canonical := Codec.encode(level)
+		var baseline_canonical := Codec.encode(golden.level)
+		check(canonical.ok and baseline_canonical.ok and canonical.text == baseline_canonical.text,"formal canonical serialization including full level identity is identical")
+		check(baked.get("source_map") is Dictionary and baked.get("bake_provenance") is Dictionary,"real saved adapter supplies source map and provenance")
+		rows.append({"map":id,"canonical_text":canonical.text,"canonical_sha256":canonical.text.sha256_text(),"baseline_equal":level == golden.level,"saved_source_map":baked.get("source_map"),"bake_provenance":baked.get("bake_provenance")})
 		if prefix in ["loop","fork"]:
 			check((level.schema_version == 3 and level.contract_version == "foundation.game_feel.v2" and level.rule_version == "foundation.rules.game_feel.v2") or (level.schema_version == 4 and level.contract_version == "foundation.spatial_puzzle.v1" and level.rule_version == "foundation.rules.spatial_puzzle.v1"),"existing cubic or explicit spatial profile")
 		else:

@@ -12,11 +12,13 @@ from receipts import admit
 
 ROOT = Path(__file__).resolve().parents[3]
 ENGINE = Path("D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe")
-OUT = ROOT / "docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence"
+OUT = ROOT / "docs/beta-sprint/spatial-puzzle-batch-01/quality/full-development/evidence"
 SOURCE_ROOTS = ["foundation", "game", "experiments", "prototype", "production", "tests",
                 "project.godot", "default_bus_layout.tres",
                 "docs/beta-sprint/spatial-puzzle-batch-01/CONTRACT.md",
-                "docs/beta-sprint/spatial-puzzle-batch-01/RUNTIME_INTERFACE.md"]
+                "docs/beta-sprint/spatial-puzzle-batch-01/RUNTIME_INTERFACE.md",
+                "docs/beta-sprint/spatial-puzzle-batch-01/design",
+                "docs/beta-sprint/spatial-puzzle-batch-01/full-development/REQUEST.md"]
 OWNER = "tests/beta_sprint/spatial_quality/"
 JOBS = {
     "orientation": (OWNER + "test_orientation_input.gd", False),

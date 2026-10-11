@@ -87,8 +87,9 @@ func gate_cases(definition: Dictionary) -> void:
 	check(runtime.get_state().player.orientation == before.player.orientation and runtime.get_state().camera_quadrant == before.camera_quadrant,"exact Orientation and Camera preserved")
 	act({"kind":1})
 	check(runtime.get_state().player.location.cube_id == &"gate" and runtime.get_state().player.location.layer == 0,"explicit reverse gate reaches original Surface pair")
-	# Adversarial author variant: remove the roof; old Shadow requirement must remain.
-	var bright: Dictionary = Maps.authoring(&"world_shift_gate_lab")
+	# Derived negative input from the actual saved-authoring Bake; no second factory.
+	var bright: Dictionary = definition.duplicate(true)
+	bright.erase("content_hash") # Public Baker owns the new canonical hash.
 	bright.cubes = bright.cubes.filter(func(c):return c.cube_id != &"roof")
 	bright.faces = bright.faces.filter(func(f):return f.cube_id != &"roof")
 	var baked := Baker.bake(bright,{"max_configurations":4096,"max_checks":100000})
@@ -156,17 +157,20 @@ func fork_cases(definition: Dictionary) -> void:
 		fresh(definition)
 		act({"kind":9,"camera_quadrant":quadrant})
 		act({"kind":0,"face_axis":2},1)
-	var missing: Dictionary = Maps.authoring(&"perspective_fork_lab")
+	var missing: Dictionary = definition.duplicate(true)
+	missing.erase("content_hash")
 	missing.perspective_falls = []
 	var baked := Baker.bake(missing,{"max_configurations":4096,"max_checks":100000})
 	check(baked.ok,"missing-connection author variant is structurally valid")
 	if baked.ok:
 		fresh(baked.level)
 		act({"kind":0,"face_axis":2},1)
-	var ambiguous: Dictionary = Maps.authoring(&"perspective_fork_lab")
+	var ambiguous: Dictionary = definition.duplicate(true)
+	ambiguous.erase("content_hash")
 	ambiguous.perspective_falls[1].allowed_camera_quadrants = [1]
 	check(not Baker.bake(ambiguous,{"max_configurations":4096,"max_checks":100000}).ok,"same-camera overlapping targets are rejected by actual Baker")
-	var illegal: Dictionary = Maps.authoring(&"perspective_fork_lab")
+	var illegal: Dictionary = definition.duplicate(true)
+	illegal.erase("content_hash")
 	for face in illegal.faces:
 		if face.face_id == &"target_a/TOP": face.walkable = false
 	baked = Baker.bake(illegal,{"max_configurations":4096,"max_checks":100000})
@@ -174,7 +178,8 @@ func fork_cases(definition: Dictionary) -> void:
 		fresh(baked.level)
 		act({"kind":0,"face_axis":2},1)
 	else: check(not baked.issues.is_empty(),"illegal landing rejected with actual diagnostics")
-	var cross: Dictionary = Maps.authoring(&"perspective_fork_lab")
+	var cross: Dictionary = definition.duplicate(true)
+	cross.erase("content_hash")
 	for cube in cross.cubes:
 		if cube.cube_id == &"target_a": cube.layer = 1
 	baked = Baker.bake(cross,{"max_configurations":4096,"max_checks":100000})
@@ -184,7 +189,7 @@ func fork_cases(definition: Dictionary) -> void:
 	else: check(not baked.issues.is_empty(),"cross-world landing rejected with actual diagnostics")
 	# Explicit adversarial Core input, never added to the shipped map: a real
 	# interior blocker must be rejected by continuous Safety, not a mock verdict.
-	var obstacle: Dictionary = Maps.authoring(&"perspective_fork_lab")
+	var obstacle: Dictionary = definition.duplicate(true)
 	obstacle.cubes.append({"cube_id":&"quality_cubic_blocker","layer":0,"center2":Vector3i(-4,6,2),"orientation":0,"group_id":&"","occludes_light":true,"tags":[]})
 	obstacle.faces.append_array(Geometry.make_face_nodes(&"quality_cubic_blocker"))
 	obstacle["content_hash"] = "0".repeat(64)
@@ -197,7 +202,7 @@ func fork_cases(definition: Dictionary) -> void:
 	if not fresh(obstacle): return
 	act({"kind":0,"face_axis":2},1)
 	# An actual adjacent support wins as ordinary Roll, even with a listed Fall.
-	var road: Dictionary = Maps.authoring(&"perspective_fork_lab")
+	var road: Dictionary = definition.duplicate(true)
 	road.cubes.append({"cube_id":&"quality_roll_neighbor","layer":0,"center2":Vector3i(-2,4,0),"orientation":0,"group_id":&"","occludes_light":true,"tags":[]})
 	var road_faces := Geometry.make_face_nodes(&"quality_roll_neighbor")
 	for face in road_faces: face.walkable = face.face == 4
@@ -265,6 +270,7 @@ func run() -> void:
 		check(baked.ok,"actual delivered map bakes")
 		if not baked.ok: continue
 		var definition: Dictionary = baked.level
+		rows.append({"source":"SAVED_AUTHORING_BAKE","map":id,"level_hash":definition.content_hash,"source_map":baked.get("source_map"),"bake_provenance":baked.get("bake_provenance"),"negative_variants":"DEEP_COPY_OF_THIS_CANONICAL_LEVEL_ONLY"})
 		match id:
 			&"orientation_loop_lab": loop_cases(definition)
 			&"world_shift_gate_lab": gate_cases(definition)
