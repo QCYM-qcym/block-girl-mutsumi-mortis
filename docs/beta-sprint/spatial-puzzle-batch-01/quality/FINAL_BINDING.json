@@ -1,21 +1,34 @@
 {
   "task": "SPATIAL_PUZZLE_BATCH_01_OWNER03",
   "graphical_window": "RELEASED",
-  "independent_current_gameplay_assertions": 2467,
+  "independent_current_gameplay_assertions": 2547,
+  "assertions_by_facet": {
+    "UNIT": 30,
+    "REAL_RUNTIME": 712,
+    "SOLVER": 96,
+    "SAFETY": 20,
+    "LOGICAL_REPLAY": 5,
+    "FORMAL_GRAPHICAL": 531,
+    "NATURAL_GRAPHICAL": 1153
+  },
   "receipts": [
     {
-      "name": "mechanics_05",
+      "name": "mechanics_review_green_01",
       "candidate": "60643e7a06872258ca602beb411d6f8e5dd729a2",
       "execution_head": "60643e7a06872258ca602beb411d6f8e5dd729a2",
-      "checks": 485,
+      "checks": 500,
       "job": "mechanics",
-      "process_sha256": "b26a3763c486723e772ce5cfc274d9db80fb41b60471ad0674d511b78f31ccbd",
-      "report_sha256": "6d5883b963726a8a439826886d4e77979b1efd9afb5b4a612d96a534ba56b2c7",
-      "pid": 41128,
+      "process_sha256": "37f16f1a0524b88a7b12dd78e0c519dbc987c885cfe2eac6b7287fa5291e79e9",
+      "report_sha256": "ce227779af3095c36cf0a6084a0001e13f63c2a25855828664dc31515bdbc216",
+      "pid": 13944,
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/test_natural.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "gate_core_04",
@@ -29,7 +42,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "lock_core_04",
@@ -43,7 +62,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "loop_core_03",
@@ -57,7 +82,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd",
+        "tests/beta_sprint/spatial_quality/test_natural.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "fork_core_03",
@@ -71,7 +102,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd",
+        "tests/beta_sprint/spatial_quality/test_natural.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "combined_selected_03",
@@ -85,7 +122,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "legacy_profile_02",
@@ -99,7 +142,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "legacy_pconn_02",
@@ -113,7 +162,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_legacy_focused.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "loop_graphical_02",
@@ -127,7 +182,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_maps.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "fork_graphical_02",
@@ -141,7 +202,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_maps.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "gate_graphical_01",
@@ -155,7 +222,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_maps.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "lock_graphical_01",
@@ -169,7 +242,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_maps.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "combined_graphical_01",
@@ -183,7 +262,13 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_maps.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
       "name": "legacy_camera_graphical_01",
@@ -197,21 +282,29 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/run_quality.py",
+        "tests/beta_sprint/spatial_quality/test_maps.gd",
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd"
+      ],
+      "production_source_matches_current": true
     },
     {
-      "name": "natural_all_01",
-      "candidate": "60643e7a06872258ca602beb411d6f8e5dd729a2",
-      "execution_head": "60643e7a06872258ca602beb411d6f8e5dd729a2",
-      "checks": 882,
+      "name": "natural_review_green_02",
+      "candidate": "480bf4cc09157325b8d4a8b28a059981f77c28fb",
+      "execution_head": "480bf4cc09157325b8d4a8b28a059981f77c28fb",
+      "checks": 947,
       "job": "natural",
-      "process_sha256": "9b93f47f6f0e81a0ce7eb24eb8a3e9b6051b2388c3587472ccde66314c273f7a",
-      "report_sha256": "3ddb4acc3c81c5e15455a53a4a66de675feef40fa040aceafb884d8ef01748ac",
-      "pid": 22992,
+      "process_sha256": "048b365411cac2add278c37057250b75f8dded988e227c5202e30898e3b86128",
+      "report_sha256": "2151efbb54d62427aaae0dd2f34afeb6f5dda5c8d4af59f425929b627cb49faf",
+      "pid": 31052,
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [],
+      "production_source_matches_current": true
     },
     {
       "name": "legacy_five_graphical_06",
@@ -225,7 +318,12 @@
       "stderr_bytes": 0,
       "capture_verified": true,
       "source_verified": true,
-      "source_drift": []
+      "source_drift": [],
+      "changed_owner_test_files_since_execution": [
+        "tests/beta_sprint/spatial_quality/test_mechanics.gd",
+        "tests/beta_sprint/spatial_quality/test_natural.gd"
+      ],
+      "production_source_matches_current": true
     }
   ],
   "external_assertions_added": 0,
@@ -236,6 +334,7 @@
     "old69"
   ],
   "python_unit_tests": 12,
+  "review_coverage_unit_green": 10,
   "matrix_counts": {
     "NOT_RUN": 10,
     "PASS": 80,
@@ -260,9 +359,9 @@
     "tests/beta_sprint/spatial_quality/test_legacy_focused.gd.uid": "8e5cc4d8cdf7d84c613ee93e74611e55a57394643fb0191b8c51f37d30531ea2",
     "tests/beta_sprint/spatial_quality/test_maps.gd": "02a1c9a789b75acb0bd467180fc3cc45ce3c838b3e0bbbe96759ec2240917144",
     "tests/beta_sprint/spatial_quality/test_maps.gd.uid": "072b21c9f339338933bda820adbce3d77355f664aa35427cf30afdb930bfdbbe",
-    "tests/beta_sprint/spatial_quality/test_mechanics.gd": "c90a7fdda8461db5722429cb9ea62bbe178df6071e2fa2e323cec7155dd5252d",
+    "tests/beta_sprint/spatial_quality/test_mechanics.gd": "2eaf63fbb6cadba3743c4477b0fcc7335f37175cd562c98fedea9dbeb26e1609",
     "tests/beta_sprint/spatial_quality/test_mechanics.gd.uid": "d5e30f9bd597d6aa5a1b0537b4e06147a2db877ddb4631c988c856c3ea636f8b",
-    "tests/beta_sprint/spatial_quality/test_natural.gd": "0277b8ca9deac0c2edfab965d85a07764c0163e2e0ec2270950e434c0c464a3a",
+    "tests/beta_sprint/spatial_quality/test_natural.gd": "ae84c538171a4233690aeb5d87bc9a5df843e358e829a1e70e9b7a7582a02516",
     "tests/beta_sprint/spatial_quality/test_natural.gd.uid": "3f5e199825a666cec43f68f99d476e6dae8d96f151c9c4fd8d46054c932669d3",
     "tests/beta_sprint/spatial_quality/test_orientation_input.gd": "a22b835a20e28b5319787917645bb317e98b7f1f0d0cdfb36145e65be84f5877",
     "tests/beta_sprint/spatial_quality/test_orientation_input.gd.uid": "752d50efa9744df7d976740e45352d201a67b23fc3ef2cf0d787718a6c461e69",
