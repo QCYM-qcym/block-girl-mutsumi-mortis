@@ -69,3 +69,9 @@ Gated native-observation correction produced 54/97/62 passing assertions for Gat
 mechanics_02 retained failures in two adversarial Core variants: authoring dictionaries lacked the required content_hash placeholder before formal Codec hashing. This is a test input mistake, not missing Runtime dependencies. Added the placeholder before computing the actual formal hash and guarded failed setup.
 
 Combined original-graph reference is Owner09 report combined_runtime_02: 908 states /3916 edges, complete,103checks,0failures,0softlocks,0bypasses; UNFILTERED FULL_GRAPH. Raw report SHA e17d8f50dbdae072830434d6f1b84c23c9a152f7b55ba66d121ea22d06faa9e5. No independent03 count is added. Binding process/source receipt still to inspect before final registration.
+
+### Final integration intake and five-map formal GRAPHICAL gate
+
+Approved00 composite0075819b2f6f7c93fa38c733792afff5d094dc93 normally merged; execution candidate dee229c76f48b2fa3dbfaaa30bebed7e982f63ce. Includes01finalb78d07c,09finalfd162d5,07menu and Bridge27f57be. Five actual mode1 original traces repeated twice: Loop77/Fork55/Gate73/Lock117/combined165 =487 independent assertions. Old Camera formal extension44. All exit0/stderr0/drift[]/doubles[] and actual Windows capture. Combined trace FIRST_SHORTEST is selected witness only; not complete graph proof.
+
+Owner03 harness RED: explicit WeakRef type missing; corrected parse warning. New isolated main_scene invalidates implicit legacy recipe entry; process42516 matched exact own command before termination; old receipt retained. Ruling: select the frozen real game_shell.tscn in the test process before invoking unchanged L01-L05 native recipe; no production project setting change or new-menu regression claim.

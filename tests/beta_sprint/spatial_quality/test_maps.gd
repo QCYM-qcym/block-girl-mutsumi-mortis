@@ -23,7 +23,7 @@ func native_trace(level: Dictionary, trace: Dictionary, prefix: String) -> void:
 	var runtime := Facade.new()
 	var events: Array = []
 	var native_starts: Array = []
-	var observed := weakref(runtime)
+	var observed: WeakRef = weakref(runtime)
 	runtime.game_feel_event.connect(func(event): events.append(event.duplicate(true)))
 	runtime.transition_started.connect(func(result,token,generation,is_global):
 		var live: RefCounted = observed.get_ref()

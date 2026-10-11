@@ -27,7 +27,7 @@ JOBS = {
     "legacy_core": ("tests/beta_sprint/game_feel_owner_03/test_yellow_target_core.gd", False),
     "legacy_profile": ("tests/beta_sprint/game_feel_owner_03/test_yellow_target_legacy_profile.gd", False),
     "legacy_pconn": ("tests/beta_sprint/game_feel_owner_03/test_yellow_target_pconn.gd", False),
-    "legacy_graphical": ("tests/beta_sprint/game_feel_owner_03/test_v2_legacy_focused.gd", True),
+    "legacy_graphical": (OWNER + "test_legacy_focused.gd", True),
 }
 
 

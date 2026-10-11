@@ -189,7 +189,9 @@ func fork_cases(definition: Dictionary) -> void:
 	obstacle.faces.append_array(Geometry.make_face_nodes(&"quality_cubic_blocker"))
 	obstacle.content_hash = "0".repeat(64)
 	var obstacle_hash := Codec.compute_content_hash(obstacle)
-	check(obstacle_hash.ok,"adversarial blocker canonical hash computes")
+	check(obstacle_hash.ok,"adversarial blocker canonical hash computes: " + str(obstacle_hash.issues))
+	rows.append({"adversarial_blocker_hash":obstacle_hash})
+	if not obstacle_hash.ok: return
 	obstacle.content_hash = obstacle_hash.content_hash
 	check(Data.validate_level_shape(obstacle).is_empty(),"adversarial blocker retains exact formal DATA shape")
 	if not fresh(obstacle): return
