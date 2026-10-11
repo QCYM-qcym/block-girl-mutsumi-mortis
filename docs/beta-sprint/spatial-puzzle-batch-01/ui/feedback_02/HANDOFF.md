@@ -42,7 +42,9 @@ Godot4.7.2.stable.steam.ed1daf0bf，实际 headless，3进程，104+32+14 = **15
 
 原始文件保留在 `evidence/`：baseline_store_01、feedback02_first_01、feedback02_green_01、feedback02_final_01。初次 cold 1项失败是测试诊断 JSON 字典与原生字典直接比较的 StringName/int→String/float 类型差异；完整 canonical StateKey 已正确。已改为字段比较，独立完整 StateKey 断言保留。第一次 green 各阶段150项通过，但 PowerShell OrderedDictionary 的聚合字段 null；只修正 runner 聚合，再执行最终150项。两份旧证据没有改写。
 
-SourceCommit 及测试字节→live→Git blob 的323文件绑定见 `DELIVERY_BINDING.json`；实际执行时 HEAD 为上述 base、测试文件未提交，此事实保留。后续只提交绑定与报告元数据。18份批准缓存与引擎 SHA 单列，不伪装为 Git 源码。只归档原始日志 / 诊断报告，不归档隔离 profile 或玩家存档。
+SourceCommit `9ab49ae2c50977e109666dae2185f3e2ec97c900` 及测试字节→live→Git blob 的323文件绑定见 `DELIVERY_BINDING.json`；实际执行时 HEAD 为上述 base、测试文件未提交，此事实保留。后续只提交绑定与报告元数据。18份批准缓存与引擎 SHA 单列，不伪装为 Git 源码。只归档原始日志 / 诊断报告，不归档隔离 profile 或玩家存档。
+
+公开范围审计：47份初始文件555897 bytes，最大单文件59055 bytes；追加绑定 JSON 与少量报告元数据。没有新二进制 / 美术 / 字体 / 音频资源、隔离 profile、玩家存档或敏感凭据模式；已有批准资源不重复引入。新 evidence 的 text / LFS filter 属性分别 unset / unspecified，原字节保留；无新 LFS 对象。来源及原始证据都仅在两个 Owner 前缀。
 
 Stage Status: COMPLETE（本次 Owner07 headless 专项）
 Integration Status: PENDING_00（09最终作者资源迁移及00集成）

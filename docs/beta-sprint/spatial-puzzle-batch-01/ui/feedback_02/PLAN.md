@@ -30,4 +30,4 @@ Worktree: E:/godot/worktrees/block-girl-spatial-ui-feedback-02; branch feat/spat
 - [x] Seed process selects real Loop, executes actual closed_loop witness and returns to Menu; record formal initial/looped StateKeys and original save byte hash.
 - [x] New OS process reads actual saved Menu, clicks Continue and verifies exact initial StateKey/location/orientation, different looped key and zero commits; records both PIDs.
 - [x] Fresh scoped150 check run, read-only review and sensitive/large/resource audit.
-- [ ] Bind source commit and ordinary Owner Push/remote SHA Handoff. Migration/final integration/GUI/Human remain separate pending gates.
+- [x] Bind source commit and prepare the exact Owner ref for ordinary Push / independent remote SHA Handoff. Actual publication result is reported after the network commands in the current chat; migration/final integration/GUI/Human remain separate pending gates.
