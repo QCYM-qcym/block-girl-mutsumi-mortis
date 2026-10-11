@@ -9,6 +9,7 @@ const Rules = preload("res://foundation/rules/rule_records.gd")
 const RuleTypes = preload("res://foundation/rules/rule_types.gd")
 const Derived = preload("res://foundation/rules/derived_state_resolver.gd")
 const Connectivity = preload("res://foundation/rules/connectivity_resolver.gd")
+const SpatialRules = preload("res://foundation/rules/spatial_puzzle_rules.gd")
 const Effects = preload("res://foundation/rules/mechanism_effects.gd")
 const Permission = preload("res://foundation/rules/transition_permission.gd")
 const Safety = preload("res://foundation/validation/safety_queries.gd")
@@ -123,13 +124,18 @@ static func _transaction(level: Dictionary, state: Dictionary, action: Dictionar
 			var delta := _quarter_axis(axis)
 			candidate.player.location = move.target_location.duplicate(true)
 			candidate.player.orientation = Math.compose(delta, state.player.orientation)
+			candidate = SpatialRules.latch_arrival(level,state,candidate,snapshot.value)
 		Kind.SHIFT_WORLD:
 			global_kind = Global.SHIFT
+			var gate_code := SpatialRules.gate_rejection(level,state)
+			if gate_code != 0: return Rules.rejected(state,action,gate_code)
 			var mapping := Derived.shift_mapping(level, state)
 			if mapping.status == Types.MappingResolutionStatus.NONE:
 				return Rules.rejected(state, action, Code.NO_SHIFT_MAPPING, mapping.issues)
 			if mapping.status in [Types.MappingResolutionStatus.AMBIGUOUS, Types.MappingResolutionStatus.ERROR]:
 				return Rules.error(state, action, mapping.issues)
+			var pair_code := SpatialRules.mapping_rejection(level,state,mapping.mapping)
+			if pair_code != 0: return Rules.rejected(state,action,pair_code)
 			var source_face := _find(level.faces, "face_id", mapping.mapping.source_face)
 			var target_face := _find(level.faces, "face_id", mapping.mapping.target_face)
 			if source_face.shift_exit_blocked:
@@ -206,6 +212,8 @@ static func _transaction(level: Dictionary, state: Dictionary, action: Dictionar
 	var entered := Effects.enter_effects(level, _face(state), _face(candidate))
 	if effect.kind in [Kind.SHIFT_WORLD, Kind.USE_FACE_TRANSITION] and not entered.is_empty():
 		return Rules.error(state, action, [Rules.issue(Code.INVALID_ACTION, "mechanisms", "Global entry cannot chain an ENTER effect.")])
+	if effect.kind == Kind.MOVE:
+		entered = entered.filter(func(record: Dictionary) -> bool: return not SpatialRules.is_lock(level,record.mechanism_id))
 	if effect.kind == Kind.MOVE and allow_enter and not entered.is_empty():
 		if entered.size() > 1:
 			return Rules.error(state, action, [Rules.issue(Code.MULTIPLE_GLOBAL_MUTATIONS, "mechanisms", "One MOVE cannot accept multiple global effects.")])

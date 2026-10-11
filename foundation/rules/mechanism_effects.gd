@@ -5,6 +5,7 @@ const Types = preload("res://foundation/contracts/foundation_types.gd")
 const RuleRecords = preload("res://foundation/rules/rule_records.gd")
 const Data = preload("res://foundation/contracts/contract_validation.gd")
 const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
+const SpatialRules = preload("res://foundation/rules/spatial_puzzle_rules.gd")
 const Kind = Types.PuzzleActionKind
 const Code = Types.ValidationCode
 
@@ -15,6 +16,7 @@ static func validate_profile(level: Dictionary) -> Array[Dictionary]:
 	for index in level.mechanisms.size():
 		var mechanism: Dictionary = level.mechanisms[index]
 		var path := "mechanisms[%s]" % index
+		if SpatialRules.is_lock(level,mechanism.mechanism_id): continue
 		if mechanism.action.kind not in [Kind.MOVE_CELESTIAL, Kind.LOCAL_GROUP_ROTATE, Kind.USE_FACE_TRANSITION]:
 			issues.append(RuleRecords.issue(Code.INVALID_ACTION, path + ".action", "Mechanism action is outside the execution profile.", [mechanism.mechanism_id]))
 		if mechanism.allowed_states.size() != 1 or mechanism.allowed_states[0] != mechanism.initial_state:

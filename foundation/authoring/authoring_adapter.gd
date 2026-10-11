@@ -6,6 +6,7 @@ const Reader = preload("res://foundation/level/authoring_reader.gd")
 const Baker = preload("res://foundation/level/level_baker.gd")
 const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
 const Records = preload("res://foundation/contracts/contract_records.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
 const Types = preload("res://foundation/contracts/foundation_types.gd")
 
 static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapshot_identity: Dictionary) -> Dictionary:
@@ -49,6 +50,10 @@ static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapsh
 	var template := {}
 	for key in ["schema_version", "contract_version", "orientation_version", "rule_version", "level_id", "cell_size", "shift_compatibilities", "flag_definitions", "build_info"]:
 		template[key] = level_fields[key]
+	if Feel.spatial(level_fields):
+		for key in ["camera_initial_quadrant","perspective_falls","shift_gates"]:
+			template[key] = level_fields[key].duplicate(true) if level_fields[key] is Array else level_fields[key]
+		template["face_locks"] = []
 	for key in ["worlds", "cubes", "faces", "groups", "mechanisms", "face_transitions"]:
 		template[key] = []
 	template["celestial"] = level_fields.celestial.duplicate(true)
@@ -90,7 +95,11 @@ static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapsh
 					var config: Dictionary = resources[f.config.resource_ref]
 					var path := "mechanisms[%d]" % template.mechanisms.size()
 					Sources.capture(map, doc, record, "MECHANISM", f.mechanism_id, path)
-					Sources.capture_resource(map, config, record, "MECHANISM", f.mechanism_id, path, null)
+					var lock_path := ""
+					if config.fields.kind == Types.PuzzleActionKind.TRIGGER_MECHANISM:
+						lock_path = "face_locks[%d]" % template.face_locks.size()
+						template.face_locks.append({"mechanism_id":f.mechanism_id,"required_local_face":config.fields.required_local_face,"activation_mode":config.fields.activation_mode,"latched_state":config.fields.latched_state})
+					Sources.capture_resource(map, config, record, "MECHANISM", f.mechanism_id, path, null, lock_path)
 					var action: Dictionary = f.target_bindings.duplicate(true)
 					action["kind"] = config.fields.kind
 					if config.fields.kind == Types.PuzzleActionKind.LOCAL_GROUP_ROTATE:
