@@ -50,9 +50,11 @@ static func bake_authoring(payload: Dictionary, bake_options: Dictionary, snapsh
 	var template := {}
 	for key in ["schema_version", "contract_version", "orientation_version", "rule_version", "level_id", "cell_size", "shift_compatibilities", "flag_definitions", "build_info"]:
 		template[key] = level_fields[key]
-	if Feel.spatial(level_fields):
-		for key in ["camera_initial_quadrant","perspective_falls","shift_gates"]:
+	if Feel.curved(level_fields):
+		for key in ["camera_initial_quadrant","perspective_falls"]:
 			template[key] = level_fields[key].duplicate(true) if level_fields[key] is Array else level_fields[key]
+	if Feel.spatial(level_fields):
+		template["shift_gates"] = level_fields.shift_gates.duplicate(true)
 		template["face_locks"] = []
 	for key in ["worlds", "cubes", "faces", "groups", "mechanisms", "face_transitions"]:
 		template[key] = []
