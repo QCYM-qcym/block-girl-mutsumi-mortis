@@ -50,8 +50,10 @@ func run() -> void:
 		return
 	var maps: Script = load(MapsPath)
 	var selected := ""
+	var mode := 1
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--map="): selected = arg.trim_prefix("--map=")
+		if arg == "--search-mode=first": mode = 0
 	for id in maps.ids():
 		if not selected.is_empty() and String(id) != selected: continue
 		var prefix: String = PREFIX[id]
@@ -60,8 +62,8 @@ func run() -> void:
 		check(baked.get("ok",false),"real authored map Baker")
 		if not baked.get("ok",false): continue
 		var level: Dictionary = baked.level
-		var explored := Explorer.explore(level,Records.initial_state(level),Search.default_policy(1),Search.default_budget())
-		check(explored.status == 0 and explored.graph != null and explored.graph.complete and explored.solution_trace != null,"actual original FULL_GRAPH solved")
+		var explored := Explorer.explore(level,Records.initial_state(level),Search.default_policy(mode),Search.default_budget())
+		check(explored.status == 0 and explored.graph != null and (mode == 0 or explored.graph.complete) and explored.solution_trace != null,"actual original search solved; partial witness never proves complete graph")
 		if explored.solution_trace == null: continue
 		var original: Dictionary = explored.solution_trace
 		check(Trace.validate(level,original).ok and Trace.validate_semantics(level,original).ok,"selected ORIGINAL Solver witness checked")

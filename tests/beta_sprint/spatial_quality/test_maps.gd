@@ -22,20 +22,25 @@ func native_trace(level: Dictionary, trace: Dictionary, prefix: String) -> void:
 	begin(prefix + ".runtime_route","REAL_RUNTIME")
 	var runtime := Facade.new()
 	var events: Array = []
+	var native_starts: Array = []
+	var observed := weakref(runtime)
 	runtime.game_feel_event.connect(func(event): events.append(event.duplicate(true)))
+	runtime.transition_started.connect(func(result,token,generation,is_global):
+		var live: RefCounted = observed.get_ref()
+		if live != null: native_starts.append({"identity":live.get_pending_identity(token,generation,is_global),"result":result.duplicate(true)}))
 	check(runtime.load_level(level).ok,"real production Facade loads")
 	var initial := runtime.get_state()
 	var actual_steps: Array = []
 	for step in trace.steps:
 		events.clear()
+		native_starts.clear()
 		var before := runtime.get_state()
 		var commits := runtime.get_commit_count()
 		var accepted := runtime.request_action(step.action)
 		check(accepted.status == 0 and accepted.changed,"original Solver action accepted")
-		var started := events.filter(func(e): return e.phase == "STARTED")
-		check(started.size() == 1 and runtime.get_state() == before and runtime.get_commit_count() == commits,"one native proposal, no premature commit")
-		if started.size() != 1: break
-		var identity: Dictionary = started[0].transition_identity
+		check(native_starts.size() == 1 and runtime.get_state() == before and runtime.get_commit_count() == commits,"one native proposal, no premature commit")
+		if native_starts.size() != 1: break
+		var identity: Dictionary = native_starts[0].identity
 		check(identity.has_all(["session_id","level_run_id","generation","transaction_id","is_global"]),"complete native identity")
 		var completion := runtime.finish_transition(identity)
 		check(not completion.get("ignored",true) and runtime.get_commit_count() == commits + 1,"explicit logical completion commits once")
@@ -89,8 +94,10 @@ func run() -> void:
 		return
 	var factory: Script = load(FactoryPath)
 	var selected := ""
+	var mode := 1
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--map="): selected = arg.trim_prefix("--map=")
+		if arg == "--search-mode=first": mode = 0
 	for id in factory.ids():
 		if not selected.is_empty() and String(id) != selected: continue
 		var prefix: String = PREFIX[id]
@@ -110,21 +117,21 @@ func run() -> void:
 		check(repeated.get("ok",false) and repeated.level == level,"repeat Bake has identical canonical values")
 		check(Codec.compute_content_hash(level).content_hash == level.content_hash,"all authored rules bind formal content hash")
 		var initial := Records.initial_state(level)
-		begin(prefix + ".full_graph","SOLVER")
-		var explored := Explorer.explore(level,initial,Search.default_policy(1),Search.default_budget())
-		check(explored.status == 0 and explored.graph != null and explored.graph.complete and explored.solution_trace != null,"real UNFILTERED FULL_GRAPH SOLVED and complete")
-		if explored.graph == null or explored.solution_trace == null or not explored.graph.complete:
+		begin(prefix + (".full_graph" if mode == 1 else ".selected_trace"),"SOLVER")
+		var explored := Explorer.explore(level,initial,Search.default_policy(mode),Search.default_budget())
+		check(explored.status == 0 and explored.graph != null and explored.solution_trace != null and (mode == 0 or explored.graph.complete),"real original UNFILTERED search has a solved witness; completeness required only for FULL_GRAPH")
+		if explored.graph == null or explored.solution_trace == null or (mode == 1 and not explored.graph.complete):
 			rows.append({"map":id,"explorer":explored})
 			continue
 		var trace: Dictionary = explored.solution_trace
 		check(Trace.validate(level,trace).ok and Trace.validate_semantics(level,trace).ok,"selected original hard witness revalidated")
 		check(trace.total_actions > 0,"Goal requires a real route")
-		graph_invariants(level,explored.graph,prefix)
+		if mode == 1: graph_invariants(level,explored.graph,prefix)
 		begin(prefix + ".safe_edges","SAFETY")
 		for step in trace.steps:
 			var state: Dictionary = trace.initial_state if step.index == 1 else trace.steps[step.index-2].expected_state
 			# MOVE can mean Roll or authored Fall. Consume the formal motion descriptor.
-			var motion := Fall.motion(level,state,step.expected_state,step.action)
+			var motion: Dictionary = Fall.motion(level,state,step.expected_state,step.action) if step.action.kind in [0,8] else {}
 			var verdict: Dictionary
 			var query := "Safety.validate_motion"
 			if not motion.is_empty():
@@ -139,11 +146,13 @@ func run() -> void:
 				verdict = Safety.validate_motion(level,state,step.expected_state,step.action)
 			check(verdict.status == 0 and verdict.issues.is_empty(),"actual Safety for selected trace edge " + str(step.index))
 			rows.append({"map":id,"trace_step":step.index,"safety_query":query,"authorized_motion":motion,"actual_safety":verdict})
-		begin(prefix + ".softlock","SOLVER")
-		var graph_before: Dictionary = explored.graph.duplicate(true)
-		var softlock := Softlock.analyze(level,explored.graph,{"max_nodes":10000,"max_edges":100000,"max_runtime_ms":0})
-		check(softlock.status == 0 and softlock.softlock_count == 0,"same live original graph has zero undesigned softlocks")
-		check(explored.graph == graph_before,"analysis does not mutate original graph")
+		var softlock: Variant = null
+		if mode == 1:
+			begin(prefix + ".softlock","SOLVER")
+			var graph_before: Dictionary = explored.graph.duplicate(true)
+			softlock = Softlock.analyze(level,explored.graph,{"max_nodes":10000,"max_edges":100000,"max_runtime_ms":0})
+			check(softlock.status == 0 and softlock.softlock_count == 0,"same live original graph has zero undesigned softlocks")
+			check(explored.graph == graph_before,"analysis does not mutate original graph")
 		begin(prefix + ".budget","SOLVER")
 		var tiny := Search.default_budget()
 		tiny.max_states = 1
@@ -157,6 +166,6 @@ func run() -> void:
 		check(replay.status == 0 and replay.matched_steps == trace.total_actions and replay.actual_statekey == trace.goal_statekey,"actual LOGICAL_SESSION matches complete original witness")
 		driver.free()
 		rows.append({"map":id,"level_hash":level.content_hash,"rule_version":level.rule_version,
-			"policy":explored.graph.policy_descriptor,"graph_complete":explored.graph.complete,"metrics":explored.metrics,
+			"policy":explored.graph.policy_descriptor,"analysis_scope":"FULL_GRAPH" if mode == 1 else "SELECTED_WITNESS_ONLY","graph_complete":explored.graph.complete,"metrics":explored.metrics,
 			"original_trace":trace,"softlock":softlock,"budget_result":{"status":incomplete.status,"metrics":incomplete.metrics},"logical":replay})
 	finish()

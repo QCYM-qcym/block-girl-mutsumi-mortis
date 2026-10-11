@@ -50,6 +50,22 @@ Corrected headless: Loop37 / Fork31. Formal GRAPHICAL mode1: Loop77 / Fork55, or
 
 03 graphical window RELEASED to00/07 after native processes exited. Further gated graphics will require a new coordinated window.
 
+### Gated native observation RED and expensive original graph
+
+`gate_core_01` and `lock_core_01` retained native-observation failures: the test incorrectly expected movement STARTED events for Shift. Production Facade explicitly publishes nonmovement neutral FEEDBACK and the separate native `transition_started` signal. The consumer now captures full identity with public `get_pending_identity` from that native signal. No production edit or defect inferred.
+
+`combined_core_01`: actual full graph process hit the 240-second runner deadline, was terminated by that deadline, and produced no report; stderr empty, no source drift. This run yields no Solver/Softlock/bypass conclusion. Do not repeat combined FULL_GRAPH while09's same-process official proof runs. Its exact external receipt will be cited as Owner09 evidence, with zero independent03 assertions added. Owner03 may generate FIRST_SHORTEST selected witnesses for independent Runtime/Replay; these cannot establish full-graph safety/softlock/absence of bypass.
+
+`mechanics_01`: 437 production native Facade assertions passed across all five maps. First preparation version; expanding adversarial unsafe/ordinary-Roll inputs and explicit global Shift lifecycle while preserving this original receipt. UNIT author-bake checks will be separately labeled, not REAL_RUNTIME.
+
 ### Intake after first graphical window
 
 Approved Runtime697a31ed85e29b1d37ec882e712d323751bd90a1 and map9debc8e33efc32593f33888a7d30e0e69a873fb6 were normally merged. Combined HEAD48808896965ddc9d1817c96dd1bb5cbc8fa05f37. Initial evidence staging encountered Windows path length on generated shader caches; no receipt commit was created in that attempt. Ignored shader caches in this exclusive quality directory, preserving them physically and keeping raw logs/reports. No public source or Git global/repository configuration changed.
+
+### Strict diagnostics remain part of acceptance
+
+Gated native-observation correction produced 54/97/62 passing assertions for Gate/Lock/combined-selected, but all three receipts correctly FAIL strict admission due to ObjectDB/resource leaks on stderr. Root cause: native callback captured its own RefCounted Facade, retaining a cycle; changed the observer to WeakRef. No production changes.
+
+mechanics_02 retained failures in two adversarial Core variants: authoring dictionaries lacked the required content_hash placeholder before formal Codec hashing. This is a test input mistake, not missing Runtime dependencies. Added the placeholder before computing the actual formal hash and guarded failed setup.
+
+Combined original-graph reference is Owner09 report combined_runtime_02: 908 states /3916 edges, complete,103checks,0failures,0softlocks,0bypasses; UNFILTERED FULL_GRAPH. Raw report SHA e17d8f50dbdae072830434d6f1b84c23c9a152f7b55ba66d121ea22d06faa9e5. No independent03 count is added. Binding process/source receipt still to inspect before final registration.

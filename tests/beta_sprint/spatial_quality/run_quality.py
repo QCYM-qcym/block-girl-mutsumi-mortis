@@ -21,6 +21,7 @@ OWNER = "tests/beta_sprint/spatial_quality/"
 JOBS = {
     "orientation": (OWNER + "test_orientation_input.gd", False),
     "maps": (OWNER + "test_maps.gd", False),
+    "mechanics": (OWNER + "test_mechanics.gd", False),
     "formal": (OWNER + "test_graphical.gd", True),
     "camera_graphical": (OWNER + "test_graphical_camera.gd", True),
     "legacy_core": ("tests/beta_sprint/game_feel_owner_03/test_yellow_target_core.gd", False),
@@ -84,7 +85,7 @@ def normalize_legacy(job, raw):
                        "status": "PASS" if raw.get("failures") == [] else "FAIL"}]}
 
 
-def run(job, name, candidate, window, map_id=None):
+def run(job, name, candidate, window, map_id=None, search_mode="full"):
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", name) or not re.fullmatch(r"[0-9a-f]{40}", candidate):
         raise ValueError("Fresh simple evidence name and full candidate SHA required")
     subprocess.run(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", candidate, "HEAD"], check=True)
@@ -107,6 +108,7 @@ def run(job, name, candidate, window, map_id=None):
             "--max-fps", "60", "--", "--evidence=" + out.as_posix(), "--execution-head=" + head]
     if map_id:
         args.append("--map=" + map_id)
+    args.append("--search-mode=" + search_mode)
     receipt = {"job":job,"candidate":candidate,"execution_head":head,"graphical":graphical,
                "window_coordination":window,"arguments":args,"source_sha256":sources,
                "source_verified":True,"engine_sha256":sha(ENGINE),
@@ -156,5 +158,6 @@ if __name__ == "__main__":
     parser.add_argument("--candidate",required=True)
     parser.add_argument("--window-coordination",default="")
     parser.add_argument("--map")
+    parser.add_argument("--search-mode",choices=["full","first"],default="full")
     opts=parser.parse_args()
-    raise SystemExit(run(opts.job,opts.name,opts.candidate,opts.window_coordination,opts.map))
+    raise SystemExit(run(opts.job,opts.name,opts.candidate,opts.window_coordination,opts.map,opts.search_mode))
