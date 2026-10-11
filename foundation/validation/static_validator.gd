@@ -2,6 +2,7 @@ extends RefCounted
 ## Complete declared-domain validation, never player reachability or permission.
 ## Count budgets are debited before each configuration / top-level semantic query.
 
+const SpatialRules = preload("res://foundation/rules/spatial_puzzle_rules.gd")
 const Types = preload("res://foundation/contracts/foundation_types.gd")
 const Status = preload("res://foundation/validation/validation_types.gd").ValidationStatus
 const Data = preload("res://foundation/contracts/contract_validation.gd")
@@ -158,9 +159,9 @@ static func _profiles(level: Dictionary) -> Array[Dictionary]:
 	for index in level.mechanisms.size():
 		var mechanism: Dictionary = level.mechanisms[index]
 		var path := "mechanisms[%d]" % index
-		if mechanism.allowed_states != [mechanism.initial_state]:
+		if not SpatialRules.is_lock(level,mechanism.mechanism_id) and mechanism.allowed_states != [mechanism.initial_state]:
 			Geometry._add(issues, Code.INVALID_ACTION, path + ".allowed_states", [mechanism.mechanism_id], "First-version mechanisms have exactly their immutable initial state.")
-		if mechanism.action.kind not in [Types.PuzzleActionKind.MOVE_CELESTIAL, Types.PuzzleActionKind.LOCAL_GROUP_ROTATE, Types.PuzzleActionKind.USE_FACE_TRANSITION]:
+		if not SpatialRules.is_lock(level,mechanism.mechanism_id) and mechanism.action.kind not in [Types.PuzzleActionKind.MOVE_CELESTIAL, Types.PuzzleActionKind.LOCAL_GROUP_ROTATE, Types.PuzzleActionKind.USE_FACE_TRANSITION]:
 			Geometry._add(issues, Code.INVALID_ACTION, path + ".action", [mechanism.mechanism_id], "Bound effect is outside the first-version execution profile.")
 		elif mechanism.action.kind in [Types.PuzzleActionKind.MOVE_CELESTIAL, Types.PuzzleActionKind.LOCAL_GROUP_ROTATE] and mechanism.action.mechanism_id != mechanism.mechanism_id:
 			Geometry._add(issues, Code.INVALID_REFERENCE, path + ".action.mechanism_id", [mechanism.mechanism_id, mechanism.action.mechanism_id], "Bound effect must reference its owning mechanism.")

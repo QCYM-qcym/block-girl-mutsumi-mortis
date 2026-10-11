@@ -18,11 +18,12 @@ static func capture(map: Dictionary, doc: Dictionary, record: Dictionary, kind: 
 			var suffix := _formal_field(kind, field, "")
 			_append(map, record.authoring_id, doc.document_uri, record.node_path, null, null, null, kind, id, field, _join(path, suffix))
 
-static func capture_resource(map: Dictionary, resource: Dictionary, _host: Dictionary, kind: String, id: Variant, path: String, face: Variant) -> void:
+static func capture_resource(map: Dictionary, resource: Dictionary, _host: Dictionary, kind: String, id: Variant, path: String, face: Variant, lock_path: String = "") -> void:
 	# No resource subpath was captured by the projector. Never invent one from an
 	# array position or attach a host NodePath to a different resource document.
 	for field in [""] + resource.fields.keys():
-		_append(map, resource.authoring_id, resource.document_uri, null, resource.resource_uid, null, face, kind, id, field, _join(path, _formal_field(kind, field, "")))
+		var prefix := lock_path if not lock_path.is_empty() and field in Schema.LOCK_CONFIG_TYPES else path
+		_append(map, resource.authoring_id, resource.document_uri, null, resource.resource_uid, null, face, kind, id, field, _join(prefix, _formal_field(kind, field, "")))
 
 static func _append(map: Dictionary, authoring_id: String, uri: String, node_path: Variant, uid: Variant, subpath: Variant, face: Variant, kind: String, id: Variant, field: String, reader_path: String) -> void:
 	map.entries.append({"authoring_id": authoring_id, "document_uri": uri, "node_path_at_capture": node_path, "resource_uid": uid, "resource_subpath": subpath, "local_face": face, "entity_kind": kind, "entity_id": id, "field": field, "reader_path": reader_path if not reader_path.is_empty() else null, "canonical_path": null})
@@ -50,6 +51,10 @@ static func complete(map: Dictionary, level: Dictionary, payload: Dictionary) ->
 			for i in range(entities.size()):
 				if entities[i][pair[1]] == entry.entity_id:
 					prefix = "%s[%d]" % [pair[0], i]
+		if entry.entity_kind == "MECHANISM" and entry.field in Schema.LOCK_CONFIG_TYPES:
+			prefix = null
+			for i in level.get("face_locks",[]).size():
+				if level.face_locks[i].mechanism_id == entry.entity_id: prefix = "face_locks[%d]" % i
 		if prefix != null:
 			entry.canonical_path = _join(prefix, _formal_field(entry.entity_kind, entry.field, entry.reader_path if entry.reader_path != null else ""))
 

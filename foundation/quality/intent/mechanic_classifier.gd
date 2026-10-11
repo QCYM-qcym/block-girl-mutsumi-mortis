@@ -6,6 +6,9 @@ const Rules = preload("res://foundation/rules/rule_records.gd")
 const Connectivity = preload("res://foundation/rules/connectivity_resolver.gd")
 const Effects = preload("res://foundation/rules/mechanism_effects.gd")
 const Geometry = preload("res://foundation/spatial/surface_geometry.gd")
+const Feel = preload("res://foundation/game_feel/schema.gd")
+const SpatialRules = preload("res://foundation/rules/spatial_puzzle_rules.gd")
+const Kernel = preload("res://foundation/rules/puzzle_rule_kernel.gd")
 
 static func classify_transition(level: Dictionary, result: Dictionary) -> Dictionary:
 	var issues := Data.validate_level_shape(level)
@@ -20,6 +23,7 @@ static func classify_transition(level: Dictionary, result: Dictionary) -> Dictio
 	var before: Dictionary = result.previous_state
 	var after: Dictionary = result.next_state
 	if result.changed != (before != after): return _failure("result.changed")
+	if Feel.spatial(level): return _classify_spatial(level,result)
 	if not result.changed:
 		return _success([],[]) if result.global_kind == 0 else _failure("result.global_kind")
 	if before.level_flags != after.level_flags or before.mechanism_states != after.mechanism_states: return _failure("result.next_state")
@@ -92,6 +96,43 @@ static func classify_transition(level: Dictionary, result: Dictionary) -> Dictio
 	if after.world_orientations != worlds or after.group_orientations != groups or after.celestial != celestial or after.player.location != location or result.global_kind != global_kind:
 		return _failure("result.next_state")
 	if action.kind != 0 and effect.kind == 7 and before.player != after.player: return _failure("result.next_state.player")
+	return _success(tags,ids)
+
+static func _classify_spatial(level: Dictionary, result: Dictionary) -> Dictionary:
+	# Execute the authoritative rule seam, rather than inventing latch/Fall legality.
+	var actual := Kernel.evaluate_action(level,result.previous_state,result.action,Rules.idle_context())
+	if actual != result: return _failure("result.next_state")
+	if not result.changed: return _success([],[])
+	var tags: Array = []
+	var ids: Array = []
+	var before: Dictionary = result.previous_state
+	var after: Dictionary = result.next_state
+	var action: Dictionary = result.action
+	var effect: Dictionary = action
+	if action.kind == 0:
+		tags.append(T.MechanicTag.MOVE)
+		for mechanism in Effects.enter_effects(level,_face(before.player.location),_face(after.player.location)):
+			if SpatialRules.is_lock(level,mechanism.mechanism_id):
+				if before.mechanism_states[mechanism.mechanism_id] != after.mechanism_states[mechanism.mechanism_id]: ids.append(mechanism.mechanism_id)
+			else:
+				ids.append(mechanism.mechanism_id)
+				effect = mechanism.action
+	elif action.kind in [5,6,7]:
+		var mechanism := _find(level.mechanisms,"mechanism_id",action.mechanism_id)
+		ids.append(mechanism.mechanism_id)
+		effect = mechanism.action
+	if not ids.is_empty(): tags.append(T.MechanicTag.MECHANISM_TRIGGER)
+	match effect.kind:
+		1: tags.append(T.MechanicTag.WORLD_SHIFT)
+		2: tags.append(T.MechanicTag.SURFACE_ROTATE)
+		3: tags.append(T.MechanicTag.INNER_ROTATE)
+		4: tags.append(T.MechanicTag.FACE_TRANSITION)
+		6:
+			if before.group_orientations != after.group_orientations: tags.append(T.MechanicTag.LOCAL_GROUP_ROTATE)
+		7:
+			if before.celestial != after.celestial: tags.append(T.MechanicTag.CELESTIAL_CHANGE)
+		8: tags.append(T.MechanicTag.MOVE)
+	# Camera is an authoritative graph state, with no invented mechanic taxonomy tag.
 	return _success(tags,ids)
 
 static func _effect_tag(kind: int) -> int:

@@ -7,6 +7,9 @@ const Feel = preload("res://foundation/game_feel/schema.gd")
 const ENUMS = {"layer": Types.WorldLayer, "face": Types.FaceDirection, "intent": Types.RotationIntent,
 	"compatibility": Types.FaceCompatibility, "axis": Types.FaceAxis, "kind": Types.PuzzleActionKind, "game_feel_kind":Types.GameFeelActionKind, "operation": Types.CelestialOp}
 const RECORDS = {
+	"shift_gate": Feel.GATE_WIRE,
+	"mechanism_requirement": Feel.REQUIREMENT_WIRE,
+	"face_lock": Feel.LOCK_WIRE,
 	"fall_connection": Feel.CONNECTION_WIRE,
 	"fall_connection_curve": Feel.CURVE_CONNECTION_WIRE,
 	"trajectory": Feel.TRAJECTORY_DATA,
@@ -34,7 +37,7 @@ const ACTIONS = {
 	6: {"kind":"kind", "group_id":"name", "rotation_delta":"int", "mechanism_id":"name"},
 	7: {"kind":"kind", "celestial_op":"operation", "target_slot_id":"name", "alternate_slot_id":"name", "mechanism_id":"name"},
 }
-const RECORD_ORDER = {"fall_connection_curve":["connection_id"],"fall_connection":["connection_id"],"world":["layer"], "cube":["cube_id"], "face_record":["face_id"], "group":["group_id"], "slot":["slot_id"], "mechanism":["mechanism_id"], "transition":["transition_id"], "flag":["flag_id"], "rotation_edge":["from_orientation", "rotation_delta", "to_orientation"], "slot_edge":["from_slot_id", "to_slot_id"]}
+const RECORD_ORDER = {"shift_gate":["gate_id"],"mechanism_requirement":["mechanism_id"],"face_lock":["mechanism_id"],"fall_connection_curve":["connection_id"],"fall_connection":["connection_id"],"world":["layer"], "cube":["cube_id"], "face_record":["face_id"], "group":["group_id"], "slot":["slot_id"], "mechanism":["mechanism_id"], "transition":["transition_id"], "flag":["flag_id"], "rotation_edge":["from_orientation", "rotation_delta", "to_orientation"], "slot_edge":["from_slot_id", "to_slot_id"]}
 const SORTED_SETS = ["allowed_camera_quadrants","allowed_world_orientations","cube_ids", "mechanism_ids", "required_flags", "tags"]
 
 static func encode(level: Dictionary) -> Dictionary:
@@ -93,7 +96,7 @@ static func _to_wire(value: Variant, descriptor: String, field: String = "") -> 
 		return output
 	if RECORDS.has(descriptor) or descriptor == "action":
 		var schema: Dictionary = (ACTIONS[value.kind] if descriptor == "action" else RECORDS[descriptor]).duplicate()
-		if descriptor == "level" and Feel.enabled(value): schema.merge(Feel.CURVE_LEVEL_WIRE if Feel.curved(value) else Feel.LEVEL_WIRE)
+		if descriptor == "level" and Feel.enabled(value): schema.merge(Feel.level_fields(Feel.level_kind(value),true))
 		var output := {}
 		for key in schema:
 			output[key] = _to_wire(value[key], schema[key], key)
@@ -114,7 +117,7 @@ static func _from_wire(value: Variant, descriptor: String, path: String, issues:
 		return output
 	if (RECORDS.has(descriptor) or descriptor == "action") and value is Dictionary:
 		var schema: Dictionary = RECORDS.get(descriptor, {}).duplicate()
-		if descriptor == "level" and Feel.enabled(value): schema.merge(Feel.CURVE_LEVEL_WIRE if Feel.curved(value) else Feel.LEVEL_WIRE)
+		if descriptor == "level" and Feel.enabled(value): schema.merge(Feel.level_fields(Feel.level_kind(value),true))
 		if descriptor == "action":
 			var symbol: Variant = value.get("kind")
 			var kind: int = Types.PuzzleActionKind.get(symbol,Types.GameFeelActionKind.get(symbol,-1)) if symbol is String else -1
