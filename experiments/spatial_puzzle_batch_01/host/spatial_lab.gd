@@ -109,6 +109,55 @@ func _build_geometry() -> void:
 	if not first:
 		_camera_center=bounds.get_center()+Vector3.UP
 		camera.size=clampf(maxf(bounds.size.x,bounds.size.z)*1.5+6.0,10.0,40.0)
+	_build_action_markers(level,state)
+
+func _build_action_markers(level:Dictionary,state:Dictionary) -> void:
+	var resolved:Dictionary=Geometry.snapshot(level,state)
+	if not resolved.ok: return
+	var marks:=Node3D.new()
+	marks.name="ActionMarkers"
+	geometry_root.add_child(marks)
+	for anchor in resolved.value.anchors:
+		if anchor.layer!=state.player.location.layer: continue
+		var position:Vector3=Vector3(anchor.position2)*0.5
+		if anchor.face_id==level.goal.face_id:
+			_marker(marks,position,"GOAL",Color("72e7a8"),"GOAL",anchor.face_id)
+		for gate in level.get("shift_gates",[]):
+			if gate.source_face_id==anchor.face_id:
+				# Gate presence is authored. Color does not claim current eligibility.
+				_marker(marks,position,"转换点 · Space",Color("71d5ee"),"SHIFT_GATE",anchor.face_id)
+		for lock in level.get("face_locks",[]):
+			for mechanism in level.mechanisms:
+				if mechanism.mechanism_id==lock.mechanism_id and mechanism.face_id==anchor.face_id:
+					var latched:bool=state.mechanism_states.get(lock.mechanism_id)==lock.latched_state
+					_marker(marks,position,"已激活" if latched else "面 %d 朝下"%(int(lock.required_local_face)+1),Color("72e7a8") if latched else Color("efb666"),"FACE_LOCK",anchor.face_id)
+		var seen_edges:Array=[]
+		for connection in level.get("perspective_falls",[]):
+			if connection.source_face_id!=anchor.face_id or connection.source_edge in seen_edges: continue
+			seen_edges.append(connection.source_edge)
+			var directions:Array=[anchor.frame.u,anchor.frame.v,-anchor.frame.u,-anchor.frame.v]
+			var offset:Vector3=Vector3(directions[connection.source_edge])*0.62
+			_marker(marks,position+offset,"F 边缘" if connection.source_edge==2 else "前进边缘",Color("efe3b0"),"MOVE_EDGE",anchor.face_id)
+
+func _marker(parent:Node3D,position:Vector3,text:String,color:Color,kind:String,face:StringName) -> void:
+	var marker:=Node3D.new()
+	marker.position=position
+	marker.set_meta("kind",kind);marker.set_meta("face_id",face)
+	parent.add_child(marker)
+	var dot:=MeshInstance3D.new()
+	var mesh:=CylinderMesh.new()
+	mesh.top_radius=0.14;mesh.bottom_radius=0.14;mesh.height=0.025
+	dot.mesh=mesh;dot.position.y=0.03
+	var material:=StandardMaterial3D.new()
+	material.albedo_color=color;material.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
+	dot.material_override=material
+	marker.add_child(dot)
+	var label:=Label3D.new()
+	label.text=text;label.font_size=32;label.pixel_size=0.008
+	label.position.y=0.35
+	label.billboard=BaseMaterial3D.BILLBOARD_ENABLED
+	label.modulate=color;label.outline_modulate=Color("15232a")
+	marker.add_child(label)
 
 func _on_native_started(result: Dictionary, transaction_id: int, generation: int, is_global: bool) -> void:
 	if result.get("action",{}).get("kind")!=1:
@@ -163,7 +212,14 @@ func _cancel_shift(reason:String) -> void:
 
 func _process(delta:float) -> void:
 	if not _shift_identity.is_empty() and not _identity_is_current(_shift_identity): _cancel_shift("LIFECYCLE")
+	var camera_before:Dictionary=_camera_motion.duplicate(true)
+	var commits_before:int=runtime.get_commit_count() if runtime!=null else 0
 	super._process(delta)
+	# Observe the inherited real camera interpolation reaching its final frame.
+	# Reset/cancellation cannot satisfy the unchanged native identity and commit.
+	if not camera_before.is_empty() and _camera_motion.is_empty() and _identity_is_current(camera_before.token) and runtime.get_commit_count()==commits_before+1:
+		if camera.basis.is_equal_approx(camera_before.target):
+			native_motion_completed.emit(camera_before.token,{"kind":"SET_CAMERA_QUADRANT","visual_transform":actor.transform,"state":runtime.get_state(),"completion":"Camera interpolation final frame"})
 
 func _on_committed(state:Dictionary) -> void:
 	super._on_committed(state)
