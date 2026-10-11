@@ -34,7 +34,9 @@ Owner07 final tests949ed7f3c6ff1a4d4d1ca07ed34e933299ddd629 are integrated:236 h
 
 03 formal graphical delivery60643e7a06872258ca602beb411d6f8e5dd729a2 is integrated. Actual registered mode1 TraceReplayer repeats each original selected trace twice: Loop77, Fork55, Gate73, FaceLock117, combined165 =487 checks; old Camera trace44 additional checks. All pass with exit0/stderr0/drift[]/doubles[]. Actual rendered captures and per-step identity/StateKey/Camera/World/orientation/final-pose evidence are in quality/evidence/*graphical*. Combined FIRST_SHORTEST is a selected replay witness, while its universal softlock/bypass claims use09's complete graph separately.
 
-03 is finishing the old five-level affected regression and additional natural lifecycle coverage. Package launch verification is still pending. This document is not yet a final playable acceptance declaration.
+03 natural_all_01 passes882 actual-renderer assertions across all5 maps: natural full routes, formal final pose, physical face marks, held/repeated/opposite inputs, Pause, Reset, unload and retired identities. legacy_five_graphical_06 passes206 affected L01–L05 graphical checks with exit0/stderr0/no drift. Only test entry selection and derived asset cache preparation changed; original five-level gameplay data is untouched.
+
+The final copied package's execution and immutable identity are attested by the Coordinator final RECEIPT.json after assembly. Source evidence does not substitute for that package check.
 
 ## Protected scope and human limits
 
