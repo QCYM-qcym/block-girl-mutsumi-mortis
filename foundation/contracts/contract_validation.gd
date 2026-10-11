@@ -7,6 +7,9 @@ const Feel = preload("res://foundation/game_feel/schema.gd")
 const QUARTER_TURNS = [2, 3, 22, 18, 9, 12]
 const FACE_NAMES = ["FRONT", "BACK", "LEFT", "RIGHT", "TOP", "BOTTOM"]
 const SCHEMAS = {
+	"shift_gate": Feel.GATE_DATA,
+	"mechanism_requirement": Feel.REQUIREMENT_DATA,
+	"face_lock": Feel.LOCK_DATA,
 	"fall_connection": Feel.CONNECTION_DATA,
 	"fall_connection_curve": Feel.CURVE_CONNECTION_DATA,
 	"trajectory": Feel.TRAJECTORY_DATA,
@@ -63,9 +66,9 @@ static func validate_level_shape(level: Dictionary) -> Array[Dictionary]:
 	var kind := Feel.level_kind(level)
 	var opt_in := kind != 0
 	var shape: Dictionary = SCHEMAS.level.duplicate()
-	if opt_in: shape.merge(Feel.CURVE_LEVEL_FIELDS if kind == 3 else Feel.LEVEL_FIELDS)
+	if opt_in: shape.merge(Feel.level_fields(kind))
 	_check_record(level, shape, "", issues)
-	var versions := {"schema_version":kind if opt_in else 1,"contract_version":Feel.CURVE_CONTRACT if kind == 3 else (Feel.CONTRACT if opt_in else "foundation.contract.v1"),"orientation_version":"cube24.v1","rule_version":Feel.CURVE_RULE if kind == 3 else (Feel.RULE if opt_in else "foundation.rules.v1")}
+	var versions := {"schema_version":kind if opt_in else 1,"contract_version":Feel.contract_for_kind(kind) if opt_in else "foundation.contract.v1","orientation_version":"cube24.v1","rule_version":Feel.rule_for_kind(kind) if opt_in else "foundation.rules.v1"}
 	for field in versions:
 		var expected: Variant = versions[field]
 		if typeof(level.get(field)) == typeof(expected) and level[field] != expected:
@@ -82,6 +85,7 @@ static func validate_level_shape(level: Dictionary) -> Array[Dictionary]:
 	_validate_groups(level, indexes, issues)
 	_validate_celestial(level.celestial, indexes.slots, issues)
 	_validate_mechanisms(level, indexes, issues)
+	if kind == 4: _validate_spatial(level, indexes, issues)
 	_validate_transitions(level.face_transitions, indexes, issues)
 	_check_player(level.spawn, indexes, "spawn", issues)
 	_reference(level.goal.face_id, indexes.faces, "goal.face_id", issues)
@@ -165,7 +169,7 @@ static func _check_value(value: Variant, descriptor: String, path: String, issue
 	var expected_type := TYPE_INT
 	match descriptor:
 		"string", "hash": expected_type = TYPE_STRING
-		"id", "optional_id", "face_id", "name", "trigger", "preserve": expected_type = TYPE_STRING_NAME
+		"id", "optional_id", "face_id", "name", "trigger", "preserve", "latch": expected_type = TYPE_STRING_NAME
 		"coordinate", "center": expected_type = TYPE_VECTOR3I
 		"bool": expected_type = TYPE_BOOL
 	if not _type(value, expected_type, path, issues):
@@ -200,6 +204,7 @@ static func _check_value(value: Variant, descriptor: String, path: String, issue
 		"game_feel_kind": _member(value,[8,9],path,Code.INVALID_ENUM,issues)
 		"quadrant": _enum_range(value,4,path,issues)
 		"preserve": _member(value,[&"PRESERVE"],path,Code.INVALID_ENUM,issues)
+		"latch": _member(value,[&"LATCH_ON_SUCCESS"],path,Code.INVALID_ENUM,issues)
 		"duration":
 			if value <= 0 or value > 5000: _issue(issues,Code.INVALID_TYPE,path,"Duration must be 1..5000 presentation milliseconds.")
 
@@ -483,6 +488,51 @@ static func _sorted(issues: Array[Dictionary]) -> Array[Dictionary]:
 			return a.entity_ids.size() < b.entity_ids.size()
 		return a.message < b.message)
 	return issues
+
+
+static func _validate_spatial(level: Dictionary, indexes: Dictionary, issues: Array[Dictionary]) -> void:
+	_index_records(level.shift_gates,"gate_id","shift_gates",issues)
+	_index_records(level.face_locks,"mechanism_id","face_locks",issues)
+	var sources := {}
+	for i in level.shift_gates.size():
+		var gate: Dictionary = level.shift_gates[i]
+		var path := "shift_gates[%d]" % i
+		_reference(gate.source_face_id,indexes.faces,path + ".source_face_id",issues)
+		_reference(gate.target_face_id,indexes.faces,path + ".target_face_id",issues)
+		_references(gate.required_flags,indexes.flags,path + ".required_flags",issues)
+		_unique(gate.required_flags,path + ".required_flags",issues)
+		if sources.has(gate.source_face_id): _issue(issues,Code.DUPLICATE_ID,path + ".source_face_id","One gate per source Face is required.")
+		sources[gate.source_face_id] = true
+		if indexes.faces.has(gate.source_face_id) and indexes.faces.has(gate.target_face_id):
+			var source: Dictionary = indexes.faces[gate.source_face_id]
+			var target: Dictionary = indexes.faces[gate.target_face_id]
+			if not source.walkable or not target.walkable: _issue(issues,Code.INVALID_FACE,path,"Gate Faces must be walkable.")
+			if indexes.cubes.has(source.cube_id) and indexes.cubes.has(target.cube_id) and indexes.cubes[source.cube_id].layer == indexes.cubes[target.cube_id].layer:
+				_issue(issues,Code.INVALID_REFERENCE,path,"Gate must join opposite worlds.")
+		_index_records(gate.required_mechanism_states,"mechanism_id",path + ".required_mechanism_states",issues)
+		for j in gate.required_mechanism_states.size():
+			var requirement: Dictionary = gate.required_mechanism_states[j]
+			var rp := path + ".required_mechanism_states[%d]" % j
+			_reference(requirement.mechanism_id,indexes.mechanisms,rp + ".mechanism_id",issues)
+			if indexes.mechanisms.has(requirement.mechanism_id):
+				_member(requirement.state,indexes.mechanisms[requirement.mechanism_id].allowed_states,rp + ".state",Code.INVALID_REFERENCE,issues)
+	for i in level.face_locks.size():
+		var lock: Dictionary = level.face_locks[i]
+		var path := "face_locks[%d]" % i
+		_reference(lock.mechanism_id,indexes.mechanisms,path + ".mechanism_id",issues)
+		if not indexes.mechanisms.has(lock.mechanism_id): continue
+		var mechanism: Dictionary = indexes.mechanisms[lock.mechanism_id]
+		if indexes.faces.has(mechanism.face_id) and not indexes.faces[mechanism.face_id].walkable:
+			_issue(issues,Code.INVALID_FACE,path + ".mechanism_id","Latch host must be walkable.")
+		var enter_count := 0
+		for other in level.mechanisms:
+			if other.face_id == mechanism.face_id and other.trigger == &"ENTER": enter_count += 1
+		if enter_count != 1:
+			_issue(issues,Code.MULTIPLE_GLOBAL_MUTATIONS,path + ".mechanism_id","Latch sensor cannot mix ENTER effects.")
+		if lock.latched_state == &"" or mechanism.initial_state == &"" or lock.latched_state == mechanism.initial_state or mechanism.allowed_states != [mechanism.initial_state,lock.latched_state]:
+			_issue(issues,Code.INVALID_REFERENCE,path + ".latched_state","Latch requires distinct initial/latched states in that order.")
+		if mechanism.trigger != &"ENTER" or mechanism.action != {"kind":5,"mechanism_id":lock.mechanism_id}:
+			_issue(issues,Code.INVALID_ACTION,path + ".mechanism_id","Latch requires an ENTER-only self-bound mechanism.")
 
 
 static func _validate_falls(level: Dictionary, indexes: Dictionary, issues: Array[Dictionary]) -> void:

@@ -13,8 +13,9 @@ func _get(property: StringName) -> Variant:
 
 func _set(property: StringName, value: Variant) -> bool:
 	var key := String(property)
-	if key == "authoring_id" or (Schema.FIELDS[AUTHORING_KIND].has(key) and key != "transform"):
+	if key == "authoring_id" or ((Schema.FIELDS[AUTHORING_KIND].has(key) or Schema.SPATIAL_LEVEL_TYPES.has(key)) and key != "transform"):
 		_declarations[key] = value
+		notify_property_list_changed()
 		return true
 	return false
 
