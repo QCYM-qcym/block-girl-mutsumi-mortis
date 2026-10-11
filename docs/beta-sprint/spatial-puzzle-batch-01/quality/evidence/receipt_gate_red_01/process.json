@@ -1,0 +1,17 @@
+{
+  "scope": "UNIT_RECEIPT_GATE",
+  "exit_code": 1,
+  "arguments": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/beta_sprint/spatial_quality",
+    "-p",
+    "test_receipts.py",
+    "-v"
+  ],
+  "expected_red": true,
+  "gameplay_evidence": false
+}
