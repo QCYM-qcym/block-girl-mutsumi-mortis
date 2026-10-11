@@ -9,10 +9,15 @@ var save_path := ""
 var ui
 var observations: Array[Dictionary] = []
 var faults: Array[String] = []
+var expected_display := "headless"
+var captures: Array[Dictionary] = []
+var case_scope := "actual Menu entry/Pause/Reset/return at three sizes; formal mechanism acceptance belongs to Runtime/Map/QA Owners"
+var input_scope := "native Input.parse_input_event mouse/Tab/Esc; formal real Loop witness actions for natural Goal"
 
 func _initialize() -> void:
 	for arg in OS.get_cmdline_user_args():
-		if arg.begins_with("--evidence-dir="): evidence=arg.trim_prefix("--evidence-dir=")
+		if arg == "--graphical": expected_display = "Windows"
+		elif arg.begins_with("--evidence-dir="): evidence=arg.trim_prefix("--evidence-dir=")
 		elif arg.begins_with("--shell-save="): save_path=arg.trim_prefix("--shell-save=").get_base_dir().path_join("menu_progress.json")
 	call_deferred("run")
 
@@ -51,8 +56,18 @@ func choose(id: StringName) -> void:
 	await settle()
 	await click(ui.entries[id])
 
+func capture(name: String) -> void:
+	if expected_display == "headless": return
+	await RenderingServer.frame_post_draw
+	var pixels := root.get_texture().get_image()
+	check(pixels != null and pixels.get_size() == root.size, "actual rendered image dimensions: "+name)
+	DirAccess.make_dir_recursive_absolute(evidence)
+	var path := evidence.path_join(name+".png")
+	check(pixels.save_png(path) == OK, "actual renderer writes fresh capture: "+name)
+	captures.append({"path":name+".png","size":str(pixels.get_size()),"sha256":FileAccess.get_sha256(path)})
+
 func run() -> void:
-	check(DisplayServer.get_name()=="headless" and save_path.begins_with("user://spatial_puzzle_batch_01/tests/") and ".." not in save_path, "isolated fresh headless menu test")
+	check(DisplayServer.get_name()==expected_display and save_path.begins_with("user://spatial_puzzle_batch_01/tests/") and ".." not in save_path, "isolated fresh menu test with actual expected display")
 	check(ResourceLoader.exists(MAIN), "spatial menu scene exists")
 	if not failures.is_empty():
 		await finish();return
@@ -81,6 +96,26 @@ func run() -> void:
 			await key(KEY_TAB)
 		check(ui.legacy_button.has_focus(), "native focus reaches old Shell switch "+str(area))
 		observations.append({"requested":str(area),"measured":str(root.get_visible_rect()),"menu":str(ui.menu_panel.get_global_rect()),"scroll":str(ui.menu_scroll.get_global_rect())})
+		await capture("menu_"+str(area.x)+"x"+str(area.y))
+		# All five entries use actual delivered maps/Host, never substitutes.
+		for id in Factory.ids():
+			await choose(id)
+			check(is_instance_valid(ui.lab) and ui.lab.runtime.is_loaded() and ui.lab.host_issues.is_empty(), "actual five-map UI entry: "+String(id)+" "+str(area))
+			if not is_instance_valid(ui.lab):
+				await finish();return
+			check(root.gui_get_focus_owner()==null and root.get_visible_rect().encloses(ui.toolbar.get_global_rect()) and not ui.toolbar.get_global_rect().intersects(ui.lab.status.get_global_rect()), "gameplay focus released and toolbar avoids Host HUD: "+String(id)+" "+str(area))
+			await capture(String(id)+"_"+str(area.x)+"x"+str(area.y))
+			var spawn: Dictionary=ui.lab.runtime.get_state()
+			await click(ui.pause_button)
+			check(ui.lab.paused and ui.lab.runtime.get_state()==spawn, "native Pause works at entry: "+String(id)+" "+str(area))
+			ui.pause_button.grab_focus()
+			await key(KEY_TAB)
+			check(ui.reset_button.has_focus(), "native paused Tab reaches Reset: "+String(id)+" "+str(area))
+			if id==&"orientation_loop_lab": await capture("pause_"+str(area.x)+"x"+str(area.y))
+			await key(KEY_ENTER)
+			check(not ui.lab.paused and ui.lab.runtime.get_state()==spawn and not ui.goal_seen, "keyboard Reset retains actual spawn without completion: "+String(id)+" "+str(area))
+			await click(ui.return_button)
+			check(ui.lab==null and ui.menu_panel.visible and ui.progress.snapshot().completed.is_empty(), "native return preserves independent experiment selection: "+String(id)+" "+str(area))
 	await choose(&"orientation_loop_lab")
 	check(is_instance_valid(ui.lab) and ui.lab.runtime.is_loaded() and ui.lab.lab_id==&"orientation_loop_lab", "actual mouse selection starts delivered Host with real baked Loop")
 	if not is_instance_valid(ui.lab):
@@ -155,9 +190,11 @@ func run() -> void:
 		check(ui.lab.runtime.is_idle(), "second actual witness completes naturally")
 	check(ui.goal_seen and ui.progress.dirty and ui.retry_button.visible and not ui.error_label.text.is_empty(), "real Goal save failure shows retry during gameplay")
 	check(not ui._error_panel.get_global_rect().intersects(ui.toolbar.get_global_rect()), "wrapped save-error panel cannot cover gameplay controls")
+	await capture("goal_save_error_960x720")
 	observations.append({"case":"goal_save_failure","error":str(ui._error_panel.get_global_rect()),"error_min":str(ui._error_panel.get_combined_minimum_size()),"toolbar":str(ui.toolbar.get_global_rect()),"pause":str(ui.pause_button.get_global_rect()),"return":str(ui.return_button.get_global_rect())})
 	await click(ui.pause_button)
 	check(ui.lab.paused, "native mouse reaches Pause with actual Goal-save error visible")
+	await capture("goal_save_error_paused_960x720")
 	ui.pause_button.grab_focus()
 	for index in 5: await key(KEY_TAB)
 	check(ui.retry_button.has_focus(), "paused keyboard focus reaches actual Goal-save retry")
@@ -187,6 +224,7 @@ func run() -> void:
 	observations.append({"case":"return_goal_save_failure","error":str(ui._error_panel.get_global_rect()),"toolbar":str(ui.toolbar.get_global_rect()),"return":str(ui.return_button.get_global_rect())})
 	await click(ui.return_button)
 	check(ui.lab==null and ui.progress.dirty and ui.retry_button.visible, "menu retains unsaved actual Goal and retry")
+	await capture("menu_goal_save_error_960x720")
 	ui.continue_button.grab_focus()
 	for index in Factory.ids().size()+2: await key(KEY_TAB)
 	check(ui.retry_button.has_focus(), "menu keyboard focus includes retained Goal-save retry")
@@ -218,6 +256,13 @@ func run() -> void:
 
 func finish() -> void:
 	var report: Dictionary={"checks":checks,"failures":failures,"pid":OS.get_process_id(),"engine":Engine.get_version_info(),"display":DisplayServer.get_name(),"user_data_dir":OS.get_user_data_dir(),"save_path":save_path,"observations":observations,"doubles":[],"fault_exercises":faults,"input":"native Input.parse_input_event mouse/Tab/Esc; formal real Loop witness actions for natural Goal","authority":"actual Factory/Baker + Host + Facade + natural Presenter + unchanged SaveStore; no finish injection","evidence_type":"UI_HEADLESS_WITH_REAL_LOOP_LIFECYCLE","new_gate_face_lock_fork":"NOT_ATTESTED_BY_THIS_UI_CASE","graphical":"NOT_RUN","human_qa":"NOT_RUN"}
+	report["case_scope"] = case_scope
+	report["input"] = input_scope
+	if expected_display != "headless":
+		report["evidence_type"] = "UI_AUTOMATED_REAL_RENDERER_WITH_REAL_LOOP_LIFECYCLE"
+		report["graphical"] = "AUTOMATED_REAL_RENDERER"
+		report["renderer"] = RenderingServer.get_current_rendering_method()
+		report["captures"] = captures
 	DirAccess.make_dir_recursive_absolute(evidence)
 	var file:=FileAccess.open(evidence.path_join("report.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify(report,"\t"));file.close()
