@@ -14,6 +14,7 @@ const Facade = preload("res://foundation/game_feel/runtime_facade.gd")
 const Safety = preload("res://foundation/validation/safety_queries.gd")
 const Softlock = preload("res://foundation/quality/softlock/softlock_analyzer.gd")
 const Replayer = preload("res://foundation/parity/trace_replayer.gd")
+const Fall = preload("res://foundation/game_feel/fall_permission.gd")
 const PREFIX := {&"world_shift_gate_lab":"gate",&"orientation_loop_lab":"loop",&"face_lock_lab":"lock",
 	&"perspective_fork_lab":"fork",&"rubik_spatial_puzzle_01":"combined"}
 
@@ -122,8 +123,22 @@ func run() -> void:
 		begin(prefix + ".safe_edges","SAFETY")
 		for step in trace.steps:
 			var state: Dictionary = trace.initial_state if step.index == 1 else trace.steps[step.index-2].expected_state
-			var verdict := Safety.validate_motion(level,state,step.expected_state,step.action)
+			# MOVE can mean Roll or authored Fall. Consume the formal motion descriptor.
+			var motion := Fall.motion(level,state,step.expected_state,step.action)
+			var verdict: Dictionary
+			var query := "Safety.validate_motion"
+			if not motion.is_empty():
+				query = "Safety.validate_perspective_motion"
+				verdict = Safety.validate_perspective_motion(level,state,step.expected_state,motion.connection_id)
+			elif step.action.kind == 9:
+				query = "Safety.validate_state (observation-only Camera)"
+				var before_safe := Safety.validate_state(level,state)
+				check(before_safe.status == 0 and before_safe.issues.is_empty() and state.player == step.expected_state.player and state.world_orientations == step.expected_state.world_orientations,"Camera does not perform a physical motion")
+				verdict = Safety.validate_state(level,step.expected_state)
+			else:
+				verdict = Safety.validate_motion(level,state,step.expected_state,step.action)
 			check(verdict.status == 0 and verdict.issues.is_empty(),"actual Safety for selected trace edge " + str(step.index))
+			rows.append({"map":id,"trace_step":step.index,"safety_query":query,"authorized_motion":motion,"actual_safety":verdict})
 		begin(prefix + ".softlock","SOLVER")
 		var graph_before: Dictionary = explored.graph.duplicate(true)
 		var softlock := Softlock.analyze(level,explored.graph,{"max_nodes":10000,"max_edges":100000,"max_runtime_ms":0})
