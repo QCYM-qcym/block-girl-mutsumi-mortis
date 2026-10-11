@@ -29,12 +29,26 @@ static func witnesses(id:StringName)->Dictionary:
 		south.append_array(_moves([0]))
 		south.append_array([{"kind":9,"camera_quadrant":0},{"kind":0,"face_axis":0},{"kind":9,"camera_quadrant":1},{"kind":0,"face_axis":2},{"kind":0,"face_axis":0}])
 		return {"solution_east":east,"solution_south":south}
+	if id==&"world_shift_gate_lab":
+		return {"solution": [{"kind":0,"face_axis":0},{"kind":1},{"kind":0,"face_axis":3}]}
+	if id==&"face_lock_lab":
+		var actions:Array=_moves([3,0,1,2])
+		actions.append({"kind":1})
+		return {"wrong_face":_moves([0,3]),"correct_face":_moves([3,0]),"solution":actions}
+	if id==&"rubik_spatial_puzzle_01":
+		var prefix:Array=_moves([3,0,1,2])
+		prefix.append({"kind":1})
+		var a:Array=prefix.duplicate(true)
+		a.append_array(witnesses(&"perspective_fork_lab").solution_east)
+		var b:Array=prefix.duplicate(true)
+		b.append_array(witnesses(&"perspective_fork_lab").solution_south)
+		return {"wrong_face":_moves([0,3]),"correct_face":_moves([3,0]),"solution_east":a,"solution_south":b}
 	return {}
 
 static func authoring(id:StringName)->Dictionary:
-	if id not in [&"orientation_loop_lab",&"perspective_fork_lab"]:
-		# Honest invalid resource until the Gate/FaceLock contract is delivered.
-		return {"level_id":id}
+	if id in [&"world_shift_gate_lab",&"face_lock_lab",&"rubik_spatial_puzzle_01"]:
+		return _gated_map(id)
+	if id not in ids():return {"level_id":id}
 	var l:Dictionary=_base(id)
 	if id==&"orientation_loop_lab":
 		_add(l,&"source",Vector3i(0,4,0))
@@ -79,3 +93,44 @@ static func _moves(axes:Array)->Array:
 	var actions:Array=[]
 	for axis in axes:actions.append({"kind":0,"face_axis":axis})
 	return actions
+
+static func _gated_map(id:StringName)->Dictionary:
+	var l:Dictionary=_base(id)
+	l.schema_version=4
+	l.contract_version="foundation.spatial_puzzle.v1"
+	l.rule_version="foundation.rules.spatial_puzzle.v1"
+	l["shift_gates"]=[]
+	l["face_locks"]=[]
+	_add(l,&"source",Vector3i(0,4,0))
+	if id==&"world_shift_gate_lab":
+		_add(l,&"gate",Vector3i(2,4,0))
+		_add(l,&"inner_gate",Vector3i(2,4,0),1)
+		_add(l,&"goal",Vector3i(2,4,2),1)
+		_add(l,&"roof",Vector3i(2,12,0),0,false)
+		l.shift_gates=[_gate(&"enter",&"gate/TOP",&"inner_gate/TOP"),_gate(&"leave",&"inner_gate/TOP",&"gate/TOP")]
+		return l
+	_add(l,&"east",Vector3i(2,4,0))
+	_add(l,&"corner",Vector3i(2,4,2))
+	_add(l,&"south",Vector3i(0,4,2))
+	_add(l,&"roof",Vector3i(0,12,0),0,false)
+	l.mechanisms=[{"mechanism_id":&"contact_lock","face_id":&"corner/TOP","trigger":&"ENTER","action":{"kind":5,"mechanism_id":&"contact_lock"},"priority":0,"initial_state":&"idle","allowed_states":[&"idle",&"latched"]}]
+	l.face_locks=[{"mechanism_id":&"contact_lock","required_local_face":3,"activation_mode":&"LATCH_ON_SUCCESS","latched_state":&"latched"}]
+	for face in l.faces:
+		if face.face_id==&"corner/TOP":face.mechanism_ids.append(&"contact_lock")
+	var inner_id:StringName=&"goal" if id==&"face_lock_lab" else &"inner_source"
+	_add(l,inner_id,Vector3i(0,4,0),1)
+	var enter:Dictionary=_gate(&"enter",&"source/TOP",StringName(String(inner_id)+"/TOP"))
+	enter.required_mechanism_states=[{"mechanism_id":&"contact_lock","state":&"latched"}]
+	l.shift_gates=[enter,_gate(&"leave",StringName(String(inner_id)+"/TOP"),&"source/TOP")]
+	if id==&"rubik_spatial_puzzle_01":
+		var fork:Dictionary=authoring(&"perspective_fork_lab")
+		for cube in fork.cubes:
+			if cube.cube_id!=&"source":_add(l,cube.cube_id,cube.center2,1)
+		for fall in fork.perspective_falls:
+			if fall.source_face_id==&"source/TOP":fall.source_face_id=&"inner_source/TOP"
+			if fall.target_face_id==&"source/TOP":fall.target_face_id=&"inner_source/TOP"
+			l.perspective_falls.append(fall)
+	return l
+
+static func _gate(id:StringName,source:StringName,target:StringName)->Dictionary:
+	return {"gate_id":id,"source_face_id":source,"target_face_id":target,"required_flags":[],"required_mechanism_states":[]}

@@ -27,9 +27,11 @@ for name in paths:
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_bytes((root / name).read_bytes())
 script = sys.argv[2] if len(sys.argv)>2 else 'maps_test.gd'
-if script not in ['maps_test.gd']:
+if script not in ['maps_test.gd', 'gated_test.gd', 'fork_matrix.gd']:
     raise SystemExit('Unknown Owner09 test script')
 args = [str(engine), '--headless', '--path', str(root), '--script', 'res://tests/beta_sprint/spatial_owner_09/'+script, '--', out.as_posix(), profile.as_posix()]
+if script == 'gated_test.gd':
+    args.append(sys.argv[3])
 record = {'head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip(), 'dirty': subprocess.check_output(['git', 'status', '--porcelain'], cwd=root).decode(), 'sources_sha256': sources, 'engine_sha256': digest(engine), 'arguments': args, 'profile_environment': {k: env[k] for k in ['APPDATA','LOCALAPPDATA']}, 'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'doubles': []}
 with (out/'stdout.log').open('wb') as stdout, (out/'stderr.log').open('wb') as stderr:
     process = subprocess.Popen(args, cwd=root, env=env, stdout=stdout, stderr=stderr, creationflags=subprocess.CREATE_NO_WINDOW)
