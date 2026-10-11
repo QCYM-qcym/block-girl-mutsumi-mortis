@@ -36,6 +36,15 @@ func run()->void:
 	check(runtime.get_state().player.location.cube_id==&"target","formal yellow support reached")
 	host.reset_lab()
 	check(runtime.get_state().player.location.cube_id==&"source" and runtime.get_commit_count()==0,"Reset exact source")
+	if host.has_signal("native_motion_completed"):
+		var native:Array=[]
+		host.native_motion_completed.connect(func(identity,detail): native.append({"identity":identity,"detail":detail}))
+		var camera_result:Dictionary=runtime.request_action({"kind":9,"camera_quadrant":2})
+		deadline=Time.get_ticks_msec()+2000
+		while not runtime.is_idle() and Time.get_ticks_msec()<deadline: await process_frame
+		await process_frame
+		check(camera_result.status==0 and native.size()==1,"natural Camera exposes one scoped completion for formal replay")
+		check(runtime.get_state().camera_quadrant==2 and runtime.get_state().player.orientation==0,"Camera changes view without cube orientation")
 	check(host.host_issues.is_empty(),"no Host issues")
 	host.free()
 	await process_frame

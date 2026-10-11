@@ -163,7 +163,14 @@ func _cancel_shift(reason:String) -> void:
 
 func _process(delta:float) -> void:
 	if not _shift_identity.is_empty() and not _identity_is_current(_shift_identity): _cancel_shift("LIFECYCLE")
+	var camera_before:Dictionary=_camera_motion.duplicate(true)
+	var commits_before:int=runtime.get_commit_count() if runtime!=null else 0
 	super._process(delta)
+	# Observe the inherited real camera interpolation reaching its final frame.
+	# Reset/cancellation cannot satisfy the unchanged native identity and commit.
+	if not camera_before.is_empty() and _camera_motion.is_empty() and _identity_is_current(camera_before.token) and runtime.get_commit_count()==commits_before+1:
+		if camera.basis.is_equal_approx(camera_before.target):
+			native_motion_completed.emit(camera_before.token,{"kind":"SET_CAMERA_QUADRANT","visual_transform":actor.transform,"state":runtime.get_state(),"completion":"Camera interpolation final frame"})
 
 func _on_committed(state:Dictionary) -> void:
 	super._on_committed(state)
