@@ -1,0 +1,67 @@
+{
+  "scope": "Coordinator integration gate, distinct from Owner03 98 predicate ledger",
+  "mechanisms": {
+    "world_shift_gate_lab": {
+      "UNIT": "PASS",
+      "REAL_RUNTIME": "PASS",
+      "SOLVER": "PASS",
+      "SAFETY": "PASS",
+      "LOGICAL_REPLAY": "PASS",
+      "FORMAL_GRAPHICAL": "PASS",
+      "NATURAL_GRAPHICAL": "PASS",
+      "INTEGRATION": "PASS",
+      "HUMAN_QA": "NOT_RUN"
+    },
+    "orientation_loop_lab": {
+      "UNIT": "PASS",
+      "REAL_RUNTIME": "PASS",
+      "SOLVER": "PASS",
+      "SAFETY": "PASS",
+      "LOGICAL_REPLAY": "PASS",
+      "FORMAL_GRAPHICAL": "PASS",
+      "NATURAL_GRAPHICAL": "PASS",
+      "INTEGRATION": "PASS",
+      "HUMAN_QA": "NOT_RUN"
+    },
+    "face_lock_lab": {
+      "UNIT": "PASS",
+      "REAL_RUNTIME": "PASS",
+      "SOLVER": "PASS",
+      "SAFETY": "PASS",
+      "LOGICAL_REPLAY": "PASS",
+      "FORMAL_GRAPHICAL": "PASS",
+      "NATURAL_GRAPHICAL": "PASS",
+      "INTEGRATION": "PASS",
+      "HUMAN_QA": "NOT_RUN"
+    },
+    "perspective_fork_lab": {
+      "UNIT": "PASS",
+      "REAL_RUNTIME": "PASS",
+      "SOLVER": "PASS",
+      "SAFETY": "PASS",
+      "LOGICAL_REPLAY": "PASS",
+      "FORMAL_GRAPHICAL": "PASS",
+      "NATURAL_GRAPHICAL": "PASS",
+      "INTEGRATION": "PASS",
+      "HUMAN_QA": "NOT_RUN"
+    },
+    "rubik_spatial_puzzle_01": {
+      "UNIT": "PASS",
+      "REAL_RUNTIME": "PASS",
+      "SOLVER": "PASS",
+      "SAFETY": "PASS",
+      "LOGICAL_REPLAY": "PASS",
+      "FORMAL_GRAPHICAL": "PASS",
+      "NATURAL_GRAPHICAL": "PASS",
+      "INTEGRATION": "PASS",
+      "HUMAN_QA": "NOT_RUN"
+    }
+  },
+  "sources": {
+    "unit_runtime": "runtime/FINAL_DELIVERY.json; maps/MAP_DELIVERY_REPORT.md; quality/FINAL_BINDING.json",
+    "solver_safety": "maps/MAP_ACCEPTANCE_MANIFEST.json; quality/EXTERNAL_REFERENCES.json",
+    "graphical": "quality/FINAL_BINDING.json; evidence/five_capture01",
+    "integration": "evidence/package_graphical_01; evidence/package_cold_01; evidence/package_legacy_01"
+  },
+  "qualification": "Combined complete graph is Owner09 evidence, not independent03 full-edge census. Logical completion, natural animation and formal graphical replay are distinct. Human never inferred."
+}

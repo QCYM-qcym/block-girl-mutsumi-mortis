@@ -1,0 +1,92 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_FULL_IMPLEMENTATION",
+  "status": "SPATIAL_PUZZLE_BATCH_01_PLAYABLE_READY",
+  "created_utc": "2026-10-11T12:21:16.664939+00:00",
+  "development_worktree": "E:\\godot\\worktrees\\block-girl-spatial-puzzle-batch-01",
+  "branch": "feat/spatial-puzzle-batch-01",
+  "base_sha": "d1277ec90b5a739efd4862d314e6c29ac5ac1eda",
+  "contract_commit": "7442e8172e865d093ff1e73570d891f60d9134af",
+  "integration_commit": "52548e47ffcc6f3d76dadfdb4a6b481b31e64511",
+  "build_source_commit": "26603d532154dbf1a7fb9cea475a55b206a40cb6",
+  "production_diff_build_to_integration": [],
+  "owners": {
+    "01": "b78d07cc6bf9e43db723a010af102d9320266f43",
+    "09": "fd162d5c430d0cd9201a878b9e5c261d493fbf14",
+    "07": "656bfbcac16f476c1ce6ac6fd654abd1b332dd07",
+    "03": "d1827fe593b5ad50f951879bb9cadc2e18623aae"
+  },
+  "four_mechanisms": "PASS",
+  "combined": "PLAYABLE",
+  "full_playthrough": "Real formal normal, Reset and alternate/recoverable routes; natural graphical capture and formal trace replay PASS",
+  "solver_safety": {
+    "combined_complete_states": 908,
+    "combined_edges": 3916,
+    "softlocks": 0,
+    "unlatched_inner_bypasses": 0,
+    "source": "Owner09 complete formal graph; current map topology unchanged by final domain/classifier fixes"
+  },
+  "owner01_assertions": 1393,
+  "owner09_assertions": 290,
+  "owner03_selected_assertions": 2547,
+  "counts_note": "Separate scoped totals; do not sum overlapping Owner/integration assertions into unique tests",
+  "owner03_matrix": {
+    "PASS": 80,
+    "REFERENCE_PASS": 8,
+    "NOT_RUN": 10,
+    "not_run_detail": "5 human,4 redundant alternative FIRST_SHORTEST,1 independent combined full-edge permission census"
+  },
+  "formal_graphical_five_map_assertions": 487,
+  "natural_graphical_five_map_assertions": 947,
+  "package_verification": {
+    "startup": "actual play.ps1 direct Main Scene PASS",
+    "graphical_menu": 219,
+    "cold_menu_continue": 11,
+    "legacy_five_graphical": 206,
+    "exit_codes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "stderr": "EMPTY",
+    "doubles": [],
+    "source_drift": [],
+    "manifest_post_run_matches": 1467,
+    "verified_import_uids": 150
+  },
+  "build": "E:\\godot\\beta-sprint-builds\\beta_spatial_puzzle_batch_01_20261011_01",
+  "godot_project": "E:\\godot\\beta-sprint-builds\\beta_spatial_puzzle_batch_01_20261011_01\\project\\project.godot",
+  "launch_script": "E:\\godot\\beta-sprint-builds\\beta_spatial_puzzle_batch_01_20261011_01\\play.ps1",
+  "archive": "E:\\godot\\beta-sprint-builds\\beta_spatial_puzzle_batch_01_20261011_01.zip",
+  "archive_sha256": "ade30ffc68d3e3853e6ce7a57ea8aed46d3b25282e889b8de2ccc4f1aec8d4ca",
+  "visual_evidence": "E:\\godot\\worktrees\\block-girl-spatial-puzzle-batch-01\\docs\\beta-sprint\\spatial-puzzle-batch-01\\evidence\\package_graphical_01",
+  "qa_handoff": "ACKNOWLEDGED_BY_08; exact package identity independently checked; player workflow prepared",
+  "obsidian_vault": "E:/obsdian/青澄的水泥房",
+  "new_confirmed_unresolved_production_defects": 0,
+  "fixed_findings": [
+    "latch domain ordering",
+    "compound ENTER quality classification",
+    "SourceMap provenance",
+    "UI retry focus and panel overlap",
+    "Camera-during-Landing completion",
+    "copied GLB UID cache"
+  ],
+  "known_limits": [
+    "Experimental primitive geometry; no new approved Art replacement",
+    "Human comprehension and subjective game feel NOT_RUN",
+    "03 exact combined full-edge census NOT_RUN;09 complete graph supports recorded bypass/softlock claims",
+    "Offline combined exhaustive search cost486313ms, not a runtime input-latency measurement",
+    "Continue restores experiment start, not mid-puzzle state",
+    "Reduced Motion is current menu session setting",
+    "STAIR_CLEARANCE=PARTIAL_PASS; STAIR_TRAVERSAL=NOT_RUN"
+  ],
+  "protected_refs": "All4 match BASELINE.json",
+  "old_level_data_changes": [],
+  "art_source_changes": [],
+  "save_store_changes": [],
+  "foundation_changes": "Authorized explicit opt-in schema4 Gate/FaceLock and affected formal consumers; legacy profiles retained",
+  "push": "NOT_RUN",
+  "merge_to_main": "NOT_RUN",
+  "human_qa": "NOT_RUN; zero qualified first-time testers available",
+  "design_snapshot_registry": "design/OBSIDIAN_SOURCES.json"
+}
