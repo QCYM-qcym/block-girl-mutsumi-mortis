@@ -11,3 +11,9 @@
 
 - Camera completion RED/GREEN: direct Host 12 PASS; formal Replayer Camera→Camera→Fall→Roll originally matched 0, now 4/4 matched, 11 checks PASS in headless and real graphical process. Actual final camera frame + native commit observed; no timer completion injection. Shared Bridge retains old Host for schema2/3 and selects new Host only for explicit schema4.
 - Review correction: suspected Shift/concurrent Roll race was disproved by actual Safety whitelist (SHIFT concurrency is UNPROVEN and rejected). No Runtime expansion made; new real Shift input rejection test remains required.
+
+- Shift Host verified against actual legacy-compatible SAME_NORMAL fixture: 22/22 headless and 22/22 real graphical, including World/Orientation, one commit, concurrent input rejection, Roll→Goal, Pause/Resume, Reset and stale callback. This covers native Host lifecycle, not pending schema4 gate permission. Screenshot visually inspected: three visible physical face numbers and world-only platforms.
+
+- Five maps integrated: Owner09 290 logical checks; complete graphs 16/51/104/80/908 states, zero softlocks and combined zero unlatch Inner bypasses. Root natural 5-map capture208 PASS; schema4 formal headless Replay45 checks/15steps (not graphical).
+- Final review reproduced accepted Camera during Landing lost completion. Actual RED14/3fail then GREEN15/0; Bridge retries already-observed terminal only, preserving scope/state/pose checks. No Runtime rule change.
+- Menu c4b1196 and existing SaveStore adapter integrated; isolated project name/main scene set. Integration menu/store cold processes135 PASS, all exit0stderr0 and no source drift. Actual renderer matrix remains Owner07 pending.

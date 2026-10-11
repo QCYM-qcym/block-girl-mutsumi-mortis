@@ -97,6 +97,12 @@ func _build_geometry() -> void:
 		var face=block.get_meta("top_face_id")
 		for cube in level.get("cubes",[]):
 			if cube.cube_id==id: block.visible=cube.layer==state.player.location.layer
+		var has_walkable_face:=false
+		for authored_face in level.faces:
+			if authored_face.cube_id==id and authored_face.walkable: has_walkable_face=true
+		if not has_walkable_face:
+			block.material_override.albedo_color=Color("424b5b")
+			block.set_meta("presentation_role","NON_WALKABLE_OCCLUDER")
 		if targets.has(face):
 			block.material_override.albedo_color=Color("ebcb4d")
 			block.set_meta("presentation_role","FALL_TARGET_SUPPORT")
@@ -109,6 +115,55 @@ func _build_geometry() -> void:
 	if not first:
 		_camera_center=bounds.get_center()+Vector3.UP
 		camera.size=clampf(maxf(bounds.size.x,bounds.size.z)*1.5+6.0,10.0,40.0)
+	_build_action_markers(level,state)
+
+func _build_action_markers(level:Dictionary,state:Dictionary) -> void:
+	var resolved:Dictionary=Geometry.snapshot(level,state)
+	if not resolved.ok: return
+	var marks:=Node3D.new()
+	marks.name="ActionMarkers"
+	geometry_root.add_child(marks)
+	for anchor in resolved.value.anchors:
+		if anchor.layer!=state.player.location.layer: continue
+		var position:Vector3=Vector3(anchor.position2)*0.5
+		if anchor.face_id==level.goal.face_id:
+			_marker(marks,position,"GOAL",Color("72e7a8"),"GOAL",anchor.face_id)
+		for gate in level.get("shift_gates",[]):
+			if gate.source_face_id==anchor.face_id:
+				# Gate presence is authored. Color does not claim current eligibility.
+				_marker(marks,position,"转换点 · Space",Color("71d5ee"),"SHIFT_GATE",anchor.face_id)
+		for lock in level.get("face_locks",[]):
+			for mechanism in level.mechanisms:
+				if mechanism.mechanism_id==lock.mechanism_id and mechanism.face_id==anchor.face_id:
+					var latched:bool=state.mechanism_states.get(lock.mechanism_id)==lock.latched_state
+					_marker(marks,position,"已激活" if latched else "面 %d 朝下"%(int(lock.required_local_face)+1),Color("72e7a8") if latched else Color("efb666"),"FACE_LOCK",anchor.face_id)
+		var seen_edges:Array=[]
+		for connection in level.get("perspective_falls",[]):
+			if connection.source_face_id!=anchor.face_id or connection.source_edge in seen_edges: continue
+			seen_edges.append(connection.source_edge)
+			var directions:Array=[anchor.frame.u,anchor.frame.v,-anchor.frame.u,-anchor.frame.v]
+			var offset:Vector3=Vector3(directions[connection.source_edge])*0.62
+			_marker(marks,position+offset,"F 边缘" if connection.source_edge==2 else "前进边缘",Color("efe3b0"),"MOVE_EDGE",anchor.face_id)
+
+func _marker(parent:Node3D,position:Vector3,text:String,color:Color,kind:String,face:StringName) -> void:
+	var marker:=Node3D.new()
+	marker.position=position
+	marker.set_meta("kind",kind);marker.set_meta("face_id",face)
+	parent.add_child(marker)
+	var dot:=MeshInstance3D.new()
+	var mesh:=CylinderMesh.new()
+	mesh.top_radius=0.14;mesh.bottom_radius=0.14;mesh.height=0.025
+	dot.mesh=mesh;dot.position.y=0.03
+	var material:=StandardMaterial3D.new()
+	material.albedo_color=color;material.shading_mode=BaseMaterial3D.SHADING_MODE_UNSHADED
+	dot.material_override=material
+	marker.add_child(dot)
+	var label:=Label3D.new()
+	label.text=text;label.font_size=32;label.pixel_size=0.008
+	label.position.y=1.65 if kind=="SHIFT_GATE" else (1.15 if kind=="FACE_LOCK" else 0.35)
+	label.billboard=BaseMaterial3D.BILLBOARD_ENABLED
+	label.modulate=color;label.outline_modulate=Color("15232a")
+	marker.add_child(label)
 
 func _on_native_started(result: Dictionary, transaction_id: int, generation: int, is_global: bool) -> void:
 	if result.get("action",{}).get("kind")!=1:
@@ -225,7 +280,9 @@ func _update_status(reason:String) -> void:
 	if not is_instance_valid(status) or runtime==null or not runtime.is_loaded(): return
 	var state:Dictionary=runtime.get_state()
 	var result:Dictionary=Goal.is_goal(runtime.get_level(),state)
-	status.text="%s  |  %s  |  视角 %s\n%s\nWASD / 方向键：翻滚   F：向标记边缘前进   Q/E：视角   Space：转换   R：重置   Esc：暂停   H：提示\n%s"%[_description.get("title",String(lab_id)),"表世界" if state.player.location.layer==0 else "里世界",["北","东","南","西"][state.camera_quadrant],_description.get("objective","观察实体六面与正式路线"),"已抵达目标" if result.ok and result.is_goal else ("暂停" if paused else ("" if reason=="NONE" else reason))]
+	var messages:={"NONE":"","EDGE":"","BUSY":"动作进行中","MECHANISM_LOCKED":"机关尚未激活","WORLD_NOT_ALLOWED":"请到标记的转换点确认","CAMERA_NOT_ALLOWED":"当前视角没有合法连接","SAFETY_REJECTED":"当前路径不可安全通行","FALL_NOT_AVAILABLE":"此边缘没有合法连接","INVALID_FACE":"当前位置不可执行此动作","ERROR":"关卡状态异常，请重置","PAUSED":"暂停"}
+	var feedback:String=str(messages.get(reason,"当前操作未成立"))
+	status.text="%s  |  %s  |  视角 %s\n%s\nWASD / 方向键：翻滚   F：向标记边缘前进   Q/E：视角   Space：转换   R：重置   Esc：暂停   H：提示\n%s"%[_description.get("title",String(lab_id)),"表世界" if state.player.location.layer==0 else "里世界",["北","东","南","西"][state.camera_quadrant],_description.get("objective","观察实体六面与正式路线"),"已抵达目标" if result.ok and result.is_goal else ("暂停" if paused else feedback)]
 	if _hint_visible: status.text+="\n提示："+str(_description.get("hint","观察落脚面、转换标记与相机方向。"))
 
 func _close(reason:String) -> void:

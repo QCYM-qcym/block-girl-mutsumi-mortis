@@ -1,6 +1,6 @@
 # Gate / FaceLock / combined map authoring
 
-Status: AUTHORED / RUNTIME_DEPENDENCY_PENDING. These are schema4 author records, not accepted playable maps. Exact contract: `../RUNTIME_INTERFACE.md`. No public Runtime implementation is supplied by Owner09.
+Current status: LOGICAL_ACCEPTANCE_PASS; see [final map report](MAP_DELIVERY_REPORT.md). The authoring/dependency notes below retain the pre-integration design history. Exact contract: `../RUNTIME_INTERFACE.md`. No public Runtime implementation is supplied by Owner09.
 
 ## Physical layout and intended route
 
@@ -20,7 +20,7 @@ The combined map copies only authored fork topology/trajectories into Inner, ren
 
 `gated_test.gd` exercises real Baker/Runtime/Goal/Solver/Softlock/Replay. It records actual rejection codes, native transition and commit counts, before/after StateKeys, correct/wrong/repeated contact, direct-use denial, Shift orientation/camera preservation, and Reset. Expected pass is not a measured pass.
 
-Current pinned Foundation rejects schema4. `gate_contract_red_01`, `face_lock_contract_red_01`, and `combined_contract_red_01` preserve this real dependency RED. The first gate run additionally exposed GDScript new-key dot assignment producing StringName keys; the factory now creates new schema fields with explicit String dictionary keys. Re-run after the committed Owner01 implementation is merged; never use an uncommitted dependency as acceptance evidence.
+The initial pinned Foundation rejected schema4. `gate_contract_red_01`, `face_lock_contract_red_01`, and `combined_contract_red_01` preserve that real dependency RED. The first gate run additionally exposed GDScript new-key dot assignment producing StringName keys; the factory creates new schema fields with explicit String dictionary keys. Committed Owner01 implementation `697a31e` was subsequently merged and all three maps passed formal verification; no uncommitted dependency was used as acceptance evidence.
 
 ## Independent regression
 
