@@ -1,0 +1,326 @@
+sha	parents	author_date	author	subject
+4643062e83a962000d14f0e1dbfbece6e310d4ed	0043ea56dc1cd19b87139e7c989b9fc5126ad71f	2026-09-13T14:22:08+08:00	QCYM-qcym	docs: freeze foundation core contracts
+b360bfe20f01dca164ac31e1b214ed018d5250fa	4643062e83a962000d14f0e1dbfbece6e310d4ed	2026-09-13T15:14:19+08:00	QCYM-qcym	docs: reconcile foundation implementation contracts
+10b1fb1a564c500d58b7d8ecc2343baef74942e3	4643062e83a962000d14f0e1dbfbece6e310d4ed	2026-09-13T15:38:03+08:00	QCYM-qcym	feat: add discrete orientation foundation
+ebeabef11adcc5aa588a74ef290748b14a455c3a	4643062e83a962000d14f0e1dbfbece6e310d4ed	2026-09-13T15:39:16+08:00	QCYM-qcym	feat: add spatial mapping foundation
+84781cc6b7e00b96c60c69f15ea16adbe06bd4ee	4643062e83a962000d14f0e1dbfbece6e310d4ed	2026-09-13T15:40:02+08:00	QCYM-qcym	feat: add celestial lighting foundation
+38894843c682be7f42be8fe4dad0c512d87ffebf	4643062e83a962000d14f0e1dbfbece6e310d4ed	2026-09-13T15:41:12+08:00	QCYM-qcym	feat: add foundation data contracts
+69ed970974188cf69248ae8a8f7513bc05d0787c	b360bfe20f01dca164ac31e1b214ed018d5250fa 10b1fb1a564c500d58b7d8ecc2343baef74942e3	2026-09-13T15:46:16+08:00	QCYM-qcym	Merge FOUNDATION Orientation A (10b1fb1a564c)
+30f3f54e66fc72adc4ed45fc276f66fc76d8bff2	69ed970974188cf69248ae8a8f7513bc05d0787c 38894843c682be7f42be8fe4dad0c512d87ffebf	2026-09-13T15:46:57+08:00	QCYM-qcym	Merge FOUNDATION Data Contracts D (38894843c682)
+2e2f928c572c6c648db6ea30f412f6cdcfc4dc8b	30f3f54e66fc72adc4ed45fc276f66fc76d8bff2 ebeabef11adcc5aa588a74ef290748b14a455c3a	2026-09-13T15:47:15+08:00	QCYM-qcym	Merge FOUNDATION Spatial B (ebeabef11adc)
+be1d79d908a01c8b594d5141df59cf38d77b765e	2e2f928c572c6c648db6ea30f412f6cdcfc4dc8b 84781cc6b7e00b96c60c69f15ea16adbe06bd4ee	2026-09-13T15:47:15+08:00	QCYM-qcym	Merge FOUNDATION Celestial C (84781cc6b7e0)
+f04f00989be427049c78faf6a739253470412b3f	be1d79d908a01c8b594d5141df59cf38d77b765e	2026-09-13T16:07:40+08:00	QCYM-qcym	test: verify FOUNDATION module integration and P-01 coexistence
+b7fd6ae9cfa1961a4ca52bb977d66e87903fcec5	f04f00989be427049c78faf6a739253470412b3f	2026-09-13T16:41:22+08:00	QCYM-qcym	docs: freeze foundation rule kernel contracts
+f530e2fe16c64880812b1b20a06504798a477b6b	b7fd6ae9cfa1961a4ca52bb977d66e87903fcec5	2026-09-13T17:15:08+08:00	QCYM-qcym	feat: add foundation static validator and safety
+384696f3708504d806c630b7e57a898139780695	b7fd6ae9cfa1961a4ca52bb977d66e87903fcec5	2026-09-13T17:17:03+08:00	QCYM-qcym	feat: add puzzle rule kernel foundation
+e176c1e18e72ab3d300d90542d8a9cea9769a3bc	f530e2fe16c64880812b1b20a06504798a477b6b 384696f3708504d806c630b7e57a898139780695	2026-09-13T17:20:28+08:00	QCYM-qcym	Merge branch 'feat/foundation-rule-kernel' into integration/foundation-2-kernel-safety
+a0699debe42cf880d25ddda57d46c123bc912b4c	e176c1e18e72ab3d300d90542d8a9cea9769a3bc	2026-09-13T17:36:34+08:00	QCYM-qcym	test: verify puzzle kernel safety integration
+f5e72665f8f099f5103a49b9de58b72e45c90c66	b7fd6ae9cfa1961a4ca52bb977d66e87903fcec5	2026-09-13T17:56:59+08:00	QCYM-qcym	feat: add foundation level baker
+aa5362f04dfb0477f7234c8f96bc48773a305de2	b7fd6ae9cfa1961a4ca52bb977d66e87903fcec5	2026-09-13T17:57:58+08:00	QCYM-qcym	feat: add foundation runtime prototype
+dc1f16f6308fabaca8f31b85718f8de22ec45a1d	a0699debe42cf880d25ddda57d46c123bc912b4c f5e72665f8f099f5103a49b9de58b72e45c90c66	2026-09-13T17:59:43+08:00	QCYM-qcym	Merge branch 'feat/foundation-level-baker' into feat/foundation-core
+ae973f4c6d85638b18f0d1c8e4d3d1002f675c86	dc1f16f6308fabaca8f31b85718f8de22ec45a1d aa5362f04dfb0477f7234c8f96bc48773a305de2	2026-09-13T18:00:10+08:00	QCYM-qcym	Merge branch 'feat/foundation-runtime-prototype' into feat/foundation-core
+4dda1fdce9c562427ab7541f1ee21266a3b8214a	ae973f4c6d85638b18f0d1c8e4d3d1002f675c86	2026-09-13T18:13:47+08:00	QCYM-qcym	feat: integrate foundation baker kernel and runtime
+69590f91e32c72103f885b32bb29e57eee36a0c3	4dda1fdce9c562427ab7541f1ee21266a3b8214a	2026-09-16T12:43:16+08:00	QCYM-qcym	docs: freeze foundation solver quality contracts
+f34dd271adabcc4b724eb55b5fff1cb35f532e59	69590f91e32c72103f885b32bb29e57eee36a0c3	2026-09-16T13:50:18+08:00	QCYM-qcym	feat: add foundation state explorer and bfs solver
+f41fa732bb6e1a0f4e0be3c703e5364bc9aab2e2	f34dd271adabcc4b724eb55b5fff1cb35f532e59	2026-09-16T14:11:35+08:00	QCYM-qcym	feat: add foundation softlock analysis
+64a324b22ecca004b1f2bd408b276577c14e4b49	69590f91e32c72103f885b32bb29e57eee36a0c3 f34dd271adabcc4b724eb55b5fff1cb35f532e59	2026-09-16T14:13:56+08:00	QCYM-qcym	Merge branch feat/foundation-state-explorer-bfs into feat/foundation-runtime-parity
+e6f7083be9cccef05642a7fcdb7c9f3c2f5870b2	64a324b22ecca004b1f2bd408b276577c14e4b49	2026-09-16T14:18:48+08:00	QCYM-qcym	feat: add foundation runtime parity
+70500cbf576e9f21c9238a7728916b41bd45b4e7	69590f91e32c72103f885b32bb29e57eee36a0c3	2026-09-16T15:17:55+08:00	QCYM-qcym	feat: add puzzle intent and mechanic ablation
+abb597c052a5d14f85c10b40b02734256cd4a807	69590f91e32c72103f885b32bb29e57eee36a0c3 f34dd271adabcc4b724eb55b5fff1cb35f532e59	2026-09-16T15:24:40+08:00	QCYM-qcym	Merge FOUNDATION-3A state explorer and BFS
+6be02568bef42bf6f321c125ca95b53000451f4d	abb597c052a5d14f85c10b40b02734256cd4a807 f41fa732bb6e1a0f4e0be3c703e5364bc9aab2e2	2026-09-16T15:24:40+08:00	QCYM-qcym	Merge FOUNDATION-3B softlock analysis
+7922cf7e3eef140451ad5b962b0bdf305f615822	6be02568bef42bf6f321c125ca95b53000451f4d 70500cbf576e9f21c9238a7728916b41bd45b4e7	2026-09-16T15:24:41+08:00	QCYM-qcym	Merge FOUNDATION-3C puzzle intent and ablation
+a2fddcbdf1325c059debf7a683f8417613031367	7922cf7e3eef140451ad5b962b0bdf305f615822 e6f7083be9cccef05642a7fcdb7c9f3c2f5870b2	2026-09-16T15:24:41+08:00	QCYM-qcym	Merge FOUNDATION-3D runtime parity
+bfcc6c004db232ca2f4ea4d409c98bda0dc6d165	a2fddcbdf1325c059debf7a683f8417613031367	2026-09-16T15:45:52+08:00	QCYM-qcym	test: validate foundation solver quality integration
+55d1edbafcfa507cc55ef9c0dda79f3d57e80e82	bfcc6c004db232ca2f4ea4d409c98bda0dc6d165	2026-09-23T02:13:37+08:00	QCYM-qcym	docs: freeze foundation 4 authoring implementation plans
+e93097b7cfedcd51b351f63fb837c06275142b70	55d1edbafcfa507cc55ef9c0dda79f3d57e80e82	2026-09-23T14:51:22+08:00	QCYM-qcym	test: fix polish audio teardown cleanup
+bd393303d3a21ae3ddebc6643a94a114437365a3	e93097b7cfedcd51b351f63fb837c06275142b70	2026-09-23T14:52:29+08:00	QCYM-qcym	test: synchronize F2 graphical interpolation checks
+c0ec447484be41f8da31e13917262f3c04105b14	bd393303d3a21ae3ddebc6643a94a114437365a3	2026-09-23T15:53:11+08:00	QCYM-qcym	test: add FOUNDATION-4 I0 authoring harness
+047dbb7962766e32dd36249e081f655fdd7f49fc	c0ec447484be41f8da31e13917262f3c04105b14	2026-09-23T15:53:40+08:00	QCYM-qcym	test: record verified I_HARNESS delivery receipt
+d32ad9d208181b60c7852fec4363201dd1a71532	047dbb7962766e32dd36249e081f655fdd7f49fc	2026-09-23T16:56:02+08:00	QCYM-qcym	feat: add foundation authoring schema and document projection
+2908b99dd641d94cda7ea2995bf5ddefb3d82a64	d32ad9d208181b60c7852fec4363201dd1a71532	2026-09-23T17:01:36+08:00	QCYM-qcym	fix: preserve native authoring properties and resource roots
+3d98099c58a63c6ad400075e0f95b8faeda85365	2908b99dd641d94cda7ea2995bf5ddefb3d82a64	2026-09-23T19:14:03+08:00	QCYM-qcym	test: allow 4B Unit service doubles before D_PROTOCOL
+21ce0b489f6c5ccdb3d36a0bd54bdb4f659ba191	3d98099c58a63c6ad400075e0f95b8faeda85365	2026-09-23T19:18:10+08:00	QCYM-qcym	test: load isolated Editor QA driver with relative plugin path
+01969fed0110ac594fce857d63a438a2a0fc9f67	21ce0b489f6c5ccdb3d36a0bd54bdb4f659ba191	2026-09-23T19:25:01+08:00	QCYM-qcym	docs: register A_SCHEMA receipt and propose D1 closed schemas
+6d0f89e46e1b9df598b2c0d5ea21f8c6fda5f700	047dbb7962766e32dd36249e081f655fdd7f49fc	2026-09-23T20:16:26+08:00	QCYM-qcym	feat: deliver D1 closed wire schemas and execution identities
+38a4af3fc43e13100da4a54fcc81a89daa04e515	01969fed0110ac594fce857d63a438a2a0fc9f67	2026-09-23T20:16:41+08:00	QCYM-qcym	docs: record hash-bound D1 schema approval
+fd3e4f553b809e12055e88c6599aa1f5c7442ce7	38a4af3fc43e13100da4a54fcc81a89daa04e515 6d0f89e46e1b9df598b2c0d5ea21f8c6fda5f700	2026-09-23T20:24:09+08:00	QCYM-qcym	Merge commit '6d0f89e46e1b9df598b2c0d5ea21f8c6fda5f700' into integration/foundation-4-authoring
+e34f675d188e7aa406b2dc8807a82770fdb424c3	fd3e4f553b809e12055e88c6599aa1f5c7442ce7	2026-09-23T20:26:21+08:00	QCYM-qcym	docs: register verified D_PROTOCOL owner delivery
+bbbb20c4a2949907ef558cd796507ddca382ca0b	e34f675d188e7aa406b2dc8807a82770fdb424c3	2026-09-23T20:36:53+08:00	QCYM-qcym	feat: orchestrate original quality graph and native softlock analysis
+a7e9a80a5542b184a2e06610d3e2f651fa4edfaf	e34f675d188e7aa406b2dc8807a82770fdb424c3	2026-09-23T20:36:58+08:00	QCYM-qcym	test: register D2 Unit snapshot contract case
+6176a45c614f678c8b248d5289f9a672a971043b	e34f675d188e7aa406b2dc8807a82770fdb424c3	2026-09-23T20:37:09+08:00	QCYM-qcym	fix: connect D wire to registered authoring schema
+cbb32d91378e08df497f7fcd4e3e345649963b72	a7e9a80a5542b184a2e06610d3e2f651fa4edfaf	2026-09-23T20:39:58+08:00	QCYM-qcym	docs: bind I_HARNESS receipt to D2 Unit registration
+b37b4b0e053fcc55ffef8d8c61e7952352d0a9bf	bbbb20c4a2949907ef558cd796507ddca382ca0b	2026-09-23T20:42:57+08:00	QCYM-qcym	feat: bind intent ablation and milestones to selected original trace
+7ac36f6fe64c605ad43262538b197c422dcce485	cbb32d91378e08df497f7fcd4e3e345649963b72 6176a45c614f678c8b248d5289f9a672a971043b	2026-09-23T20:46:57+08:00	QCYM-qcym	Merge commit '6176a45c614f678c8b248d5289f9a672a971043b' into integration/foundation-4-authoring
+0bcf84b3fcc354ff1e004124fe3791e633ffd2ba	b37b4b0e053fcc55ffef8d8c61e7952352d0a9bf	2026-09-23T20:48:25+08:00	QCYM-qcym	test: verify quality cancellation errors and unknown evidence propagation
+9dca4538ca77a88a9adf16803579b663f4ea6c87	7ac36f6fe64c605ad43262538b197c422dcce485	2026-09-23T20:49:14+08:00	QCYM-qcym	docs: register D_PROTOCOL authoring schema compatibility update
+bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1	0bcf84b3fcc354ff1e004124fe3791e633ffd2ba	2026-09-23T20:50:40+08:00	QCYM-qcym	test: bind quality fixture identity to materialized harness files
+03e581d2c3ec28a1b42074d88495ce7ef580411d	e34f675d188e7aa406b2dc8807a82770fdb424c3	2026-09-23T20:51:25+08:00	QCYM-qcym	feat: add formal authoring bake and source map
+a263abb191357473ab45a99ce11ecd9ae672b1c3	9dca4538ca77a88a9adf16803579b663f4ea6c87 03e581d2c3ec28a1b42074d88495ce7ef580411d	2026-09-23T20:57:00+08:00	QCYM-qcym	Merge commit '03e581d2c3ec28a1b42074d88495ce7ef580411d' into integration/foundation-4-authoring
+ab8b3b9e73d46f8d31ed2d1002b408e43a0336bd	a263abb191357473ab45a99ce11ecd9ae672b1c3 bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1	2026-09-23T20:57:12+08:00	QCYM-qcym	Merge commit 'bb27f8c7cd6e2d9d94fbe3b8d3f98b99f86484d1' into integration/foundation-4-authoring
+a4d0c9545d629e1c77518ac80781e1352510bf63	ab8b3b9e73d46f8d31ed2d1002b408e43a0336bd	2026-09-23T21:00:12+08:00	QCYM-qcym	docs: register verified A_BAKE and C_QUALITY deliveries
+f1333fa5997f707eb01d4c93fd0c3297c05ccd77	a4d0c9545d629e1c77518ac80781e1352510bf63	2026-09-23T21:06:30+08:00	QCYM-qcym	docs: record R4 deliveries and 4B-1 Unit phase evidence
+750d34c59768dbe3b6351a30acca09333689f95c	03e581d2c3ec28a1b42074d88495ce7ef580411d	2026-09-23T21:39:22+08:00	QCYM-qcym	feat: add authoring edit proposals and identity operations
+a8ac1d4e05d9b9ff4f5b0df0a400677e413d88e0	a4d0c9545d629e1c77518ac80781e1352510bf63	2026-09-23T21:53:23+08:00	QCYM-qcym	feat: capture saved authoring snapshots in isolated execution packages
+e8657375b6df8043069614217ace1750e9ab6828	f1333fa5997f707eb01d4c93fd0c3297c05ccd77	2026-09-23T21:58:49+08:00	QCYM-qcym	docs: record approved A4 bake provenance clarification
+12cf2e22eb475153ad8af32ad48211a7835cb9ff	e8657375b6df8043069614217ace1750e9ab6828 a8ac1d4e05d9b9ff4f5b0df0a400677e413d88e0	2026-09-23T22:01:38+08:00	QCYM-qcym	Merge commit 'a8ac1d4e05d9b9ff4f5b0df0a400677e413d88e0' into integration/foundation-4-authoring
+59b7eaf6c87ebd3dc434f1a95ebfcdadc9395ed3	750d34c59768dbe3b6351a30acca09333689f95c	2026-09-23T21:58:49+08:00	QCYM-qcym	docs: record approved A4 bake provenance clarification
+f4e8ccd7144084b2def96d1020026c7eefd9c9f6	12cf2e22eb475153ad8af32ad48211a7835cb9ff	2026-09-23T22:04:59+08:00	QCYM-qcym	docs: register verified D_SAVED delivery and provenance follow-up
+e0940278fe425d7f77eb6a5b4ea042067606258d	59b7eaf6c87ebd3dc434f1a95ebfcdadc9395ed3	2026-09-23T22:08:14+08:00	QCYM-qcym	feat: bind authoring bake results to validated run provenance
+da77867bf77ae936220a64657ac902c494176a38	f4e8ccd7144084b2def96d1020026c7eefd9c9f6 e0940278fe425d7f77eb6a5b4ea042067606258d	2026-09-26T22:37:44+08:00	QCYM-qcym	Merge commit 'e0940278fe425d7f77eb6a5b4ea042067606258d' into integration/foundation-4-authoring
+a40392c99a93db10e07fd5f15215192f29165e7f	da77867bf77ae936220a64657ac902c494176a38	2026-09-26T22:42:40+08:00	QCYM-qcym	docs: register R5 A_BAKE update and verified D_SAVED compatibility
+24e2c18016a5f7ddba102c81c28c3c2f66be114a	a40392c99a93db10e07fd5f15215192f29165e7f	2026-09-26T23:16:12+08:00	QCYM-qcym	docs: approve exact A4 intent resource resolution clarification
+876a28be21b567d12bd22828e10d188b5afce297	24e2c18016a5f7ddba102c81c28c3c2f66be114a	2026-09-26T23:42:14+08:00	QCYM-qcym	docs: approve exact source intent digest contract clarification
+323891ec27859a60d33fe2d59c2633621b7f55d8	876a28be21b567d12bd22828e10d188b5afce297	2026-09-26T23:48:49+08:00	QCYM-qcym	test: add Integration authoring fixture for D3 local and global transitions
+0971cd41fe4cb16d2321fadaca81b59204283f44	323891ec27859a60d33fe2d59c2633621b7f55d8	2026-09-26T23:52:12+08:00	QCYM-qcym	docs: hand off D3 action artifact and stage result schema review
+74892ba39c283e24efbd0755e85e552b5a685784	0971cd41fe4cb16d2321fadaca81b59204283f44	2026-09-27T13:19:47+08:00	QCYM-qcym	docs: approve exact stage result schema with execution binding excluded
+5f30cc41c894858c62d7d6afd5b28b6eb59a5c85	74892ba39c283e24efbd0755e85e552b5a685784	2026-09-27T13:30:16+08:00	QCYM-qcym	docs: approve exact D3 new-run execution binding contract
+879a5b07c4f878fc51b64f3728a1b80f6be267b8	5f30cc41c894858c62d7d6afd5b28b6eb59a5c85	2026-09-27T13:35:53+08:00	QCYM-qcym	docs: approve exact worker IPC protocol version clarification
+12d50b2b964166cc1c207beb83d52aa2e9d2ad70	74892ba39c283e24efbd0755e85e552b5a685784	2026-09-27T13:35:53+08:00	QCYM-qcym	docs: approve exact worker IPC protocol version clarification
+ef1b0b8a3a16b04037eb5ac49faaa55e296b31e8	12d50b2b964166cc1c207beb83d52aa2e9d2ad70	2026-09-27T13:55:13+08:00	QCYM-qcym	feat: implement scoped stage result protocol and worker version validation
+ea7071aa2971f413fefb8d2d928a9dfa6dbca02a	879a5b07c4f878fc51b64f3728a1b80f6be267b8 ef1b0b8a3a16b04037eb5ac49faaa55e296b31e8	2026-09-27T14:04:39+08:00	QCYM-qcym	Merge commit 'ef1b0b8a3a16b04037eb5ac49faaa55e296b31e8' into integration/foundation-4-authoring
+6dc1605bf54b90f39059e13d24c80360486b945e	ea7071aa2971f413fefb8d2d928a9dfa6dbca02a	2026-09-27T14:07:37+08:00	QCYM-qcym	docs: register scoped D_PROTOCOL stage result delivery and compatibility evidence
+96043a0b4c0b1ec8c095eb7fcf62247132eed466	6dc1605bf54b90f39059e13d24c80360486b945e	2026-09-28T23:27:33+08:00	QCYM-qcym	feat: stage formal whitebox host source
+37c6e9b1cb97bf0725543d506141dc8a6a03d4db	96043a0b4c0b1ec8c095eb7fcf62247132eed466	2026-09-28T23:38:28+08:00	QCYM-qcym	docs: register D3 host source phase handoff
+7cbdae3d0d04ed6b2dc8fc4d05eb6e49472b2664	37c6e9b1cb97bf0725543d506141dc8a6a03d4db	2026-09-28T23:51:19+08:00	QCYM-qcym	feat: seal formal whitebox host execution closure
+06234bdd2d23548f1689a931bedf9b8e477784d9	7cbdae3d0d04ed6b2dc8fc4d05eb6e49472b2664	2026-09-29T00:04:04+08:00	QCYM-qcym	docs: register updated D_SAVED closure and final run handoff
+b9bf7d4a02398cd354fab6a18948babaa22c531e	06234bdd2d23548f1689a931bedf9b8e477784d9	2026-09-29T00:24:39+08:00	QCYM-qcym	test: validate final R6 host natural transitions
+155fd179d20cc86884e0c974adb4c050c0b60ed1	b9bf7d4a02398cd354fab6a18948babaa22c531e	2026-09-29T00:34:44+08:00	QCYM-qcym	docs: register verified D_HOST delivery
+06cc4a8677893f814ab949a0040e1c0ec1217197	155fd179d20cc86884e0c974adb4c050c0b60ed1	2026-09-29T00:54:56+08:00	QCYM-qcym	docs: approve exact I1 safety fixture geometry clarification
+14936504ae4245cc1822786937f021afce4a7fd9	06cc4a8677893f814ab949a0040e1c0ec1217197	2026-09-29T00:58:18+08:00	QCYM-qcym	test: prove saved authoring changes reach formal runtime
+21c23df2ac549a6c998cd2a3604ff55c2f891684	14936504ae4245cc1822786937f021afce4a7fd9	2026-09-29T11:01:06+08:00	QCYM-qcym	docs: record exact Track A source intent digest approval
+2aa086972e2749262d4128b537e4e687e284cb55	21c23df2ac549a6c998cd2a3604ff55c2f891684	2026-09-29T11:06:15+08:00	QCYM-qcym	docs: approve exact D4 worker IPC lifecycle contract
+01aba03ba87d1a168adb3c29cc60bbd650deb935	ef1b0b8a3a16b04037eb5ac49faaa55e296b31e8	2026-09-29T11:01:06+08:00	QCYM-qcym	docs: record exact Track A source intent digest approval
+a4f0bb32936eb0af064dc8256d90c79ddb50e2cd	01aba03ba87d1a168adb3c29cc60bbd650deb935	2026-09-29T11:06:15+08:00	QCYM-qcym	docs: approve exact D4 worker IPC lifecycle contract
+814a1d7264140eec44a6b32752166832beb8ce75	a4f0bb32936eb0af064dc8256d90c79ddb50e2cd	2026-09-29T11:28:22+08:00	QCYM-qcym	feat: consolidate source intent and worker lifecycle protocol contracts
+19af1b73b5a019e1fc22388acba0fc947db278de	2aa086972e2749262d4128b537e4e687e284cb55 814a1d7264140eec44a6b32752166832beb8ce75	2026-09-29T11:38:08+08:00	QCYM-qcym	Merge commit '814a1d7264140eec44a6b32752166832beb8ce75' into integration/foundation-4-authoring
+67c0e21e5e1df86dd984d4d71d027e6ad2a12bc6	19af1b73b5a019e1fc22388acba0fc947db278de	2026-09-29T11:44:02+08:00	QCYM-qcym	docs: register consolidated D_PROTOCOL with verified regressions
+8289d804c3b5b42a2e6c2cf76e965679a0f83af8	67c0e21e5e1df86dd984d4d71d027e6ad2a12bc6	2026-09-29T12:00:09+08:00	QCYM-qcym	feat: bind saved source intent digest and verify sealed identity
+8fbf7743231c28400ec95c4069e23317ef0785d3	67c0e21e5e1df86dd984d4d71d027e6ad2a12bc6	2026-09-29T19:20:38+08:00	QCYM-qcym	docs: approve D4 required stage storage contract
+8f7fb52f029053bda10b965da840c6763fc13bf0	8fbf7743231c28400ec95c4069e23317ef0785d3	2026-09-29T19:56:41+08:00	QCYM-qcym	feat: register foundation stage storage protocol
+20b2525278ae959af75531436112a31597987afa	8fbf7743231c28400ec95c4069e23317ef0785d3 8289d804c3b5b42a2e6c2cf76e965679a0f83af8	2026-10-04T18:16:53+08:00	QCYM-qcym	Merge commit '8289d804c3b5b42a2e6c2cf76e965679a0f83af8' into integration/foundation-4-authoring
+dd3cc6db6a27b7d843bc87ca5d70dbef550656f2	20b2525278ae959af75531436112a31597987afa	2026-10-04T18:26:20+08:00	QCYM-qcym	docs: register saved source intent delivery and loader phase evidence
+95b51533306638c7a0a6a902cd17235c6cbe3336	dd3cc6db6a27b7d843bc87ca5d70dbef550656f2 8f7fb52f029053bda10b965da840c6763fc13bf0	2026-10-04T21:15:29+08:00	QCYM-qcym	Merge commit '8f7fb52f029053bda10b965da840c6763fc13bf0' into integration/foundation-4-authoring
+342a51f463697caf8953a56591ee1a16ecd1e02f	95b51533306638c7a0a6a902cd17235c6cbe3336	2026-10-04T21:21:50+08:00	QCYM-qcym	docs: register foundation stage storage protocol delivery
+536faf950cedd30a04172ae5744ecfde09fbdf97	342a51f463697caf8953a56591ee1a16ecd1e02f	2026-10-05T20:25:46+08:00	QCYM-qcym	docs: approve registry module execution closure clarification
+48790eb3fce02238302f371c6e04fc89fd6a3ac4	536faf950cedd30a04172ae5744ecfde09fbdf97	2026-10-05T21:01:31+08:00	QCYM-qcym	feat: add D4 task lifecycle and scoped IPC unit transport
+4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11	536faf950cedd30a04172ae5744ecfde09fbdf97	2026-10-05T21:14:15+08:00	QCYM-qcym	fix: scope saved execution closure to approved capabilities
+3a2c3ba47a3b5c9d2c1e802c83f873d764883057	48790eb3fce02238302f371c6e04fc89fd6a3ac4 4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11	2026-10-05T21:15:32+08:00	QCYM-qcym	Merge commit '4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11' into feat/foundation-authoring-runtime
+6b7597ae2a6f77a882717581a63775f26cc1381e	4f2cfd4cba11677fe3dae6fa3dd66a4148e15e11	2026-10-05T21:23:53+08:00	QCYM-qcym	feat: bind same-capture author intent through formal resource resolution
+cb98348082dd602f35949d13fa4fc275d868f22c	3a2c3ba47a3b5c9d2c1e802c83f873d764883057	2026-10-05T21:23:54+08:00	QCYM-qcym	feat: stabilize dock lifecycle and headless stage publication
+b03a702f48953c6d6331e3f8a9e4435c7cc95e5f	6b7597ae2a6f77a882717581a63775f26cc1381e	2026-10-05T21:38:01+08:00	QCYM-qcym	test: connect saved author intent to local quality preflight
+5749b932f947c44b35f21c62478bd76720e32969	6b7597ae2a6f77a882717581a63775f26cc1381e	2026-10-05T22:06:00+08:00	QCYM-qcym	test: make D2 registry acceptance independent of missing Binder
+ac3ae7f58020505d114976a5772fc3ae21dc7f34	b03a702f48953c6d6331e3f8a9e4435c7cc95e5f 5749b932f947c44b35f21c62478bd76720e32969	2026-10-05T22:18:40+08:00	QCYM-qcym	Merge commit '5749b932f947c44b35f21c62478bd76720e32969' into integration/foundation-4-authoring
+116538cb639791b01b9a5cf0bce18f2c006817b6	ac3ae7f58020505d114976a5772fc3ae21dc7f34	2026-10-05T22:30:12+08:00	QCYM-qcym	docs: register D_SAVED stage storage production and validation support
+93f677668eaa88e8a5fe87bb10b909b84474581b	cb98348082dd602f35949d13fa4fc275d868f22c 116538cb639791b01b9a5cf0bce18f2c006817b6	2026-10-05T23:06:09+08:00	QCYM-qcym	Merge commit '116538cb639791b01b9a5cf0bce18f2c006817b6' into feat/foundation-authoring-runtime
+f366efd26d063768ab25422593519176513de81f	116538cb639791b01b9a5cf0bce18f2c006817b6	2026-10-05T23:18:01+08:00	QCYM-qcym	test: verify authoring intent binding through saved harness
+8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2	f366efd26d063768ab25422593519176513de81f	2026-10-05T23:18:30+08:00	QCYM-qcym	docs: normalize intent delivery report newline
+7493ab31cf6a71ca9b4778bfe871f33bba2e586d	116538cb639791b01b9a5cf0bce18f2c006817b6	2026-10-05T23:19:14+08:00	QCYM-qcym	test: validate D_HOST against current source-intent saved runs
+2c1c4d1b5642c3060a013cabe836fefd9c9ced7e	93f677668eaa88e8a5fe87bb10b909b84474581b	2026-10-06T19:35:44+08:00	QCYM-qcym	feat: complete foundation jobs core and real authoring bake lifecycle
+9f1a7ac79fe2ec9992daedd333faa57a960a285e	8a67282ac3022cb3d9b43e553424ed1aa3b2d7d2 7493ab31cf6a71ca9b4778bfe871f33bba2e586d	2026-10-06T19:41:58+08:00	QCYM-qcym	Merge commit '7493ab31cf6a71ca9b4778bfe871f33bba2e586d' into integration/foundation-4-authoring
+0a895f0d9a7e8fe4ee693c1972f601e226ab57ff	9f1a7ac79fe2ec9992daedd333faa57a960a285e 2c1c4d1b5642c3060a013cabe836fefd9c9ced7e	2026-10-06T19:41:59+08:00	QCYM-qcym	Merge commit '2c1c4d1b5642c3060a013cabe836fefd9c9ced7e' into integration/foundation-4-authoring
+1c5b6711e3ee9dd89848dcb6ee48f15835c4ce23	0a895f0d9a7e8fe4ee693c1972f601e226ab57ff	2026-10-06T19:47:05+08:00	QCYM-qcym	test: bind approved phase dependencies in authoring harness
+c06065c8a471c31d866b9dd018cc01f00a18a0a7	1c5b6711e3ee9dd89848dcb6ee48f15835c4ce23	2026-10-06T19:49:45+08:00	QCYM-qcym	fix: append phase dependency evidence as an array
+9d23882638d2c491d68d58cbc360c3e60f56a894	c06065c8a471c31d866b9dd018cc01f00a18a0a7	2026-10-06T20:05:13+08:00	QCYM-qcym	docs: register A_EDIT D_HOST and jobs core phase receipt
+4c80b55f4360ddbfba8ac8960ab8c18fbb43747c	8a77874cc18ceb654664c3e9aeb10a2ccd318048	2026-10-06T20:50:19+08:00	QCYM-qcym	feat(content): add formal first level and two playable greyboxes
+d430e814292d9e84c50c5a15c80a11022262171e	4c80b55f4360ddbfba8ac8960ab8c18fbb43747c	2026-10-06T20:55:20+08:00	QCYM-qcym	test(content): verify batch playthroughs and record delivery evidence
+e71cb4199e61c4de25a2040fac533095cfed908a	d430e814292d9e84c50c5a15c80a11022262171e	2026-10-06T20:56:02+08:00	QCYM-qcym	chore(content): normalize evidence hashes for portable delivery
+608a18a8c0627bb8a8a57f3cde554e723016dbb7	e71cb4199e61c4de25a2040fac533095cfed908a	2026-10-06T20:57:15+08:00	QCYM-qcym	docs(content): specify game shell catalog integration
+7abf98d1e184fda5801c9271ebf02951ed6ecadd	8a77874cc18ceb654664c3e9aeb10a2ccd318048	2026-10-06T20:59:46+08:00	QCYM-qcym	feat: add Beta game shell with safe progress and settings persistence
+87c33715825ede0469f098a14f034d08bb6d0daa	9d23882638d2c491d68d58cbc360c3e60f56a894	2026-10-06T21:06:04+08:00	QCYM-qcym	build: establish Beta daily smoke and coordinator baseline
+c4d67d0d6b256912f7993e5ccb14cce34be7cbf3	87c33715825ede0469f098a14f034d08bb6d0daa 608a18a8c0627bb8a8a57f3cde554e723016dbb7	2026-10-06T21:06:21+08:00	QCYM-qcym	merge: integrate Game Content Batch 01 owner delivery
+c084e30ac43bbb03f56c1dacaf288cad69412747	c4d67d0d6b256912f7993e5ccb14cce34be7cbf3 7abf98d1e184fda5801c9271ebf02951ed6ecadd	2026-10-06T21:06:23+08:00	QCYM-qcym	merge: integrate Beta Game Shell owner delivery
+e22d0255e8a974c1f87445516b16ddcb71af465e	c084e30ac43bbb03f56c1dacaf288cad69412747	2026-10-06T21:16:56+08:00	QCYM-qcym	feat: integrate three-level Beta content and shell slice
+c60774a83a3dc69813c79d526a63707b91840280	e22d0255e8a974c1f87445516b16ddcb71af465e	2026-10-06T21:21:05+08:00	QCYM-qcym	docs: hand off verified Content Shell Beta slice to QA
+7836de52866255dd6f9684214b014d9703e7854d	9d23882638d2c491d68d58cbc360c3e60f56a894	2026-10-06T21:29:23+08:00	QCYM-qcym	feat: finalize foundation jobs stage orchestration
+5d73ccfa9bcd779f2653bf17b3b6afdaf3ca7217	c60774a83a3dc69813c79d526a63707b91840280 7836de52866255dd6f9684214b014d9703e7854d	2026-10-06T21:57:23+08:00	QCYM-qcym	merge: integrate exact D_JOBS finalization candidate for validation
+752404b9e8b644682876d9929ad434668ee0bcb5	5d73ccfa9bcd779f2653bf17b3b6afdaf3ca7217	2026-10-06T22:00:43+08:00	QCYM-qcym	test: bind exact D_JOBS finalization candidate without formal delivery
+ca02a5260ab3e07647885c001a190073241185af	752404b9e8b644682876d9929ad434668ee0bcb5	2026-10-06T22:01:26+08:00	QCYM-qcym	test: register harness version for exact D_JOBS final validation
+5bb300a675ed935c0adfa397ff1f4425982be39e	ca02a5260ab3e07647885c001a190073241185af	2026-10-06T22:04:59+08:00	QCYM-qcym	test: keep saved acceptance evidence inside disposable project
+3dc92ca271eff1c76180f20cfe2a1bf9a4c2b5dc	5bb300a675ed935c0adfa397ff1f4425982be39e	2026-10-06T22:06:15+08:00	QCYM-qcym	test: bind corrected project-local harness launch
+96397ea5708e0e87dd05e3d1d4c682ca0a5478b8	3dc92ca271eff1c76180f20cfe2a1bf9a4c2b5dc	2026-10-06T22:13:04+08:00	QCYM-qcym	docs: issue formal D_JOBS receipt and unlock I2
+689ef1dd293a7525be6cb29c0bf7f5ead964a454	96397ea5708e0e87dd05e3d1d4c682ca0a5478b8	2026-10-06T22:13:37+08:00	QCYM-qcym	test: accept I2 through real jobs quality replay and runtime mechanics
+8bd49cbd3f878907d929ff313d4ec6d126ba740f	689ef1dd293a7525be6cb29c0bf7f5ead964a454	2026-10-06T22:19:30+08:00	QCYM-qcym	docs: record formal I2 vertical pass and current sprint state
+016204856650dcf0e65e596be6bc9531ccaea46e	8bd49cbd3f878907d929ff313d4ec6d126ba740f	2026-10-06T23:26:26+08:00	QCYM-qcym	docs: freeze Foundation Core for Beta and defer advanced authoring
+29bba3252d5a9661f7f59ff5d6fde66b2c2cee58	016204856650dcf0e65e596be6bc9531ccaea46e	2026-10-06T23:56:58+08:00	QCYM-qcym	feat: present formal L01 with approved 3D art and preserve gameplay parity
+7352002d7efc33318ee06c95231caea75b5cac50	29bba3252d5a9661f7f59ff5d6fde66b2c2cee58	2026-10-06T23:58:24+08:00	QCYM-qcym	build: preserve approved art and handoff bytes across checkouts
+7c0d8ccb16df9d7b6ab7845512580b83ba44c34c	7352002d7efc33318ee06c95231caea75b5cac50	2026-10-07T00:07:53+08:00	QCYM-qcym	docs: issue L01 main-project 3D vertical slice receipt
+42d290c37b477924c98c492d5871cc6d61ce8d1f	7c0d8ccb16df9d7b6ab7845512580b83ba44c34c	2026-10-07T16:15:07+08:00	QCYM-qcym	Integrate approved Beta Shell UI with existing L01 presentation
+22dc7281a54250db93f6d70e607fa0a00e206f78	42d290c37b477924c98c492d5871cc6d61ce8d1f	2026-10-07T16:16:19+08:00	QCYM-qcym	Preserve visual validation source and upstream license bytes
+8a7d339994f68cf15727bf7dc5b75c36110184b5	22dc7281a54250db93f6d70e607fa0a00e206f78	2026-10-07T16:20:56+08:00	QCYM-qcym	Handle hidden file metadata in Daily Build and record MAIN acceptance
+4c505e03f71f7269581078fc586cd8c43cd2701e	8a7d339994f68cf15727bf7dc5b75c36110184b5	2026-10-07T16:30:04+08:00	QCYM-qcym	Issue visual Beta Slice receipt and BLACK BOX QA handoff
+81d9470c174bd67a73e7e8fedf4b92240ddfc2fd	4c505e03f71f7269581078fc586cd8c43cd2701e	2026-10-09T01:55:08+08:00	QCYM-qcym	Fix pause entry contrast over dark level backgrounds
+ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3	81d9470c174bd67a73e7e8fedf4b92240ddfc2fd	2026-10-09T02:24:12+08:00	QCYM-qcym	Verify focused UI-08-001 integration without replaying level routes
+dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916	ca6b331dc7c819c2a01e23c49827c0bd6a9c43a3	2026-10-09T02:35:57+08:00	QCYM-qcym	Issue UI-08-001 focused integration QA build receipt
+0abb91610d28d967b1e9883318e9b5fa4b6de972	dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916	2026-10-09T11:41:40+08:00	QCYM-qcym	Present native L02 with approved 3D assets and verify gameplay parity
+7a95b28b155f5d32c4b559bdf90e0ea9beaad4ac	0abb91610d28d967b1e9883318e9b5fa4b6de972	2026-10-09T11:54:36+08:00	QCYM-qcym	feat: present L03 with runtime connection parity and finalize 3D checks
+b910167becee2194c0cfc724d8f0fe47578836a9	7a95b28b155f5d32c4b559bdf90e0ea9beaad4ac	2026-10-09T12:00:11+08:00	QCYM-qcym	docs: seal 3D integration 02 evidence and isolated QA handoff
+6fd931cffd0c83afe6ecf72de51252c24cd73a73	dc0bd64b53a9ee3c0c12d4bd7f25ab1ab92df916	2026-10-09T12:10:34+08:00	QCYM-qcym	docs: accept focused 3D UI QA checkpoint and close UI-08-001
+98cbc090288006f965c99211eaf38d062bc74ea8	6fd931cffd0c83afe6ecf72de51252c24cd73a73 b910167becee2194c0cfc724d8f0fe47578836a9	2026-10-09T12:35:59+08:00	QCYM-qcym	Merge accepted 3D02 presentation for Beta content expansion
+58be6f862d6615cfc281b0bd140258972b01d6d3	98cbc090288006f965c99211eaf38d062bc74ea8	2026-10-09T12:44:19+08:00	QCYM-qcym	Start Phase2 owner work and validate expanded Beta build catalog
+1f00bad2a8ebd14418f9965802a38d8d12fdb047	58be6f862d6615cfc281b0bd140258972b01d6d3	2026-10-09T12:45:39+08:00	QCYM-qcym	Add opt-in observation tracing for focused 3D regression
+3e84a33d04e6dccb4108d6b1c6d8151262316486	1f00bad2a8ebd14418f9965802a38d8d12fdb047	2026-10-09T12:50:31+08:00	QCYM-qcym	Preserve premerge timeout evidence and tracing script identity
+d4be39c76988e2face66d5f36be6e0c65fe9a169	b910167becee2194c0cfc724d8f0fe47578836a9	2026-10-09T12:55:31+08:00	QCYM-qcym	feat(content): add L04 and L05 greybox puzzles
+b5491652943c232081623c2fe001cbb419c85869	3e84a33d04e6dccb4108d6b1c6d8151262316486	2026-10-09T12:56:20+08:00	QCYM-qcym	Add limited menu and native 3D regression for retained three levels
+9482e7279acd2cc99af0f7b2211790ab2eace815	d4be39c76988e2face66d5f36be6e0c65fe9a169	2026-10-09T12:57:14+08:00	QCYM-qcym	docs(content): record Batch02 delivery receipt and hashes
+e6a6bc8c5a1b172ea89d75114315ca3df5c8bc92	b910167becee2194c0cfc724d8f0fe47578836a9 d4be39c76988e2face66d5f36be6e0c65fe9a169	2026-10-09T12:57:39+08:00	QCYM-qcym	Merge playable Batch02 Content dependency d4be39c
+af84f78e6bb351a07975adf566cf1001c02188f4	b5491652943c232081623c2fe001cbb419c85869 9482e7279acd2cc99af0f7b2211790ab2eace815	2026-10-09T12:59:16+08:00	QCYM-qcym	Integrate reviewed playable Content Batch02 owner delivery
+b8e2ed99f68de8a1cd7ffb708a9d5a122861eb61	af84f78e6bb351a07975adf566cf1001c02188f4	2026-10-09T13:03:11+08:00	QCYM-qcym	Seal reviewed Batch02 graphical routes and focused 3D02 QA scope
+bc33184fd28118a5373d98c6da079ce651dec033	b8e2ed99f68de8a1cd7ffb708a9d5a122861eb61	2026-10-09T13:07:25+08:00	QCYM-qcym	Register fixed3D02 focused QA and preserve its complete evidence
+b1d721db0c143ead99b1719e04d3568e5ae9bb2b	e6a6bc8c5a1b172ea89d75114315ca3df5c8bc92 9482e7279acd2cc99af0f7b2211790ab2eace815	2026-10-09T13:09:20+08:00	QCYM-qcym	Merge Batch02 Content delivery receipt 9482e72
+2ee64801d497df3acc909b4021b7325162cef2b5	b1d721db0c143ead99b1719e04d3568e5ae9bb2b	2026-10-09T13:11:36+08:00	QCYM-qcym	Register playable Batch02 levels and keep expanded select menu reachable
+0f4384ba5cfa7d6dc3f64341e2c198de4e1b68cf	bc33184fd28118a5373d98c6da079ce651dec033 2ee64801d497df3acc909b4021b7325162cef2b5	2026-10-09T13:15:02+08:00	QCYM-qcym	Integrate reviewed five-level Shell catalog and bounded list scrolling
+395336b18648ec167a81313932cb23ba322c4d0e	0f4384ba5cfa7d6dc3f64341e2c198de4e1b68cf	2026-10-09T13:16:49+08:00	QCYM-qcym	Correct isolated focused-regression fixture recent level
+d22e3999282ffb48b7c2047c4365623b3b1e32bb	2ee64801d497df3acc909b4021b7325162cef2b5	2026-10-09T13:17:00+08:00	QCYM-qcym	Seal Batch02 Shell candidate evidence and read-only save receipt
+c760e1e3be1218c2ad4933790503f469c3f78698	395336b18648ec167a81313932cb23ba322c4d0e	2026-10-09T13:19:17+08:00	QCYM-qcym	Seal current five-level catalog and limited old-three 3D regression
+991140292ac67e87d1751a062e7e96c7b9fee553	c760e1e3be1218c2ad4933790503f469c3f78698 d22e3999282ffb48b7c2047c4365623b3b1e32bb	2026-10-09T13:19:17+08:00	QCYM-qcym	Preserve final Shell Batch02 owner receipt and original evidence
+ed180958dd9eb4b0d2c560074066eb92a5f9d139	991140292ac67e87d1751a062e7e96c7b9fee553	2026-10-09T13:34:18+08:00	QCYM-qcym	Accept Content Batch02 and seal five-level Daily Build receipt
+2a2fd7ad06b5c139b51b77c8dae1a9289b0530e8	991140292ac67e87d1751a062e7e96c7b9fee553	2026-10-09T14:57:00+08:00	QCYM-qcym	fix(content): connect L04 Inner spawn to the authored shore
+a80a28b4edafda1faa5be4e890e0b61447afc716	2a2fd7ad06b5c139b51b77c8dae1a9289b0530e8	2026-10-09T15:01:30+08:00	QCYM-qcym	docs(content): seal L04 P1 hotfix receipt and evidence hashes
+a175a5fcc2c6d14beb04e30854d364cfd18ebc3f	ed180958dd9eb4b0d2c560074066eb92a5f9d139	2026-10-09T15:21:38+08:00	QCYM-qcym	Record scoped L04 P1 integration plan and immutable QA baseline
+f059d7c17ad016a88cfac96a6f62715f44d13574	a175a5fcc2c6d14beb04e30854d364cfd18ebc3f a80a28b4edafda1faa5be4e890e0b61447afc716	2026-10-09T15:21:38+08:00	QCYM-qcym	Merge L04 Inner movement P1 content hotfix
+3a802887894aec594446546b60b20250baec2fe9	f059d7c17ad016a88cfac96a6f62715f44d13574	2026-10-09T15:24:44+08:00	QCYM-qcym	Add bounded L04 hotfix natural-route and formal L05 unlock verification
+0f1bea9d633f6446fd3ef93551bb637f39045197	3a802887894aec594446546b60b20250baec2fe9	2026-10-09T15:27:34+08:00	QCYM-qcym	Correct focused runner failure-token matching and retain original evidence
+4267365d5d794a82dff4acc731073eb532ee40a1	0f1bea9d633f6446fd3ef93551bb637f39045197	2026-10-09T15:32:50+08:00	QCYM-qcym	Seal integrated L04 P1 natural-input and real L05 unlock evidence
+9e2e9c29a73272d431795f12db1fefaff2433b05	4267365d5d794a82dff4acc731073eb532ee40a1	2026-10-09T15:51:35+08:00	QCYM-qcym	docs(integration): seal L04 P1 focused QA build receipt
+56857cb4c1deeaebe36f8d2f3940aa3e5a3cc5b0	9e2e9c29a73272d431795f12db1fefaff2433b05	2026-10-09T18:42:48+08:00	QCYM-qcym	docs(beta): accept five-level alpha QA and stage isolated 3D unification
+360d8b6c2b99722b08dc2cea9058295ff801d77c	56857cb4c1deeaebe36f8d2f3940aa3e5a3cc5b0	2026-10-09T18:46:08+08:00	QCYM-qcym	fix(build): consume existing classified CONTENT02 verification gate
+2276a7247251007686dd7409311e6d01258f86ce	9e2e9c29a73272d431795f12db1fefaff2433b05	2026-10-09T18:48:17+08:00	QCYM-qcym	docs(content): prepare L06 finale design with native rule validation
+58fc259abadaffd80160735e12195a9d01097bfd	360d8b6c2b99722b08dc2cea9058295ff801d77c	2026-10-09T18:50:47+08:00	QCYM-qcym	docs(build): describe Continue using the most recently entered level
+d2b78e183839e078c9a28074b2e25359a40608c4	2276a7247251007686dd7409311e6d01258f86ce	2026-10-09T18:50:51+08:00	QCYM-qcym	docs(content): seal L06 design-only delivery receipt
+4ffc5b9e2d6a8dd125b8354a29f7a97e00414cf8	9e2e9c29a73272d431795f12db1fefaff2433b05	2026-10-09T18:59:41+08:00	QCYM-qcym	Present L04 and L05 with native 3D layout and parity evidence
+2cfc4d2ef221c450ad9024c8ea3a72d69e4fcf63	4ffc5b9e2d6a8dd125b8354a29f7a97e00414cf8	2026-10-09T19:03:59+08:00	QCYM-qcym	Record verified 3D owner delivery and preserve raw evidence bytes
+3734151670136c72675496418cf5c59afa7c1d0a	58fc259abadaffd80160735e12195a9d01097bfd d2b78e183839e078c9a28074b2e25359a40608c4	2026-10-09T19:05:29+08:00	QCYM-qcym	Merge L06 design-only preproduction for Beta Phase 3
+e7c99afdcae253e3bdad3eb4a6be93a3a5bdbf72	3734151670136c72675496418cf5c59afa7c1d0a 2cfc4d2ef221c450ad9024c8ea3a72d69e4fcf63	2026-10-09T19:07:00+08:00	QCYM-qcym	Merge L04 and L05 formal 3D presentation with native parity evidence
+942b6d4e0b3e30dc26fa4c276948fb68b548244e	e7c99afdcae253e3bdad3eb4a6be93a3a5bdbf72	2026-10-09T19:10:47+08:00	QCYM-qcym	Seal five-level 3D focused integration evidence before QA packaging
+d472885d7375ef73fd36e4abc1847a9ba36cac44	942b6d4e0b3e30dc26fa4c276948fb68b548244e	2026-10-09T19:26:27+08:00	QCYM-qcym	Record five-level formal 3D slice and immutable Phase 3 QA handoff
+2938d6e534f5b596bb320ce79d72b69f5923f3cd	d472885d7375ef73fd36e4abc1847a9ba36cac44	2026-10-10T00:14:05+08:00	QCYM-qcym	docs(game-feel): establish shared contract and parallel owner scopes
+54ea24cd50c4bd45b083dc26487ff2b7afd2a703	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T00:22:03+08:00	QCYM-qcym	feat(map): deliver game feel A B authoring and isolated owner validation
+48a0e1791e7715722e38a1a01ab229535e2efb10	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T00:22:56+08:00	QCYM-qcym	docs(game-feel): register parallel worktrees and bootstrap receipt
+f590b2b6a1d16e4d22c1e82c41be079a24b67de5	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T00:31:05+08:00	QCYM-qcym	feat(10a): add deterministic fall and committed landing samplers
+a9f69021e93b9f08a43ad8ec38c067e828d46c43	f590b2b6a1d16e4d22c1e82c41be079a24b67de5	2026-10-10T00:31:45+08:00	QCYM-qcym	docs(10a): bind delivery to verified source snapshots
+6fe974c98747bb99be2bd8f2594dbf392172ccd7	48a0e1791e7715722e38a1a01ab229535e2efb10 54ea24cd50c4bd45b083dc26487ff2b7afd2a703	2026-10-10T00:34:25+08:00	QCYM-qcym	Merge commit '54ea24cd50c4bd45b083dc26487ff2b7afd2a703' into integration/foundation-4-authoring
+8724dbc13c6e1852d2020be2f05eb638162e373d	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T00:34:39+08:00	QCYM-qcym	feat(ui): add contract-scoped game feel settings and feedback
+4afbd068fae74a826dae4db04c2c612af23fa861	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T00:35:28+08:00	QCYM-qcym	Deliver original game-feel music SFX and scoped AudioDirector
+535190c6fe0d24d1d960a1be5020869b79da812b	8724dbc13c6e1852d2020be2f05eb638162e373d	2026-10-10T00:36:03+08:00	QCYM-qcym	docs(ui): bind game feel owner receipt to tested source
+746ffb3531cb5c9f4c7ebf74f4cfa905f71183d8	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T00:36:47+08:00	QCYM-qcym	feat(10b): add identity-scoped edge lean and recoil samplers
+4781dfcf16757ccbde13e54ee449f1cf00174944	a9f69021e93b9f08a43ad8ec38c067e828d46c43	2026-10-10T00:38:15+08:00	QCYM-qcym	fix(10a): consume structured Runtime Safety attestations safely
+fd29aeeb644bd8098ca3d641dcb80fc2802c5b27	535190c6fe0d24d1d960a1be5020869b79da812b 4afbd068fae74a826dae4db04c2c612af23fa861	2026-10-10T00:38:20+08:00	QCYM-qcym	Merge commit '4afbd068fae74a826dae4db04c2c612af23fa861' into feat/game-feel-ui
+285896da24b4f5ec223fe8bf3f75e29fa1d18381	746ffb3531cb5c9f4c7ebf74f4cfa905f71183d8	2026-10-10T00:38:21+08:00	QCYM-qcym	docs(10b): bind edge recoil evidence to immutable source commit
+82a8a7dc85205e9391551f24267f35f5abe53393	54ea24cd50c4bd45b083dc26487ff2b7afd2a703	2026-10-10T00:39:07+08:00	QCYM-qcym	feat(map): require ordinary exit roll after perspective landing
+9fc940577b9ca484921abb405b181565973b4e6d	6fe974c98747bb99be2bd8f2594dbf392172ccd7 4781dfcf16757ccbde13e54ee449f1cf00174944	2026-10-10T00:41:27+08:00	QCYM-qcym	Merge commit '4781dfcf16757ccbde13e54ee449f1cf00174944' into integration/foundation-4-authoring
+27ff384dbde90be9432086904b2a5cc470e24852	fd29aeeb644bd8098ca3d641dcb80fc2802c5b27	2026-10-10T00:44:46+08:00	QCYM-qcym	test(ui): verify delivered audio settings and persistence lifecycle
+cccd9e2f23fbf3761e15dc44aa74a8496f78d268	27ff384dbde90be9432086904b2a5cc470e24852	2026-10-10T00:46:15+08:00	QCYM-qcym	docs(ui): bind actual Audio API settings evidence
+112c322aeea54c7876825612365b87ac628934a4	9fc940577b9ca484921abb405b181565973b4e6d 82a8a7dc85205e9391551f24267f35f5abe53393	2026-10-10T00:55:08+08:00	QCYM-qcym	merge(map): retain owner post-landing exit route delivery
+607599f796e61138ad08be53044f058ce5f415ff	112c322aeea54c7876825612365b87ac628934a4 285896da24b4f5ec223fe8bf3f75e29fa1d18381	2026-10-10T00:57:53+08:00	QCYM-qcym	merge(animation): retain owner edge recoil module delivery
+b58e54952eff6557d63f6e1d13f695c197c5f0fe	607599f796e61138ad08be53044f058ce5f415ff 4afbd068fae74a826dae4db04c2c612af23fa861	2026-10-10T00:57:55+08:00	QCYM-qcym	merge(audio): retain owner audio assets and director delivery
+e4bcdfc6459f587cb26c25494dd5b57b76ccdca4	82a8a7dc85205e9391551f24267f35f5abe53393	2026-10-10T00:59:13+08:00	QCYM-qcym	feat(map): prepare explicit game feel bake seam and candidate paths
+e7641bd280ce82f46db88d7f28940f24168528a6	cccd9e2f23fbf3761e15dc44aa74a8496f78d268	2026-10-10T01:01:59+08:00	QCYM-qcym	fix(ui): consume formal action feedback phase
+d9dd3317e558f0d8380a2e6635452308d49240f1	e7641bd280ce82f46db88d7f28940f24168528a6	2026-10-10T01:03:05+08:00	QCYM-qcym	docs(ui): bind corrected feedback contract evidence
+839694bcf937516a646f05418da3e502444da519	b58e54952eff6557d63f6e1d13f695c197c5f0fe e4bcdfc6459f587cb26c25494dd5b57b76ccdca4	2026-10-10T01:05:19+08:00	QCYM-qcym	merge(map): retain owner formal opt-in candidate adapter
+f8b5b198859eaea9fe2423c578598b548a28066f	839694bcf937516a646f05418da3e502444da519 d9dd3317e558f0d8380a2e6635452308d49240f1	2026-10-10T01:05:19+08:00	QCYM-qcym	merge(ui): retain owner feedback-contract correction delivery
+61ac470983d41ebd8a81ee44b01996ca185ae305	f8b5b198859eaea9fe2423c578598b548a28066f	2026-10-10T01:08:19+08:00	QCYM-qcym	feat(integration): add scoped natural presenter and core lab candidate
+3185a80934ec50d50f7f40ae8b8715a298a716e6	61ac470983d41ebd8a81ee44b01996ca185ae305	2026-10-10T01:10:27+08:00	QCYM-qcym	build(integration): prepare immutable isolated core QA packager
+26387d6c34a869ad7035ee13ee77d8d5c24d796a	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T01:11:18+08:00	QCYM-qcym	feat: add perspective fall runtime and edge feedback
+30b0fdce5dea2f851ed6fab705620ec59a30976f	3185a80934ec50d50f7f40ae8b8715a298a716e6	2026-10-10T01:11:30+08:00	QCYM-qcym	test(integration): retain missing runtime dependency preflight
+63eb5b3385cf3eff9c97a0c5991378e8115575a9	30b0fdce5dea2f851ed6fab705620ec59a30976f 26387d6c34a869ad7035ee13ee77d8d5c24d796a	2026-10-10T01:12:36+08:00	QCYM-qcym	merge(runtime): integrate owner formal perspective fall core
+ee1ea27c292132a090e4294d6a18718a3d654086	63eb5b3385cf3eff9c97a0c5991378e8115575a9	2026-10-10T01:18:07+08:00	QCYM-qcym	test(integration): prove real A B natural fall and retain focused evidence
+7363e9e7d7849018cc456ae866a60e23472591d6	4afbd068fae74a826dae4db04c2c612af23fa861	2026-10-10T01:20:29+08:00	QCYM-qcym	Fix audio consumption of native game-feel event DTOs
+492331fa27f6742d5133f3f4f3ab000e6a94a2f3	d9dd3317e558f0d8380a2e6635452308d49240f1	2026-10-10T01:20:31+08:00	QCYM-qcym	fix(ui): consume structured Runtime safety verdict
+9f378d0f29694686f41eb605640dcd35e09de26a	2938d6e534f5b596bb320ce79d72b69f5923f3cd	2026-10-10T01:21:37+08:00	QCYM-qcym	test(game-feel): prepare quality matrix and native Core observer
+6d3bf4b7f5120b44dad4790b657a4be953dd4954	492331fa27f6742d5133f3f4f3ab000e6a94a2f3	2026-10-10T01:21:40+08:00	QCYM-qcym	docs(ui): bind structured safety compatibility evidence
+022343212995fe686f922787436290dd2e71b8d7	ee1ea27c292132a090e4294d6a18718a3d654086 9f378d0f29694686f41eb605640dcd35e09de26a	2026-10-10T01:26:13+08:00	QCYM-qcym	merge(quality): receive native core observations and scoped matrix
+2d64aed03ad77468100ea349da3cbc07c0b0cd21	022343212995fe686f922787436290dd2e71b8d7 6d3bf4b7f5120b44dad4790b657a4be953dd4954	2026-10-10T01:26:20+08:00	QCYM-qcym	merge(ui): consume formal structured safety verdict
+82ca2704f8aad439b1a276688a2bcc87aa33e175	2d64aed03ad77468100ea349da3cbc07c0b0cd21 7363e9e7d7849018cc456ae866a60e23472591d6	2026-10-10T01:26:45+08:00	QCYM-qcym	merge(audio): consume native fall and edge DTO shapes
+6074e48a8cfa98e34a2eb8533c37fa3aefdd97be	82ca2704f8aad439b1a276688a2bcc87aa33e175	2026-10-10T01:26:47+08:00	QCYM-qcym	test(integration): bind exact native A B core observation candidates
+4b90a4bdb102550ad99cb3695fd49e394c1c447c	6074e48a8cfa98e34a2eb8533c37fa3aefdd97be	2026-10-10T01:33:24+08:00	QCYM-qcym	docs(integration): register real perspective fall core and immutable QA handoff
+fcef1f6b367de882d4e2f48a0498816a4cfad618	4b90a4bdb102550ad99cb3695fd49e394c1c447c	2026-10-10T02:09:28+08:00	QCYM-qcym	feat: wire game feel UI to shared shell audio and presenter
+532506f36490a95a3c66c2bc37f3d37976846257	fcef1f6b367de882d4e2f48a0498816a4cfad618	2026-10-10T02:09:51+08:00	QCYM-qcym	build: bound Windows archive arguments for isolated UI package
+ae9fd6113c486a6cc2c9ee2db1df2dbd382e6267	532506f36490a95a3c66c2bc37f3d37976846257	2026-10-10T02:10:30+08:00	QCYM-qcym	build: reuse verified owner import artifacts in UI QA snapshot
+0ffc0a431e75d98c851fda41f80633907de31658	ae9fd6113c486a6cc2c9ee2db1df2dbd382e6267	2026-10-10T02:12:40+08:00	QCYM-qcym	fix: preserve approved ink theme in UI host accessibility
+249e0cbbf34ec782fefc3b8c997cff7a4cd394e8	0ffc0a431e75d98c851fda41f80633907de31658	2026-10-10T02:12:57+08:00	QCYM-qcym	test: retain first UI package native matrix and cold evidence
+d766b70ca039b8941f5cc40c7988c4e600b2d1f8	249e0cbbf34ec782fefc3b8c997cff7a4cd394e8	2026-10-10T02:17:19+08:00	QCYM-qcym	docs: accept scoped UI host matrix and freeze QA build receipt
+e12d3931cdd482bd970bb07b1db12cd81acfc5b2	d766b70ca039b8941f5cc40c7988c4e600b2d1f8	2026-10-10T02:18:20+08:00	QCYM-qcym	docs: record isolated UI host QA handoff to 08
+87ab7e8eb37f5081065e6328525a14518c3ada3a	e12d3931cdd482bd970bb07b1db12cd81acfc5b2	2026-10-10T02:35:56+08:00	QCYM-qcym	test: certify exact opt-in maps through full Fall graph and natural host
+3c64344d95b6e5f1d86795cdb8a84dfe06b0dc0f	87ab7e8eb37f5081065e6328525a14518c3ada3a	2026-10-10T02:39:30+08:00	QCYM-qcym	docs: accept exact PFALL v2 laboratory build and focused QA receipt
+99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff	3c64344d95b6e5f1d86795cdb8a84dfe06b0dc0f	2026-10-10T02:40:06+08:00	QCYM-qcym	docs: record immutable PFALL v2 QA handoff to 08
+1938096d48f5edcfc247923a4badf13877c3eb1b	99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff	2026-10-10T03:23:24+08:00	QCYM-qcym	Integrate native Edge Recoil and combined Game Feel host candidate
+2a76cf7bb9bc1b49ef2785d7d359251806477b9b	1938096d48f5edcfc247923a4badf13877c3eb1b	2026-10-10T03:31:51+08:00	QCYM-qcym	Record verified Full Slice candidate package and focused QA handoff
+fcee3299020caf99e396bbb5659d6f630b202f0f	2a76cf7bb9bc1b49ef2785d7d359251806477b9b	2026-10-10T03:32:29+08:00	QCYM-qcym	Record exact Quality graphical dependency probe execution baseline
+8ac13c0897c34b33fb0ea3a0d677182df061ef0d	99f2f1db9d9646d8fc7f3856fc4e64df81ff6cff	2026-10-10T03:54:20+08:00	QCYM-qcym	test(quality): execute PFall v2 matrix and preserve graphical replay blocker
+2c9d4502dc47dcfe132a19cc76e442458dbf3319	8ac13c0897c34b33fb0ea3a0d677182df061ef0d	2026-10-10T03:56:11+08:00	QCYM-qcym	test(quality): preserve recorded source bytes across checkout
+6067a4b6d1d19116ae7df3f4863e9ac6261bd6a5	fcee3299020caf99e396bbb5659d6f630b202f0f 2c9d4502dc47dcfe132a19cc76e442458dbf3319	2026-10-10T12:42:50+08:00	QCYM-qcym	merge(03): preserve v2 Quality matrix and graphical dependency evidence
+3c21f729f129f0e68d58ae970d449d13d4207992	6067a4b6d1d19116ae7df3f4863e9ac6261bd6a5	2026-10-10T12:51:46+08:00	QCYM-qcym	feat(00): bridge native graphical completion through real Fall and Landing
+44d76b0ab49afa36a52e871cae4b7f69d9ef599d	3c21f729f129f0e68d58ae970d449d13d4207992	2026-10-10T12:53:48+08:00	QCYM-qcym	fix(00): bind native cancellation scope before same-frame input
+2752803e187073702d16e3e3c45730f71bffa679	44d76b0ab49afa36a52e871cae4b7f69d9ef599d	2026-10-10T12:57:49+08:00	QCYM-qcym	test(00): capture physical camera and formal replay completion evidence
+9866cdd56ded37ed7da753d52eb183d11a3c748e	3c21f729f129f0e68d58ae970d449d13d4207992	2026-10-10T12:59:09+08:00	QCYM-qcym	test(03): prepare formal graphical witness checks and seal bridge RED
+fac96d18037402f09988d3fdec9d11a4c5e45d4b	9866cdd56ded37ed7da753d52eb183d11a3c748e	2026-10-10T13:00:32+08:00	QCYM-qcym	test(03): preserve native spam and audio lifecycle regression receipts
+d3179c6c4c2b1bce6969d29f5e6a96611ff81bc0	fac96d18037402f09988d3fdec9d11a4c5e45d4b 2752803e187073702d16e3e3c45730f71bffa679	2026-10-10T13:00:32+08:00	QCYM-qcym	Merge commit '2752803e187073702d16e3e3c45730f71bffa679' into test/game-feel-quality
+d54261298b1d6eccd11b695a4320704d9e21df3d	2752803e187073702d16e3e3c45730f71bffa679	2026-10-10T13:03:16+08:00	QCYM-qcym	test(00): separate logical graph regression from archived graphical gate probe
+2d856d39344d76a5c6a26d4790092264a8c2fb9d	d3179c6c4c2b1bce6969d29f5e6a96611ff81bc0	2026-10-10T13:04:14+08:00	QCYM-qcym	test(03): require native graphical endpoints and replay lifecycle isolation
+a5642e2f0dac52c11a1f13bce5b86523e14e538b	2d856d39344d76a5c6a26d4790092264a8c2fb9d	2026-10-10T13:11:40+08:00	QCYM-qcym	test(03): harden graphical receipt and native cancellation proof
+9663baf5bf6e67d56a1d1017085ef10b4af57a37	a5642e2f0dac52c11a1f13bce5b86523e14e538b	2026-10-10T13:14:30+08:00	QCYM-qcym	test(03): reject frozen Roll and cover active replay destruction
+c2484934c9e859285ace38bb2d0055616672431c	d54261298b1d6eccd11b695a4320704d9e21df3d	2026-10-10T13:16:57+08:00	QCYM-qcym	docs(00): record scoped bridge review and lifecycle backlog
+2ad037a4b35185519fed6a5f9d7e91c41562cc4b	c2484934c9e859285ace38bb2d0055616672431c	2026-10-10T13:17:20+08:00	QCYM-qcym	docs(00): retain pre-delivery formal API diagnostic source scope
+32b19b91ea638d7c168b409ff9244bd508adcd5e	2ad037a4b35185519fed6a5f9d7e91c41562cc4b	2026-10-10T13:26:48+08:00	QCYM-qcym	test(00): accept formal Owner lifecycle reports with full source capture
+2f930aaa191daa93c8f6ff230e91beee90817c80	9663baf5bf6e67d56a1d1017085ef10b4af57a37	2026-10-10T13:26:58+08:00	QCYM-qcym	test(03): consume real integrated Recoil and normal reduced presentation
+63c883fa8af70ac6f332b69cddd37b57b2576e42	2f930aaa191daa93c8f6ff230e91beee90817c80	2026-10-10T13:30:32+08:00	QCYM-qcym	docs(03): register actual Recoil pose and explicit pre-route matrix checkpoint
+c60912b494baccb942e3f37f7c28d0c0c035dcc8	2752803e187073702d16e3e3c45730f71bffa679	2026-10-10T13:32:19+08:00	QCYM-qcym	feat: replay game feel traces through natural completion bridge
+f3bd68a3919b06c05294923b0cc6d17adbf8b3d4	32b19b91ea638d7c168b409ff9244bd508adcd5e c60912b494baccb942e3f37f7c28d0c0c035dcc8	2026-10-10T13:33:00+08:00	QCYM-qcym	merge(01): accept formal v2 natural graphical replay completion
+28d7f3e4ae0cd420bcab37e486937546e4d23911	63c883fa8af70ac6f332b69cddd37b57b2576e42	2026-10-10T13:35:13+08:00	QCYM-qcym	test(03): retain every runtime input in receipt identity
+f43fd371d3cce266522eda62865aa97d1440e899	28d7f3e4ae0cd420bcab37e486937546e4d23911 f3bd68a3919b06c05294923b0cc6d17adbf8b3d4	2026-10-10T13:35:13+08:00	QCYM-qcym	Merge commit 'f3bd68a3919b06c05294923b0cc6d17adbf8b3d4' into test/game-feel-quality
+264b0c4615c4080457c829a824ac2948e8bb7158	f3bd68a3919b06c05294923b0cc6d17adbf8b3d4	2026-10-10T13:40:01+08:00	QCYM-qcym	test(00): verify merged formal replay and preserve immutable QA evidence
+09fba13e1179477e3d90c606ab09e435200e5f09	e4bcdfc6459f587cb26c25494dd5b57b76ccdca4	2026-10-10T13:59:46+08:00	QCYM-qcym	docs(map): diagnose yellow target binding and stage geometry proposal
+01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c	f43fd371d3cce266522eda62865aa97d1440e899	2026-10-10T14:01:14+08:00	QCYM-qcym	test(03): qualify formal graphical replay and publish scoped 94 case matrix
+85bcb100dc069e726d5a3997a06b4b406479ccb5	264b0c4615c4080457c829a824ac2948e8bb7158 01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c	2026-10-10T14:02:45+08:00	QCYM-qcym	merge(03): accept formal graphical replay and scoped 94-case matrix
+c70b55aab4ab9ab24ccbd8f0bbca37e19016e61b	85bcb100dc069e726d5a3997a06b4b406479ccb5	2026-10-10T14:04:13+08:00	QCYM-qcym	docs(00): close graphical completion bridge and scope yellow target correction
+6ac8ca418a775a4c726cb93a2cdc00d767e2c411	c70b55aab4ab9ab24ccbd8f0bbca37e19016e61b	2026-10-10T14:04:39+08:00	QCYM-qcym	docs(00): normalize generated receipt metadata line endings
+ad8f4259df69a7e726762d6f42d95e00263eecf3	09fba13e1179477e3d90c606ab09e435200e5f09	2026-10-10T14:04:58+08:00	QCYM-qcym	feat(map): bind yellow target geometry and record blocked exit sweep
+07bb0afea4b327ca2d3c0bbc5d84c97204e39e7b	4781dfcf16757ccbde13e54ee449f1cf00174944	2026-10-10T14:06:42+08:00	QCYM-qcym	fix(10a): keep departure and fall timing continuous
+9533f102095ed9ee011bfa2aa046d6f1f4504780	6ac8ca418a775a4c726cb93a2cdc00d767e2c411	2026-10-10T14:12:17+08:00	QCYM-qcym	fix(00): keep real landing body in contact with formal support plane
+ec826753435458abc41cc365e4b57dba27767fbd	9533f102095ed9ee011bfa2aa046d6f1f4504780	2026-10-10T14:20:54+08:00	QCYM-qcym	docs(00): register explicit yellow-target trajectory contract delta
+1244bb386a6af1b5a39591d0ea1def7766b0770c	ec826753435458abc41cc365e4b57dba27767fbd 07bb0afea4b327ca2d3c0bbc5d84c97204e39e7b	2026-10-10T14:21:11+08:00	QCYM-qcym	merge(10a): receive verified continuous timing and phase schedule delivery
+36f46a1659db7339bd27a53338959adf57452e61	ad8f4259df69a7e726762d6f42d95e00263eecf3	2026-10-10T14:23:16+08:00	QCYM-qcym	feat(map): consume registered departure cubic schema3 author contract
+56bb585895bb6c62ca1ab11e57b329e46d558651	1244bb386a6af1b5a39591d0ea1def7766b0770c	2026-10-10T14:25:56+08:00	QCYM-qcym	test(00): record new-design RED and prepare real trajectory captures
+2f98464f4d5349d3ab8463bd4de3c9532c480b0c	7363e9e7d7849018cc456ae866a60e23472591d6	2026-10-10T14:26:28+08:00	QCYM-qcym	Consume explicit v2 curve Fall audio events without legacy fallback
+5691fbcd335eb40076be0a90dab9af3839c65841	6d3bf4b7f5120b44dad4790b657a4be953dd4954	2026-10-10T14:26:55+08:00	QCYM-qcym	fix(ui): consume versioned curve Fall feedback
+3e75c9b135a40f13c83af8f4bb9fe65f87b159e1	5691fbcd335eb40076be0a90dab9af3839c65841	2026-10-10T14:28:14+08:00	QCYM-qcym	docs(ui): bind curve compatibility evidence to committed sources
+9a1e39214c1faba366cf3c2c69a881143c194993	56bb585895bb6c62ca1ab11e57b329e46d558651	2026-10-10T14:29:13+08:00	QCYM-qcym	test(00): preserve immutable QA and art before trajectory intake
+01d0d39a4ca3de56a704fefe698f353e36e3fea5	9a1e39214c1faba366cf3c2c69a881143c194993 2f98464f4d5349d3ab8463bd4de3c9532c480b0c	2026-10-10T14:29:14+08:00	QCYM-qcym	merge(11): accept scoped event.v2 audio compatibility
+174bfcad88101ad6d4d8fc831e86b59c8e09cb28	01d0d39a4ca3de56a704fefe698f353e36e3fea5 3e75c9b135a40f13c83af8f4bb9fe65f87b159e1	2026-10-10T14:29:57+08:00	QCYM-qcym	merge(07): receive verified scoped curve event UI compatibility
+f2ec5c08dbc3fb5b0fba0cce709376ddcd443e96	07bb0afea4b327ca2d3c0bbc5d84c97204e39e7b	2026-10-10T14:32:58+08:00	QCYM-qcym	feat(10a): consume authorized event v2 trajectory profiles
+6f12e4130116802fcc89b73aab1461123f78e2d1	174bfcad88101ad6d4d8fc831e86b59c8e09cb28	2026-10-10T14:33:24+08:00	QCYM-qcym	docs(00): record scoped audio and UI curve consumer intake
+9b962ed940d754f9857306e2d19be48dcd4b20bb	6f12e4130116802fcc89b73aab1461123f78e2d1 f2ec5c08dbc3fb5b0fba0cce709376ddcd443e96	2026-10-10T14:34:24+08:00	QCYM-qcym	merge(10a): receive explicit authorized cubic sampler consumer
+4adf42cdffa0ad5eb74cd329e8732e68aa041a6f	01bf8c4403546ef47a3aa33a7d8db2b113b0ee2c	2026-10-10T14:42:27+08:00	QCYM-qcym	test(quality): prepare yellow-target trajectory acceptance
+5528e5f40fdfbf6aefa94d078eb8cbf39767bb7b	4adf42cdffa0ad5eb74cd329e8732e68aa041a6f	2026-10-10T14:45:14+08:00	QCYM-qcym	test(quality): map exact twelve cases and scope reference parity
+dcdb36c94bf553058152e8041dc880968dfdc048	9b962ed940d754f9857306e2d19be48dcd4b20bb	2026-10-10T14:45:25+08:00	QCYM-qcym	feat(00): stage versioned trajectory host and explicit target platform roles
+fd22434d3eb0de52a764cb98222371a39412635a	c60912b494baccb942e3f37f7c28d0c0c035dcc8	2026-10-10T14:46:15+08:00	QCYM-qcym	feat: add approved perspective fall curve profile
+18c463ea8db60534bc014c485b2731ef0a2c11ff	dcdb36c94bf553058152e8041dc880968dfdc048	2026-10-10T14:47:59+08:00	QCYM-qcym	build(00): identify source receipt outside immutable package
+237752f279e59f39cec39dc9ddf9fbe6e87915df	18c463ea8db60534bc014c485b2731ef0a2c11ff fd22434d3eb0de52a764cb98222371a39412635a	2026-10-10T14:47:59+08:00	QCYM-qcym	merge(01): receive proven versioned departure cubic Runtime profile
+984f275913b1495fc09f92743fb0f665715f50c1	237752f279e59f39cec39dc9ddf9fbe6e87915df 36f46a1659db7339bd27a53338959adf57452e61	2026-10-10T14:48:00+08:00	QCYM-qcym	merge(09): integrate existing yellow TOP target and authored cubic maps
+09f1f681575674a49a75402e7ea4d922c6d8d72b	f2ec5c08dbc3fb5b0fba0cce709376ddcd443e96	2026-10-10T14:50:15+08:00	QCYM-qcym	test(10a): bind curve consumption to committed runtime sampler
+acef10e6e9b6e847fea358f9f0698921a0a2e427	5528e5f40fdfbf6aefa94d078eb8cbf39767bb7b	2026-10-10T14:53:13+08:00	QCYM-qcym	test(quality): bind complete candidate source inventory
+333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9	acef10e6e9b6e847fea358f9f0698921a0a2e427 984f275913b1495fc09f92743fb0f665715f50c1	2026-10-10T14:53:39+08:00	QCYM-qcym	Merge commit '984f275913b1495fc09f92743fb0f665715f50c1' into test/game-feel-quality
+9faf8659b220857ecbf2e9b91f3b1413e7771f38	984f275913b1495fc09f92743fb0f665715f50c1 09f1f681575674a49a75402e7ea4d922c6d8d72b	2026-10-10T14:56:21+08:00	QCYM-qcym	Merge 10A exact formal curve sampler evidence binding
+77378f3dfad15f2cc5ffd447c6a775b0024bf9ad	9faf8659b220857ecbf2e9b91f3b1413e7771f38	2026-10-10T15:07:51+08:00	QCYM-qcym	Verify yellow TOP curve, graphical replay, lifecycle and integrated settings
+18b7206a5a991e18125ad87ddca0bfd94bc14c93	333f1852cf9f968ceecff5bb77c5b2d9c75ad7a9	2026-10-10T15:11:51+08:00	QCYM-qcym	test(03): bind yellow curve candidate and verify affected legacy consumers
+a741ee5e29dd2a849df13ff40100c08a9f1a2dc7	77378f3dfad15f2cc5ffd447c6a775b0024bf9ad	2026-10-10T15:12:55+08:00	QCYM-qcym	Bind verified curve source and isolated QA package preflight
+4506b9b0896fc2d4b31b9a691afb3eb96bf929ef	18b7206a5a991e18125ad87ddca0bfd94bc14c93	2026-10-10T15:26:21+08:00	QCYM-qcym	test(03): seal yellow target graphical replay and twelve-case quality
+bf7f2a51e2ad8a9c54a91199d61b1b12c4e5632c	a741ee5e29dd2a849df13ff40100c08a9f1a2dc7 4506b9b0896fc2d4b31b9a691afb3eb96bf929ef	2026-10-10T15:30:06+08:00	QCYM-qcym	Merge 03 yellow-target curve acceptance with scoped Pixel limitation
+44f3d3db190b616f4121516576337ed8d40f6ae4	bf7f2a51e2ad8a9c54a91199d61b1b12c4e5632c	2026-10-10T15:42:10+08:00	QCYM-qcym	Issue yellow TOP landing receipt and immutable build QA handoff
+12a16483c56557aa794a7c1b7f52b2b0a348236f	36f46a1659db7339bd27a53338959adf57452e61	2026-10-10T15:59:56+08:00	QCYM-qcym	docs(map): audit pinned forward departure and yellow target route
+c00c52055e0f1aa0d970d2b7505d1425502fb04b	44f3d3db190b616f4121516576337ed8d40f6ae4	2026-10-10T16:03:13+08:00	QCYM-qcym	test(integration): reproduce missing forward drop cadence
+54a6eb17a2b8f0f7b9ff50f1eefc8646d1befe4a	c00c52055e0f1aa0d970d2b7505d1425502fb04b 12a16483c56557aa794a7c1b7f52b2b0a348236f	2026-10-10T16:03:14+08:00	QCYM-qcym	merge(map): retain pinned forward drop target audit
+e7804751d2357b99fd2cf56ee5b446e463c8697b	54a6eb17a2b8f0f7b9ff50f1eefc8646d1befe4a	2026-10-10T16:09:50+08:00	QCYM-qcym	test(integration): verify signed lean and motion join against baseline
+53d70f5160998f3cbbaf22603d66c485dd8d2892	e7804751d2357b99fd2cf56ee5b446e463c8697b	2026-10-10T16:13:28+08:00	QCYM-qcym	test(integration): capture exact rendered frame before landing
+3b60de04f4c14e2d6576550acbf968e7c4b0be51	09f1f681575674a49a75402e7ea4d922c6d8d72b	2026-10-10T16:19:51+08:00	QCYM-qcym	fix(feel): drive forward lean into continuous perspective drop
+6c7ed001285e129f684da33c7e00126825e14511	53d70f5160998f3cbbaf22603d66c485dd8d2892	2026-10-10T16:21:08+08:00	QCYM-qcym	docs(integration): verify narrow forward drop animation delivery
+c89a87584d8d5db0916d4b0e516c449860063223	6c7ed001285e129f684da33c7e00126825e14511 3b60de04f4c14e2d6576550acbf968e7c4b0be51	2026-10-10T16:21:08+08:00	QCYM-qcym	merge(animation): forward off support before perspective drop
+5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a	3b60de04f4c14e2d6576550acbf968e7c4b0be51	2026-10-10T16:22:40+08:00	QCYM-qcym	test(feel): bind forward drop RED GREEN and sampler evidence
+1dabfef8e407ea74c6823e00b9f77445e00d36eb	4506b9b0896fc2d4b31b9a691afb3eb96bf929ef	2026-10-10T16:28:22+08:00	QCYM-qcym	test(quality): prepare forward-then-drop checks with real baseline red
+0a83f217e6260b97e60526c4a840fe5c76e77f46	1dabfef8e407ea74c6823e00b9f77445e00d36eb c89a87584d8d5db0916d4b0e516c449860063223	2026-10-10T16:28:33+08:00	QCYM-qcym	Merge commit 'c89a87584d8d5db0916d4b0e516c449860063223' into test/game-feel-quality
+10fc7e8ce19b618c147a9d0f737eb96e3a53a283	c89a87584d8d5db0916d4b0e516c449860063223	2026-10-10T16:30:42+08:00	QCYM-qcym	docs(integration): bind real forward drop graphical acceptance
+5d42600c29760a8082edf2a94754252772352846	10fc7e8ce19b618c147a9d0f737eb96e3a53a283 5fdf11e79f0db7f70dbde0d3cbfe6fcee3be098a	2026-10-10T16:30:42+08:00	QCYM-qcym	merge(animation): retain forward drop owner unit evidence
+fd66bfa08099a0bdc7230b2399ee74766ceff3e2	0a83f217e6260b97e60526c4a840fe5c76e77f46	2026-10-10T16:51:05+08:00	QCYM-qcym	test(quality): verify forward-drop candidate with real replay and ten-case receipts
+9acc2b59a5a1291a440480e25f2216e648b8eaee	5d42600c29760a8082edf2a94754252772352846	2026-10-10T16:53:46+08:00	QCYM-qcym	test(integration): seal forward-drop package execution and quality intake
+fe370ad832bb62cd31a6d22909ce1a5bd1fe1311	9acc2b59a5a1291a440480e25f2216e648b8eaee fd66bfa08099a0bdc7230b2399ee74766ceff3e2	2026-10-10T16:53:46+08:00	QCYM-qcym	merge(quality): receive focused forward-drop ten-case acceptance
+d1277ec90b5a739efd4862d314e6c29ac5ac1eda	fe370ad832bb62cd31a6d22909ce1a5bd1fe1311	2026-10-10T16:58:08+08:00	QCYM-qcym	docs(integration): close forward-drop fix with exact build and QA receipt
