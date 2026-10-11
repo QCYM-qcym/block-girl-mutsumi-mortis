@@ -1,0 +1,124 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/level_authoring_root.gd" id="1_y4l4w"]
+[ext_resource type="Script" path="res://foundation/authoring/intent_authoring_resource.gd" id="2_ln5wk"]
+[ext_resource type="PackedScene" path="res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/surface.tscn" id="3_4khgs"]
+[ext_resource type="Script" path="res://foundation/authoring/world_authoring_root.gd" id="4_fed7e"]
+[ext_resource type="PackedScene" path="res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/inner.tscn" id="5_ecl1e"]
+
+[sub_resource type="Resource" id="Resource_2ppuy"]
+script = ExtResource("2_ln5wk")
+authoring_id = "2de7db3b-bc05-eb45-a81c-bb282a254040"
+authoring_version = "puzzleintentauthoring.v1"
+intent_id = &"perspective_fork_lab_intent"
+required_mechanics = []
+optional_mechanics = []
+expected_milestones = []
+forbidden_bypasses = []
+
+[node name="Level" type="Node3D" unique_id=482114694]
+script = ExtResource("1_y4l4w")
+authoring_id = "827c8421-070d-5437-d2fc-3f4a66df461d"
+authoring_version = "levelauthoring.v1"
+level_id = &"perspective_fork_lab"
+schema_version = 3
+contract_version = "foundation.game_feel.v2"
+orientation_version = "cube24.v1"
+rule_version = "foundation.rules.game_feel.v2"
+cell_size = 1
+shift_compatibilities = [0]
+flag_definitions = []
+build_info = {}
+surface_source = "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/surface.tscn"
+inner_source = "res://experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/inner.tscn"
+intent = SubResource("Resource_2ppuy")
+spawn = {
+"face_ref": {
+"cube_id": &"source",
+"face": 4
+},
+"orientation": 0
+}
+goal = {
+"face_ref": {
+"cube_id": &"goal",
+"face": 4
+},
+"required_flags": []
+}
+celestial = {
+"edges": [],
+"initial_slot_id": &"sky",
+"slot_order": [&"sky"],
+"wrap": false
+}
+camera_initial_quadrant = 1
+perspective_falls = [{
+"allowed_camera_quadrants": [1],
+"allowed_world_orientations": [0],
+"connection_id": &"fork_a",
+"motion_profile_id": &"fork_a_cubic",
+"orientation_policy": &"PRESERVE",
+"presentation_duration_ms": 600,
+"required_flags": [],
+"source_edge": 2,
+"source_face_id": &"source/TOP",
+"target_face_id": &"target_a/TOP",
+"trajectory": {
+"departure_points2": [Vector3i(0, 6, 0), Vector3i(-2, 6, 0)],
+"descent_control_points2": [Vector3i(-2, 6, 0), Vector3i(-4, 6, 0), Vector3i(-6, 4, 8), Vector3i(-6, 2, 8)],
+"trajectory_version": "pfall.departure_cubic.v1"
+}
+}, {
+"allowed_camera_quadrants": [2],
+"allowed_world_orientations": [0],
+"connection_id": &"fork_b",
+"motion_profile_id": &"fork_b_cubic",
+"orientation_policy": &"PRESERVE",
+"presentation_duration_ms": 600,
+"required_flags": [],
+"source_edge": 2,
+"source_face_id": &"source/TOP",
+"target_face_id": &"target_b/TOP",
+"trajectory": {
+"departure_points2": [Vector3i(0, 6, 0), Vector3i(-2, 6, 0)],
+"descent_control_points2": [Vector3i(-2, 6, 0), Vector3i(-4, 6, 0), Vector3i(-6, 4, -12), Vector3i(-6, 2, -12)],
+"trajectory_version": "pfall.departure_cubic.v1"
+}
+}, {
+"allowed_camera_quadrants": [0],
+"allowed_world_orientations": [0],
+"connection_id": &"return_path",
+"motion_profile_id": &"return_path_cubic",
+"orientation_policy": &"PRESERVE",
+"presentation_duration_ms": 600,
+"required_flags": [],
+"source_edge": 0,
+"source_face_id": &"return/TOP",
+"target_face_id": &"source/TOP",
+"trajectory": {
+"departure_points2": [Vector3i(-4, 2, -12), Vector3i(-2, 2, -12)],
+"descent_control_points2": [Vector3i(-2, 2, -12), Vector3i(0, 2, -12), Vector3i(0, 8, 0), Vector3i(0, 6, 0)],
+"trajectory_version": "pfall.departure_cubic.v1"
+}
+}]
+
+[node name="Surface" type="Node3D" parent="." unique_id=1058506642 instance=ExtResource("3_4khgs")]
+script = ExtResource("4_fed7e")
+authoring_id = "0214ff1b-9b6e-ff92-2f38-cba5843ffb96"
+layer = 0
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
+
+[node name="Inner" type="Node3D" parent="." unique_id=1098141741 instance=ExtResource("5_ecl1e")]
+script = ExtResource("4_fed7e")
+authoring_id = "6d839c17-8113-d4eb-1e0d-c27a0205654c"
+layer = 1
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []

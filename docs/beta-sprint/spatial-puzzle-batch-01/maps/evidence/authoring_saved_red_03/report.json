@@ -1,0 +1,272 @@
+{
+	"checks": 15,
+	"doubles": [],
+	"failures": [
+		"world_shift_gate_lab real saved authoring bake",
+		"world_shift_gate_lab actual adapter source map",
+		"orientation_loop_lab real saved authoring bake",
+		"orientation_loop_lab actual adapter source map",
+		"face_lock_lab real saved authoring bake",
+		"face_lock_lab actual adapter source map",
+		"perspective_fork_lab real saved authoring bake",
+		"perspective_fork_lab actual adapter source map",
+		"rubik_spatial_puzzle_01 real saved authoring bake",
+		"rubik_spatial_puzzle_01 actual adapter source map"
+	],
+	"rows": [
+		{
+			"id": "world_shift_gate_lab",
+			"issues": [
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..camera_initial_quadrant",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..perspective_falls",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..shift_gates",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_RECORD",
+					"message": "Node declaration is missing, unknown or mistyped.",
+					"path": ".",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Surface",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Inner",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				}
+			],
+			"ok": false
+		},
+		{
+			"id": "orientation_loop_lab",
+			"issues": [
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..camera_initial_quadrant",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..perspective_falls",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_RECORD",
+					"message": "Node declaration is missing, unknown or mistyped.",
+					"path": ".",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Surface",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Inner",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				}
+			],
+			"ok": false
+		},
+		{
+			"id": "face_lock_lab",
+			"issues": [
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..camera_initial_quadrant",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..perspective_falls",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..shift_gates",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_RECORD",
+					"message": "Node declaration is missing, unknown or mistyped.",
+					"path": ".",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Surface",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Inner",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				}
+			],
+			"ok": false
+		},
+		{
+			"id": "perspective_fork_lab",
+			"issues": [
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..camera_initial_quadrant",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..perspective_falls",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_RECORD",
+					"message": "Node declaration is missing, unknown or mistyped.",
+					"path": ".",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Surface",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Inner",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				}
+			],
+			"ok": false
+		},
+		{
+			"id": "rubik_spatial_puzzle_01",
+			"issues": [
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..camera_initial_quadrant",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..perspective_falls",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_FIELD",
+					"message": "Unsupported stored node property.",
+					"path": "..shift_gates",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "INVALID_RECORD",
+					"message": "Node declaration is missing, unknown or mistyped.",
+					"path": ".",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Surface",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				},
+				{
+					"code": "UNSUPPORTED_AUTHORING_OVERRIDE",
+					"message": "Only independent World instances in Level are supported.",
+					"path": "Inner",
+					"source_refs": [],
+					"stage": "AUTHORING",
+					"upstream": []
+				}
+			],
+			"ok": false
+		}
+	]
+}

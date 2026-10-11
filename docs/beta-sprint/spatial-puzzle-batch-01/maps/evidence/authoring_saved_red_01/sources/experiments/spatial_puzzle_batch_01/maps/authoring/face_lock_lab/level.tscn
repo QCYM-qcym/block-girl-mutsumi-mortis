@@ -1,0 +1,92 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://foundation/authoring/level_authoring_root.gd" id="1_vbhs0"]
+[ext_resource type="Script" path="res://foundation/authoring/intent_authoring_resource.gd" id="2_i26fj"]
+[ext_resource type="PackedScene" path="res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/surface.tscn" id="3_hxt2d"]
+[ext_resource type="Script" path="res://foundation/authoring/world_authoring_root.gd" id="4_smnv5"]
+[ext_resource type="PackedScene" path="res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/inner.tscn" id="5_xxndr"]
+
+[sub_resource type="Resource" id="Resource_jeyjr"]
+script = ExtResource("2_i26fj")
+authoring_id = "27b3e00c-1c04-ae1a-6198-69e7356bf228"
+authoring_version = "puzzleintentauthoring.v1"
+intent_id = &"face_lock_lab_intent"
+required_mechanics = []
+optional_mechanics = []
+expected_milestones = []
+forbidden_bypasses = []
+
+[node name="Level" type="Node3D" unique_id=1531721563]
+script = ExtResource("1_vbhs0")
+authoring_id = "fb74893d-70e5-dd50-040f-605e5b8d45a4"
+authoring_version = "levelauthoring.v1"
+level_id = &"face_lock_lab"
+schema_version = 4
+contract_version = "foundation.spatial_puzzle.v1"
+orientation_version = "cube24.v1"
+rule_version = "foundation.rules.spatial_puzzle.v1"
+cell_size = 1
+shift_compatibilities = [0]
+flag_definitions = []
+build_info = {}
+surface_source = "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/surface.tscn"
+inner_source = "res://experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/inner.tscn"
+intent = SubResource("Resource_jeyjr")
+spawn = {
+"face_ref": {
+"cube_id": &"source",
+"face": 4
+},
+"orientation": 0
+}
+goal = {
+"face_ref": {
+"cube_id": &"goal",
+"face": 4
+},
+"required_flags": []
+}
+celestial = {
+"edges": [],
+"initial_slot_id": &"sky",
+"slot_order": [&"sky"],
+"wrap": false
+}
+camera_initial_quadrant = 1
+perspective_falls = []
+shift_gates = [{
+"gate_id": &"enter",
+"required_flags": [],
+"required_mechanism_states": [{
+"mechanism_id": &"contact_lock",
+"state": &"latched"
+}],
+"source_face_id": &"source/TOP",
+"target_face_id": &"goal/TOP"
+}, {
+"gate_id": &"leave",
+"required_flags": [],
+"required_mechanism_states": [],
+"source_face_id": &"goal/TOP",
+"target_face_id": &"source/TOP"
+}]
+
+[node name="Surface" type="Node3D" parent="." unique_id=1564893553 instance=ExtResource("3_hxt2d")]
+script = ExtResource("4_smnv5")
+authoring_id = "d5d1dc0b-a40c-5ed6-6d0e-08f1097271f8"
+layer = 0
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
+
+[node name="Inner" type="Node3D" parent="." unique_id=1060475533 instance=ExtResource("5_xxndr")]
+script = ExtResource("4_smnv5")
+authoring_id = "047d46ff-4515-dbc2-2440-272798c926bd"
+layer = 1
+pivot2 = Vector3i(0, 0, 0)
+initial_orientation = 0
+allowed_states = [0]
+allowed_rotation_deltas = []
+allowed_rotation_intents = []
