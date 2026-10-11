@@ -13,7 +13,7 @@ func _get(property: StringName) -> Variant:
 
 func _set(property: StringName, value: Variant) -> bool:
 	var key := String(property)
-	if key == "authoring_id" or key in ["rotation_delta", "celestial_op"] or Schema.FIELDS[AUTHORING_KIND].has(key):
+	if key == "authoring_id" or key in ["rotation_delta", "celestial_op"] or Schema.FIELDS[AUTHORING_KIND].has(key) or Schema.LOCK_CONFIG_TYPES.has(key):
 		_declarations[key] = value
 		notify_property_list_changed()
 		return true
