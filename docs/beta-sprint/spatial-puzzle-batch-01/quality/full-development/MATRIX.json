@@ -11,14 +11,15 @@
   },
   "assertions_by_facet": {
     "UNIT": 78,
-    "REAL_RUNTIME": 712,
+    "REAL_RUNTIME": 630,
     "SOLVER": 20,
     "SAFETY": 20,
     "LOGICAL_REPLAY": 5,
     "FORMAL_GRAPHICAL": 531,
     "NATURAL_GRAPHICAL": 1153,
     "HEADLESS_HOST_UI": 104,
-    "COLD_PROCESS_SAVE": 46
+    "COLD_PROCESS_SAVE": 46,
+    "LEGACY_MIXED_REGRESSION": 82
   },
   "final_execution_assertions": 2669,
   "historical_reference_added_assertions": 0,
@@ -654,7 +655,7 @@
     },
     {
       "id": "legacy.profile",
-      "facet": "REAL_RUNTIME",
+      "facet": "LEGACY_MIXED_REGRESSION",
       "checks": 16,
       "failures": [],
       "status": "PASS",
@@ -662,11 +663,13 @@
       "recipe_owner": "03_HISTORICAL_RECIPE",
       "executor": "03_CURRENT_STAGE4",
       "candidate": "8f6dd9d44a57ff43ca92bb352cf9f08c139fbc4e",
-      "assertions": 16
+      "assertions": 16,
+      "receipt_original_facet": "REAL_RUNTIME",
+      "scope": "Bounded version/production-module/prototype pure-logic regression; not formal RuntimeSession/Facade proof"
     },
     {
       "id": "legacy.pconn",
-      "facet": "REAL_RUNTIME",
+      "facet": "LEGACY_MIXED_REGRESSION",
       "checks": 66,
       "failures": [],
       "status": "PASS",
@@ -674,7 +677,9 @@
       "recipe_owner": "03_HISTORICAL_RECIPE",
       "executor": "03_CURRENT_STAGE4",
       "candidate": "8f6dd9d44a57ff43ca92bb352cf9f08c139fbc4e",
-      "assertions": 66
+      "assertions": 66,
+      "receipt_original_facet": "REAL_RUNTIME",
+      "scope": "Bounded version/production-module/prototype pure-logic regression; not formal RuntimeSession/Facade proof"
     },
     {
       "checks": 73,

@@ -17,3 +17,5 @@ Tasks2-4 complete: final mech_final500 binds final test_maps bytes (preparation 
 
 Delivery-only correction: default text normalization would change generated metadata bytes; all full-development artifacts use -text. Raw Windows CRLF logs are preserved, with per-command cr-at-eol whitespace checking. No global Git config or tested source changed; no gameplay re-run warranted.
 Ruling: code/document whitespace check excludes immutable raw .log files (actual Godot banner has blank EOF); all raw log byte hashes remain checked — cost if wrong: log formatting is not linted, no source lint bypass.
+
+Final review: fresh whole-change reviewer found1 Important,0 Critical/Minor. Final fixed: legacy mixed regression82 wrongly added to formal Runtime; metadata check RED712+wrong facets → GREEN630+LEGACY_MIXED_REGRESSION82. Total2669 and95-case statuses unchanged. No algorithm/test/production change; all final receipts untouched. No rerun/re-review. Declined-to-judge boundaries each ruled in REVIEW.md; no new quality/product claim.
