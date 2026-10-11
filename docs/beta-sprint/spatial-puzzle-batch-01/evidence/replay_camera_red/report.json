@@ -1,0 +1,73 @@
+{
+	"authority": "formal production graphical Replayer; actual Kernel-validated Camera extension of real Solver witness",
+	"checks": 8,
+	"display": "headless",
+	"doubles": [],
+	"failures": [
+		"formal graphical Camera Camera Fall Roll all match",
+		"actual natural completion and single commit"
+	],
+	"result": {
+		"action": {
+			"camera_quadrant": 2,
+			"kind": 9
+		},
+		"actual_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+		"divergence_step": 1,
+		"expected_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+		"issues": [],
+		"matched_steps": 0,
+		"status": 3,
+		"trace_length": 4
+	},
+	"steps": [
+		{
+			"action": {
+				"camera_quadrant": 2,
+				"kind": 9
+			},
+			"actual_state": {
+				"camera_quadrant": 2,
+				"celestial": {
+					"slot_id": "a"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {},
+				"player": {
+					"location": {
+						"cube_id": "source",
+						"face": 4,
+						"layer": 0
+					},
+					"orientation": 0
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"actual_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"bridge_snapshot": {},
+			"commit_count_after": 1,
+			"commit_count_before": 0,
+			"commit_delta": 1,
+			"commit_signals": 1,
+			"completion_evidence": {},
+			"completion_received": false,
+			"expected_statekey": "statekey.game_feel.v1:{\"level_hash\":\"8e84f99421d0bac47ec175dbec2f19a30d704644fd86d6af70c2bbf0df7104b5\",\"rule_version\":\"foundation.rules.game_feel.v2\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"a\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}",
+			"global_kind": 0,
+			"index": 1,
+			"is_global": false,
+			"state_differences": {},
+			"status": 3,
+			"transition_identity": {
+				"generation": 1,
+				"is_global": false,
+				"level_run_id": "7c6b2b4559df715b5e3313a5813400c4",
+				"session_id": "aa36abf8c404b2cdedd128129c52cc5c",
+				"transaction_id": 1
+			}
+		}
+	]
+}

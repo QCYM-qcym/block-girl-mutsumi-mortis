@@ -15,16 +15,22 @@ func bind_runtime(facade:RefCounted,level:Dictionary)->Dictionary:
 	if runtime!=null or not is_inside_tree() or facade==null or not facade.is_loaded() or facade.get_level()!=level:
 		return {"ok":false,"issues":[{"path":"bridge.bind_runtime","message":"Requires the same loaded formal Facade and canonical Level."}]}
 	runtime=facade
-	lab=Lab.new()
+	# Only the explicit spatial profile selects its native Shift/teaching Host.
+	# Existing game-feel levels keep their original registered view.
+	lab=load("res://experiments/spatial_puzzle_batch_01/host/spatial_lab.gd").new() if level.get("schema_version")==4 else Lab.new()
 	lab.name="FormalGraphicalView"
 	lab.runtime=facade
 	lab.external_runtime=true
 	add_child(lab)
 	# CoreLab already owns real event-to-sampler wiring and natural native finish.
 	_connect(runtime.game_feel_event,_on_event)
+	_connect(runtime.transition_started,_on_native_started)
 	_connect(runtime.committed,_on_committed)
 	_connect(lab.presenter.motion_completed,_on_terminal)
 	_connect(lab.presenter.motion_cancelled,_on_cancelled)
+	if lab.has_signal("native_motion_completed"):
+		_connect(lab.native_motion_completed,_on_terminal)
+		_connect(lab.native_motion_cancelled,_on_cancelled)
 	return {"ok":lab.host_issues.is_empty(),"issues":lab.host_issues.duplicate(true)}
 
 func _connect(value:Signal,callback:Callable)->void:
@@ -61,10 +67,21 @@ func _on_event(event:Dictionary)->void:
 func _process(_delta:float)->void:
 	if _closed or lab==null or runtime==null or not runtime.is_loaded(): return
 	var view:Dictionary=lab.presenter.snapshot()
-	if view.transition_identity.is_empty(): return
-	var record:=_find(view.transition_identity)
-	if record.is_empty(): return
-	record.frames.append({"phase":view.phase,"elapsed":view.elapsed,"pose":_pose(lab.actor.transform),"camera_pose":_pose(lab.camera.transform),"statekey":Key.build(runtime.get_level(),runtime.get_state()).get("key","")})
+	for record in _records:
+		if record.delivered or record.cancelled_order!=0: continue
+		if not _current(record.transition_identity):
+			_on_cancelled(record.transition_identity,"LIFECYCLE")
+			continue
+		if record.get("native",false) or record.transition_identity==view.transition_identity:
+			record.frames.append({"phase":record.semantic if record.get("native",false) else view.phase,"elapsed":view.elapsed,"pose":_pose(lab.actor.transform),"camera_pose":_pose(lab.camera.transform),"statekey":Key.build(runtime.get_level(),runtime.get_state()).get("key","")})
+
+func _on_native_started(result:Dictionary,id:int,generation:int,is_global:bool)->void:
+	if _closed or result.get("status")!=0 or not result.get("changed",false): return
+	var kind:int=result.get("action",{}).get("kind",-1)
+	if kind not in [1,9]: return
+	var identity:Dictionary=runtime.get_pending_identity(id,generation,is_global)
+	if identity.is_empty() or not _current(identity) or not _find(identity).is_empty(): return
+	_records.append({"native":true,"transition_identity":identity.duplicate(true),"presentation_identity":{},"source_pose":result.previous_state.player.duplicate(true),"target_pose":result.next_state.player.duplicate(true),"semantic":"SHIFT_WORLD" if kind==1 else "SET_CAMERA_QUADRANT","started_order":_event_order(),"committed_order":0,"completion_order":0,"cancelled_order":0,"frames":[],"terminal":{},"delivered":false,"result":result.duplicate(true)})
 
 func _on_terminal(identity:Dictionary,evidence:Dictionary)->void:
 	if not _current(identity): return
@@ -77,6 +94,12 @@ func _on_terminal(identity:Dictionary,evidence:Dictionary)->void:
 
 func _on_committed(_state:Dictionary)->void:
 	for record in _records:
+		if record.get("native",false) and not record.delivered and record.cancelled_order==0 and _current(record.transition_identity) and _state==record.result.next_state:
+			if record.committed_order==0: record.committed_order=_event_order()
+			# The original CoreLab completes Camera only after its last actual
+			# interpolation frame. Observe its native commit and final basis.
+			if record.semantic=="SET_CAMERA_QUADRANT" and lab._camera_motion.is_empty() and lab.camera.basis.is_equal_approx(lab._view.basis(_state.camera_quadrant)):
+				record.terminal={"terminal_phase":"CAMERA_SETTLED","completion":"native commit after actual final camera frame"}
 		if not record.terminal.is_empty(): _flush(record)
 
 func _flush(record:Dictionary)->void:
