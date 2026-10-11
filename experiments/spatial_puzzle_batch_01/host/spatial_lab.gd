@@ -1,5 +1,6 @@
 extends "res://experiments/game_feel_01/host/core_lab.gd"
 ## Isolated spatial experiment. Runtime owns every permission and result.
+const SpatialAudio = preload("res://experiments/spatial_puzzle_batch_01/host/spatial_audio_bridge.gd")
 signal menu_requested
 signal goal_reached(level_id: StringName)
 signal native_motion_completed(identity: Dictionary, evidence: Dictionary)
@@ -13,9 +14,13 @@ var _shift_tween: Tween
 var _shift_identity: Dictionary = {}
 var _shift_target := Transform3D.IDENTITY
 var _shift_completed_count := 0
+var audio_bridge: Node
 
 func _ready() -> void:
 	super._ready()
+	audio_bridge = SpatialAudio.new()
+	add_child(audio_bridge)
+	audio_bridge.bind_runtime(runtime)
 	# Replace only the old lab's A/B controls; the parent supplies real rendering.
 	for child in get_children():
 		if child is CanvasLayer:
@@ -244,6 +249,7 @@ func reset_lab() -> void:
 
 func set_lab_paused(value:bool) -> void:
 	paused=value
+	if is_instance_valid(audio_bridge): audio_bridge.set_paused(value)
 	if runtime!=null: runtime.set_paused(value)
 	presenter.set_paused(value)
 	if _shift_tween!=null and _shift_tween.is_valid():
@@ -287,4 +293,5 @@ func _update_status(reason:String) -> void:
 
 func _close(reason:String) -> void:
 	_cancel_shift(reason)
+	if is_instance_valid(audio_bridge): audio_bridge.close()
 	super._close(reason)

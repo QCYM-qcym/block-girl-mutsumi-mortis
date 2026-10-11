@@ -31,9 +31,15 @@ func run() -> void:
 	host.lab_id = &"face_lock_lab"
 	root.add_child(host)
 	await process_frame
-	var bridge = load(BRIDGE).new()
-	host.add_child(bridge)
-	bridge.bind_runtime(host.runtime)
+	var bridge = host.get("audio_bridge")
+	if "--require-host-audio" in OS.get_cmdline_user_args():
+		check(bridge != null, "actual spatial Host owns the audio bridge")
+		if bridge == null:
+			host.free(); finish(); return
+	if bridge == null:
+		bridge = load(BRIDGE).new()
+		host.add_child(bridge)
+		bridge.bind_runtime(host.runtime)
 	host.runtime.game_feel_event.connect(func(event: Dictionary): captured.append(event))
 	check(bridge.snapshot().issues.is_empty(), "approved manifest resources load")
 	check(bridge.snapshot().playing.has("music:surface") and bridge.snapshot().playing.has("music:inner"), "real paired world music players started")
@@ -151,5 +157,5 @@ func run() -> void:
 	await create_timer(0.25).timeout
 	finish()
 func finish() -> void:
-	FileAccess.open(evidence.path_join("report.json"), FileAccess.WRITE).store_string(JSON.stringify({"checks": checks, "failures": failures, "doubles": [], "display": DisplayServer.get_name(), "authority": "real spatial Host, Runtime and natural Tween completion; real AudioDirector/AudioStreamPlayer using headless audio driver; no audible Human QA"}, "\t"))
+	FileAccess.open(evidence.path_join("report.json"), FileAccess.WRITE).store_string(JSON.stringify({"checks": checks, "failures": failures, "doubles": [], "display": DisplayServer.get_name(), "renderer": RenderingServer.get_current_rendering_method(), "authority": "real spatial Host, Runtime and natural Tween completion; real AudioDirector/AudioStreamPlayer; no audible Human QA"}, "\t"))
 	quit(0 if failures.is_empty() else 1)
