@@ -1,0 +1,200 @@
+{
+	"capture": {
+		"authority": "PUBLIC_PRODUCTION_APIS",
+		"display": "headless",
+		"doubles": [],
+		"engine": {
+			"build": "steam",
+			"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+			"hex": 263938,
+			"major": 4,
+			"minor": 7,
+			"patch": 2,
+			"status": "stable",
+			"string": "4.7.2-stable (steam)",
+			"timestamp": 0
+		},
+		"execution_head": "75c0e028269d4d853a255b72acdde47bc53d2eb5",
+		"pid": 24912,
+		"renderer": "forward_plus",
+		"user_data_dir": "E:/godot/worktrees/block-girl-spatial-quality-01/docs/beta-sprint/spatial-puzzle-batch-01/quality/evidence/orientation_01/profile/Roaming/Godot/app_userdata/方块少女-若叶睦"
+	},
+	"cases": [
+		{
+			"checks": 14,
+			"facet": "UNIT",
+			"failures": [],
+			"id": "loop.unit.local_faces",
+			"status": "PASS"
+		},
+		{
+			"checks": 16,
+			"facet": "UNIT",
+			"failures": [],
+			"id": "loop.unit.camera_mapping",
+			"status": "PASS"
+		},
+		{
+			"checks": 3,
+			"facet": "UNIT",
+			"failures": [],
+			"id": "loop.unit.invalid_input",
+			"status": "PASS"
+		}
+	],
+	"checks": 33,
+	"dependency_pending": [],
+	"doubles": [],
+	"failures": [],
+	"rows": [
+		{
+			"actual_mapping": [
+				{
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				}
+			],
+			"quadrant": 0
+		},
+		{
+			"actual_mapping": [
+				{
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				}
+			],
+			"quadrant": 1
+		},
+		{
+			"actual_mapping": [
+				{
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 3,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 1,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				}
+			],
+			"quadrant": 2
+		},
+		{
+			"actual_mapping": [
+				{
+					"action": {
+						"face_axis": 1,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 2,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 3,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				},
+				{
+					"action": {
+						"face_axis": 0,
+						"kind": 0
+					},
+					"issues": [],
+					"ok": true
+				}
+			],
+			"quadrant": 3
+		}
+	],
+	"scope": "SPATIAL_OWNER_03_REAL"
+}
