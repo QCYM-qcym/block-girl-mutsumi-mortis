@@ -1,0 +1,73 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT",
+  "support_source_head": "61dac2beedb869f232eb5563fe0e7918e369164a",
+  "art": {
+    "mode": "READ_ONLY_SUPPORT",
+    "source_changes": "NONE",
+    "production_assets_adopted": "NONE",
+    "concept": "FACE_LOCK_CONCEPT_DIRECTION_APPROVED",
+    "final_art": "PENDING",
+    "blender_production": "NOT_AUTHORIZED",
+    "references": [
+      {
+        "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\docs\\art\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\GAME_ART_MECHANICS_BATCH_01_RESEARCH_REPORT.md",
+        "sha256": "e1a74f313599971c668a74eb9f71f4ddcd06af3e6ee2a8c4030e5d2929d7ac18"
+      },
+      {
+        "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\docs\\art\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\REVIEW_DECISION_02.md",
+        "sha256": "be4eabd2aff58059d8e4bfa63df919b4346cca9dd431c142f5a8b2938aec5335"
+      },
+      {
+        "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\docs\\art\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\ASSET_REUSE_AUDIT.csv",
+        "sha256": "2953ecf24d36a286142431ec76d2c65d255951384eafcbd9ecbad30227f79c24"
+      },
+      {
+        "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\docs\\art\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\face_identity_refinement_03\\REFINEMENT_REPORT.md",
+        "sha256": "b0e66ad30100e6e8009c638af3f4047fa6e536bc391aeb6eed8a0406f05304e2"
+      },
+      {
+        "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\docs\\art\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\face_identity_refinement_03\\FACE_SYMBOL_MAPPING.json",
+        "sha256": "bd6d527f4d25b9bf1282f620b1c2b7058b19f2917e59828bc2d0d17d6d1f2f47"
+      },
+      {
+        "path": "E:\\godot\\若叶睦\\方块少女-若叶睦\\docs\\art\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\face_identity_refinement_02\\LOCAL_FACE_MAPPING_REQUIREMENTS.md",
+        "sha256": "286b843d0ecd39e7a1e9d34de6edf5e5b4f1b124f3d5d87bb32aa5b0ff237d8c"
+      }
+    ]
+  },
+  "audio": {
+    "owner11_branch": "feat/game-feel-audio",
+    "owner11_reference": "66885052790b215b83d005aaed26bf7011ae1b63",
+    "scope": "Reuse existing AudioDirector, manifest and cues; no new audio resources",
+    "face_lock_cue": "perspective_connect after actual latch COMMITTED",
+    "world_shift_cue": "world_shift after actual native commit",
+    "fall_cues": "formal event STARTED and matching COMMITTED only",
+    "adapter_commit": "267404f783f580f2b0e39de164803f380dceacfa",
+    "adapter_evidence": "../evidence/audio_adapter_review01/process.json",
+    "headless_assertions": 88,
+    "host_wiring": "PENDING_STAGE5",
+    "human_listening": "NOT_RUN"
+  },
+  "animation": {
+    "10A": "REUSE_EXISTING_FALL_LANDING",
+    "10B": "REUSE_EXISTING_EDGE_RECOIL",
+    "production_changes": "NONE",
+    "final_build_regression": "PENDING"
+  },
+  "limits": [
+    "Experimental BoxMesh and six numbered face marks; native character symbols not adopted.",
+    "Latched FaceLock marker currently says activated without retaining target identity.",
+    "Wrong-face accepted MOVE has no dedicated failure-reason text; required face remains displayed.",
+    "Yellow platforms indicate authored candidate targets, not current Runtime eligibility.",
+    "STAIR_CLEARANCE=PARTIAL_PASS; STAIR_TRAVERSAL=NOT_RUN."
+  ],
+  "protected_refs": {
+    "refs/heads/main": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "refs/heads/release/beta-game-feel-20261010": "25de1f6202c764e4003634a387ae05e38bd387c4"
+  },
+  "old_build": {
+    "path": "E:/godot/beta-sprint-builds/beta_spatial_puzzle_batch_01_20261011_01",
+    "source": "26603d532154dbf1a7fb9cea475a55b206a40cb6",
+    "state": "PRESERVED"
+  }
+}
