@@ -21,37 +21,41 @@
 5. New package imports, audio paths and F5 entry work with isolated user data; old five-level content/QA remains unchanged.
 
 ### Stage 1 — Design gate (13)
-- [ ] Reuse the existing three design notes; publish a spec covering goal/input/state/failure/teaching/example/composition for all four mechanisms on a clean design branch.
-- [ ] Validate document links/content and source provenance; commit, push, verify SHA. Keep old dirty design tree untouched.
+- [x] Reuse the existing three design notes; publish a spec covering goal/input/state/failure/teaching/example/composition for all four mechanisms on a clean design branch.
+- [x] Validate document links/content and source provenance; commit, push, verify SHA. Keep old dirty design tree untouched.
 
 ### Stage 2 — Formal author maps (09)
 **Scope:** experiments/spatial_puzzle_batch_01/maps/**; tests/beta_sprint/spatial_owner_09/**; maps delivery documents.
 **Consumes:** confirmed Design spec and existing foundation/authoring/{document_projector,payload_assembler,authoring_adapter}.gd; formal Authoring nodes/resources.
 **Produces:** same map_factory ids/bake/describe/witnesses API backed by saved author resources, not conditional geometry construction.
-- [ ] Prove existing topology/state/path baselines; add a failing resource-backed load/provenance check.
-- [ ] Store the five lab maps with formal author resources and bake through the real authoring adapter; preserve gameplay data and metadata separation.
-- [ ] Verify canonical parity, all requested witnesses, invalid Camera and source provenance. Publish exact delivery.
+- [x] Prove existing topology/state/path baselines; add a failing resource-backed load/provenance check.
+- [x] Store the five lab maps with formal author resources and bake through the real authoring adapter; preserve gameplay data and metadata separation.
+- [x] Verify canonical parity, all requested witnesses, invalid Camera and source provenance. Publish exact delivery.
 
 ### Stage 3 — Runtime gate (01)
 **Scope:** existing spatial Owner01 tests/report; production only for an established missing formal interface.
-- [ ] Verify delivered author resources traverse existing Reader/Baker/Runtime/Solver/Safety/Replay with current formal opt-in semantics.
-- [ ] Resolve only proven contract/behavior gaps with scoped RED/GREEN; otherwise publish a measured no-production-change receipt.
+- [x] Verify delivered author resources traverse existing Reader/Baker/Runtime/Solver/Safety/Replay with current formal opt-in semantics.
+- [x] Resolve only proven contract/behavior gaps with scoped RED/GREEN; otherwise publish a measured no-production-change receipt.
 
 ### Supporting presentation after dependency readiness
-- [ ] 05 reuse existing research; no new Art replacement or main edits.
-- [ ] 11 verify/reuse AudioDirector and approved cues; add only necessary Face Lock consumer API/tests if absent. Publish before 00 wiring.
-- [ ] 07 verify runtime-derived Gate/Lock/Fork feedback; no local eligibility logic. 10A/10B reuse verified motion and cancellation contract.
-- [ ] 00 changes only spatial Host/audio routing and its tests; covers actual commit/dedupe/reset/unload/pause and no state mutation.
+- [x] 05 reuse existing research; no new Art replacement or main edits.
+- [x] 11 verify/reuse AudioDirector and approved cues; add only necessary Face Lock consumer API/tests if absent. Publish before 00 wiring.
+- [x] 07 verify runtime-derived Gate/Lock/Fork feedback; no local eligibility logic. 10A/10B reuse verified motion and cancellation contract.
+- [x] 00 changes only spatial Host/audio routing and its tests; covers actual commit/dedupe/reset/unload/pause and no state mutation.
 
 ### Stage 4 — Independent Quality gate (03)
-- [ ] On the exact staged source, verify matrix requirements including Loop Save semantics and all four mechanism positive/negative cases, full Rubik route, Solver/Safety/Logical Replay, real natural and formal graphical Replay.
-- [ ] Reuse identity-matched prior evidence for unchanged expensive graphs; keep unexecuted scopes explicit. Publish clean Owner branch and remote SHA.
+- [x] On the exact staged source, verify matrix requirements including Loop Save semantics and all four mechanism positive/negative cases, full Rubik route, Solver/Safety/Logical Replay, real natural and formal graphical Replay.
+- [x] Reuse identity-matched prior evidence for unchanged expensive graphs; keep unexecuted scopes explicit. Publish clean Owner branch and remote SHA.
 
 ### Stage 5 — Integration / package (00)
-- [ ] Review and merge only Owner-approved diffs; targeted production review; affected regression and audio/UI checks.
-- [ ] Commit and push verified integration source; generate a fresh unique build via tests/beta_sprint/spatial_integration/package.py, never overwrite old package.
-- [ ] Execute real package F5/main entry, menu labs, new feedback/audio and affected save/reset lifecycle checks. Record engine/source/hash, exact build path and known issues.
+- [x] Review and merge only Owner-approved diffs; targeted production review; affected regression and audio/UI checks.
+- [x] Commit and push verified integration source; generate a fresh unique build via tests/beta_sprint/spatial_integration/package.py, never overwrite old package.
+- [x] Execute real package F5/main entry, menu labs, new feedback/audio and affected save/reset lifecycle checks. Record engine/source/hash, exact build path and known issues.
 
 ### Stage 6 — QA handoff
-- [ ] Give08 the immutable new Build and evidence; Human QA stays NOT_RUN unless an eligible human actually tests.
-- [ ] Final report separates all Owner status and verification layers; push final receipt and independently verify remote SHA.
+- [x] Give08 the immutable new Build and evidence; Human QA stays NOT_RUN unless an eligible human actually tests.
+- [x] Final report separates all Owner status and verification layers; push final receipt and independently verify remote SHA.
+
+## Closeout evidence
+
+See full-development/RECEIPT.json and FINAL_REPORT.md. Stage6 is delivery to08, not Human QA completion. Human QA remains NOT_RUN. Build source59531adcdffb7a8671bd6aab9a2abdc6fa830b04 was pushed and remote-verified; containing receipt commit requires final normal push/SHA check before declaring GitHub closeout.

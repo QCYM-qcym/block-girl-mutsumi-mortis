@@ -1,0 +1,157 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT",
+  "status": "SPATIAL_PUZZLE_BATCH_01_READY",
+  "date": "2026-10-12",
+  "scope": "isolated prototype automation and QA handoff; not Beta release approval",
+  "integration_branch": "feat/spatial-puzzle-batch-01",
+  "build_source_commit": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+  "build_source_push": "SUCCESS",
+  "build_source_remote_sha": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+  "build_source_remote_verified": true,
+  "receipt_commit": "Containing Git commit; final ordinary push and SHA comparison reported separately",
+  "owners": [
+    {
+      "owner": "13",
+      "branch": "design/spatial-puzzle-batch-01-spec",
+      "commit": "19c3b4be1a443051d2c8e7498d06d39a282e4075",
+      "remote_sha": "19c3b4be1a443051d2c8e7498d06d39a282e4075",
+      "push": "SUCCESS",
+      "verification": "VERIFIED",
+      "integration": "MERGED"
+    },
+    {
+      "owner": "09",
+      "branch": "feat/spatial-authoring-maps-02",
+      "commit": "a989db8e16a569b7e0a73d3790068f32686fc1cd",
+      "remote_sha": "a989db8e16a569b7e0a73d3790068f32686fc1cd",
+      "push": "SUCCESS",
+      "verification": "VERIFIED",
+      "integration": "MERGED"
+    },
+    {
+      "owner": "01",
+      "branch": "fix/spatial-authoring-entry-02",
+      "commit": "859c5ac9601d624eb0666f4c333336ec1774ab47",
+      "remote_sha": "859c5ac9601d624eb0666f4c333336ec1774ab47",
+      "push": "SUCCESS",
+      "verification": "VERIFIED",
+      "integration": "MERGED"
+    },
+    {
+      "owner": "07",
+      "branch": "feat/spatial-ui-feedback-02",
+      "commit": "1daaf931a49408936b15a1284cb084fd6038db9b",
+      "remote_sha": "1daaf931a49408936b15a1284cb084fd6038db9b",
+      "push": "SUCCESS",
+      "verification": "VERIFIED",
+      "integration": "MERGED"
+    },
+    {
+      "owner": "03",
+      "branch": "test/spatial-full-development-02",
+      "commit": "fb0c6a024e10c745a581f8a4bba4d783813af510",
+      "remote_sha": "fb0c6a024e10c745a581f8a4bba4d783813af510",
+      "push": "SUCCESS",
+      "verification": "VERIFIED",
+      "integration": "MERGED"
+    }
+  ],
+  "mechanisms": {
+    "World Shift Gate": "PASS",
+    "Orientation Loop": "PASS",
+    "Face Lock": "PASS",
+    "Perspective Fork": "PASS",
+    "RUBIK_SPATIAL_PUZZLE_01": "PASS"
+  },
+  "runtime": "PASS",
+  "solver": "PASS_CURRENT_SELECTED_ORIGINAL_WITNESSES",
+  "safety": "PASS_CURRENT_SELECTED_ROUTE_EDGES",
+  "logical_replay": "PASS",
+  "formal_graphical_trace_replayer": "PASS_STAGE4",
+  "natural_graphical": "PASS_PACKAGED_BUILD",
+  "quality_assertions": 2669,
+  "quality_case_counts": {
+    "PASS": 74,
+    "REFERENCE_PASS": 12,
+    "NOT_RUN": 8,
+    "PENDING": 1
+  },
+  "quality_pending_note": "Stage4 final Host/audio/Build PENDING is satisfied by separate 00 receipts; Owner matrix retained unchanged",
+  "package_executions": {
+    "full_pkg_audio01": {
+      "checks": 89,
+      "status": "PASS",
+      "pid": 46856,
+      "receipt": "../evidence/full_pkg_audio01/process.json",
+      "report_sha256": "2c1d0002bf5dc9b0c9e6b4740c7d5d06231b6aaa1800ec67c14e2cafe442d8e7"
+    },
+    "full_pkg_routes01": {
+      "checks": 208,
+      "status": "PASS",
+      "pid": 39928,
+      "receipt": "../evidence/full_pkg_routes01/process.json",
+      "report_sha256": "f8da75d5fed38896059f60f47f89cc33b073c5e5c13ede34e328f66db0221caa"
+    },
+    "full_pkg_menu02": {
+      "checks": 219,
+      "status": "PASS",
+      "pid": 20436,
+      "receipt": "../evidence/full_pkg_menu02/process.json",
+      "report_sha256": "62c1a32ed0f1ad4d7595971ff30ce1c0983a364eed27f493b71e59767a570f99"
+    }
+  },
+  "package_integrity": {
+    "files": 1561,
+    "exact_git_source_files": 1409,
+    "author_resources": 22,
+    "receipt": "../evidence/full_pkg_integrity01/report.json"
+  },
+  "main_scene_start": {
+    "status": "PASS",
+    "receipt": "../evidence/full_pkg_launch01/report.json",
+    "actual_human_F5_keypress": "NOT_RUN"
+  },
+  "three_resolution_ui": "3/3 PASS:1920x1080,1280x720,960x720",
+  "source_ui_cold_checks": 150,
+  "source_audio_checks": 89,
+  "human_qa": "NOT_RUN",
+  "human_listening": "NOT_RUN",
+  "first_time_comprehension": "NOT_RUN",
+  "build": "E:\\godot\\beta-sprint-builds\\beta_spatial_puzzle_batch_01_full_20261012_01",
+  "archive": "E:\\godot\\beta-sprint-builds\\beta_spatial_puzzle_batch_01_full_20261012_01.zip",
+  "zip_sha256": "4d030c8f75f9e091bf9e775e8ffb4f35d0a92bfca98c11cdacd325e7e2b0b7b4",
+  "engine": "Godot 4.7.2.stable.steam.ed1daf0bf",
+  "qa_handoff": {
+    "status": "QA_HANDOFF_RECEIVED",
+    "thread": "01a1112c-8568-7de1-80b2-6ab782c2094d",
+    "scope": "Actual players only; no automated first-time acceptance",
+    "ack_turn": "01a12e19-611e-7712-8f74-7ded98fa57fb",
+    "eligible_players": 0,
+    "owner08_identity_check": "Source59531adc,ZIP SHA and1561 manifest files matched; no automatic matrix rerun"
+  },
+  "art": "READ_ONLY_SUPPORT; formal replacement PENDING",
+  "animation": "10A/10B reused unchanged",
+  "audio": "Existing 11 AudioDirector/cues integrated by 00; no second persistence",
+  "known_limits": [
+    "Combined current complete graph, all-edge permissions and same-graph Softlock NOT_RUN; selected routes do not prove universal safety",
+    "Experimental BoxMesh and numbered faces; approved Art source unchanged",
+    "Latched marker loses target identity; wrong-face accepted MOVE has no separate reason text",
+    "Yellow marks authored targets, not Runtime eligibility",
+    "Reduced Motion remains existing menu-session setting",
+    "STAIR_CLEARANCE=PARTIAL_PASS; STAIR_TRAVERSAL=NOT_RUN"
+  ],
+  "preserved_failed_attempts": {
+    "full_pkg_menu01": "Caller omitted mandatory --shell-save; stopped at admission. Fresh full_pkg_menu02 with argument passed219; no source change",
+    "full_host_audio_red01": "Genuine pre-wiring missing Host adapter RED"
+  },
+  "protected": {
+    "main_modified": false,
+    "release_tag_modified": false,
+    "L01_L05_content_modified": false,
+    "save_source_modified": false,
+    "frozen_art_modified": false,
+    "runtime_algorithm_modified": false,
+    "foundation_changes": "Only 3 authorized authoring ingress compatibility files",
+    "old_qa_zip_sha256": "ade30ffc68d3e3853e6ce7a57ea8aed46d3b25282e889b8de2ccc4f1aec8d4ca"
+  }
+}
