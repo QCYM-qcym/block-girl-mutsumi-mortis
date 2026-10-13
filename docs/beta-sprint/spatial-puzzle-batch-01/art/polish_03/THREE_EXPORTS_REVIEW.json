@@ -1,0 +1,2005 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
+  "base_commit": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "checked_at": "2026-10-13T22:32:55.027280+08:00",
+  "scope": "THREE_FILES_AND_NAMED_BUILD_READ_ONLY",
+  "previous_audit_reused": {
+    "path": "E:\\godot\\worktrees\\bg-spatial-art-accept01\\docs\\beta-sprint\\spatial-puzzle-batch-01\\art\\continuation_02\\EXTERNAL_EXPORT_AUDIT.json",
+    "sha256": "e181f1989b2f58dfff4e86551c3b789ebe49458cb6a15af70e7ec0abe08ebf70",
+    "original_177_manifest_sha256": "0a4eba41609a75ecda0dbdc33979da543968bf613f3f37a6dba4f77c10f62313",
+    "external_manifest_sha256": "0a4eba41609a75ecda0dbdc33979da543968bf613f3f37a6dba4f77c10f62313",
+    "local_manifest_same_as_committed_copy": true,
+    "full_59_and_177_scan": "NOT_REPEATED"
+  },
+  "files": [
+    {
+      "path": "design/states/face_lock_D.svg",
+      "absolute_current_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.svg",
+      "absolute_post_edit_backup_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\design\\states\\face_lock_D.svg",
+      "original_sha256": "5482941575c67f1be0b5e83ff0dd3fde067c1b8b4bb31424b7a905d000aaa45b",
+      "current_sha256": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "post_edit_backup_sha256": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "original_hash_source": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\tests\\PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST_NO_INDEPENDENT_IMMUTABLE_ANCHOR",
+      "original_bytes": "NOT_FOUND_IN_PREVIOUS_BOUNDED_SEARCH_NOT_REPEATED",
+      "same_as_previous_audit": true,
+      "current_equals_backup": true,
+      "current_equals_original": false,
+      "format": {
+        "parse": "PASS",
+        "viewBox": "0 0 1920 1080",
+        "dimensions": [
+          "1920",
+          "1080"
+        ],
+        "elements": 90,
+        "render": "NOT_RUN"
+      },
+      "current_text_positions": [
+        {
+          "text": "READY",
+          "x": "72",
+          "y": "219"
+        },
+        {
+          "text": "snapshot=initial_state",
+          "x": "72",
+          "y": "408"
+        },
+        {
+          "text": "横闩开放；目标保持",
+          "x": "72",
+          "y": "453"
+        },
+        {
+          "text": "无碰撞变化；无循环提示音",
+          "x": "72",
+          "y": "498"
+        },
+        {
+          "text": "MATCHED",
+          "x": "692",
+          "y": "219"
+        },
+        {
+          "text": "snapshot=latched_state",
+          "x": "692",
+          "y": "408"
+        },
+        {
+          "text": "等长滑块闭合；目标保持",
+          "x": "692",
+          "y": "453"
+        },
+        {
+          "text": "新提交时单次卡扣音",
+          "x": "692",
+          "y": "498"
+        },
+        {
+          "text": "WRONG FACE",
+          "x": "1312",
+          "y": "219"
+        },
+        {
+          "text": "MOVE 成功 + 未匹配接触结果",
+          "x": "1312",
+          "y": "408"
+        },
+        {
+          "text": "保持开放；目标不变",
+          "x": "1312",
+          "y": "453"
+        },
+        {
+          "text": "contact read-model 待01提供",
+          "x": "1312",
+          "y": "498"
+        },
+        {
+          "text": "RESET",
+          "x": "72",
+          "y": "599"
+        },
+        {
+          "text": "正式 Reset 提交 → initial_state",
+          "x": "72",
+          "y": "788"
+        },
+        {
+          "text": "回到开放；不自行计时",
+          "x": "72",
+          "y": "833"
+        },
+        {
+          "text": "复位音可选，目标保持",
+          "x": "72",
+          "y": "878"
+        },
+        {
+          "text": "TRANSITION",
+          "x": "692",
+          "y": "599"
+        },
+        {
+          "text": "MOVE STARTED → COMMITTED",
+          "x": "692",
+          "y": "788"
+        },
+        {
+          "text": "正式提交后读新锁存快照",
+          "x": "692",
+          "y": "833"
+        },
+        {
+          "text": "不提前锁定；取消不成功提示",
+          "x": "692",
+          "y": "878"
+        },
+        {
+          "text": "RE-ENTRY",
+          "x": "1312",
+          "y": "599"
+        },
+        {
+          "text": "已锁存时再次进入",
+          "x": "1312",
+          "y": "788"
+        },
+        {
+          "text": "保持闭合，不反复播放成功",
+          "x": "1312",
+          "y": "833"
+        },
+        {
+          "text": "TARGET/CONTACT 仅按需",
+          "x": "1312",
+          "y": "878"
+        }
+      ],
+      "current_rail_transforms": [
+        "translate(172 303) scale(2.8333333333333335)",
+        "translate(792 303) scale(2.8333333333333335)",
+        "translate(1412 303) scale(2.8333333333333335)",
+        "translate(172 683) scale(2.8333333333333335)",
+        "translate(792 683) scale(2.8333333333333335)",
+        "translate(1412 683) scale(2.8333333333333335)"
+      ],
+      "original_pixel_diff": "UNAVAILABLE_NO_ORIGINAL_BYTES",
+      "classification": "SVG_STRUCTURAL_LAYOUT_CHANGE_CORROBORATED",
+      "recovery_proposal": {
+        "target_exact_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.svg",
+        "candidate_acceptance_sha256": "5482941575c67f1be0b5e83ff0dd3fde067c1b8b4bb31424b7a905d000aaa45b",
+        "expected_current_sha256_before_any_authorized_replace": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+        "preferred_candidate": "Owner-provided original delivery or trusted preincident backup; verify exact SHA256 first",
+        "fallback": "Only separately authorized reconstruction in a new candidate directory; do not run whole old generator or overwrite target",
+        "matching_candidate_status": "EXACT_ORIGINAL_BYTES_CANDIDATE",
+        "nonmatching_candidate_status": "RECONSTRUCTED_DIFFERENT_NOT_A_RESTORE",
+        "candidate_creation_authorized_this_round": false,
+        "replacement_authorized_this_round": false,
+        "restore_executed": false,
+        "preserve_post_edit_backup": true
+      }
+    },
+    {
+      "path": "design/states/face_lock_D.png",
+      "absolute_current_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.png",
+      "absolute_post_edit_backup_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\design\\states\\face_lock_D.png",
+      "original_sha256": "cb619b6d77cc838295fca8c57d36255dbcf4f0280895bda8056819465b680b69",
+      "current_sha256": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "post_edit_backup_sha256": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "original_hash_source": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\tests\\PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST_NO_INDEPENDENT_IMMUTABLE_ANCHOR",
+      "original_bytes": "NOT_FOUND_IN_PREVIOUS_BOUNDED_SEARCH_NOT_REPEATED",
+      "same_as_previous_audit": true,
+      "current_equals_backup": true,
+      "current_equals_original": false,
+      "format": {
+        "verify_and_full_decode": "PASS",
+        "size": [
+          1920,
+          1080
+        ],
+        "mode": "RGBA",
+        "info": {
+          "dpi": "(72.009, 72.009)"
+        }
+      },
+      "png_chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 13
+        },
+        {
+          "type": "pHYs",
+          "bytes": 9
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 4120
+        },
+        {
+          "type": "IEND",
+          "bytes": 0
+        }
+      ],
+      "original_pixel_diff": "UNAVAILABLE_NO_ORIGINAL_BYTES",
+      "classification": "BYTE_CHANGE_CONFIRMED_PIXEL_CHANGE_INFERRED_FROM_GENERATION_CHAIN_NOT_ORIGINAL_PIXEL_DIFF",
+      "recovery_proposal": {
+        "target_exact_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.png",
+        "candidate_acceptance_sha256": "cb619b6d77cc838295fca8c57d36255dbcf4f0280895bda8056819465b680b69",
+        "expected_current_sha256_before_any_authorized_replace": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+        "preferred_candidate": "Owner-provided original delivery or trusted preincident backup; verify exact SHA256 first",
+        "fallback": "Only separately authorized reconstruction in a new candidate directory; do not run whole old generator or overwrite target",
+        "matching_candidate_status": "EXACT_ORIGINAL_BYTES_CANDIDATE",
+        "nonmatching_candidate_status": "RECONSTRUCTED_DIFFERENT_NOT_A_RESTORE",
+        "candidate_creation_authorized_this_round": false,
+        "replacement_authorized_this_round": false,
+        "restore_executed": false,
+        "preserve_post_edit_backup": true
+      }
+    },
+    {
+      "path": "reports/DRAWING_CONTACT_SHEET.png",
+      "absolute_current_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\reports\\DRAWING_CONTACT_SHEET.png",
+      "absolute_post_edit_backup_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\reports\\DRAWING_CONTACT_SHEET.png",
+      "original_sha256": "8a503ee044ccbd54210754c840ddb957be6d1bace43096b66f1dfec46b5cc51e",
+      "current_sha256": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "post_edit_backup_sha256": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "original_hash_source": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\tests\\PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST_NO_INDEPENDENT_IMMUTABLE_ANCHOR",
+      "original_bytes": "NOT_FOUND_IN_PREVIOUS_BOUNDED_SEARCH_NOT_REPEATED",
+      "same_as_previous_audit": true,
+      "current_equals_backup": true,
+      "current_equals_original": false,
+      "format": {
+        "verify_and_full_decode": "PASS",
+        "size": [
+          1920,
+          1890
+        ],
+        "mode": "RGBA",
+        "info": {
+          "dpi": "(25.4, 25.4)"
+        }
+      },
+      "png_chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 13
+        },
+        {
+          "type": "pHYs",
+          "bytes": 9
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 8192
+        },
+        {
+          "type": "IDAT",
+          "bytes": 7315
+        },
+        {
+          "type": "IEND",
+          "bytes": 0
+        }
+      ],
+      "original_pixel_diff": "UNAVAILABLE_NO_ORIGINAL_BYTES",
+      "classification": "BYTE_CHANGE_CONFIRMED_PIXEL_CHANGE_INFERRED_FROM_GENERATION_CHAIN_NOT_ORIGINAL_PIXEL_DIFF",
+      "recovery_proposal": {
+        "target_exact_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\reports\\DRAWING_CONTACT_SHEET.png",
+        "candidate_acceptance_sha256": "8a503ee044ccbd54210754c840ddb957be6d1bace43096b66f1dfec46b5cc51e",
+        "expected_current_sha256_before_any_authorized_replace": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+        "preferred_candidate": "Owner-provided original delivery or trusted preincident backup; verify exact SHA256 first",
+        "fallback": "Only separately authorized reconstruction in a new candidate directory; do not run whole old generator or overwrite target",
+        "matching_candidate_status": "EXACT_ORIGINAL_BYTES_CANDIDATE",
+        "nonmatching_candidate_status": "RECONSTRUCTED_DIFFERENT_NOT_A_RESTORE",
+        "candidate_creation_authorized_this_round": false,
+        "replacement_authorized_this_round": false,
+        "restore_executed": false,
+        "preserve_post_edit_backup": true
+      }
+    }
+  ],
+  "script_evidence": {
+    "current_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\scripts\\build_boards.cjs",
+    "current_sha256": "bf4351a481015c2ad347c1d429d62a69a2437a4e3fe8526b63e5532df2c39fcb",
+    "current_equals_original_manifest": true,
+    "post_edit_backup_path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\scripts\\build_boards.cjs",
+    "post_edit_backup_sha256": "16af8db73d935af9f839f2446c9008781946da17b6260c6f272c345777027d14",
+    "diff": [
+      "--- restored_original_script\n",
+      "+++ post_edit_backup_script\n",
+      "@@ -52,4 +52,4 @@\n",
+      "   let states=key==='face_lock'?[['READY','snapshot=initial_state','横闩开放；目标保持','无碰撞变化；无循环提示音'],['MATCHED','snapshot=latched_state','等长滑块闭合；目标保持','新提交时单次卡扣音'],['WRONG FACE','MOVE 成功 + 未匹配接触结果','保持开放；目标不变','contact read-model 待01提供'],['RESET','正式 Reset 提交 → initial_state','回到开放；不自行计时','复位音可选，目标保持'],['TRANSITION','MOVE STARTED → COMMITTED','正式提交后读新锁存快照','不提前锁定；取消不成功提示'],['RE-ENTRY','已锁存时再次进入','保持闭合，不反复播放成功','TARGET/CONTACT 仅按需']]:key==='shift_gate'?[['LOCKED','Gate 条件未满足','角框断开 + 双菱形收敛','SHIFT_GATE_LOCKED / 2011'],['AVAILABLE','正式完整许可 preview=true','四角完整；细光常亮','只读许可接口尚待补充'],['IN RANGE','当前位置=授权 source_face','近侧边框实线加厚','位置命中不等于一定可切换'],['SWITCHING','SHIFT STARTED 身份匹配','复用现有 World Shift VFX','正式提交决定新世界'],['TEMP UNAVAILABLE','忙碌/映射/SHADOW/Safety拒绝','保留锚点；短暂停顿节奏','按真实 reason_code 提示'],['RESET / IDLE','加载/复位后的正式快照','重读锚点、条件、scope','旧动画取消，不残留成功']]:[['IDLE','authored candidates = {A,B}','双台身份长期一致','不默认高亮任一合法目标'],['AVAILABLE Q1','历史证据：target_a / TOP','呈现真实空间线索','设计分析层才显示合法标签'],['AVAILABLE Q2','历史证据：target_b / TOP','相机只做90°固定切换','不由图形碰撞选目标'],['DENIED Q0/Q3','CAMERA_NOT_ALLOWED / 2101','边缘试探 / 克制短音','位置不动，无落地VFX'],['TRANSITION','PERSPECTIVE_FALL STARTED','使用正式轨迹与 orientation','取正式 source_pose / target_pose'],['LANDED / RESET','COMMITTED / 正式 Reset','一次接触尘与回弹 / 清理','取消旧事件不得播放成功']];",
+      "-  for(let i=0;i<states.length;i++){let x=48+i%3*620,y=175+Math.floor(i/3)*380;s+=rect(x,y,588,349,i<3?'#e3e8de':'#dce4e8')+txt(x+24,y+44,states[i][0],28)+textlines(x+24,y+211,states[i].slice(1),21,45);",
+      "-   if(key==='face_lock')s+=icon('eye',x+242,y+66,64)+rail(x+100,y+146,385,i===1||i===5);",
+      "+  for(let i=0;i<states.length;i++){let x=48+i%3*620,y=175+Math.floor(i/3)*380;s+=rect(x,y,588,349,i<3?'#e3e8de':'#dce4e8')+txt(x+24,y+44,states[i][0],28)+textlines(x+24,y+(key==='face_lock'?233:211),states[i].slice(1),21,45);",
+      "+   if(key==='face_lock')s+=icon('eye',x+242,y+66,64)+rail(x+124,y+128,340,i===1||i===5);",
+      "    if(key==='shift_gate'){"
+    ],
+    "executed": false
+  },
+  "contact_sheet_chain": {
+    "drawing_index_sha256": "698e5377c5f04b378d74d8a3252367326cacbb7bc6de93e5a95552e7572e5455",
+    "index_equals_original_manifest": true,
+    "tile_zero_based_index": 3,
+    "tile_xy": [
+      1440,
+      0
+    ],
+    "tile_size": [
+      480,
+      270
+    ],
+    "source_script_lines": [
+      29,
+      120,
+      121
+    ],
+    "original_pixels_available": false
+  },
+  "build": {
+    "root": "E:\\godot\\beta-sprint-builds\\beta_spatial_acceptance_input_fix_20261013_01",
+    "identity_sha256": "67021752bfec7a05223aa12b3b447005bf486818e54983b4559d32b5a53393c0",
+    "source": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+    "manifest_entries": 1641,
+    "identity_main_scene": "res://experiments/spatial_puzzle_batch_01/ui/main.tscn",
+    "project_main_scene": "res://experiments/spatial_puzzle_batch_01/ui/main.tscn",
+    "manifest_path_or_content_hash_matches": [],
+    "manifest_text_files_checked": 1292,
+    "skipped_binary_or_unrecognized_extension": [
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/.gdignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/.gitignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/diagnostics/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/human_qa/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/maps/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/maps/.gitignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/.gitignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/.gdignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/.gitignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/full-development/.gdignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/full-development/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/quality/full-development/.gitignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/runtime/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/runtime/input_acceptance_01/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/ui/.gdignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/ui/.gitattributes",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/ui/feedback_02/.gdignore",
+      "project/docs/beta-sprint/spatial-puzzle-batch-01/ui/feedback_02/.gitattributes",
+      "project/experiments/game_feel_01/maps/.gitattributes",
+      "project/game/levels/mutsumi/batch_02/.gitattributes",
+      "project/production/art_3d/.gitattributes",
+      "project/production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001.glb",
+      "project/production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001_BG_CH_MORTIS_CUBE_001_basecolor.png",
+      "project/production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001_mortis_eyes_v03.png",
+      "project/production/art_3d/BG_CH_MORTIS_CUBE_001/textures/BG_CH_MORTIS_CUBE_001_basecolor.png",
+      "project/production/art_3d/BG_CH_MORTIS_CUBE_001/textures/mortis_eyes_v03.png",
+      "project/production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb",
+      "project/production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_BG_CH_WAKABA_CUBE_001_basecolor.png",
+      "project/production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001_source_eyes_v13.png",
+      "project/production/art_3d/BG_CH_WAKABA_CUBE_001/textures/BG_CH_WAKABA_CUBE_001_basecolor.png",
+      "project/production/art_3d/BG_CH_WAKABA_CUBE_001/textures/source_eyes_v13.png",
+      "project/production/art_3d/BG_ENV_INNER_ARCH_001/export/BG_ENV_INNER_ARCH_001.glb",
+      "project/production/art_3d/BG_ENV_INNER_ARCH_001/export/BG_ENV_INNER_ARCH_001_BG_ENV_INNER_ARCH_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_ARCH_001/export/BG_ENV_INNER_ARCH_001_BG_ENV_INNER_ARCH_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_ARCH_001/textures/BG_ENV_INNER_ARCH_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_ARCH_001/textures/BG_ENV_INNER_ARCH_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_BRIDGE_001/export/BG_ENV_INNER_BRIDGE_001.glb",
+      "project/production/art_3d/BG_ENV_INNER_BRIDGE_001/export/BG_ENV_INNER_BRIDGE_001_BG_ENV_INNER_BRIDGE_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_BRIDGE_001/export/BG_ENV_INNER_BRIDGE_001_BG_ENV_INNER_BRIDGE_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_BRIDGE_001/textures/BG_ENV_INNER_BRIDGE_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_BRIDGE_001/textures/BG_ENV_INNER_BRIDGE_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_FLOOR_001/export/BG_ENV_INNER_FLOOR_001.glb",
+      "project/production/art_3d/BG_ENV_INNER_FLOOR_001/export/BG_ENV_INNER_FLOOR_001_BG_ENV_INNER_FLOOR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_FLOOR_001/export/BG_ENV_INNER_FLOOR_001_BG_ENV_INNER_FLOOR_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_FLOOR_001/textures/BG_ENV_INNER_FLOOR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_FLOOR_001/textures/BG_ENV_INNER_FLOOR_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_PILLAR_001/export/BG_ENV_INNER_PILLAR_001.glb",
+      "project/production/art_3d/BG_ENV_INNER_PILLAR_001/export/BG_ENV_INNER_PILLAR_001_BG_ENV_INNER_PILLAR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_PILLAR_001/export/BG_ENV_INNER_PILLAR_001_BG_ENV_INNER_PILLAR_001_normal.png",
+      "project/production/art_3d/BG_ENV_INNER_PILLAR_001/textures/BG_ENV_INNER_PILLAR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_INNER_PILLAR_001/textures/BG_ENV_INNER_PILLAR_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_ARCH_001/export/BG_ENV_SURFACE_ARCH_001.glb",
+      "project/production/art_3d/BG_ENV_SURFACE_ARCH_001/export/BG_ENV_SURFACE_ARCH_001_BG_ENV_SURFACE_ARCH_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_ARCH_001/export/BG_ENV_SURFACE_ARCH_001_BG_ENV_SURFACE_ARCH_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_ARCH_001/textures/BG_ENV_SURFACE_ARCH_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_ARCH_001/textures/BG_ENV_SURFACE_ARCH_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_BRIDGE_001/export/BG_ENV_SURFACE_BRIDGE_001.glb",
+      "project/production/art_3d/BG_ENV_SURFACE_BRIDGE_001/export/BG_ENV_SURFACE_BRIDGE_001_BG_ENV_SURFACE_BRIDGE_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_BRIDGE_001/export/BG_ENV_SURFACE_BRIDGE_001_BG_ENV_SURFACE_BRIDGE_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_BRIDGE_001/textures/BG_ENV_SURFACE_BRIDGE_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_BRIDGE_001/textures/BG_ENV_SURFACE_BRIDGE_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_FLOOR_001/export/BG_ENV_SURFACE_FLOOR_001.glb",
+      "project/production/art_3d/BG_ENV_SURFACE_FLOOR_001/export/BG_ENV_SURFACE_FLOOR_001_BG_ENV_SURFACE_FLOOR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_FLOOR_001/export/BG_ENV_SURFACE_FLOOR_001_BG_ENV_SURFACE_FLOOR_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_FLOOR_001/textures/BG_ENV_SURFACE_FLOOR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_FLOOR_001/textures/BG_ENV_SURFACE_FLOOR_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_PILLAR_001/export/BG_ENV_SURFACE_PILLAR_001.glb",
+      "project/production/art_3d/BG_ENV_SURFACE_PILLAR_001/export/BG_ENV_SURFACE_PILLAR_001_BG_ENV_SURFACE_PILLAR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_PILLAR_001/export/BG_ENV_SURFACE_PILLAR_001_BG_ENV_SURFACE_PILLAR_001_normal.png",
+      "project/production/art_3d/BG_ENV_SURFACE_PILLAR_001/textures/BG_ENV_SURFACE_PILLAR_001_basecolor.png",
+      "project/production/art_3d/BG_ENV_SURFACE_PILLAR_001/textures/BG_ENV_SURFACE_PILLAR_001_normal.png",
+      "project/production/art_3d/BG_MEC_INNER_EXIT_001/export/BG_MEC_INNER_EXIT_001.glb",
+      "project/production/art_3d/BG_MEC_INNER_EXIT_001/export/BG_MEC_INNER_EXIT_001_BG_MEC_INNER_EXIT_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_EXIT_001/textures/BG_MEC_INNER_EXIT_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_GATE_001/export/BG_MEC_INNER_GATE_001.glb",
+      "project/production/art_3d/BG_MEC_INNER_GATE_001/export/BG_MEC_INNER_GATE_001_BG_MEC_INNER_GATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_GATE_001/textures/BG_MEC_INNER_GATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_PRESSURE_PLATE_001/export/BG_MEC_INNER_PRESSURE_PLATE_001.glb",
+      "project/production/art_3d/BG_MEC_INNER_PRESSURE_PLATE_001/export/BG_MEC_INNER_PRESSURE_PLATE_001_BG_MEC_INNER_PRESSURE_PLATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_PRESSURE_PLATE_001/textures/BG_MEC_INNER_PRESSURE_PLATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_WORLD_SWITCH_001/export/BG_MEC_INNER_WORLD_SWITCH_001.glb",
+      "project/production/art_3d/BG_MEC_INNER_WORLD_SWITCH_001/export/BG_MEC_INNER_WORLD_SWITCH_001_BG_MEC_INNER_WORLD_SWITCH_001_stone.png",
+      "project/production/art_3d/BG_MEC_INNER_WORLD_SWITCH_001/textures/BG_MEC_INNER_WORLD_SWITCH_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_EXIT_001/export/BG_MEC_SURFACE_EXIT_001.glb",
+      "project/production/art_3d/BG_MEC_SURFACE_EXIT_001/export/BG_MEC_SURFACE_EXIT_001_BG_MEC_SURFACE_EXIT_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_EXIT_001/textures/BG_MEC_SURFACE_EXIT_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_GATE_001/export/BG_MEC_SURFACE_GATE_001.glb",
+      "project/production/art_3d/BG_MEC_SURFACE_GATE_001/export/BG_MEC_SURFACE_GATE_001_BG_MEC_SURFACE_GATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_GATE_001/textures/BG_MEC_SURFACE_GATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_PRESSURE_PLATE_001/export/BG_MEC_SURFACE_PRESSURE_PLATE_001.glb",
+      "project/production/art_3d/BG_MEC_SURFACE_PRESSURE_PLATE_001/export/BG_MEC_SURFACE_PRESSURE_PLATE_001_BG_MEC_SURFACE_PRESSURE_PLATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_PRESSURE_PLATE_001/textures/BG_MEC_SURFACE_PRESSURE_PLATE_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_WORLD_SWITCH_001/export/BG_MEC_SURFACE_WORLD_SWITCH_001.glb",
+      "project/production/art_3d/BG_MEC_SURFACE_WORLD_SWITCH_001/export/BG_MEC_SURFACE_WORLD_SWITCH_001_BG_MEC_SURFACE_WORLD_SWITCH_001_stone.png",
+      "project/production/art_3d/BG_MEC_SURFACE_WORLD_SWITCH_001/textures/BG_MEC_SURFACE_WORLD_SWITCH_001_stone.png",
+      "project/production/audio/p01/TEMP_amb_inner.wav",
+      "project/production/audio/p01/TEMP_amb_surface.wav",
+      "project/production/audio/p01/TEMP_complete.wav",
+      "project/production/audio/p01/TEMP_door_close.wav",
+      "project/production/audio/p01/TEMP_door_open.wav",
+      "project/production/audio/p01/TEMP_exit_ready.wav",
+      "project/production/audio/p01/TEMP_land.wav",
+      "project/production/audio/p01/TEMP_link_off.wav",
+      "project/production/audio/p01/TEMP_link_on.wav",
+      "project/production/audio/p01/TEMP_plate.wav",
+      "project/production/audio/p01/TEMP_roll.wav",
+      "project/production/audio/p01/TEMP_rotate.wav",
+      "project/production/audio/p01/TEMP_shift_inner.wav",
+      "project/production/audio/p01/TEMP_shift_surface.wav",
+      "project/production/experimental/game_feel_01/audio/.gitattributes",
+      "project/production/experimental/game_feel_01/audio/exports/bgm_complete.wav",
+      "project/production/experimental/game_feel_01/audio/exports/bgm_discovery.wav",
+      "project/production/experimental/game_feel_01/audio/exports/bgm_inner.wav",
+      "project/production/experimental/game_feel_01/audio/exports/bgm_menu.wav",
+      "project/production/experimental/game_feel_01/audio/exports/bgm_surface.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_cube_contact.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_cube_roll.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_edge_lean.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_edge_recoil.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_fall_start.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_fall_whoosh.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_goal.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_landing_impact.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_perspective_connect.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_perspective_disconnect.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_ui_back.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_ui_select.wav",
+      "project/production/experimental/game_feel_01/audio/exports/sfx_world_shift.wav",
+      "project/production/experimental/game_feel_01/audio/previews/.gdignore",
+      "project/production/experimental/game_feel_01/audio/previews/asset_audition.wav",
+      "project/production/experimental/game_feel_01/audio/source/.gdignore",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/bgm_complete.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/bgm_discovery.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/bgm_inner.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/bgm_menu.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/bgm_surface.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_contact.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_roll.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_lean.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_recoil.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_start.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_whoosh.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_goal.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_landing_impact.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_connect.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_disconnect.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_back.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_select.wav",
+      "project/production/experimental/game_feel_01/audio/source/pcm24/sfx_world_shift.wav",
+      "project/production/mechanisms/door/door_inner.png",
+      "project/production/mechanisms/door/door_surface.png",
+      "project/production/mechanisms/exit/exit_inner.png",
+      "project/production/mechanisms/exit/exit_surface.png",
+      "project/production/mechanisms/moving_platform/moving_platform_inner.png",
+      "project/production/mechanisms/moving_platform/moving_platform_surface.png",
+      "project/production/mechanisms/pressure_plate/pressure_plate_inner.png",
+      "project/production/mechanisms/pressure_plate/pressure_plate_surface.png",
+      "project/production/mechanisms/rotator/rotator_inner.png",
+      "project/production/mechanisms/rotator/rotator_surface.png",
+      "project/production/sprites/mortis_cube_sheet.png",
+      "project/production/sprites/mutsumi_cube_sheet.png",
+      "project/production/sprites/v2_orientation/mortis/face_front.png",
+      "project/production/sprites/v2_orientation/mortis/face_unmarked.png",
+      "project/production/sprites/v2_orientation/mortis/orientation_atlas.png",
+      "project/production/sprites/v2_orientation/mutsumi/face_front.png",
+      "project/production/sprites/v2_orientation/mutsumi/face_unmarked.png",
+      "project/production/sprites/v2_orientation/mutsumi/orientation_atlas.png",
+      "project/production/sprites/v2_orientation/preview/north_roll_cycle.gif",
+      "project/production/sprites/v2_orientation/preview/stable_orientations.png",
+      "project/production/sprites/v2_orientation/shared/character_face_mask.png",
+      "project/production/tilesets/inner/inner_decorations.png",
+      "project/production/tilesets/inner/inner_tileset.png",
+      "project/production/tilesets/surface/surface_decorations.png",
+      "project/production/tilesets/surface/surface_tileset.png",
+      "project/production/ui/beta_shell_01/.gitattributes",
+      "project/production/ui/beta_shell_01/fonts/.gitattributes",
+      "project/production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+      "project/production/ui/beta_shell_01/fonts/NotoSerifSC.ttf",
+      "project/production/ui/beta_shell_01/previews/l01.png",
+      "project/production/ui/beta_shell_01/surface_identity.png",
+      "project/production/ui/p01/tutorial_keys.png",
+      "project/tests/beta_sprint/game_feel_owner_03/.gitattributes",
+      "project/tests/beta_sprint/pfall_integration/.gitignore",
+      "project/tests/beta_sprint/spatial_integration/.gitignore",
+      "project/tests/beta_sprint/spatial_owner_09/migration_baseline/face_lock_lab.gdvar",
+      "project/tests/beta_sprint/spatial_owner_09/migration_baseline/orientation_loop_lab.gdvar",
+      "project/tests/beta_sprint/spatial_owner_09/migration_baseline/perspective_fork_lab.gdvar",
+      "project/tests/beta_sprint/spatial_owner_09/migration_baseline/rubik_spatial_puzzle_01.gdvar",
+      "project/tests/beta_sprint/spatial_owner_09/migration_baseline/world_shift_gate_lab.gdvar",
+      "project/tests/beta_sprint/spatial_quality/.gitattributes",
+      "project/tests/beta_sprint/spatial_quality/.gitignore",
+      "project/tests/beta_sprint/ui_host_integration/.gitignore",
+      "project/tests/foundation/authoring_acceptance/fixtures/legacy_814a/input.ready",
+      "project/tests/shell/.gitignore",
+      "project/.godot/imported/BG_CH_MORTIS_CUBE_001.glb-2fb61dcdb3aab7af5ad4af5346b63140.scn",
+      "project/.godot/imported/BG_CH_MORTIS_CUBE_001_BG_CH_MORTIS_CUBE_001_basecolor.png-7530a5adb4712d0bc136a61c0f325290.ctex",
+      "project/.godot/imported/BG_CH_MORTIS_CUBE_001_basecolor.png-1984b71a82dbd4964b9bb003f73832e5.ctex",
+      "project/.godot/imported/BG_CH_MORTIS_CUBE_001_mortis_eyes_v03.png-dee231294697840156a5cc5504aa8e69.ctex",
+      "project/.godot/imported/BG_CH_WAKABA_CUBE_001.glb-716955edf4675c9d213d85973ed71caf.scn",
+      "project/.godot/imported/BG_CH_WAKABA_CUBE_001_BG_CH_WAKABA_CUBE_001_basecolor.png-57a780fec3eb98397cb9f741e723713d.ctex",
+      "project/.godot/imported/BG_CH_WAKABA_CUBE_001_basecolor.png-ffee727cbc62a7bdc03bc915c2d8f0f8.ctex",
+      "project/.godot/imported/BG_CH_WAKABA_CUBE_001_source_eyes_v13.png-b1f508635e68490a11378fa99916b2ca.ctex",
+      "project/.godot/imported/BG_ENV_INNER_ARCH_001.glb-148eff6d5240d1f9a2f1586a74ecd682.scn",
+      "project/.godot/imported/BG_ENV_INNER_ARCH_001_BG_ENV_INNER_ARCH_001_basecolor.png-0370982018fab159f8b1bb49faa89698.ctex",
+      "project/.godot/imported/BG_ENV_INNER_ARCH_001_BG_ENV_INNER_ARCH_001_normal.png-e155bb161e5c319c67e8102860dd4926.ctex",
+      "project/.godot/imported/BG_ENV_INNER_ARCH_001_basecolor.png-307fe59ccdab2457f7071566945b2120.ctex",
+      "project/.godot/imported/BG_ENV_INNER_ARCH_001_normal.png-c6a6878e5e6707d7df18ff287410058f.ctex",
+      "project/.godot/imported/BG_ENV_INNER_BRIDGE_001.glb-8e9cedf77303ed4cffa19c6cb1d90daf.scn",
+      "project/.godot/imported/BG_ENV_INNER_BRIDGE_001_BG_ENV_INNER_BRIDGE_001_basecolor.png-56a9035c4d5f1ab1e67f1a93cf33c55d.ctex",
+      "project/.godot/imported/BG_ENV_INNER_BRIDGE_001_BG_ENV_INNER_BRIDGE_001_normal.png-60eae7ba93cff56c187abdb3e49de2e4.ctex",
+      "project/.godot/imported/BG_ENV_INNER_BRIDGE_001_basecolor.png-c4e60091a93d4af973f5fa1c7ef2ea35.ctex",
+      "project/.godot/imported/BG_ENV_INNER_BRIDGE_001_normal.png-03f9a478859ee41271b9936f5f3758b6.ctex",
+      "project/.godot/imported/BG_ENV_INNER_FLOOR_001.glb-6436afba6e790316d19c4e3c78362d68.scn",
+      "project/.godot/imported/BG_ENV_INNER_FLOOR_001_BG_ENV_INNER_FLOOR_001_basecolor.png-0665ab0c15fb9623f3bfd63f44f7c2bc.ctex",
+      "project/.godot/imported/BG_ENV_INNER_FLOOR_001_BG_ENV_INNER_FLOOR_001_normal.png-97152d042f6547341a8f07b3aae222b1.ctex",
+      "project/.godot/imported/BG_ENV_INNER_FLOOR_001_basecolor.png-2e95f14ebfeeb431953939309767ba0a.ctex",
+      "project/.godot/imported/BG_ENV_INNER_FLOOR_001_normal.png-4360c96ec5f8a083f578ac70787af7a5.ctex",
+      "project/.godot/imported/BG_ENV_INNER_PILLAR_001.glb-706718be98da2da605dcb330488dae97.scn",
+      "project/.godot/imported/BG_ENV_INNER_PILLAR_001_BG_ENV_INNER_PILLAR_001_basecolor.png-6251a0cf222c17244f53c45648f79379.ctex",
+      "project/.godot/imported/BG_ENV_INNER_PILLAR_001_BG_ENV_INNER_PILLAR_001_normal.png-cfc611a76f8203e217e79d4a5b277fe2.ctex",
+      "project/.godot/imported/BG_ENV_INNER_PILLAR_001_basecolor.png-3cab6d6772201b18811bbc6f4eb4b01e.ctex",
+      "project/.godot/imported/BG_ENV_INNER_PILLAR_001_normal.png-46237233541e3ac9584223788303e767.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_ARCH_001.glb-860ca6cebb7738bb059a7d6f6c16349f.scn",
+      "project/.godot/imported/BG_ENV_SURFACE_ARCH_001_BG_ENV_SURFACE_ARCH_001_basecolor.png-6927a0fead5e93d01e5532e9dbc18663.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_ARCH_001_BG_ENV_SURFACE_ARCH_001_normal.png-fb521eec725b4c87ac01b941c5c01a29.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_ARCH_001_basecolor.png-bf82f5a71b6adf369adb3a9311b7ce4f.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_ARCH_001_normal.png-57bcd91ca6d64b2cd3a32dbfe28ff361.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_BRIDGE_001.glb-f711bcd705055fb750ab231d0b8a33d4.scn",
+      "project/.godot/imported/BG_ENV_SURFACE_BRIDGE_001_BG_ENV_SURFACE_BRIDGE_001_basecolor.png-4d01bc29b65aea1fa7bebf5427379654.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_BRIDGE_001_BG_ENV_SURFACE_BRIDGE_001_normal.png-9fbad25da9df8d051ae3a8f63eef6644.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_BRIDGE_001_basecolor.png-f59f415928375309e513325d1d8dc468.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_BRIDGE_001_normal.png-23d08588a4da53e9c44fee47672a6a12.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_FLOOR_001.glb-c29734a1ed97bd6fcd1f4939003946e2.scn",
+      "project/.godot/imported/BG_ENV_SURFACE_FLOOR_001_BG_ENV_SURFACE_FLOOR_001_basecolor.png-8b3eb272760c3cf37437790bc2eb97c2.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_FLOOR_001_BG_ENV_SURFACE_FLOOR_001_normal.png-d51a8b3808d2559ad18863f08c05eb8a.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_FLOOR_001_basecolor.png-95b3d99c6c391dae1a00eb42a7871152.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_FLOOR_001_normal.png-0363b7781fa3b47c246f03e2727ec0de.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_PILLAR_001.glb-902ad0334f15635f344b38aeaac5b496.scn",
+      "project/.godot/imported/BG_ENV_SURFACE_PILLAR_001_BG_ENV_SURFACE_PILLAR_001_basecolor.png-09c41e0dea927e402210b132fbd912e3.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_PILLAR_001_BG_ENV_SURFACE_PILLAR_001_normal.png-ae1bc2a74ba452b77987e92eac87a34d.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_PILLAR_001_basecolor.png-c24bebc17c90c77b428b2e1f2f2e5334.ctex",
+      "project/.godot/imported/BG_ENV_SURFACE_PILLAR_001_normal.png-ded7ef61b329c0969710ef644534199e.ctex",
+      "project/.godot/imported/BG_MEC_INNER_EXIT_001.glb-9fa71a4609369e6e6598b02890bcb8ba.scn",
+      "project/.godot/imported/BG_MEC_INNER_EXIT_001_BG_MEC_INNER_EXIT_001_stone.png-10d2f42acd373741d3d5ecdab7263f1b.ctex",
+      "project/.godot/imported/BG_MEC_INNER_EXIT_001_stone.png-0c212a9b772059f6afe91f97f4e034a8.ctex",
+      "project/.godot/imported/BG_MEC_INNER_GATE_001.glb-971846cadd79731a2b97b60042b03636.scn",
+      "project/.godot/imported/BG_MEC_INNER_GATE_001_BG_MEC_INNER_GATE_001_stone.png-530c9fe6e7df244d127ce431baa3ec77.ctex",
+      "project/.godot/imported/BG_MEC_INNER_GATE_001_stone.png-18be1af83c6c6864d01aee7ea16db76f.ctex",
+      "project/.godot/imported/BG_MEC_INNER_PRESSURE_PLATE_001.glb-b5e529c2e3210cc7738e27ca546643a3.scn",
+      "project/.godot/imported/BG_MEC_INNER_PRESSURE_PLATE_001_BG_MEC_INNER_PRESSURE_PLATE_001_stone.png-897546f9159648cb6b5a9596864845ab.ctex",
+      "project/.godot/imported/BG_MEC_INNER_PRESSURE_PLATE_001_stone.png-edf5b5efdde4b9d41246be0b21358de3.ctex",
+      "project/.godot/imported/BG_MEC_INNER_WORLD_SWITCH_001.glb-808b0a4dbe40081db32b9864fff34899.scn",
+      "project/.godot/imported/BG_MEC_INNER_WORLD_SWITCH_001_BG_MEC_INNER_WORLD_SWITCH_001_stone.png-abe738eedd65dc2f3ea0ccd71185c7cc.ctex",
+      "project/.godot/imported/BG_MEC_INNER_WORLD_SWITCH_001_stone.png-a8f30fda9c9512036396f20a3a6af933.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_EXIT_001.glb-e197f9d84320a4253c825eaf297c4c85.scn",
+      "project/.godot/imported/BG_MEC_SURFACE_EXIT_001_BG_MEC_SURFACE_EXIT_001_stone.png-84f631751bd6239bdee6df30b02d47ea.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_EXIT_001_stone.png-0e6d40fd09bb5210fc6a0dbcd107303f.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_GATE_001.glb-e2a6dc7acf50c1c3b1abb9b84a74919c.scn",
+      "project/.godot/imported/BG_MEC_SURFACE_GATE_001_BG_MEC_SURFACE_GATE_001_stone.png-8cf4001311818d800077c7a4372d3f07.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_GATE_001_stone.png-ceb587ac9b421bc7a47bd4ebd443268c.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_PRESSURE_PLATE_001.glb-5b3573ec509b9f270d87c3222d412b6f.scn",
+      "project/.godot/imported/BG_MEC_SURFACE_PRESSURE_PLATE_001_BG_MEC_SURFACE_PRESSURE_PLATE_001_stone.png-298a8b1f5120f3b964aa155cac9868b2.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_PRESSURE_PLATE_001_stone.png-eebe82df68e8250f8e7fb250f05bda57.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_WORLD_SWITCH_001.glb-d316aea0ee1448a875d4b545563a9e8c.scn",
+      "project/.godot/imported/BG_MEC_SURFACE_WORLD_SWITCH_001_BG_MEC_SURFACE_WORLD_SWITCH_001_stone.png-84cfc92b44a8e0d5bb3c9f3fedb07ca6.ctex",
+      "project/.godot/imported/BG_MEC_SURFACE_WORLD_SWITCH_001_stone.png-36a069480be9f2017bb27766940451d6.ctex",
+      "project/.godot/imported/NotoSansSC.ttf-41376857e984a5056c814f635149ddf3.fontdata",
+      "project/.godot/imported/NotoSerifSC.ttf-a295b9d9ed603fd5bbaad20a1e5705ac.fontdata",
+      "project/.godot/imported/TEMP_amb_inner.wav-eba2dc67107620c1888100855bbf8235.sample",
+      "project/.godot/imported/TEMP_amb_surface.wav-a93c1fe437421fe6aba7e9b08c6e64fc.sample",
+      "project/.godot/imported/TEMP_complete.wav-fdc21fedc99088bc00e280f39c0d3cea.sample",
+      "project/.godot/imported/TEMP_door_close.wav-5b50c61b68007e3ace85a29cbe32fc21.sample",
+      "project/.godot/imported/TEMP_door_open.wav-8caced01fd1849e4347a2a8bbb85a0f1.sample",
+      "project/.godot/imported/TEMP_exit_ready.wav-13b2c67b10f8cb4200625a61aa582f6d.sample",
+      "project/.godot/imported/TEMP_land.wav-789c3dba2c210785ff6e567db3461eee.sample",
+      "project/.godot/imported/TEMP_link_off.wav-13ffffd5ce61a793132dfe9fb04b4345.sample",
+      "project/.godot/imported/TEMP_link_on.wav-2c4160e3df5bdc2bb05cd64cb1bc22f8.sample",
+      "project/.godot/imported/TEMP_plate.wav-44307a0d61407561e228dcb2121aa84a.sample",
+      "project/.godot/imported/TEMP_roll.wav-416fb9ca45a2bfa73b0abc4634acb789.sample",
+      "project/.godot/imported/TEMP_rotate.wav-9774570a75a3b06698cfe176557790f2.sample",
+      "project/.godot/imported/TEMP_shift_inner.wav-bde13158f8fa56591c75ec541e2e9e43.sample",
+      "project/.godot/imported/TEMP_shift_surface.wav-2f3153e7ae3e7991b676026d59dcfc6e.sample",
+      "project/.godot/imported/arch.svg-aaf96dfa3b05e74cd39dd8ca720fbd82.ctex",
+      "project/.godot/imported/arrow.svg-287614fd22ad08fc9438e69462d0b021.ctex",
+      "project/.godot/imported/bgm_complete.wav-7d11a1e935f40d39212a8cd234090cae.sample",
+      "project/.godot/imported/bgm_discovery.wav-36fff7555fd5ca0901a9d6e7f4e2ac54.sample",
+      "project/.godot/imported/bgm_inner.wav-5f463d7483b8b5fa48cbe49db6773c3f.sample",
+      "project/.godot/imported/bgm_menu.wav-fc62b3124c6ecf4498113c547cf89365.sample",
+      "project/.godot/imported/bgm_surface.wav-940df6d3b7139fca30d62cc8eead1fe3.sample",
+      "project/.godot/imported/character_face_mask.png-89d159f8fc7d1f69e07265d4b9fa92f2.ctex",
+      "project/.godot/imported/check.svg-cc23e9fee06080285e3d23d37073efbb.ctex",
+      "project/.godot/imported/checked.svg-2111f1e8601a3dc11014934a7daff369.ctex",
+      "project/.godot/imported/door_inner.png-32a9a5519745ae11c805d8195983977a.ctex",
+      "project/.godot/imported/door_surface.png-906e06b4b397a684c4e59b8d30601d2c.ctex",
+      "project/.godot/imported/exit_inner.png-f78f61ca1c66ec506f71eaf9ea3955a0.ctex",
+      "project/.godot/imported/exit_surface.png-9b460ceb6b670585fa2aa101b23520d9.ctex",
+      "project/.godot/imported/face_front.png-2110f86880e9aec720d9a97daf44c4bd.ctex",
+      "project/.godot/imported/face_front.png-b8ffed10bdbe6f03ab4a6f9bb59b0824.ctex",
+      "project/.godot/imported/face_unmarked.png-88eee5ed441143f674d6cb8738d9ad1c.ctex",
+      "project/.godot/imported/face_unmarked.png-eecf875eebbfe0e0f2f3571ea3fe827a.ctex",
+      "project/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+      "project/.godot/imported/icons_source.svg-f1058503dbbb192fce453eaff022fbe0.ctex",
+      "project/.godot/imported/inner_decorations.png-299ff4d9561ed826383413f08b9cf3c4.ctex",
+      "project/.godot/imported/inner_tileset.png-e8b4f426c0358065ea6c43546fed61f1.ctex",
+      "project/.godot/imported/l01.png-873c58b79e5f47f3bf964e4bec24e9e9.ctex",
+      "project/.godot/imported/lock.svg-d3da43232a37cf306acc1ea2d45eb5ad.ctex",
+      "project/.godot/imported/mortis_cube_sheet.png-a56c77fa92b0aad0d541a150bb5a1799.ctex",
+      "project/.godot/imported/mortis_eyes_v03.png-4078951fa6aaabe6c0296327a5b0541b.ctex",
+      "project/.godot/imported/moving_platform_inner.png-5e76010ff23020b3996c96c265566e20.ctex",
+      "project/.godot/imported/moving_platform_surface.png-979ea4b1a070d7b37ea059f575b76e96.ctex",
+      "project/.godot/imported/mutsumi_cube_sheet.png-d805e77c7c3678d88f4c086b80501752.ctex",
+      "project/.godot/imported/orientation_atlas.png-1aac212ba2c048f444c7ea2832847e16.ctex",
+      "project/.godot/imported/orientation_atlas.png-b6c2e5ba51287ca10bd52468ac73c757.ctex",
+      "project/.godot/imported/pause.svg-5de18397d108b743c6d588098ef7c0a5.ctex",
+      "project/.godot/imported/pressure_plate_inner.png-cdc374f4331115126968d75e3dfaa8f9.ctex",
+      "project/.godot/imported/pressure_plate_surface.png-28b89095cbb7762d57620bc207a9fef4.ctex",
+      "project/.godot/imported/quit.svg-ff427987cdccaff51fbb8f4d30a2fd72.ctex",
+      "project/.godot/imported/reset.svg-25bb2c0e78a01fad6d38afa7b2f42d0f.ctex",
+      "project/.godot/imported/return.svg-476327cdc1d9bf34fb3256764f747a8e.ctex",
+      "project/.godot/imported/rotator_inner.png-1538f6609fd61e4d004dfb6fa699d9e8.ctex",
+      "project/.godot/imported/rotator_surface.png-16d720d5b4945c526121deb5ba3bdc18.ctex",
+      "project/.godot/imported/settings.svg-df73fab96d4e66feb51e701c9f31cc57.ctex",
+      "project/.godot/imported/sfx_cube_contact.wav-c746d237c43ed3cbf47232cbc216dc07.sample",
+      "project/.godot/imported/sfx_cube_roll.wav-030e7f6d5221d65420ff75a675dedf41.sample",
+      "project/.godot/imported/sfx_edge_lean.wav-f214671265f92eff0e75ed88020df758.sample",
+      "project/.godot/imported/sfx_edge_recoil.wav-c877881e00e39da0977004b1dbd15b98.sample",
+      "project/.godot/imported/sfx_fall_start.wav-bc5425937bbcc0b71ff38c38636b573e.sample",
+      "project/.godot/imported/sfx_fall_whoosh.wav-a4011e1afaa35bde8493ac1f22e26af5.sample",
+      "project/.godot/imported/sfx_goal.wav-657330f34d450cd7b2df6a721cbd394a.sample",
+      "project/.godot/imported/sfx_landing_impact.wav-0aa82974080281dd588fdb6d5fd9064c.sample",
+      "project/.godot/imported/sfx_perspective_connect.wav-4f3b91c1c5833e9b75ed04adccf0ebef.sample",
+      "project/.godot/imported/sfx_perspective_disconnect.wav-27c3512bb4a10b10b02a98e1b7e68dfe.sample",
+      "project/.godot/imported/sfx_ui_back.wav-013b6b155143c7285a0b80586c2953c0.sample",
+      "project/.godot/imported/sfx_ui_select.wav-b6f6c0c4c5fc39bdf431f2e33ce1991d.sample",
+      "project/.godot/imported/sfx_world_shift.wav-286e3707c66cbd5b6188caa5601558fa.sample",
+      "project/.godot/imported/slider_grab.svg-253de79896623c59ebd66fd09b821919.ctex",
+      "project/.godot/imported/source_eyes_v13.png-cba16e4e21361ad76f12397c8e23d556.ctex",
+      "project/.godot/imported/stable_orientations.png-b4d15f2c7629463f1d2756270701e0e0.ctex",
+      "project/.godot/imported/steps.svg-a589b9d19d591fe1799845b3df805b0f.ctex",
+      "project/.godot/imported/surface_decorations.png-94a9fd6adf7a8b2ce844c8d0eb238e22.ctex",
+      "project/.godot/imported/surface_identity.png-6567edcfe90dd3126424da54155d736a.ctex",
+      "project/.godot/imported/surface_tileset.png-b7eb0b63b021bac4e3fc114c56f82e77.ctex",
+      "project/.godot/imported/tutorial_keys.png-b3b1c163369389635419a8e22e21714d.ctex",
+      "project/.godot/imported/unchecked.svg-171a913864848f9602406f9dea77d0bc.ctex",
+      "project/.godot/uid_cache.bin"
+    ],
+    "checked_text_manifest_drift": [],
+    "text_search_terms": [
+      "design/states/face_lock_D.svg",
+      "design/states/face_lock_D.png",
+      "reports/DRAWING_CONTACT_SHEET.png",
+      "face_lock_D.svg",
+      "face_lock_D.png",
+      "DRAWING_CONTACT_SHEET.png",
+      "GAME_ART_MECHANICS_BATCH_01",
+      "MECHANICS_ART_DESIGN_REVIEW_01",
+      "E:/Study/方块娘项目/若叶睦/model/art/production/work"
+    ],
+    "text_hits": [
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/EXTERNAL_WRITE_MANIFEST.json",
+        "line": 3,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01",
+          "E:/Study/方块娘项目/若叶睦/model/art/production/work"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "  \"post_edit_backup_directory\": \"E:\\\\Study\\\\方块娘项目\\\\若叶睦\\\\model\\\\art\\\\production\\\\work\\\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/EXTERNAL_WRITE_MANIFEST.json",
+        "line": 38,
+        "terms": [
+          "design/states/face_lock_D.svg",
+          "face_lock_D.svg"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "      \"path\": \"design\\\\states\\\\face_lock_D.svg\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/EXTERNAL_WRITE_MANIFEST.json",
+        "line": 43,
+        "terms": [
+          "design/states/face_lock_D.png",
+          "face_lock_D.png"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "      \"path\": \"design\\\\states\\\\face_lock_D.png\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/EXTERNAL_WRITE_MANIFEST.json",
+        "line": 298,
+        "terms": [
+          "MECHANICS_ART_DESIGN_REVIEW_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "      \"path\": \"MECHANICS_ART_DESIGN_REVIEW_01.html\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/EXTERNAL_WRITE_MANIFEST.json",
+        "line": 303,
+        "terms": [
+          "reports/DRAWING_CONTACT_SHEET.png",
+          "DRAWING_CONTACT_SHEET.png"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "      \"path\": \"reports\\\\DRAWING_CONTACT_SHEET.png\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/SCOPE_DEVIATION.md",
+        "line": 7,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "上下文恢复后，我误把聊天中旧的 `GAME_ART_MECHANICS_BATCH_01_FULL_PRODUCTION` 附件当作当前工作继续处理。在当前 acceptance_01 任务只授权文档的情况下，读取并修改了外部旧设计包。未收到本次验收阶段允许这些外部编辑的新真人授权。先前所称“独立授权工作”不准确，现明确更正。"
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/SCOPE_DEVIATION.md",
+        "line": 13,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01",
+          "E:/Study/方块娘项目/若叶睦/model/art/production/work"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "外部根目录：`E:/Study/方块娘项目/若叶睦/model/art/production/work/GAME_ART_MECHANICS_BATCH_01`。"
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/SCOPE_DEVIATION.md",
+        "line": 16,
+        "terms": [
+          "reports/DRAWING_CONTACT_SHEET.png",
+          "DRAWING_CONTACT_SHEET.png"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "2. 实际运行该脚本，写出 28 组 SVG/PNG（56 个文件）、`design/revisions/DRAWING_INDEX.json`、根目录 HTML 图册、`reports/DRAWING_CONTACT_SHEET.png`，合计 59 个导出文件。"
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/SCOPE_DEVIATION.md",
+        "line": 23,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01",
+          "E:/Study/方块娘项目/若叶睦/model/art/production/work"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "- 在此前不存在的独立目录 `E:/Study/方块娘项目/若叶睦/model/art/production/work/GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013` 备份 61 个**修改后**文件，逐项核对 SHA256。它不是修改前备份。"
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/SUPPORT_AUDIT.json",
+        "line": 13,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "        \"path\": \"E:\\\\godot\\\\若叶睦\\\\方块少女-若叶睦\\\\docs\\\\art\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH_REPORT.md\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/SUPPORT_AUDIT.json",
+        "line": 17,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "        \"path\": \"E:\\\\godot\\\\若叶睦\\\\方块少女-若叶睦\\\\docs\\\\art\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\\\REVIEW_DECISION_02.md\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/SUPPORT_AUDIT.json",
+        "line": 21,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "        \"path\": \"E:\\\\godot\\\\若叶睦\\\\方块少女-若叶睦\\\\docs\\\\art\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\\\ASSET_REUSE_AUDIT.csv\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/SUPPORT_AUDIT.json",
+        "line": 25,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "        \"path\": \"E:\\\\godot\\\\若叶睦\\\\方块少女-若叶睦\\\\docs\\\\art\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\\\face_identity_refinement_03\\\\REFINEMENT_REPORT.md\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/SUPPORT_AUDIT.json",
+        "line": 29,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "        \"path\": \"E:\\\\godot\\\\若叶睦\\\\方块少女-若叶睦\\\\docs\\\\art\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\\\face_identity_refinement_03\\\\FACE_SYMBOL_MAPPING.json\","
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/SUPPORT_AUDIT.json",
+        "line": 33,
+        "terms": [
+          "GAME_ART_MECHANICS_BATCH_01"
+        ],
+        "classification": "DOCUMENTATION_MENTION",
+        "text": "        \"path\": \"E:\\\\godot\\\\若叶睦\\\\方块少女-若叶睦\\\\docs\\\\art\\\\GAME_ART_MECHANICS_BATCH_01_RESEARCH\\\\face_identity_refinement_02\\\\LOCAL_FACE_MAPPING_REQUIREMENTS.md\","
+      }
+    ],
+    "non_documentation_hits": [],
+    "static_res_literal_closure_files": [
+      "experiments/game_feel_01/host/core_lab.gd",
+      "experiments/game_feel_01/maps/map_factory.gd",
+      "experiments/spatial_puzzle_batch_01/host/spatial_audio_bridge.gd",
+      "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+      "experiments/spatial_puzzle_batch_01/maps/map_factory.gd",
+      "experiments/spatial_puzzle_batch_01/maps/saved_authoring.gd",
+      "experiments/spatial_puzzle_batch_01/ui/main.gd",
+      "experiments/spatial_puzzle_batch_01/ui/main.tscn",
+      "experiments/spatial_puzzle_batch_01/ui/progress_adapter.gd",
+      "foundation/authoring/authoring_adapter.gd",
+      "foundation/authoring/authoring_schema.gd",
+      "foundation/authoring/document_projector.gd",
+      "foundation/authoring/payload_assembler.gd",
+      "foundation/authoring/source_map.gd",
+      "foundation/celestial/celestial_rules.gd",
+      "foundation/celestial/logical_lighting.gd",
+      "foundation/contracts/contract_records.gd",
+      "foundation/contracts/contract_validation.gd",
+      "foundation/contracts/foundation_types.gd",
+      "foundation/contracts/state_key.gd",
+      "foundation/game_feel/fall_permission.gd",
+      "foundation/game_feel/runtime_facade.gd",
+      "foundation/game_feel/schema.gd",
+      "foundation/game_feel/trajectory_profile.gd",
+      "foundation/game_feel/trajectory_sweep.gd",
+      "foundation/game_feel/view_contract.gd",
+      "foundation/level/authoring_reader.gd",
+      "foundation/level/level_baker.gd",
+      "foundation/level/level_codec.gd",
+      "foundation/orientation/discrete_orientation.gd",
+      "foundation/quality/intent/intent_types.gd",
+      "foundation/rules/connectivity_resolver.gd",
+      "foundation/rules/derived_state_resolver.gd",
+      "foundation/rules/goal_evaluator.gd",
+      "foundation/rules/mechanism_effects.gd",
+      "foundation/rules/puzzle_rule_kernel.gd",
+      "foundation/rules/rule_records.gd",
+      "foundation/rules/rule_types.gd",
+      "foundation/rules/spatial_puzzle_rules.gd",
+      "foundation/rules/transition_permission.gd",
+      "foundation/runtime/input_mapper.gd",
+      "foundation/runtime/kernel_port.gd",
+      "foundation/runtime/runtime_session.gd",
+      "foundation/spatial/mapping_query.gd",
+      "foundation/spatial/spatial_validation.gd",
+      "foundation/spatial/surface_geometry.gd",
+      "foundation/validation/safety_queries.gd",
+      "foundation/validation/static_validator.gd",
+      "foundation/validation/validation_types.gd",
+      "game/feel/animation/edge_recoil/edge_admission.gd",
+      "game/feel/animation/edge_recoil/edge_event.gd",
+      "game/feel/animation/edge_recoil/edge_lean.gd",
+      "game/feel/animation/edge_recoil/recoil_motion.gd",
+      "game/feel/animation/fall_landing/fall_motion.gd",
+      "game/feel/animation/fall_landing/fall_visual_state.gd",
+      "game/feel/animation/fall_landing/landing_motion.gd",
+      "game/feel/animation/fall_landing/motion_parameters.gd",
+      "game/feel/audio/audio_director.gd",
+      "game/feel/audio/event_policy.gd",
+      "game/feel/cube_presenter.gd",
+      "game/feel/ui/game_feel_ui.gd",
+      "game/feel/ui/motion_row.gd",
+      "game/levels/mutsumi/batch_01/content_board.gd",
+      "game/levels/mutsumi/batch_01/content_hints.gd",
+      "game/levels/mutsumi/batch_01/content_level.gd",
+      "game/levels/mutsumi/batch_01/content_level_data.gd",
+      "game/levels/mutsumi/batch_01/content_state.gd",
+      "game/levels/mutsumi/batch_01/l01_3d/l01_presented.gd",
+      "game/levels/mutsumi/batch_01/l01_3d/presenter.gd",
+      "game/levels/mutsumi/batch_01/l01_another_world.tres",
+      "game/levels/mutsumi/batch_01/l01_another_world.tscn",
+      "game/levels/mutsumi/batch_01/l02_between_shores.tres",
+      "game/levels/mutsumi/batch_01/l02_between_shores.tscn",
+      "game/levels/mutsumi/batch_01/l03_lines_meet.tres",
+      "game/levels/mutsumi/batch_01/l03_lines_meet.tscn",
+      "game/levels/mutsumi/batch_01/level_order.json",
+      "game/levels/mutsumi/batch_01/levels_3d/presented_level.gd",
+      "game/levels/mutsumi/batch_01/levels_3d/presenter.gd",
+      "game/levels/mutsumi/batch_02/batch_02_hints.gd",
+      "game/levels/mutsumi/batch_02/batch_02_level.gd",
+      "game/levels/mutsumi/batch_02/l04_borrowed_path.tres",
+      "game/levels/mutsumi/batch_02/l04_borrowed_path.tscn",
+      "game/levels/mutsumi/batch_02/l05_gate_home.tres",
+      "game/levels/mutsumi/batch_02/l05_gate_home.tscn",
+      "game/levels/mutsumi/batch_02/levels_3d/presented_level.gd",
+      "game/levels/mutsumi/batch_02/levels_3d/presenter.gd",
+      "game/levels/mutsumi/p01_another_world.gd",
+      "game/levels/mutsumi/p01_board.gd",
+      "game/levels/mutsumi/p01_hints.gd",
+      "game/levels/mutsumi/p01_state.gd",
+      "game/player/cube_visual_presenter.gd",
+      "game/player/grid_input.gd",
+      "game/player/orientation_sprite_presenter.gd",
+      "game/polish/p01_audio.gd",
+      "game/polish/p01_completion_view.gd",
+      "game/polish/p01_feedback.gd",
+      "game/polish/p01_polish.gd",
+      "game/polish/p01_tutorial_view.gd",
+      "game/polish/pixel_dissolve.gdshader",
+      "game/shell/game_feel_host.gd",
+      "game/shell/game_feel_lab.gd",
+      "game/shell/game_feel_lab.tscn",
+      "game/shell/game_feel_shell.gd",
+      "game/shell/game_feel_shell.tscn",
+      "game/shell/game_shell.gd",
+      "game/shell/level_adapter.gd",
+      "game/shell/level_catalog.gd",
+      "game/shell/save_store.gd",
+      "game/shell/settings.gd",
+      "game/shell/shell_input.gd",
+      "game/shell/visual_01/approved_shell_view.gd",
+      "game/shell/visual_01/hint_strip.gd",
+      "game/shell/visual_01/hud.gd",
+      "game/shell/visual_01/stone_check.gd",
+      "game/shell/visual_01/stone_row.gd",
+      "game/shell/visual_01/stone_slider.gd",
+      "game/shell/visual_01/tokens.gd",
+      "icon.svg",
+      "production/art_3d/world_shift/reconstruction.gdshader",
+      "production/audio/p01/TEMP_amb_inner.wav",
+      "production/audio/p01/TEMP_amb_surface.wav",
+      "production/audio/p01/TEMP_complete.wav",
+      "production/audio/p01/TEMP_door_close.wav",
+      "production/audio/p01/TEMP_door_open.wav",
+      "production/audio/p01/TEMP_exit_ready.wav",
+      "production/audio/p01/TEMP_land.wav",
+      "production/audio/p01/TEMP_link_off.wav",
+      "production/audio/p01/TEMP_link_on.wav",
+      "production/audio/p01/TEMP_plate.wav",
+      "production/audio/p01/TEMP_roll.wav",
+      "production/audio/p01/TEMP_rotate.wav",
+      "production/audio/p01/TEMP_shift_inner.wav",
+      "production/audio/p01/TEMP_shift_surface.wav",
+      "production/audio/p01/manifest.json",
+      "production/experimental/game_feel_01/audio/exports/bgm_complete.wav",
+      "production/experimental/game_feel_01/audio/exports/bgm_discovery.wav",
+      "production/experimental/game_feel_01/audio/exports/bgm_inner.wav",
+      "production/experimental/game_feel_01/audio/exports/bgm_menu.wav",
+      "production/experimental/game_feel_01/audio/exports/bgm_surface.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_cube_contact.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_cube_roll.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_edge_lean.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_edge_recoil.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_fall_start.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_fall_whoosh.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_goal.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_landing_impact.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_perspective_connect.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_perspective_disconnect.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_ui_back.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_ui_select.wav",
+      "production/experimental/game_feel_01/audio/exports/sfx_world_shift.wav",
+      "production/experimental/game_feel_01/audio/manifest.json",
+      "production/experimental/game_feel_01/audio/source/pcm24/bgm_complete.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/bgm_discovery.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/bgm_inner.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/bgm_menu.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/bgm_surface.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_contact.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_cube_roll.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_lean.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_edge_recoil.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_start.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_fall_whoosh.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_goal.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_landing_impact.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_connect.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_perspective_disconnect.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_back.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_ui_select.wav",
+      "production/experimental/game_feel_01/audio/source/pcm24/sfx_world_shift.wav",
+      "production/mechanisms/door/Door.tscn",
+      "production/mechanisms/door/door.gd",
+      "production/mechanisms/door/door_surface.png",
+      "production/mechanisms/exit/ExitGoal.tscn",
+      "production/mechanisms/exit/exit.gd",
+      "production/mechanisms/exit/exit_surface.png",
+      "production/mechanisms/mechanism_visual.gd",
+      "production/mechanisms/pressure_plate/PressurePlate.tscn",
+      "production/mechanisms/pressure_plate/pressure_plate.gd",
+      "production/mechanisms/pressure_plate/pressure_plate_surface.png",
+      "production/sprites/v2_orientation/mortis/orientation_atlas.png",
+      "production/sprites/v2_orientation/mutsumi/orientation_atlas.png",
+      "production/sprites/v2_orientation/shared/orientation_sprite_manifest.json",
+      "production/tilesets/inner/inner_tileset.png",
+      "production/tilesets/surface/surface_tileset.png",
+      "production/ui/p01/tutorial_keys.png",
+      "project.godot",
+      "prototype/perspective/connectivity.gd",
+      "prototype/perspective/cube_orientation.gd",
+      "prototype/perspective/cube_visual.gd",
+      "prototype/perspective/grid_movement.gd",
+      "prototype/perspective/perspective_anchor.gd",
+      "prototype/perspective/perspective_controller.gd",
+      "prototype/perspective/perspective_link.gd",
+      "tests/foundation/level/baker_fixture.gd"
+    ],
+    "static_res_literal_unresolved": [
+      {
+        "from": "experiments/game_feel_01/maps/map_factory.gd",
+        "literal": "res://experiments/game_feel_01/maps/map_"
+      },
+      {
+        "from": "game/shell/visual_01/tokens.gd",
+        "literal": "res://production/ui/beta_shell_01/"
+      },
+      {
+        "from": "game/levels/mutsumi/batch_01/l01_3d/presenter.gd",
+        "literal": "res://production/art_3d/"
+      },
+      {
+        "from": "experiments/spatial_puzzle_batch_01/maps/saved_authoring.gd",
+        "literal": "res://experiments/spatial_puzzle_batch_01/maps/authoring/"
+      },
+      {
+        "from": "foundation/authoring/authoring_schema.gd",
+        "literal": "res://foundation/authoring/"
+      }
+    ],
+    "static_closure_keyword_hits": [],
+    "static_trace_limit": "Textual res:// literal closure includes comments/strings and excludes dynamic concatenation/UID resolution/native loaders; not an executed runtime trace or proof about arbitrary external I/O. Complete listed text scan separately checks basename, relative path, work-package name and external-root literals. On-disk unmanifested files/caches/user saves not scanned.",
+    "selected_baseline_source_compatibility": [
+      {
+        "path": "project.godot",
+        "baseline_git_blob_sha256": "6075f841f67c1269c119f2fef1996ce68565fb70dd204a4635067069d3bdafb2",
+        "build_sha256": "6075f841f67c1269c119f2fef1996ce68565fb70dd204a4635067069d3bdafb2",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "experiments/spatial_puzzle_batch_01/ui/main.tscn",
+        "baseline_git_blob_sha256": "cdb1781fcf210f6def1788d881b3ae52b55227e6671e721645acf9994c6ff393",
+        "build_sha256": "cdb1781fcf210f6def1788d881b3ae52b55227e6671e721645acf9994c6ff393",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "experiments/spatial_puzzle_batch_01/ui/main.gd",
+        "baseline_git_blob_sha256": "af74a0a47b20498f3c794987f5117bc2bcb0046f863ed42169c0624701c54d67",
+        "build_sha256": "af74a0a47b20498f3c794987f5117bc2bcb0046f863ed42169c0624701c54d67",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+        "baseline_git_blob_sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+        "build_sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "experiments/game_feel_01/host/core_lab.gd",
+        "baseline_git_blob_sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+        "build_sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "experiments/spatial_puzzle_batch_01/maps/map_factory.gd",
+        "baseline_git_blob_sha256": "71e86e95f2605a47bd67b8fb20be1c0a5aba91606504174ee0991a3b25099839",
+        "build_sha256": "71e86e95f2605a47bd67b8fb20be1c0a5aba91606504174ee0991a3b25099839",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "foundation/celestial/logical_lighting.gd",
+        "baseline_git_blob_sha256": "43b1ecd083e8b3a254a7c4b98c2af3f55259c4b3bd9a2af975964c1b81b52534",
+        "build_sha256": "43b1ecd083e8b3a254a7c4b98c2af3f55259c4b3bd9a2af975964c1b81b52534",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      },
+      {
+        "path": "foundation/rules/puzzle_rule_kernel.gd",
+        "baseline_git_blob_sha256": "8ff2b1c04b4efa62117eb0929f12ba8b487ad6abfe18bb61cb09faf776592d2b",
+        "build_sha256": "8ff2b1c04b4efa62117eb0929f12ba8b487ad6abfe18bb61cb09faf776592d2b",
+        "raw_equal": true,
+        "lf_normalized_equal": true
+      }
+    ],
+    "new_game_run": "NOT_RUN_BY_THIS_SUBTASK",
+    "input_p1": "CLOSED_UNCHANGED",
+    "dynamic_path_manual_review": {
+      "path": "project/experiments/spatial_puzzle_batch_01/maps/saved_authoring.gd",
+      "lines": [
+        7,
+        10,
+        20,
+        21,
+        22,
+        41
+      ],
+      "result": "IDS enumerates five maps; forms in-project authoring level.tscn; enumerates only tscn/tres there; no external design path observed",
+      "not_a_general_dynamic_io_proof": true
+    }
+  },
+  "external_read_only_before_after": {
+    "watched_files": 10,
+    "before": {
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.svg": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.png": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\reports\\DRAWING_CONTACT_SHEET.png": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\design\\states\\face_lock_D.svg": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\design\\states\\face_lock_D.png": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\reports\\DRAWING_CONTACT_SHEET.png": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\scripts\\build_boards.cjs": "bf4351a481015c2ad347c1d429d62a69a2437a4e3fe8526b63e5532df2c39fcb",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\scripts\\build_boards.cjs": "16af8db73d935af9f839f2446c9008781946da17b6260c6f272c345777027d14",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\tests\\PACKAGE_SHA256.json": "0a4eba41609a75ecda0dbdc33979da543968bf613f3f37a6dba4f77c10f62313",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\revisions\\DRAWING_INDEX.json": "698e5377c5f04b378d74d8a3252367326cacbb7bc6de93e5a95552e7572e5455"
+    },
+    "after": {
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.svg": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\states\\face_lock_D.png": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\reports\\DRAWING_CONTACT_SHEET.png": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\design\\states\\face_lock_D.svg": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\design\\states\\face_lock_D.png": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\reports\\DRAWING_CONTACT_SHEET.png": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\scripts\\build_boards.cjs": "bf4351a481015c2ad347c1d429d62a69a2437a4e3fe8526b63e5532df2c39fcb",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013\\scripts\\build_boards.cjs": "16af8db73d935af9f839f2446c9008781946da17b6260c6f272c345777027d14",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\tests\\PACKAGE_SHA256.json": "0a4eba41609a75ecda0dbdc33979da543968bf613f3f37a6dba4f77c10f62313",
+      "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\design\\revisions\\DRAWING_INDEX.json": "698e5377c5f04b378d74d8a3252367326cacbb7bc6de93e5a95552e7572e5455"
+    },
+    "drift": []
+  },
+  "recovery_performed": false,
+  "original_content_vs_metadata_limit": "Original SHA mismatch proves file bytes changed, not that PNG pixels necessarily differ; original bytes absent, no original PNG chunk/pixel comparison possible. Current PNG ancillary chunks listed for inspection only; layout changes corroborated by scripts/current SVG and prior incident."
+}
