@@ -1,0 +1,72 @@
+{
+  "task": "SPATIAL_PUZZLE_ACCEPTANCE_CONTINUATION_02",
+  "base": "295a4702aeb17d6fced11cfdaa221e0ffa90dd12",
+  "review_mode": "READ_ONLY_SOURCE_AND_EXISTING_PIXELS",
+  "roof": {
+    "cube_id": "roof",
+    "layer": 0,
+    "center2": [
+      2,
+      12,
+      0
+    ],
+    "occludes_light": true,
+    "faces": [
+      {
+        "resource": "Resource_pgcn3",
+        "face": 1,
+        "walkable": "false"
+      },
+      {
+        "resource": "Resource_6jsce",
+        "face": 5,
+        "walkable": "false"
+      },
+      {
+        "resource": "Resource_gcyg5",
+        "face": 0,
+        "walkable": "false"
+      },
+      {
+        "resource": "Resource_sfy0c",
+        "face": 2,
+        "walkable": "false"
+      },
+      {
+        "resource": "Resource_1g34k",
+        "face": 3,
+        "walkable": "false"
+      },
+      {
+        "resource": "Resource_torxl",
+        "face": 4,
+        "walkable": "false"
+      }
+    ]
+  },
+  "rendered_coverage_observed": [
+    "historical Surface EAST 1280x720 initial view"
+  ],
+  "other_camera_coverage": "UNKNOWN_NOT_INSPECTED",
+  "new_build_graphical": "NOT_RUN",
+  "runtime_ablation": "NOT_RUN; static rule/geometry argument only",
+  "source_sha256": {
+    "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+    "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/level.tscn": "c5f845d358b43278e0290f36fb5afe2541e5be375a045f17fef2465f1e7eb931",
+    "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/inner.tscn": "7418bfb3a7f3b18bf8c0a55b1a2f8bcb38fab81437f161c96bc64f8c5bf086d1",
+    "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+    "experiments/game_feel_01/host/core_lab.gd": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+    "foundation/rules/puzzle_rule_kernel.gd": "8ff2b1c04b4efa62117eb0929f12ba8b487ad6abfe18bb61cb09faf776592d2b",
+    "foundation/rules/derived_state_resolver.gd": "818e505cec058f4e4d184982a8cd6dc274129303264a9d7c2185bd585304ee16",
+    "foundation/celestial/logical_lighting.gd": "43b1ecd083e8b3a254a7c4b98c2af3f55259c4b3bd9a2af975964c1b81b52534",
+    "foundation/spatial/surface_geometry.gd": "74678e85217833b1bb30e038ccbaddbd2d057885eeb38d02c766dbf07967c79a",
+    "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/FINAL_REPORT.md": "6eb67df8134b3e49ec42e3b564ad372c47b4e2c99af157857eef242827105777",
+    "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/human_qa/USER_FEEDBACK_05.md": "b302b15e1877039781a9ad5387ca05ece72e357793bf7396ca67d8a1a59f2380",
+    "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/diagnostics/report.json": "8c44731faa48f1e212bc677ea9603cc7385c37fc865cc0a8c26cf4fcba73a31f",
+    "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/world_shift_gate_lab_1280x720.png": "7e1b29b84dd8f0988a715752f78ccd99ec3db1b7bbe9d97bb61528d65a541c4d",
+    "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/process.json": "f2237de139f2126a22d3bcc57b80da444801c312b9afd0ebfa75c02d93982cdf",
+    "docs/beta-sprint/spatial-puzzle-batch-01/evidence/package_graphical_01/world_shift_gate_lab_1280x720.png": "7e1b29b84dd8f0988a715752f78ccd99ec3db1b7bbe9d97bb61528d65a541c4d",
+    "docs/beta-sprint/spatial-puzzle-batch-01/maps/SCHEMA4_MAP_DESIGN.md": "e275003f44911f6ddb37926ebd0566ebeb6db7f6181b181c8210770b35d05fb7",
+    "docs/beta-sprint/spatial-puzzle-batch-01/art/acceptance_01/ART_READABILITY_ACCEPTANCE_REPORT.md": "59ddefcc62f55f717517e4eadac3cd8a659bea5480ee7d2463ceb130b740944e"
+  }
+}
