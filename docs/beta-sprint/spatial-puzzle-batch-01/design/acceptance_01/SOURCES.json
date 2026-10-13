@@ -105,11 +105,11 @@
   "delivered_markdown": [
     {
       "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
-      "repository_bytes": 13254,
-      "repository_sha256": "e2b0f6068dfc840da458b3025f9b1b38902050bf43742565926ed0a83f5afad1",
+      "repository_bytes": 14152,
+      "repository_sha256": "34f5f7f17267a022b59463eaaa0a5b56830ba35fea4bac65c170a66282664969",
       "obsidian_relative_path": "认知验收-20261013/COGNITIVE_ACCEPTANCE.md",
-      "obsidian_bytes": 13430,
-      "obsidian_sha256": "39153285186d50dc627394f2803c18a18b643065d971bf9eb82a5e0c491df3f2",
+      "obsidian_bytes": 14328,
+      "obsidian_sha256": "ec7f23bae8af4bb21bee8714e60973a6110f787da8b44392e856a1a7b812a928",
       "mirror_difference": "Only existing repository-report links made absolute for Obsidian"
     },
     {
@@ -155,6 +155,15 @@
       "obsidian_relative_path": "认知验收-20261013/USER_FEEDBACK_SCOPE_UPDATE.md",
       "obsidian_bytes": 3755,
       "obsidian_sha256": "2cb932189d433ddc6d156c97c38d2812dd6b3c96caf2885295ed0e5274c4a861",
+      "mirror_difference": "NONE"
+    },
+    {
+      "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/ROOF_IDENTITY_CLARIFICATION.md",
+      "repository_bytes": 2435,
+      "repository_sha256": "d01f6180b33aa0d126418041723669ae4ffe9e642e96cff8843112c64a2a1628",
+      "obsidian_relative_path": "认知验收-20261013/ROOF_IDENTITY_CLARIFICATION.md",
+      "obsidian_bytes": 2435,
+      "obsidian_sha256": "d01f6180b33aa0d126418041723669ae4ffe9e642e96cff8843112c64a2a1628",
       "mirror_difference": "NONE"
     }
   ],
@@ -276,6 +285,16 @@
       "record_id": "UF004_BOTH_WORLDS",
       "user_item_id": "01a13567-f748-78c0-b05e-923a99f3cea8",
       "quote_utf8_no_newline_sha256": "9ffe0cfe25ed95505c099fdebed5d935055949f1147894ea8e015fe21388f891"
+    },
+    {
+      "record_id": "UF005_ROOF_CONFIRMED",
+      "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+      "turn_id": "01a13547-835b-7402-b23c-5884a7b30893",
+      "user_item_id": "01a1357d-8af8-75c1-baea-a65d61ce1445",
+      "quote_utf8_no_newline_sha256": "f6fa6f9330d4c9f311119831257f03eac64e690bfc1374e4aab622302c846638",
+      "source_verification": "Actual00 user reply to the specifically described overhead object",
+      "registered_at": "2026-10-13T21:41:01+08:00",
+      "actual_event_time": "UNKNOWN"
     }
   ],
   "latest_observation_status": {
@@ -283,9 +302,9 @@
     "first_time_comprehension": "NOT_VERIFIED",
     "H1_H6": "NOT_OBSERVED",
     "structured_sessions_received": 0,
-    "feedback_messages_received": 4,
+    "feedback_messages_received": 5,
     "map_layer_camera_eligibility": "UNKNOWN",
-    "gameplay_bug": "CONTROL_DEFECT_REPRODUCED; overhead target remains unlocalized",
+    "gameplay_bug": "Input defect repaired in source integration; roof issue classified readability, not new traversal defect",
     "integration": "PENDING_00",
     "control_defect": {
       "id": "SPATIAL-CARDINAL-01",
@@ -297,15 +316,21 @@
       "failure_groups": 4,
       "request_rows": 32,
       "leaked_object_instances": 8,
-      "fix_acceptance": "PENDING",
-      "human_or_graphical": "NOT_ESTABLISHED_BY_DIAGNOSTIC"
+      "fix_acceptance": "SOURCE_INTEGRATED_HEADLESS_MENU612_PASS; PACKAGE_GRAPHICAL_HUMAN_PENDING",
+      "human_or_graphical": "NOT_ESTABLISHED_BY_DIAGNOSTIC",
+      "runtime_fix": "3a87dfbab4d30753f53b2bf4f88862854a91d328",
+      "production_integration": "31be5bd8de001bc216fbb3dab2106c36f2316d62",
+      "green_evidence_commit": "0bb0e01742eacf12272956111cd6b86fdc74f819"
     },
-    "overhead_target": "UNIDENTIFIED_TARGET",
+    "overhead_target": "NOW_CONFIRMED_ROOF",
     "environment": "COORDINATOR_REPORTED_CONTEXT; profile completed does not verify eligible first-time completion",
     "user_reported_layers": "Surface and Inner",
-    "technical_verified_layers": "Inner only at evidence89ebf7a",
-    "overhead_context": "User reports Surface; target identity remains UNKNOWN",
-    "expanded_menu_keyboard_red": "COORDINATOR_REPORTED_RUNNING; NO_NEW_RECEIPT"
+    "technical_verified_layers": "Historical89 failure limited toInner; source integrated612 keyboard headless coversSurface+Inner, not Graphical/Human",
+    "overhead_context": "Surface roof, nonwalkable occluder; user attempted ascent = readability feedback, not traversal/goal FAIL",
+    "expanded_menu_keyboard_red": "COORDINATOR_REPORTED_RUNNING; NO_NEW_RECEIPT",
+    "roof_help_exposure": "COORDINATOR_EXPLAINED_AFTER_IDENTIFICATION; P3 for roof-related understanding, not unaided comprehension",
+    "new_build": "COORDINATOR_REPORTED_ASSEMBLING; NO_PACKAGE_RECEIPT",
+    "graphical": "NOT_RUN_USER_RESERVED_GUI"
   },
   "status_resolution": "Original observations/documentation_verification are preparation history at f4f4156. Latest observation status adds unverified user feedback only; it does not confirm H1-H6 or overwrite earlier NOT_RUN.",
   "feedback_update_base_commit": "f4f4156a1229b57153932651f6730fc895e82fe3",
@@ -375,6 +400,94 @@
           "mirror_difference": "NONE"
         }
       ]
+    },
+    {
+      "commit": "d6508e554eca3aa17707e37d74872ae3039749f6",
+      "latest_observation_status": {
+        "human_qa": "PARTIAL_USER_FEEDBACK",
+        "first_time_comprehension": "NOT_VERIFIED",
+        "H1_H6": "NOT_OBSERVED",
+        "structured_sessions_received": 0,
+        "feedback_messages_received": 4,
+        "map_layer_camera_eligibility": "UNKNOWN",
+        "gameplay_bug": "CONTROL_DEFECT_REPRODUCED; overhead target remains unlocalized",
+        "integration": "PENDING_00",
+        "control_defect": {
+          "id": "SPATIAL-CARDINAL-01",
+          "status": "REPRODUCED_TECHNICAL_FAILURE",
+          "severity": "P1_COORDINATOR_TRIAGED",
+          "evidence_commit": "89ebf7a60e405d7617298e49a3f43e3461e38376",
+          "execution_head": "a9ecfb46f1a2d4efd20042586fbc690066cabfaa",
+          "exit_code": 1,
+          "failure_groups": 4,
+          "request_rows": 32,
+          "leaked_object_instances": 8,
+          "fix_acceptance": "PENDING",
+          "human_or_graphical": "NOT_ESTABLISHED_BY_DIAGNOSTIC"
+        },
+        "overhead_target": "UNIDENTIFIED_TARGET",
+        "environment": "COORDINATOR_REPORTED_CONTEXT; profile completed does not verify eligible first-time completion",
+        "user_reported_layers": "Surface and Inner",
+        "technical_verified_layers": "Inner only at evidence89ebf7a",
+        "overhead_context": "User reports Surface; target identity remains UNKNOWN",
+        "expanded_menu_keyboard_red": "COORDINATOR_REPORTED_RUNNING; NO_NEW_RECEIPT"
+      },
+      "delivered_markdown": [
+        {
+          "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
+          "repository_bytes": 13254,
+          "repository_sha256": "e2b0f6068dfc840da458b3025f9b1b38902050bf43742565926ed0a83f5afad1",
+          "obsidian_relative_path": "认知验收-20261013/COGNITIVE_ACCEPTANCE.md",
+          "obsidian_bytes": 13430,
+          "obsidian_sha256": "39153285186d50dc627394f2803c18a18b643065d971bf9eb82a5e0c491df3f2",
+          "mirror_difference": "Only existing repository-report links made absolute for Obsidian"
+        },
+        {
+          "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/BLIND_OBSERVATION_CODEBOOK.md",
+          "repository_bytes": 6683,
+          "repository_sha256": "8b9f9053e9b426599cd67d8f0c365c8954f8794ed09f822381d5d4a98163d70d",
+          "obsidian_relative_path": "认知验收-20261013/BLIND_OBSERVATION_CODEBOOK.md",
+          "obsidian_bytes": 6683,
+          "obsidian_sha256": "8b9f9053e9b426599cd67d8f0c365c8954f8794ed09f822381d5d4a98163d70d",
+          "mirror_difference": "NONE"
+        },
+        {
+          "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/moderator_only/POST_SESSION_CHECKLIST.md",
+          "repository_bytes": 5452,
+          "repository_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+          "obsidian_relative_path": "认知验收-20261013/moderator_only/POST_SESSION_CHECKLIST.md",
+          "obsidian_bytes": 5452,
+          "obsidian_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+          "mirror_difference": "NONE"
+        },
+        {
+          "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/USER_FEEDBACK_001.md",
+          "repository_bytes": 3277,
+          "repository_sha256": "874051f13892f8cae2cb7507098be10c4aaca3d995caa0791939a3a558569d8e",
+          "obsidian_relative_path": "认知验收-20261013/USER_FEEDBACK_001.md",
+          "obsidian_bytes": 3277,
+          "obsidian_sha256": "874051f13892f8cae2cb7507098be10c4aaca3d995caa0791939a3a558569d8e",
+          "mirror_difference": "NONE"
+        },
+        {
+          "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/USER_FEEDBACK_002_TECHNICAL_CORRELATION.md",
+          "repository_bytes": 5105,
+          "repository_sha256": "e8b2cf5547f71d46fb3e3990e8acdbc19a055a3ffa88237b016746ae0c5d52f5",
+          "obsidian_relative_path": "认知验收-20261013/USER_FEEDBACK_002_TECHNICAL_CORRELATION.md",
+          "obsidian_bytes": 5105,
+          "obsidian_sha256": "e8b2cf5547f71d46fb3e3990e8acdbc19a055a3ffa88237b016746ae0c5d52f5",
+          "mirror_difference": "NONE"
+        },
+        {
+          "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/USER_FEEDBACK_SCOPE_UPDATE.md",
+          "repository_bytes": 3755,
+          "repository_sha256": "2cb932189d433ddc6d156c97c38d2812dd6b3c96caf2885295ed0e5274c4a861",
+          "obsidian_relative_path": "认知验收-20261013/USER_FEEDBACK_SCOPE_UPDATE.md",
+          "obsidian_bytes": 3755,
+          "obsidian_sha256": "2cb932189d433ddc6d156c97c38d2812dd6b3c96caf2885295ed0e5274c4a861",
+          "mirror_difference": "NONE"
+        }
+      ]
     }
   ],
   "technical_evidence_sources": [
@@ -426,7 +539,8 @@
     "UF001",
     "UF003_CONTEXT_BACKFILL",
     "UF002",
-    "UF004_BOTH_WORLDS"
+    "UF004_BOTH_WORLDS",
+    "UF005_ROOF_CONFIRMED"
   ],
   "active_play_constraint": {
     "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
@@ -459,5 +573,51 @@
       "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/USER_FEEDBACK_SCOPE_UPDATE.md"
     ],
     "limits": "Document checks only. Inner technical repro is00 evidence; Surface only user-reported/new RED pending; H1-H6 NOT_OBSERVED."
+  },
+  "roof_clarification_sources": [
+    {
+      "path": "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn",
+      "commit": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+      "git_blob_sha1": "cdd199eecef2c8ef7a0b40058eabe67becfd9587",
+      "bytes": 6250,
+      "sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/RECEIPT.json",
+      "commit": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+      "git_blob_sha1": "2bd5de4ccaff547e6bef8e21313afbd233e5db69",
+      "bytes": 1247,
+      "sha256": "e103706d91ce7bd3842dd79dcf4f626fa3717e820024c11db5ebfaf65c06be98"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/acc_keys_green01/process.json",
+      "commit": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+      "git_blob_sha1": "71d9688212c174d01c8943a507279b42a1302f55",
+      "bytes": 54400,
+      "sha256": "36f3af752ba1a4bb76e7c5768e74b75a5b746620e4700512b6db8245a850a5ca"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/acc_keys_green01/report.json",
+      "commit": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+      "git_blob_sha1": "4614ffb38a4e863ad94c01646eff698eb21cb2f1",
+      "bytes": 53481,
+      "sha256": "23924e17e535922c6c50de6619b55990fd5344d7a3d04923fd9b76ac7fc1fa31"
+    }
+  ],
+  "roof_clarification_update_base_commit": "d6508e554eca3aa17707e37d74872ae3039749f6",
+  "roof_clarification_verification": {
+    "result": "PASS",
+    "parent_report_and_all_prior_records": "PRESERVED",
+    "user_quote": "Actual00 reply matched",
+    "roof": "6 actual author face configs walkable=false;89 probe center2/layer/occlusion corroborates",
+    "green": "4 fixed source hashes;612checks,64inputs,16groups with4distinctaxes; exit0/stderr0/no doubles/drift; headless only",
+    "resolved_links_both_destinations": 36,
+    "old_obsidian_notes": "22 unchanged",
+    "changed_git_paths": [
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/ROOF_IDENTITY_CLARIFICATION.md",
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/SOURCES.json"
+    ],
+    "limits": "NoGUI/new package execution/13Runtime test; rule explanation exposure recorded; cognition NOT_VERIFIED."
   }
 }
