@@ -1,0 +1,55 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
+  "base_commit": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "build_source": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+  "project": "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\project",
+  "external_output": "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z",
+  "arguments": [
+    "D:\\APP\\steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "--path",
+    "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\project",
+    "--max-fps",
+    "60",
+    "--audio-driver",
+    "Dummy",
+    "--position",
+    "30,60",
+    "--log-file",
+    "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\godot.log",
+    "--script",
+    "res://tests/beta_sprint/spatial_art/polish_03/roof_preview.gd",
+    "--",
+    "--evidence=E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143455138516Z/captures"
+  ],
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "original_build_manifest_sha256": "67021752bfec7a05223aa12b3b447005bf486818e54983b4559d32b5a53393c0",
+  "original_build_files_checked": 1641,
+  "copy_files_checked": 1640,
+  "production_diff_between_build_and_base": [],
+  "preview_code_sha256": {
+    "roof_preview.gd": "a38ee3f22d70890c9eee6a5b81222c50cebd46e85faa7113a955f74e6d07a09b",
+    "roof_coarse.gdshader": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627",
+    "roof_inset.gdshader": "68ec63ff75b1db217e4de607323f2cdf7b6c9e132ced757a11cf5791b1f9bf7d"
+  },
+  "profile_environment": {
+    "APPDATA": "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\profile\\Roaming",
+    "LOCALAPPDATA": "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\profile\\Local",
+    "TEMP": "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\profile\\Temp",
+    "TMP": "E:\\godot\\beta-sprint-builds\\QA\\art_preview_polish03\\run_20261013T143455138516Z\\profile\\Temp"
+  },
+  "started_utc": "2026-10-13T14:34:59.664384+00:00",
+  "art_change": "PROPOSAL_ONLY",
+  "pid": 34384,
+  "exit_code": "TIMEOUT",
+  "natural_exit": false,
+  "gui_released_utc": "2026-10-13T14:37:59.757516+00:00",
+  "original_build_drift": [],
+  "copied_production_drift": [],
+  "stderr_bytes": 546,
+  "checks": 0,
+  "failures": [
+    "Missing graphical report"
+  ],
+  "captures": 0,
+  "status": "FAIL"
+}
