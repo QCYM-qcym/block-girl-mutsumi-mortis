@@ -1,0 +1,16 @@
+# Execution ledger — acceptance_01/PLAN.md
+
+Setup: test/spatial-acceptance-01@d3b131440600048006ccc7679962fb7fc546a63f clean, actual current saved maps/finalHost; reuse existing isolated worktree. No merge/worktree creation.
+Pre-flight: Explorer returns formal live graph; Softlock consumes exact object, own Graph validation. Goal nodes terminal. Facade reset is lifecycle method, absent ActionGenerator domain. Replayer supports spawn traces only; arbitrary state recovery uses public Facade after replaying real predecessor prefix. New runner owns fresh output, old run_quality OUT unchanged.
+Ruling: plans/ledger stay inside exclusive acceptance scope instead of shared skill workspace; Task and precise authorized methods already supplied, no further plan approval needed — cost if wrong: narrower deliverable only.
+Ruling: GUI was reassigned to08/user before any03 graphical process; headless first, graphical remains pending absent new slot.
+
+Task1: contracts_red setup parse error (Projection is builtin); contracts_red2 actual9 assertions with6 metadata failures, stderr0; contracts_green9/9 exit0 stderr0. Real max_states1 Explorer+same live Softlock, no algorithm double.
+Task2 start: full_graph_01 failed parse before any search (actual_reset type inference); explicit bool fixed. full_graph_02 running headless with finite20min Explorer/3min Analyzer/30min process budgets. Source frozen during this run; generated UID companions limited to new acceptance scripts. No GUI acquired.
+
+full_graph_02 detected dependency-script compile errors during Explorer startup; confirmed ownedPID35480 commandline and stopped only that headless process.0 conclusions; raw receipts retained. Census bool inference fixed; check-only main+dependencies exit0/stderr0. full_graph_03 is the fresh bounded current search, source frozen.
+
+Task2 COMPLETE in formal Goal-terminal/action API domain: full_graph_03 PID25288,187/187 exit0 stderr0 doubles[] drift[]; actualExplorer908states3916edges96Goal/frontier0,9744 evaluations,0filtered/0safety_unproven,486183ms. Same live Analyzer COMPLETE,908Goal-reachable,0softlocks. All3916edges property census192Shift/8latch/192latched-reentry/144Fall/48island-cut,0violations;192detourstates. contracts_final PID28912,9/9, separate metadata UNIT. Runtime original shortest, B recovery, negativeShift/wrongFace/reentry and Reset observed; no GUI acquired.
+Ruling: overall Complete State Graph / product acceptance stays PARTIAL: formal graph is Goal-terminal action-API only; post-win enlarged domain UNKNOWN and graphical lease unavailable. New external SPATIAL-CARDINAL-01 P1 (00diagnostic89ebf7a) concerns WASD mapping, not graph softlock; not counted in own assertions or patched here. Cube above player remains unidentified, do not assign it to roof without user confirmation.
+
+Final review:1 Important query-count metadata issue fixed in one pass. Raw13 Safety query rows versus15 facet assertions now explicit; executor corrected2 zero-softlock counting assertions from Runtime toSolver in derived matrix only. Metadata RED→GREEN, totals196 unchanged, Runtime152/Solver16/Safety15. Tested source/raw receipts unchanged; no rerun or re-review. No deferred minors. Declined boundaries ruled in REVIEW.md.

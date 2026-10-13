@@ -1,0 +1,195 @@
+{
+  "overall": "PARTIAL",
+  "base": "d3b131440600048006ccc7679962fb7fc546a63f",
+  "domain": "GOAL_TERMINAL_FORMAL_ACTION_API",
+  "explorer_budget": {
+    "domain": "GOAL_TERMINAL",
+    "explorer": {
+      "max_action_evaluations": 60000,
+      "max_depth": -1,
+      "max_edges": 30000,
+      "max_runtime_ms": 1200000,
+      "max_states": 5000
+    },
+    "outer_process_timeout_seconds": 1800,
+    "reset_in_graph": false,
+    "softlock": {
+      "max_edges": 30000,
+      "max_nodes": 5000,
+      "max_runtime_ms": 180000
+    }
+  },
+  "metrics": {
+    "action_evaluations": 9744,
+    "duplicate_states": 3009,
+    "elapsed_ms": 486183,
+    "explored_states": 908,
+    "filtered_edges": 0,
+    "generated_edges": 3916,
+    "goal_states": 96,
+    "max_depth_reached": 30,
+    "no_op_actions": 812,
+    "rejected_actions": 5016,
+    "safety_unproven_rejections": 0,
+    "shortest_solution_count": null,
+    "shortest_solution_count_complete": false,
+    "solution_length": 7,
+    "visited_states": 908
+  },
+  "states": 908,
+  "edges": 3916,
+  "frontier": 0,
+  "goal_terminal": 96,
+  "self_recoverable_non_goal": 812,
+  "self_recoverable_detour_states": 192,
+  "graph_softlocks": 0,
+  "reset_only": 0,
+  "irrecoverable": 0,
+  "reset_unknown": 0,
+  "strict_non_goal_sinks": 0,
+  "classification_definitions": "PLAN.md",
+  "runtime_reset_evidence": "evidence/full_graph_03/report.json runtime_shortest_and_reset",
+  "independent_safety_samples": 13,
+  "all_accepted_edges_safety": "Production Kernel integrates formal Safety; not3916 independent Safety queries",
+  "census": {
+    "states_inspected": 908,
+    "edges_inspected": 3916,
+    "Shift": 192,
+    "latch": 8,
+    "reentry": 192,
+    "Fall": 144,
+    "island_cut": 48,
+    "violations": [],
+    "wrong_lock_edges": [],
+    "dimensions": {
+      "Camera": 4,
+      "Mechanism": 2,
+      "Orientation": 24,
+      "Position": 9,
+      "World": 2
+    }
+  },
+  "shortest": {
+    "length": 7,
+    "actions": [
+      {
+        "face_axis": 3,
+        "kind": 0
+      },
+      {
+        "face_axis": 0,
+        "kind": 0
+      },
+      {
+        "face_axis": 1,
+        "kind": 0
+      },
+      {
+        "face_axis": 2,
+        "kind": 0
+      },
+      {
+        "kind": 1
+      },
+      {
+        "face_axis": 2,
+        "kind": 0
+      },
+      {
+        "face_axis": 0,
+        "kind": 0
+      }
+    ],
+    "maximum_bfs_depth": 30,
+    "author_witness_comparison": "8 authored entries include SET_CAMERA quadrant1 when already1 (explicit no-op); real original shortest7 omits it. Required cuts checked independently; no universal design-intent claim."
+  },
+  "B_recovery": {
+    "length": 6,
+    "metrics": {
+      "action_evaluations": 217,
+      "duplicate_states": 61,
+      "elapsed_ms": 12888,
+      "explored_states": 19,
+      "filtered_edges": 0,
+      "generated_edges": 89,
+      "goal_states": 1,
+      "max_depth_reached": 6,
+      "no_op_actions": 18,
+      "rejected_actions": 110,
+      "safety_unproven_rejections": 0,
+      "shortest_solution_count": null,
+      "shortest_solution_count_complete": false,
+      "solution_length": 6,
+      "visited_states": 29
+    },
+    "reset_used": false
+  },
+  "post_goal_runtime_observation": {
+    "domain": "OUTSIDE_ENUMERATED_GOAL_TERMINAL_GRAPH",
+    "expanded_domain_coverage": "UNKNOWN",
+    "post_goal_runtime_observation": {
+      "action": {
+        "face_axis": 2,
+        "kind": 0
+      },
+      "is_goal": false,
+      "statekey": "statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"target_a\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":17},\"world_orientations\":[0,0]}}"
+    }
+  },
+  "coverage": {
+    "Goal_terminal_reachable_states": {
+      "numerator": 908,
+      "denominator": 908,
+      "closure_proven": true
+    },
+    "accepted_graph_edges_census": {
+      "numerator": 3916,
+      "denominator": 3916
+    },
+    "formal_non_goal_candidate_attempts": {
+      "numerator": 9744,
+      "denominator": 9744
+    },
+    "all_possible_or_post_goal_states": {
+      "denominator": "UNKNOWN"
+    },
+    "keyboard_actions": "NOT_CERTIFIED; SPATIAL-CARDINAL-01"
+  },
+  "receipts": [
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/contracts_final/process.json",
+      "sha256": "f141658cd4cf98b1d6950f1acea7d51803f788b99b54a21f4e4fa94be98c1ac9",
+      "pid": 28912,
+      "checks": 9,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "sha256": "bacc3914a930f3ef7c059cc75032827046cc7ff925dde749e77661a9ec060089",
+      "pid": 25288,
+      "checks": 187,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": [],
+      "source_drift": [],
+      "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38"
+    }
+  ],
+  "gui": "RELEASED_NOT_ACQUIRED_THIS_TASK",
+  "human_qa": "NOT_RUN",
+  "known_external_failure": {
+    "id": "SPATIAL-CARDINAL-01",
+    "priority": "P1",
+    "owner": "01_RUNTIME",
+    "coordinator_diagnostic_commit": "89ebf7a60e405d7617298e49a3f43e3461e38376",
+    "source_not_merged": true,
+    "local_assertions_added": 0,
+    "roof_identity": "USER_NOT_CONFIRMED"
+  },
+  "independent_safety_queries": 13,
+  "safety_assertions": 15
+}

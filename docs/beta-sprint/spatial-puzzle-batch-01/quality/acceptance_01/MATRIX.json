@@ -1,0 +1,184 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "overall": "PARTIAL",
+  "base": "d3b131440600048006ccc7679962fb7fc546a63f",
+  "formal_goal_terminal_graph": "PASS",
+  "state_count": 908,
+  "edge_count": 3916,
+  "frontier_count": 0,
+  "goal_count": 96,
+  "possible_state_denominator": "UNKNOWN",
+  "post_goal_full_domain": "UNKNOWN",
+  "assertions": 196,
+  "assertions_by_facet": {
+    "UNIT": 12,
+    "SOLVER": 16,
+    "SAFETY": 15,
+    "LOGICAL_REPLAY": 1,
+    "REAL_RUNTIME": 152
+  },
+  "case_status_counts": {
+    "PASS": 12,
+    "UNKNOWN": 1,
+    "NOT_RUN": 3,
+    "FAIL_EXTERNAL": 1
+  },
+  "cases": [
+    {
+      "checks": 9,
+      "facet": "UNIT",
+      "failures": [],
+      "id": "incomplete_reporting",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/contracts_final/process.json",
+      "assertions": 9,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 3,
+      "facet": "UNIT",
+      "failures": [],
+      "id": "current_saved_map",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 3,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 5,
+      "facet": "SOLVER",
+      "failures": [],
+      "id": "original_full_graph",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 5,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 7,
+      "facet": "SOLVER",
+      "failures": [],
+      "id": "complete_graph_permissions",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 7,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 2,
+      "facet": "SOLVER",
+      "failures": [],
+      "id": "original_shortest_witness",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 2,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 7,
+      "facet": "SAFETY",
+      "failures": [],
+      "id": "selected_trace_safety",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 7,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 1,
+      "facet": "LOGICAL_REPLAY",
+      "failures": [],
+      "id": "logical_session_replay",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 1,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 44,
+      "facet": "REAL_RUNTIME",
+      "failures": [],
+      "id": "runtime_shortest_and_reset",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 44,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 38,
+      "facet": "REAL_RUNTIME",
+      "failures": [],
+      "id": "runtime_permission_negatives",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 38,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 70,
+      "facet": "REAL_RUNTIME",
+      "failures": [],
+      "id": "detour_recovery_runtime",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 70,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 8,
+      "facet": "SAFETY",
+      "failures": [],
+      "id": "detour_sampled_safety",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 8,
+      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+    },
+    {
+      "checks": 2,
+      "facet": "SOLVER",
+      "failures": [],
+      "id": "graph_softlock_reset_classification",
+      "status": "PASS",
+      "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
+      "assertions": 2,
+      "scope": "Counting partition of formal Analyzer result; no Runtime call in zero-softlock loop",
+      "receipt_original_facet": "REAL_RUNTIME"
+    },
+    {
+      "id": "post_goal_complete_state_graph",
+      "status": "UNKNOWN",
+      "facet": "SOLVER",
+      "assertions": 0,
+      "reason": "Actual Runtime permits post-Goal MOVE. Expanded domain not enumerated; formal graph is Goal-terminal."
+    },
+    {
+      "id": "graphical_current_original_trace",
+      "status": "NOT_RUN",
+      "facet": "FORMAL_GRAPHICAL",
+      "assertions": 0,
+      "reason": "GUI lease reserved08/user. No graphical process acquired, no old receipt promoted."
+    },
+    {
+      "id": "keyboard_wasd_cardinal",
+      "status": "FAIL_EXTERNAL",
+      "facet": "INPUT_MAPPING",
+      "assertions": 0,
+      "reason": "SPATIAL-CARDINAL-01 P1 confirmed by00 diagnostic89ebf7a;01 fix pending. This current graph uses action API, not keyboard mapping."
+    },
+    {
+      "id": "first_player_human_acceptance",
+      "status": "NOT_RUN",
+      "facet": "HUMAN_QA",
+      "assertions": 0,
+      "reason": "Independent08/user run not signed by03."
+    },
+    {
+      "id": "all_design_intent_ablation",
+      "status": "NOT_RUN",
+      "facet": "INTENT",
+      "assertions": 0,
+      "reason": "Finite required-cut properties only; no exhaustive design-intent proof or extra ablation search."
+    }
+  ]
+}
