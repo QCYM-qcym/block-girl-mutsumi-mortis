@@ -1,0 +1,1637 @@
+{
+  "task": "SPATIAL_PUZZLE_ACCEPTANCE_CONTINUATION_02",
+  "owner": "05",
+  "base_commit": "295a4702aeb17d6fced11cfdaa221e0ffa90dd12",
+  "started_at": "2026-10-13T22:12:17.784053+08:00",
+  "finished_at": "2026-10-13T22:12:20.944250+08:00",
+  "external_root": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01",
+  "backup_root": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01_SCOPE_RECOVERY_20261013",
+  "original_manifest": {
+    "path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\production\\work\\GAME_ART_MECHANICS_BATCH_01\\tests\\PACKAGE_SHA256.json",
+    "sha256": "0a4eba41609a75ecda0dbdc33979da543968bf613f3f37a6dba4f77c10f62313",
+    "entries": 177,
+    "last_write_time_local": "2026-10-12T11:22:50.870358+08:00",
+    "in_incident_write_list": false,
+    "signature_or_independent_immutable_anchor": "NOT_FOUND",
+    "trust_basis": [
+      "Local manifest predates incident by recorded mtime (not proof alone)",
+      "Incident write list and generator output scope exclude this manifest",
+      "Original finalize script records SHA256 for package files",
+      "174/177 package entries match including restored generator; three mismatches explain observed layout edit"
+    ],
+    "missing_original_entries": [],
+    "different_original_entries": [
+      "design/states/face_lock_D.png",
+      "design/states/face_lock_D.svg",
+      "reports/DRAWING_CONTACT_SHEET.png"
+    ]
+  },
+  "post_edit_manifest": {
+    "sha256": "e01a99a80a86b537310dd897c44ac8e2e5c0cf5ff53c11c7b32f1c52e6cfba23",
+    "matches_incident_record": true,
+    "meaning": "Post-edit evidence ONLY; not original backup"
+  },
+  "summary": {
+    "exports": 59,
+    "original_hash_known": 59,
+    "unchanged_vs_original": 56,
+    "changed_vs_original": 3,
+    "current_equals_post_edit_backup": 59,
+    "missing_current": 0,
+    "format_failures": [],
+    "backup_reference_or_format_issues": [
+      "MECHANICS_ART_DESIGN_REVIEW_01.html"
+    ],
+    "restored_script_equals_original": true
+  },
+  "copy_search": {
+    "root": "E:\\Study\\方块娘项目\\若叶睦\\model",
+    "files_enumerated": 11319,
+    "png_svg_files_hashed": 4558,
+    "png_svg_bytes_read": 1317906275,
+    "matching_original_copies": [],
+    "archives": [
+      {
+        "path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\_pilot\\_01\\BG-3D-ART-PILOT-01_delivery.zip",
+        "status": "READ_ONLY_MEMBER_HASH_SEARCH",
+        "entries": 149,
+        "image_members_hashed": 78,
+        "matches": []
+      },
+      {
+        "path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\_pilot\\_02\\BG-3D-ART-POLISH-02_delivery.zip",
+        "status": "READ_ONLY_MEMBER_HASH_SEARCH",
+        "entries": 262,
+        "image_members_hashed": 128,
+        "matches": []
+      },
+      {
+        "path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\_runtime_polish\\_01\\SurfaceWorld_Runtime_Polish_01.zip",
+        "status": "READ_ONLY_MEMBER_HASH_SEARCH",
+        "entries": 22,
+        "image_members_hashed": 4,
+        "matches": []
+      },
+      {
+        "path": "E:\\Study\\方块娘项目\\若叶睦\\model\\art\\_runtime_validation\\_01\\SurfaceWorld_Godot_Validation.zip",
+        "status": "READ_ONLY_MEMBER_HASH_SEARCH",
+        "entries": 19,
+        "image_members_hashed": 4,
+        "matches": []
+      }
+    ],
+    "git_markers": [],
+    "limits": "No OS restore points, deleted-file recovery, remote backup accounts, or unrelated disks were inspected; absence here does not prove permanent loss"
+  },
+  "read_only_check": {
+    "art_files_hashed_before_after": 182,
+    "backup_files_hashed_before_after": 62,
+    "art_drift": [],
+    "backup_drift": [],
+    "external_asset_writes": "NONE",
+    "script_execution_or_regeneration": "NOT_RUN",
+    "restore": "NOT_RUN_NOT_AUTHORIZED"
+  },
+  "rows": [
+    {
+      "path": "design/concept/face_lock_A.svg",
+      "original_sha256": "66ca27e86e80974fddf66a69f606af40f8b51b08dc74aac22fe352816bb4b941",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "66ca27e86e80974fddf66a69f606af40f8b51b08dc74aac22fe352816bb4b941",
+      "post_edit_backup_sha256": "66ca27e86e80974fddf66a69f606af40f8b51b08dc74aac22fe352816bb4b941",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 2957756,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/face_lock_A.png",
+      "original_sha256": "3986cd43221b3e9b0e506ebcaf559c8191b8c403ed21fa535f455004e56920cf",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "3986cd43221b3e9b0e506ebcaf559c8191b8c403ed21fa535f455004e56920cf",
+      "post_edit_backup_sha256": "3986cd43221b3e9b0e506ebcaf559c8191b8c403ed21fa535f455004e56920cf",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 1104252,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/face_lock_B.svg",
+      "original_sha256": "732f1a9ebe706b3379ba9c50c52a806f22c7ac16ee828b27e65ad4fb83f975b8",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "732f1a9ebe706b3379ba9c50c52a806f22c7ac16ee828b27e65ad4fb83f975b8",
+      "post_edit_backup_sha256": "732f1a9ebe706b3379ba9c50c52a806f22c7ac16ee828b27e65ad4fb83f975b8",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 202772,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/face_lock_B.png",
+      "original_sha256": "3e3994abfd72ac7910c3f0a35c9cb197173dc0edb30e0187085da794284f2557",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "3e3994abfd72ac7910c3f0a35c9cb197173dc0edb30e0187085da794284f2557",
+      "post_edit_backup_sha256": "3e3994abfd72ac7910c3f0a35c9cb197173dc0edb30e0187085da794284f2557",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 209881,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/exploded/face_lock_C.svg",
+      "original_sha256": "b4430948a3288549fb88b204db2d78c41d5380120b3367486a294acf5d0e5dc9",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "b4430948a3288549fb88b204db2d78c41d5380120b3367486a294acf5d0e5dc9",
+      "post_edit_backup_sha256": "b4430948a3288549fb88b204db2d78c41d5380120b3367486a294acf5d0e5dc9",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 31328,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/exploded/face_lock_C.png",
+      "original_sha256": "f478b9882460bea2b3eb86186d935c73e7303cb0166b1fade7b675988bbf9cfe",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "f478b9882460bea2b3eb86186d935c73e7303cb0166b1fade7b675988bbf9cfe",
+      "post_edit_backup_sha256": "f478b9882460bea2b3eb86186d935c73e7303cb0166b1fade7b675988bbf9cfe",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 214573,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/states/face_lock_D.svg",
+      "original_sha256": "5482941575c67f1be0b5e83ff0dd3fde067c1b8b4bb31424b7a905d000aaa45b",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "post_edit_backup_sha256": "8fe6caa92e1de5db0ea79e3e05b1fd8a341e625b4bb737544b07f8b71ebb14fc",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": false,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 7179,
+      "original_bytes_available": "NOT_FOUND_IN_SEARCHED_SCOPE",
+      "recovery_confidence": "HASH_KNOWN_RESTORE_FEASIBILITY_UNKNOWN"
+    },
+    {
+      "path": "design/states/face_lock_D.png",
+      "original_sha256": "cb619b6d77cc838295fca8c57d36255dbcf4f0280895bda8056819465b680b69",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "post_edit_backup_sha256": "f2fa9426f7a27552f2aa91af8714c29ff1cdeed516f78f257ae00ad19511e27d",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": false,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 184686,
+      "original_bytes_available": "NOT_FOUND_IN_SEARCHED_SCOPE",
+      "recovery_confidence": "HASH_KNOWN_RESTORE_FEASIBILITY_UNKNOWN"
+    },
+    {
+      "path": "design/four_views/face_lock_E.svg",
+      "original_sha256": "fb83becabde4e45c3238c56c425a62c8d6e3dbd6f53b844e94b5cf84fc6f838c",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "fb83becabde4e45c3238c56c425a62c8d6e3dbd6f53b844e94b5cf84fc6f838c",
+      "post_edit_backup_sha256": "fb83becabde4e45c3238c56c425a62c8d6e3dbd6f53b844e94b5cf84fc6f838c",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 3943334,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/face_lock_E.png",
+      "original_sha256": "88f1c76cf890b028560d4ef4bce886d3ed23123bac2db2c9516a1c8f8a0ba2e9",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "88f1c76cf890b028560d4ef4bce886d3ed23123bac2db2c9516a1c8f8a0ba2e9",
+      "post_edit_backup_sha256": "88f1c76cf890b028560d4ef4bce886d3ed23123bac2db2c9516a1c8f8a0ba2e9",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 652866,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/materials/face_lock_F.svg",
+      "original_sha256": "387bc324f53db73f85c0963bc2382b7074ecd8c0424eba7df5a1e12075d874f1",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "387bc324f53db73f85c0963bc2382b7074ecd8c0424eba7df5a1e12075d874f1",
+      "post_edit_backup_sha256": "387bc324f53db73f85c0963bc2382b7074ecd8c0424eba7df5a1e12075d874f1",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 16094,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/materials/face_lock_F.png",
+      "original_sha256": "95baa227eb4467ba92380bc99016abb48acebdd5227c4e9abec75ef5d26bfea9",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "95baa227eb4467ba92380bc99016abb48acebdd5227c4e9abec75ef5d26bfea9",
+      "post_edit_backup_sha256": "95baa227eb4467ba92380bc99016abb48acebdd5227c4e9abec75ef5d26bfea9",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 204961,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/uv_reference/face_lock_UV_COMPONENTS.svg",
+      "original_sha256": "d203c8de055bcf34fc3ed94e5dbf60326f6d01c5a5af6afba127f91facad9525",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "d203c8de055bcf34fc3ed94e5dbf60326f6d01c5a5af6afba127f91facad9525",
+      "post_edit_backup_sha256": "d203c8de055bcf34fc3ed94e5dbf60326f6d01c5a5af6afba127f91facad9525",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 34332,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/uv_reference/face_lock_UV_COMPONENTS.png",
+      "original_sha256": "8fd8e61c21c53bf2b79b2bdf722ffc257f12e6b37a3bfe0fa99a449df161d014",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "8fd8e61c21c53bf2b79b2bdf722ffc257f12e6b37a3bfe0fa99a449df161d014",
+      "post_edit_backup_sha256": "8fd8e61c21c53bf2b79b2bdf722ffc257f12e6b37a3bfe0fa99a449df161d014",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 129140,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/shift_gate_A.svg",
+      "original_sha256": "2683cc8ef63854b0d055e912cc5b1fedb9fe5a5551edce96f5a938f78e5ba6bd",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "2683cc8ef63854b0d055e912cc5b1fedb9fe5a5551edce96f5a938f78e5ba6bd",
+      "post_edit_backup_sha256": "2683cc8ef63854b0d055e912cc5b1fedb9fe5a5551edce96f5a938f78e5ba6bd",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 2847471,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/shift_gate_A.png",
+      "original_sha256": "be3c6647be6aaf1e9b662f5cdc2bb89bd57fa6f6798021a99e2d9664854ee664",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "be3c6647be6aaf1e9b662f5cdc2bb89bd57fa6f6798021a99e2d9664854ee664",
+      "post_edit_backup_sha256": "be3c6647be6aaf1e9b662f5cdc2bb89bd57fa6f6798021a99e2d9664854ee664",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 1131522,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/shift_gate_B.svg",
+      "original_sha256": "de7dc60cb437bfa931bed404b89379a62e33fba935b0e451acc0b40c85cb71b0",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "de7dc60cb437bfa931bed404b89379a62e33fba935b0e451acc0b40c85cb71b0",
+      "post_edit_backup_sha256": "de7dc60cb437bfa931bed404b89379a62e33fba935b0e451acc0b40c85cb71b0",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 114056,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/shift_gate_B.png",
+      "original_sha256": "eb447146cded7c2394bf6671285c5aa5d6da0843c16b153ec1d7d2e8d958e6b1",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "eb447146cded7c2394bf6671285c5aa5d6da0843c16b153ec1d7d2e8d958e6b1",
+      "post_edit_backup_sha256": "eb447146cded7c2394bf6671285c5aa5d6da0843c16b153ec1d7d2e8d958e6b1",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 213583,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/exploded/shift_gate_C.svg",
+      "original_sha256": "d2cab94fef48bb6ae2af5f55b54eabc9568af94ac2dae4d51395dd31e3d8c6e1",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "d2cab94fef48bb6ae2af5f55b54eabc9568af94ac2dae4d51395dd31e3d8c6e1",
+      "post_edit_backup_sha256": "d2cab94fef48bb6ae2af5f55b54eabc9568af94ac2dae4d51395dd31e3d8c6e1",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 18026,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/exploded/shift_gate_C.png",
+      "original_sha256": "8eedaf5856e6d82afc515c8630fa5980d10042df2b7ddb06857c508d5da66bcf",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "8eedaf5856e6d82afc515c8630fa5980d10042df2b7ddb06857c508d5da66bcf",
+      "post_edit_backup_sha256": "8eedaf5856e6d82afc515c8630fa5980d10042df2b7ddb06857c508d5da66bcf",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 213695,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/states/shift_gate_D.svg",
+      "original_sha256": "991fa8936ff122d907fd6dd79540575caf4f224d2dd240e4976eed6d01713f96",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "991fa8936ff122d907fd6dd79540575caf4f224d2dd240e4976eed6d01713f96",
+      "post_edit_backup_sha256": "991fa8936ff122d907fd6dd79540575caf4f224d2dd240e4976eed6d01713f96",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 5930,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/states/shift_gate_D.png",
+      "original_sha256": "f1f64d6c8e16a518fb68edb03fee538a7e9fb2ce177c65d8b1db88f1fd2abb54",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "f1f64d6c8e16a518fb68edb03fee538a7e9fb2ce177c65d8b1db88f1fd2abb54",
+      "post_edit_backup_sha256": "f1f64d6c8e16a518fb68edb03fee538a7e9fb2ce177c65d8b1db88f1fd2abb54",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 192958,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/shift_gate_E.svg",
+      "original_sha256": "1db285450050f2d42f2fd9f99b8c64050edada966c23b7078acb0ea5310fbea3",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "1db285450050f2d42f2fd9f99b8c64050edada966c23b7078acb0ea5310fbea3",
+      "post_edit_backup_sha256": "1db285450050f2d42f2fd9f99b8c64050edada966c23b7078acb0ea5310fbea3",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 4016445,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/shift_gate_E.png",
+      "original_sha256": "1a3adcfd1bd2249cfd853b8efde060aa40930b2dbe1416370d245b4a4baa8ba8",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "1a3adcfd1bd2249cfd853b8efde060aa40930b2dbe1416370d245b4a4baa8ba8",
+      "post_edit_backup_sha256": "1a3adcfd1bd2249cfd853b8efde060aa40930b2dbe1416370d245b4a4baa8ba8",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 704259,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/materials/shift_gate_F.svg",
+      "original_sha256": "be983176ed0118cb7ef5ce58da423739cd19a07d1bfee99c606e28459396a9a3",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "be983176ed0118cb7ef5ce58da423739cd19a07d1bfee99c606e28459396a9a3",
+      "post_edit_backup_sha256": "be983176ed0118cb7ef5ce58da423739cd19a07d1bfee99c606e28459396a9a3",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 5764,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/materials/shift_gate_F.png",
+      "original_sha256": "eb41d006297a76e5c54e57065b6dacd8eeeb63b8567024838a8df97ff162c143",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "eb41d006297a76e5c54e57065b6dacd8eeeb63b8567024838a8df97ff162c143",
+      "post_edit_backup_sha256": "eb41d006297a76e5c54e57065b6dacd8eeeb63b8567024838a8df97ff162c143",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 199415,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/uv_reference/shift_gate_UV_COMPONENTS.svg",
+      "original_sha256": "45b675d92830c6521954b377b9f26d50c7974e00586ed83f340ac10093f6b67b",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "45b675d92830c6521954b377b9f26d50c7974e00586ed83f340ac10093f6b67b",
+      "post_edit_backup_sha256": "45b675d92830c6521954b377b9f26d50c7974e00586ed83f340ac10093f6b67b",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 19178,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/uv_reference/shift_gate_UV_COMPONENTS.png",
+      "original_sha256": "75d7c706bf80b1eae1643b7a3a8a42cd271252e43e2c3f4043048dc0599e7c85",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "75d7c706bf80b1eae1643b7a3a8a42cd271252e43e2c3f4043048dc0599e7c85",
+      "post_edit_backup_sha256": "75d7c706bf80b1eae1643b7a3a8a42cd271252e43e2c3f4043048dc0599e7c85",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 115617,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/perspective_fork_A.svg",
+      "original_sha256": "08f3c2b24682be51fdc6b4a054ad5edc1d1c7e797c253ab3a011cb0fd87e71c2",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "08f3c2b24682be51fdc6b4a054ad5edc1d1c7e797c253ab3a011cb0fd87e71c2",
+      "post_edit_backup_sha256": "08f3c2b24682be51fdc6b4a054ad5edc1d1c7e797c253ab3a011cb0fd87e71c2",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 900757,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/perspective_fork_A.png",
+      "original_sha256": "e61070ac710433458f1191fa577441d02e6b6f34b75b70736866e69dfa0333f9",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "e61070ac710433458f1191fa577441d02e6b6f34b75b70736866e69dfa0333f9",
+      "post_edit_backup_sha256": "e61070ac710433458f1191fa577441d02e6b6f34b75b70736866e69dfa0333f9",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 328476,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/perspective_fork_B.svg",
+      "original_sha256": "2f9efddeebc35ed30dbd8422d98bd94f86987358c4e9d8aba748e12a7fd53bd7",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "2f9efddeebc35ed30dbd8422d98bd94f86987358c4e9d8aba748e12a7fd53bd7",
+      "post_edit_backup_sha256": "2f9efddeebc35ed30dbd8422d98bd94f86987358c4e9d8aba748e12a7fd53bd7",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 45349,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/perspective_fork_B.png",
+      "original_sha256": "e6fa541a34e66884e44921dc8b7ed3cf0dd3a6f13ffef8afded4dbbf36ae3ccc",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "e6fa541a34e66884e44921dc8b7ed3cf0dd3a6f13ffef8afded4dbbf36ae3ccc",
+      "post_edit_backup_sha256": "e6fa541a34e66884e44921dc8b7ed3cf0dd3a6f13ffef8afded4dbbf36ae3ccc",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 188622,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/exploded/perspective_fork_C.svg",
+      "original_sha256": "2c5f04a940b66384fa52ba7c131d41b7d2ba52ac01f67f6249310fc22ecb9483",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "2c5f04a940b66384fa52ba7c131d41b7d2ba52ac01f67f6249310fc22ecb9483",
+      "post_edit_backup_sha256": "2c5f04a940b66384fa52ba7c131d41b7d2ba52ac01f67f6249310fc22ecb9483",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 8654,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/exploded/perspective_fork_C.png",
+      "original_sha256": "916755b4e7ef103b97f142b9f86f549242aab871d75faff6d06b8a278426feb9",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "916755b4e7ef103b97f142b9f86f549242aab871d75faff6d06b8a278426feb9",
+      "post_edit_backup_sha256": "916755b4e7ef103b97f142b9f86f549242aab871d75faff6d06b8a278426feb9",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 169848,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/states/perspective_fork_D.svg",
+      "original_sha256": "7efeb9069d69156fa40032967da75292cda187262dad1f0cc89ada6bef6cdbcd",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "7efeb9069d69156fa40032967da75292cda187262dad1f0cc89ada6bef6cdbcd",
+      "post_edit_backup_sha256": "7efeb9069d69156fa40032967da75292cda187262dad1f0cc89ada6bef6cdbcd",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 43229,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/states/perspective_fork_D.png",
+      "original_sha256": "a5a4f2304a4c3a9b0364a12cd3155a8ee5deaccdf9cb952e9721b1539e4fdc98",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "a5a4f2304a4c3a9b0364a12cd3155a8ee5deaccdf9cb952e9721b1539e4fdc98",
+      "post_edit_backup_sha256": "a5a4f2304a4c3a9b0364a12cd3155a8ee5deaccdf9cb952e9721b1539e4fdc98",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 187237,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/perspective_fork_E.svg",
+      "original_sha256": "2015f27048624411a8c60597689b889a411ada67a025d1697487bb67b1498f81",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "2015f27048624411a8c60597689b889a411ada67a025d1697487bb67b1498f81",
+      "post_edit_backup_sha256": "2015f27048624411a8c60597689b889a411ada67a025d1697487bb67b1498f81",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 3607237,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/perspective_fork_E.png",
+      "original_sha256": "629fe7b3946b80789b9ad86195f0e26996ae8baca32ded22e35c8da073be5df0",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "629fe7b3946b80789b9ad86195f0e26996ae8baca32ded22e35c8da073be5df0",
+      "post_edit_backup_sha256": "629fe7b3946b80789b9ad86195f0e26996ae8baca32ded22e35c8da073be5df0",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 394528,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/materials/perspective_fork_F.svg",
+      "original_sha256": "3c97997a48fa944391a7c504ff087a66d7b9e710699bc16d27b7346da68dcd2e",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "3c97997a48fa944391a7c504ff087a66d7b9e710699bc16d27b7346da68dcd2e",
+      "post_edit_backup_sha256": "3c97997a48fa944391a7c504ff087a66d7b9e710699bc16d27b7346da68dcd2e",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 5769,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/materials/perspective_fork_F.png",
+      "original_sha256": "07c7652d4d928dc978bc7d7567f5aa307cbe66756c41a51ac881b840bea9f6a3",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "07c7652d4d928dc978bc7d7567f5aa307cbe66756c41a51ac881b840bea9f6a3",
+      "post_edit_backup_sha256": "07c7652d4d928dc978bc7d7567f5aa307cbe66756c41a51ac881b840bea9f6a3",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 200339,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/uv_reference/perspective_fork_UV_COMPONENTS.svg",
+      "original_sha256": "f8905527357ca6ba90593426bc0c81109a28815d39a85047d7ea0b688cdbd9ef",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "f8905527357ca6ba90593426bc0c81109a28815d39a85047d7ea0b688cdbd9ef",
+      "post_edit_backup_sha256": "f8905527357ca6ba90593426bc0c81109a28815d39a85047d7ea0b688cdbd9ef",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 8843,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/uv_reference/perspective_fork_UV_COMPONENTS.png",
+      "original_sha256": "9b619a83f46f63ac72c67b79ec1db9754c5f1cd7c33d3f918fad0f1cc247638c",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "9b619a83f46f63ac72c67b79ec1db9754c5f1cd7c33d3f918fad0f1cc247638c",
+      "post_edit_backup_sha256": "9b619a83f46f63ac72c67b79ec1db9754c5f1cd7c33d3f918fad0f1cc247638c",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 95025,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/six_face_dictionary.svg",
+      "original_sha256": "a1a778c3668d0e50f2aec902339b7ee21d6949ab3a2ae628a93615e9d0eed951",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "a1a778c3668d0e50f2aec902339b7ee21d6949ab3a2ae628a93615e9d0eed951",
+      "post_edit_backup_sha256": "a1a778c3668d0e50f2aec902339b7ee21d6949ab3a2ae628a93615e9d0eed951",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 891649,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/six_face_dictionary.png",
+      "original_sha256": "b21d6381f0fb9a2c9eb2b90b70fc414315571b2d932aea054d15c5e16be1a9a6",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "b21d6381f0fb9a2c9eb2b90b70fc414315571b2d932aea054d15c5e16be1a9a6",
+      "post_edit_backup_sha256": "b21d6381f0fb9a2c9eb2b90b70fc414315571b2d932aea054d15c5e16be1a9a6",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 357200,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/six_face_inspection_UI.svg",
+      "original_sha256": "13233885f6d43faa9aa553148dce116c4665e579360eb0610618f8eb1572ddc5",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "13233885f6d43faa9aa553148dce116c4665e579360eb0610618f8eb1572ddc5",
+      "post_edit_backup_sha256": "13233885f6d43faa9aa553148dce116c4665e579360eb0610618f8eb1572ddc5",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 5673,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/six_face_inspection_UI.png",
+      "original_sha256": "48b5abc3dd12286d5e2e6596d803513cedcf7a50c9e3bf7a3db103cb979135eb",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "48b5abc3dd12286d5e2e6596d803513cedcf7a50c9e3bf7a3db103cb979135eb",
+      "post_edit_backup_sha256": "48b5abc3dd12286d5e2e6596d803513cedcf7a50c9e3bf7a3db103cb979135eb",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 183633,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/face_lock_pixel_and_pressure.svg",
+      "original_sha256": "f04346105cbbafc816f3dd3f31bca8951c89ef1dfeecaea37bdb90559b3a078a",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "f04346105cbbafc816f3dd3f31bca8951c89ef1dfeecaea37bdb90559b3a078a",
+      "post_edit_backup_sha256": "f04346105cbbafc816f3dd3f31bca8951c89ef1dfeecaea37bdb90559b3a078a",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 493916,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/face_lock_pixel_and_pressure.png",
+      "original_sha256": "acbc978032adb017371ecf166118e314f932ac60a602df5f4eaf6af286f830f6",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "acbc978032adb017371ecf166118e314f932ac60a602df5f4eaf6af286f830f6",
+      "post_edit_backup_sha256": "acbc978032adb017371ecf166118e314f932ac60a602df5f4eaf6af286f830f6",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 391862,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/perspective_fork_topology.svg",
+      "original_sha256": "f83b7fe0d240d95c29bc15b88ff03e2a238b568889ff300afac3461d1f01092b",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "f83b7fe0d240d95c29bc15b88ff03e2a238b568889ff300afac3461d1f01092b",
+      "post_edit_backup_sha256": "f83b7fe0d240d95c29bc15b88ff03e2a238b568889ff300afac3461d1f01092b",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 8903,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/orthographic/perspective_fork_topology.png",
+      "original_sha256": "b1398b7693a7bb2f230c71209c8844039e9c655980626012e0b60698b917115b",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "b1398b7693a7bb2f230c71209c8844039e9c655980626012e0b60698b917115b",
+      "post_edit_backup_sha256": "b1398b7693a7bb2f230c71209c8844039e9c655980626012e0b60698b917115b",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 176926,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/combined_map_design.svg",
+      "original_sha256": "194cdb13cc4822277ef5178c558bcc84a2b82d2c9b72674e470c2e195290cd6a",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "194cdb13cc4822277ef5178c558bcc84a2b82d2c9b72674e470c2e195290cd6a",
+      "post_edit_backup_sha256": "194cdb13cc4822277ef5178c558bcc84a2b82d2c9b72674e470c2e195290cd6a",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 895028,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/combined_map_design.png",
+      "original_sha256": "4442a2aef411a5aa0b9b00019424e7077550d23eb7ce4834362e07459c3bdaa3",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "4442a2aef411a5aa0b9b00019424e7077550d23eb7ce4834362e07459c3bdaa3",
+      "post_edit_backup_sha256": "4442a2aef411a5aa0b9b00019424e7077550d23eb7ce4834362e07459c3bdaa3",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 339136,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/combined_map_E.svg",
+      "original_sha256": "0d0b1cf1ce345850daa554462229e5cdeaba6305048e5b527fe5629f3a0f2d6b",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "0d0b1cf1ce345850daa554462229e5cdeaba6305048e5b527fe5629f3a0f2d6b",
+      "post_edit_backup_sha256": "0d0b1cf1ce345850daa554462229e5cdeaba6305048e5b527fe5629f3a0f2d6b",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 3571290,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/four_views/combined_map_E.png",
+      "original_sha256": "269661c4bad4efec9bd6d6f978e19a1788788a1c184425ac52bc559d299d7f6b",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "269661c4bad4efec9bd6d6f978e19a1788788a1c184425ac52bc559d299d7f6b",
+      "post_edit_backup_sha256": "269661c4bad4efec9bd6d6f978e19a1788788a1c184425ac52bc559d299d7f6b",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 367442,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/mechanism_disambiguation.svg",
+      "original_sha256": "b66f120df032b937b5b3cbcf46e8c569e951302485c42a38ca988b658c905620",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "b66f120df032b937b5b3cbcf46e8c569e951302485c42a38ca988b658c905620",
+      "post_edit_backup_sha256": "b66f120df032b937b5b3cbcf46e8c569e951302485c42a38ca988b658c905620",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "PASS_XML_PARSE_ONLY",
+        "viewBox": "0 0 1920 1080",
+        "visual_render": "NOT_RUN"
+      },
+      "current_bytes": 1059266,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/concept/mechanism_disambiguation.png",
+      "original_sha256": "e5352dd7224caff132f0fc40d42577ab65efbd131ba40fd7c7d781ed90d50def",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "e5352dd7224caff132f0fc40d42577ab65efbd131ba40fd7c7d781ed90d50def",
+      "post_edit_backup_sha256": "e5352dd7224caff132f0fc40d42577ab65efbd131ba40fd7c7d781ed90d50def",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1080
+        ]
+      },
+      "current_bytes": 327162,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "design/revisions/DRAWING_INDEX.json",
+      "original_sha256": "698e5377c5f04b378d74d8a3252367326cacbb7bc6de93e5a95552e7572e5455",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "698e5377c5f04b378d74d8a3252367326cacbb7bc6de93e5a95552e7572e5455",
+      "post_edit_backup_sha256": "698e5377c5f04b378d74d8a3252367326cacbb7bc6de93e5a95552e7572e5455",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_JSON_AND_REFERENCES",
+        "parse_status": "PASS",
+        "entries": 28,
+        "missing_references": []
+      },
+      "backup_format": {
+        "status": "PASS_JSON_AND_REFERENCES",
+        "parse_status": "PASS",
+        "entries": 28,
+        "missing_references": []
+      },
+      "current_bytes": 8686,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "MECHANICS_ART_DESIGN_REVIEW_01.html",
+      "original_sha256": "bfa8b9043b9de1e2a4736da7117b11d9eb8c6e7dc3acf1e278b0ffe330bbc275",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "bfa8b9043b9de1e2a4736da7117b11d9eb8c6e7dc3acf1e278b0ffe330bbc275",
+      "post_edit_backup_sha256": "bfa8b9043b9de1e2a4736da7117b11d9eb8c6e7dc3acf1e278b0ffe330bbc275",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": true,
+      "current_format": {
+        "status": "PASS_HTML_PARSE_AND_REFERENCES",
+        "parse_status": "PASS",
+        "references_checked": 57,
+        "missing_references": [],
+        "browser_render": "NOT_RUN"
+      },
+      "backup_format": {
+        "status": "FAIL_REFERENCES",
+        "parse_status": "PASS",
+        "references_checked": 57,
+        "missing_references": [
+          "MECHANICS_ART_DESIGN_REVIEW_01.md"
+        ],
+        "browser_render": "NOT_RUN"
+      },
+      "current_bytes": 8287,
+      "original_bytes_available": "CURRENT_FILE_ALREADY_MATCHES",
+      "recovery_confidence": "EXACT_BYTES_PRESENT_NO_RESTORE_NEEDED"
+    },
+    {
+      "path": "reports/DRAWING_CONTACT_SHEET.png",
+      "original_sha256": "8a503ee044ccbd54210754c840ddb957be6d1bace43096b66f1dfec46b5cc51e",
+      "original_hash_source": "tests/PACKAGE_SHA256.json",
+      "original_hash_confidence": "CORROBORATED_LOCAL_PREINCIDENT_MANIFEST",
+      "current_sha256": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "post_edit_backup_sha256": "30bba2f66d99031b4fb027e9e2f17d0e14136908b58165ee098aeeddfaefcad3",
+      "backup_matches_incident_record": true,
+      "current_equals_backup": true,
+      "current_equals_original_manifest": false,
+      "current_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1890
+        ]
+      },
+      "backup_format": {
+        "status": "PASS_PNG_VERIFY_AND_DECODE",
+        "dimensions": [
+          1920,
+          1890
+        ]
+      },
+      "current_bytes": 1516929,
+      "original_bytes_available": "NOT_FOUND_IN_SEARCHED_SCOPE",
+      "recovery_confidence": "HASH_KNOWN_RESTORE_FEASIBILITY_UNKNOWN"
+    }
+  ]
+}
