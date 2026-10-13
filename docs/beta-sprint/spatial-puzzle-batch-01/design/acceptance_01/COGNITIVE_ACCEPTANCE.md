@@ -63,3 +63,18 @@ H6只检验现有实验之间的组合迁移；重复地图、同构路线不能
 单会话判读用SUPPORTED / CONTRADICTED / INCONCLUSIVE / UNASSESSED；当前所有条目为NOT_OBSERVED。SUPPORTED只对应受测案例，不能代表所有玩家或正式Beta验收PASS。用户反馈、主持解释和专家推断分列。真人样本少时报告逐例，不伪造统计成功率。第二位复核者可核对分歧，未复核须标明；不为可靠性虚构第二位编码者。
 
 准备文档可单独完成并Git交付；认知验收仍HUMAN_QA_NOT_RUN，Integration=PENDING_00。本轮Godot changes=NONE，GUI=NOT_RUN，Runtime/Solver/Safety/Replay/Graphical=NOT_RERUN。
+
+
+## 初步用户反馈追加｜2026-10-13 21:02:35（Asia/Shanghai）
+
+本节时间是登记时间，操作发生时间未知。00转交的实际原话已在其聊天用户回复核对，来源、原字和缺失字段保存在 [UF001初步记录](USER_FEEDBACK_001.md)。
+
+> 前后左后移动以及边缘的动画是正确的，目前是到了表里世界的切换点按space可以切换，但是头顶的方块目前尝试了上不去
+
+当前只收到USER_REPORTED_OBSERVATION：移动/边缘表现正常、所述切换点Space成功、头顶方块尝试后无法到达。地图、所在世界、具体方向/Camera、本人或首次玩家、实际Build身份、操作时间、预测、提示与完成情况均未确认。00已追问这些上下文，13不提供解法、不补估操作和资格。
+
+**最新Human QA=PARTIAL_USER_FEEDBACK；FIRST_TIME_COMPREHENSION=NOT_VERIFIED；H1–H6仍NOT_OBSERVED。** 结构化会话记录0份，初步反馈消息1份；不把这段自报写成已观察的规划、成功解释或迁移。目标Build59531adc保持观察计划身份，尚未证实此反馈实际使用该包。
+
+“头顶方块上不去”保留为待定位的可达性/理解问题。尚不能判为Gameplay bug、Softlock或正常设计；也不把“按Space成功”扩大成全部Gate技术PASS。后续失败、定位、恢复与解释均追加，保留原始困难。
+
+原准备阶段NOT_RUN/NOT_OBSERVED状态保留历史；f4f4156准备交付已由00报告集成，本次新增记录仍PENDING_00。文件/SHA核验只确认文档来源和保留，不执行生产或真人测试。Godot changes=NONE，GUI=NOT_RUN。

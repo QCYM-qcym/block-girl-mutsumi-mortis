@@ -105,11 +105,11 @@
   "delivered_markdown": [
     {
       "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
-      "repository_bytes": 9012,
-      "repository_sha256": "718539a96fb034269449e43e92bbb145336eeeb0f58e21cbae6bcf382655c6f1",
+      "repository_bytes": 10650,
+      "repository_sha256": "917c0245ce5d423d30ed0cc2ae93ddb3c3089545a1e611dc1980228650c7ef9c",
       "obsidian_relative_path": "认知验收-20261013/COGNITIVE_ACCEPTANCE.md",
-      "obsidian_bytes": 9188,
-      "obsidian_sha256": "fe38143f1790b6611b4013f4ec7b2dbbbefc4c4b43eaa94def5594a007a2f14a",
+      "obsidian_bytes": 10826,
+      "obsidian_sha256": "06d65c0dbda60dba4d3fee5996d309397389a01bbd78d06a762ad0c77cd54cd3",
       "mirror_difference": "Only existing repository-report links made absolute for Obsidian"
     },
     {
@@ -128,6 +128,15 @@
       "obsidian_relative_path": "认知验收-20261013/moderator_only/POST_SESSION_CHECKLIST.md",
       "obsidian_bytes": 5452,
       "obsidian_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+      "mirror_difference": "NONE"
+    },
+    {
+      "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/USER_FEEDBACK_001.md",
+      "repository_bytes": 3277,
+      "repository_sha256": "874051f13892f8cae2cb7507098be10c4aaca3d995caa0791939a3a558569d8e",
+      "obsidian_relative_path": "认知验收-20261013/USER_FEEDBACK_001.md",
+      "obsidian_bytes": 3277,
+      "obsidian_sha256": "874051f13892f8cae2cb7507098be10c4aaca3d995caa0791939a3a558569d8e",
       "mirror_difference": "NONE"
     }
   ],
@@ -164,5 +173,88 @@
     "resolved_links_both_destinations": 14,
     "production_changes": 0,
     "limitations": "Protocol checks only. Cognitive behavior NOT_OBSERVED; Human QA NOT_RUN. No GUI or gameplay tests."
+  },
+  "preparation_history": {
+    "commit": "f4f4156a1229b57153932651f6730fc895e82fe3",
+    "observations": {
+      "sessions_received": 0,
+      "behavior_understanding": "NOT_OBSERVED",
+      "human_qa": "NOT_RUN",
+      "current_graph_evidence": "NOT_RECEIVED",
+      "expert_risk_basis": "source/receipt review; not actual player observation",
+      "gui": "NOT_RUN",
+      "screenshot_visual_review": "NOT_RUN",
+      "runtime_solver_safety_replay_graphical": "NOT_RERUN"
+    },
+    "delivered_markdown": [
+      {
+        "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
+        "repository_bytes": 9012,
+        "repository_sha256": "718539a96fb034269449e43e92bbb145336eeeb0f58e21cbae6bcf382655c6f1",
+        "obsidian_relative_path": "认知验收-20261013/COGNITIVE_ACCEPTANCE.md",
+        "obsidian_bytes": 9188,
+        "obsidian_sha256": "fe38143f1790b6611b4013f4ec7b2dbbbefc4c4b43eaa94def5594a007a2f14a",
+        "mirror_difference": "Only existing repository-report links made absolute for Obsidian"
+      },
+      {
+        "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/BLIND_OBSERVATION_CODEBOOK.md",
+        "repository_bytes": 6683,
+        "repository_sha256": "8b9f9053e9b426599cd67d8f0c365c8954f8794ed09f822381d5d4a98163d70d",
+        "obsidian_relative_path": "认知验收-20261013/BLIND_OBSERVATION_CODEBOOK.md",
+        "obsidian_bytes": 6683,
+        "obsidian_sha256": "8b9f9053e9b426599cd67d8f0c365c8954f8794ed09f822381d5d4a98163d70d",
+        "mirror_difference": "NONE"
+      },
+      {
+        "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/moderator_only/POST_SESSION_CHECKLIST.md",
+        "repository_bytes": 5452,
+        "repository_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+        "obsidian_relative_path": "认知验收-20261013/moderator_only/POST_SESSION_CHECKLIST.md",
+        "obsidian_bytes": 5452,
+        "obsidian_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+        "mirror_difference": "NONE"
+      }
+    ],
+    "integration": "COORDINATOR_REPORTED_INTEGRATED; original PENDING_00 snapshot retained"
+  },
+  "feedback_sources": [
+    {
+      "record_id": "UF001",
+      "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+      "turn_id": "01a13547-835b-7402-b23c-5884a7b30893",
+      "user_item_id": "01a1355a-b487-7683-a1bf-0d5101ceba5b",
+      "source_verification": "Read actual user reply from00 thread; coordinator forwarded the same exact text",
+      "quote_utf8_no_newline_sha256": "d5f0a81715114d2fad951c481c8b1f0041bfd25c4c5d62c735ec8a7cb93e462a",
+      "registered_at": "2026-10-13T21:02:35+08:00",
+      "actual_event_time": "UNKNOWN",
+      "actual_build_identity": "UNKNOWN"
+    }
+  ],
+  "latest_observation_status": {
+    "human_qa": "PARTIAL_USER_FEEDBACK",
+    "first_time_comprehension": "NOT_VERIFIED",
+    "H1_H6": "NOT_OBSERVED",
+    "structured_sessions_received": 0,
+    "feedback_messages_received": 1,
+    "map_layer_camera_eligibility": "UNKNOWN",
+    "gameplay_bug": "NOT_ESTABLISHED",
+    "integration": "PENDING_00"
+  },
+  "status_resolution": "Original observations/documentation_verification are preparation history at f4f4156. Latest observation status adds unverified user feedback only; it does not confirm H1-H6 or overwrite earlier NOT_RUN.",
+  "feedback_update_base_commit": "f4f4156a1229b57153932651f6730fc895e82fe3",
+  "feedback_update_verification": {
+    "result": "PASS",
+    "quote": "Verbatim match to actual00 user reply",
+    "report_update": "APPEND_ONLY; original Git and Obsidian byte prefixes match preparation hashes",
+    "preparation_observations": "UNCHANGED_HISTORY",
+    "blind_and_moderator": "UNCHANGED",
+    "resolved_links_both_destinations": 16,
+    "old_obsidian_note_hashes": "22 MATCH",
+    "changed_git_paths": [
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/SOURCES.json",
+      "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/USER_FEEDBACK_001.md"
+    ],
+    "limits": "No reproduction or cognition testing. Gameplay bug unestablished; H1-H6 NOT_OBSERVED."
   }
 }
