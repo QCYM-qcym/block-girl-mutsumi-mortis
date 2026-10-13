@@ -1,6 +1,6 @@
 {
   "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
-  "status": "INPUT_FIX_CANDIDATE_PENDING_INTEGRATION_VERIFICATION",
+  "status": "INPUT_FIX_INTEGRATED_HEADLESS_PASS_BUILD_PENDING",
   "prior_build_source": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
   "human_qa": "PARTIAL_USER_FEEDBACK_ON_PRIOR_BUILD",
   "first_time_comprehension": "NOT_VERIFIED",
@@ -12,5 +12,25 @@
   "graph_softlocks": 0,
   "post_goal_domain": "UNKNOWN",
   "graph_overall": "PARTIAL",
-  "new_build": "PENDING"
+  "new_build": "PENDING",
+  "runtime_fix": "3a87dfbab4d30753f53b2bf4f88862854a91d328",
+  "production_integration": "31be5bd8de001bc216fbb3dab2106c36f2316d62",
+  "native_menu_keyboard": {
+    "case": "acc_keys_green01",
+    "checks": 612,
+    "failures": [],
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "doubles": [],
+    "source_drift": []
+  },
+  "roof": {
+    "identity": "USER_CONFIRMED_ROOF",
+    "walkable": false,
+    "role": "OCCLUDER",
+    "reported_attempt": "unreachable overhead object",
+    "classification": "READABILITY_FEEDBACK_NOT_TRAVERSAL_DEFECT",
+    "moderator_explanation": "PROVIDED_AFTER_IDENTIFICATION"
+  },
+  "p1": "FIX_INTEGRATED_PENDING_GRAPHICAL_AND_HUMAN_RECHECK"
 }
