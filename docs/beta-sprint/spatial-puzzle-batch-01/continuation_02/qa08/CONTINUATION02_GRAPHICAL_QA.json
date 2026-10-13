@@ -1,0 +1,1259 @@
+{
+  "task": "SPATIAL_PUZZLE_ACCEPTANCE_CONTINUATION_02",
+  "owner": "08 QA",
+  "baseline": "295a4702aeb17d6fced11cfdaa221e0ffa90dd12",
+  "build": "beta_spatial_acceptance_input_fix_20261013_01",
+  "source": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+  "zip_sha256": "28bdef16329f8404c7e71851136fb09baa98c36066b5af8bc49f264f43b81285",
+  "graphical": "PASS_FOCUSED_AUTOMATED_REAL_RENDERER",
+  "acceptance": "PARTIAL",
+  "p1": {
+    "id": "SPATIAL-CARDINAL-01",
+    "graphical_recheck": "PASS",
+    "disposition": "REQUEST_TECHNICAL_CLOSURE_BY_00",
+    "not_closed_by_this_report": true
+  },
+  "human_qa": "NOT_RUN",
+  "first_time_comprehension": "NOT_RUN",
+  "physical_os_keyboard": "NOT_RUN",
+  "input": "Godot Input.parse_input_event, physical_keycode/keycode populated; not OS SendInput or human",
+  "execution": {
+    "display": "Windows",
+    "renderer": "forward_plus",
+    "device": "NVIDIA GeForce RTX 5060 Ti",
+    "engine": "4.7.2-stable (steam)",
+    "render_size": [
+      1280,
+      720
+    ],
+    "main": {
+      "checks": 1355,
+      "failures": 0,
+      "exit_code": 0,
+      "elapsed_ms": 109745
+    },
+    "followup": {
+      "checks": 23,
+      "failures": 0,
+      "exit_code": 0
+    },
+    "original_screenshots": 224,
+    "contact_sheets_reviewed": 16,
+    "doubles": [],
+    "manual_transition_completions": [],
+    "forced_state_writes": []
+  },
+  "coverage": {
+    "gate_matrix": {
+      "positions": 4,
+      "worlds": [
+        "Surface",
+        "Inner"
+      ],
+      "cameras": [
+        "NORTH",
+        "EAST",
+        "SOUTH",
+        "WEST"
+      ],
+      "keys": [
+        "W",
+        "A",
+        "S",
+        "D"
+      ],
+      "attempts": 64,
+      "legal_rolls": 16,
+      "expected_edge_rejections": 48,
+      "all_four_distinct_axes_per_group": true,
+      "all_accepted_visual_poses_match_formal_pose": true
+    },
+    "shift": "PASS_REAL_SPACE_INPUT",
+    "camera_preserves_orientation": "PASS",
+    "face_lock": "PASS_FORMAL_ACTION_SETUP_WRONG_CORRECT_RESET_WITH_RENDERED_FEEDBACK",
+    "fork": "PASS_NORTH_WEST_2101_REJECT_EAST_SOUTH_DISTINCT_LANDINGS",
+    "reset_during_fall": "PASS_ACTUAL_FALL_PHASE_TO_SPAWN_IDLE",
+    "roll_after_fall": "PASS_REAL_D_INPUT_TO_GOAL",
+    "pause_resume": "PASS",
+    "menu_entry_return": "PASS",
+    "other_resolutions": "NOT_RUN",
+    "cold_continue": "NOT_RUN",
+    "whole_graph_softlocks": "NOT_ASSESSED"
+  },
+  "new_findings": [
+    {
+      "id": "QA08-C02-UI-RESET-LABEL-01",
+      "severity": "P2",
+      "owner": "07 Game Shell",
+      "status": "OPEN",
+      "summary": "After real Gate Goal, keyboard R restores player spawn but leaves Shell goal_seen and completed toolbar text; mouse Reset clears both.",
+      "repro": [
+        "Fresh Menu -> World Shift Gate, default EAST",
+        "D -> Space -> S, each naturally settles, real Goal",
+        "R: player source/Surface/orientation0; toolbar still says completed",
+        "Mouse Reset: toolbar returns to ordinary title and goal_seen=false"
+      ],
+      "evidence": [
+        "followup/goal_before_reset.png",
+        "followup/keyboard_R_reset.png",
+        "followup/mouse_reset.png",
+        "followup/report.json"
+      ],
+      "impact": "Misleading completion display after valid reset; movement/state reset works; no core flow blockage established."
+    }
+  ],
+  "new_issue_counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 1,
+    "P3": 0
+  },
+  "counts_scope": "New confirmed findings in focused run only; historical bugs not re-counted",
+  "matrix": [
+    {
+      "prefix": 0,
+      "world": 0,
+      "location": {
+        "cube_id": "source",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 0,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c0_W_before.png",
+            "gate_p0_c0_W_motion.png",
+            "gate_p0_c0_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c0_A_before.png",
+            "gate_p0_c0_A_motion.png",
+            "gate_p0_c0_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c0_S_before.png",
+            "gate_p0_c0_S_motion.png",
+            "gate_p0_c0_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c0_D_before.png",
+            "gate_p0_c0_D_motion.png",
+            "gate_p0_c0_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p0_c0_contact.png"
+    },
+    {
+      "prefix": 0,
+      "world": 0,
+      "location": {
+        "cube_id": "source",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 1,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c1_W_before.png",
+            "gate_p0_c1_W_motion.png",
+            "gate_p0_c1_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c1_A_before.png",
+            "gate_p0_c1_A_motion.png",
+            "gate_p0_c1_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c1_S_before.png",
+            "gate_p0_c1_S_motion.png",
+            "gate_p0_c1_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c1_D_before.png",
+            "gate_p0_c1_D_motion.png",
+            "gate_p0_c1_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p0_c1_contact.png"
+    },
+    {
+      "prefix": 0,
+      "world": 0,
+      "location": {
+        "cube_id": "source",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 2,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c2_W_before.png",
+            "gate_p0_c2_W_motion.png",
+            "gate_p0_c2_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 0,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c2_A_before.png",
+            "gate_p0_c2_A_motion.png",
+            "gate_p0_c2_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c2_S_before.png",
+            "gate_p0_c2_S_motion.png",
+            "gate_p0_c2_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c2_D_before.png",
+            "gate_p0_c2_D_motion.png",
+            "gate_p0_c2_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p0_c2_contact.png"
+    },
+    {
+      "prefix": 0,
+      "world": 0,
+      "location": {
+        "cube_id": "source",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 3,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c3_W_before.png",
+            "gate_p0_c3_W_motion.png",
+            "gate_p0_c3_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c3_A_before.png",
+            "gate_p0_c3_A_motion.png",
+            "gate_p0_c3_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 0,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c3_S_before.png",
+            "gate_p0_c3_S_motion.png",
+            "gate_p0_c3_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(0.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p0_c3_D_before.png",
+            "gate_p0_c3_D_motion.png",
+            "gate_p0_c3_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p0_c3_contact.png"
+    },
+    {
+      "prefix": 1,
+      "world": 0,
+      "location": {
+        "cube_id": "gate",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 0,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c0_W_before.png",
+            "gate_p1_c0_W_motion.png",
+            "gate_p1_c0_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c0_A_before.png",
+            "gate_p1_c0_A_motion.png",
+            "gate_p1_c0_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c0_S_before.png",
+            "gate_p1_c0_S_motion.png",
+            "gate_p1_c0_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c0_D_before.png",
+            "gate_p1_c0_D_motion.png",
+            "gate_p1_c0_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p1_c0_contact.png"
+    },
+    {
+      "prefix": 1,
+      "world": 0,
+      "location": {
+        "cube_id": "gate",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 1,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c1_W_before.png",
+            "gate_p1_c1_W_motion.png",
+            "gate_p1_c1_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c1_A_before.png",
+            "gate_p1_c1_A_motion.png",
+            "gate_p1_c1_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c1_S_before.png",
+            "gate_p1_c1_S_motion.png",
+            "gate_p1_c1_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c1_D_before.png",
+            "gate_p1_c1_D_motion.png",
+            "gate_p1_c1_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p1_c1_contact.png"
+    },
+    {
+      "prefix": 1,
+      "world": 0,
+      "location": {
+        "cube_id": "gate",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 2,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c2_W_before.png",
+            "gate_p1_c2_W_motion.png",
+            "gate_p1_c2_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c2_A_before.png",
+            "gate_p1_c2_A_motion.png",
+            "gate_p1_c2_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c2_S_before.png",
+            "gate_p1_c2_S_motion.png",
+            "gate_p1_c2_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 2,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c2_D_before.png",
+            "gate_p1_c2_D_motion.png",
+            "gate_p1_c2_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p1_c2_contact.png"
+    },
+    {
+      "prefix": 1,
+      "world": 0,
+      "location": {
+        "cube_id": "gate",
+        "face": 4,
+        "layer": 0
+      },
+      "camera": 3,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 2,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(0.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c3_W_before.png",
+            "gate_p1_c3_W_motion.png",
+            "gate_p1_c3_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c3_A_before.png",
+            "gate_p1_c3_A_motion.png",
+            "gate_p1_c3_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c3_S_before.png",
+            "gate_p1_c3_S_motion.png",
+            "gate_p1_c3_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p1_c3_D_before.png",
+            "gate_p1_c3_D_motion.png",
+            "gate_p1_c3_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p1_c3_contact.png"
+    },
+    {
+      "prefix": 2,
+      "world": 1,
+      "location": {
+        "cube_id": "inner_gate",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 0,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c0_W_before.png",
+            "gate_p2_c0_W_motion.png",
+            "gate_p2_c0_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c0_A_before.png",
+            "gate_p2_c0_A_motion.png",
+            "gate_p2_c0_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p2_c0_S_before.png",
+            "gate_p2_c0_S_motion.png",
+            "gate_p2_c0_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c0_D_before.png",
+            "gate_p2_c0_D_motion.png",
+            "gate_p2_c0_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p2_c0_contact.png"
+    },
+    {
+      "prefix": 2,
+      "world": 1,
+      "location": {
+        "cube_id": "inner_gate",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 1,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c1_W_before.png",
+            "gate_p2_c1_W_motion.png",
+            "gate_p2_c1_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c1_A_before.png",
+            "gate_p2_c1_A_motion.png",
+            "gate_p2_c1_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p2_c1_S_before.png",
+            "gate_p2_c1_S_motion.png",
+            "gate_p2_c1_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c1_D_before.png",
+            "gate_p2_c1_D_motion.png",
+            "gate_p2_c1_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p2_c1_contact.png"
+    },
+    {
+      "prefix": 2,
+      "world": 1,
+      "location": {
+        "cube_id": "inner_gate",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 2,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 3,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p2_c2_W_before.png",
+            "gate_p2_c2_W_motion.png",
+            "gate_p2_c2_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c2_A_before.png",
+            "gate_p2_c2_A_motion.png",
+            "gate_p2_c2_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c2_S_before.png",
+            "gate_p2_c2_S_motion.png",
+            "gate_p2_c2_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c2_D_before.png",
+            "gate_p2_c2_D_motion.png",
+            "gate_p2_c2_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p2_c2_contact.png"
+    },
+    {
+      "prefix": 2,
+      "world": 1,
+      "location": {
+        "cube_id": "inner_gate",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 3,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c3_W_before.png",
+            "gate_p2_c3_W_motion.png",
+            "gate_p2_c3_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 3,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p2_c3_A_before.png",
+            "gate_p2_c3_A_motion.png",
+            "gate_p2_c3_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c3_S_before.png",
+            "gate_p2_c3_S_motion.png",
+            "gate_p2_c3_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 1,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 0.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p2_c3_D_before.png",
+            "gate_p2_c3_D_motion.png",
+            "gate_p2_c3_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p2_c3_contact.png"
+    },
+    {
+      "prefix": 3,
+      "world": 1,
+      "location": {
+        "cube_id": "goal",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 0,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p3_c0_W_before.png",
+            "gate_p3_c0_W_motion.png",
+            "gate_p3_c0_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c0_A_before.png",
+            "gate_p3_c0_A_motion.png",
+            "gate_p3_c0_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c0_S_before.png",
+            "gate_p3_c0_S_motion.png",
+            "gate_p3_c0_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c0_D_before.png",
+            "gate_p3_c0_D_motion.png",
+            "gate_p3_c0_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p3_c0_contact.png"
+    },
+    {
+      "prefix": 3,
+      "world": 1,
+      "location": {
+        "cube_id": "goal",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 1,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 1,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p3_c1_W_before.png",
+            "gate_p3_c1_W_motion.png",
+            "gate_p3_c1_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c1_A_before.png",
+            "gate_p3_c1_A_motion.png",
+            "gate_p3_c1_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c1_S_before.png",
+            "gate_p3_c1_S_motion.png",
+            "gate_p3_c1_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c1_D_before.png",
+            "gate_p3_c1_D_motion.png",
+            "gate_p3_c1_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p3_c1_contact.png"
+    },
+    {
+      "prefix": 3,
+      "world": 1,
+      "location": {
+        "cube_id": "goal",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 2,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c2_W_before.png",
+            "gate_p3_c2_W_motion.png",
+            "gate_p3_c2_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c2_A_before.png",
+            "gate_p3_c2_A_motion.png",
+            "gate_p3_c2_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 1,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p3_c2_S_before.png",
+            "gate_p3_c2_S_motion.png",
+            "gate_p3_c2_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c2_D_before.png",
+            "gate_p3_c2_D_motion.png",
+            "gate_p3_c2_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p3_c2_contact.png"
+    },
+    {
+      "prefix": 3,
+      "world": 1,
+      "location": {
+        "cube_id": "goal",
+        "face": 4,
+        "layer": 1
+      },
+      "camera": 3,
+      "keys": [
+        {
+          "key": "W",
+          "face_axis": 2,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c3_W_before.png",
+            "gate_p3_c3_W_motion.png",
+            "gate_p3_c3_W_after.png"
+          ]
+        },
+        {
+          "key": "A",
+          "face_axis": 3,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c3_A_before.png",
+            "gate_p3_c3_A_motion.png",
+            "gate_p3_c3_A_after.png"
+          ]
+        },
+        {
+          "key": "S",
+          "face_axis": 0,
+          "status": 1,
+          "rejection_code": 2000,
+          "state_changed": false,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 1.0)",
+          "screenshots": [
+            "gate_p3_c3_S_before.png",
+            "gate_p3_c3_S_motion.png",
+            "gate_p3_c3_S_after.png"
+          ]
+        },
+        {
+          "key": "D",
+          "face_axis": 1,
+          "status": 0,
+          "rejection_code": 0,
+          "state_changed": true,
+          "pre_position": "(1.0, 3.0, 1.0)",
+          "post_position": "(1.0, 3.0, 0.0)",
+          "screenshots": [
+            "gate_p3_c3_D_before.png",
+            "gate_p3_c3_D_motion.png",
+            "gate_p3_c3_D_after.png"
+          ]
+        }
+      ],
+      "visual_review": "REVIEWED_CONTACT_SHEET_BEFORE_MOTION_AFTER",
+      "review_sheet": "visual_review/gate_p3_c3_contact.png"
+    }
+  ],
+  "integrity": {
+    "manifest_files": 1641,
+    "original_and_copy_source_drift": [],
+    "capture_hash_or_dimension_mismatches": [],
+    "only_added_test_entries": [
+      "harness/graphical_recheck.gd",
+      "harness/focused_followup.gd",
+      "harness/contact_sheets.py"
+    ],
+    "test_scripts_outside_project": true
+  },
+  "delivery": {
+    "mode": "External anonymous report and manifest for 00 import, per task and Owner scope",
+    "commit": "NOT_CREATED",
+    "push": "NOT_RUN_EXTERNAL_08_SCOPE",
+    "repo_initial_status": "CLEAN at baseline",
+    "repo_final_observed_head": "af43e72bc1767880c55641fad19b41d749789935",
+    "repo_final_other_owner_untracked": [
+      "docs/beta-sprint/spatial-puzzle-batch-01/continuation_02/SOURCE_VERIFICATION.json"
+    ],
+    "repo_writes_by_08": [],
+    "old_process_or_profile_mutations": [],
+    "production_changes": "NONE"
+  },
+  "evidence_root_name": "spatial_continuation02_08_20261013T135945Z"
+}

@@ -1,0 +1,51 @@
+{
+  "task": "SPATIAL_PUZZLE_ACCEPTANCE_CONTINUATION_02",
+  "p1": {
+    "id": "SPATIAL-CARDINAL-01",
+    "status": "CLOSED",
+    "basis": "Independent08 actual Windows graphical recheck,00 source/log/hash/state and screenshot review",
+    "build_source": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+    "human_first_time": "NOT_RUN",
+    "physical_os_keyboard": "NOT_RUN"
+  },
+  "checks": {
+    "main": 1355,
+    "followup": 23,
+    "failures": [],
+    "natural_process_exits": [
+      0,
+      0
+    ],
+    "raw_png": 224,
+    "external_manifest_files_verified": 261,
+    "cardinal_attempts": 64,
+    "groups": 16
+  },
+  "00_review": {
+    "verified": "4 distinct face axes/group, legal action in every group, reject preserves StateKey, settle toIDLE,219main PNG SHA hashes",
+    "contact_sheets_viewed": [
+      "gate_p0_c0_contact.png",
+      "gate_p0_c1_contact.png",
+      "gate_p2_c0_contact.png",
+      "gate_p2_c1_contact.png"
+    ],
+    "harness_reviewed": [
+      "harness/graphical_recheck.gd",
+      "harness/focused_followup.gd"
+    ],
+    "boundaries": "Real Input.parse_input_event, formal setup actions, natural animation. Not physical OS keyboard/human cognitive QA."
+  },
+  "new_defects": [
+    {
+      "id": "QA08-C02-UI-RESET-LABEL-01",
+      "severity": "P2",
+      "owner": "07 Game Shell",
+      "status": "OPEN_BACKLOG",
+      "repro": "Gate D → Space → S toGoal, R returns player tosource but goal_seen/title remains completed; mouseReset clears",
+      "gameplay_reset": "PASS",
+      "presentation_reset": "FAIL"
+    }
+  ],
+  "qa_root": "E:/godot/beta-sprint-builds/spatial_continuation02_08_20261013T135945Z",
+  "approval": "No material adoption or external recovery approved"
+}
