@@ -4,7 +4,10 @@
     "branch": "feat/spatial-puzzle-batch-01",
     "paths": [
       "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/**",
-      "docs/superpowers/plans/2026-10-13-spatial-acceptance.md"
+      "docs/superpowers/plans/2026-10-13-spatial-acceptance.md",
+      "tests/beta_sprint/spatial_integration/package.py",
+      "docs/beta-sprint/spatial-puzzle-batch-01/evidence/acc_*",
+      "tests/beta_sprint/spatial_integration/run.py"
     ],
     "production": "Only after actual defect reproduction and explicit scoped disposition",
     "diagnostics": "acceptance_01/diagnostics: isolated read-only technical reproduction of actual user-reported Gate/Inner EAST inability to move; no production changes or player profile access for writes"

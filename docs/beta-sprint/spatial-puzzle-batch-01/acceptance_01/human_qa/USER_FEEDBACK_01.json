@@ -1,0 +1,68 @@
+{
+  "record_id": "USER_FEEDBACK_01",
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "recorded_utc": "2026-10-13T13:03:10.135Z",
+  "provenance": {
+    "type": "USER_REPORTED_OBSERVATION",
+    "delivery": "Relayed verbatim by 00 Integration Coordinator; not directly observed by 08",
+    "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+    "quote_verbatim": "前后左后移动以及边缘的动画是正确的，目前是到了表里世界的切换点按space可以切换，但是头顶的方块目前尝试了上不去",
+    "event_time": "NOT_CONFIRMED"
+  },
+  "human_qa": "PARTIAL_USER_FEEDBACK",
+  "first_time_comprehension": "NOT_VERIFIED",
+  "reported_observations": [
+    {
+      "topic": "Movement and edge animation",
+      "status": "USER_REPORTED_NORMAL",
+      "independently_verified": false
+    },
+    {
+      "topic": "Space at world switching point",
+      "status": "USER_REPORTED_SWITCH_SUCCEEDED",
+      "independently_verified": false
+    },
+    {
+      "topic": "Block overhead",
+      "status": "USER_REPORTED_UNABLE_TO_REACH",
+      "classification": "UNCONFIRMED_REACHABILITY_DIFFICULTY",
+      "gameplay_bug": "NOT_ESTABLISHED"
+    }
+  ],
+  "context": {
+    "actual_running_build": "NOT_CONFIRMED",
+    "map": "NOT_CONFIRMED",
+    "world": "NOT_CONFIRMED",
+    "movement_input": "NOT_CONFIRMED",
+    "camera": "NOT_CONFIRMED",
+    "participant_identity_class": "NOT_CONFIRMED",
+    "first_time_eligibility": "NOT_CONFIRMED",
+    "session_profile": "NOT_CONFIRMED"
+  },
+  "metrics": {
+    "first_discovery_time": "NOT_OBSERVED",
+    "prediction_correct": "NOT_OBSERVED",
+    "prediction_total": "NOT_OBSERVED",
+    "aimless_trials": "NOT_OBSERVED",
+    "stuck_duration": "NOT_OBSERVED",
+    "failure_reason_comprehension": "NOT_OBSERVED",
+    "hints": "NOT_OBSERVED",
+    "completion": "NOT_OBSERVED"
+  },
+  "severity": {
+    "P0": "NOT_ASSESSED",
+    "P1": "NOT_ASSESSED",
+    "P2": "NOT_ASSESSED",
+    "P3": "NOT_ASSESSED"
+  },
+  "follow_up": "00 has asked map, world, input/camera, and whether user or first-time player; awaiting answers, no duplicate question",
+  "prior_preparation": {
+    "record": "spatial_acceptance_01_human_qa_20261013T124748Z",
+    "human_qa_at_preparation": "NOT_RUN",
+    "sealed_files_verified": 9,
+    "mismatches": [],
+    "preserved": true
+  },
+  "production_changes": "NONE",
+  "push": "NOT_RUN"
+}

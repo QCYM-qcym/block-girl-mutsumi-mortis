@@ -1,0 +1,75 @@
+{
+  "record_id": "USER_FEEDBACK_04",
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "recorded_utc": "2026-10-13T13:18:29.304Z",
+  "human_qa": "PARTIAL_USER_FEEDBACK",
+  "first_time_comprehension": "NOT_VERIFIED",
+  "human_layer": {
+    "type": "USER_REPORTED_OBSERVATION",
+    "quote_verbatim": "表里世界的北和东方向都不行，无法朝对应方向移动",
+    "source": "00 Integration Coordinator relayed user words",
+    "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+    "directly_observed_by_08": false,
+    "worlds_reported_affected": [
+      "Surface",
+      "Inner"
+    ],
+    "directions_reported_affected": [
+      "NORTH",
+      "EAST"
+    ],
+    "statement": "User reports inability to move in corresponding directions in both worlds",
+    "exact_camera_key_combinations": "NOT_CONFIRMED",
+    "level_id_confirmed_by_user": false,
+    "participant_eligibility": "NOT_CONFIRMED",
+    "event_time": "NOT_CONFIRMED",
+    "screenshot": "NOT_OBTAINED"
+  },
+  "technical_layer": {
+    "issue_id": "SPATIAL-CARDINAL-01",
+    "severity": "P1",
+    "status": "OPEN_FIX_IN_PROGRESS_PENDING_RECHECK",
+    "available_evidence_commit": "89ebf7a60e405d7617298e49a3f43e3461e38376",
+    "available_verified_world_scope": [
+      "Inner"
+    ],
+    "available_verified_map": "world_shift_gate_lab",
+    "available_verified_views": [
+      "NORTH",
+      "EAST"
+    ],
+    "surface_technical_confirmation": "PENDING",
+    "expanded_regression": {
+      "source": "00 reports in progress",
+      "scope": "prefix 0/1/2/3 x 4 Camera x WASD, actual Menu keyboard regression",
+      "status": "IN_PROGRESS_RED",
+      "results_received_by_08": false
+    },
+    "owner": "01 Runtime",
+    "owner_fix_scope_reported": [
+      "Surface",
+      "Inner"
+    ],
+    "fixed_or_closed": false,
+    "unrecoverable_softlock": "NOT_ESTABLISHED"
+  },
+  "execution_boundary": {
+    "user_still_playing": "00_REPORTED_CONFIRMED",
+    "coordinator_testing": "BACKGROUND_ONLY_REPORTED",
+    "gui_started_or_operated_by_08": false,
+    "tests_rerun_by_08": false
+  },
+  "metrics": {
+    "first_discovery_time": "NOT_OBSERVED",
+    "prediction_correct": "NOT_OBSERVED",
+    "prediction_total": "NOT_OBSERVED",
+    "aimless_trials": "NOT_OBSERVED",
+    "stuck_duration": "NOT_OBSERVED",
+    "failure_reason_comprehension": "NOT_OBSERVED",
+    "hints": "NOT_OBSERVED",
+    "completion": "NOT_OBSERVED"
+  },
+  "issue_count_scope": "Continuation of existing SPATIAL-CARDINAL-01; not a new P1 and not a full-build defect census",
+  "production_changes": "NONE",
+  "push": "NOT_RUN"
+}

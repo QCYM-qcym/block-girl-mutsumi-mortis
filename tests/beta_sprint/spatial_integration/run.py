@@ -22,6 +22,8 @@ def digest(path):
 source_dirs=['experiments/spatial_puzzle_batch_01','tests/beta_sprint/spatial_integration','foundation','game/feel','experiments/game_feel_01','tests/beta_sprint/pfall_integration','tests/beta_sprint/pfall_v2_integration','tests/beta_sprint/game_feel_full_slice','tests/beta_sprint/graphical_bridge_02','tests/beta_sprint/yellow_target_01','tests/beta_sprint/forward_drop_01','tests/beta_sprint/game_feel_owner_10a','tests/beta_sprint/game_feel_owner_01','tests/beta_sprint/game_feel_owner_03','game/shell','tests/foundation/level']
 def source_files():
     paths={p.relative_to(PROJECT).as_posix():p for directory in source_dirs for p in (PROJECT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts}
+    entry=script.removeprefix('res://')
+    if (PROJECT/entry).is_file(): paths[entry]=PROJECT/entry
     for name in ['project.godot','default_bus_layout.tres','icon.svg']:
         if (PROJECT/name).is_file(): paths[name]=PROJECT/name
     return paths

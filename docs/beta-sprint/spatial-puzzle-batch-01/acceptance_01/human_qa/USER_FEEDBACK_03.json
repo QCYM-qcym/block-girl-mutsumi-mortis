@@ -1,0 +1,91 @@
+{
+  "record_id": "USER_FEEDBACK_03",
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "recorded_utc": "2026-10-13T13:12:39.692Z",
+  "human_qa": "PARTIAL_USER_FEEDBACK",
+  "first_time_comprehension": "NOT_VERIFIED",
+  "human_layer": {
+    "type": "USER_REPORTED_OBSERVATION",
+    "quote_verbatim": "北和东不行",
+    "source": "00 Integration Coordinator relayed user words",
+    "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+    "directly_observed_by_08": false,
+    "scope": "User says NORTH and EAST do not work; quote itself does not establish exact keys or scene",
+    "level_id_confirmed_by_user": false,
+    "participant_eligibility": "NOT_CONFIRMED",
+    "event_time": "NOT_CONFIRMED"
+  },
+  "technical_layer": {
+    "type": "00_TECHNICAL_REPRODUCTION",
+    "evidence_commit": "89ebf7a60e405d7617298e49a3f43e3461e38376",
+    "evidence_directory": "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/diagnostics/",
+    "reviewed_by_08": [
+      "OWNER_BUG_HANDOFF.md",
+      "process.json"
+    ],
+    "rerun_by_08": false,
+    "issue_id": "SPATIAL-CARDINAL-01",
+    "severity": "P1",
+    "status": "OPEN_FIX_IN_PROGRESS_PENDING_RECHECK",
+    "owner": "01 Runtime",
+    "owner_branch": "fix/spatial-cardinal-input-01",
+    "map": "world_shift_gate_lab",
+    "world": "Inner",
+    "locations": [
+      "gate",
+      "Goal"
+    ],
+    "affected_views": [
+      "NORTH",
+      "EAST"
+    ],
+    "probe_inputs": [
+      "W",
+      "A",
+      "S",
+      "D"
+    ],
+    "result": "Facade.request_move screen vectors map to face_axis 0/2 only; all four tested directions rejected with code 2000 at affected groups",
+    "comparison": "SOUTH/WEST expose four directions",
+    "direction_attempts": 32,
+    "groups_with_zero_legal_directions": 4,
+    "execution": "Official saved Map/Baker -> spatial Host -> Facade.request_move -> natural Presenter completion; headless technical probe, not human gameplay",
+    "probe_process_exit_code": 1,
+    "objectdb_exit_warnings_reported": 8,
+    "probe_process_head": "a9ecfb46f1a2d4efd20042586fbc690066cabfaa",
+    "human_profile_written_by_probe": false,
+    "mathematical_root_cause": "UNDER_INVESTIGATION",
+    "state_graph_softlock": "NOT_ESTABLISHED"
+  },
+  "session_identity_layer": {
+    "source": "00 read-only runtime process/profile inspection, relayed; not independently inspected by 08",
+    "active_command_line": "00 reports isolated/run/project",
+    "profile_recent_level_id": "world_shift_gate_lab",
+    "profile_completed_records": "REPORTED_PRESENT",
+    "qualifying_independent_human_completion": "NOT_ESTABLISHED"
+  },
+  "overhead_block": {
+    "identity_confirmed_by_user": false,
+    "reachability": "NOT_VERIFIED",
+    "map_nonwalkable_roof": "00 reports such geometry exists; not sufficient to identify the block described by user"
+  },
+  "metrics": {
+    "first_discovery_time": "NOT_OBSERVED",
+    "prediction_correct": "NOT_OBSERVED",
+    "prediction_total": "NOT_OBSERVED",
+    "aimless_trials": "NOT_OBSERVED",
+    "stuck_duration": "NOT_OBSERVED",
+    "failure_reason_comprehension": "NOT_OBSERVED",
+    "hints": "NOT_OBSERVED",
+    "completion": "NOT_OBSERVED"
+  },
+  "issue_counts_scope": "This appended record only; not full-build QA counts",
+  "issue_counts": {
+    "P0": "NOT_ASSESSED",
+    "P1": 1,
+    "P2": "NOT_ASSESSED",
+    "P3": "NOT_ASSESSED"
+  },
+  "production_changes": "NONE",
+  "push": "NOT_RUN"
+}

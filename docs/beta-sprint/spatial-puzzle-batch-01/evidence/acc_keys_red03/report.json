@@ -1,0 +1,1090 @@
+{
+	"captures": [],
+	"checks": 564,
+	"display": "headless",
+	"doubles": [],
+	"failures": [
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 0",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 1",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 2",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 3",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 0",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 1",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 2",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 3",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 0",
+		"Current platform has reachable keyboard move at quadrant 0",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 1",
+		"Current platform has reachable keyboard move at quadrant 1",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 2",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 3",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 0",
+		"Current platform has reachable keyboard move at quadrant 0",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 1",
+		"Current platform has reachable keyboard move at quadrant 1",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 2",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"one real keyboard event produces one move result",
+		"WASD exposes all four distinct axes at quadrant 3"
+	],
+	"graphical": "NOT_RUN",
+	"human_qa": "NOT_RUN",
+	"input": "Input.parse_input_event keyboard and menu mouse; formal action prefix only for positioning; natural Presenter, no manual finish",
+	"observations": [
+		{
+			"camera": 0,
+			"key": "S",
+			"location": {
+				"cube_id": "source",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 0,
+			"key": "D",
+			"location": {
+				"cube_id": "source",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 1,
+			"key": "W",
+			"location": {
+				"cube_id": "source",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 1,
+			"key": "D",
+			"location": {
+				"cube_id": "source",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 2,
+			"key": "A",
+			"location": {
+				"cube_id": "source",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 3,
+			"key": "S",
+			"location": {
+				"cube_id": "source",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 0,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 0,
+			"key": "W",
+			"location": {
+				"cube_id": "gate",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 0,
+			"key": "A",
+			"location": {
+				"cube_id": "gate",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 0,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 1,
+			"key": "A",
+			"location": {
+				"cube_id": "gate",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 1,
+			"key": "S",
+			"location": {
+				"cube_id": "gate",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 1,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 2,
+			"key": "D",
+			"location": {
+				"cube_id": "gate",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 3,
+			"key": "W",
+			"location": {
+				"cube_id": "gate",
+				"face": 4,
+				"layer": 0
+			},
+			"result": {
+				"action": {
+					"face_axis": 2,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "source",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 0
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "gate",
+							"face": 4,
+							"layer": 0
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 2,
+			"key": "W",
+			"location": {
+				"cube_id": "inner_gate",
+				"face": 4,
+				"layer": 1
+			},
+			"result": {
+				"action": {
+					"face_axis": 3,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "goal",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 20
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "inner_gate",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 3,
+			"key": "A",
+			"location": {
+				"cube_id": "inner_gate",
+				"face": 4,
+				"layer": 1
+			},
+			"result": {
+				"action": {
+					"face_axis": 3,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "goal",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 20
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "inner_gate",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 2,
+			"key": "S",
+			"location": {
+				"cube_id": "goal",
+				"face": 4,
+				"layer": 1
+			},
+			"result": {
+				"action": {
+					"face_axis": 1,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "inner_gate",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 2,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "goal",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 20
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		},
+		{
+			"camera": 3,
+			"key": "D",
+			"location": {
+				"cube_id": "goal",
+				"face": 4,
+				"layer": 1
+			},
+			"result": {
+				"action": {
+					"face_axis": 1,
+					"kind": 0
+				},
+				"changed": true,
+				"global_kind": 0,
+				"issues": [],
+				"next_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "inner_gate",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 12
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"previous_state": {
+					"camera_quadrant": 3,
+					"celestial": {
+						"slot_id": "sky"
+					},
+					"group_orientations": {},
+					"level_flags": {},
+					"mechanism_states": {},
+					"player": {
+						"location": {
+							"cube_id": "goal",
+							"face": 4,
+							"layer": 1
+						},
+						"orientation": 20
+					},
+					"world_orientations": [
+						0,
+						0
+					]
+				},
+				"rejection_code": 0,
+				"status": 0
+			},
+			"state_changed": true
+		}
+	],
+	"renderer": "forward_plus"
+}

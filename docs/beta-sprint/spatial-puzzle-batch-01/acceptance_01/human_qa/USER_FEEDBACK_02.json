@@ -1,0 +1,69 @@
+{
+  "record_id": "USER_FEEDBACK_02",
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "recorded_utc": "2026-10-13T13:04:59.811Z",
+  "provenance": {
+    "type": "USER_REPORTED_OBSERVATION",
+    "delivery": "Relayed verbatim by 00 Integration Coordinator; not directly observed by 08",
+    "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+    "quote_verbatim": "表世界的头顶方块，里世界的视角东无法移动",
+    "event_time": "NOT_CONFIRMED"
+  },
+  "human_qa": "PARTIAL_USER_FEEDBACK",
+  "first_time_comprehension": "NOT_VERIFIED",
+  "reported_observations": [
+    {
+      "topic": "Previously reported overhead block",
+      "world": "Surface",
+      "status": "USER_REPORTED_CONTEXT_CLARIFICATION",
+      "reachable": "NOT_VERIFIED"
+    },
+    {
+      "topic": "Movement unavailable",
+      "world": "Inner",
+      "camera": "EAST",
+      "status": "USER_REPORTED_UNABLE_TO_MOVE",
+      "independently_verified": false
+    }
+  ],
+  "unconfirmed": {
+    "actual_running_build": "NOT_CONFIRMED",
+    "level_id": "NOT_CONFIRMED",
+    "player_eligibility": "NOT_CONFIRMED",
+    "movement_keys_attempted": "NOT_CONFIRMED",
+    "all_directions_tested": "NOT_CONFIRMED",
+    "gameplay_input_received": "NOT_CONFIRMED",
+    "player_position": "NOT_CONFIRMED",
+    "pause_state": "NOT_CONFIRMED",
+    "ui_focus": "NOT_CONFIRMED",
+    "runtime_rejection_code": "NOT_CONFIRMED",
+    "session_profile": "NOT_CONFIRMED"
+  },
+  "metrics": {
+    "first_discovery_time": "NOT_OBSERVED",
+    "prediction_correct": "NOT_OBSERVED",
+    "prediction_total": "NOT_OBSERVED",
+    "aimless_trials": "NOT_OBSERVED",
+    "stuck_duration": "NOT_OBSERVED",
+    "failure_reason_comprehension": "NOT_OBSERVED",
+    "hints": "NOT_OBSERVED",
+    "completion": "NOT_OBSERVED"
+  },
+  "gameplay_bug": "NOT_ESTABLISHED",
+  "softlock": "NOT_ESTABLISHED",
+  "severity": {
+    "P0": "NOT_ASSESSED",
+    "P1": "NOT_ASSESSED",
+    "P2": "NOT_ASSESSED",
+    "P3": "NOT_ASSESSED"
+  },
+  "follow_up": "00 is checking running process and isolated profile read-only to identify session; findings not yet supplied",
+  "prior_feedback": {
+    "record_id": "USER_FEEDBACK_01",
+    "preserved": true,
+    "payload_files_checked": 2,
+    "hash_mismatches": []
+  },
+  "production_changes": "NONE",
+  "push": "NOT_RUN"
+}
