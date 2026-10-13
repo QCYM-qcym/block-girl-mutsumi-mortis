@@ -100,3 +100,10 @@ Human QA仍PARTIAL_USER_FEEDBACK；FIRST_TIME_COMPREHENSION=NOT_VERIFIED；H1–
 用户自报现涉及Surface和Inner；头顶问题自报在Surface，目标身份仍未确认。已读取89ebf7a技术证据仍只覆盖Inner，不能扩大技术FAIL到Surface。00报告两世界真实Menu键盘RED仍在运行、01修复覆盖两世界；新收据和修复验收PENDING，不等待它们而伪造结果。
 
 用户另明确“仍在试玩，先只做后台验证”。13不启动GUI、不动旧包/存档、不提供解法。首玩资格、预测/提示、完成与H1–H6仍未验证；四条反馈不等于四次合格会话。Human QA=PARTIAL_USER_FEEDBACK，FIRST_TIME_COMPREHENSION=NOT_VERIFIED，H1–H6=NOT_OBSERVED。
+
+
+## 头顶块身份新增澄清｜2026-10-13 21:41:01（Asia/Shanghai）
+
+用户原话“是，就是这个悬空方块”，对应世界转换点画面里文字上方的单个灰蓝色块。物体身份NOW_CONFIRMED为Surface roof遮光体，六面不可行走；旧“未知”记录不改。详见 [简短来源澄清](ROOF_IDENTITY_CLARIFICATION.md)。尝试登上它记可读性反馈，不判通行规则bug或通关FAIL。
+
+00确认后已解释其不可行走/遮光用途。roof相关后续理解是规则说明后的辅助理解，不能算未经提示首理解；资格仍未知，H1–H6不升级。输入修复已入00，源集成真实Menu键盘headless612checksPASS，Graphical仍NOT_RUN；新Build组装中，不冒领包执行或真人复验。Human QA=PARTIAL_USER_FEEDBACK，FIRST_TIME_COMPREHENSION=NOT_VERIFIED。13不启动GUI，Godot changes=NONE，新增澄清PENDING_00。
