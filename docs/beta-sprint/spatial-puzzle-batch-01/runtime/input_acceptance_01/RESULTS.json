@@ -1,0 +1,265 @@
+{
+  "task": "SPATIAL-CARDINAL-01",
+  "owner": "01 Runtime",
+  "base_sha": "3d6cad7f7d07c5bcb36e7fd9ab36ef40260ab2d8",
+  "branch": "fix/spatial-cardinal-input-01",
+  "production_files": [
+    "foundation/game_feel/runtime_facade.gd"
+  ],
+  "production_sha256": "96b1232bcf6b91902f358664a4441992bca14a892782d0bc2d0546225c6b841f",
+  "final_behavior_checks": 4266,
+  "behavior_failures": [],
+  "strict_receipts_pass": 7,
+  "strict_receipts_failed": 1,
+  "runs": {
+    "cardinal_final01": {
+      "checks": 833,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    },
+    "frames_final01": {
+      "checks": 2200,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    },
+    "host_final01": {
+      "checks": 482,
+      "status": "FAILED",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 133,
+      "source_drift": []
+    },
+    "mapper_final01": {
+      "checks": 330,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    },
+    "facade_final01": {
+      "checks": 63,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    },
+    "curve_runtime_final01": {
+      "checks": 96,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    },
+    "spatial_runtime_final01": {
+      "checks": 26,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    },
+    "saved_final01": {
+      "checks": 236,
+      "status": "PASS",
+      "exit_code": 0,
+      "failures": [],
+      "stderr_bytes": 0,
+      "source_drift": []
+    }
+  },
+  "groups": [
+    {
+      "prefix": 0,
+      "quadrant": 0,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 0,
+      "quadrant": 1,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 0,
+      "quadrant": 2,
+      "WASD_axes": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 0,
+      "quadrant": 3,
+      "WASD_axes": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 1,
+      "quadrant": 0,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 1,
+      "quadrant": 1,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 1,
+      "quadrant": 2,
+      "WASD_axes": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 1,
+      "quadrant": 3,
+      "WASD_axes": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 2,
+      "quadrant": 0,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 2,
+      "quadrant": 1,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 2,
+      "quadrant": 2,
+      "WASD_axes": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 2,
+      "quadrant": 3,
+      "WASD_axes": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 3,
+      "quadrant": 0,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 3,
+      "quadrant": 1,
+      "WASD_axes": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 3,
+      "quadrant": 2,
+      "WASD_axes": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "legal_moves": 1
+    },
+    {
+      "prefix": 3,
+      "quadrant": 3,
+      "WASD_axes": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "legal_moves": 1
+    }
+  ],
+  "host_warning_disposition": "Coordinator00 accepted non-blocking P2; retain strict FAILED; lifecycle cause NOT_DETERMINED; no shared Host edit or random rerun",
+  "review": "0 Critical;1 Important validation finding: final Host stderr warning, explicitly retained for00;0 Minor;no production mapping defect found",
+  "doubles": [],
+  "graphical": "PENDING_00_NO_GUI_RUN",
+  "human_qa": "PENDING_NEW_BUILD",
+  "overhead_cube_concern": "NOT_CONFIRMED_OR_FIXED",
+  "integration": "PENDING_00"
+}

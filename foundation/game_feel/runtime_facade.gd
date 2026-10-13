@@ -83,16 +83,32 @@ func request_action(action: Dictionary) -> Dictionary:
 	return result.duplicate(true)
 
 func request_move(screen_direction: Vector2) -> Dictionary:
-	# Input mapping is the formal Mapper; renderer angles never grant permission.
+	# Fixed-view cardinal adaptation is observation only; Runtime grants permission.
 	var state := get_state()
 	var snapshot := Derived.snapshot(get_level(),state)
 	if snapshot.ok:
 		var face := Geometry.face_id(state.player.location.cube_id,state.player.location.face)
 		for anchor in snapshot.value.anchors:
 			if anchor.face_id == face:
-				var mapped := Mapper.map_move(anchor.frame,View.basis(state.camera_quadrant),screen_direction)
+				var mapped := _map_fixed_move(anchor.frame,state.camera_quadrant,screen_direction)
 				if mapped.ok: return request_action(mapped.action)
 	return request_action({})
+
+static func _map_fixed_move(frame: Dictionary, quadrant: int, direction: Vector2) -> Dictionary:
+	var basis := View.basis(quadrant)
+	var mapped := Mapper.map_move(frame,basis,direction)
+	# Retain generic validation, analog/diagonal input and horizontal tie semantics.
+	if not mapped.ok or direction.x != 0.0: return mapped
+	var horizontal := Mapper.map_move(frame,basis,Vector2.RIGHT)
+	var vertical := Mapper.map_move(frame,basis,Vector2.DOWN)
+	if horizontal.action.face_axis % 2 != vertical.action.face_axis % 2: return mapped
+	# Independently quantized diagonal ties can give both keyboard pairs one axis
+	# family. Keep A/D; W/S use the remaining family, signed by exact View projection.
+	var axes := [frame.u,frame.v,-frame.u,-frame.v]
+	var down: int = (horizontal.action.face_axis + 1) % 4
+	if View.project(axes[down],quadrant).y < 0: down = (down + 2) % 4
+	mapped.action.face_axis = down if direction.y > 0.0 else (down + 2) % 4
+	return mapped
 
 func finish_transition(identity: Dictionary) -> Dictionary:
 	if _paused or _lifecycle or not _valid_identity(identity): return {"ignored":true,"transition":null}
