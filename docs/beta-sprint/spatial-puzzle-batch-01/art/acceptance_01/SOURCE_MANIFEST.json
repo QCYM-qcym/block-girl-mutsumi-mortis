@@ -1,0 +1,395 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "owner": "05",
+  "created_at": "2026-10-13T21:01:46.372780+08:00",
+  "worktree_base": "d3b131440600048006ccc7679962fb7fc546a63f",
+  "build_source": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+  "build_name": "beta_spatial_puzzle_batch_01_full_20261012_01",
+  "build_identity_sha256": "eba7a8bc7d8e1a2ed5534221f678a826920a33faa2deb1f1b2c38a58041b5c43",
+  "build_hash_check": {
+    "listed_files": 1561,
+    "kinds": {
+      "git_source": 1409,
+      "existing_import": 150,
+      "declared_uid_manifest": 1,
+      "verified_existing_uid_cache": 1
+    },
+    "mismatches": []
+  },
+  "historical_cases": [
+    {
+      "case": "full_pkg_menu02",
+      "process_sha256": "f2237de139f2126a22d3bcc57b80da444801c312b9afd0ebfa75c02d93982cdf",
+      "report_sha256": "62c1a32ed0f1ad4d7595971ff30ce1c0983a364eed27f493b71e59767a570f99",
+      "source_commit": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+      "historical_process_status": "PASS",
+      "historical_checks": 219,
+      "historical_failures": [],
+      "source_hash_entries_verified_against_build": 409,
+      "worktree_comparison": "all source entries equal after CRLF->LF; not byte-equality claim",
+      "original_capture_hashes_verified": 24,
+      "rerun_this_task": false
+    },
+    {
+      "case": "full_pkg_routes01",
+      "process_sha256": "6961fb4f0d6c2d05810bbd440647ed0bb1efe7cd481448eae7ee15dd76c0fdc8",
+      "report_sha256": "f8da75d5fed38896059f60f47f89cc33b073c5e5c13ede34e328f66db0221caa",
+      "source_commit": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+      "historical_process_status": "PASS",
+      "historical_checks": 208,
+      "historical_failures": [],
+      "source_hash_entries_verified_against_build": 409,
+      "worktree_comparison": "all source entries equal after CRLF->LF; not byte-equality claim",
+      "original_capture_hashes_verified": 0,
+      "rerun_this_task": false
+    }
+  ],
+  "reviewed_images": [
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/world_shift_gate_lab_1920x1080.png",
+      "sha256": "eedef7fa0f190d786c9dfebd2d66e0bff7fed18fca249e34275fca7a37478637",
+      "size": [
+        1920,
+        1080
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/world_shift_gate_lab_1280x720.png",
+      "sha256": "7e1b29b84dd8f0988a715752f78ccd99ec3db1b7bbe9d97bb61528d65a541c4d",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/world_shift_gate_lab_960x720.png",
+      "sha256": "9e96c974a3e7bc601ce14f56fe2e6163c466fdd47fbc0a5152d342b571cb394f",
+      "size": [
+        960,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/orientation_loop_lab_1920x1080.png",
+      "sha256": "cf1618e973ee60a0c7107427d109595a2136ee577052076ac8ad1f7317a3aa6d",
+      "size": [
+        1920,
+        1080
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/orientation_loop_lab_1280x720.png",
+      "sha256": "651ea84adf031f8aa1c40ebfc693771e769c40c2fca346229462fca5df0d1b36",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/orientation_loop_lab_960x720.png",
+      "sha256": "456137eba10ea0729a8869b69a3ef39ecd2e6c08ea5d74692e2185c28c20227a",
+      "size": [
+        960,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/face_lock_lab_1920x1080.png",
+      "sha256": "5881fc466f667843a9f72e1bc155a2d9432a5d78577339f2745d030a95630972",
+      "size": [
+        1920,
+        1080
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/face_lock_lab_1280x720.png",
+      "sha256": "cacf3f1c8354e711aab632f39d2c995b42219e05b66409f68c5355c8159bb5ba",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/face_lock_lab_960x720.png",
+      "sha256": "1b271d1f1a52c8969dfca504c482a3d73dd6d45287d35b2c503422c2545f3f62",
+      "size": [
+        960,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/perspective_fork_lab_1920x1080.png",
+      "sha256": "f0972f1ddd7bbd03bf14ff5d3083fc3ea57bf3db1612b7ccba7e31d8afa603a6",
+      "size": [
+        1920,
+        1080
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/perspective_fork_lab_1280x720.png",
+      "sha256": "16eab837226ddb478c80caedc00e9a768f596b3426e5f40a003f8aef2d3b7b19",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/perspective_fork_lab_960x720.png",
+      "sha256": "7f148f596948a3acf7ed2ec1d2091064e3093d956cda5762054ff42e0c4d3135",
+      "size": [
+        960,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/rubik_spatial_puzzle_01_1920x1080.png",
+      "sha256": "c5e12ed826593e167873475c46afce45ce4e86da751d10d6f191a776b4daf891",
+      "size": [
+        1920,
+        1080
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/rubik_spatial_puzzle_01_1280x720.png",
+      "sha256": "77cdad7356238184911856ef3ce85d5c67312a057670003aa5a65a5ba5c12f97",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_menu02/rubik_spatial_puzzle_01_960x720.png",
+      "sha256": "0eb81d93762edb748934a6fc2342f4081dea02ec5bfcc989f32dbfbfe4ba4700",
+      "size": [
+        960,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "original report.json plus baseline Git"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/face_lock_lab_goal_0.png",
+      "sha256": "7a01c56248435b05553d310c8d0c1a859358f1d1fdc9875742704fce618c3178",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/orientation_loop_lab_start.png",
+      "sha256": "caa9282f8ad0459f799e56415e5ec34517b79df2c414a04ae01790f7163e2a59",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/orientation_loop_lab_goal_0.png",
+      "sha256": "b6791b5d17add6b0f61292f5e2797fd5db4764596f6e3dd5c6d3f7cc545db852",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/orientation_loop_lab_goal_1.png",
+      "sha256": "33248aac14d7123650a769295a8f4485beec0d6c4e3b08c4212a45bc1e99027f",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/perspective_fork_lab_start.png",
+      "sha256": "313721e2a9861fd2d3006f127b45cd084e8a1e5f675c3d65cd458fe793669f55",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/perspective_fork_lab_goal_1.png",
+      "sha256": "7af8f76b2d24783ed5228ef9244cbd582cd6e55caa3ed56fcb0fef0a359b547d",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/perspective_fork_lab_step1_fall_advance.png",
+      "sha256": "48ca9bd782ddd705aaae26135733caf9f972195bb75473cc50e2c82b25720e06",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/perspective_fork_lab_step1_fall_descend.png",
+      "sha256": "6d452c2ef845e2d19b0ef0912aa3038cf75fdd07a329818507cfd8b8e71c0219",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/perspective_fork_lab_step1_landing.png",
+      "sha256": "6426376643190e0ff63e77dd0f121bd2089357ed1b61e37777fd2d24731d73d4",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/rubik_spatial_puzzle_01_step6_landing.png",
+      "sha256": "22d055e00d86ab9b700bde4908df928498a367734a3f24c3ea85dcf37da5099f",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/evidence/full_pkg_routes01/world_shift_gate_lab_goal_0.png",
+      "sha256": "5a9288bc81b79240a6bfdcc0a8b3053567587d6863b841f27be178b1fc21025f",
+      "size": [
+        1280,
+        720
+      ],
+      "visually_reviewed": true,
+      "baseline_git_bytes_equal": true,
+      "capture_hash_provenance": "baseline Git and current SHA256; historical report has no per-image hashes"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+      "worktree_sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+      "build_sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "foundation/contracts/foundation_types.gd",
+      "worktree_sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e",
+      "build_sha256": "504aba61769055583f704ea62f6c0d219635daaed2c3a76bc3ad72491e563d1e",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "foundation/spatial/surface_geometry.gd",
+      "worktree_sha256": "74678e85217833b1bb30e038ccbaddbd2d057885eeb38d02c766dbf07967c79a",
+      "build_sha256": "74678e85217833b1bb30e038ccbaddbd2d057885eeb38d02c766dbf07967c79a",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "foundation/rules/spatial_puzzle_rules.gd",
+      "worktree_sha256": "a1f00394d9c0ff5f23f819ee3d075961ad7e3d6efc425fec8e707ae196086846",
+      "build_sha256": "a1f00394d9c0ff5f23f819ee3d075961ad7e3d6efc425fec8e707ae196086846",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "foundation/game_feel/fall_permission.gd",
+      "worktree_sha256": "30527b686665545f3ada8898913f10a087cb04d10bd3a8e1dd814e2dfa18aec7",
+      "build_sha256": "30527b686665545f3ada8898913f10a087cb04d10bd3a8e1dd814e2dfa18aec7",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/maps/authoring/face_lock_lab/contact_lock.tres",
+      "worktree_sha256": "4f7db8d8c559de7c3f3fd557f772c389e0ad203958101978bd6348e159c05e5b",
+      "build_sha256": "4f7db8d8c559de7c3f3fd557f772c389e0ad203958101978bd6348e159c05e5b",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/maps/authoring/perspective_fork_lab/level.tscn",
+      "worktree_sha256": "af02dd399cc101796fb59d34a9f7c972a60f4e8dccde8ac9caf7bae8f1105599",
+      "build_sha256": "af02dd399cc101796fb59d34a9f7c972a60f4e8dccde8ac9caf7bae8f1105599",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "tests/beta_sprint/spatial_integration/test_capture.gd",
+      "worktree_sha256": "18e4b7b8a549606e4136815670b0abf92af8d653b85e0cc5141887f02c925e11",
+      "build_sha256": "18e4b7b8a549606e4136815670b0abf92af8d653b85e0cc5141887f02c925e11",
+      "normalized_content_equal": true
+    },
+    {
+      "path": "tests/beta_sprint/spatial_owner_07/test_menu.gd",
+      "worktree_sha256": "1d756e82f65e9b528792e198875828d51b9df59f00855c390e35a11da6ad855c",
+      "build_sha256": "1d756e82f65e9b528792e198875828d51b9df59f00855c390e35a11da6ad855c",
+      "normalized_content_equal": true
+    }
+  ],
+  "human_qa": "NOT_RUN",
+  "new_gui_run": "NOT_RUN",
+  "new_images_created_for_acceptance": false,
+  "unapproved_art": "PENDING_USER_REVIEW"
+}

@@ -1,0 +1,40 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "owner": "05",
+  "verified_at": "2026-10-13T21:04:10.710400+08:00",
+  "status": "PASS_DOCUMENT_AND_EVIDENCE_CHECKS_ONLY",
+  "checks": {
+    "build_manifest_sha256": {
+      "count": 1561,
+      "mismatches": []
+    },
+    "historical_case_source_hashes": {
+      "full_pkg_menu02": 409,
+      "full_pkg_routes01": 409,
+      "mismatches": []
+    },
+    "original_menu_capture_hash_and_dimensions": 24,
+    "reviewed_images_equal_baseline_git": 26,
+    "referenced_source_files_content_equal_build_normalized_newlines": 9,
+    "markdown_relative_links_checked": 16,
+    "json_parse": "PASS",
+    "sensitive_pattern_scan": "PASS",
+    "all_new_files_under_allowlist": true,
+    "tracked_worktree_changes_before_commit": [],
+    "max_new_file_bytes": 16403
+  },
+  "failures": [],
+  "not_run": [
+    "Godot GUI",
+    "new graphical capture",
+    "headless gameplay tests",
+    "Human QA",
+    "four-view full-state matrix",
+    "Blender",
+    "Production integration"
+  ],
+  "external_scope_recovery": "PARTIAL; see SCOPE_DEVIATION.md, not covered by Git allowlist check",
+  "stage_status": "PARTIAL",
+  "art_acceptance": "PENDING_USER_REVIEW",
+  "human_qa": "NOT_RUN"
+}
