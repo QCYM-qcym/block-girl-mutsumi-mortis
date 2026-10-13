@@ -78,3 +78,25 @@ H6只检验现有实验之间的组合迁移；重复地图、同构路线不能
 “头顶方块上不去”保留为待定位的可达性/理解问题。尚不能判为Gameplay bug、Softlock或正常设计；也不把“按Space成功”扩大成全部Gate技术PASS。后续失败、定位、恢复与解释均追加，保留原始困难。
 
 原准备阶段NOT_RUN/NOT_OBSERVED状态保留历史；f4f4156准备交付已由00报告集成，本次新增记录仍PENDING_00。文件/SHA核验只确认文档来源和保留，不执行生产或真人测试。Godot changes=NONE，GUI=NOT_RUN。
+
+
+## UF002与技术控制缺陷追加｜2026-10-13 21:12:25（Asia/Shanghai）
+
+新增实际用户原话：“北和东不行”。已核对00聊天原回复，来源及技术证据分层见 [UF002记录](USER_FEEDBACK_002_TECHNICAL_CORRELATION.md)。登记时间不是操作发生时间。
+
+00固定证据89ebf7a显示world_shift_gate_lab的Inner inner_gate/goal在NORTH/EAST下，W/A/S/D屏幕向量请求经正式Facade只覆盖轴0/2，四键均拒绝2000；SOUTH/WEST覆盖四轴。32次真实请求、4项失败、exit1及8个ObjectDB泄漏实例警告均保留。这是headless自然Host/Presenter技术复现，不是OS键盘或图形/真人PASS；证据执行HEAD a9ecfb4与提交89ebf7a分别登记。
+
+**SPATIAL-CARDINAL-01为已复现的技术控制缺陷（00分级P1），不是玩家认知失败，也不是正式状态图Softlock证明。** 01定向修复中，修复验收PENDING；13不改机制、不写修复PASS、不改旧包。原专家假设保留，但本次卡点不得按R6直接归为理解障碍。
+
+00另报告活跃进程/近期profile与本轮实验关联并含completed；这属于协调环境信息，不证明合格首次玩家已独立通关。用户头顶块身份仍未知；地图确有非walkable roof也不能替其指认或判问题已解决。
+
+Human QA仍PARTIAL_USER_FEEDBACK；FIRST_TIME_COMPREHENSION=NOT_VERIFIED；H1–H6仍NOT_OBSERVED。保留UF001及原准备历史。新增记录Integration=PENDING_00，Godot changes=NONE，GUI=NOT_RUN，13未重跑技术测试。
+
+
+## 四条原话收敛与两世界范围更新｜2026-10-13 21:18:53（Asia/Shanghai）
+
+本次新增第四条：“表里世界的北和东方向都不行，无法朝对应方向移动”；并从00原始回复补收较早的“表世界的头顶方块，里世界的视角东无法移动”。四条来源顺序、原字与消息ID见 [范围收敛记录](USER_FEEDBACK_SCOPE_UPDATE.md)；UF001/UF002原记录及原准备历史保留。
+
+用户自报现涉及Surface和Inner；头顶问题自报在Surface，目标身份仍未确认。已读取89ebf7a技术证据仍只覆盖Inner，不能扩大技术FAIL到Surface。00报告两世界真实Menu键盘RED仍在运行、01修复覆盖两世界；新收据和修复验收PENDING，不等待它们而伪造结果。
+
+用户另明确“仍在试玩，先只做后台验证”。13不启动GUI、不动旧包/存档、不提供解法。首玩资格、预测/提示、完成与H1–H6仍未验证；四条反馈不等于四次合格会话。Human QA=PARTIAL_USER_FEEDBACK，FIRST_TIME_COMPREHENSION=NOT_VERIFIED，H1–H6=NOT_OBSERVED。
