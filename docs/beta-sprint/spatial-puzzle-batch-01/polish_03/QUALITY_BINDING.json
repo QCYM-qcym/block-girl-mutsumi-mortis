@@ -1,0 +1,12 @@
+{
+  "owner_commit": "f91eb0c94b6318ccd838aab010da233c4c50bb73",
+  "owner_tested_git_blob_bindings_verified": 2189,
+  "integration_differences": [
+    "experiments/spatial_puzzle_batch_01/ui/main.gd",
+    "tests/beta_sprint/spatial_integration/package.py"
+  ],
+  "difference_reason": "UI lifecycle fix and package identity only; neither is loaded by the recovery harness. Runtime/map/Solver/Safety/Replay inputs unchanged.",
+  "real_assertions": 335,
+  "overall": "PARTIAL",
+  "owner_remote_sha_verified": true
+}

@@ -1,16 +1,43 @@
 {
   "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
-  "status": "UI_FIX_INTEGRATED_PENDING_GRAPHICAL_QA",
+  "status": "FOCUSED_POLISH_DELIVERED_WITH_RECORDED_PENDING",
+  "integration_content_commit": "c1c1dc3f5b8c9f9531cb871d765cab6e10cf677d",
   "input_p1": "CLOSED",
-  "goal_reset_p2": "OPEN_PENDING_08_RECHECK",
-  "human_qa": "NOT_RUN_USER_NO_ELIGIBLE_PLAYER",
-  "art": "PROPOSAL_ONLY",
-  "art_recovery": "PENDING",
+  "goal_reset_p2": "CLOSED",
+  "ui_regression": {
+    "owner_headless": 196,
+    "integration_headless": 196,
+    "new_build_graphical": 313,
+    "graphical_resolution": "1280x720",
+    "graphical_images": 43,
+    "all_failures": []
+  },
+  "floating_cube": "32_SOURCE_STATIC_PROPOSAL_FRAMES_REVIEWED; A_PREFERRED_FOR_REVIEW / B_NOT_RECOMMENDED / C_ASSISTED_HINT",
+  "art_user_approval": "PENDING",
+  "art_change": "PROPOSAL_ONLY",
+  "art_changed_exports": 3,
+  "art_recovery": "PENDING; NO_RESTORE_AUTHORIZED_OR_PERFORMED",
   "state_graph": "PARTIAL",
-  "new_build": "beta_spatial_polish_03_20261013_01_CANDIDATE",
-  "ui_owner_production_commit": "3ec21b52e8407bc7a7ceeb89493a075a22325552",
-  "ui_integrated_headless_checks": 196,
-  "production_paths": [
+  "quality_new_bounded_checks": 335,
+  "previous_goal_terminal_domain": {
+    "states": 908,
+    "edges": 3916,
+    "softlocks": 0,
+    "scope": "HISTORICAL_GOAL_TERMINAL_DOMAIN_ONLY"
+  },
+  "complete_runtime_denominator": "UNKNOWN",
+  "human_qa": "NOT_RUN_USER_NO_ELIGIBLE_PLAYER",
+  "new_confirmed_production_defects": [],
+  "build_source": "f26ea4b19da836d65eb7d981dbf22f4022045b01",
+  "new_build": "E:/godot/beta-sprint-builds/beta_spatial_polish_03_20261013_01",
+  "zip_sha256": "463ad3429910e8b5c765164b4ca3658cb6ffd245284d52690574afe9fafd50dc",
+  "production_changes": [
     "experiments/spatial_puzzle_batch_01/ui/main.gd"
-  ]
+  ],
+  "foundation_save_maps_frozen_art_changes": [],
+  "main_modified": false,
+  "release_tag_modified": false,
+  "push": "PENDING_FINAL_RECEIPT_COMMIT_PUBLICATION",
+  "remote_sha_verified": false,
+  "publication_note": "Final commit and live remote verification will be reported after actual push; this pre-publication receipt does not claim success."
 }

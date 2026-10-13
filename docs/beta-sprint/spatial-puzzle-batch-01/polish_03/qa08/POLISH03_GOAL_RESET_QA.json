@@ -1,0 +1,192 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
+  "owner": "08 QA",
+  "build": "beta_spatial_polish_03_20261013_01",
+  "source": "f26ea4b19da836d65eb7d981dbf22f4022045b01",
+  "zip_sha256": "463ad3429910e8b5c765164b4ca3658cb6ffd245284d52690574afe9fafd50dc",
+  "baseline": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "graphical_qa": "PASS_FOCUSED_AUTOMATED_REAL_RENDERER",
+  "issue": {
+    "id": "QA08-C02-UI-RESET-LABEL-01",
+    "severity": "P2",
+    "recheck": "PASS",
+    "recommendation": "REQUEST_CLOSURE_BY_00",
+    "formal_closed_status": "PENDING_00_DISPOSITION"
+  },
+  "input_p1": {
+    "id": "SPATIAL-CARDINAL-01",
+    "status": "CLOSED_RETAINED",
+    "full_matrix_rerun": false
+  },
+  "human_qa": "NOT_RUN",
+  "first_time_comprehension": "NOT_RUN",
+  "physical_os_keyboard": "NOT_RUN",
+  "input": "Godot Input.parse_input_event through real Menu and Host; no direct State writes or fake Goal/finish calls",
+  "cases": [
+    {
+      "detail": "Real Goal then R clears per-run Shell and HUD, preserves completion history",
+      "id": "GR01",
+      "status": "PASS"
+    },
+    {
+      "detail": "Second actual Goal after R, one natural Goal signal",
+      "id": "GR02",
+      "status": "PASS"
+    },
+    {
+      "detail": "Mouse Reset and keyboard gameplay after mouse",
+      "id": "GR03",
+      "status": "PASS"
+    },
+    {
+      "detail": "Six rapid R pulses plus two R/mouse pairs; timings in inputs",
+      "id": "GR04",
+      "status": "PASS"
+    },
+    {
+      "detail": "Return/reenter after Goal and Reset; new Host at spawn",
+      "id": "GR05",
+      "status": "PASS"
+    },
+    {
+      "detail": "Settled Shift and Camera then Reset",
+      "id": "GR06",
+      "status": "PASS"
+    },
+    {
+      "detail": "Eight real in-flight cancellations, each observed for 1s; delayed callback occurrence NOT_OBSERVED unless recorded",
+      "id": "GR07",
+      "status": "PASS"
+    },
+    {
+      "id": "GR08",
+      "status": "PASS",
+      "detail": "Returned to real menu; natural exit0; 1707 formal files unchanged; original ZIP unchanged"
+    }
+  ],
+  "case_supplements": {
+    "GR04": "Two additional six-R bursts beginning during real Roll/Fall; both retain spawn then complete Goal",
+    "GR07": "Eight pending-motion Reset/leave cases with 1-second bounded observation; actual obsolete delayed callback NOT_OBSERVED"
+  },
+  "runs": [
+    {
+      "directory": "evidence",
+      "status": "HARNESS_PARSE_FAILURE",
+      "exit_code": 1,
+      "gameplay_executed": false,
+      "screenshots": 0,
+      "reason": "GDScript prefix variable type inference; corrected only external QA entry; original retained"
+    },
+    {
+      "directory": "evidence_v2",
+      "status": "PASS",
+      "checks": 279,
+      "failures": 0,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "elapsed_ms": 26186,
+      "screenshots": 37
+    },
+    {
+      "directory": "rapid_evidence",
+      "status": "PASS",
+      "checks": 34,
+      "failures": 0,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "screenshots": 6
+    }
+  ],
+  "runtime": {
+    "engine": "4.7.2-stable (steam)",
+    "display": "Windows",
+    "renderer": "forward_plus",
+    "actual_viewport": [
+      1280,
+      720
+    ],
+    "isolated_profile_verified": true
+  },
+  "evidence": {
+    "original_pngs": 43,
+    "derived_review_sheets": 4,
+    "actual_goal_signals_main_run": 4,
+    "actual_shift_cancel_notifications_main_run": 2,
+    "rapid_bursts": [
+      {
+        "pulses": 6,
+        "interval_ms": [
+          72,
+          44,
+          49,
+          45,
+          46
+        ]
+      },
+      {
+        "pulses": 6,
+        "interval_ms": [
+          90,
+          57,
+          62,
+          56,
+          55
+        ]
+      }
+    ],
+    "role": "Agent visual review of rendered frames; not human play",
+    "computer_use_snapshot": "Excluded: snapshot showed unrelated overlaid file dialog; no OS input sent, no other-window interaction or screenshot export",
+    "save_file_json_parse": "PASS",
+    "save_payload_sha256_matches": true
+  },
+  "integrity": {
+    "manifest_files": 1707,
+    "git_source": 1555,
+    "existing_imports": 150,
+    "source_drift": [],
+    "old_build_or_profile_writes": [],
+    "production_changes": "NONE",
+    "external_test_entries": [
+      "harness/goal_reset_graphical.gd",
+      "harness/goal_reset_graphical_v2.gd",
+      "harness/rapid_in_motion.gd",
+      "harness/contact_sheets.py"
+    ]
+  },
+  "new_confirmed_game_defects": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "counts_scope": "Only focused test findings; historical unrelated issues remain",
+  "not_run": [
+    "Human first-time comprehension",
+    "OS physical keyboard",
+    "Full direction matrix",
+    "L01-L05 playthrough",
+    "Other viewport sizes",
+    "Cold restart/Continue",
+    "Exhaustive callback or state-space coverage"
+  ],
+  "delivery": {
+    "mode": "External anonymous report and hash manifest for 00 import; no profile upload",
+    "commit": "NOT_CREATED",
+    "push": "NOT_RUN_EXTERNAL_08_SCOPE",
+    "git_reference_start": {
+      "branch": "feat/spatial-puzzle-batch-01",
+      "head": "9bb64bc09912d76a6973760a43bd5eb6832e010a",
+      "status": "CLEAN"
+    },
+    "git_reference_end": {
+      "head": "e8d40484f48a79dd19bdb41cd9ce855fa3b782ac",
+      "untracked_other_owner": [
+        "polish_03/ART_REVIEW_BINDING.json",
+        "polish_03/BUILD_VERIFICATION.json",
+        "polish_03/PROTECTION_CHECK.json"
+      ]
+    },
+    "repo_changes_by_08": []
+  },
+  "evidence_root_name": "spatial_polish03_08_graphical_20261013T144725Z"
+}

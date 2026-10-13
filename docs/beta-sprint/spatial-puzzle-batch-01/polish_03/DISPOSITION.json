@@ -1,0 +1,24 @@
+{
+  "coordinator": "00 Integration",
+  "defects": [
+    {
+      "id": "SPATIAL-CARDINAL-01",
+      "status": "CLOSED",
+      "action": "RETAINED_PRIOR_DISPOSITION_NOT_REOPENED"
+    },
+    {
+      "id": "QA08-C02-UI-RESET-LABEL-01",
+      "status": "CLOSED",
+      "source_fix": "3ec21b52e8407bc7a7ceeb89493a075a22325552",
+      "build_source": "f26ea4b19da836d65eb7d981dbf22f4022045b01",
+      "closure_evidence": "qa08/POLISH03_GOAL_RESET_QA.json",
+      "reason": "Actual Goal→R→Goal and focused reset lifecycle graphical recheck passed on immutable new package. Owner stale callback negative probes are separate from finite natural observations."
+    }
+  ],
+  "remaining": [
+    "Roof readability proposals require visual approval and broader candidate checks.",
+    "Three externally changed Art exports remain protected pending exact authorized recovery.",
+    "Full Runtime/post-Goal state graph remains PARTIAL.",
+    "Independent first-time Human QA NOT_RUN."
+  ]
+}
