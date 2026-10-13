@@ -1,0 +1,168 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "owner": "13",
+  "document_date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "base_commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+  "branch": "design/spatial-acceptance-01",
+  "scope": "Observation protocol and source hashes only; no production/GUI/solver execution",
+  "hash_contract": "External sources use raw file SHA256. Baseline sources use git show blob SHA256 plus Git object SHA1, independent of CRLF worktree conversion.",
+  "build": {
+    "directory_name": "beta_spatial_puzzle_batch_01_full_20261012_01",
+    "source_sha": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+    "kind": "SOURCE_PLAYABLE_REQUIRES_GODOT",
+    "engine": "Godot 4.7.2",
+    "identity_bytes": 386552,
+    "identity_sha256": "eba7a8bc7d8e1a2ed5534221f678a826920a33faa2deb1f1b2c38a58041b5c43",
+    "selected_verified_files": [
+      {
+        "path": "project/experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+        "bytes": 14078,
+        "sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+        "kind": "git_source"
+      },
+      {
+        "path": "project/experiments/spatial_puzzle_batch_01/maps/map_factory.gd",
+        "bytes": 3085,
+        "sha256": "71e86e95f2605a47bd67b8fb20be1c0a5aba91606504174ee0991a3b25099839",
+        "kind": "git_source"
+      },
+      {
+        "path": "project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/QA_HANDOFF.md",
+        "bytes": 3593,
+        "sha256": "8738504a28b7934bf63ece4ae1b94ab6fd7ddb4d3c61a1415365269f2da85050",
+        "kind": "git_source"
+      }
+    ],
+    "identity_check_scope": "Only identity and the 3 selected files; not all 1561 files or a fresh runtime test"
+  },
+  "baseline_sources": [
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/design/SPATIAL_PUZZLE_BATCH_01_DESIGN_SPEC.md",
+      "commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+      "git_blob_sha1": "95d35f11811f4707c099c411989d15a79cc64e16",
+      "bytes": 15321,
+      "sha256": "6678d76925d640eb442b38f9e6e4e64fc7752cc0852327ebc54af5dea090c283"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/full-development/FINAL_REPORT.md",
+      "commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+      "git_blob_sha1": "21029bf9dc34cfa7a32a6926439aaa508156c6bc",
+      "bytes": 4867,
+      "sha256": "ebda9ebfbf1daf380b6f7bd059131392492cc9ae8cbc5a8580a62945a20b10da"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/full-development/QA_HANDOFF.md",
+      "commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+      "git_blob_sha1": "ee8c3e1e9479b2eb01d4a077b7b4b70eaf9f77c6",
+      "bytes": 3593,
+      "sha256": "8738504a28b7934bf63ece4ae1b94ab6fd7ddb4d3c61a1415365269f2da85050"
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+      "commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+      "git_blob_sha1": "fb2ec4408d1fc04314cdf6f47f89b4b9f4eb6588",
+      "bytes": 14078,
+      "sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7"
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/maps/map_factory.gd",
+      "commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+      "git_blob_sha1": "183e42369a97fe392830f415c05cec2e775815ec",
+      "bytes": 3085,
+      "sha256": "71e86e95f2605a47bd67b8fb20be1c0a5aba91606504174ee0991a3b25099839"
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/RUNTIME_INTERFACE.md",
+      "commit": "d3b131440600048006ccc7679962fb7fc546a63f",
+      "git_blob_sha1": "caadfadbf4fe85847edd13a4afcb7c220ee62af0",
+      "bytes": 6536,
+      "sha256": "d26f1c3f2d6425d2e090a0e6e325394483e258f374ba3a1dd24794b69248ad82"
+    }
+  ],
+  "obsidian_sources": [
+    {
+      "note_name": "四机制第一批-规则与教学.md",
+      "bytes": 17338,
+      "sha256": "1085b59de22cac16ffc894c60402cf23c0055692b9489770763622c74c4fae3a"
+    },
+    {
+      "note_name": "六面归位-第一批综合实验.md",
+      "bytes": 16907,
+      "sha256": "6bef9f99f8964253774d78e87ace5710668aca56b63f699cc3cddfea0b821361"
+    },
+    {
+      "note_name": "四机制第一批-验收与差异记录.md",
+      "bytes": 52823,
+      "sha256": "b6e9e6576e1a804bb27f599400bc7e2a5c04c117adf7da0d1877e2e0ff07feeb"
+    }
+  ],
+  "preserved_existing_top_level_notes": {
+    "count": 22,
+    "snapshot_digest_sha256": "126dd4d023e2c1280f9e9bc17164498e9b4653ad63fe248244fda70c7684f877",
+    "check": "MATCH; no old note was edited"
+  },
+  "delivered_markdown": [
+    {
+      "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/COGNITIVE_ACCEPTANCE.md",
+      "repository_bytes": 9012,
+      "repository_sha256": "718539a96fb034269449e43e92bbb145336eeeb0f58e21cbae6bcf382655c6f1",
+      "obsidian_relative_path": "认知验收-20261013/COGNITIVE_ACCEPTANCE.md",
+      "obsidian_bytes": 9188,
+      "obsidian_sha256": "fe38143f1790b6611b4013f4ec7b2dbbbefc4c4b43eaa94def5594a007a2f14a",
+      "mirror_difference": "Only existing repository-report links made absolute for Obsidian"
+    },
+    {
+      "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/BLIND_OBSERVATION_CODEBOOK.md",
+      "repository_bytes": 6683,
+      "repository_sha256": "8b9f9053e9b426599cd67d8f0c365c8954f8794ed09f822381d5d4a98163d70d",
+      "obsidian_relative_path": "认知验收-20261013/BLIND_OBSERVATION_CODEBOOK.md",
+      "obsidian_bytes": 6683,
+      "obsidian_sha256": "8b9f9053e9b426599cd67d8f0c365c8954f8794ed09f822381d5d4a98163d70d",
+      "mirror_difference": "NONE"
+    },
+    {
+      "repository_path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/moderator_only/POST_SESSION_CHECKLIST.md",
+      "repository_bytes": 5452,
+      "repository_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+      "obsidian_relative_path": "认知验收-20261013/moderator_only/POST_SESSION_CHECKLIST.md",
+      "obsidian_bytes": 5452,
+      "obsidian_sha256": "4332f6c76f5029de0f589dbd2bd3b400baa36ea3bb9a34e2561fd16cdf46d160",
+      "mirror_difference": "NONE"
+    }
+  ],
+  "participant_availability": {
+    "status": "USER_CONFIRMED_AVAILABLE",
+    "provenance": "00 forwarded user confirmation on 2026-10-13; per-session first-exposure/eligibility still needs08 confirmation"
+  },
+  "observations": {
+    "sessions_received": 0,
+    "behavior_understanding": "NOT_OBSERVED",
+    "human_qa": "NOT_RUN",
+    "current_graph_evidence": "NOT_RECEIVED",
+    "expert_risk_basis": "source/receipt review; not actual player observation",
+    "gui": "NOT_RUN",
+    "screenshot_visual_review": "NOT_RUN",
+    "runtime_solver_safety_replay_graphical": "NOT_RERUN"
+  },
+  "delivery_status": "PREPARATION_COMPLETE; COGNITIVE_ACCEPTANCE_NOT_OBSERVED",
+  "integration": "PENDING_00",
+  "godot_changes": "NONE",
+  "documentation_verification": {
+    "result": "PASS",
+    "checks": [
+      "6 cognitive hypotheses and 6 falsifiable risk candidates",
+      "blind codebook route/Face/Camera spoiler-token scan",
+      "moderator isolation and after-all-blind-tasks timing",
+      "player availability separate from actual record status",
+      "relative/absolute document link resolution in both destinations",
+      "source and mirror SHA identity",
+      "22 old Obsidian note hashes unchanged",
+      "Git allowlist exactly4 new small files",
+      "credential patterns and Markdown structure"
+    ],
+    "resolved_links_both_destinations": 14,
+    "production_changes": 0,
+    "limitations": "Protocol checks only. Cognitive behavior NOT_OBSERVED; Human QA NOT_RUN. No GUI or gameplay tests."
+  }
+}
