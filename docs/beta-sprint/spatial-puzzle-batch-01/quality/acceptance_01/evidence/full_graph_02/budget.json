@@ -1,0 +1,17 @@
+{
+	"domain": "GOAL_TERMINAL",
+	"explorer": {
+		"max_action_evaluations": 60000,
+		"max_depth": -1,
+		"max_edges": 30000,
+		"max_runtime_ms": 1200000,
+		"max_states": 5000
+	},
+	"outer_process_timeout_seconds": 1800,
+	"reset_in_graph": false,
+	"softlock": {
+		"max_edges": 30000,
+		"max_nodes": 5000,
+		"max_runtime_ms": 180000
+	}
+}
