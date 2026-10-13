@@ -1,0 +1,112 @@
+{
+  "task": "SPATIAL_PUZZLE_ACCEPTANCE_CONTINUATION_02",
+  "owner": "05",
+  "base_commit": "295a4702aeb17d6fced11cfdaa221e0ffa90dd12",
+  "checked_at": "2026-10-13T22:14:42.501244+08:00",
+  "status": "PASS_DOCUMENT_CHECKS_WITH_REPORTED_BACKUP_REFERENCE_GAP",
+  "checks": {
+    "csv_json_rows": 59,
+    "same_original": 56,
+    "changed_original": 3,
+    "same_postedit_backup": 59,
+    "current_format_reference_checks_pass": 59,
+    "backup_format_reference_checks_pass": 58,
+    "backup_reference_gap_count": 1,
+    "backup_html_parse_pass": true,
+    "original_manifest_entries": 177,
+    "original_manifest_snapshot_exact_bytes": true,
+    "relative_markdown_links": 22,
+    "audit_python_ast_parse": "PASS",
+    "all_json_parse": "PASS",
+    "sensitive_pattern_scan": "PASS",
+    "file_size_scan": "PASS_LESS_THAN_1_MIB_EACH",
+    "git_allowlist": "PASS",
+    "production_tracked_diff": [],
+    "external_package_before_after_hash_counts": [
+      182,
+      62
+    ],
+    "external_package_drift": [],
+    "staged_diff_check": "PASS",
+    "original_manifest_staged_blob_exact_bytes": true,
+    "csv_normalized_rows_equal_json": 59,
+    "preserved_manifest_crlf": "-text whitespace=cr-at-eol only for original evidence file"
+  },
+  "known_backup_gap": {
+    "file": "MECHANICS_ART_DESIGN_REVIEW_01.html",
+    "missing_relative_reference": "MECHANICS_ART_DESIGN_REVIEW_01.md",
+    "current_original_package_reference_exists": true,
+    "fixed": false
+  },
+  "sources": [
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/FINAL_REPORT.md",
+      "git_blob_sha256": "6eb67df8134b3e49ec42e3b564ad372c47b4e2c99af157857eef242827105777",
+      "worktree_sha256": "6eb67df8134b3e49ec42e3b564ad372c47b4e2c99af157857eef242827105777",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/human_qa/USER_FEEDBACK_05.md",
+      "git_blob_sha256": "b302b15e1877039781a9ad5387ca05ece72e357793bf7396ca67d8a1a59f2380",
+      "worktree_sha256": "b302b15e1877039781a9ad5387ca05ece72e357793bf7396ca67d8a1a59f2380",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "docs/beta-sprint/spatial-puzzle-batch-01/design/acceptance_01/ROOF_IDENTITY_CLARIFICATION.md",
+      "git_blob_sha256": "d01f6180b33aa0d126418041723669ae4ffe9e642e96cff8843112c64a2a1628",
+      "worktree_sha256": "d01f6180b33aa0d126418041723669ae4ffe9e642e96cff8843112c64a2a1628",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn",
+      "git_blob_sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+      "worktree_sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/level.tscn",
+      "git_blob_sha256": "1c83ddf04702ef2e3ba1400c43f6ce18bf13adcc73ee70c5f810a19d777c7e58",
+      "worktree_sha256": "1c83ddf04702ef2e3ba1400c43f6ce18bf13adcc73ee70c5f810a19d777c7e58",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+      "git_blob_sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+      "worktree_sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "experiments/game_feel_01/host/core_lab.gd",
+      "git_blob_sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+      "worktree_sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "foundation/celestial/logical_lighting.gd",
+      "git_blob_sha256": "43b1ecd083e8b3a254a7c4b98c2af3f55259c4b3bd9a2af975964c1b81b52534",
+      "worktree_sha256": "43b1ecd083e8b3a254a7c4b98c2af3f55259c4b3bd9a2af975964c1b81b52534",
+      "normalized_content_matches_base": true
+    },
+    {
+      "path": "foundation/rules/puzzle_rule_kernel.gd",
+      "git_blob_sha256": "8ff2b1c04b4efa62117eb0929f12ba8b487ad6abfe18bb61cb09faf776592d2b",
+      "worktree_sha256": "8ff2b1c04b4efa62117eb0929f12ba8b487ad6abfe18bb61cb09faf776592d2b",
+      "normalized_content_matches_base": true
+    }
+  ],
+  "not_run": [
+    "Godot",
+    "Blender",
+    "browser GUI",
+    "asset generation",
+    "asset regeneration",
+    "asset restoration",
+    "new human observation",
+    "new gameplay regression",
+    "new rendered roof comparison"
+  ],
+  "art": "PENDING_USER_REVIEW",
+  "recovery": "PARTIAL_NOT_EXECUTED",
+  "original_changed_bytes": "NOT_FOUND_IN_SEARCHED_SCOPE",
+  "research_deliverables": "COMPLETE_WITH_DOCUMENTED_LIMITS"
+}
