@@ -31,6 +31,8 @@ var _pending_lab: StringName = &""
 var _leaving := false
 var _resetting := false
 var _paused := false
+var _goal_scope: Dictionary = {}
+var _goal_callback: Callable
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -222,7 +224,6 @@ func _start_saved_lab(id: StringName) -> void:
 	lab = load(HOST_PATH).new()
 	lab.lab_id = id
 	lab.menu_requested.connect(_on_menu_requested.bind(lab))
-	lab.goal_reached.connect(_on_goal.bind(lab))
 	menu_panel.hide()
 	var focused := get_viewport().gui_get_focus_owner()
 	if focused: focused.release_focus()
@@ -231,6 +232,8 @@ func _start_saved_lab(id: StringName) -> void:
 	_set_error("")
 	_set_toolbar_focus(false)
 	add_child(lab)
+	lab.runtime.committed.connect(_on_lab_committed.bind(lab))
+	_on_lab_committed(lab.runtime.get_state(),lab)
 	lab.set_reduced_motion(motion_button.button_pressed)
 	hint_button.visible = lab.has_method("toggle_hint")
 	if not lab.host_issues.is_empty():
@@ -255,8 +258,23 @@ func reset_current() -> void:
 	_resetting = false
 	_lab_title.text = str(_factory.describe(lab.lab_id).title)
 
-func _on_goal(id: StringName, source: Node) -> void:
-	if source != lab or _leaving or _resetting or goal_seen or id != lab.lab_id: return
+func _on_lab_committed(state: Dictionary, source: Node) -> void:
+	if source != lab or _leaving or not is_instance_valid(lab): return
+	if not lab.runtime.is_loaded() or state != lab.runtime.get_state(): return
+	var scope: Dictionary = lab.runtime.get_presentation_scope()
+	if scope == _goal_scope: return
+	# Native keyboard Reset commits a new generation without reset_current().
+	# Retire the previous Goal callback before observing the new lifecycle.
+	if _goal_callback.is_valid() and lab.goal_reached.is_connected(_goal_callback): lab.goal_reached.disconnect(_goal_callback)
+	_goal_scope = scope
+	_goal_callback = _on_goal.bind(lab,scope)
+	lab.goal_reached.connect(_goal_callback)
+	goal_seen = false
+	_lab_title.text = str(_factory.describe(lab.lab_id).title)
+
+func _on_goal(id: StringName, source: Node, scope: Dictionary) -> void:
+	if source != lab or not is_instance_valid(lab) or _leaving or _resetting or goal_seen or id != lab.lab_id: return
+	if not lab.runtime.is_loaded() or scope != _goal_scope or scope != lab.runtime.get_presentation_scope(): return
 	goal_seen = true
 	_lab_title.text = str(_factory.describe(id).title)+" · 已抵达终点"
 	if not progress.mark_goal(id): _set_error(progress.last_error)
