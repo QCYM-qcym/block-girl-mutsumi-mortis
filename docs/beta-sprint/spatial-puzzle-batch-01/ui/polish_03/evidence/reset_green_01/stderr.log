@@ -1,0 +1,6 @@
+ERROR: Cannot determine if connected to 'goal_reached': the provided callable is null.
+   at: is_connected (core/object/object.cpp:1587)
+   GDScript backtrace (most recent call first):
+       [0] _on_lab_committed (res://experiments/spatial_puzzle_batch_01/ui/main.gd:268)
+       [1] _start_saved_lab (res://experiments/spatial_puzzle_batch_01/ui/main.gd:236)
+       [2] start_lab (res://experiments/spatial_puzzle_batch_01/ui/main.gd:218)
