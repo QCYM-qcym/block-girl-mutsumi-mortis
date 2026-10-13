@@ -1,0 +1,65 @@
+{
+  "scope": "QUALITY_HARNESS_UNIT_ONLY",
+  "pid": 34536,
+  "exit_code": 1,
+  "stderr_bytes": 0,
+  "report": {
+    "capture": {
+      "authority": "PUBLIC_PRODUCTION_APIS",
+      "display": "headless",
+      "doubles": [],
+      "engine": {
+        "build": "steam",
+        "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+        "hex": 263938,
+        "major": 4,
+        "minor": 7,
+        "patch": 2,
+        "status": "stable",
+        "string": "4.7.2-stable (steam)",
+        "timestamp": 0
+      },
+      "execution_head": "",
+      "pid": 34536,
+      "renderer": "forward_plus",
+      "user_data_dir": "E:/godot/worktrees/bg-spatial-quality02/docs/beta-sprint/spatial-puzzle-batch-01/quality/polish_03/evidence/setup_guard_red/profile/APPDATA/Godot/app_userdata/Mutsumi Veilshift - Spatial Full Development 20261012"
+    },
+    "captured_guard_failures": [
+      {
+        "actual_captured_failures": [],
+        "case": "rejected_setup",
+        "double_result": {
+          "changed": false,
+          "status": 1
+        },
+        "expected": "rejected_setup: planned setup route must apply a changed action",
+        "proceeded": false
+      },
+      {
+        "actual_captured_failures": [],
+        "case": "noop_setup",
+        "double_result": {
+          "changed": false,
+          "status": 0
+        },
+        "expected": "noop_setup: planned setup route must apply a changed action",
+        "proceeded": true
+      }
+    ],
+    "checks": 2,
+    "doubles": [
+      "REQUEST_RESULT_DOUBLE_UNIT_ONLY"
+    ],
+    "failures": [
+      "rejected_setup: non-applied setup cannot silently skip required scenario",
+      "noop_setup: non-applied setup cannot silently skip required scenario"
+    ],
+    "runtime_authority": false,
+    "scope": "QUALITY_HARNESS_UNIT_ONLY"
+  },
+  "test_source_sha256": {
+    "tests/beta_sprint/spatial_quality/polish_03/test_recovery.gd": "d8ef7aa2a9cff6ca0c816f7d714a8352ea3b20a451597d7004ba0f863f756bc6",
+    "tests/beta_sprint/spatial_quality/polish_03/test_setup_guard.gd": "debd1c8bb4f22368d8e370027c1768e292dc426b7765f4c04656c2d29143c48e"
+  },
+  "status": "UNIT_FAIL"
+}

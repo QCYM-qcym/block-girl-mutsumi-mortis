@@ -1,0 +1,60 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
+  "baseline": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "references_sha256": {
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/explorer.json": "a74f978a785d178b9b925060519e1c3ed83ef6c8ecf7e60defa86d4c33ac17c5",
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/census.json": "65c2f1ddbd517c6110f443f1c565b6d5990b504e8e6e17784ccbfcc300a8bf82",
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/report.json": "70ebcbc4c35d600f8939089e9f4ec12bfacc735a520d7fc8ed31394e8c06f15a",
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/graph_summary.json": "c622019f8b8da1aa2b468065c840f4388d328949e81686aacdc6888a6931319a",
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/selected_trace.gdvar": "70e00c4cdb4dac92beb6e4d034c494cab5fefb75c3f2d46a59485ece7a697554",
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/continuation_02/RESULTS.json": "6ac0259775cb78886670808c24c0126986ea91bd21388eed14e0c651c5fe1f79",
+    "docs/beta-sprint/spatial-puzzle-batch-01/quality/continuation_02/REVIEW.md": "0926c617c5a38694b282fdd59334b214da548f2b5668781a14c0123368af718e",
+    "docs/beta-sprint/spatial-puzzle-batch-01/continuation_02/FINAL_REPORT.md": "d88d035f9d62fd18f118834d01bb780c08a58720cfb85112a0c898caa718014e"
+  },
+  "original_domain": {
+    "states": 908,
+    "edges": 3916,
+    "goals": 96,
+    "softlocks": 0,
+    "counting": "HISTORIC_GOAL_TERMINAL_EXHAUSTED_NOT_RERUN"
+  },
+  "previous_post_goal_sample_checks": 2225,
+  "previous_checks_counted_again": false,
+  "covered_domain": "The908states/3916edges in the frozen formal Goal-terminal domain",
+  "uncovered_full_runtime_or_post_goal_denominator": "UNKNOWN",
+  "areas": [
+    {
+      "area": "FaceLock",
+      "prior": "Whole Goal-terminal census:8latch,192latched-reentry edges; actual wrong/correct/reentry samples",
+      "new_gap": "Wrong physical contact and denied Shift/ENTER-use followed by same-instance formal recovery"
+    },
+    {
+      "area": "OrientationLoop",
+      "prior": "24actual Orientation values in908states; wrong/correct contact and author-loop samples",
+      "new_gap": "Combined current loop/latched pose before Reset plus actual error-recovery route; not every loop trace"
+    },
+    {
+      "area": "Gate",
+      "prior": "192permitted Shift edges; locked2011/off-point2010 native negatives; body/Camera unchanged",
+      "new_gap": "Same-instance recovery after2010 and2011, without reload"
+    },
+    {
+      "area": "Fork",
+      "prior": "144authorized Fall edges;48incoming required island cuts; B-branch6action local recovery",
+      "new_gap": "Actual forbiddenCamera0 rejection2101 followed by current FIRST_SHORTEST recovery"
+    },
+    {
+      "area": "Reset",
+      "prior": "16post-Goal/pending Resets;8staleidentity rejects; same-instance new action explicitly NOT_RUN",
+      "new_gap": "Actual pre-Goal latch clear,locked2011 and renewed input/Goal on same Facade"
+    },
+    {
+      "area": "Goal",
+      "prior": "96Goal terminals;all908goal-reachable;oldnative selected witness and136post-Goal replaysteps",
+      "new_gap": "Goal endpoint for current error recoveries,not new Goal-domain closure"
+    }
+  ],
+  "no_new_full_graph": true,
+  "input_p1": "CLOSED",
+  "human": "NOT_RUN"
+}
