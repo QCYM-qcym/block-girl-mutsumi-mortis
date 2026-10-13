@@ -1,0 +1,26 @@
+{
+  "beta_spatial_acceptance_input_fix_20261013_01": {
+    "source": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+    "files_verified": 1641,
+    "mismatches": [],
+    "archive_sha256": "28bdef16329f8404c7e71851136fb09baa98c36066b5af8bc49f264f43b81285"
+  },
+  "beta_spatial_puzzle_batch_01_full_20261012_01": {
+    "source": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
+    "files_verified": 1561,
+    "mismatches": [],
+    "archive_sha256": "4d030c8f75f9e091bf9e775e8ffb4f35d0a92bfca98c11cdacd325e7e2b0b7b4"
+  },
+  "graph_source_binding": {
+    "checked": 2151,
+    "exceptions": [
+      "foundation/game_feel/runtime_facade.gd",
+      "tests/beta_sprint/spatial_integration/package.py",
+      "tests/beta_sprint/spatial_integration/run.py"
+    ],
+    "reason": "00 runner/packager metadata and P1 cardinal input adapter; formal actions and graph algorithms unchanged"
+  },
+  "production_changes": [
+    "foundation/game_feel/runtime_facade.gd"
+  ]
+}

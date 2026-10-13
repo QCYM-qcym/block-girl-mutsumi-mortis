@@ -1,6 +1,6 @@
 {
   "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
-  "status": "INPUT_FIX_INTEGRATED_HEADLESS_PASS_BUILD_PENDING",
+  "status": "TECHNICAL_FIX_PACKAGED_HUMAN_ACCEPTANCE_PARTIAL",
   "prior_build_source": "59531adcdffb7a8671bd6aab9a2abdc6fa830b04",
   "human_qa": "PARTIAL_USER_FEEDBACK_ON_PRIOR_BUILD",
   "first_time_comprehension": "NOT_VERIFIED",
@@ -12,7 +12,7 @@
   "graph_softlocks": 0,
   "post_goal_domain": "UNKNOWN",
   "graph_overall": "PARTIAL",
-  "new_build": "PENDING",
+  "new_build": "E:/godot/beta-sprint-builds/beta_spatial_acceptance_input_fix_20261013_01",
   "runtime_fix": "3a87dfbab4d30753f53b2bf4f88862854a91d328",
   "production_integration": "31be5bd8de001bc216fbb3dab2106c36f2316d62",
   "native_menu_keyboard": {
@@ -32,5 +32,33 @@
     "classification": "READABILITY_FEEDBACK_NOT_TRAVERSAL_DEFECT",
     "moderator_explanation": "PROVIDED_AFTER_IDENTIFICATION"
   },
-  "p1": "FIX_INTEGRATED_PENDING_GRAPHICAL_AND_HUMAN_RECHECK"
+  "p1": "FIX_INTEGRATED_PENDING_GRAPHICAL_AND_HUMAN_RECHECK",
+  "build_source": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+  "archive_sha256": "28bdef16329f8404c7e71851136fb09baa98c36066b5af8bc49f264f43b81285",
+  "qa_handoff": {
+    "status": "RECEIVED_BY_08_GRAPHICAL_HUMAN_PENDING",
+    "receipt": "E:/godot/beta-sprint-builds/spatial_input_fix_08_handoff_20261013T134802Z/QA_HANDOFF_RECEIVED.md",
+    "sha256": "f09a257db9e3bd20438949424c11d3fbb3af02187e8884895f95395b2c9e4ea9",
+    "independent_manifest_verification": 1641
+  },
+  "external_art_scope_recovery": "PARTIAL_59_EXPORTS_NOT_PROVEN_RESTORED",
+  "packaged_native_menu_keyboard": {
+    "case": "acc_pkg_keys01",
+    "build_identity": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+    "checks": 612,
+    "failures": [],
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "doubles": [],
+    "source_drift": [],
+    "status": "PASS"
+  },
+  "issues": {
+    "P0_confirmed": 0,
+    "P1_pending_human_recheck": 1,
+    "P2_registered_scope": 4,
+    "P3_confirmed": 0,
+    "roof_readability": "UNTRIAGED",
+    "count_scope": "This acceptance: 3 Art findings + 1 existing ObjectDB lifecycle issue. Not whole-game historical total."
+  }
 }

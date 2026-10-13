@@ -10,4 +10,4 @@ Initial comprehension eligibility remains NOT_VERIFIED. Record who played, prior
 
 Use the existing player_only guide; author routes, 03 graph and moderator/design reports contain answers and must not be shown before blind tasks end. The preparation directory and all previous screenshots/logs/saves remain intact. 05 prototype readability isPARTIAL; formal Art PENDING_USER_REVIEW. No old five-level orL06 puzzle edits authorized by this handoff.
 
-Source integration native-menu keyboard:612/612 PASS,exit0,stderr0,doubles[].New package execution still pending; never carry source-only PASS into package execution without a receipt.
+Source integration native-menu keyboard:612/612 PASS,exit0,stderr0,doubles[].Actual packaged acc_pkg_keys01 also612/612 PASS,exit0,stderr0,doubles[],source_drift[]. Build Source0bb0e01742eacf12272956111cd6b86fdc74f819; manifest1641/1641 files match. NewBuild play.ps1 is the isolated launch entry. Graphical/Human remain NOT_RUN for this revision.

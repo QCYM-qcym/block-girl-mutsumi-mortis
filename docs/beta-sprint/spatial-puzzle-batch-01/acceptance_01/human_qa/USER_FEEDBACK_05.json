@@ -1,0 +1,87 @@
+{
+  "record_id": "USER_FEEDBACK_05",
+  "task": "SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01",
+  "recorded_utc": "2026-10-13T13:41:59.377Z",
+  "event_time": "NOT_CONFIRMED",
+  "human_qa": "PARTIAL_USER_FEEDBACK",
+  "first_time_comprehension": "NOT_VERIFIED",
+  "human_layer": {
+    "type": "USER_REPORTED_OBSERVATION",
+    "source": "00 Integration Coordinator relayed user confirmation",
+    "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+    "quote_verbatim": "是，就是这个悬空方块",
+    "directly_observed_by_08": false,
+    "object_identity_status": "NOW_CONFIRMED",
+    "object_description": "Single suspended gray-blue block, separate from the road, above the 转换点 · Space label in 世界转换点",
+    "participant_eligibility": "NOT_CONFIRMED"
+  },
+  "technical_identity_layer": {
+    "source": "00 reports checking historical 1280 screenshot, official saved map and probe; not independently rechecked by 08 in this append",
+    "cube_id": "roof",
+    "center2": [
+      2,
+      12,
+      0
+    ],
+    "world": "Surface",
+    "occludes_light": true,
+    "walkable_faces": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "interpretation": {
+    "classification": "READABILITY_FEEDBACK",
+    "basis": "User attempted to climb an object confirmed nonwalkable by 00",
+    "new_traversal_rule_bug": false,
+    "level_completion_failure_established": false,
+    "severity": "NOT_ASSIGNED",
+    "distinct_from_issue": "SPATIAL-CARDINAL-01",
+    "H1_H6_promotion": "NONE"
+  },
+  "moderator_influence": {
+    "source": "00 reports having explained to user that this is a nonwalkable light occluder, separate from the input defect",
+    "explanation_given": true,
+    "subsequent_roof_comprehension": "ASSISTED_AFTER_EXPLANATION",
+    "unprompted_first_comprehension_claim_allowed": false,
+    "explanation_time": "NOT_CONFIRMED"
+  },
+  "input_fix_layer": {
+    "source": "00 integration update; not independently executed by 08",
+    "issue_id": "SPATIAL-CARDINAL-01",
+    "fix_commit_abbrev_reported": "3a87dfb",
+    "integrated_into_00": "REPORTED",
+    "menu_keyboard_integration": {
+      "checks": 612,
+      "status": "PASS_REPORTED_BY_00",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "doubles": []
+    },
+    "graphical": "NOT_RUN",
+    "human_recheck": "NOT_RUN",
+    "acceptance_status": "FIX_REPORTED_INTEGRATED_GRAPHICAL_RECHECK_PENDING",
+    "new_build": "ASSEMBLING_REPORTED"
+  },
+  "metrics": {
+    "first_discovery_time": "NOT_OBSERVED",
+    "prediction_correct": "NOT_OBSERVED",
+    "prediction_total": "NOT_OBSERVED",
+    "aimless_trials": "NOT_OBSERVED",
+    "stuck_duration": "NOT_OBSERVED",
+    "unassisted_failure_reason_comprehension": "NOT_OBSERVED",
+    "hint_count": "NOT_OBSERVED",
+    "completion": "NOT_OBSERVED"
+  },
+  "execution_boundary": {
+    "gui_started_or_operated_by_08": false,
+    "gui_reserved_for_user": true,
+    "prior_snapshots_overwritten": false
+  },
+  "production_changes": "NONE",
+  "push": "NOT_RUN"
+}
