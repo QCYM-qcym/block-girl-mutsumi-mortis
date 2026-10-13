@@ -1,0 +1,41 @@
+FFF
+======================================================================
+FAIL: test_any_runtime_failure_stays_fail (test_projection.ProjectionTests.test_any_runtime_failure_stays_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\bg-spatial-quality02\tests\beta_sprint\spatial_quality\polish_03\test_projection.py", line 21, in test_any_runtime_failure_stays_fail
+    self.assertEqual(summarize([{"status":"FAIL"}],[]) ["sample_status"],"FAIL")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'FAIL'
+- PASS
++ FAIL
+
+
+======================================================================
+FAIL: test_budget_does_not_prove_recovery_or_reset_only (test_projection.ProjectionTests.test_budget_does_not_prove_recovery_or_reset_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\bg-spatial-quality02\tests\beta_sprint\spatial_quality\polish_03\test_projection.py", line 16, in test_budget_does_not_prove_recovery_or_reset_only
+    self.assertEqual(result["sample_status"],"PENDING")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PASS' != 'PENDING'
+- PASS
++ PENDING
+
+
+======================================================================
+FAIL: test_sample_does_not_expand_the_original_domain (test_projection.ProjectionTests.test_sample_does_not_expand_the_original_domain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\bg-spatial-quality02\tests\beta_sprint\spatial_quality\polish_03\test_projection.py", line 10, in test_sample_does_not_expand_the_original_domain
+    self.assertEqual(result["overall"],"PARTIAL")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'COMPLETE' != 'PARTIAL'
+- COMPLETE
++ PARTIAL
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

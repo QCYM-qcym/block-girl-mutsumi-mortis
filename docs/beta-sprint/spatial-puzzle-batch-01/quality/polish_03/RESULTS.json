@@ -1,0 +1,165 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
+  "candidate": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "execution_head": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "branch": "test/spatial-polish-03",
+  "sample_status": "PASS",
+  "overall": "PARTIAL",
+  "contract_mismatch": "NONE",
+  "original_graph": {
+    "states": 908,
+    "edges": 3916,
+    "goals": 96,
+    "softlocks": 0,
+    "coverage": "PREVIOUS_FORMAL_GOAL_TERMINAL_EXHAUSTED_NOT_RERUN"
+  },
+  "previous_post_goal_assertions": 2225,
+  "previous_assertions_counted_again": false,
+  "new_sample_observed_original_statekeys": 11,
+  "original_states_not_directly_reexecuted_this_sample": 897,
+  "new_sample_unique_original_witness_edges": 13,
+  "original_edges_not_directly_reexecuted_in_captured_witnesses": 3903,
+  "counting": "All original nodes/edges historically covered; these sample counts do not supersede original coverage or expand denominator",
+  "complete_runtime_or_post_goal_denominator": "UNKNOWN",
+  "reset_only_or_expanded_softlocks_conclusion": "UNKNOWN",
+  "shortcut_claim": "Prior有限required-cut evidence retained; no complete design-intent/all-Runtime shortcut proof",
+  "scenarios": [
+    {
+      "id": "wrong_face_error_recovery",
+      "status": "PASS"
+    },
+    {
+      "id": "fork_camera_error_recovery",
+      "status": "PASS"
+    },
+    {
+      "id": "same_instance_after_reset",
+      "status": "PASS"
+    }
+  ],
+  "local_searches": [
+    {
+      "scenario": "wrong_face_error_recovery",
+      "status": 0,
+      "policy": "FIRST_SHORTEST_UNFILTERED",
+      "budget": {
+        "max_action_evaluations": 10000,
+        "max_depth": 32,
+        "max_edges": 5000,
+        "max_runtime_ms": 120000,
+        "max_states": 512
+      },
+      "metrics": {
+        "action_evaluations": 829,
+        "duplicate_states": 268,
+        "elapsed_ms": 49200,
+        "explored_states": 70,
+        "filtered_edges": 0,
+        "generated_edges": 356,
+        "goal_states": 1,
+        "max_depth_reached": 9,
+        "no_op_actions": 69,
+        "rejected_actions": 404,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 9,
+        "visited_states": 89
+      },
+      "local_graph_complete": false
+    },
+    {
+      "scenario": "fork_camera_error_recovery",
+      "status": 0,
+      "policy": "FIRST_SHORTEST_UNFILTERED",
+      "budget": {
+        "max_action_evaluations": 10000,
+        "max_depth": 32,
+        "max_edges": 5000,
+        "max_runtime_ms": 120000,
+        "max_states": 512
+      },
+      "metrics": {
+        "action_evaluations": 121,
+        "duplicate_states": 35,
+        "elapsed_ms": 7462,
+        "explored_states": 11,
+        "filtered_edges": 0,
+        "generated_edges": 55,
+        "goal_states": 1,
+        "max_depth_reached": 3,
+        "no_op_actions": 10,
+        "rejected_actions": 56,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 3,
+        "visited_states": 21
+      },
+      "local_graph_complete": false
+    }
+  ],
+  "rejected_codes": [
+    2010,
+    1503,
+    2101,
+    2011
+  ],
+  "same_instance_reset": "PASS_ACTUAL_NON_GOAL_LATCH_CLEAR_AND_RENEWED_INPUT_TO_GOAL",
+  "explicit_safety_queries": 20,
+  "safety_types": {
+    "Safety.validate_motion": 15,
+    "Safety.validate_perspective_motion": 3,
+    "Safety.validate_state (Camera)": 1,
+    "Safety.validate_state": 1
+  },
+  "formal_logical_replay_runs": 3,
+  "formal_logical_matched_steps": 27,
+  "runtime_captured_trace_lengths": [
+    11,
+    9,
+    7
+  ],
+  "runtime_action_rows": 35,
+  "real_assertions": 335,
+  "assertions_by_facet": {
+    "LOGICAL_REPLAY": 9,
+    "REAL_RUNTIME": 295,
+    "SAFETY": 20,
+    "SOLVER": 8,
+    "UNIT": 3
+  },
+  "metadata_unit_methods": 3,
+  "metadata_methods_counted_as_real": false,
+  "pid": 5672,
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "source_drift": [],
+  "doubles": [],
+  "source_files": 2189,
+  "input_p1": "CLOSED_NOT_REOPENED",
+  "human": "NOT_RUN",
+  "graphical": "NOT_RUN_NO_GUI",
+  "new_production_defects": [],
+  "build_changed": false,
+  "stage_push": "PENDING_STAGE_DELIVERY_AT_ASSEMBLY",
+  "raw_process_sha256": "e5b50c379ac15f729c30e8f741dfc5ba80ca29e4180ddbe8b6845ed3efdbe2fd",
+  "raw_report_sha256": "ad703b130bb0427ed7f6294f64f2ed659b09e16097271992624625b2a83e6159",
+  "raw_observations_sha256": "0ed9eb2160ecb6301fd7f1e85bf0613d7130a521b82b01f1915c2ae495abee52",
+  "selected_final_receipt": "evidence/recovery_final_02/process.json",
+  "selected_unique_real_assertions": 335,
+  "prior_initial335_counted_again": false,
+  "guard_unit_checks": 2,
+  "guard_unit_scope": "QUALITY_HARNESS_UNIT_ONLY / REQUEST_RESULT_DOUBLE_UNIT_ONLY / runtime_authority=false; excluded from Real",
+  "review": {
+    "reviewer_labels": {
+      "critical": 0,
+      "important": 0,
+      "minor": 1
+    },
+    "executor_regrade": "setup-skip false-PASS risk → Important",
+    "fix": "guard2UNIT RED→GREEN plus unchanged335boundedReal suite",
+    "deferred_minors": [],
+    "re_review": "NOT_RUN_ONE_PASS_ONLY"
+  }
+}
