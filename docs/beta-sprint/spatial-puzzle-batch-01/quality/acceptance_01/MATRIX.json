@@ -12,10 +12,10 @@
   "assertions": 196,
   "assertions_by_facet": {
     "UNIT": 12,
-    "SOLVER": 14,
+    "SOLVER": 16,
     "SAFETY": 15,
     "LOGICAL_REPLAY": 1,
-    "REAL_RUNTIME": 154
+    "REAL_RUNTIME": 152
   },
   "case_status_counts": {
     "PASS": 12,
@@ -136,13 +136,14 @@
     },
     {
       "checks": 2,
-      "facet": "REAL_RUNTIME",
+      "facet": "SOLVER",
       "failures": [],
       "id": "graph_softlock_reset_classification",
       "status": "PASS",
       "receipt": "docs/beta-sprint/spatial-puzzle-batch-01/quality/acceptance_01/evidence/full_graph_03/process.json",
       "assertions": 2,
-      "scope": "GOAL_TERMINAL_ACTION_API_AND_SEPARATE_LOGICAL_RUNTIME_WITNESSES"
+      "scope": "Counting partition of formal Analyzer result; no Runtime call in zero-softlock loop",
+      "receipt_original_facet": "REAL_RUNTIME"
     },
     {
       "id": "post_goal_complete_state_graph",

@@ -49,8 +49,8 @@
   "strict_non_goal_sinks": 0,
   "classification_definitions": "PLAN.md",
   "runtime_reset_evidence": "evidence/full_graph_03/report.json runtime_shortest_and_reset",
-  "independent_safety_samples": 15,
-  "all_accepted_edges_safety": "Production Kernel integrates formal Safety; not196 independent Safety tests",
+  "independent_safety_samples": 13,
+  "all_accepted_edges_safety": "Production Kernel integrates formal Safety; not3916 independent Safety queries",
   "census": {
     "states_inspected": 908,
     "edges_inspected": 3916,
@@ -189,5 +189,7 @@
     "source_not_merged": true,
     "local_assertions_added": 0,
     "roof_identity": "USER_NOT_CONFIRMED"
-  }
+  },
+  "independent_safety_queries": 13,
+  "safety_assertions": 15
 }
