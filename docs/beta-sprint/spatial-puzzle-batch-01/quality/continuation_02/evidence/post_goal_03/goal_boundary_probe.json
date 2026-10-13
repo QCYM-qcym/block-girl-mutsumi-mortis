@@ -1,0 +1,144 @@
+{
+	"budget": {
+		"max_action_evaluations": 1,
+		"max_depth": 0,
+		"max_edges": 0,
+		"max_runtime_ms": 20000,
+		"max_states": 1
+	},
+	"purpose": "API boundary only; no broader graph closure",
+	"result": {
+		"budget_reason": 0,
+		"graph": {
+			"complete": true,
+			"edges": [],
+			"forward": {
+				"statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}": []
+			},
+			"graph_version": "stategraph.v1",
+			"initial_key": "statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+			"level_hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+			"nodes": {
+				"statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}": {
+					"depth": 0,
+					"expanded": true,
+					"is_goal": true,
+					"predecessor_edge": null,
+					"state": {
+						"camera_quadrant": 0,
+						"celestial": {
+							"slot_id": "sky"
+						},
+						"group_orientations": {},
+						"level_flags": {},
+						"mechanism_states": {
+							"contact_lock": "latched"
+						},
+						"player": {
+							"location": {
+								"cube_id": "goal",
+								"face": 4,
+								"layer": 1
+							},
+							"orientation": 12
+						},
+						"world_orientations": [
+							0,
+							0
+						]
+					},
+					"state_key": "statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}"
+				}
+			},
+			"policy_descriptor": {
+				"filter_descriptor": {
+					"disabled_mechanics": [],
+					"filter_id": "UNFILTERED",
+					"filter_version": "1"
+				},
+				"mode": 1,
+				"strategy": "BFS",
+				"validation_options": {
+					"max_checks": 100000,
+					"max_configurations": 4096
+				}
+			},
+			"reverse": {
+				"statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}": []
+			},
+			"rule_version": "foundation.rules.spatial_puzzle.v1",
+			"stop_reason": 0
+		},
+		"issues": [],
+		"metrics": {
+			"action_evaluations": 0,
+			"duplicate_states": 0,
+			"elapsed_ms": 152,
+			"explored_states": 1,
+			"filtered_edges": 0,
+			"generated_edges": 0,
+			"goal_states": 1,
+			"max_depth_reached": 0,
+			"no_op_actions": 0,
+			"rejected_actions": 0,
+			"safety_unproven_rejections": 0,
+			"shortest_solution_count": null,
+			"shortest_solution_count_complete": false,
+			"solution_length": 0,
+			"visited_states": 1
+		},
+		"solution_trace": {
+			"goal_statekey": "statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+			"initial_state": {
+				"camera_quadrant": 0,
+				"celestial": {
+					"slot_id": "sky"
+				},
+				"group_orientations": {},
+				"level_flags": {},
+				"mechanism_states": {
+					"contact_lock": "latched"
+				},
+				"player": {
+					"location": {
+						"cube_id": "goal",
+						"face": 4,
+						"layer": 1
+					},
+					"orientation": 12
+				},
+				"world_orientations": [
+					0,
+					0
+				]
+			},
+			"initial_statekey": "statekey.game_feel.v1:{\"level_hash\":\"5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{\"contact_lock\":\"latched\"},\"player\":{\"location\":{\"cube_id\":\"goal\",\"face\":\"TOP\",\"layer\":\"INNER\"},\"orientation\":12},\"world_orientations\":[0,0]}}",
+			"level_hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+			"policy_descriptor": {
+				"filter_descriptor": {
+					"disabled_mechanics": [],
+					"filter_id": "UNFILTERED",
+					"filter_version": "1"
+				},
+				"mode": 1,
+				"strategy": "BFS",
+				"validation_options": {
+					"max_checks": 100000,
+					"max_configurations": 4096
+				}
+			},
+			"rule_version": "foundation.rules.spatial_puzzle.v1",
+			"shortest": true,
+			"steps": [],
+			"total_actions": 0,
+			"trace_version": "solutiontrace.game_feel.v1"
+		},
+		"status": 0,
+		"validation": {
+			"checks_performed": 93,
+			"configurations_checked": 1,
+			"issues": [],
+			"status": 0
+		}
+	}
+}

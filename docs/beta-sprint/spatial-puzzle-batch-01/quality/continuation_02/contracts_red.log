@@ -1,0 +1,35 @@
+FFF
+======================================================================
+FAIL: test_corrupt_predecessor_cycle_is_rejected (test_prepare.ReferenceTests.test_corrupt_predecessor_cycle_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\bg-spatial-quality02\tests\beta_sprint\spatial_quality\continuation_02\test_prepare.py", line 35, in test_corrupt_predecessor_cycle_is_rejected
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_sample_never_becomes_complete_denominator (test_prepare.ReferenceTests.test_sample_never_becomes_complete_denominator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\bg-spatial-quality02\tests\beta_sprint\spatial_quality\continuation_02\test_prepare.py", line 26, in test_sample_never_becomes_complete_denominator
+    self.assertEqual(result["overall"], "PARTIAL")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'COMPLETE' != 'PARTIAL'
+- COMPLETE
++ PARTIAL
+
+
+======================================================================
+FAIL: test_selection_is_repeatable_and_records_predecessors (test_prepare.ReferenceTests.test_selection_is_repeatable_and_records_predecessors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\godot\worktrees\bg-spatial-quality02\tests\beta_sprint\spatial_quality\continuation_02\test_prepare.py", line 19, in test_selection_is_repeatable_and_records_predecessors
+    self.assertEqual(len(selected), 8)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 8
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=3)
