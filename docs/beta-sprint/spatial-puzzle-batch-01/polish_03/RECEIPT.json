@@ -1,11 +1,16 @@
 {
   "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
-  "status": "IN_PROGRESS",
+  "status": "UI_FIX_INTEGRATED_PENDING_GRAPHICAL_QA",
   "input_p1": "CLOSED",
-  "goal_reset_p2": "PENDING",
+  "goal_reset_p2": "OPEN_PENDING_08_RECHECK",
   "human_qa": "NOT_RUN_USER_NO_ELIGIBLE_PLAYER",
   "art": "PROPOSAL_ONLY",
   "art_recovery": "PENDING",
   "state_graph": "PARTIAL",
-  "new_build": "PENDING"
+  "new_build": "beta_spatial_polish_03_20261013_01_CANDIDATE",
+  "ui_owner_production_commit": "3ec21b52e8407bc7a7ceeb89493a075a22325552",
+  "ui_integrated_headless_checks": 196,
+  "production_paths": [
+    "experiments/spatial_puzzle_batch_01/ui/main.gd"
+  ]
 }
