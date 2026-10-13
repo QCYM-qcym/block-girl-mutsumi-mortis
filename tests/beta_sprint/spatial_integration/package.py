@@ -5,10 +5,11 @@ import hashlib, io, json, os, re, subprocess, sys, tarfile, tempfile, zipfile
 
 root=Path(__file__).resolve().parents[3]
 target=Path(sys.argv[1]).resolve()
-acceptance = len(sys.argv)>2 and sys.argv[2]=='--acceptance-01'
+polish = len(sys.argv)>2 and sys.argv[2]=='--polish-03'
+acceptance = (len(sys.argv)>2 and sys.argv[2]=='--acceptance-01') or polish
 if len(sys.argv)>2 and not acceptance: raise SystemExit('Unknown package mode')
-task = 'SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01' if acceptance else 'SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT'
-receipt_folder = 'acceptance_01' if acceptance else 'full-development'
+task = 'SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03' if polish else 'SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01' if acceptance else 'SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT'
+receipt_folder = 'polish_03' if polish else 'acceptance_01' if acceptance else 'full-development'
 archive=target.with_suffix('.zip')
 if target.exists() or archive.exists(): raise SystemExit('Refusing to overwrite any QA package')
 git=lambda *a: subprocess.check_output(['git','-C',str(root),*a])
@@ -114,6 +115,9 @@ identity={'task':task,'kind':'SOURCE_PLAYABLE_REQUIRES_GODOT','integration_commi
 if acceptance:
     readme=target/'README.md'
     readme.write_text(readme.read_text(encoding='utf-8').replace('Open project/project.godot and press F5 for the five-entry experiment menu.', 'For acceptance use play.ps1 only; it isolates this package profile from old editor and QA data.')+'\nAcceptance revision: SPATIAL-CARDINAL-01 keyboard input repair. Read project/docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/QA_HANDOFF.md for the current scope. Old QA records remain historical; fresh Human QA and graphical confirmation are pending.\n',encoding='utf-8')
+if polish:
+    readme=target/'README.md'
+    readme.write_text(readme.read_text(encoding='utf-8').replace('Acceptance revision: SPATIAL-CARDINAL-01 keyboard input repair.', 'Polish03 revision: Goal/Reset feedback repair; Input P1 remains CLOSED.').replace('acceptance_01/QA_HANDOFF.md', 'polish_03/QA_HANDOFF.md').replace('fresh Human QA and graphical confirmation are pending.', 'Human QA is NOT_RUN (no eligible player); package graphical Goal/Reset recheck is tracked separately.'),encoding='utf-8')
 with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as output:
     for path in sorted(target.rglob('*')):
         if path.is_file(): output.write(path,path.relative_to(target))
