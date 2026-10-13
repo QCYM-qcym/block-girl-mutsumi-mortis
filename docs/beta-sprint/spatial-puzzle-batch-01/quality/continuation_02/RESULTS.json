@@ -1,0 +1,123 @@
+{
+  "task": "SPATIAL_PUZZLE_ACCEPTANCE_CONTINUATION_02",
+  "overall": "PARTIAL",
+  "contract_mismatch": "NONE",
+  "candidate": "295a4702aeb17d6fced11cfdaa221e0ffa90dd12",
+  "execution_head": "295a4702aeb17d6fced11cfdaa221e0ffa90dd12",
+  "branch": "test/spatial-continuation-02",
+  "original_goal_terminal": {
+    "states": 908,
+    "edges": 3916,
+    "goals": 96,
+    "softlocks": 0,
+    "source": "PREVIOUS_ACCEPTANCE_01_NOT_RERUN"
+  },
+  "post_goal_total_states": "UNKNOWN",
+  "post_goal_total_edges": "UNKNOWN",
+  "post_goal_softlocks": "UNKNOWN",
+  "expanded_live_graph": "NOT_AVAILABLE_PUBLIC_API",
+  "sample_status": "PASS",
+  "representatives": 8,
+  "cameras": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "orientations": [
+    12,
+    18,
+    7,
+    5,
+    16,
+    11,
+    9,
+    19
+  ],
+  "prefix_actions": [
+    8,
+    8,
+    11,
+    13,
+    14,
+    18,
+    19,
+    19
+  ],
+  "candidate_directions": 32,
+  "accepted_departures": 8,
+  "rejected_directions": 24,
+  "return_to_same_goal": 8,
+  "resets": {
+    "actual_non_goal": 8,
+    "actual_pending_departure": 8,
+    "stale_identity_rejected": 8
+  },
+  "explicit_safety_queries": 32,
+  "safety_query_types": {
+    "Safety.validate_motion": 16,
+    "Safety.validate_state": 16
+  },
+  "logical_replay_runs": 9,
+  "logical_replay_matched_steps": 136,
+  "runtime_captured_trace_lengths": [
+    10,
+    10,
+    13,
+    15,
+    16,
+    20,
+    21,
+    21
+  ],
+  "trace_provenance": "CURRENT_RUNTIME_CAPTURED_VALIDATED_WITNESS, not Solver trace/new graph",
+  "runtime_action_rows": 268,
+  "pending_reset_requests_not_in_completed_action_rows": 8,
+  "unique_observed_statekeys_including_pre_goal_prefixes": 65,
+  "statekey_count_is_coverage_denominator": false,
+  "real_assertions": 2225,
+  "assertions_by_facet": {
+    "LOGICAL_REPLAY": 17,
+    "REAL_RUNTIME": 2168,
+    "SAFETY": 32,
+    "SOLVER": 2,
+    "UNIT": 6
+  },
+  "metadata_unit_methods": 3,
+  "metadata_methods_not_added_to_real_assertions": true,
+  "pid": 34964,
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "source_drift": [],
+  "doubles": [],
+  "source_files": 2177,
+  "new_production_failures": [],
+  "graphical": "NOT_RUN_NO_GUI",
+  "human": "NOT_RUN",
+  "softlock_analysis": "NOT_RUN_NO_NEW_LIVE_EXPANDED_GRAPH",
+  "build_changed": false,
+  "production_diff": [],
+  "raw_process_sha256": "33530b44ad5abb596acde4052a94355f6180f2df728171c6bfde181acc3ce6c8",
+  "raw_report_sha256": "e74b263178c925bfa2ac2a23c4836d85309a240ae82e35c4b44810db2ea152e7",
+  "raw_observations_sha256": "ec83c1b0905cc91266dace39217233defeb8243216b2c22ab9de3c9230ec5d2a",
+  "reference_explorer_sha256": "a74f978a785d178b9b925060519e1c3ed83ef6c8ecf7e60defa86d4c33ac17c5",
+  "known_external": "SPATIAL-CARDINAL-01 fixed code; Graphical/Human recheck belongs to08, no closure by03",
+  "scope_deviation": "Four unrelated untracked game-feel documents preserved; no production write/GUI/commit/push there; see PROGRESS.md",
+  "push": "PENDING_STAGE_DELIVERY",
+  "independent_review": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0,
+    "mode": "READ_ONLY_RAW_RECEIPT_AUDIT_NO_REEXECUTION"
+  },
+  "not_run": [
+    "full post-Goal closure/softlocks/shortestness",
+    "same-instance new action after Reset",
+    "pause/resume/cross-instance identity attack/pending-global cancellation",
+    "all-domain Safety",
+    "Graphical/Human/cardinal visual closure",
+    "old908/3916 re-enumeration",
+    "performance/old matrices",
+    "independent reviewer hardware replication"
+  ]
+}
