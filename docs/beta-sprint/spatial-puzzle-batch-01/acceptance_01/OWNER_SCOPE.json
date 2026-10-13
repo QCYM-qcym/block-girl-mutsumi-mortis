@@ -6,7 +6,8 @@
       "docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/**",
       "docs/superpowers/plans/2026-10-13-spatial-acceptance.md"
     ],
-    "production": "Only after actual defect reproduction and explicit scoped disposition"
+    "production": "Only after actual defect reproduction and explicit scoped disposition",
+    "diagnostics": "acceptance_01/diagnostics: isolated read-only technical reproduction of actual user-reported Gate/Inner EAST inability to move; no production changes or player profile access for writes"
   },
   "03": {
     "worktree": "E:/godot/worktrees/bg-spatial-quality02",
@@ -36,5 +37,16 @@
     "external": "fresh isolated QA run/evidence directory, exact immutable delivered package",
     "git_delivery": "Only approved anonymous reports and hash manifests copied by00 into acceptance_01/human_qa; no whole external directory upload"
   },
-  "GUI": "Reserved for actual user/08 human sessions;03 confirmed no graphical process and continues headless"
+  "GUI": "Reserved for actual user/08 human sessions;03 confirmed no graphical process and continues headless",
+  "01": {
+    "worktree": "E:/godot/worktrees/block-girl-spatial-runtime-01",
+    "branch": "fix/spatial-cardinal-input-01",
+    "paths": [
+      "foundation/game_feel/runtime_facade.gd",
+      "foundation/game_feel/*input*.gd",
+      "tests/beta_sprint/spatial_runtime/input_acceptance_01/**",
+      "docs/beta-sprint/spatial-puzzle-batch-01/runtime/input_acceptance_01/**"
+    ],
+    "condition": "Confirmed cardinal movement defect only. Preserve generic InputMapper frozen semantics, View basis, all puzzle and Kernel rules. Propose alternate minimal scope to00 before editing if needed."
+  }
 }
