@@ -1,0 +1,81 @@
+{
+  "task": "SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03",
+  "owner": "08 QA",
+  "created_utc": "2026-10-13T14:30:32.370Z",
+  "baseline": "e4fe5365334e93138dc9b8856d09670478789abc",
+  "baseline_report": "docs/beta-sprint/spatial-puzzle-batch-01/continuation_02/FINAL_REPORT.md",
+  "repo_observed": {
+    "path": "E:/godot/worktrees/block-girl-spatial-puzzle-batch-01",
+    "branch": "feat/spatial-puzzle-batch-01",
+    "owner": "00 Integration, read-only reference for 08",
+    "head": "e4fe5365334e93138dc9b8856d09670478789abc",
+    "working_tree": "CLEAN_AT_INITIAL_CHECK"
+  },
+  "owner_08_git_branch": "NOT_ASSIGNED_EXTERNAL_QA",
+  "preparation": "COMPLETE",
+  "participant_availability": "NO_QUALIFIED_INDEPENDENT_PLAYER_USER_REPORTED",
+  "decision_source": {
+    "type": "00 relay of current user decision",
+    "source_thread_id": "01a11125-280e-7403-98f9-98b92911c8f7",
+    "instruction": "No eligible independent player for this round; retain NOT_RUN; do not recruit or ask again"
+  },
+  "human_qa": "NOT_RUN",
+  "first_time_comprehension": "NOT_RUN",
+  "participant_record_created": false,
+  "new_build": {
+    "path": "PENDING_00_HANDOFF",
+    "source": "PENDING_00_HANDOFF",
+    "zip_sha256": "PENDING_00_HANDOFF",
+    "copy_created": false
+  },
+  "gui": "NOT_RUN_PENDING_05_RELEASE_AND_00_NOTICE",
+  "input_p1": {
+    "id": "SPATIAL-CARDINAL-01",
+    "status": "CLOSED_RETAINED"
+  },
+  "target_p2": {
+    "id": "QA08-C02-UI-RESET-LABEL-01",
+    "owner": "07 Game Shell",
+    "status": "OPEN_PENDING_NEW_BUILD_RECHECK"
+  },
+  "planned_cases": [
+    {
+      "case": "GR01 Goal-R",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR02 Goal-R-Goal",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR03 mouse Reset comparison",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR04 rapid consecutive Reset",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR05 leave and reenter",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR06 Reset around Shift/Camera",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR07 natural old callback immunity",
+      "status": "NOT_RUN"
+    },
+    {
+      "case": "GR08 orderly exit and source integrity",
+      "status": "NOT_RUN"
+    }
+  ],
+  "observational_metrics": "NOT_OBSERVED",
+  "production_changes": "NONE",
+  "old_process_profile_evidence_changes": "NONE",
+  "delivery": "Anonymous preparation/final reports for 00 import; no entire QA directory",
+  "commit": "NOT_CREATED",
+  "push": "NOT_RUN_EXTERNAL_08_SCOPE"
+}
