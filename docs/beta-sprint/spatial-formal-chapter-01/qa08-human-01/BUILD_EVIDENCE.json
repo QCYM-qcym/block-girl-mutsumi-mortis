@@ -1,0 +1,64 @@
+{
+  "task": "SPATIAL_FORMAL_CHAPTER_01_HUMAN_QA_01",
+  "stage_status": "PARTIAL",
+  "build_source": "763f0132bc58360fab0e224d0e9c54e00c92ae90",
+  "zip_sha256": "38213cdca4987aff17e39e734e8bf6e0ee2e7d3e5588c749cd4bb1ea7d189307",
+  "source_files_verified": 1631,
+  "manifest_files_verified": 1783,
+  "source_mismatches": 0,
+  "manifest_mismatches_before": 0,
+  "manifest_mismatches_after_original": 0,
+  "manifest_mismatches_after_test_copy": 0,
+  "entry": "play.ps1 -> project/project.godot -> res://game/shell/game_feel_shell.tscn",
+  "actual_engine": "Godot Engine v4.7.2.stable.steam.ed1daf0bf",
+  "actual_renderer": "D3D12 12_0 Forward+, NVIDIA GeForce RTX 5060 Ti",
+  "human_qa": "NOT_RUN",
+  "first_time_comprehension": "未观察",
+  "l05_to_s01": "NOT_RUN",
+  "s01_s05_progression": "NOT_RUN",
+  "save_cold_continue": "NOT_RUN",
+  "p0": "NOT_ASSESSED",
+  "p1": "NOT_ASSESSED",
+  "p2": "NOT_ASSESSED",
+  "p3": "NOT_ASSESSED",
+  "art_approval": "PENDING",
+  "state_graph": "NOT_RUN (03 owns independent verification)",
+  "production_changes": "NONE",
+  "ui_observation": {
+    "main_menu_to_level_select": "PASS (agent Computer Use, not human)",
+    "initial_l01_available_l02_l05_locked": "OBSERVED",
+    "chapter_rows": "S02–S05 names/locked observed; row 06 lock observed with S01 title clipped above current scroll viewport",
+    "resolution": "1280x720 requested; actual client/viewport NOT_MEASURED; no size PASS"
+  },
+  "environment": {
+    "issue": "QA08-ENV-INPUT-01",
+    "classification": "TEST_TOOL_ENVIRONMENT",
+    "message": "user input was detected in this window; call get_window_state before continuing",
+    "occurrences": 2,
+    "action": "Stopped input; final capture overlaid by unrelated application and excluded",
+    "gameplay_conclusion": "NOT_ASSESSED",
+    "process": "PID 32312 left running; no exit/cold-restart claim"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/01_main_menu.jpg",
+      "sha256": "15d673c2ebbc671ed94c6b2a7038752ada85caf3933b96ace79fa53572a55ee2",
+      "measurement_scope": "captured window image; NOT viewport/client measurement",
+      "encoding": "JPEG"
+    },
+    {
+      "path": "screenshots/02_level_select_l01_l05.jpg",
+      "sha256": "defd284e4f2a548aa842711771dd99071cd8b20532a9413d3f4657d56ce02815",
+      "measurement_scope": "captured window image; NOT viewport/client measurement",
+      "encoding": "JPEG"
+    },
+    {
+      "path": "screenshots/03_chapter_locked.jpg",
+      "sha256": "fe36541b96c09c631bbe31d90569700e34f2b911cd2998f096c234300b4915db",
+      "measurement_scope": "captured window image; NOT viewport/client measurement",
+      "encoding": "JPEG"
+    }
+  ],
+  "evidence_root": "E:/godot/beta-sprint-builds/spatial_formal_qa08_20261018T174440Z",
+  "checked_utc": "2026-10-18T17:47:55.404Z"
+}
