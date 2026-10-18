@@ -100,6 +100,9 @@ func _fit_ui() -> void:
 func _apply_values(values: Dictionary) -> void:
 	audio.apply_settings(values)
 	Settings.apply(values,get_window())
+	var level: Node = shell.adapter.level
+	if level != null and level.has_method("apply_settings"):
+		level.apply_settings(values)
 
 func open_settings() -> void:
 	if shell.settings_open: return
@@ -163,6 +166,8 @@ func _cancel() -> void:
 func _route_options(value: Dictionary) -> void:
 	options=value.duplicate(true)
 	var level: Node=shell.adapter.level
+	if level != null and level.has_method("apply_accessibility"):
+		level.apply_accessibility(options)
 	if level!=null and level.has_method("get_game_feel_runtime"):
 		level.presenter.set_reduced_motion(options.reduced_motion)
 	for label in ui.find_children("*","Label",true,false):
@@ -193,6 +198,10 @@ func shell_state_changed() -> void:
 	if _closing: return
 	var level: Node=shell.adapter.level
 	var source: Object=level.get_game_feel_runtime() if level!=null and level.has_method("get_game_feel_runtime") else null
+	if level != null and level.has_method("apply_settings"):
+		level.apply_settings(shell.progress.settings)
+	if level != null and level.has_method("apply_accessibility"):
+		level.apply_accessibility(options)
 	_bind_runtime(source)
 	_bind_legacy(level if source==null else null)
 	var paused: bool=shell.state==Shell.State.PAUSED

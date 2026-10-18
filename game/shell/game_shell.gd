@@ -36,6 +36,7 @@ func _ready() -> void:
 	adapter = Adapter.new()
 	add_child(adapter)
 	adapter.completed.connect(_on_completed)
+	adapter.pause_requested.connect(pause_game)
 	view = View.new()
 	add_child(view)
 	view.action_requested.connect(_on_action)

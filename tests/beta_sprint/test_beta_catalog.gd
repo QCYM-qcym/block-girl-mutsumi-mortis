@@ -2,6 +2,7 @@ extends SceneTree
 const Catalog = preload("res://game/shell/level_catalog.gd")
 const LEGACY_ROWS := "res://tests/beta_sprint/shell_batch_02/legacy_catalog_rows.json"
 const BATCH02 := "res://game/levels/mutsumi/batch_02/level_order.json"
+const SPATIAL := "res://game/levels/mutsumi/spatial_chapter/level_order.json"
 var checks := 0
 var failures: Array[String] = []
 
@@ -30,7 +31,8 @@ func _initialize() -> void:
 		check(batch is Dictionary and batch.get("levels") is Array, "delivered Batch02 catalog has a level list")
 		if batch is Dictionary and batch.get("levels") is Array:
 			delivered = batch.levels
-	check(catalog.entries.size() == rows.size(), "Shell loads every formally registered level")
+	var spatial: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(SPATIAL))
+	check(catalog.entries.size() == rows.size() + spatial.levels.size(), "Shell loads every formally registered level across both catalogs")
 	check(catalog.first_id() == "mutsumi_l01", "Beta begins with formal L-01")
 	for index in rows.size():
 		var row: Dictionary = rows[index]
@@ -52,13 +54,15 @@ func _initialize() -> void:
 			check(row in delivered, "appended metadata is an actual playable Batch02 row " + id)
 			check(row.get("registration_allowed", false) == true and row.get("status", "") == "GREYBOX_PLAYABLE", "Content explicitly authorizes playable registration " + id)
 			check(entry.scene.begins_with("res://game/levels/mutsumi/batch_02/") and entry.resource.begins_with("res://game/levels/mutsumi/batch_02/"), "new entries use delivered Batch02 resources " + id)
+	var all_ids: Array = ids.duplicate()
+	for row in spatial.levels: all_ids.append(row.id)
 	for index in ids.size():
 		check(catalog.entries[index].id == ids[index], "Shell preserves formal ordering " + str(index))
-		check(catalog.next_id(ids[index]) == (ids[index + 1] if index + 1 < ids.size() else ""), "one next hop or end of delivered catalog " + ids[index])
+		check(catalog.next_id(ids[index]) == (all_ids[index + 1] if index + 1 < all_ids.size() else ""), "one next hop or end of delivered catalog " + ids[index])
 	check(catalog.find("unregistered_batch02").is_empty() and not catalog.is_available("unregistered_batch02") and catalog.next_id("unregistered_batch02").is_empty(), "unknown levels remain unavailable without an invented successor")
 	var custom: Array[Dictionary] = [{"id":"fixture", "title":"Fixture", "scene":"res://tests/shell/fixture_level.tscn", "adapter":"signal"}]
 	check(Catalog.new(custom).entries == custom, "explicit catalog injection remains supported")
-	check(str(ProjectSettings.get_setting("application/run/main_scene")) == "res://game/shell/game_shell.tscn", "default main scene is Shell")
+	check(str(ProjectSettings.get_setting("application/run/main_scene")) == "res://game/shell/game_feel_shell.tscn", "default main scene is formal GameFeel Shell")
 	finish()
 
 func finish() -> void:

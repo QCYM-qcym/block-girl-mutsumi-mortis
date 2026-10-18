@@ -54,6 +54,30 @@ func set_active(enabled: bool) -> void:
 func sync() -> void:
 	if not is_instance_valid(level) or not is_node_ready():
 		return
+	if level.has_method("get_hint_presentation"):
+		var content: Dictionary = level.get_hint_presentation()
+		title_label.text = str(content.get("title", ""))
+		world_label.text = level.get_world_label() + "  /  " + ["NORTH", "EAST", "SOUTH", "WEST"][int(content.get("camera_quadrant", 0))]
+		objective_label.text = str(content.get("objective", ""))
+		hint_label.text = str(content.get("hint", ""))
+		_strip.text = hint_label.text
+		_strip.modulate.a = 1.0 if content.get("hint_visible", false) else 0.0
+		_strip.queue_redraw()
+		footer.text = str(content.get("controls", ""))
+		footer.visible = content.get("input_hints", true)
+		feedback_label.text = str(content.get("feedback", ""))
+		feedback_label.visible = not feedback_label.text.is_empty()
+		for label in [title_label, world_label, objective_label, footer, feedback_label]:
+			if content.get("contrast", false):
+				label.add_theme_color_override("font_color", Color.BLACK)
+				label.add_theme_color_override("font_outline_color", Color.WHITE)
+				label.add_theme_constant_override("outline_size", 2)
+			else:
+				label.add_theme_color_override("font_color", Tokens.COLORS.ink)
+				label.remove_theme_color_override("font_outline_color")
+				label.remove_theme_constant_override("outline_size")
+		_layout()
+		return
 	title_label.text = level.content.display_title
 	world_label.text = ("表世界 · 若叶睦" if level.mover.world == 0 else "里世界 · Mortis") + "  /  " + ["NORTH", "EAST", "SOUTH", "WEST"][level.view.current]
 	objective_label.text = level.hints.objective(level.mover, level.view)
@@ -91,9 +115,17 @@ func _layout() -> void:
 	footer.position = Vector2(pad, area.y - 34)
 	footer.size = Vector2(area.x - pad * 2, 26)
 	footer.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	if is_instance_valid(level) and level.has_method("get_hint_presentation"):
+		footer.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		footer.position.y = area.y - 56
+		footer.size.y = 48
 	feedback_label.position = Vector2(pad, area.y - 68)
 	feedback_label.size = Vector2(area.x - pad * 2, 28)
 	feedback_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	if is_instance_valid(level) and level.has_method("get_hint_presentation"):
+		hint_label.position.y = area.y - 180
+		_strip.position.y = area.y - 180
+		feedback_label.position.y = area.y - 96
 	for label in [world_label, footer, feedback_label]:
 		label.add_theme_font_size_override("font_size", maxi(16, roundi(22 * unit)))
 	_decor.queue_redraw()

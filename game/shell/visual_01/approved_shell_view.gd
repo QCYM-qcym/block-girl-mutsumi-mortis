@@ -313,7 +313,9 @@ func _update_preview(entry: Dictionary, unlocked: bool) -> void:
 func _process(_delta: float) -> void:
 	if screen in ["pause", "complete", "settings"] and context_is_runtime:
 		var level = _current_level()
-		if level and level.get("mover"):
+		if level and level.has_method("get_world_label"):
+			_world_label.text = level.get_world_label()
+		elif level and level.get("mover"):
 			_world_label.text = "表世界 · Mutsumi" if level.mover.world == 0 else "里世界 · Mortis"
 
 func _layout() -> void:
