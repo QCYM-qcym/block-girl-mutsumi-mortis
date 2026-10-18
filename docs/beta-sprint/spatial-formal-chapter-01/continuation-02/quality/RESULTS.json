@@ -1,0 +1,815 @@
+{
+  "status": "PARTIAL_SCOPE_BOUND",
+  "base": "763f0132bc58360fab0e224d0e9c54e00c92ae90",
+  "total_godot_process_seconds_all_attempts": 407.1412727832794,
+  "bindings": [
+    {
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\source_binding.json",
+      "sha256": "34b9ed66cfe09f0c6378eaf8913af97e7b04c910eab9754d76d7d1dcfbe6cb75",
+      "dependencies": 167,
+      "historical_mismatches": [],
+      "build_mismatches": []
+    },
+    {
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\source_binding.json",
+      "sha256": "22c86e9ffd24e604d94b5c529bd75669c4bc8b3c117e35c31f4446a84c7af4ec",
+      "dependencies": 167,
+      "historical_mismatches": [],
+      "build_mismatches": []
+    }
+  ],
+  "runs": [
+    {
+      "map": "setup",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\setup",
+      "exit_code": 0,
+      "elapsed_seconds": 2.890200138092041,
+      "stderr_bytes": 0,
+      "checks": null,
+      "failures": null,
+      "capture_verified": null
+    },
+    {
+      "map": "world_shift_gate_lab",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab",
+      "exit_code": 0,
+      "elapsed_seconds": 4.322839260101318,
+      "stderr_bytes": 0,
+      "checks": 26,
+      "failures": [],
+      "capture_verified": true
+    },
+    {
+      "map": "orientation_loop_lab",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab",
+      "exit_code": 4294967295,
+      "elapsed_seconds": 33.65198993682861,
+      "stderr_bytes": 483,
+      "checks": null,
+      "failures": null,
+      "capture_verified": null
+    },
+    {
+      "map": "face_lock_lab",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab",
+      "exit_code": 0,
+      "elapsed_seconds": 52.74968194961548,
+      "stderr_bytes": 0,
+      "checks": 46,
+      "failures": [],
+      "capture_verified": true
+    },
+    {
+      "map": "perspective_fork_lab",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab",
+      "exit_code": 4294967295,
+      "elapsed_seconds": 57.090362787246704,
+      "stderr_bytes": 483,
+      "checks": null,
+      "failures": null,
+      "capture_verified": null
+    },
+    {
+      "map": "rubik_spatial_puzzle_01",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01",
+      "exit_code": 3,
+      "elapsed_seconds": 214.3255853652954,
+      "stderr_bytes": 0,
+      "checks": 213,
+      "failures": [],
+      "capture_verified": true
+    },
+    {
+      "map": "setup",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\setup",
+      "exit_code": 0,
+      "elapsed_seconds": 3.5409796237945557,
+      "stderr_bytes": 0,
+      "checks": null,
+      "failures": null,
+      "capture_verified": null
+    },
+    {
+      "map": "orientation_loop_lab",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab",
+      "exit_code": 0,
+      "elapsed_seconds": 16.484742164611816,
+      "stderr_bytes": 0,
+      "checks": 26,
+      "failures": [],
+      "capture_verified": true
+    },
+    {
+      "map": "perspective_fork_lab",
+      "path": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab",
+      "exit_code": 0,
+      "elapsed_seconds": 22.08489155769348,
+      "stderr_bytes": 0,
+      "checks": 22,
+      "failures": [],
+      "capture_verified": true
+    }
+  ],
+  "maps": {
+    "world_shift_gate_lab": {
+      "budget": {
+        "max_action_evaluations": 30000,
+        "max_depth": -1,
+        "max_edges": 15000,
+        "max_runtime_ms": 110000,
+        "max_states": 2500
+      },
+      "budget_reason": 0,
+      "census": {
+        "action_kinds": {
+          "0": 12,
+          "1": 8,
+          "9": 36
+        },
+        "edges": 56,
+        "fall_edges": 0,
+        "frontier": 0,
+        "goal_island_entries": 0,
+        "goal_island_nonfall_entries": 0,
+        "goals": 4,
+        "latch_edges": 0,
+        "minimum_goal_depth": 3,
+        "orientations": {
+          "0": true,
+          "12": true,
+          "20": true
+        },
+        "positions": {
+          "{ \"layer\": 0, \"cube_id\": &\"gate\", \"face\": 4 }": {
+            "12": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"source\", \"face\": 4 }": {
+            "0": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"goal\", \"face\": 4 }": {
+            "20": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"inner_gate\", \"face\": 4 }": {
+            "12": true
+          }
+        },
+        "shift_edges": 8,
+        "states": 16,
+        "violations": []
+      },
+      "domain": "GOAL_TERMINAL_STABLE_PUBLIC_ACTIONS",
+      "fork_overlap": [],
+      "goal_reachable_count": 16,
+      "graph_complete": true,
+      "level_hash": "7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4",
+      "map": "world_shift_gate_lab",
+      "metrics": {
+        "action_evaluations": 108,
+        "duplicate_states": 41,
+        "elapsed_ms": 3019,
+        "explored_states": 16,
+        "filtered_edges": 0,
+        "generated_edges": 56,
+        "goal_states": 4,
+        "max_depth_reached": 4,
+        "no_op_actions": 12,
+        "rejected_actions": 40,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 3,
+        "visited_states": 16
+      },
+      "native_goal_reset": true,
+      "native_shortest_steps": 3,
+      "reset_is_graph_edge": false,
+      "reset_recoverable_count": 0,
+      "softlock_count": 0,
+      "softlock_status": 0,
+      "solver_status": 0,
+      "unknown_states": 0,
+      "evidence": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab",
+      "process_seconds": 4.322839260101318,
+      "checks": 26,
+      "admitted": true
+    },
+    "face_lock_lab": {
+      "budget": {
+        "max_action_evaluations": 30000,
+        "max_depth": -1,
+        "max_edges": 15000,
+        "max_runtime_ms": 110000,
+        "max_states": 2500
+      },
+      "budget_reason": 0,
+      "census": {
+        "action_kinds": {
+          "0": 184,
+          "1": 12,
+          "9": 276
+        },
+        "edges": 472,
+        "fall_edges": 0,
+        "frontier": 0,
+        "goal_island_entries": 0,
+        "goal_island_nonfall_entries": 0,
+        "goals": 12,
+        "latch_edges": 8,
+        "minimum_goal_depth": 5,
+        "orientations": {
+          "0": true,
+          "12": true,
+          "13": true,
+          "14": true,
+          "15": true,
+          "17": true,
+          "18": true,
+          "2": true,
+          "20": true,
+          "22": true,
+          "4": true,
+          "7": true
+        },
+        "positions": {
+          "{ \"layer\": 0, \"cube_id\": &\"corner\", \"face\": 4 }": {
+            "14": true,
+            "20": true,
+            "4": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"east\", \"face\": 4 }": {
+            "12": true,
+            "18": true,
+            "7": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"source\", \"face\": 4 }": {
+            "0": true,
+            "15": true,
+            "17": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"south\", \"face\": 4 }": {
+            "13": true,
+            "2": true,
+            "22": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"goal\", \"face\": 4 }": {
+            "0": true,
+            "15": true,
+            "17": true
+          }
+        },
+        "shift_edges": 12,
+        "states": 104,
+        "violations": []
+      },
+      "domain": "GOAL_TERMINAL_STABLE_PUBLIC_ACTIONS",
+      "fork_overlap": [],
+      "goal_reachable_count": 104,
+      "graph_complete": true,
+      "level_hash": "8bcd1b0708c8dca145ea67e5559e216745135c0a34bac41f16f99b1167a7e1e5",
+      "map": "face_lock_lab",
+      "metrics": {
+        "action_evaluations": 828,
+        "duplicate_states": 369,
+        "elapsed_ms": 47506,
+        "explored_states": 104,
+        "filtered_edges": 0,
+        "generated_edges": 472,
+        "goal_states": 12,
+        "max_depth_reached": 10,
+        "no_op_actions": 92,
+        "rejected_actions": 264,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 5,
+        "visited_states": 104
+      },
+      "native_goal_reset": true,
+      "native_shortest_steps": 5,
+      "reset_is_graph_edge": false,
+      "reset_recoverable_count": 0,
+      "softlock_count": 0,
+      "softlock_status": 0,
+      "solver_status": 0,
+      "unknown_states": 0,
+      "evidence": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab",
+      "process_seconds": 52.74968194961548,
+      "checks": 46,
+      "admitted": true
+    },
+    "rubik_spatial_puzzle_01": {
+      "budget": {
+        "max_action_evaluations": 30000,
+        "max_depth": -1,
+        "max_edges": 15000,
+        "max_runtime_ms": 200000,
+        "max_states": 2500
+      },
+      "budget_reason": 4,
+      "census": {
+        "action_kinds": {
+          "0": 533,
+          "1": 96,
+          "8": 29,
+          "9": 1008
+        },
+        "edges": 1666,
+        "fall_edges": 58,
+        "frontier": 56,
+        "goal_island_entries": 24,
+        "goal_island_nonfall_entries": 0,
+        "goals": 26,
+        "latch_edges": 8,
+        "minimum_goal_depth": 7,
+        "orientations": {
+          "0": true,
+          "1": true,
+          "11": true,
+          "12": true,
+          "13": true,
+          "14": true,
+          "15": true,
+          "16": true,
+          "17": true,
+          "18": true,
+          "19": true,
+          "2": true,
+          "20": true,
+          "21": true,
+          "22": true,
+          "23": true,
+          "3": true,
+          "4": true,
+          "5": true,
+          "6": true,
+          "7": true,
+          "8": true,
+          "9": true
+        },
+        "positions": {
+          "{ \"layer\": 0, \"cube_id\": &\"corner\", \"face\": 4 }": {
+            "11": true,
+            "12": true,
+            "13": true,
+            "14": true,
+            "15": true,
+            "17": true,
+            "18": true,
+            "20": true,
+            "22": true,
+            "23": true,
+            "4": true,
+            "5": true,
+            "6": true,
+            "7": true,
+            "8": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"east\", \"face\": 4 }": {
+            "11": true,
+            "12": true,
+            "14": true,
+            "15": true,
+            "16": true,
+            "17": true,
+            "18": true,
+            "19": true,
+            "20": true,
+            "4": true,
+            "5": true,
+            "7": true,
+            "9": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"source\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "13": true,
+            "15": true,
+            "16": true,
+            "17": true,
+            "18": true,
+            "19": true,
+            "2": true,
+            "22": true,
+            "3": true,
+            "5": true,
+            "7": true,
+            "9": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"south\", \"face\": 4 }": {
+            "0": true,
+            "1": true,
+            "12": true,
+            "13": true,
+            "14": true,
+            "15": true,
+            "17": true,
+            "2": true,
+            "20": true,
+            "21": true,
+            "22": true,
+            "4": true,
+            "7": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"goal\", \"face\": 4 }": {
+            "11": true,
+            "12": true,
+            "16": true,
+            "18": true,
+            "19": true,
+            "5": true,
+            "7": true,
+            "9": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"inner_source\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "13": true,
+            "15": true,
+            "16": true,
+            "17": true,
+            "18": true,
+            "19": true,
+            "2": true,
+            "3": true,
+            "5": true,
+            "7": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"return\", \"face\": 4 }": {
+            "11": true,
+            "12": true,
+            "16": true,
+            "18": true,
+            "19": true,
+            "5": true,
+            "7": true,
+            "9": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"target_a\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "13": true,
+            "15": true,
+            "16": true,
+            "17": true,
+            "18": true,
+            "19": true,
+            "2": true,
+            "3": true,
+            "5": true,
+            "7": true
+          },
+          "{ \"layer\": 1, \"cube_id\": &\"target_b\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "13": true,
+            "15": true,
+            "16": true,
+            "17": true,
+            "18": true,
+            "19": true,
+            "2": true,
+            "3": true,
+            "5": true,
+            "7": true
+          }
+        },
+        "shift_edges": 96,
+        "states": 418,
+        "violations": []
+      },
+      "domain": "GOAL_TERMINAL_STABLE_PUBLIC_ACTIONS",
+      "fork_overlap": [],
+      "goal_reachable_count": 355,
+      "graph_complete": false,
+      "level_hash": "5b4de9ca172f39ea537ceb00f3f56074d83f136cc768c66b9f4669764187d2c8",
+      "map": "rubik_spatial_puzzle_01",
+      "metrics": {
+        "action_evaluations": 4035,
+        "duplicate_states": 1249,
+        "elapsed_ms": 200049,
+        "explored_states": 362,
+        "filtered_edges": 0,
+        "generated_edges": 1666,
+        "goal_states": 26,
+        "max_depth_reached": 19,
+        "no_op_actions": 336,
+        "rejected_actions": 2032,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 7,
+        "visited_states": 418
+      },
+      "native_goal_reset": true,
+      "native_shortest_steps": 7,
+      "reset_is_graph_edge": false,
+      "reset_recoverable_count": null,
+      "softlock_count": null,
+      "softlock_status": 1,
+      "solver_status": 2,
+      "unknown_states": 63,
+      "evidence": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01",
+      "process_seconds": 214.3255853652954,
+      "checks": 213,
+      "admitted": true
+    },
+    "orientation_loop_lab": {
+      "budget": {
+        "max_action_evaluations": 30000,
+        "max_depth": -1,
+        "max_edges": 15000,
+        "max_runtime_ms": 110000,
+        "max_states": 2500
+      },
+      "budget_reason": 0,
+      "census": {
+        "action_kinds": {
+          "0": 99,
+          "8": 3,
+          "9": 144
+        },
+        "edges": 246,
+        "fall_edges": 6,
+        "frontier": 0,
+        "goal_island_entries": 6,
+        "goal_island_nonfall_entries": 0,
+        "goals": 3,
+        "latch_edges": 0,
+        "minimum_goal_depth": 3,
+        "orientations": {
+          "0": true,
+          "12": true,
+          "13": true,
+          "14": true,
+          "15": true,
+          "17": true,
+          "18": true,
+          "2": true,
+          "20": true,
+          "22": true,
+          "4": true,
+          "7": true
+        },
+        "positions": {
+          "{ \"layer\": 0, \"cube_id\": &\"corner\", \"face\": 4 }": {
+            "14": true,
+            "20": true,
+            "4": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"east\", \"face\": 4 }": {
+            "12": true,
+            "18": true,
+            "7": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"goal\", \"face\": 4 }": {
+            "14": true,
+            "20": true,
+            "4": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"source\", \"face\": 4 }": {
+            "0": true,
+            "15": true,
+            "17": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"south\", \"face\": 4 }": {
+            "13": true,
+            "2": true,
+            "22": true
+          }
+        },
+        "shift_edges": 0,
+        "states": 51,
+        "violations": []
+      },
+      "domain": "GOAL_TERMINAL_STABLE_PUBLIC_ACTIONS",
+      "fork_overlap": [],
+      "goal_reachable_count": 51,
+      "graph_complete": true,
+      "level_hash": "45bc655f778ae214e8ca830c4e8be59b618b2b854c808f3741d4e6f277d56a70",
+      "map": "orientation_loop_lab",
+      "metrics": {
+        "action_evaluations": 480,
+        "duplicate_states": 196,
+        "elapsed_ms": 14570,
+        "explored_states": 51,
+        "filtered_edges": 0,
+        "generated_edges": 246,
+        "goal_states": 3,
+        "max_depth_reached": 7,
+        "no_op_actions": 48,
+        "rejected_actions": 186,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 3,
+        "visited_states": 51
+      },
+      "native_goal_reset": true,
+      "native_shortest_steps": 3,
+      "reset_is_graph_edge": false,
+      "reset_recoverable_count": 0,
+      "softlock_count": 0,
+      "softlock_status": 0,
+      "solver_status": 0,
+      "unknown_states": 0,
+      "evidence": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab",
+      "process_seconds": 16.484742164611816,
+      "checks": 26,
+      "admitted": true
+    },
+    "perspective_fork_lab": {
+      "budget": {
+        "max_action_evaluations": 30000,
+        "max_depth": -1,
+        "max_edges": 15000,
+        "max_runtime_ms": 110000,
+        "max_states": 2500
+      },
+      "budget_reason": 0,
+      "census": {
+        "action_kinds": {
+          "0": 60,
+          "8": 12,
+          "9": 192
+        },
+        "edges": 264,
+        "fall_edges": 24,
+        "frontier": 0,
+        "goal_island_entries": 8,
+        "goal_island_nonfall_entries": 0,
+        "goals": 16,
+        "latch_edges": 0,
+        "minimum_goal_depth": 2,
+        "orientations": {
+          "0": true,
+          "12": true,
+          "5": true,
+          "9": true
+        },
+        "positions": {
+          "{ \"layer\": 0, \"cube_id\": &\"goal\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "5": true,
+            "9": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"return\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "5": true,
+            "9": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"source\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "5": true,
+            "9": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"target_a\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "5": true,
+            "9": true
+          },
+          "{ \"layer\": 0, \"cube_id\": &\"target_b\", \"face\": 4 }": {
+            "0": true,
+            "12": true,
+            "5": true,
+            "9": true
+          }
+        },
+        "shift_edges": 0,
+        "states": 80,
+        "violations": []
+      },
+      "domain": "GOAL_TERMINAL_STABLE_PUBLIC_ACTIONS",
+      "fork_overlap": [],
+      "goal_reachable_count": 80,
+      "graph_complete": true,
+      "level_hash": "8b485492113fec9f1ee74d347b88d31a6012f50359b97f9d26fee4c1e603054a",
+      "map": "perspective_fork_lab",
+      "metrics": {
+        "action_evaluations": 768,
+        "duplicate_states": 185,
+        "elapsed_ms": 19703,
+        "explored_states": 80,
+        "filtered_edges": 0,
+        "generated_edges": 264,
+        "goal_states": 16,
+        "max_depth_reached": 19,
+        "no_op_actions": 64,
+        "rejected_actions": 440,
+        "safety_unproven_rejections": 0,
+        "shortest_solution_count": null,
+        "shortest_solution_count_complete": false,
+        "solution_length": 2,
+        "visited_states": 80
+      },
+      "native_goal_reset": true,
+      "native_shortest_steps": 2,
+      "reset_is_graph_edge": false,
+      "reset_recoverable_count": 0,
+      "softlock_count": 0,
+      "softlock_status": 0,
+      "solver_status": 0,
+      "unknown_states": 0,
+      "evidence": "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab",
+      "process_seconds": 22.08489155769348,
+      "checks": 22,
+      "admitted": true
+    }
+  },
+  "evidence_sha256": {
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\setup\\process.json": "e757df8db21c66551c1afe23d6c8738c2b364b0c4c2bcd00e39cf38735e67ff5",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\setup\\running.json": "8c87fd414c5d75743afff331e3c52327b29cd9f574e988ae8171b80fc7c45b12",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\setup\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\setup\\stdout.log": "e88f57c6eb38dd3128371baae8324c314ea59e3392e5b802e71bbebb3753eb8f",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\explorer.json": "a5217ec5012877557ea7902ee975c9ab58fdd9e8375ae6ab16ed8fc996a8337f",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\map_identity.json": "f51315126fccc9d2f748eb97640869007867fe38e969ae8c8ab48a8f91b23ff8",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\process.json": "97127cf58e70a73367ebc8f3046daf3a0a757f33575213a6d5006e7e44a6137d",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\report.json": "085fceca9c3ac111de815bbe0133725461b9e8107c0069464c6313254f14bf09",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\running.json": "127cd77ff38ab1ca826579a9820618d06e827a609c064f6dadf8955b681a1eec",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\softlock.json": "2d2be1b595523ae937e7d91d27f382ce48f7e5939351f965725b020dd8d03f8d",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\world_shift_gate_lab\\summary.json": "7600ef6b146ad713be7ca6e8099f36c3a59603b8bda6ebd180aeb2b660d04dee",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\explorer.json": "578a310c5cafac9c17565388c12d781ca433b775cc183420f83dc3ca95b78d2c",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\map_identity.json": "a834c6a2ae75cef2d4b7a60e1ae4a352eb350213d0fe0cd39b9a96de054336d1",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\process.json": "d493f61d29a71af0ff365e5021a963029c7deeeae572fd3b1606a521c4bb251e",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\running.json": "53e6af25ccf479366cccf11e65b3f8e5e2b4337f6e347effde676ea29cf6ea52",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\softlock.json": "f1e0b2921210b2116de0f6a96ac8b2853056c3c317514aaeb4c8e7d7cace6b7e",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\stderr.log": "a555014f35a1485f9ba2c913d669c303d6a4f5da0e57f9e416e307e4d7d1d3eb",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\orientation_loop_lab\\stopped_identity.json": "4dd3217719989c661218cc5d2638c5db1ba3022bea65cca9ae925a9c55bca1fe",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\explorer.json": "b1159c9e0f09e95be3bac295f64caa445ee6d82d7c8e98c2f330b86b8a0f55c6",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\map_identity.json": "89407dfb1d7ba17fe28fd9fd201d58022e5b3a71da82f125776c7bd267c2256d",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\process.json": "f88606548a5db923fd0611a0722ec90952f0e101f8b6acffbdf12221dcc0ec4f",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\report.json": "24d7d1ec506b655150c253cb90b222825182ae4d34c8f8c1eed9c1d8a8da3e8a",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\running.json": "5404f7c450b5073c1ccfe088a3f8bad8f85f07fa56ff6bdf50f72cc94e1d4d98",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\softlock.json": "f80b6882d0b84945068a3be1837d0343e43218e01bc538eeb3fbb333552dcc0c",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\face_lock_lab\\summary.json": "ae54488bc49e43a47a65b0ce74174ef6fc3fb6fa38dff3e4327ebd3436ba4a9c",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\explorer.json": "90561f93539928aa05edffa1fe2e4536cc5331224820e9dce25136998788124c",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\map_identity.json": "9efcee4fc17fee57e2739d087a925bbf0dba1c0ea720ef963f9504003f5f3a7a",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\process.json": "001db3d252324ff5b9ea3176580f18936835b911f7907f03fd3605e0eba8b2a6",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\running.json": "f2441f5f483c4f84d192011ca8378e8ca6d973211ed828154087cfb8d62dfee2",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\softlock.json": "768cbc541b85f100935d007fe7e4a39d393c91473e7b8815bdf13dded91456a4",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\stderr.log": "a555014f35a1485f9ba2c913d669c303d6a4f5da0e57f9e416e307e4d7d1d3eb",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\perspective_fork_lab\\stopped_identity.json": "e4a49af184d40518338d9738d713ef1f8cb548ffbc734b451f4319788aeb90bb",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\explorer.json": "4a1849205b9d974de7fdf8d9b8342c9c104e6b1dd0d880490682bcdbc55dec40",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\map_identity.json": "05eb5beaba08dbf25a80cac34b45ae1b36c3982d278751580ea935ac06f2b9cb",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\process.json": "9ffa4ab88abdb49723a7ccde485c852d71cabeaf6b5558cfb877f4d398f87d02",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\report.json": "3d903c207877fadfc366b7f2f549e19b80059867ac9ecb4ead2e295b2b1c82f6",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\running.json": "876b7dc0d00a8f715fd8e36ef3ab6589ac5ea15466a9fe11aaadc7758332752e",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\softlock.json": "81a29d76c34eafe83ce98257c4d1e83f16bccba89e32669940f58b5d1011bfaa",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\rubik_spatial_puzzle_01\\summary.json": "ed465e95717a7272f9197666c205cdec4f8c3783fb72b56456e9765e8c8fb58e",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\source_binding.json": "34b9ed66cfe09f0c6378eaf8913af97e7b04c910eab9754d76d7d1dcfbe6cb75",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\processes.json": "b9e7e119a597c6f95b74a57e9f1074b1813e437762f186009f94f931d537cb58",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_01\\project\\graph.gd": "895a0eeb3f87d135511c4e9caa78869a99ed232631b3b44a3d21c7e4a8fb1542",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\setup\\process.json": "943c7d32720c5e8558697ed9134d66fefff20f0d2d8559f418e49bd9a8d12834",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\setup\\running.json": "19d7c69dc6473dd23ca05bd517d3ce44c8615f11da0c3c75d62ce1a28da471d8",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\setup\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\setup\\stdout.log": "e88f57c6eb38dd3128371baae8324c314ea59e3392e5b802e71bbebb3753eb8f",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\explorer.json": "08dd95b49e4f40246c6dfcc1a4873dd26ca39ed4c50844adadbe96711ff6d079",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\map_identity.json": "a834c6a2ae75cef2d4b7a60e1ae4a352eb350213d0fe0cd39b9a96de054336d1",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\process.json": "b426315d6557fd6e4edc8ac64ff29720e563fc0a62186b2990237fcdc47b9859",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\report.json": "9952d53646c25a058905bb91fa4449d7b6056ca489cb76a3603befa27cec8728",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\running.json": "66683737fb9a40dabbf53c60e40851099614bce2b6f3a53e3ba247ba3b0bffe2",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\softlock.json": "15c46a7475a94f0ff36bddae4d094544f0f83ebec5ed3a628f0b874770ec3f2d",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\orientation_loop_lab\\summary.json": "db892c187aa2751d62b051ede608c2b34c534aebf373dbf78c384cea12ff3823",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\explorer.json": "4776683095e063e91afce145b7bbc60ce72afb47a69649a6124fe027fe597b44",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\map_identity.json": "9efcee4fc17fee57e2739d087a925bbf0dba1c0ea720ef963f9504003f5f3a7a",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\process.json": "a9987ea0331c0a79714e5418982f1c1e2997d26e8f366ac457c99e36e14edcdf",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\report.json": "8040058b37d106b3d9630c9f709b985877bb3974231ebb5394e116dc9614b83b",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\running.json": "98ad8c29e1c40533a8e898e64aeaf15eb56c9a69040b348b755ef20e387f3a03",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\softlock.json": "509b872c9074bca24a3ce6c7b81481b933b74aacc0c31310ebd65a8d2dc1f152",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\stdout.log": "0fb41bb7cc71b68a335c01d8f84a806304e1cc6bb173f34ca02cb913d0f62013",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\perspective_fork_lab\\summary.json": "30020370fd167fa62eb79e7fe8cbfe4b8aacf1107e6a7bce6ff6b17c5bb5a2d3",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\source_binding.json": "22c86e9ffd24e604d94b5c529bd75669c4bc8b3c117e35c31f4446a84c7af4ec",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\processes.json": "71ca8142972766fc035c8260b31f694fad047459940b1dd6e427988c4afc2d62",
+    "E:\\godot\\beta-sprint-builds\\spatial_formal_state_cont02_20261019_02\\project\\graph.gd": "d0e191472e4f780f985d4a49f281149c29c515f373f0ccccd9b3e6a416089c37"
+  },
+  "scope": "Fresh formal Goal-terminal public-action graphs; logical native shortest witness and Reset. No public search expands Goal nodes.",
+  "uncovered": [
+    "post-Goal fresh full-action closure",
+    "pending/busy/cancel/interrupted lifecycle combinations",
+    "UI keyboard and Presenter interactions",
+    "Human QA",
+    "arbitrary malformed state/action dictionaries"
+  ],
+  "historical_reference": {
+    "path": "E:/godot/beta-sprint-builds/spatial_closure04_quality_20261019_01",
+    "map": "rubik_spatial_puzzle_01",
+    "states": 908,
+    "changed_edges": 4300,
+    "fresh_formal_graph": false,
+    "note": "Exact dependency binding permits separately cited prior finite stable-action certificate; it is not a fresh current-Build full state-graph PASS."
+  }
+}
