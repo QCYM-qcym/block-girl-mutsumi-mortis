@@ -4,11 +4,17 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const cp = require('child_process');
+if (process.argv.length !== 3 || !path.isAbsolute(process.argv[2])) {
+  throw new Error('Usage: node audit_readonly.cjs <new-absolute-output-directory>; parent directory must exist.');
+}
+const out = path.resolve(process.argv[2]);
+// Atomic exclusive directory creation: EEXIST stops before any audit or output.
+// Preserve a partial run directory on failure; choose a new directory to retry.
+fs.mkdirSync(out);
 const sharp = require('C:/Users/QCYM/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
 const repo = path.resolve(__dirname, '../../../../..');
 const root = 'E:/Study/方块娘项目/若叶睦/model/art/production/work/GAME_ART_MECHANICS_BATCH_01';
 const backup = root + '_SCOPE_RECOVERY_20261013';
-const out = 'E:/godot/beta-sprint-builds/spatial_formal_cont03_art_20261021_01';
 const build = 'E:/godot/beta-sprint-builds/beta_spatial_formal_chapter_20261019_01';
 const rels = ['design/states/face_lock_D.svg', 'design/states/face_lock_D.png', 'reports/DRAWING_CONTACT_SHEET.png'];
 const sha = b => crypto.createHash('sha256').update(b).digest('hex');
@@ -100,7 +106,7 @@ function differences(a,b,width) {
     read_only:{watched_count:Object.keys(before).length,before,after,drift:Object.keys(before).filter(p=>before[p]!==after[p]),
       source_writes:false,generator_execution:false,svg_render:false,image_encoding_or_export:false,recovery:false},
     statuses:{art_recovery:'PENDING',floating_cube:'PENDING_USER_REVIEW',art_implementation:'NOT_AUTHORIZED',production_changes:'NONE'}};
-  fs.writeFileSync(path.join(out,'ART_INCREMENTAL_EVIDENCE.json'),JSON.stringify(result,null,2)+'\n');
+  fs.writeFileSync(path.join(out,'ART_INCREMENTAL_EVIDENCE.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
   console.log(JSON.stringify({files:files.map(f=>({path:f.path,current:f.current_sha256})),tiles:result.contact_sheet.exact_pixel_tiles,
     unchanged_sources:result.contact_sheet.original_hash_source_tiles,rail_samples:samples,history,build:result.build,drift:result.read_only.drift},null,2));
 })().catch(e=>{console.error(e);process.exitCode=1;});
