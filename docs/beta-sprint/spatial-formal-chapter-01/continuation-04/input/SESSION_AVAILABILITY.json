@@ -1,0 +1,29 @@
+{
+  "sampled_utc": "2026-10-21T07:10:26.2950809Z",
+  "query": "WTSEnumerateSessions (IDs/state only; no usernames/station names)",
+  "query_succeeded": true,
+  "win32_error": null,
+  "collector_session_id": 1,
+  "sessions": [
+    {
+      "session_id": 0,
+      "state_code": 4,
+      "is_active": false
+    },
+    {
+      "session_id": 1,
+      "state_code": 0,
+      "is_active": true
+    }
+  ],
+  "independent_test_environment_declared_in_scoped_handoff": false,
+  "independent_input_control_proven": false,
+  "native_api_availability": "DISABLED_BY_TOOL_CONTRACT",
+  "tool_health": "UNKNOWN",
+  "isolated_profile_bound": false,
+  "dedicated_target_bound": false,
+  "vm_inventory": "NOT_SCANNED_NO_DECLARED_TARGET",
+  "graphical_diagnostic": "NOT_RUN",
+  "user_window_modified": "NO",
+  "limits": "Session availability is not ownership, exclusive input control, native tool reachability, VM absence, or desktop isolation proof."
+}

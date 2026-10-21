@@ -1,0 +1,27 @@
+{
+  "schema": "spatial-input-environment-readonly-v1",
+  "sampled_utc": "2026-10-21T07:10:00.9371085Z",
+  "collector_session_id": 1,
+  "godot_processes": [],
+  "prior_qa_pid_32312_present": false,
+  "foreground_is_observed_godot": false,
+  "foreground_godot_pid": null,
+  "unrelated_foreground_identity": "NOT_RECORDED",
+  "known_tool_processes": [
+    {
+      "name": "codex-computer-use",
+      "pid": 35720,
+      "session_id": 1,
+      "started_utc": "2026-10-21T07:02:23.9138548Z"
+    }
+  ],
+  "input_actions_attempted": 0,
+  "process_mutations": 0,
+  "window_mutations": 0,
+  "limitations": [
+    "Point-in-time metadata; not input dispatch or receipt proof.",
+    "Godot process list may change while sampled.",
+    "Per-thread focus does not establish system foreground ownership.",
+    "Tool-process presence does not establish tool health or input capability."
+  ]
+}

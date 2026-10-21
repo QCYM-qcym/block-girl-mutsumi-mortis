@@ -1,0 +1,111 @@
+{
+  "schema": "spatial-input-correlated-event-v1",
+  "status": "NOT_RUN_TEMPLATE_ONLY",
+  "session_id": null,
+  "event_id": null,
+  "admission": {
+    "owner00_coordination_evidence": null,
+    "independent_environment_identity": null,
+    "exclusive_input_ownership_evidence": null,
+    "native_control_contract_evidence": null,
+    "isolated_profile_evidence": null,
+    "approved_receipt_channel_evidence": null,
+    "all_conditions_verified": null
+  },
+  "build": {
+    "expected_build_id": null,
+    "source_sha": null,
+    "package_sha256": null,
+    "manifest_sha256": null,
+    "fresh_copy_path": null,
+    "actual_executable_path": null,
+    "actual_launch_source_path": null,
+    "launch_arguments_evidence": null,
+    "actual_profile_paths": null,
+    "identity_verified_utc": null
+  },
+  "target": {
+    "pid": null,
+    "process_start_utc": null,
+    "os_session_id": null,
+    "desktop_or_vm_identity": null,
+    "hwnd": null,
+    "window_owner_pid": null,
+    "tool_window_token": null,
+    "interactive_not_headless_verified": null
+  },
+  "expected": {
+    "screen_and_runtime_state": null,
+    "input_type": null,
+    "input_value_and_press_release_or_amount": null,
+    "runtime_action": null,
+    "runtime_result": null,
+    "mapping_evidence": null
+  },
+  "clocks": {
+    "tool_clock_source": null,
+    "game_clock_source": null,
+    "monotonic_frequency_hz": null,
+    "alignment_method": null,
+    "maximum_alignment_uncertainty_ms": null
+  },
+  "pre_dispatch": {
+    "observed_utc": null,
+    "monotonic_ticks": null,
+    "identity_matches_target": null,
+    "foreground_equals_target": null,
+    "target_thread_focus_equals_target": null,
+    "receipt_sequence_baseline": null
+  },
+  "dispatch": {
+    "tool_call_id": null,
+    "started_utc": null,
+    "ended_utc": null,
+    "monotonic_ticks": null,
+    "target_at_dispatch": null,
+    "foreground_at_dispatch_equals_target": null,
+    "raw_call_evidence": null,
+    "raw_response_evidence": null,
+    "ack_status": null,
+    "ack_semantics_evidence": null,
+    "injection_confirmed": null,
+    "error": null
+  },
+  "receipt": {
+    "channel_identity": null,
+    "collection_started_utc": null,
+    "collection_ended_utc": null,
+    "trace_continuity_and_drop_evidence": null,
+    "event_observed": null,
+    "game_event_sequence": null,
+    "event_utc": null,
+    "event_monotonic_ticks": null,
+    "pid_start_session_matches_target": null,
+    "input_type_and_value": null,
+    "mapped_runtime_action": null,
+    "runtime_decision_and_reason": null,
+    "runtime_result": null,
+    "raw_trace_evidence": null
+  },
+  "post_observation": {
+    "observed_utc": null,
+    "identity_matches_target": null,
+    "foreground_equals_target": null,
+    "target_scoped_outcome": null,
+    "evidence": null
+  },
+  "conclusion": {
+    "stop_reason": null,
+    "correlation_result": null,
+    "candidate_A_tool_send": "NOT_ASSESSED",
+    "candidate_B_focus": "NOT_ASSESSED",
+    "candidate_C_wrong_process": "NOT_ASSESSED",
+    "candidate_D_nonreceipt": "NOT_ASSESSED",
+    "candidate_E_path_mismatch": "NOT_ASSESSED",
+    "candidate_F_unknown": "NOT_ASSESSED",
+    "confirmed_cause": null,
+    "limitations": null
+  },
+  "evidence_file_record_shape": {"path": null, "sha256": null, "recorded_utc": null},
+  "notes": "Blank preparation only. Null is unobserved, never false/zero. Each evidence reference must identify a target-scoped raw file and SHA-256. Do not publish unrelated app content. No production instrumentation or input is authorized by this template."
+}
