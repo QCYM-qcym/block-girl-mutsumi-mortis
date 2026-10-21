@@ -1,0 +1,1493 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "SPATIAL_FORMAL_CHAPTER_01_CONTINUATION_05",
+  "review": {
+    "review_date": "2026-10-21T09:34:46.129718+00:00",
+    "reviewer": "Codex / 00 Integration Coordinator",
+    "review_mode": "ISOLATED_ART_PREVIEW",
+    "project": "Mutsumi Veilshift",
+    "godot_version": "4.7.2 project; historical capture 4.7.2-stable (steam); not launched this review",
+    "blender_version": null,
+    "blender_detection": "NOT_RUN / NOT_APPLICABLE: actual target is Godot procedural BoxMesh, no traced same-object .blend; unrelated design .blend not substituted.",
+    "preview_root": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z",
+    "review_scope": "Current material reference and A/B on the same real roof, historical isolated Surface/source static viewport frames; not new formal Shell screenshots.",
+    "base_sha": "8a8745d4b840e46ab1be5068c26a93b424753539",
+    "schema_completion_note": "User JSON Schema fragment ended inside review_mode ISOLATED; retained its supplied top-level fields and completed constraints from E1-E6. Not represented as a verbatim complete supplied schema.",
+    "policy_limit": "E5 scoring-band text and E6.7 template were truncated; no missing acceptance thresholds invented. Missing V5 requires PARTIAL and null total under explicit E6.3.",
+    "actual_image_view_count": 24,
+    "formal_asset_modification": "NONE",
+    "formal_asset_approval": "NOT_GRANTED",
+    "game_integration": "NOT_RUN",
+    "human_playtest": "NOT_RUN",
+    "rounding_rule": "Weighted scores, subtotals and displayed view means rounded to one decimal; A view mean is exactly 2.75, displayed and stored as 2.8."
+  },
+  "source_asset": {
+    "path": "E:/godot/worktrees/bg-formal01/experiments/game_feel_01/host/core_lab.gd",
+    "sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+    "authoring_path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn",
+    "authoring_sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+    "original_manifest_path": "E:/godot/beta-sprint-builds/beta_spatial_acceptance_input_fix_20261013_01/BUILD_IDENTITY.json",
+    "original_manifest_sha256": "67021752bfec7a05223aa12b3b447005bf486818e54983b4559d32b5a53393c0",
+    "node": "roof",
+    "authoring_id": "06c03444-c53b-49bb-6834-458cf9eb007a",
+    "source_type": "PROCEDURAL_GODOT_BOXMESH",
+    "evidence_ids": [
+      "core",
+      "host",
+      "surface",
+      "inner",
+      "map_factory",
+      "formal_manifest",
+      "original_build_manifest",
+      "preview_script"
+    ],
+    "preview_source_commit": "0bb0e01742eacf12272956111cd6b86fdc74f819",
+    "formal_build_source_commit": "763f0132bc58360fab0e224d0e9c54e00c92ae90",
+    "identity_chain": "Six exact source hashes match current branch, historical preview and formal Build. Roof position (1,6,0), unit BoxMesh, six nonwalkable faces, occludes_light=true. Formal Shell background/HUD differ; old screenshots are not an entire current-Build visual certification."
+  },
+  "candidates": {
+    "CURRENT_REFERENCE": {
+      "identity": {
+        "variant": "ORIGINAL",
+        "model": "roof: procedural Godot unit BoxMesh at (1,6,0), authoring 06c03444-c53b-49bb-6834-458cf9eb007a",
+        "material": "StandardMaterial3D #424b5b",
+        "material_evidence_id": "host",
+        "blender_file": null,
+        "blender_status": "NOT_APPLICABLE_PROCEDURAL_GODOT_BOXMESH",
+        "identity_status": "PASS",
+        "geometry_and_role": "Same unit silhouette, identity basis, Surface roof six nonwalkable faces; occludes_light=true. Same-group captured geometry/state verified.",
+        "same_pose": true,
+        "isolated": true,
+        "scope_limit": "Current material is source-identical, but captured in the historical experiment wrapper. Not a new formal Shell/Inner render."
+      },
+      "metrics": {
+        "V1": {
+          "label": "非可行走物体辨识性",
+          "weight": 30,
+          "status": "ASSESSED",
+          "score": 2,
+          "weighted_score": 12.0,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960",
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960",
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960",
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "observation": "实图中悬空块与脚下道路均为平整立方体、平顶和硬直边；主要区别是灰蓝/蓝色与悬空间距。",
+          "rationale": "2分：仍存在明显平台误读。",
+          "deduction": "扣3分：没有明确的非可走表面类别线索；间距不等于不可走。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V2": {
+          "label": "四视角辨识一致性",
+          "weight": 20,
+          "status": "ASSESSED",
+          "score": 2,
+          "weighted_score": 8.0,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960",
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960",
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960",
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "observation": "四向都保留平台式平顶；西向两侧近黑，顶部仍像可落脚平面。",
+          "rationale": "2分：四向均有混淆，不能以稳定地混淆算一致性高分。",
+          "deduction": "扣3分：没有任何一向可靠传达非可走用途。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V3": {
+          "label": "原有空间关系保持",
+          "weight": 15,
+          "status": "ASSESSED",
+          "score": 5,
+          "weighted_score": 15.0,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960",
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960",
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960",
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "observation": "完整单位立方体轮廓、悬空位置、与转换点和道路的上下关系四向均可见。",
+          "rationale": "5分：作为原始几何参照，静态轮廓/位置无异常。",
+          "deduction": "本项未扣分；只覆盖静态源站位，不推断动态遮光。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V4": {
+          "label": "材质符合度",
+          "weight": 15,
+          "status": "ASSESSED",
+          "score": 3,
+          "weighted_score": 9.0,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960",
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960",
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960",
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "observation": "表面不透明，没有明显高光或发光；三个可见面是干净平涂，缺乏粗纹触感。",
+          "rationale": "3分：低反射/不透明观感基本满足，粗糙视觉线索不足。",
+          "deduction": "扣2分：平滑平面读感仍强；静态光照不能测量材质全部反射行为。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V5": {
+          "label": "世界美术风格一致性",
+          "weight": 10,
+          "status": "NOT_ASSESSED",
+          "score": null,
+          "weighted_score": null,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960",
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960",
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960",
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "observation": "只有旧实验 Surface、调试数字角色与灰背景；缺少 Inner 及正式世界美术同屏。",
+          "rationale": "证据不足，不能评分完整 Surface/Inner 风格一致性。",
+          "deduction": "未评分，不把缺证据算0分或5分。",
+          "unresolved": "缺少Inner/正式世界美术同屏。",
+          "subjective": true
+        },
+        "V6": {
+          "label": "非颜色线索有效性",
+          "weight": 10,
+          "status": "ASSESSED",
+          "score": 1,
+          "weighted_score": 2.0,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960",
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960",
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960",
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "observation": "无纹样、内收标记或独立轮廓类别，主要依赖灰蓝颜色与空间间隔。",
+          "rationale": "1分：非颜色类别线索很弱。",
+          "deduction": "扣4分：同样平顶/直边仍与路块相似。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        }
+      },
+      "totals": {
+        "status": "NOT_ASSESSED",
+        "total": null,
+        "assessed_subtotal": 46.0,
+        "assessed_weight": 90,
+        "weight_sum": 100,
+        "assessed_items": 5
+      },
+      "views": [
+        {
+          "quadrant": 0,
+          "name": "北 / NORTH",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "ORIGINAL_Q0_1280",
+            "ORIGINAL_Q0_960"
+          ],
+          "camera_transform": "[X: (0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, -0.485071), Z: (0.514496, 0.685994, 0.514496), O: (13.36239, 22.14986, 12.86239)]",
+          "observation": "平顶/直边与脚下平台同类，文字靠近角色。",
+          "deduction": "扣3分：平顶/直边与脚下平台同类，文字靠近角色。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 1,
+          "name": "东 / EAST",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "ORIGINAL_Q1_1280",
+            "ORIGINAL_Q1_960"
+          ],
+          "camera_transform": "[X: (0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, -0.485071), Z: (-0.514496, 0.685994, 0.514496), O: (-12.36239, 22.14986, 12.86239)]",
+          "observation": "悬空距离更清楚，但平顶仍像目标平台。",
+          "deduction": "扣3分：悬空距离更清楚，但平顶仍像目标平台。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 2,
+          "name": "南 / SOUTH",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "ORIGINAL_Q2_1280",
+            "ORIGINAL_Q2_960"
+          ],
+          "camera_transform": "[X: (-0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, 0.485071), Z: (-0.514496, 0.685994, -0.514496), O: (-12.36239, 22.14986, -12.86239)]",
+          "observation": "平顶与道路几何语言相同，暗侧无独立标记。",
+          "deduction": "扣3分：平顶与道路几何语言相同，暗侧无独立标记。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 3,
+          "name": "西 / WEST",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "ORIGINAL_Q3_1280",
+            "ORIGINAL_Q3_960"
+          ],
+          "camera_transform": "[X: (-0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, 0.485071), Z: (0.514496, 0.685994, -0.514496), O: (13.36239, 22.14986, -12.86239)]",
+          "observation": "两侧近黑，主要剩平顶轮廓；仍像路块。",
+          "deduction": "扣3分：两侧近黑，主要剩平顶轮廓；仍像路块。 此为评审判断，不是玩家理解率。"
+        }
+      ],
+      "view_summary": {
+        "captured_view_count": 4,
+        "assessed_view_count": 4,
+        "minimum": 2,
+        "average": 2.0,
+        "most_confusing": "西 / WEST，Q3暗侧最弱；其它方向也存在平台语义风险。",
+        "coverage": "COMPLETE",
+        "scope": "四固定90度、Surface/source、原生1280×720与960×720；未覆盖Inner/动态。"
+      }
+    },
+    "OPTION_A": {
+      "identity": {
+        "variant": "A",
+        "model": "roof: procedural Godot unit BoxMesh at (1,6,0), authoring 06c03444-c53b-49bb-6834-458cf9eb007a",
+        "material": "roof_coarse ShaderMaterial",
+        "material_evidence_id": "A_shader",
+        "blender_file": null,
+        "blender_status": "NOT_APPLICABLE_PROCEDURAL_GODOT_BOXMESH",
+        "identity_status": "PASS",
+        "geometry_and_role": "Same unit silhouette, identity basis, Surface roof six nonwalkable faces; occludes_light=true. Same-group captured geometry/state verified.",
+        "same_pose": true,
+        "isolated": true,
+        "scope_limit": "Current material is source-identical, but captured in the historical experiment wrapper. Not a new formal Shell/Inner render."
+      },
+      "metrics": {
+        "V1": {
+          "label": "非可行走物体辨识性",
+          "weight": 30,
+          "status": "ASSESSED",
+          "score": 3,
+          "weighted_score": 18.0,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960",
+            "A_Q1_1280",
+            "A_Q1_960",
+            "A_Q2_1280",
+            "A_Q2_960",
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "observation": "低饱和宽条纹覆盖顶面与侧面，明显区别于无纹道路；平顶仍在。",
+          "rationale": "3分：可区分材质类别，但需观察且不直接等于不可走。",
+          "deduction": "扣2分：条纹可能像矿纹或可攀附表面，不能证明玩家理解遮光用途。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V2": {
+          "label": "四视角辨识一致性",
+          "weight": 20,
+          "status": "ASSESSED",
+          "score": 2,
+          "weighted_score": 8.0,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960",
+            "A_Q1_1280",
+            "A_Q1_960",
+            "A_Q2_1280",
+            "A_Q2_960",
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "observation": "北东南纹样清楚；西向两侧很暗，主要靠顶部条纹辨识。",
+          "rationale": "2分：西向仍有明显混淆，不满足四向稳定清楚。",
+          "deduction": "扣3分：暗面线索衰减；最高分视角不能抵消最弱视角。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V3": {
+          "label": "原有空间关系保持",
+          "weight": 15,
+          "status": "ASSESSED",
+          "score": 5,
+          "weighted_score": 15.0,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960",
+            "A_Q1_1280",
+            "A_Q1_960",
+            "A_Q2_1280",
+            "A_Q2_960",
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "observation": "所有对照中外缘、平顶尺寸、悬空间距与道路关系保持；纹样未伸出轮廓。",
+          "rationale": "5分：实图与同组几何记录共同支持静态关系保持。",
+          "deduction": "本项未扣分；没有增加台阶或改变位置。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V4": {
+          "label": "材质符合度",
+          "weight": 15,
+          "status": "ASSESSED",
+          "score": 4,
+          "weighted_score": 12.0,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960",
+            "A_Q1_1280",
+            "A_Q1_960",
+            "A_Q2_1280",
+            "A_Q2_960",
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "observation": "实图呈不透明哑光灰纹，无镜面亮斑或大面积发光；宽带纹样提供粗材质印象。",
+          "rationale": "4分：静态粗纹/低反射目标表现良好。",
+          "deduction": "扣1分：纹样偏平面条带，暗面质感较弱；不是触感或动态高光验证。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V5": {
+          "label": "世界美术风格一致性",
+          "weight": 10,
+          "status": "NOT_ASSESSED",
+          "score": null,
+          "weighted_score": null,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960",
+            "A_Q1_1280",
+            "A_Q1_960",
+            "A_Q2_1280",
+            "A_Q2_960",
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "observation": "只有旧实验 Surface 及调试角色；未见 Inner/正式世界母版环境中的A。",
+          "rationale": "完整世界风格匹配不能评估。",
+          "deduction": "未评分；不能凭配色或shader名称补分。",
+          "unresolved": "缺少Inner/正式世界美术同屏。",
+          "subjective": true
+        },
+        "V6": {
+          "label": "非颜色线索有效性",
+          "weight": 10,
+          "status": "ASSESSED",
+          "score": 4,
+          "weighted_score": 8.0,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960",
+            "A_Q1_1280",
+            "A_Q1_960",
+            "A_Q2_1280",
+            "A_Q2_960",
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "observation": "纹样以灰阶明暗而非鲜艳色块区分道路，各向顶面都有纹样。",
+          "rationale": "4分：非颜色纹理线索明确。",
+          "deduction": "扣1分：西向侧面较弱；未进行灰度/色弱测试，不能声称无障碍通过。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        }
+      },
+      "totals": {
+        "status": "NOT_ASSESSED",
+        "total": null,
+        "assessed_subtotal": 61.0,
+        "assessed_weight": 90,
+        "weight_sum": 100,
+        "assessed_items": 5
+      },
+      "views": [
+        {
+          "quadrant": 0,
+          "name": "北 / NORTH",
+          "status": "ASSESSED",
+          "score": 3,
+          "evidence_ids": [
+            "A_Q0_1280",
+            "A_Q0_960"
+          ],
+          "camera_transform": "[X: (0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, -0.485071), Z: (0.514496, 0.685994, 0.514496), O: (13.36239, 22.14986, 12.86239)]",
+          "observation": "顶面与亮侧条纹可见，暗侧弱，仍需辨认用途。",
+          "deduction": "扣2分：顶面与亮侧条纹可见，暗侧弱，仍需辨认用途。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 1,
+          "name": "东 / EAST",
+          "status": "ASSESSED",
+          "score": 3,
+          "evidence_ids": [
+            "A_Q1_1280",
+            "A_Q1_960"
+          ],
+          "camera_transform": "[X: (0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, -0.485071), Z: (-0.514496, 0.685994, 0.514496), O: (-12.36239, 22.14986, 12.86239)]",
+          "observation": "双亮侧纹样清楚，与素色道路区别最大，但可走含义未明确。",
+          "deduction": "扣2分：双亮侧纹样清楚，与素色道路区别最大，但可走含义未明确。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 2,
+          "name": "南 / SOUTH",
+          "status": "ASSESSED",
+          "score": 3,
+          "evidence_ids": [
+            "A_Q2_1280",
+            "A_Q2_960"
+          ],
+          "camera_transform": "[X: (-0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, 0.485071), Z: (-0.514496, 0.685994, -0.514496), O: (-12.36239, 22.14986, -12.86239)]",
+          "observation": "顶面和右侧条纹可见，左暗侧弱。",
+          "deduction": "扣2分：顶面和右侧条纹可见，左暗侧弱。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 3,
+          "name": "西 / WEST",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "A_Q3_1280",
+            "A_Q3_960"
+          ],
+          "camera_transform": "[X: (-0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, 0.485071), Z: (0.514496, 0.685994, -0.514496), O: (13.36239, 22.14986, -12.86239)]",
+          "observation": "两侧条纹低对比，主要依赖顶部；未达到稳定清楚。",
+          "deduction": "扣3分：两侧条纹低对比，主要依赖顶部；未达到稳定清楚。 此为评审判断，不是玩家理解率。"
+        }
+      ],
+      "view_summary": {
+        "captured_view_count": 4,
+        "assessed_view_count": 4,
+        "minimum": 2,
+        "average": 2.8,
+        "most_confusing": "西 / WEST，Q3暗侧最弱；其它方向也存在平台语义风险。",
+        "coverage": "COMPLETE",
+        "scope": "四固定90度、Surface/source、原生1280×720与960×720；未覆盖Inner/动态。"
+      }
+    },
+    "OPTION_B": {
+      "identity": {
+        "variant": "B",
+        "model": "roof: procedural Godot unit BoxMesh at (1,6,0), authoring 06c03444-c53b-49bb-6834-458cf9eb007a",
+        "material": "roof_inset ShaderMaterial; painted inset, not modeled groove",
+        "material_evidence_id": "B_shader",
+        "blender_file": null,
+        "blender_status": "NOT_APPLICABLE_PROCEDURAL_GODOT_BOXMESH",
+        "identity_status": "PASS",
+        "geometry_and_role": "Same unit silhouette, identity basis, Surface roof six nonwalkable faces; occludes_light=true. Same-group captured geometry/state verified.",
+        "same_pose": true,
+        "isolated": true,
+        "scope_limit": "Current material is source-identical, but captured in the historical experiment wrapper. Not a new formal Shell/Inner render."
+      },
+      "metrics": {
+        "V1": {
+          "label": "非可行走物体辨识性",
+          "weight": 30,
+          "status": "ASSESSED",
+          "score": 2,
+          "weighted_score": 12.0,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960",
+            "B_Q1_1280",
+            "B_Q1_960",
+            "B_Q2_1280",
+            "B_Q2_960",
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "observation": "内收闭合框与短刻线醒目，但顶面像压力板/可交互面板，仍可能邀请站上去。",
+          "rationale": "2分：外观有区别，非可走含义仍明显混淆。",
+          "deduction": "扣3分：框线可能强化平台或机关感；不因醒目提高语义分。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V2": {
+          "label": "四视角辨识一致性",
+          "weight": 20,
+          "status": "ASSESSED",
+          "score": 2,
+          "weighted_score": 8.0,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960",
+            "B_Q1_1280",
+            "B_Q1_960",
+            "B_Q2_1280",
+            "B_Q2_960",
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "observation": "四向都有框线，东向最清楚，西向暗侧弱；顶面闭框误读跨视角存在。",
+          "rationale": "2分：四向都未可靠区分可行走性。",
+          "deduction": "扣3分：暗侧减弱和面板语义风险；不是因B缺少精细模型扣分。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V3": {
+          "label": "原有空间关系保持",
+          "weight": 15,
+          "status": "ASSESSED",
+          "score": 5,
+          "weighted_score": 15.0,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960",
+            "B_Q1_1280",
+            "B_Q1_960",
+            "B_Q2_1280",
+            "B_Q2_960",
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "observation": "边框绘制在原有面内；外轮廓、位置及悬空间距与当前版本一致。",
+          "rationale": "5分：轻量材质概念保持静态空间关系。",
+          "deduction": "本项未扣分；没有要求B制作真实凹槽或额外模型。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V4": {
+          "label": "材质符合度",
+          "weight": 15,
+          "status": "ASSESSED",
+          "score": 3,
+          "weighted_score": 9.0,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960",
+            "B_Q1_1280",
+            "B_Q1_960",
+            "B_Q2_1280",
+            "B_Q2_960",
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "observation": "不透明无镜面亮斑；框线呈整洁硬表面，粗纹读感弱。",
+          "rationale": "3分：不透明低反射基本可见，粗糙视觉不足。",
+          "deduction": "扣2分：面板式平涂感，基于实际图像而非建模精度。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        },
+        "V5": {
+          "label": "世界美术风格一致性",
+          "weight": 10,
+          "status": "NOT_ASSESSED",
+          "score": null,
+          "weighted_score": null,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960",
+            "B_Q1_1280",
+            "B_Q1_960",
+            "B_Q2_1280",
+            "B_Q2_960",
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "observation": "B只有同一旧 Surface 背景，无 Inner/正式母版同屏。",
+          "rationale": "完整世界风格匹配不能评估。",
+          "deduction": "未评分；不虚构B正式模型或世界渲染。",
+          "unresolved": "缺少Inner/正式世界美术同屏。",
+          "subjective": true
+        },
+        "V6": {
+          "label": "非颜色线索有效性",
+          "weight": 10,
+          "status": "ASSESSED",
+          "score": 3,
+          "weighted_score": 6.0,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960",
+            "B_Q1_1280",
+            "B_Q1_960",
+            "B_Q2_1280",
+            "B_Q2_960",
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "observation": "封闭边框/短刻线无需鲜艳颜色可见，但与其它机关标记的含义冲突。",
+          "rationale": "3分：非颜色线索存在，类别含义不足。",
+          "deduction": "扣2分：更像交互面板，暗侧框线易消失。",
+          "unresolved": "无首次真人理解性观察；不外推动态、其它站位或正式Shell。",
+          "subjective": true
+        }
+      },
+      "totals": {
+        "status": "NOT_ASSESSED",
+        "total": null,
+        "assessed_subtotal": 50.0,
+        "assessed_weight": 90,
+        "weight_sum": 100,
+        "assessed_items": 5
+      },
+      "views": [
+        {
+          "quadrant": 0,
+          "name": "北 / NORTH",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "B_Q0_1280",
+            "B_Q0_960"
+          ],
+          "camera_transform": "[X: (0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, -0.485071), Z: (0.514496, 0.685994, 0.514496), O: (13.36239, 22.14986, 12.86239)]",
+          "observation": "边框像可站立/可激活面板，右暗侧刻线较弱。",
+          "deduction": "扣3分：边框像可站立/可激活面板，右暗侧刻线较弱。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 1,
+          "name": "东 / EAST",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "B_Q1_1280",
+            "B_Q1_960"
+          ],
+          "camera_transform": "[X: (0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, -0.485071), Z: (-0.514496, 0.685994, 0.514496), O: (-12.36239, 22.14986, 12.86239)]",
+          "observation": "框线最清楚，但箱体/机关面板读感更强。",
+          "deduction": "扣3分：框线最清楚，但箱体/机关面板读感更强。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 2,
+          "name": "南 / SOUTH",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "B_Q2_1280",
+            "B_Q2_960"
+          ],
+          "camera_transform": "[X: (-0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, 0.485071), Z: (-0.514496, 0.685994, -0.514496), O: (-12.36239, 22.14986, -12.86239)]",
+          "observation": "顶面闭框像落脚区域，左侧暗。",
+          "deduction": "扣3分：顶面闭框像落脚区域，左侧暗。 此为评审判断，不是玩家理解率。"
+        },
+        {
+          "quadrant": 3,
+          "name": "西 / WEST",
+          "status": "ASSESSED",
+          "score": 2,
+          "evidence_ids": [
+            "B_Q3_1280",
+            "B_Q3_960"
+          ],
+          "camera_transform": "[X: (-0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, 0.485071), Z: (0.514496, 0.685994, -0.514496), O: (13.36239, 22.14986, -12.86239)]",
+          "observation": "两侧近黑框线弱，顶面闭框仍像踏板。",
+          "deduction": "扣3分：两侧近黑框线弱，顶面闭框仍像踏板。 此为评审判断，不是玩家理解率。"
+        }
+      ],
+      "view_summary": {
+        "captured_view_count": 4,
+        "assessed_view_count": 4,
+        "minimum": 2,
+        "average": 2.0,
+        "most_confusing": "西 / WEST，Q3暗侧最弱；其它方向也存在平台语义风险。",
+        "coverage": "COMPLETE",
+        "scope": "四固定90度、Surface/source、原生1280×720与960×720；未覆盖Inner/动态。"
+      }
+    }
+  },
+  "render_comparison": {
+    "status": "PASS",
+    "scope": "Same-condition historical static Surface/source material comparison ONLY; not current formal Shell or both worlds.",
+    "conditions": [
+      {
+        "field": "场景背景",
+        "values": {
+          "CURRENT_REFERENCE": "Same historical experiment gray background / debug actor",
+          "OPTION_A": "Same historical experiment gray background / debug actor",
+          "OPTION_B": "Same historical experiment gray background / debug actor"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "preview_script",
+          "preview_project",
+          "formal_shell"
+        ],
+        "limit": "正式Shell有水色背景和不同HUD，未外推。"
+      },
+      {
+        "field": "Camera身份",
+        "values": {
+          "CURRENT_REFERENCE": "Same real Host Camera3D, orthographic",
+          "OPTION_A": "Same real Host Camera3D, orthographic",
+          "OPTION_B": "Same real Host Camera3D, orthographic"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "camera",
+          "core",
+          "capture_report"
+        ],
+        "limit": "不是自由相机。"
+      },
+      {
+        "field": "相机位置与朝向",
+        "values": {
+          "CURRENT_REFERENCE": "Exact same recorded transform per quadrant and size group",
+          "OPTION_A": "Exact same recorded transform per quadrant and size group",
+          "OPTION_B": "Exact same recorded transform per quadrant and size group"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "capture_report",
+          "camera"
+        ],
+        "limit": "每个q定义不同，不能声称四向transform相同。"
+      },
+      {
+        "field": "灯光配置",
+        "values": {
+          "CURRENT_REFERENCE": "Shared DirectionalLight3D rotation (-45,-30,0), energy 1.5",
+          "OPTION_A": "Shared DirectionalLight3D rotation (-45,-30,0), energy 1.5",
+          "OPTION_B": "Shared DirectionalLight3D rotation (-45,-30,0), energy 1.5"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "core",
+          "preview_script"
+        ],
+        "limit": "源码固定配置；report未实测灯光字段。"
+      },
+      {
+        "field": "渲染引擎",
+        "values": {
+          "CURRENT_REFERENCE": "Same historical Godot4.7.2-stable steam / Forward+ / D3D12",
+          "OPTION_A": "Same historical Godot4.7.2-stable steam / Forward+ / D3D12",
+          "OPTION_B": "Same historical Godot4.7.2-stable steam / Forward+ / D3D12"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "preview_log",
+          "capture_report"
+        ],
+        "limit": "历史单进程，未重启渲染。"
+      },
+      {
+        "field": "输出分辨率",
+        "values": {
+          "CURRENT_REFERENCE": "1280x720 and 960x720, compared within equal-size groups",
+          "OPTION_A": "1280x720 and 960x720, compared within equal-size groups",
+          "OPTION_B": "1280x720 and 960x720, compared within equal-size groups"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "capture_report"
+        ],
+        "limit": "KEEP_HEIGHT保持物体像素尺寸；不是更小机关测试。"
+      },
+      {
+        "field": "色彩管理",
+        "values": {
+          "CURRENT_REFERENCE": "Same engine defaults; no custom WorldEnvironment/CameraAttributes override",
+          "OPTION_A": "Same engine defaults; no custom WorldEnvironment/CameraAttributes override",
+          "OPTION_B": "Same engine defaults; no custom WorldEnvironment/CameraAttributes override"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "core",
+          "preview_script",
+          "preview_project"
+        ],
+        "limit": "无数值实录，不虚构tonemap或色彩参数。"
+      },
+      {
+        "field": "曝光",
+        "values": {
+          "CURRENT_REFERENCE": "Shared defaults; no per-variant exposure change",
+          "OPTION_A": "Shared defaults; no per-variant exposure change",
+          "OPTION_B": "Shared defaults; no per-variant exposure change"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "core",
+          "preview_script"
+        ],
+        "limit": "无数值实录；不能填曝光=1等猜值。"
+      },
+      {
+        "field": "取景范围",
+        "values": {
+          "CURRENT_REFERENCE": "size=10, KEEP_HEIGHT=1, fixed source pose",
+          "OPTION_A": "size=10, KEEP_HEIGHT=1, fixed source pose",
+          "OPTION_B": "size=10, KEEP_HEIGHT=1, fixed source pose"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "capture_report"
+        ],
+        "limit": "仅静态Surface/source。"
+      },
+      {
+        "field": "其他参数",
+        "values": {
+          "CURRENT_REFERENCE": "Same recorded geometry/state/roof screen center; only material and label differ",
+          "OPTION_A": "Same recorded geometry/state/roof screen center; only material and label differ",
+          "OPTION_B": "Same recorded geometry/state/roof screen center; only material and label differ"
+        },
+        "status": "PASS",
+        "evidence_ids": [
+          "capture_report",
+          "preview_script"
+        ],
+        "limit": "variant标识文字有意不同，不用于评分。"
+      }
+    ],
+    "camera_definition_evidence_ids": [
+      "camera",
+      "host",
+      "capture_report"
+    ],
+    "all_capture_hashes_verified": 32,
+    "visual_images_reviewed": 24,
+    "views_per_candidate": 4,
+    "worlds_reviewed": [
+      "SURFACE"
+    ],
+    "uncovered": [
+      "INNER and formal world art context",
+      "Current formal Shell new rendering",
+      "Gate standing position / animated intermediate frames",
+      "Human comprehension / actual input diagnostic",
+      "Smaller object pixel size / grayscale or color-vision simulation"
+    ]
+  },
+  "hard_gates": {
+    "G1": {
+      "label": "源资产身份",
+      "status": "PASS",
+      "evidence_ids": [
+        "core",
+        "host",
+        "surface",
+        "formal_manifest",
+        "original_build_manifest",
+        "preview_script"
+      ],
+      "observation": "同一真roof源码、作者场景、preview/formal/current六项来源字节一致；不是Blender替代模型。",
+      "scope_limit": "对象同源不等于整个入口画面同版。"
+    },
+    "G2": {
+      "label": "独立预览",
+      "status": "PASS",
+      "evidence_ids": [
+        "preview_process",
+        "preview_script",
+        "A_shader",
+        "B_shader"
+      ],
+      "observation": "A/B只在隔离副本替换roof材质，正式Build未包含预览脚本/shader。",
+      "scope_limit": "独立预览不要求创造一套正式Blender资产。"
+    },
+    "G3": {
+      "label": "同条件对比",
+      "status": "PASS",
+      "evidence_ids": [
+        "capture_report",
+        "core",
+        "preview_script",
+        "preview_project"
+      ],
+      "observation": "八个q×尺寸组内camera/state/geometry精确相同；源码与同进程证据支持共同灯光与默认色彩。",
+      "scope_limit": "仅旧组内PASS；色彩/曝光无数值采样，不外推正式Shell。"
+    },
+    "G4": {
+      "label": "四视角覆盖",
+      "status": "PASS",
+      "evidence_ids": [
+        "capture_report",
+        "ORIGINAL_Q0_1280",
+        "ORIGINAL_Q1_1280",
+        "ORIGINAL_Q2_1280",
+        "ORIGINAL_Q3_1280",
+        "A_Q0_1280",
+        "A_Q1_1280",
+        "A_Q2_1280",
+        "A_Q3_1280",
+        "B_Q0_1280",
+        "B_Q1_1280",
+        "B_Q2_1280",
+        "B_Q3_1280"
+      ],
+      "observation": "当前材质/A/B各四向两尺寸实图已逐张检查；B确有实图。",
+      "scope_limit": "四向证据覆盖PASS不是四向语义辨识PASS。"
+    },
+    "G5": {
+      "label": "主要轮廓",
+      "status": "PASS",
+      "evidence_ids": [
+        "A_Q0_1280",
+        "A_Q1_1280",
+        "A_Q2_1280",
+        "A_Q3_1280",
+        "capture_report"
+      ],
+      "observation": "A不改变边界、悬空间距与主要位置；实图和同组网格记录一致。",
+      "scope_limit": "静态几何和正式规则保持；没有新动态遮光测试。"
+    },
+    "G6": {
+      "label": "材质目标",
+      "status": "PASS",
+      "evidence_ids": [
+        "A_Q0_1280",
+        "A_Q1_1280",
+        "A_Q2_1280",
+        "A_Q3_1280",
+        "A_shader"
+      ],
+      "observation": "A实图不透明、哑光灰纹，无镜面亮斑或大面积发光；shader实现仅辅助证据。",
+      "scope_limit": "静态低反射目标PASS，不代表质感满分或所有照明下通过。"
+    },
+    "G7": {
+      "label": "非颜色依赖",
+      "status": "PASS",
+      "evidence_ids": [
+        "A_Q1_1280",
+        "A_Q3_1280",
+        "B_Q1_1280",
+        "B_Q3_1280",
+        "A_shader",
+        "B_shader"
+      ],
+      "observation": "A的灰阶条纹、B的内收框线提供形状/纹理线索；不是鲜艳色块或发光。",
+      "scope_limit": "存在非颜色线索不等于正确传达不可行走；未测试色弱。"
+    },
+    "G8": {
+      "label": "生产安全",
+      "status": "PASS",
+      "evidence_ids": [
+        "preservation_before",
+        "formal_manifest",
+        "preservation_after"
+      ],
+      "observation": "本轮只读原图/源码并新增评分文档与验证工具；正式Build1783项、旧预览1759项、历史证据及存档前后清单哈希一致。",
+      "scope_limit": "已对明确基线清单执行结束比对，非全磁盘声明；只有本轮评分文档/验证工具变更，未改主干/tag。"
+    }
+  },
+  "comparison": {
+    "a_minus_current_total": null,
+    "b_minus_current_total": null,
+    "a_minus_b_total": null,
+    "common_assessed_weight": 90,
+    "a_minus_current_subtotal": 15.0,
+    "b_minus_current_subtotal": 4.0,
+    "a_minus_b_subtotal": 11.0,
+    "basis": "仅V1/V2/V3/V4/V6共同90%权重小计，未归一化；完整总分与完整差值均NOT_ASSESSED。",
+    "a_strength": "宽条纹比原版提供更多非颜色材质类别线索，保留轮廓。",
+    "a_weakness": "西向暗侧弱；条纹不自动说明不可站立，可能产生攀附/矿纹联想。",
+    "b_strength": "内收框线在亮面清楚，轻量概念已有四向实图，无需精细模型才能比较。",
+    "b_weakness": "闭合顶框像压力板/可激活面板，非可行走含义仍混淆。",
+    "recommendation": "A可优先继续隔离验证，尚未达到正式视觉接受；先补Inner/正式世界同屏并验证最弱西向与首次玩家语义。B需要降低交互面板误读。保持生产原样，等待用户批准。"
+  },
+  "evidence": [
+    {
+      "id": "ORIGINAL_Q0_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q0_1280x720.png",
+      "sha256": "c68952e40a18f01e2fdfce373026acef0607df0785546a062c532a495a4bbeae",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q0_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q0_960x720.png",
+      "sha256": "077ec3fc1374bfa5cf2e0683528358b6fee22e8ab316f28678c47e85ed467294",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q1_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q1_1280x720.png",
+      "sha256": "e83d2fd16fb96fbb0abc79b04a36c8b7fc9f307d7e4973412f66ff7496a8bd56",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q1_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q1_960x720.png",
+      "sha256": "1a5c3b1626e4fd5e18c271a218b9e8aae8d57f16ac155511ea1428349fd72daf",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q2_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q2_1280x720.png",
+      "sha256": "10f6c9fb801f9417328ebf06f834c49e3905764fc99271edfe74dea1665749c9",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q2_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q2_960x720.png",
+      "sha256": "048c26e80fa19ce9a377cb4554a5a100c648ba35c31469bbaad6f5d7290638a0",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q3_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q3_1280x720.png",
+      "sha256": "d5d79478ab1c1951708fbbc08d3aeee68da44547c662173118436ec832b7bec5",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "ORIGINAL_Q3_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/ORIGINAL_q3_960x720.png",
+      "sha256": "ec1e9901fc9d1aef2dafe788a14ae631cc11da560f3887d9559e362cce410477",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "A_Q0_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q0_1280x720.png",
+      "sha256": "0c0c1649eccc5c12ab51dff2d70c598e39af772d387503de298622ba4c4be1cf",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "A_Q0_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q0_960x720.png",
+      "sha256": "82c640dd7da816ea8b39baf55f8dd36ce500c8f28e1a05656547186b642cb5db",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "A_Q1_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q1_1280x720.png",
+      "sha256": "08102fb727e47156340e82376de141c1775589d5ccf3499fc82f8333ad21630a",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "A_Q1_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q1_960x720.png",
+      "sha256": "f5c8529d97e11a64bfa226dd4fe40998b901168ecb1882aeee16087647e31fe4",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "A_Q2_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q2_1280x720.png",
+      "sha256": "8a9b9a5f8094a55a4371285b6bc357a13b46f4f94f0f681e177079403db9de7c",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "A_Q2_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q2_960x720.png",
+      "sha256": "08a74b68f40ca5a693774dbf67dea38d3cf8158a007d980e547f305af1a78286",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "A_Q3_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q3_1280x720.png",
+      "sha256": "2e50986f9eeb45b7dcabdbefc70e9bf090aebfee2cd8ea20332932b2c545d968",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "A_Q3_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/A_q3_960x720.png",
+      "sha256": "48ded409da83487c6bd6b9333dc7f4c74ff17ea9e6727afca8b041873a7d892e",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "B_Q0_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q0_1280x720.png",
+      "sha256": "acec9184afc91d856d296df2d87cf8e219819b900af3079314f7bdb26d0bd57e",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "B_Q0_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q0_960x720.png",
+      "sha256": "69b76a5a3bf6465423e2a2fd6a11e01a4c241e0768de6f43d4942c6358221112",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "B_Q1_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q1_1280x720.png",
+      "sha256": "daf0cf24f0ffba3474267855f04fd9cf8b538fdaa457c4a49e910ca7147cfd27",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "B_Q1_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q1_960x720.png",
+      "sha256": "c3f6993385efa5c0c063fe4617fee2851b0fc784e9de48e96b8203a1384d529a",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "B_Q2_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q2_1280x720.png",
+      "sha256": "8cb2cde9afd5cd859cc51299e4b65504d40b958265e1f2ba163cc9d09d002f2b",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "B_Q2_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q2_960x720.png",
+      "sha256": "1be333d73981c71fe71b34b7a2bb2f5d5e23c47ac5df640ed253a49c3378ac1f",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "B_Q3_1280",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q3_1280x720.png",
+      "sha256": "a0495645f127fb71af36d48fc51704bc3467df02b7705e76df82d6e4a81d6b4a",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "B_Q3_960",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/B_q3_960x720.png",
+      "sha256": "76e74bf9461e4510a6bd08bc9a347a2de791c68bc35571e4766a4b0fd49e8430",
+      "kind": "IMAGE",
+      "inspection": "ACTUALLY_VIEWED_BY_CODEX_2026_10_21; PNG_HEADER_AND_SHA_VERIFIED",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "id": "core",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/game_feel_01/host/core_lab.gd",
+      "sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "host",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+      "sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "camera",
+      "path": "E:/godot/worktrees/bg-formal01/foundation/game_feel/view_contract.gd",
+      "sha256": "76feb612222ca061f64d702c080b060ec834d3454cfccabfde34f7e0a0e05231",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "surface",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn",
+      "sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "inner",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/inner.tscn",
+      "sha256": "7418bfb3a7f3b18bf8c0a55b1a2f8bcb38fab81437f161c96bc64f8c5bf086d1",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "map_factory",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/maps/map_factory.gd",
+      "sha256": "71e86e95f2605a47bd67b8fb20be1c0a5aba91606504174ee0991a3b25099839",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preview_script",
+      "path": "E:/godot/worktrees/bg-formal01/tests/beta_sprint/spatial_art/polish_03/roof_preview.gd",
+      "sha256": "bdb843a0897e6ecab809430a85fd7457fb32d003ced857c98a72ea50efd58af4",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "A_shader",
+      "path": "E:/godot/worktrees/bg-formal01/tests/beta_sprint/spatial_art/polish_03/roof_coarse.gdshader",
+      "sha256": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "B_shader",
+      "path": "E:/godot/worktrees/bg-formal01/tests/beta_sprint/spatial_art/polish_03/roof_inset.gdshader",
+      "sha256": "68ec63ff75b1db217e4de607323f2cdf7b6c9e132ced757a11cf5791b1f9bf7d",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "formal_shell",
+      "path": "E:/godot/worktrees/bg-formal01/game/levels/mutsumi/spatial_chapter/spatial_level.gd",
+      "sha256": "412fdf966662f524799df4af325967beaf07e50615496cf849a5eea686cf5ba6",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "capture_report",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/captures/report.json",
+      "sha256": "60c4a1cc7fc53251757863ae5ff4ee15cf5b4431d8add80334aa96b3b4c30c93",
+      "kind": "RECEIPT",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preview_process",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/process.json",
+      "sha256": "e7adc7c97f461b7203fa7064e7288725f54e4674c84e4a14c9b195365501eb5a",
+      "kind": "RECEIPT",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preview_review",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/REVIEW_EVIDENCE.json",
+      "sha256": "d1dacc3da59417c76f4ff82af7c25e87133a94827c96d875501e64c571a3dcf7",
+      "kind": "RECEIPT",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preview_log",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/godot.log",
+      "sha256": "366c8c5ad83f290a48c6e7b9bb72066a8607fdb97bbc6a15f416973fe017d493",
+      "kind": "RECEIPT",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preview_project",
+      "path": "E:/godot/beta-sprint-builds/QA/art_preview_polish03/run_20261013T143919247369Z/project/project.godot",
+      "sha256": "6075f841f67c1269c119f2fef1996ce68565fb70dd204a4635067069d3bdafb2",
+      "kind": "SOURCE",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "formal_manifest",
+      "path": "E:/godot/beta-sprint-builds/beta_spatial_formal_chapter_20261019_01/BUILD_IDENTITY.json",
+      "sha256": "1c6fdc2baa4c058733cd2c2ede3532d41d569f7d7236be78689acf8c8d7b5336",
+      "kind": "MANIFEST",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "original_build_manifest",
+      "path": "E:/godot/beta-sprint-builds/beta_spatial_acceptance_input_fix_20261013_01/BUILD_IDENTITY.json",
+      "sha256": "67021752bfec7a05223aa12b3b447005bf486818e54983b4559d32b5a53393c0",
+      "kind": "MANIFEST",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "input_protocol",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/continuation-04/input/CORRELATED_INPUT_PROTOCOL.md",
+      "sha256": "93cc0d9e368038b5e8f3224b6131fe36728ac29bca801fdd957a04913123269d",
+      "kind": "PROTOCOL",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "input_template",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/continuation-04/input/EVENT_TEMPLATE.json",
+      "sha256": "5a497aa688fe47dac408871cb23e3006ff5737e7999852549567c768c483d720",
+      "kind": "PROTOCOL",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "input_report",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/continuation-04/input/REPORT.md",
+      "sha256": "39f9d1479045332503d158a77cac7c8fa34b294dc0edd7898ed4577c55f0327a",
+      "kind": "PROTOCOL",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "human_protocol",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/continuation-02/HUMAN_QA_PROTOCOL.md",
+      "sha256": "10d816dea2ad3aa4289085026fc23e89b28f8a08475daaa797d9b7fda46adc3a",
+      "kind": "PROTOCOL",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "human_template",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/continuation-02/SESSION_TEMPLATE.json",
+      "sha256": "e4f08e1c676e80895dfe143a7f7dac0239e063195250baf514bd956f6abbf921",
+      "kind": "PROTOCOL",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "human_addendum",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/continuation-03/HUMAN_QA_EXECUTION_ADDENDUM.md",
+      "sha256": "e6991aa67b78b046fbe8e2cbb17f356fc015da0a606fb8cacdc97049df9331ab",
+      "kind": "PROTOCOL",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preservation_before",
+      "path": "E:/godot/beta-sprint-builds/floating_cube_scoring05_20261021_01/PRESERVATION_BEFORE.json",
+      "sha256": "39216699a1f4df4525e5efc4a404d3350c464045f0921bf7f762b5a03acbd587",
+      "kind": "RECEIPT",
+      "inspection": "READ_AND_HASHED",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "preservation_after",
+      "path": "E:/godot/beta-sprint-builds/floating_cube_scoring05_20261021_01/PRESERVATION_AFTER.json",
+      "sha256": "bd1a1a65c7a9f6dcd5f385ac63ced9728c66cb62dfd9359cb793a6bad88e199a",
+      "kind": "RECEIPT",
+      "inspection": "FRESH_BEFORE_AFTER_HASH_COMPARISON",
+      "width": null,
+      "height": null
+    }
+  ],
+  "final_status": {
+    "overall_visual_review": "PARTIAL",
+    "road_recognition": "PARTIAL",
+    "preview_integrity": "PASS",
+    "input_preparation": {
+      "preparation_status": "PASS",
+      "execution_readiness": "PARTIAL",
+      "execution_status": "NOT_RUN",
+      "evidence_ids": [
+        "input_protocol",
+        "input_template",
+        "input_report"
+      ],
+      "finding": "协议包含独立环境、PID/start/session/window、时钟/ACK/接收连续性和停止条件。",
+      "remaining": "独立可控环境、支持的native工具、approved接收通道未建立；原因UNKNOWN。"
+    },
+    "human_qa_preparation": {
+      "preparation_status": "PASS",
+      "execution_readiness": "PARTIAL",
+      "execution_status": "NOT_RUN",
+      "evidence_ids": [
+        "human_protocol",
+        "human_template",
+        "human_addendum",
+        "input_report"
+      ],
+      "finding": "组合协议覆盖资格、隔离存档、无作者解法、发现时间/预测/提示/卡点/原话；旧模板身份须更新。",
+      "remaining": "合格首次玩家NONE；未来实际核验新Build、source/package/manifest及新会话副本。"
+    },
+    "input_environment": "UNKNOWN",
+    "graphical_diagnostic": "NOT_RUN",
+    "human_qa": "NOT_RUN",
+    "qualified_player": null,
+    "first_time_comprehension": "NOT_OBSERVED",
+    "authorization_and_file_safety": "PASS",
+    "formal_asset_approval": "NOT_GRANTED",
+    "art_change": "PROPOSAL_ONLY",
+    "game_integration": "NOT_RUN",
+    "production_changes": "NONE",
+    "new_build": "NOT_REQUIRED",
+    "remaining": [
+      "V5缺Inner/正式世界美术证据，三个完整总分均NOT_ASSESSED",
+      "所有候选最弱四向辨识分低于3；不能报告语义辨识完整PASS",
+      "未执行动态图形、输入诊断或首次真人理解测试",
+      "Floating Cube正式方案仍需用户批准，三个原始Art文件恢复仍有独立来源阻塞"
+    ],
+    "preview_completeness": "PARTIAL"
+  }
+}
