@@ -1,0 +1,53 @@
+{
+  "verified_at": "2026-10-23T14:52:35.096878+00:00",
+  "validation_scope": "Read-only approval records and previously rendered evidence; no new gameplay/render pass claimed.",
+  "validation": "PASS",
+  "existing_scoring_schema_command": [
+    "python",
+    "-B",
+    "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\validate_results.py",
+    "--dependency-dir",
+    "E:/godot/beta-sprint-builds/floating_cube_scoring05_20261021_01/python_deps",
+    "--self-test"
+  ],
+  "existing_scoring_schema_exit_code": 0,
+  "existing_scoring_schema_stderr_bytes": 0,
+  "existing_scoring_schema_result": {
+    "validation": "PASS",
+    "captures": 12,
+    "contexts": 1,
+    "variants": 3,
+    "quadrants": 4,
+    "historical_reports": 2,
+    "provenance_files": 10,
+    "full_total": null,
+    "review_status": "PARTIAL",
+    "target_gate": "PASS",
+    "stage_result": "A2_PREVIEW_READY",
+    "negative_mutations_rejected": 20
+  },
+  "evidence_file_count": 28,
+  "evidence_hash_mismatches": [],
+  "markdown_local_links_verified": 11,
+  "scoring_snapshot_preserved": true,
+  "protection_source": {
+    "path": "E:/godot/beta-sprint-builds/QA/floating_cube_expanded/run_20261023_01/PRESERVATION_BEFORE.json",
+    "sha256": "f0ffaefb71c51eaa545254f91ea335d274bb970189cbdb8b21a37c052b06ba6c"
+  },
+  "protected_file_count": 6601,
+  "protected_file_changes": [],
+  "protected_refs": {
+    "main": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "refs/tags/v0.3-beta-game-feel": "29c573a54aaa11def8c7001a7e78d291df82d8ce",
+    "feat/spatial-puzzle-batch-01": "7259917c83a9ba26b5d3b39fe14265dc8d4627f3",
+    "release/beta-game-feel-20261010": "25de1f6202c764e4003634a387ae05e38bd387c4"
+  },
+  "protected_ref_changes": {},
+  "protected_profile_count": 2,
+  "protected_profile_changes": [],
+  "previously_tracked_worktree_changes": [],
+  "review_document_sha256": "536736711997b870de4934e841b9f177df588ffdb9f425b82f29b8d0eea13d36",
+  "decision_sha256": "2e342bf218b3ab989f52c6c345d0444845d9c3049ea58767a5101d17bcf8968c",
+  "visual_approval": "NOT_GRANTED",
+  "schema_validation_is_not_art_approval": true
+}

@@ -1,0 +1,399 @@
+{
+  "record_type": "FINAL_VISUAL_APPROVAL_DECISION",
+  "record_version": "1.0.0",
+  "reviewed_at": "2026-10-23T14:52:35.096878+00:00",
+  "reviewer": "00 Integration Coordinator / Codex",
+  "authority": "User delegated the final visual review and asset replacement approval decision.",
+  "branch": "feat/spatial-formal-chapter-01",
+  "review_base_commit": "b6b7c5d50acb41f15ccebe76dc3bbcca177b6083",
+  "material_revision": "A2_EXPANDED_01",
+  "review_decision": "COMPLETE",
+  "formal_asset_replacement": "NOT_APPROVED",
+  "formal_asset_approval": "NOT_GRANTED",
+  "candidate_state": "PREVIEW_ONLY",
+  "overall_visual_review": "PARTIAL",
+  "preview_target_gate": "PASS",
+  "reasons": [
+    {
+      "id": "NON_WALKABLE_SEMANTICS_AMBIGUOUS",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "finding": "Coarse texture is distinguishable, but a flat top and solid cube still read as a potentially standable stone platform."
+    },
+    {
+      "id": "FORMAL_WORLD_CONTEXT_NOT_ASSESSED",
+      "evidence_ids": [
+        "formal_art_manifest",
+        "l01_art_world_0_west",
+        "l01_art_world_1_west",
+        "render_conditions"
+      ],
+      "finding": "Current A2 appears only in GREYBOX Surface. Approved-world images do not contain A2 and use different lighting/resolution; V5 and full total remain null."
+    }
+  ],
+  "positive_findings": [
+    "WEST improves from A1 2/5 to A2 3/5; NORTH/EAST/SOUTH retain 3/5.",
+    "One material is shared across all four views; rough opaque low-reflection non-color cues are visible.",
+    "The existing isolated preview gates pass within their recorded Surface scope."
+  ],
+  "visual_scores": {
+    "method": "Unchanged V1-V6 weights and original weighted-sum formula; no normalization or new threshold.",
+    "source_evidence_id": "scoring_results",
+    "views": [
+      {
+        "quadrant": 0,
+        "camera_name": "NORTH",
+        "score": 3,
+        "status": "ASSESSED",
+        "evidence_ids": [
+          "A2_q0"
+        ]
+      },
+      {
+        "quadrant": 1,
+        "camera_name": "EAST",
+        "score": 3,
+        "status": "ASSESSED",
+        "evidence_ids": [
+          "A2_q1"
+        ]
+      },
+      {
+        "quadrant": 2,
+        "camera_name": "SOUTH",
+        "score": 3,
+        "status": "ASSESSED",
+        "evidence_ids": [
+          "A2_q2"
+        ]
+      },
+      {
+        "quadrant": 3,
+        "camera_name": "WEST",
+        "score": 3,
+        "status": "ASSESSED",
+        "evidence_ids": [
+          "A2_q3"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "id": "V1",
+        "weight": 30,
+        "score": 3,
+        "status": "ASSESSED",
+        "weighted": 18.0,
+        "evidence_ids": [
+          "A2_q0",
+          "A2_q1",
+          "A2_q2",
+          "A2_q3"
+        ]
+      },
+      {
+        "id": "V2",
+        "weight": 20,
+        "score": 3,
+        "status": "ASSESSED",
+        "weighted": 12.0,
+        "evidence_ids": [
+          "A2_q0",
+          "A2_q1",
+          "A2_q2",
+          "A2_q3"
+        ]
+      },
+      {
+        "id": "V3",
+        "weight": 15,
+        "score": 5,
+        "status": "ASSESSED",
+        "weighted": 15.0,
+        "evidence_ids": [
+          "A2_q0",
+          "A2_q1",
+          "A2_q2",
+          "A2_q3"
+        ]
+      },
+      {
+        "id": "V4",
+        "weight": 15,
+        "score": 4,
+        "status": "ASSESSED",
+        "weighted": 12.0,
+        "evidence_ids": [
+          "A2_q0",
+          "A2_q1",
+          "A2_q2",
+          "A2_q3"
+        ]
+      },
+      {
+        "id": "V5",
+        "weight": 10,
+        "score": null,
+        "status": "NOT_ASSESSED",
+        "weighted": null,
+        "evidence_ids": [
+          "A2_q0",
+          "A2_q1",
+          "A2_q2",
+          "A2_q3"
+        ]
+      },
+      {
+        "id": "V6",
+        "weight": 10,
+        "score": 4,
+        "status": "ASSESSED",
+        "weighted": 8.0,
+        "evidence_ids": [
+          "A2_q0",
+          "A2_q1",
+          "A2_q2",
+          "A2_q3"
+        ]
+      }
+    ],
+    "assessed_weight_percent": 90,
+    "assessed_subtotal": 65.0,
+    "full_total": null,
+    "full_total_status": "NOT_ASSESSED"
+  },
+  "inspection_scope": {
+    "root_candidate_images_this_stage": 6,
+    "independent_visual_review_candidate_images": 12,
+    "root_historical_art_images_this_stage": 2,
+    "new_engine_run": "NOT_RUN",
+    "new_render": "NOT_CREATED",
+    "human_qa": "NOT_RUN",
+    "not_approved_due_to_human_qa_absence_alone": false
+  },
+  "re_review_requirements": [
+    "Same-identity A2 with frozen Surface world art, actual traversable road, character and shift point in a new isolated native four-camera preview.",
+    "Record actual target-world camera/lighting/render settings; do not mix changed world lighting into the old fixed-condition comparison.",
+    "Retain actual Inner roof absence/hidden state. No added Inner roof or manufactured same-frame proof.",
+    "Judge non-walkable semantics and V5 from those images. Additional images alone do not guarantee approval."
+  ],
+  "safety": {
+    "production_changes": "NONE",
+    "formal_asset_changes": "NONE",
+    "art_master_changes": "NONE",
+    "geometry_camera_light_rule_changes": "NONE",
+    "old_evidence_modified": false,
+    "game_integration": "NOT_RUN",
+    "new_formal_build": "NOT_CREATED",
+    "main_modified": false,
+    "release_refs_modified": false
+  },
+  "retained_issues": [
+    "Platform-use ambiguity",
+    "V5 formal-world evidence gap"
+  ],
+  "new_confirmed_gameplay_defects": [],
+  "evidence": [
+    {
+      "id": "CURRENT_q0",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/CURRENT_q0.png",
+      "sha256": "5589f5b527368cb24c58273b6e1bcca344758332a2cdc9c762786d77f410e644",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "CURRENT_q1",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/CURRENT_q1.png",
+      "sha256": "d826772bb433f0441940d2617f198922dd834aabdd691c8327a6e5ca43cbe597",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "CURRENT_q2",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/CURRENT_q2.png",
+      "sha256": "837b38359c562c6aeb1ac653cbcaf7b0b3a3fe127231223af90307a45652539f",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "CURRENT_q3",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/CURRENT_q3.png",
+      "sha256": "aef0d0a6a0bd67acb623196463b44c7740efaf31695a6c23bb3cdf7d2a6b5712",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "A1_q0",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A1_q0.png",
+      "sha256": "0334f8f039a827ca50754ecdccacc73c00c83e1d2b9432ceccb7f4d8df334ca1",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "A1_q1",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A1_q1.png",
+      "sha256": "5bd4c467bb57fac99b4bc4c9f9673e3fe68b0e855c86826e343d3c4f8f97bb7f",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "A1_q2",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A1_q2.png",
+      "sha256": "6d4973a2088c050e455dacdf6ccff91b648b2351a1f84504f62c66b80a6d9c15",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "A1_q3",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A1_q3.png",
+      "sha256": "8ab0c6b6e9be4605527464998484f36057eb88e9d22eafb23108b9f6bd87f308",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "A2_q0",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A2_q0.png",
+      "sha256": "9bb8fc5fe56ea4e7f34f3be30f2cfa2368f3902eaa039664f1553067e0819c8f",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "A2_q1",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A2_q1.png",
+      "sha256": "d7c2d1d54914a50a1590404fdd777a7f8fe1227544d6c2894c84eadda4ecbc04",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "A2_q2",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A2_q2.png",
+      "sha256": "0d8fcdb2ea6bb0f096d85fc8867997dc668bc9a00235d6a0ac443b1018500b64",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "A2_q3",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/A2_q3.png",
+      "sha256": "f4cbe53eb6877ecb65d74afe5a6f353b2d4c0ee22683f66e4306814cf5dae4cf",
+      "purpose": "Existing same-run native Surface preview; independently visually reviewed this stage.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "candidate_shader",
+      "path": "E:/godot/worktrees/bg-formal01/tests/beta_sprint/spatial_art/a2_west_expanded/roof_coarse_a2.gdshader",
+      "sha256": "9e0887cf3b968ecde6197f702d4a8bb37e737f705ad3d2e4ffb0b5de9465b57c",
+      "purpose": "Exact approval candidate; no new shader edits.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "original_host",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/game_feel_01/host/core_lab.gd",
+      "sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "layer_binding",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/host/spatial_lab.gd",
+      "sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "surface_map",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn",
+      "sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "inner_map",
+      "path": "E:/godot/worktrees/bg-formal01/experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/inner.tscn",
+      "sha256": "7418bfb3a7f3b18bf8c0a55b1a2f8bcb38fab81437f161c96bc64f8c5bf086d1",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "formal_art_manifest",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/playable-art-vertical-01/ART_ASSET_BINDING_MANIFEST.json",
+      "sha256": "16ba50f0677d2007d01cf2c1cd9775916041b5a56a00a58e55e1d195da482d53",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "l01_presenter",
+      "path": "E:/godot/worktrees/bg-formal01/game/levels/mutsumi/batch_01/l01_3d/presenter.gd",
+      "sha256": "0bb1c430b5ce078b3ff811ba2e42e7edb375f7056378f6f2ceceb1c6dce54a23",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "formal_art_receipt",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/playable-art-vertical-01/MAIN_PROJECT_RECEIPT.md",
+      "sha256": "b80066cb1d043025ea9dc8dd9e4cffb31803a030b5877da70d05c5cc5ae7e161",
+      "purpose": "Original identity, world ownership or approved-world context reference.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "scoring_results",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/SCORING_RESULTS.json",
+      "sha256": "7b9fc318b224119957230b795243eb7eedadf0f7ea023f86711cdba52c805eac",
+      "purpose": "Unmodified prior-stage record; status not broadened.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "scoring_schema",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/SCORING_RESULTS.schema.json",
+      "sha256": "7362043dc76d7dd469d36ba18bbe4a3c9aef33f84f233062ad8b19b66e925350",
+      "purpose": "Unmodified prior-stage record; status not broadened.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "source_identity",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/A2_SOURCE_IDENTITY.json",
+      "sha256": "1e6a583cd78d2bf7a095203aad001d26ef631b3177d1a3882575606101c49d06",
+      "purpose": "Unmodified prior-stage record; status not broadened.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "material_parameters",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/A2_MATERIAL_PARAMETERS.json",
+      "sha256": "f9b5e5ac428e203acfa7557e676a0fa4cba25614ec1664bcb217323c802175b5",
+      "purpose": "Unmodified prior-stage record; status not broadened.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "render_conditions",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/renders/current_vs_A1_vs_A2/RENDER_COMPARISON.json",
+      "sha256": "12338fffc0cb5bd7a3c06518ff27247203b7ac0c5e5eb6d285fb0c0390f0c9ce",
+      "purpose": "Unmodified prior-stage record; status not broadened.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "prior_graphical_verification",
+      "path": "E:/godot/worktrees/bg-formal01/docs/beta-sprint/spatial-formal-chapter-01/floating_cube/option_a2_west_expanded/evidence/VALIDATION.json",
+      "sha256": "0ef202b4bddcb09221a6eece1bba99bb1bb4ea04357fc378d97a266a0b8c58f9",
+      "purpose": "Unmodified prior-stage record; status not broadened.",
+      "root_image_inspected_this_review": false
+    },
+    {
+      "id": "l01_art_world_0_west",
+      "path": "E:/godot/\u82e5\u53f6\u7766/\u65b9\u5757\u5c11\u5973-\u82e5\u53f6\u7766/.godot/beta-sprint/art-vertical/main_art01/seed/view_1280x900_w0_v3.png",
+      "sha256": "7072140ec7c7f412a1d31d551f931cebb0a26e8b7723ed2381a6905b45041501",
+      "purpose": "Historical approved-world image without A2; style reference only, not V5 same-frame proof.",
+      "root_image_inspected_this_review": true
+    },
+    {
+      "id": "l01_art_world_1_west",
+      "path": "E:/godot/\u82e5\u53f6\u7766/\u65b9\u5757\u5c11\u5973-\u82e5\u53f6\u7766/.godot/beta-sprint/art-vertical/main_art01/seed/view_1280x900_w1_v3.png",
+      "sha256": "bac3ed48b5cfa52c3a296f8099ae2965d29ef0783d95e208e817bc6c7ba25b54",
+      "purpose": "Historical approved-world image without A2; style reference only, not V5 same-frame proof.",
+      "root_image_inspected_this_review": true
+    }
+  ],
+  "delivery_identity": "Exact commit and independently queried remote SHA are recorded after commit, outside this self-referential record."
+}
