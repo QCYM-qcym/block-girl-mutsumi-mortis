@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:mutsumi:floating-cube-a2-west-view-readability:scoring:1.1.0",
+  "title": "Floating Cube A2 WEST readability task extension",
+  "description": "Task version extension of the immutable continuation-06 rubric. Existing candidate, metric, view, evidence and gate definitions are reused; validation also checks real bytes, history, arithmetic and readiness.",
+  "type": "object",
+  "required": ["schema_version", "task_id", "review", "provenance", "material_parameters", "history", "evidence", "candidates", "hard_gates", "target_gate", "comparison", "final_status"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "task_id": {"const": "FLOATING_CUBE_A2_WEST_VIEW_READABILITY"},
+    "review": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/properties/review"},
+    "provenance": {"type": "object", "minProperties": 1},
+    "material_parameters": {"$ref": "#/$defs/file_identity"},
+    "history": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["task_id", "results_path", "results_sha256", "candidate_aliases", "status", "retained_scores"],
+        "properties": {
+          "task_id": {"enum": ["SPATIAL_FORMAL_CHAPTER_01_CONTINUATION_05", "FLOATING_CUBE_OPTION_A_06"]},
+          "results_path": {"type": "string", "minLength": 1},
+          "results_sha256": {"$ref": "#/$defs/sha256"},
+          "candidate_aliases": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "minLength": 1}},
+          "status": {"const": "HISTORICAL_NOT_RERUN"},
+          "retained_scores": {"type": "object", "minProperties": 1},
+          "restriction_compatibility": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "evidence": {
+      "type": "array", "minItems": 12, "maxItems": 12,
+      "items": {
+        "allOf": [
+          {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/$defs/evidence"},
+          {"properties": {"context": {"const": "FORMAL_SURFACE"}}}
+        ]
+      }
+    },
+    "candidates": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/properties/candidates"},
+    "hard_gates": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/properties/hard_gates"},
+    "target_gate": {
+      "type": "object",
+      "required": ["status", "context", "minimum_a2_view_score", "no_view_regression", "evidence_ids", "observation"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL", "NOT_ASSESSED"]},
+        "context": {"const": "FORMAL_SURFACE_FOUR_VIEW_READABILITY"},
+        "minimum_a2_view_score": {"const": 3},
+        "no_view_regression": {"const": true},
+        "evidence_ids": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/$defs/refs"},
+        "observation": {"type": "string", "minLength": 1}
+      }
+    },
+    "comparison": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/properties/comparison"},
+    "final_status": {
+      "type": "object",
+      "required": ["overall_visual_review", "stage_result", "human_qa", "formal_asset_approval", "game_integration", "new_formal_build"],
+      "properties": {
+        "overall_visual_review": {"enum": ["PARTIAL", "FAIL"]},
+        "stage_result": {"enum": ["A2_PREVIEW_READY", "A2_MATERIAL_ONLY_LIMIT_REACHED"]},
+        "human_qa": {"const": "NOT_RUN"},
+        "formal_asset_approval": {"const": "NOT_GRANTED"},
+        "game_integration": {"const": "NOT_RUN"},
+        "new_formal_build": {"const": "NOT_CREATED"}
+      }
+    },
+    "inner_formal": false,
+    "inner_material_study": false
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "file_identity": {
+      "type": "object", "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "candidate": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/$defs/candidate"},
+    "metric": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/$defs/metric"},
+    "view": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/$defs/view"},
+    "evidence": {"$ref": "../../continuation-06/floating_cube/SCORING_RESULTS.schema.json#/$defs/evidence"}
+  }
+}

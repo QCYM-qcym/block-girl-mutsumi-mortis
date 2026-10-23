@@ -1,0 +1,75 @@
+{
+  "material_revision": "A2_EXPANDED_01",
+  "authority": "EXPANDED_COARSE_TEXTURE_AND_MATERIAL_RESPONSE_PREVIEW_ONLY",
+  "A1": {
+    "shader": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\polish_03\\roof_coarse.gdshader",
+      "sha256": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627"
+    },
+    "roughness": 0.94,
+    "metallic": 0,
+    "specular": "default; not assigned in source",
+    "palette_anchors_linear_rgb": [
+      [
+        0.23,
+        0.28,
+        0.33
+      ],
+      [
+        0.48,
+        0.53,
+        0.55
+      ]
+    ],
+    "texture": "original regular broad wave",
+    "diffuse": "original engine default"
+  },
+  "A2": {
+    "shader": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_expanded\\roof_coarse_a2.gdshader",
+      "sha256": "9e0887cf3b968ecde6197f702d4a8bb37e737f705ad3d2e4ffb0b5de9465b57c"
+    },
+    "roughness": 0.96,
+    "metallic": 0,
+    "specular": 0,
+    "render_mode": "diffuse_lambert_wrap, specular_disabled",
+    "palette_anchors_linear_rgb": [
+      [
+        0.23,
+        0.28,
+        0.33
+      ],
+      [
+        0.48,
+        0.53,
+        0.55
+      ]
+    ],
+    "groove_rgb": "original dark anchor multiplied by0.32",
+    "texture": "object-space irregular coarse strata, interrupted grooves and mineral patches",
+    "strata_frequency": 3.4,
+    "warp_noise_scale": 3.2,
+    "mineral_scale": 7.5,
+    "chip_scale": 13,
+    "value_modulation_ranges": [
+      [
+        0.63,
+        1
+      ],
+      [
+        0.84,
+        1
+      ]
+    ],
+    "alpha_output": false,
+    "emission_output": false,
+    "normal_output": false,
+    "vertex_displacement": false,
+    "camera_conditions": false,
+    "same_material_instance_all_four_views": true
+  },
+  "authorization_change": "Non-color coarse texture and material response expanded by user. Prior strict unchanged-wave/diffuse and8-percent per-value bound are not claimed here.",
+  "color_scope": "A1 low-saturation blue-gray palette anchors retained; not literal grayscale. Main cues are value texture and material response, not a new vivid hue.",
+  "source_is_blender_model": false,
+  "source_asset": "unchanged procedural Godot BoxMesh; no model export or geometry authored this stage"
+}

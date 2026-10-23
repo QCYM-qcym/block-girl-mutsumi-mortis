@@ -1,0 +1,1001 @@
+{
+  "schema_version": "1.1.0",
+  "task_id": "FLOATING_CUBE_A2_WEST_VIEW_READABILITY",
+  "review": {
+    "date": "2026-10-23",
+    "timezone": "Asia/Shanghai",
+    "reviewer": "Codex",
+    "material_revision": "A2_EXPANDED_01",
+    "authority": "EXPANDED_COARSE_TEXTURE_AND_MATERIAL_RESPONSE_PREVIEW_ONLY",
+    "actual_images_reviewed": 12,
+    "independent_review_images": 12,
+    "comparison_basis": "SAME_RUN_ONLY",
+    "human_qa": "NOT_RUN"
+  },
+  "provenance": {
+    "base_commit": "894595833cb8d57802de9b5d9b65acbeb609ed00",
+    "source_build": "763f0132bc58360fab0e224d0e9c54e00c92ae90",
+    "external_run": "E:\\godot\\beta-sprint-builds\\QA\\floating_cube_expanded\\run_20261023_01",
+    "parameters": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\A2_MATERIAL_PARAMETERS.json",
+      "sha256": "f9b5e5ac428e203acfa7557e676a0fa4cba25614ec1664bcb217323c802175b5"
+    },
+    "source_identity": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\A2_SOURCE_IDENTITY.json",
+      "sha256": "1e6a583cd78d2bf7a095203aad001d26ef631b3177d1a3882575606101c49d06"
+    },
+    "source_shader": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_expanded\\roof_coarse_a2.gdshader",
+      "sha256": "9e0887cf3b968ecde6197f702d4a8bb37e737f705ad3d2e4ffb0b5de9465b57c"
+    },
+    "a1_shader": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\polish_03\\roof_coarse.gdshader",
+      "sha256": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627"
+    },
+    "process": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\evidence\\PROCESS.json",
+      "sha256": "dca22a88836000c7d077768ae29cb493fe04c8a6cb86b5aede4a5b41cc7d5cd9"
+    },
+    "native_captures": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\evidence\\NATIVE_CAPTURES.json",
+      "sha256": "ff824fc8aec008f3e602f272efef324823f6fd85bb5b0bc944e907982e8c0360"
+    },
+    "strict_b2": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_view\\SCORING_RESULTS.json",
+      "sha256": "83819b3440c68b0a58f9cafb28efb3b57931f48b85d6ffb3f2424a608538ca1a",
+      "retained_scores": {
+        "CURRENT": {
+          "assessed_subtotal": 46.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 2,
+            "V2": 2,
+            "V3": 5,
+            "V4": 3,
+            "V5": null,
+            "V6": 1
+          },
+          "views": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "A1": {
+          "assessed_subtotal": 61.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 3,
+            "V2": 2,
+            "V3": 5,
+            "V4": 4,
+            "V5": null,
+            "V6": 4
+          },
+          "views": [
+            3,
+            3,
+            3,
+            2
+          ]
+        },
+        "A2": {
+          "assessed_subtotal": 61.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 3,
+            "V2": 2,
+            "V3": 5,
+            "V4": 4,
+            "V5": null,
+            "V6": 4
+          },
+          "views": [
+            3,
+            3,
+            3,
+            2
+          ]
+        }
+      }
+    },
+    "schema_unchanged": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_view\\SCORING_RESULTS.schema.json",
+      "sha256": "7362043dc76d7dd469d36ba18bbe4a3c9aef33f84f233062ad8b19b66e925350"
+    },
+    "scoring_implementation_reused": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_view\\validate_results.py",
+      "sha256": "8a50adfdb3d627d79174dad2195cd7fa160b32f7041a2e18d26e37d100efc960"
+    }
+  },
+  "evidence": [
+    {
+      "id": "CURRENT_q0",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\CURRENT_q0.png",
+      "sha256": "5589f5b527368cb24c58273b6e1bcca344758332a2cdc9c762786d77f410e644",
+      "variant": "CURRENT",
+      "quadrant": 0,
+      "camera_name": "NORTH",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A1_q0",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A1_q0.png",
+      "sha256": "0334f8f039a827ca50754ecdccacc73c00c83e1d2b9432ceccb7f4d8df334ca1",
+      "variant": "A1",
+      "quadrant": 0,
+      "camera_name": "NORTH",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A2_q0",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A2_q0.png",
+      "sha256": "9bb8fc5fe56ea4e7f34f3be30f2cfa2368f3902eaa039664f1553067e0819c8f",
+      "variant": "A2",
+      "quadrant": 0,
+      "camera_name": "NORTH",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "CURRENT_q1",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\CURRENT_q1.png",
+      "sha256": "d826772bb433f0441940d2617f198922dd834aabdd691c8327a6e5ca43cbe597",
+      "variant": "CURRENT",
+      "quadrant": 1,
+      "camera_name": "EAST",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A1_q1",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A1_q1.png",
+      "sha256": "5bd4c467bb57fac99b4bc4c9f9673e3fe68b0e855c86826e343d3c4f8f97bb7f",
+      "variant": "A1",
+      "quadrant": 1,
+      "camera_name": "EAST",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A2_q1",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A2_q1.png",
+      "sha256": "d7c2d1d54914a50a1590404fdd777a7f8fe1227544d6c2894c84eadda4ecbc04",
+      "variant": "A2",
+      "quadrant": 1,
+      "camera_name": "EAST",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "CURRENT_q2",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\CURRENT_q2.png",
+      "sha256": "837b38359c562c6aeb1ac653cbcaf7b0b3a3fe127231223af90307a45652539f",
+      "variant": "CURRENT",
+      "quadrant": 2,
+      "camera_name": "SOUTH",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A1_q2",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A1_q2.png",
+      "sha256": "6d4973a2088c050e455dacdf6ccff91b648b2351a1f84504f62c66b80a6d9c15",
+      "variant": "A1",
+      "quadrant": 2,
+      "camera_name": "SOUTH",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A2_q2",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A2_q2.png",
+      "sha256": "0d8fcdb2ea6bb0f096d85fc8867997dc668bc9a00235d6a0ac443b1018500b64",
+      "variant": "A2",
+      "quadrant": 2,
+      "camera_name": "SOUTH",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "CURRENT_q3",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\CURRENT_q3.png",
+      "sha256": "aef0d0a6a0bd67acb623196463b44c7740efaf31695a6c23bb3cdf7d2a6b5712",
+      "variant": "CURRENT",
+      "quadrant": 3,
+      "camera_name": "WEST",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A1_q3",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A1_q3.png",
+      "sha256": "8ab0c6b6e9be4605527464998484f36057eb88e9d22eafb23108b9f6bd87f308",
+      "variant": "A1",
+      "quadrant": 3,
+      "camera_name": "WEST",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    },
+    {
+      "id": "A2_q3",
+      "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\renders\\current_vs_A1_vs_A2\\A2_q3.png",
+      "sha256": "f4cbe53eb6877ecb65d74afe5a6f353b2d4c0ee22683f66e4306814cf5dae4cf",
+      "variant": "A2",
+      "quadrant": 3,
+      "camera_name": "WEST",
+      "context": "FORMAL_SURFACE",
+      "width": 1280,
+      "height": 720,
+      "roof_visible_in_gameplay": true,
+      "artificial_study": false
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CURRENT",
+      "metrics": [
+        {
+          "id": "V1",
+          "weight": 30,
+          "score": 2,
+          "status": "ASSESSED",
+          "weighted": 12.0,
+          "evidence_ids": [
+            "CURRENT_q0",
+            "CURRENT_q1",
+            "CURRENT_q2",
+            "CURRENT_q3"
+          ],
+          "observation": "与道路同为平顶立方体；灰蓝色只能提供颜色差别。",
+          "deduction": "平顶和方正体量容易被读成可到达平台。"
+        },
+        {
+          "id": "V2",
+          "weight": 20,
+          "score": 2,
+          "status": "ASSESSED",
+          "weighted": 8.0,
+          "evidence_ids": [
+            "CURRENT_q0",
+            "CURRENT_q1",
+            "CURRENT_q2",
+            "CURRENT_q3"
+          ],
+          "observation": "四方向均保留相似的平顶平台轮廓，未出现稳定非颜色用途线索。",
+          "deduction": "转向不能消除其可踩平台外观。"
+        },
+        {
+          "id": "V3",
+          "weight": 15,
+          "score": 5,
+          "status": "ASSESSED",
+          "weighted": 15.0,
+          "evidence_ids": [
+            "CURRENT_q0",
+            "CURRENT_q1",
+            "CURRENT_q2",
+            "CURRENT_q3"
+          ],
+          "observation": "四图中的主体轮廓、悬空高度、相对转换点位置保持。",
+          "deduction": "在该静态同对象范围内未发现位置或轮廓问题。"
+        },
+        {
+          "id": "V4",
+          "weight": 15,
+          "score": 3,
+          "status": "ASSESSED",
+          "weighted": 9.0,
+          "evidence_ids": [
+            "CURRENT_q0",
+            "CURRENT_q1",
+            "CURRENT_q2",
+            "CURRENT_q3"
+          ],
+          "observation": "四图呈不透明哑光表面，没有透明或大面积发光。",
+          "deduction": "表面平滑，缺少目标要求的粗纹。"
+        },
+        {
+          "id": "V5",
+          "weight": 10,
+          "score": null,
+          "status": "NOT_ASSESSED",
+          "weighted": null,
+          "evidence_ids": [
+            "CURRENT_q0",
+            "CURRENT_q1",
+            "CURRENT_q2",
+            "CURRENT_q3"
+          ],
+          "observation": "本轮只新增正式GREYBOX Surface的固定条件原图；未新增Inner或冻结世界Art同屏证据。",
+          "deduction": "V5与完整总分保持NOT_ASSESSED/null，旧Inner人工样张不作为本轮正式美术评分。"
+        },
+        {
+          "id": "V6",
+          "weight": 10,
+          "score": 1,
+          "status": "ASSESSED",
+          "weighted": 2.0,
+          "evidence_ids": [
+            "CURRENT_q0",
+            "CURRENT_q1",
+            "CURRENT_q2",
+            "CURRENT_q3"
+          ],
+          "observation": "当前仅有平面光照明暗，表面无纹理、边缘或功能线索。",
+          "deduction": "区分主要依赖颜色，非颜色线索不足。"
+        }
+      ],
+      "views": [
+        {
+          "quadrant": 0,
+          "camera_name": "NORTH",
+          "score": 2,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "CURRENT_q0"
+          ],
+          "observation": "灰蓝平顶立方体与脚下道路形态接近。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        },
+        {
+          "quadrant": 1,
+          "camera_name": "EAST",
+          "score": 2,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "CURRENT_q1"
+          ],
+          "observation": "灰蓝平顶立方体与脚下道路形态接近。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        },
+        {
+          "quadrant": 2,
+          "camera_name": "SOUTH",
+          "score": 2,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "CURRENT_q2"
+          ],
+          "observation": "灰蓝平顶立方体与脚下道路形态接近。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        },
+        {
+          "quadrant": 3,
+          "camera_name": "WEST",
+          "score": 2,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "CURRENT_q3"
+          ],
+          "observation": "灰蓝平顶立方体与脚下道路形态接近。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        }
+      ],
+      "assessed_weight_percent": 90,
+      "assessed_subtotal": 46.0,
+      "total": null,
+      "status": "PARTIAL"
+    },
+    {
+      "id": "A1",
+      "metrics": [
+        {
+          "id": "V1",
+          "weight": 30,
+          "score": 3,
+          "status": "ASSESSED",
+          "weighted": 18.0,
+          "evidence_ids": [
+            "A1_q0",
+            "A1_q1",
+            "A1_q2",
+            "A1_q3"
+          ],
+          "observation": "顶面与侧面有宽波纹，能与无纹道路区分。",
+          "deduction": "仍是完整平顶立方体；材质差别并不直接说明不可踩。"
+        },
+        {
+          "id": "V2",
+          "weight": 20,
+          "score": 2,
+          "status": "ASSESSED",
+          "weighted": 8.0,
+          "evidence_ids": [
+            "A1_q0",
+            "A1_q1",
+            "A1_q2",
+            "A1_q3"
+          ],
+          "observation": "北东南波纹可见，西侧暗面的细纹明显较弱。",
+          "deduction": "WEST 仍需仔细观察，四方向辨识不稳定。"
+        },
+        {
+          "id": "V3",
+          "weight": 15,
+          "score": 5,
+          "status": "ASSESSED",
+          "weighted": 15.0,
+          "evidence_ids": [
+            "A1_q0",
+            "A1_q1",
+            "A1_q2",
+            "A1_q3"
+          ],
+          "observation": "只换材质后，四图中的轮廓、高度和空间关系保持。",
+          "deduction": "该同对象静态范围未发现主要轮廓或位置问题。"
+        },
+        {
+          "id": "V4",
+          "weight": 15,
+          "score": 4,
+          "status": "ASSESSED",
+          "weighted": 12.0,
+          "evidence_ids": [
+            "A1_q0",
+            "A1_q1",
+            "A1_q2",
+            "A1_q3"
+          ],
+          "observation": "四图均不透明、哑光，宽纹没有反光高光或发光轮廓。",
+          "deduction": "条纹较规则，粗糙石质感仍有不足。"
+        },
+        {
+          "id": "V5",
+          "weight": 10,
+          "score": null,
+          "status": "NOT_ASSESSED",
+          "weighted": null,
+          "evidence_ids": [
+            "A1_q0",
+            "A1_q1",
+            "A1_q2",
+            "A1_q3"
+          ],
+          "observation": "本轮只新增正式GREYBOX Surface的固定条件原图；未新增Inner或冻结世界Art同屏证据。",
+          "deduction": "V5与完整总分保持NOT_ASSESSED/null，旧Inner人工样张不作为本轮正式美术评分。"
+        },
+        {
+          "id": "V6",
+          "weight": 10,
+          "score": 4,
+          "status": "ASSESSED",
+          "weighted": 8.0,
+          "evidence_ids": [
+            "A1_q0",
+            "A1_q1",
+            "A1_q2",
+            "A1_q3"
+          ],
+          "observation": "波纹提供非颜色区别，西视角顶面依然可辨。",
+          "deduction": "西侧暗面纹理变弱；没有明确用途符号。"
+        }
+      ],
+      "views": [
+        {
+          "quadrant": 0,
+          "camera_name": "NORTH",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A1_q0"
+          ],
+          "observation": "宽波纹能与光滑道路区分，但仍是平顶立方体。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        },
+        {
+          "quadrant": 1,
+          "camera_name": "EAST",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A1_q1"
+          ],
+          "observation": "宽波纹能与光滑道路区分，但仍是平顶立方体。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        },
+        {
+          "quadrant": 2,
+          "camera_name": "SOUTH",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A1_q2"
+          ],
+          "observation": "宽波纹能与光滑道路区分，但仍是平顶立方体。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        },
+        {
+          "quadrant": 3,
+          "camera_name": "WEST",
+          "score": 2,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A1_q3"
+          ],
+          "observation": "宽波纹可见；西侧两个暗面纹理明显变弱。",
+          "deduction": "平顶与立方体体量保留，不能仅从材质推出不可踩用途；本分数不是玩家理解率。"
+        }
+      ],
+      "assessed_weight_percent": 90,
+      "assessed_subtotal": 61.0,
+      "total": null,
+      "status": "PARTIAL"
+    },
+    {
+      "id": "A2",
+      "metrics": [
+        {
+          "id": "V1",
+          "weight": 30,
+          "score": 3,
+          "status": "ASSESSED",
+          "weighted": 18.0,
+          "evidence_ids": [
+            "A2_q0",
+            "A2_q1",
+            "A2_q2",
+            "A2_q3"
+          ],
+          "observation": "不规则粗纹提供可见表面差异，WEST不再主要依赖顶面。",
+          "deduction": "保留平顶立方体轮廓，不能仅凭材质明确禁止踩踏。"
+        },
+        {
+          "id": "V2",
+          "weight": 20,
+          "score": 3,
+          "status": "ASSESSED",
+          "weighted": 12.0,
+          "evidence_ids": [
+            "A2_q0",
+            "A2_q1",
+            "A2_q2",
+            "A2_q3"
+          ],
+          "observation": "四方向均达到基本可区分的3分，WEST从2升至3。",
+          "deduction": "可踩平台用途联想仍在，未达到无需观察的明确程度。"
+        },
+        {
+          "id": "V3",
+          "weight": 15,
+          "score": 5,
+          "status": "ASSESSED",
+          "weighted": 15.0,
+          "evidence_ids": [
+            "A2_q0",
+            "A2_q1",
+            "A2_q2",
+            "A2_q3"
+          ],
+          "observation": "原轮廓、尺寸、位置、遮光作用和与道路/角色关系保持，记录逐组一致。",
+          "deduction": "在该同对象静态范围内未发现几何或空间改变。"
+        },
+        {
+          "id": "V4",
+          "weight": 15,
+          "score": 4,
+          "status": "ASSESSED",
+          "weighted": 12.0,
+          "evidence_ids": [
+            "A2_q0",
+            "A2_q1",
+            "A2_q2",
+            "A2_q3"
+          ],
+          "observation": "图片呈不透明哑光粗石层理，暗槽和矿物斑块可见，无大面积高光或发光。",
+          "deduction": "程序纹理仍有重复，包裹漫反射使部分面间明暗变平。"
+        },
+        {
+          "id": "V5",
+          "weight": 10,
+          "score": null,
+          "status": "NOT_ASSESSED",
+          "weighted": null,
+          "evidence_ids": [
+            "A2_q0",
+            "A2_q1",
+            "A2_q2",
+            "A2_q3"
+          ],
+          "observation": "本轮只新增正式GREYBOX Surface的固定条件原图；未新增Inner或冻结世界Art同屏证据。",
+          "deduction": "V5与完整总分保持NOT_ASSESSED/null，旧Inner人工样张不作为本轮正式美术评分。"
+        },
+        {
+          "id": "V6",
+          "weight": 10,
+          "score": 4,
+          "status": "ASSESSED",
+          "weighted": 8.0,
+          "evidence_ids": [
+            "A2_q0",
+            "A2_q1",
+            "A2_q2",
+            "A2_q3"
+          ],
+          "observation": "粗层、断槽与斑块通过明暗变化区分光滑道路，四向稳定。",
+          "deduction": "依然缺少明确用途符号；色系虽保留，完整石块形态仍可联想为平台。"
+        }
+      ],
+      "views": [
+        {
+          "quadrant": 0,
+          "camera_name": "NORTH",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A2_q0"
+          ],
+          "observation": "顶面和两侧可见不规则粗层、暗槽与斑块；西侧暗面也保留纹理。",
+          "deduction": "仍是完整平顶立方体，可能被当成可踩石台；不支持4分或真人理解结论。"
+        },
+        {
+          "quadrant": 1,
+          "camera_name": "EAST",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A2_q1"
+          ],
+          "observation": "顶面和两侧可见不规则粗层、暗槽与斑块；西侧暗面也保留纹理。",
+          "deduction": "仍是完整平顶立方体，可能被当成可踩石台；不支持4分或真人理解结论。"
+        },
+        {
+          "quadrant": 2,
+          "camera_name": "SOUTH",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A2_q2"
+          ],
+          "observation": "顶面和两侧可见不规则粗层、暗槽与斑块；西侧暗面也保留纹理。",
+          "deduction": "仍是完整平顶立方体，可能被当成可踩石台；不支持4分或真人理解结论。"
+        },
+        {
+          "quadrant": 3,
+          "camera_name": "WEST",
+          "score": 3,
+          "status": "ASSESSED",
+          "evidence_ids": [
+            "A2_q3"
+          ],
+          "observation": "顶面和两侧可见不规则粗层、暗槽与斑块；西侧暗面也保留纹理。",
+          "deduction": "仍是完整平顶立方体，可能被当成可踩石台；不支持4分或真人理解结论。"
+        }
+      ],
+      "assessed_weight_percent": 90,
+      "assessed_subtotal": 65.0,
+      "total": null,
+      "status": "PARTIAL"
+    }
+  ],
+  "hard_gates": [
+    {
+      "id": "G1",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "Source identities and original material/reference hashes verified."
+    },
+    {
+      "id": "G2",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "New isolated expanded material files only; old A1/B2 and production assets preserved."
+    },
+    {
+      "id": "G3",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "All candidates retain original camera/light/background/exposure/renderer per fixed view."
+    },
+    {
+      "id": "G4",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "All12 actual raw frames inspected in four official views; no new Inner claim."
+    },
+    {
+      "id": "G5",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "Original geometry/pose/size/topology/shadow kept; no auxiliary meshes or UI."
+    },
+    {
+      "id": "G6",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "Opaque rough low-reflection coarse material; no emission, no alpha."
+    },
+    {
+      "id": "G7",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "Object-space coarse value cues and material response; A1 blue-gray palette anchors retained, no view-conditional material."
+    },
+    {
+      "id": "G8",
+      "status": "PASS",
+      "scope": "new expanded-authority isolated fixed-condition Surface preview",
+      "evidence_ids": [
+        "A2_q0",
+        "A2_q1",
+        "A2_q2",
+        "A2_q3"
+      ],
+      "observation": "Protected hashes, old profiles, refs and copied production unchanged; no traversal changes."
+    }
+  ],
+  "comparison": {
+    "common_assessed_weight_percent": 90,
+    "a2_minus_a1": 4.0,
+    "a2_minus_current": 19.0,
+    "west_delta_vs_a1": 1,
+    "full_total_delta": null,
+    "basis": "Only new same-run common90% original weights; no normalization or reuse of old scores as current results."
+  },
+  "render_verification": {
+    "status": "PASS",
+    "checks": 105,
+    "failures": [],
+    "capture_count": 12,
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "protected_files_changed": [],
+    "copied_production_drift": [],
+    "protected_refs_match": true,
+    "old_profiles_match": true
+  },
+  "final_status": {
+    "overall_visual_review": "PARTIAL",
+    "stage_result": "A2_PREVIEW_READY",
+    "human_qa": "NOT_RUN",
+    "formal_asset_approval": "NOT_GRANTED",
+    "game_integration": "NOT_RUN",
+    "new_formal_build": "NOT_CREATED",
+    "production_changes": "NONE",
+    "material_revision": "A2_EXPANDED_01",
+    "target_readability_gate": "PASS",
+    "scope": "Four-view isolated visual review only, not official asset approval or player comprehension"
+  },
+  "history": [
+    {
+      "task_id": "SPATIAL_FORMAL_CHAPTER_01_CONTINUATION_05",
+      "results_path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\continuation-05\\floating_cube\\SCORING_RESULTS.json",
+      "results_sha256": "9d15236ef76acde60fd8c4caae98124e8e130bb636a502f12ae1c5cd64b49154",
+      "candidate_aliases": {
+        "CURRENT_REFERENCE": "CURRENT",
+        "OPTION_A": "A1",
+        "OPTION_B": "B"
+      },
+      "status": "HISTORICAL_NOT_RERUN",
+      "retained_scores": {
+        "CURRENT_REFERENCE": {
+          "assessed_subtotal": 46.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 2,
+            "V2": 2,
+            "V3": 5,
+            "V4": 3,
+            "V5": null,
+            "V6": 1
+          },
+          "views": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "OPTION_A": {
+          "assessed_subtotal": 61.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 3,
+            "V2": 2,
+            "V3": 5,
+            "V4": 4,
+            "V5": null,
+            "V6": 4
+          },
+          "views": [
+            3,
+            3,
+            3,
+            2
+          ]
+        },
+        "OPTION_B": {
+          "assessed_subtotal": 50.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 2,
+            "V2": 2,
+            "V3": 5,
+            "V4": 3,
+            "V5": null,
+            "V6": 3
+          },
+          "views": [
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "restriction_compatibility": "Original historical comparison, not new rendering"
+    },
+    {
+      "task_id": "FLOATING_CUBE_OPTION_A_06",
+      "results_path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\continuation-06\\floating_cube\\SCORING_RESULTS.json",
+      "results_sha256": "cdd81da1d8c91e87e72de44832314610591a02f36d32b8ddefa1a3029c29e11a",
+      "candidate_aliases": {
+        "CURRENT": "CURRENT",
+        "A1": "A1",
+        "A2": "A2_PREVIOUS_WIDER_SCOPE"
+      },
+      "status": "HISTORICAL_NOT_RERUN",
+      "retained_scores": {
+        "CURRENT": {
+          "assessed_subtotal": 46.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 2,
+            "V2": 2,
+            "V3": 5,
+            "V4": 3,
+            "V5": null,
+            "V6": 1
+          },
+          "views": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "A1": {
+          "assessed_subtotal": 61.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 3,
+            "V2": 2,
+            "V3": 5,
+            "V4": 4,
+            "V5": null,
+            "V6": 4
+          },
+          "views": [
+            3,
+            3,
+            3,
+            2
+          ]
+        },
+        "A2": {
+          "assessed_subtotal": 65.0,
+          "assessed_weight_percent": 90,
+          "total": null,
+          "metrics": {
+            "V1": 3,
+            "V2": 3,
+            "V3": 5,
+            "V4": 4,
+            "V5": null,
+            "V6": 4
+          },
+          "views": [
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      },
+      "restriction_compatibility": "Old06 A2 uses broader diffuse/texture changes; NOT this task A2"
+    }
+  ],
+  "target_gate": {
+    "status": "PASS",
+    "context": "FORMAL_SURFACE_FOUR_VIEW_READABILITY",
+    "minimum_a2_view_score": 3,
+    "no_view_regression": true,
+    "evidence_ids": [
+      "A2_q0",
+      "A2_q1",
+      "A2_q2",
+      "A2_q3"
+    ],
+    "observation": "Actual new A2 [3,3,3,3], each>=3 and no view below same-run A1 [3,3,3,2]."
+  },
+  "material_parameters": {
+    "path": "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\floating_cube\\option_a2_west_expanded\\A2_MATERIAL_PARAMETERS.json",
+    "sha256": "f9b5e5ac428e203acfa7557e676a0fa4cba25614ec1664bcb217323c802175b5"
+  }
+}
