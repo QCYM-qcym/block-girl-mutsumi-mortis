@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "artifact_class": "MATERIAL_LIBRARY_ONLY",
+  "source_blend_status": "NOT_ORIGINAL_SOURCE_BLEND",
+  "preview_status": "NOT_A_BLENDER_MODEL_PREVIEW",
+  "completed_utc": "2026-10-23T13:19:29.650614+00:00",
+  "blend_path": "E:\\godot\\beta-sprint-builds\\QA\\floating_cube_b2\\run_20261023_01\\material_library\\FloatingCube_A2.blend",
+  "blend_sha256": "4eb218e26beecf0ed3b2213461440004e14262e37f5ae2edd0a072fd1d29b74a",
+  "blend_bytes": 108435,
+  "reopened_in_same_background_process": true,
+  "objects": 0,
+  "meshes": 0,
+  "cameras": 0,
+  "lights": 0,
+  "blender_version": "5.2.1 LTS",
+  "blender_version_tuple": [
+    5,
+    2,
+    1
+  ],
+  "blender_build_hash": "9e2066aef7ef",
+  "blender_build_date": "2026-08-25",
+  "blender_build_time": "02:38:20",
+  "blender_binary": "D:\\APP\\blender\\blender.exe",
+  "blender_binary_sha256": "284f4041f98e113f3dc10654a7193ffaaa9bfdfec8b87fa116620a48b5f6d4cb",
+  "background": true,
+  "unit_system": "NONE",
+  "scene_unit_scale": 1.0,
+  "materials": {
+    "A1": {
+      "name": "FloatingCube_A1_REFERENCE",
+      "fake_user": true,
+      "node_count": 29,
+      "link_count": 37,
+      "roughness": 0.9399999976158142,
+      "metallic": 0.0,
+      "specular_ior_level": 0.5,
+      "alpha": 1.0,
+      "emission_strength": 0.0,
+      "normal_linked": false,
+      "palette_endpoints": [
+        [
+          0.23000000417232513,
+          0.2800000011920929,
+          0.33000001311302185,
+          1.0
+        ],
+        [
+          0.47999998927116394,
+          0.5299999713897705,
+          0.550000011920929,
+          1.0
+        ]
+      ],
+      "displacement_linked": false
+    },
+    "A2": {
+      "name": "FloatingCube_A2_REFERENCE",
+      "fake_user": true,
+      "node_count": 31,
+      "link_count": 40,
+      "roughness": 0.8999999761581421,
+      "metallic": 0.0,
+      "specular_ior_level": 0.15000000596046448,
+      "alpha": 1.0,
+      "emission_strength": 0.0,
+      "normal_linked": true,
+      "palette_endpoints": [
+        [
+          0.24379999935626984,
+          0.29679998755455017,
+          0.3497999906539917,
+          1.0
+        ],
+        [
+          0.5088000297546387,
+          0.5618000030517578,
+          0.5830000042915344,
+          1.0
+        ]
+      ],
+      "displacement_linked": false,
+      "bump_strength": 0.10000000149011612,
+      "bump_distance_blender_units": 0.004999999888241291,
+      "micro_noise_scale": 32.0,
+      "noise_dimensions": "3D",
+      "bump_invert": false
+    }
+  },
+  "text_sha256": {
+    "README_MATERIAL_LIBRARY.txt": "3a44210bab447abbc7c50a5a366c4002d15cebd00135a2c306418077b667b0f8",
+    "SOURCE_IDENTITY.json": "03d6de45a8cfc55a80514d54da2b6d5a8be4c67a46e4fa79801af01a4f00c433",
+    "A1_AUTHORITY.gdshader": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627",
+    "A2_AUTHORITY.gdshader": "41ef29b0828568902c1b7c833cc81dec5c615f4f9e2e240fb945150b1ab45b87"
+  },
+  "source_identity": {
+    "artifact_class": "MATERIAL_LIBRARY_ONLY",
+    "source_blend_status": "NOT_ORIGINAL_SOURCE_BLEND",
+    "preview_status": "NOT_A_BLENDER_MODEL_PREVIEW",
+    "source_head": "f98008d18ab518c1479ebed1d7809467f6892f66",
+    "source_branch": "feat/spatial-formal-chapter-01",
+    "files": [
+      {
+        "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\polish_03\\roof_coarse.gdshader",
+        "sha256": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627",
+        "repository_path": "tests/beta_sprint/spatial_art/polish_03/roof_coarse.gdshader"
+      },
+      {
+        "path": "E:\\godot\\worktrees\\bg-formal01\\experiments\\game_feel_01\\host\\core_lab.gd",
+        "sha256": "b5d7d6c19a65dd167b9ee4a32c1074912c547482e9ac11370dcfc6fd336cdf0b",
+        "repository_path": "experiments/game_feel_01/host/core_lab.gd"
+      },
+      {
+        "path": "E:\\godot\\worktrees\\bg-formal01\\experiments\\spatial_puzzle_batch_01\\host\\spatial_lab.gd",
+        "sha256": "7906c6917f861df420abf2b260ed5c849d5a89418eb4caa4f353ea20097304b7",
+        "repository_path": "experiments/spatial_puzzle_batch_01/host/spatial_lab.gd"
+      },
+      {
+        "path": "E:\\godot\\worktrees\\bg-formal01\\experiments\\spatial_puzzle_batch_01\\maps\\authoring\\world_shift_gate_lab\\surface.tscn",
+        "sha256": "e8fbb0810ed282c824b664f402b145388fb881c70f5f26296e7c0600de7d5785",
+        "repository_path": "experiments/spatial_puzzle_batch_01/maps/authoring/world_shift_gate_lab/surface.tscn"
+      },
+      {
+        "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_b2\\roof_coarse_a2.gdshader",
+        "sha256": "41ef29b0828568902c1b7c833cc81dec5c615f4f9e2e240fb945150b1ab45b87",
+        "repository_path": "tests/beta_sprint/spatial_art/a2_west_b2/roof_coarse_a2.gdshader"
+      },
+      {
+        "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_b2\\build_material_library.py",
+        "sha256": "c2ce0183e24505770d8234a35e4b191c0343db47af0d1df6c134894f53c58fad",
+        "repository_path": "tests/beta_sprint/spatial_art/a2_west_b2/build_material_library.py"
+      }
+    ],
+    "target": {
+      "cube_id": "roof",
+      "authoring_id": "06c03444-c53b-49bb-6834-458cf9eb007a",
+      "godot_position": [
+        1,
+        6,
+        0
+      ],
+      "mesh": "runtime procedural Godot BoxMesh",
+      "role": "NON_WALKABLE_OCCLUDER",
+      "layer": "SURFACE",
+      "walkable_faces": 0
+    },
+    "blender_parameters_are_reference_only": true,
+    "godot_pixel_equivalence": "NOT_CLAIMED",
+    "blender_rendering": "NOT_RUN",
+    "blender_reference_parameters": {
+      "A1": {
+        "roughness": 0.94,
+        "metallic": 0.0,
+        "specular_ior_level": 0.5,
+        "albedo_multiplier": 1.0
+      },
+      "A2": {
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular_ior_level": 0.15,
+        "albedo_multiplier": 1.06,
+        "bump_strength": 0.1,
+        "bump_distance_blender_units": 0.005,
+        "micro_noise_scale": 32.0
+      }
+    },
+    "text_line_endings": "LF; raw-file SHA256 retained separately",
+    "authority_text_sha256": {
+      "A1_AUTHORITY.gdshader": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627",
+      "A2_AUTHORITY.gdshader": "41ef29b0828568902c1b7c833cc81dec5c615f4f9e2e240fb945150b1ab45b87"
+    }
+  },
+  "source_preservation": "PASS",
+  "blender_rendering": "NOT_RUN",
+  "godot_pixel_equivalence": "NOT_CLAIMED",
+  "model_delivery": "NOT_DELIVERED_MATERIAL_LIBRARY_ONLY",
+  "command_line": [
+    "D:/APP/blender/blender.exe",
+    "--background",
+    "--factory-startup",
+    "--python",
+    "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_b2\\build_material_library.py",
+    "--",
+    "--output",
+    "E:\\godot\\beta-sprint-builds\\QA\\floating_cube_b2\\run_20261023_01\\material_library\\FloatingCube_A2.blend",
+    "--shader",
+    "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_b2\\roof_coarse_a2.gdshader"
+  ]
+}

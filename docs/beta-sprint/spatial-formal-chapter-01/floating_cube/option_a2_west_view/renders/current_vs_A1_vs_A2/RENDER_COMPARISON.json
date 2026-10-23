@@ -1,0 +1,115 @@
+{
+  "task_id": "FLOATING_CUBE_A2_WEST_VIEW_READABILITY",
+  "source_scene": "res://game/shell/game_feel_shell.tscn",
+  "formal_map": "spatial_world_shift_gate_lab",
+  "engine": {
+    "build": "steam",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (steam)",
+    "timestamp": 0
+  },
+  "renderer": "forward_plus",
+  "display": "Windows",
+  "output_resolution": [
+    1280,
+    720
+  ],
+  "extra_ui_added": false,
+  "camera_only_changes": "Only existing official CAMERA requests between four fixed views; none between candidates",
+  "background": "Original formal Tokens.water unchanged",
+  "exposure_color_management": "Same original engine/project defaults, no override; no fabricated exposure number",
+  "lighting": "Original single DirectionalLight, pose/color/energy unchanged (see actual group records)",
+  "candidate_condition_groups": [
+    {
+      "quadrant": 0,
+      "camera_name": "NORTH",
+      "candidate_conditions_equal": true,
+      "camera_transform": "[X: (0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, -0.485071), Z: (0.514496, 0.685994, 0.514496), O: (13.36239, 22.14986, 12.86239)]",
+      "camera_size": 10.0,
+      "keep_aspect": 1,
+      "lighting": [
+        {
+          "class": "DirectionalLight3D",
+          "color": "(1.0, 1.0, 1.0, 1.0)",
+          "energy": 1.5,
+          "shadow": false,
+          "transform": "[X: (0.866025, 0.0, 0.5), Y: (0.353553, 0.707107, -0.612372), Z: (-0.353553, 0.707107, 0.612372), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "statekey": "statekey.game_feel.v1:{\"level_hash\":\"7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":0,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+    },
+    {
+      "quadrant": 1,
+      "camera_name": "EAST",
+      "candidate_conditions_equal": true,
+      "camera_transform": "[X: (0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, -0.485071), Z: (-0.514496, 0.685994, 0.514496), O: (-12.36239, 22.14986, 12.86239)]",
+      "camera_size": 10.0,
+      "keep_aspect": 1,
+      "lighting": [
+        {
+          "class": "DirectionalLight3D",
+          "color": "(1.0, 1.0, 1.0, 1.0)",
+          "energy": 1.5,
+          "shadow": false,
+          "transform": "[X: (0.866025, 0.0, 0.5), Y: (0.353553, 0.707107, -0.612372), Z: (-0.353553, 0.707107, 0.612372), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "statekey": "statekey.game_feel.v1:{\"level_hash\":\"7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":1,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+    },
+    {
+      "quadrant": 2,
+      "camera_name": "SOUTH",
+      "candidate_conditions_equal": true,
+      "camera_transform": "[X: (-0.707107, 0.0, 0.707107), Y: (0.485071, 0.727607, 0.485071), Z: (-0.514496, 0.685994, -0.514496), O: (-12.36239, 22.14986, -12.86239)]",
+      "camera_size": 10.0,
+      "keep_aspect": 1,
+      "lighting": [
+        {
+          "class": "DirectionalLight3D",
+          "color": "(1.0, 1.0, 1.0, 1.0)",
+          "energy": 1.5,
+          "shadow": false,
+          "transform": "[X: (0.866025, 0.0, 0.5), Y: (0.353553, 0.707107, -0.612372), Z: (-0.353553, 0.707107, 0.612372), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "statekey": "statekey.game_feel.v1:{\"level_hash\":\"7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":2,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+    },
+    {
+      "quadrant": 3,
+      "camera_name": "WEST",
+      "candidate_conditions_equal": true,
+      "camera_transform": "[X: (-0.707107, 0.0, -0.707107), Y: (-0.485071, 0.727607, 0.485071), Z: (0.514496, 0.685994, -0.514496), O: (13.36239, 22.14986, -12.86239)]",
+      "camera_size": 10.0,
+      "keep_aspect": 1,
+      "lighting": [
+        {
+          "class": "DirectionalLight3D",
+          "color": "(1.0, 1.0, 1.0, 1.0)",
+          "energy": 1.5,
+          "shadow": false,
+          "transform": "[X: (0.866025, 0.0, 0.5), Y: (0.353553, 0.707107, -0.612372), Z: (-0.353553, 0.707107, 0.612372), O: (0.0, 0.0, 0.0)]"
+        }
+      ],
+      "statekey": "statekey.game_feel.v1:{\"level_hash\":\"7a636b38301dff74027b2d5e80364d30b943b24f961cd73a2179b9ee7798acd4\",\"rule_version\":\"foundation.rules.spatial_puzzle.v1\",\"state\":{\"camera_quadrant\":3,\"celestial\":{\"slot_id\":\"sky\"},\"group_orientations\":{},\"level_flags\":{},\"mechanism_states\":{},\"player\":{\"location\":{\"cube_id\":\"source\",\"face\":\"TOP\",\"layer\":\"SURFACE\"},\"orientation\":0},\"world_orientations\":[0,0]}}"
+    }
+  ],
+  "raw_png_sha256": {
+    "CURRENT_q0.png": "5589f5b527368cb24c58273b6e1bcca344758332a2cdc9c762786d77f410e644",
+    "A1_q0.png": "0334f8f039a827ca50754ecdccacc73c00c83e1d2b9432ceccb7f4d8df334ca1",
+    "A2_q0.png": "8eb4ed5d50410d6c3c4a60f1e22d0a6365998205bbebefd2db0740df7aba6da2",
+    "CURRENT_q1.png": "d826772bb433f0441940d2617f198922dd834aabdd691c8327a6e5ca43cbe597",
+    "A1_q1.png": "5bd4c467bb57fac99b4bc4c9f9673e3fe68b0e855c86826e343d3c4f8f97bb7f",
+    "A2_q1.png": "18223b40263b27af2ba71bc1c42a558102a6ec807482f232d27feac9e6616db6",
+    "CURRENT_q2.png": "837b38359c562c6aeb1ac653cbcaf7b0b3a3fe127231223af90307a45652539f",
+    "A1_q2.png": "6d4973a2088c050e455dacdf6ccff91b648b2351a1f84504f62c66b80a6d9c15",
+    "A2_q2.png": "356459f5b346578c78daff66bd5025aca80a9390b6a3ec2c9dbb3c1bdc9ce004",
+    "CURRENT_q3.png": "aef0d0a6a0bd67acb623196463b44c7740efaf31695a6c23bb3cdf7d2a6b5712",
+    "A1_q3.png": "8ab0c6b6e9be4605527464998484f36057eb88e9d22eafb23108b9f6bd87f308",
+    "A2_q3.png": "bb36519c47655f84ba57e41fbeb51646301e0e49ca688bf718ec7cfe99d40f0c"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "task_id": "FLOATING_CUBE_A2_WEST_VIEW_READABILITY",
+  "material_revision": "A2_STRICT_01",
+  "render_authority": "GODOT_NATIVE_SHADER",
+  "A1": {
+    "shader": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\polish_03\\roof_coarse.gdshader",
+      "sha256": "d86a48af1c7947ba629d6dca5959b40c8dd16e3aaf05034c728d7d344762d627"
+    },
+    "material_name": "runtime ShaderMaterial A1",
+    "diffuse": "default unchanged from A1",
+    "roughness": 0.94,
+    "metallic": 0.0,
+    "specular": {
+      "value": 0.5,
+      "status": "OFFICIAL_ENGINE_DEFAULT_NOT_EXPLICIT_SOURCE_ASSIGNMENT",
+      "documentation": "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html#fragment-built-ins"
+    },
+    "base_linear_rgb_endpoints": [
+      [
+        0.23,
+        0.28,
+        0.33
+      ],
+      [
+        0.48,
+        0.53,
+        0.55
+      ]
+    ],
+    "normal_map_written": false
+  },
+  "A2": {
+    "shader": {
+      "path": "E:\\godot\\worktrees\\bg-formal01\\tests\\beta_sprint\\spatial_art\\a2_west_b2\\roof_coarse_a2.gdshader",
+      "sha256": "41ef29b0828568902c1b7c833cc81dec5c615f4f9e2e240fb945150b1ab45b87"
+    },
+    "material_name": "runtime ShaderMaterial A2 (same instance Q0–Q3)",
+    "diffuse": "same default as A1, no render_mode override",
+    "roughness": 0.9,
+    "metallic": 0.0,
+    "specular": 0.15,
+    "base_linear_rgb_endpoints": [
+      [
+        0.24380000000000002,
+        0.29680000000000006,
+        0.34980000000000006
+      ],
+      [
+        0.5088,
+        0.5618000000000001,
+        0.5830000000000001
+      ]
+    ],
+    "albedo_linear_luminance_change_percent": 6.0,
+    "normal_tangent_amplitude": 0.1,
+    "normal_map_depth": 1.0,
+    "normal_max_angle_degrees": 5.710593137499643,
+    "micro_cycles_per_local_unit": 32,
+    "micro_wavelength_local_units": 0.03125
+  },
+  "before_after": [
+    {
+      "property": "Roughness",
+      "A1": 0.94,
+      "A2": 0.9
+    },
+    {
+      "property": "Metallic",
+      "A1": 0.0,
+      "A2": 0.0
+    },
+    {
+      "property": "Godot SPECULAR",
+      "A1": "0.5 engine default; source omits assignment",
+      "A2": 0.15
+    },
+    {
+      "property": "linear ALBEDO scale",
+      "A1": 1.0,
+      "A2": 1.06
+    },
+    {
+      "property": "micro normal tangent amplitude",
+      "A1": 0.0,
+      "A2": 0.1
+    }
+  ],
+  "blender_actual_reopened_parameters": {
+    "A1": {
+      "name": "FloatingCube_A1_REFERENCE",
+      "fake_user": true,
+      "node_count": 29,
+      "link_count": 37,
+      "roughness": 0.9399999976158142,
+      "metallic": 0.0,
+      "specular_ior_level": 0.5,
+      "alpha": 1.0,
+      "emission_strength": 0.0,
+      "normal_linked": false,
+      "palette_endpoints": [
+        [
+          0.23000000417232513,
+          0.2800000011920929,
+          0.33000001311302185,
+          1.0
+        ],
+        [
+          0.47999998927116394,
+          0.5299999713897705,
+          0.550000011920929,
+          1.0
+        ]
+      ],
+      "displacement_linked": false
+    },
+    "A2": {
+      "name": "FloatingCube_A2_REFERENCE",
+      "fake_user": true,
+      "node_count": 31,
+      "link_count": 40,
+      "roughness": 0.8999999761581421,
+      "metallic": 0.0,
+      "specular_ior_level": 0.15000000596046448,
+      "alpha": 1.0,
+      "emission_strength": 0.0,
+      "normal_linked": true,
+      "palette_endpoints": [
+        [
+          0.24379999935626984,
+          0.29679998755455017,
+          0.3497999906539917,
+          1.0
+        ],
+        [
+          0.5088000297546387,
+          0.5618000030517578,
+          0.5830000042915344,
+          1.0
+        ]
+      ],
+      "displacement_linked": false,
+      "bump_strength": 0.10000000149011612,
+      "bump_distance_blender_units": 0.004999999888241291,
+      "micro_noise_scale": 32.0,
+      "noise_dimensions": "3D",
+      "bump_invert": false
+    }
+  },
+  "blender_unit_system": "NONE",
+  "blender_unit_scale": 1.0,
+  "blender_bump_distance_unit": "Blender unit; no assumed physical meter mapping",
+  "parameter_mapping": "Blender Principled IOR Level/Bump and Godot SPECULAR/tangent-normal values are not one-to-one; only Godot renders scored.",
+  "blender_artifact_scope": "material library only, no objects/meshes or model-render claim",
+  "godot_current_native_standard_material_parameters": {
+    "albedo_color": "(0.2588, 0.2941, 0.3569, 1.0)",
+    "metallic": 0.0,
+    "roughness": 1.0,
+    "specular": 0.5
+  },
+  "blender_process_exit": 0,
+  "blender_stderr_warning": "Material.use_nodes deprecation warning for Blender6; 215 bytes, no fatal error; retained unchanged."
+}
