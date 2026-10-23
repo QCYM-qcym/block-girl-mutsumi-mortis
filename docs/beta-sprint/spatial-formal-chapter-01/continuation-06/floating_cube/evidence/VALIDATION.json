@@ -1,0 +1,31 @@
+{
+  "scoring_validation": {
+    "validation": "PASS",
+    "captures": 36,
+    "contexts": 3,
+    "variants": 3,
+    "quadrants": 4,
+    "provenance_files": 16,
+    "full_total": null,
+    "review_status": "PARTIAL",
+    "negative_mutations_rejected": 10
+  },
+  "delivery_validation": {
+    "capture_metadata_matches_native": true,
+    "comparison_groups_verified": 12,
+    "native_shader_source_hashes_match": true,
+    "report_links_verified": 187,
+    "python_ast": "PASS",
+    "scope": "new preview files and actual run03 artifacts only"
+  },
+  "command": [
+    "python",
+    "-B",
+    "E:\\godot\\worktrees\\bg-formal01\\docs\\beta-sprint\\spatial-formal-chapter-01\\continuation-06\\floating_cube\\validate_results.py",
+    "--dependency-dir",
+    "E:/godot/beta-sprint-builds/floating_cube_scoring05_20261021_01/python_deps",
+    "--self-test"
+  ],
+  "exit_code": 0,
+  "stderr": ""
+}

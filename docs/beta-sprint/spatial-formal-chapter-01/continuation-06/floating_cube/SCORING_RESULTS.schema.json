@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:mutsumi:floating-cube-option-a-06:scoring:1.0.0",
+  "title": "Option A isolated formal-scene review",
+  "description": "Structure only; validate_results.py also verifies evidence bytes, coverage, references and arithmetic. Extra descriptive properties are allowed.",
+  "type": "object",
+  "required": ["schema_version", "task_id", "review", "provenance", "evidence", "candidates", "inner_formal", "inner_material_study", "hard_gates", "comparison", "final_status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "task_id": {"const": "FLOATING_CUBE_OPTION_A_06"},
+    "review": {
+      "type": "object", "required": ["date", "reviewer"],
+      "properties": {
+        "date": {"type": "string", "format": "date"},
+        "reviewer": {"$ref": "#/$defs/text"}
+      }
+    },
+    "provenance": {"type": "object", "minProperties": 1},
+    "evidence": {"type": "array", "minItems": 36, "maxItems": 36, "items": {"$ref": "#/$defs/evidence"}},
+    "candidates": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/candidate"}},
+    "inner_formal": {
+      "type": "object", "required": ["status", "reason", "views"],
+      "properties": {
+        "status": {"const": "NOT_ASSESSED"},
+        "reason": {"$ref": "#/$defs/text"},
+        "views": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": {"allOf": [{"$ref": "#/$defs/view"}, {"properties": {"score": {"type": "null"}, "status": {"const": "NOT_ASSESSED"}}}]}
+        }
+      }
+    },
+    "inner_material_study": {
+      "type": "object", "required": ["status", "reason", "evidence_ids"],
+      "properties": {
+        "status": {"const": "VISUAL_STUDY_ONLY"},
+        "reason": {"$ref": "#/$defs/text"},
+        "evidence_ids": {"$ref": "#/$defs/refs"}
+      }
+    },
+    "hard_gates": {
+      "type": "array", "minItems": 8, "maxItems": 8,
+      "items": {
+        "type": "object", "required": ["id", "status", "scope", "evidence_ids", "observation"],
+        "properties": {
+          "id": {"enum": ["G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8"]},
+          "status": {"enum": ["PASS", "PARTIAL", "FAIL"]},
+          "scope": {"$ref": "#/$defs/text"},
+          "evidence_ids": {"$ref": "#/$defs/refs"},
+          "observation": {"$ref": "#/$defs/text"}
+        }
+      }
+    },
+    "comparison": {
+      "type": "object", "required": ["common_assessed_weight_percent", "a2_minus_a1", "a2_minus_current", "west_delta_vs_a1", "full_total_delta"],
+      "properties": {
+        "common_assessed_weight_percent": {"type": "number", "minimum": 0, "maximum": 100},
+        "a2_minus_a1": {"type": "number"},
+        "a2_minus_current": {"type": "number"},
+        "west_delta_vs_a1": {"type": ["number", "null"]},
+        "full_total_delta": {"type": "null"}
+      }
+    },
+    "final_status": {
+      "type": "object", "required": ["overall_visual_review", "human_qa", "formal_asset_approval", "production_integration", "art_change"],
+      "properties": {
+        "overall_visual_review": {"enum": ["PARTIAL", "FAIL"]},
+        "human_qa": {"const": "NOT_RUN"},
+        "formal_asset_approval": {"const": "NOT_GRANTED"},
+        "production_integration": {"const": "NOT_RUN"},
+        "art_change": {"const": "ISOLATED_PREVIEW_ONLY"}
+      }
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1},
+    "refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "score": {"type": ["integer", "null"], "minimum": 0, "maximum": 5},
+    "assessment": {
+      "type": "object", "required": ["score", "status", "evidence_ids", "observation", "deduction"],
+      "properties": {
+        "score": {"$ref": "#/$defs/score"},
+        "status": {"enum": ["ASSESSED", "NOT_ASSESSED"]},
+        "evidence_ids": {"$ref": "#/$defs/refs"},
+        "observation": {"$ref": "#/$defs/text"},
+        "deduction": {"$ref": "#/$defs/text"}
+      },
+      "if": {"properties": {"status": {"const": "NOT_ASSESSED"}}},
+      "then": {"properties": {"score": {"type": "null"}}},
+      "else": {"properties": {"score": {"type": "integer", "minimum": 0, "maximum": 5}}}
+    },
+    "metric": {
+      "allOf": [
+        {"$ref": "#/$defs/assessment"},
+        {
+          "required": ["id", "weight", "weighted"],
+          "properties": {
+            "id": {"enum": ["V1", "V2", "V3", "V4", "V5", "V6"]},
+            "weight": {"type": "integer"},
+            "weighted": {"type": ["number", "null"], "minimum": 0, "maximum": 30}
+          },
+          "if": {"properties": {"status": {"const": "NOT_ASSESSED"}}},
+          "then": {"properties": {"weighted": {"type": "null"}}},
+          "else": {"properties": {"weighted": {"type": "number"}}}
+        },
+        {"if": {"properties": {"id": {"const": "V1"}}}, "then": {"properties": {"weight": {"const": 30}}}},
+        {"if": {"properties": {"id": {"const": "V2"}}}, "then": {"properties": {"weight": {"const": 20}}}},
+        {"if": {"properties": {"id": {"const": "V3"}}}, "then": {"properties": {"weight": {"const": 15}}}},
+        {"if": {"properties": {"id": {"const": "V4"}}}, "then": {"properties": {"weight": {"const": 15}}}},
+        {"if": {"properties": {"id": {"const": "V5"}}}, "then": {"properties": {"weight": {"const": 10}, "score": {"type": "null"}, "weighted": {"type": "null"}, "status": {"const": "NOT_ASSESSED"}}}},
+        {"if": {"properties": {"id": {"const": "V6"}}}, "then": {"properties": {"weight": {"const": 10}}}}
+      ]
+    },
+    "view": {
+      "allOf": [
+        {"$ref": "#/$defs/assessment"},
+        {
+          "required": ["quadrant", "camera_name"],
+          "properties": {
+            "quadrant": {"type": "integer", "minimum": 0, "maximum": 3},
+            "camera_name": {"enum": ["NORTH", "EAST", "SOUTH", "WEST"]}
+          }
+        }
+      ]
+    },
+    "candidate": {
+      "type": "object", "required": ["id", "metrics", "views", "assessed_weight_percent", "assessed_subtotal", "total", "status"],
+      "properties": {
+        "id": {"enum": ["CURRENT", "A1", "A2"]},
+        "metrics": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/metric"}},
+        "views": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/view"}},
+        "assessed_weight_percent": {"type": "integer", "minimum": 0, "maximum": 90},
+        "assessed_subtotal": {"type": "number", "minimum": 0, "maximum": 90},
+        "total": {"type": "null"},
+        "status": {"const": "PARTIAL"}
+      }
+    },
+    "evidence": {
+      "type": "object", "required": ["id", "path", "sha256", "context", "variant", "quadrant", "camera_name", "width", "height", "roof_visible_in_gameplay", "artificial_study"],
+      "properties": {
+        "id": {"$ref": "#/$defs/text"},
+        "path": {"$ref": "#/$defs/text"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "context": {"enum": ["FORMAL_SURFACE", "FORMAL_INNER", "INNER_MATERIAL_STUDY"]},
+        "variant": {"enum": ["CURRENT", "A1", "A2"]},
+        "quadrant": {"type": "integer", "minimum": 0, "maximum": 3},
+        "camera_name": {"enum": ["NORTH", "EAST", "SOUTH", "WEST"]},
+        "width": {"const": 1280},
+        "height": {"const": 720},
+        "roof_visible_in_gameplay": {"type": "boolean"},
+        "artificial_study": {"type": "boolean"}
+      },
+      "allOf": [
+        {"if": {"properties": {"context": {"const": "FORMAL_SURFACE"}}}, "then": {"properties": {"roof_visible_in_gameplay": {"const": true}, "artificial_study": {"const": false}}}},
+        {"if": {"properties": {"context": {"const": "FORMAL_INNER"}}}, "then": {"properties": {"roof_visible_in_gameplay": {"const": false}, "artificial_study": {"const": false}}}},
+        {"if": {"properties": {"context": {"const": "INNER_MATERIAL_STUDY"}}}, "then": {"properties": {"roof_visible_in_gameplay": {"const": false}, "artificial_study": {"const": true}}}}
+      ]
+    }
+  }
+}
