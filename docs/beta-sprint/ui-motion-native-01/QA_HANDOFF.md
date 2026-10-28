@@ -9,3 +9,5 @@ Menu: enlarged existing approved Wakaba/Mortis cube girl; small idle, turn and l
 Focused human recheck: mouse and keyboard navigation; Surface/Inner display; turn/lean and Reduced Motion; main/select/settings at three sizes; application/cancel; gameplay pause/resume/reset and return menu; cold restart with saved volume/accessibility. Do not label automation as first-time comprehension testing. Preserve existing player saves and observations separately.
 
 Measured automated scope is TEST_REPORT.md. Further human sign-off remains pending. Pending floating-cube art and the external art incident are unrelated and unchanged. Build creation and copied-package verification are recorded in the later BUILD_RECEIPT.json delivery record; no old build is replaced.
+
+Final candidate: `E:/godot/beta-sprint-builds/beta_native_character_menu_20261029_02`; launch `play.ps1` with Godot4.7.2. Exact build source: `25b17a5cc8901cfeeeb55d841faed67305e658ad`. Copied-package144 graphical checks and19 real Runtime seam checks PASS; see BUILD_RECEIPT.json. This package preserves the original _01 candidate.

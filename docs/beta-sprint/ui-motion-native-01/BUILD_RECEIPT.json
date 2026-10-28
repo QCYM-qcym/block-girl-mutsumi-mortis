@@ -1,0 +1,53 @@
+{
+  "task": "NATIVE_CHARACTER_MENU_01",
+  "status": "NATIVE_CHARACTER_MENU_INTEGRATED_READY",
+  "date": "2026-10-29",
+  "branch": "feat/spatial-formal-chapter-01",
+  "build": "E:\\godot\\beta-sprint-builds\\beta_native_character_menu_20261029_02",
+  "launch": "E:\\godot\\beta-sprint-builds\\beta_native_character_menu_20261029_02\\play.ps1",
+  "build_kind": "SOURCE_PLAYABLE_REQUIRES_GODOT_4.7.2",
+  "source_commit": "25b17a5cc8901cfeeeb55d841faed67305e658ad",
+  "build_identity_sha256": "53a00caa0eae7b106e65299ee4013d0d7c8d5a8d9d09ab7067a147156c5240bc",
+  "archive": "E:\\godot\\beta-sprint-builds\\beta_native_character_menu_20261029_02.zip",
+  "archive_sha256": "3e99ed75d36be33c37eb016a952f9b76f45cd3c07279360e9e6762be7c589581",
+  "declared_files_verified": 1920,
+  "declared_files_changed": [],
+  "copied_package_graphical": {
+    "checks": 144,
+    "failures": [],
+    "captures": 23,
+    "display": "Windows",
+    "stderr_empty": true,
+    "process_receipt": "E:\\godot\\qa\\native_package02_graphical_20261029_01\\graphical_graphical_process.json",
+    "report": "E:\\godot\\qa\\native_package02_graphical_20261029_01\\native_graphical_report.json"
+  },
+  "copied_package_runtime_seam": {
+    "checks": 19,
+    "evidence": "E:/godot/qa/native_package02_host_20261029_01",
+    "fixture": "real S01 with injected one-entry catalog; no progression claim"
+  },
+  "settings_failure_cancel_retry_cold_restore": {
+    "checks": 134,
+    "evidence": "E:/godot/qa/native_final_persistence_20261029_01"
+  },
+  "timed_launcher_smoke": {
+    "exit_code": 0,
+    "stderr_empty": false,
+    "warning": "2 ObjectDB instances reported on timed engine exit; not classified as clean shutdown PASS",
+    "evidence": [
+      "E:/godot/qa/native_package02_launcher_20261029_01",
+      "E:/godot/qa/native_package02_launcher_20261029_02"
+    ],
+    "classification": "P2_BACKLOG; normal Shell request_quit graphical path is stderr-empty"
+  },
+  "human_qa": "NOT_RUN",
+  "asset_approval": "No new approval inferred; existing approved models only; A2 not consumed",
+  "protected_sources": "Foundation/Runtime/SaveStore/puzzles/frozen art/project.godot unchanged",
+  "protected_refs": {
+    "main": "13177bb713c229fd5691c1e53cf5ba4d45f2ff76",
+    "v0.3-beta-game-feel": "29c573a54aaa11def8c7001a7e78d291df82d8ce",
+    "release/beta-game-feel-20261010": "25de1f6202c764e4003634a387ae05e38bd387c4"
+  },
+  "previous_packages": "Unchanged; intermediate native _01 retained; all earlier QA packages/saves/evidence preserved",
+  "github_verification": "Normal dev-branch push and independent remote query performed after this receipt commit; exact result in external delivery receipt and final message."
+}
