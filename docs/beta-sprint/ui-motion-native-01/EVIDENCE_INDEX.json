@@ -344,5 +344,231 @@
     "catalog": "E:/godot/qa/native_post_catalog_20261029_01",
     "settings_regression": "E:/godot/qa/native_post_settings_20261029_01",
     "landing": "E:/godot/qa/native_post_landing_20261029_01"
+  },
+  "final_revision_07": {
+    "reason": "dark Surface shortcut text outside left veil; initial captures preserved",
+    "graphical_process": {
+      "case": "graphical",
+      "exit_code": 0,
+      "seconds": 13.294,
+      "stderr_empty": true,
+      "command": [
+        "D:/APP/steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe",
+        "--path",
+        "E:\\godot\\worktrees\\bg-formal01",
+        "--audio-driver",
+        "Dummy",
+        "--position",
+        "30000,30000",
+        "--resolution",
+        "1280x720",
+        "--script",
+        "res://tests/beta_sprint/ui_motion_native/test_graphical.gd",
+        "--",
+        "--evidence-dir=E:\\godot\\qa\\native_graphical_20261029_07",
+        "--shell-save=user://native_menu/graphical_graphical.json"
+      ],
+      "scope": "REAL_RENDERING",
+      "human_qa": "NOT_RUN"
+    },
+    "graphical_report": {
+      "captures": [
+        {
+          "label": "main_surface_1920x1080",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/000_main_surface_1920x1080.png",
+          "viewport": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "label": "settings_surface_1920x1080",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/001_settings_surface_1920x1080.png",
+          "viewport": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "label": "main_inner_1920x1080",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/002_main_inner_1920x1080.png",
+          "viewport": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "label": "settings_inner_1920x1080",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/003_settings_inner_1920x1080.png",
+          "viewport": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "label": "level_select_1920x1080",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/004_level_select_1920x1080.png",
+          "viewport": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "label": "catalog_footer_1920x1080",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/005_catalog_footer_1920x1080.png",
+          "viewport": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "label": "main_surface_1280x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/006_main_surface_1280x720.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "character_turn",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/007_character_turn.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "character_lean",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/008_character_lean.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "settings_surface_1280x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/009_settings_surface_1280x720.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "main_inner_1280x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/010_main_inner_1280x720.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "settings_inner_1280x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/011_settings_inner_1280x720.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "level_select_1280x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/012_level_select_1280x720.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "catalog_footer_1280x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/013_catalog_footer_1280x720.png",
+          "viewport": [
+            1280,
+            720
+          ]
+        },
+        {
+          "label": "main_surface_960x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/014_main_surface_960x720.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "settings_surface_960x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/015_settings_surface_960x720.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "main_inner_960x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/016_main_inner_960x720.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "settings_inner_960x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/017_settings_inner_960x720.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "level_select_960x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/018_level_select_960x720.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "catalog_footer_960x720",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/019_catalog_footer_960x720.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "real_L01_gameplay",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/020_real_L01_gameplay.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "real_L01_pause",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/021_real_L01_pause.png",
+          "viewport": [
+            960,
+            720
+          ]
+        },
+        {
+          "label": "real_L01_pause_settings",
+          "path": "E:\\godot\\qa\\native_graphical_20261029_07/022_real_L01_pause_settings.png",
+          "viewport": [
+            960,
+            720
+          ]
+        }
+      ],
+      "checks": 144,
+      "display": "Windows",
+      "failures": [],
+      "human_qa": "NOT_RUN",
+      "input_scope": "engine-local synthetic UI events, no OS keyboard/mouse",
+      "progression_scope": "fresh ten-level catalog and L01 entry/pause/reset, no new full-playthrough claim"
+    },
+    "published_image": {
+      "path": "screenshots/final07/006_main_surface_1280x720.png",
+      "sha256": "98bbe375d2b3cc57a1316dd8942d7279e67e732140e6a93df9f15ca37c35e113"
+    },
+    "host_evidence": "E:/godot/qa/native_floor_shortcut_green_20261029_01"
   }
 }

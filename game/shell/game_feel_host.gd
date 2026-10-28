@@ -59,7 +59,14 @@ func _sync_presentation(force: bool = false) -> void:
 		_presentation_contrast_last = contrast
 		shell.view.set_world_layer(layer)
 		ui.set_presentation(layer,contrast)
-		if is_instance_valid(lab_entry): lab_entry.set_palette(Palette.colors(layer,contrast))
+		if is_instance_valid(lab_entry):
+			var entry_colors: Dictionary = Palette.colors(layer,contrast)
+			# This extra shortcut sits on the bright Surface floor, outside the
+			# dark left veil. Keep its text dark there; Inner retains light ink.
+			if layer == 0:
+				entry_colors.ink = Tokens.COLORS.ink
+				entry_colors.secondary = Tokens.COLORS.secondary
+			lab_entry.set_palette(entry_colors)
 	if force or options != _presentation_options:
 		_presentation_options = options.duplicate(true)
 		shell.view.set_accessibility(options)

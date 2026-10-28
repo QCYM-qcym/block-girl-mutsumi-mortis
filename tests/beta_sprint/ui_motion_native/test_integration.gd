@@ -61,4 +61,5 @@ func run() -> void:
  shell.show_main_menu()
  await process_frame
  check(shell.view.backdrop.debug_state().active, "return menu restarts private actor")
+ check(shell.game_feel.lab_entry.presentation_colors.ink.get_luminance() < 0.15, "Surface floor shortcut keeps dark readable text")
  await finish()

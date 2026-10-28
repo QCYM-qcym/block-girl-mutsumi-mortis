@@ -9,7 +9,7 @@
 | Palette and checkbox contrast | 6 PASS | Foreground/filled-background preserved; source SVGs unchanged |
 | Native View | PASS | Existing actions, disabled Continue/locked levels, confirm, toolbar focus, scrolling, gameplay background |
 | Native settings | 15 PASS | Drawer bounds, long error, actual option API; headless |
-| Host/Runtime world seam | 18 PASS | Actual S01 World Shift/Reset; injected one-entry catalog, no progression claim |
+| Host/Runtime world seam | 19 PASS | Actual S01 World Shift/Reset; injected one-entry catalog, no progression claim |
 | Actual persistence failure/cancel/retry/cold restore | 134 PASS | Two independent processes, real SaveStore failure seam, audio and accessibility; headless |
 | Existing catalog/settings/Goal-landing | 79 / 9 / 15 PASS | Focused resource/real seams; settings/landing use one-entry fixtures |
 
@@ -20,3 +20,5 @@ Actual PNGs were inspected, including both worlds, each required size, settings 
 Independent component/Host review and final whole-change review completed; no remaining actionable findings at review time. See EVIDENCE_INDEX.json for original paths and hashes. SOURCE_IDENTITY.json records task sources and unchanged approved models.
 
 Runtime/Foundation/SaveStore algorithms, puzzles, frozen art sources, project settings, previous QA packages/saves/evidence remain unchanged. A2 candidate assets are not consumed. Connection readiness remains pending its real Runtime facade; the settings note states that limit.
+
+Final revision: native_graphical_20261029_07 repeated the 144-check matrix after correcting the Surface floor shortcut ink. All checks PASS, empty stderr. Initial23 frames remain unchanged; final23 originals are separately preserved. One final Surface frame is published under screenshots/final07. The first candidate package _01 remains immutable; final delivery uses the new _02 package.
