@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mutsumi Veilshift · UI 与动效设计稿</title>
+<style>
+@font-face{font-family:VeilSans;src:url('../../../../production/ui/beta_shell_01/fonts/NotoSansSC.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:VeilSerif;src:url('../../../../production/ui/beta_shell_01/fonts/NotoSerifSC.ttf') format('truetype');font-weight:100 900;font-display:swap}
+:root{color-scheme:light;--ink:#243d43;--muted:#536b6e;--teal:#366e74;--paper:#edf0e9;--line:#c5d0c8}
+*{box-sizing:border-box}body{margin:0;background:#e4e9e4;color:var(--ink);font:15px VeilSans,'Microsoft YaHei',sans-serif}
+main{max-width:1360px;margin:auto;padding:26px 28px 32px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 18px}.eyebrow{margin:0 0 6px;font-size:11px;letter-spacing:.14em;color:var(--muted)}h1{font-size:21px;font-weight:500;margin:0}nav{display:flex;gap:4px;padding:4px;border:1px solid #bdccc4;border-radius:6px;background:#eef1eb}button{font:inherit;color:inherit;cursor:pointer}nav button{border:0;background:transparent;padding:9px 17px;border-radius:3px;font-size:13px}nav button[aria-selected=true]{background:#346e73;color:#f6f5e8}button:focus-visible,a:focus-visible{outline:3px solid #275c63;outline-offset:4px}.viewport{position:relative;aspect-ratio:16/9;background:#a7c7c7;overflow:hidden;border-radius:3px;box-shadow:0 14px 36px #193e4620;border:1px solid #8da9a33b}.screen{position:absolute;inset:0}.screen[hidden]{display:none}.screen.enter{animation:arrive .24s cubic-bezier(.2,.75,.2,1)}.screen svg{display:block;width:100%;height:100%}.sans{font-family:VeilSans,'Microsoft YaHei',sans-serif}.serif{font-family:VeilSerif,'SimSun',serif}.ink{fill:#243d43}.muted{fill:#536b6e}.hair{stroke:#bbc9c0;stroke-width:1}.warm{fill:#eff0e7}.key{fill:#e2e9e2;stroke:#b7c9c0;stroke-width:1}.control{cursor:default}.control:hover{filter:brightness(.97)}.caption{display:grid;grid-template-columns:1fr auto;gap:28px;margin:20px 0 0}.caption h2{font-size:16px;font-weight:500;margin:0 0 7px}.caption p{font-size:13px;line-height:1.85;color:var(--muted);margin:0;max-width:790px}.motion-toggle{display:flex;gap:9px;align-items:center;white-space:nowrap;font-size:13px}.motion-toggle input{accent-color:#366e74;width:17px;height:17px}.timings{display:flex;gap:28px;margin:22px 0 0;padding:18px 0 0;border-top:1px solid #c4cfc7;flex-wrap:wrap}.timings span{font-size:12px;color:var(--muted)}.timings strong{font-weight:500;font-variant-numeric:tabular-nums;color:var(--ink);margin-left:9px}.disclaimer{margin:20px 0 0;font-size:11px;line-height:1.7;color:#607573}footer{display:flex;justify-content:space-between;gap:20px}footer a{color:#426a70}.reduced .screen.enter{animation:fade .08s linear}@keyframes arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@keyframes fade{from{opacity:0}to{opacity:1}}@media(prefers-reduced-motion:reduce){.screen.enter{animation:fade .08s linear}}@media(max-width:760px){main{padding:18px 12px}.masthead{align-items:flex-start;flex-direction:column;gap:13px}nav{align-self:stretch}nav button{flex:1}.caption{grid-template-columns:1fr;gap:14px}h1{font-size:18px}.timings{gap:14px}.disclaimer{font-size:11px}}
+</style>
+</head>
+<body>
+<main>
+<header class="masthead"><div><p class="eyebrow">MUTSUMI VEILSHIFT / DESIGN REVIEW 01</p><h1>精致，简约，但是不简陋。</h1></div><nav role="tablist" aria-label="设计稿页面"><button id="tab-main" role="tab" aria-selected="true" aria-controls="main-view" data-view="main">主菜单</button><button id="tab-hud" role="tab" aria-selected="false" aria-controls="hud-view" data-view="hud">游戏 HUD</button><button id="tab-settings" role="tab" aria-selected="false" aria-controls="settings-view" data-view="settings">设置</button></nav></header>
+<div class="viewport">
+<section class="screen" id="main-view" role="tabpanel" aria-labelledby="tab-main">
+<svg viewBox="0 0 1280 720" role="img" aria-labelledby="main-title main-desc">
+<title id="main-title">主菜单设计稿</title><desc id="main-desc">保留批准的拱门美术，石色左栏、青绿主按钮、清晰中文层级与大幅留白。进度为示例。</desc>
+<defs><linearGradient id="main-veil" x1="0" x2="1"><stop offset="0" stop-color="#e8ece3"/><stop offset=".66" stop-color="#e8ece3" stop-opacity=".97"/><stop offset="1" stop-color="#e8ece3" stop-opacity="0"/></linearGradient><filter id="soft"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#223d43" flood-opacity=".09"/></filter></defs>
+<image href="../../../../production/ui/beta_shell_01/surface_identity.png" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/>
+<rect width="530" height="720" fill="url(#main-veil)"/>
+<image href="../../../../production/ui/beta_shell_01/icons/arch.svg" x="58" y="43" width="21" height="25"/>
+<text x="92" y="61" class="sans muted" font-size="13" letter-spacing="2.4">MUTSUMI VEILSHIFT</text>
+<text x="56" y="188" class="serif ink" font-size="60" font-weight="500" letter-spacing="5">方块少女</text>
+<text x="61" y="226" class="sans muted" font-size="19" letter-spacing="9">若叶睦</text>
+<path d="M61 258 H93" stroke="#72968e" stroke-width="2"/>
+<g class="control" filter="url(#soft)"><rect x="58" y="306" width="340" height="68" rx="3" fill="#366e74"/><rect x="60" y="308" width="336" height="1" fill="#b7d1c5" opacity=".4"/><text x="83" y="348" class="sans" fill="#f5f3e6" font-size="24" font-weight="500">继续旅程</text><path d="M357 340 H375 M369 334 L375 340 L369 346" fill="none" stroke="#e7eee4" stroke-width="1.6"/></g>
+<text x="62" y="400" class="sans muted" font-size="14">示例进度 · L01 另一个世界</text>
+<g class="sans ink" font-size="21"><text x="81" y="458">开始新游戏</text><text x="81" y="523">选择关卡</text><text x="81" y="588">设置</text></g>
+<image href="../../../../production/ui/beta_shell_01/icons/reset.svg" x="59" y="440" width="15" height="18"/><image href="../../../../production/ui/beta_shell_01/icons/steps.svg" x="59" y="505" width="15" height="18"/><image href="../../../../production/ui/beta_shell_01/icons/settings.svg" x="59" y="570" width="15" height="18"/>
+<g class="hair"><path d="M59 478 H397"/><path d="M59 543 H397"/><path d="M59 608 H397"/></g>
+<g fill="none" stroke="#5c7b7c" stroke-width="1.3"><path d="M370 450 H380 M376 446 L380 450 L376 454"/><path d="M370 515 H380 M376 511 L380 515 L376 519"/><path d="M370 580 H380 M376 576 L380 580 L376 584"/></g>
+<text x="59" y="674" class="sans muted" font-size="13">方向键 / Tab 选择　·　Enter 确认</text><text x="1190" y="674" text-anchor="end" class="sans ink" font-size="15">退出游戏 ↗</text><text x="1190" y="54" text-anchor="end" class="sans muted" font-size="12" letter-spacing="2">SURFACE WORLD</text>
+</svg></section>
+<section class="screen" id="hud-view" role="tabpanel" aria-labelledby="tab-hud" hidden>
+<svg viewBox="0 0 1280 720" role="img" aria-labelledby="hud-title hud-desc">
+<title id="hud-title">游戏 HUD 设计稿</title><desc id="hud-desc">L01 原批准游戏预览作静态背景。左上标题和世界视角，右上暂停，底部左侧按需提示，主要道路区域保持开放。</desc>
+<rect width="1280" height="720" fill="#cadde0"/><image href="../../../../production/ui/beta_shell_01/previews/l01.png" x="0" y="96" width="1280" height="585"/>
+<rect x="32" y="27" width="382" height="100" rx="3" fill="#eef1e8" opacity=".98"/><path d="M32 47 V107" stroke="#638e89" stroke-width="3"/>
+<text x="53" y="53" class="sans muted" font-size="12" letter-spacing="2">L01 / 第一章</text><text x="52" y="89" class="serif ink" font-size="28" font-weight="500">另一个世界</text>
+<circle cx="58" cy="110" r="3" fill="#628e83"/><text x="70" y="114" class="sans muted" font-size="14">表世界　/　北视角</text>
+<g class="control"><rect x="1104" y="31" width="144" height="48" rx="3" fill="#eff1e8"/><image href="../../../../production/ui/beta_shell_01/icons/pause.svg" x="1120" y="47" width="14" height="17"/><text x="1145" y="61" class="sans ink" font-size="17">暂停</text><text x="1218" y="60" class="sans muted" font-size="12">Esc</text></g>
+<rect x="32" y="576" width="390" height="91" rx="3" fill="#f0f1e8" opacity=".98"/><text x="52" y="603" class="sans muted" font-size="12" letter-spacing="1.5">当前目标</text><text x="52" y="637" class="sans ink" font-size="22" font-weight="500">寻找通往出口的道路</text>
+<path d="M465 625 H634" stroke="#b1c4be" stroke-width="1"/><rect x="466" y="592" width="28" height="28" rx="3" class="key"/><text x="480" y="612" text-anchor="middle" class="sans ink" font-size="14">H</text><text x="506" y="612" class="sans muted" font-size="15">查看提示</text>
+<g class="sans muted" font-size="14"><text x="36" y="702">WASD　翻滚</text><text x="205" y="702">Q / E　转动视角</text><text x="423" y="702">Space　切换世界</text><text x="654" y="702">R　重置</text></g>
+<text x="1245" y="703" text-anchor="end" class="sans muted" font-size="11" letter-spacing="1.3">MUTSUMI VEILSHIFT</text>
+</svg></section>
+<section class="screen" id="settings-view" role="tabpanel" aria-labelledby="tab-settings" hidden>
+<svg viewBox="0 0 1280 720" role="img" aria-labelledby="settings-title settings-desc">
+<title id="settings-title">设置模态设计稿</title><desc id="settings-desc">单一设置面板，音频、画面、辅助分组导航，音量控件清楚，应用和取消固定在底部，示例值不保存。</desc>
+<defs><filter id="modal-shadow"><feDropShadow dx="0" dy="9" stdDeviation="15" flood-color="#1b3f45" flood-opacity=".16"/></filter></defs>
+<image href="../../../../production/ui/beta_shell_01/surface_identity.png" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/><rect width="1280" height="720" fill="#18363f" opacity=".40"/>
+<g filter="url(#modal-shadow)"><rect x="188" y="56" width="904" height="608" rx="4" fill="#eff0e7"/><rect x="188" y="56" width="211" height="608" rx="4" fill="#e1e8df"/><path d="M399 80 V640" class="hair"/></g>
+<text x="224" y="108" class="serif ink" font-size="32" font-weight="500">设置</text><text x="224" y="135" class="sans muted" font-size="12" letter-spacing="2">PREFERENCES</text>
+<rect x="207" y="185" width="174" height="47" rx="2" fill="#c6d8cf"/><rect x="207" y="195" width="3" height="27" fill="#366e74"/><g class="sans ink" font-size="19"><text x="232" y="216" font-weight="500">音频</text><text x="232" y="276">画面</text><text x="232" y="336">辅助选项</text></g>
+<text x="223" y="611" class="sans muted" font-size="12">Esc 取消并返回</text><text x="223" y="634" class="sans muted" font-size="12">Tab 切换控件</text>
+<text x="444" y="112" class="sans ink" font-size="25" font-weight="500">声音与音乐</text><text x="445" y="144" class="sans muted" font-size="14">调整时即时预听，应用后保存。</text><path d="M444 170 H1048" class="hair"/>
+<g class="sans ink" font-size="18"><text x="446" y="214">总音量</text><text x="446" y="318">音乐</text><text x="446" y="422">音效</text></g>
+<g class="sans muted" text-anchor="end" font-size="15"><text x="1048" y="214">80%</text><text x="1048" y="318">60%</text><text x="1048" y="422">75%</text></g>
+<g stroke-linecap="round" stroke-width="3"><path d="M446 248 H1048 M446 352 H1048 M446 456 H1048" stroke="#becdc3"/><path d="M446 248 H928 M446 352 H807 M446 456 H898" stroke="#447a7d"/></g>
+<g fill="#f6f5e9" stroke="#366e74" stroke-width="1.6"><rect x="921" y="239" width="14" height="18" rx="2"/><rect x="800" y="343" width="14" height="18" rx="2"/><rect x="891" y="447" width="14" height="18" rx="2"/></g>
+<text x="446" y="512" class="sans ink" font-size="18">静音</text><rect x="1003" y="492" width="45" height="25" rx="12.5" fill="#c3d0c7"/><circle cx="1016" cy="504.5" r="9" fill="#f4f5eb"/>
+<path d="M444 551 H1048" class="hair"/><text x="446" y="579" class="sans muted" font-size="12">示例控件 · 此设计预览不会写入游戏设置</text>
+<g class="control"><rect x="783" y="596" width="114" height="43" rx="3" fill="#e2e8df"/><text x="840" y="624" text-anchor="middle" class="sans ink" font-size="17">取消</text></g><g class="control"><rect x="913" y="596" width="135" height="43" rx="3" fill="#366e74"/><text x="980" y="624" text-anchor="middle" class="sans" font-size="17" fill="#f5f4e7" font-weight="500">应用设置</text></g>
+</svg></section>
+</div>
+<div class="caption"><div><h2 id="note-title">留白有层次，主操作一眼可见。</h2><p id="note-text">保留原拱门与角色美术。以清楚的字号、字重和石色面板形成层次；主操作使用低饱和青绿，次操作保留安静的线性秩序。按钮不靠持续呼吸或大幅缩放吸引注意。</p></div><label class="motion-toggle"><input id="reduce" type="checkbox">预览减少动态效果</label></div>
+<div class="timings" aria-label="建议动效节奏"><span>焦点 / 悬停<strong>120 ms</strong></span><span>按下 / 释放<strong>80 / 110 ms</strong></span><span>面板进退<strong>180 ms</strong></span><span>主菜单入场<strong>240 ms</strong></span><span>减少动态<strong>≤ 80 ms 淡入</strong></span></div>
+<footer><p class="disclaimer">待审核设计稿 · 非 Godot 运行画面 · 示例数值与进度 · 只复用现有批准图片，未修改原资产。<br>此稿说明视觉与动效方向，不代表十关、三尺寸、存档或真人 QA 已验收。</p><p class="disclaimer"><a href="../../../superpowers/specs/2026-10-28-ui-motion-upgrade-design.md">完整设计规格</a></p></footer>
+</main>
+<script>
+const notes={main:['留白有层次，主操作一眼可见。','保留原拱门与角色美术。以清楚的字号、字重和石色面板形成层次；主操作使用低饱和青绿，次操作保留安静的线性秩序。按钮不靠持续呼吸或大幅缩放吸引注意。'],hud:['让道路成为主角，信息在需要时出现。','标题、世界与视角收在左上；目标与情境提示分开，完整操作说明按需展开。原生 Gameplay 状态仍由 Runtime 提供，UI 不预测落点、不推导连接资格。这张稿使用已批准 L01 静态预览作背景。'],settings:['一个清晰的模态，一次可撤销的设置事务。','音频、画面、辅助选项分组展示，底部应用与取消固定。关闭后恢复原焦点；保存失败仍留在设置中提示重试。沿用现有 SaveStore 与 AudioDirector，不增加第二套持久化。']};
+const tabs=[...document.querySelectorAll('[data-view]')];
+function show(id){tabs.forEach(button=>{const on=button.dataset.view===id;button.setAttribute('aria-selected',String(on));const view=document.getElementById(button.dataset.view+'-view');view.hidden=!on;view.classList.remove('enter');if(on){void view.offsetWidth;view.classList.add('enter')}});document.getElementById('note-title').textContent=notes[id][0];document.getElementById('note-text').textContent=notes[id][1];}
+tabs.forEach((button,index)=>{button.addEventListener('click',()=>show(button.dataset.view));button.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();const next=tabs[(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];next.focus();show(next.dataset.view)}})});
+document.getElementById('reduce').addEventListener('change',event=>document.body.classList.toggle('reduced',event.target.checked));
+</script>
+</body>
+</html>
