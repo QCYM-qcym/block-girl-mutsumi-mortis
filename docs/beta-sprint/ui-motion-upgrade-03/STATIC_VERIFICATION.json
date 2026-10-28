@@ -1,0 +1,248 @@
+{
+  "task": "UI_MOTION_UPGRADE_03_STATIC_VERIFICATION",
+  "review_date": "2026-10-28",
+  "branch": "feat/spatial-formal-chapter-01",
+  "base_head": "a800c4c83deacd84c8ea6bfa3eb3a4ca06eae881",
+  "scope": "Isolated HTML/CSS/JS design artifact; not Godot implementation or gameplay verification",
+  "status": "PASS",
+  "checks": {
+    "local_resource_references_exist": true,
+    "inline_svg_fragment_references_resolve": true,
+    "no_duplicate_html_ids": true,
+    "approved_svg_symbols_exactly_reused": true,
+    "javascript_syntax": true,
+    "ten_official_level_ids_titles_and_order": true,
+    "no_tracked_production_changes": true,
+    "changes_limited_to_v3_design_allowlist": true,
+    "no_persistence_or_engine_api_in_preview": true
+  },
+  "resources": [
+    {
+      "reference": "style.css",
+      "exists": true,
+      "repo_relative_path": "docs/beta-sprint/ui-motion-upgrade-03/design_preview/style.css",
+      "sha256": "b41896ddd56dc0494e42d8a99390e58b7b63f8a00d3721af2ca5f35ca58e4ad2"
+    },
+    {
+      "reference": "../../ui-motion-upgrade-02/design_preview/assets/hero_surface_camera0.png",
+      "exists": true,
+      "repo_relative_path": "docs/beta-sprint/ui-motion-upgrade-02/design_preview/assets/hero_surface_camera0.png",
+      "sha256": "106da32d803317ce7407a9dcdda150ebd48ad9654c1bd970ff39872f14257810"
+    },
+    {
+      "reference": "../../ui-motion-upgrade-02/design_preview/assets/hero_inner_camera0.png",
+      "exists": true,
+      "repo_relative_path": "docs/beta-sprint/ui-motion-upgrade-02/design_preview/assets/hero_inner_camera0.png",
+      "sha256": "2bfdcc04120849bde00075a5ad697dbb29feb519af4e9a105516777c36b18083"
+    },
+    {
+      "reference": "preview.js",
+      "exists": true,
+      "repo_relative_path": "docs/beta-sprint/ui-motion-upgrade-03/design_preview/preview.js",
+      "sha256": "f700810e57988fc72add374fb545de622d489fcc8713546e5eb4899b57fc6e17"
+    },
+    {
+      "reference": "../../../../production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+      "exists": true,
+      "repo_relative_path": "production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+    }
+  ],
+  "fragment_references": [
+    {
+      "reference": "#icon-eye",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-close",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-volume",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-eye",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-access",
+      "resolved": true
+    },
+    {
+      "reference": "#i-settings",
+      "resolved": true
+    },
+    {
+      "reference": "#i-reset",
+      "resolved": true
+    },
+    {
+      "reference": "#i-steps",
+      "resolved": true
+    },
+    {
+      "reference": "#i-return",
+      "resolved": true
+    },
+    {
+      "reference": "#i-steps",
+      "resolved": true
+    },
+    {
+      "reference": "#i-reset",
+      "resolved": true
+    },
+    {
+      "reference": "#i-pause",
+      "resolved": true
+    },
+    {
+      "reference": "#i-settings",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-sun",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-moon",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-volume",
+      "resolved": true
+    },
+    {
+      "reference": "#icon-eye",
+      "resolved": true
+    }
+  ],
+  "approved_symbol_source": {
+    "path": "production/ui/beta_shell_01/icons_source.svg",
+    "sha256": "1f4217a34bc404884dfe7676120f9da77cb6abb640d7657393412061c0f6ab45",
+    "symbols": [
+      {
+        "id": "i-arch",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-steps",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-pause",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-return",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-reset",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-settings",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-arrow",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-check",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-lock",
+        "exact_symbol_markup_match": true
+      },
+      {
+        "id": "i-quit",
+        "exact_symbol_markup_match": true
+      }
+    ]
+  },
+  "catalog_sources": [
+    {
+      "path": "game/levels/mutsumi/batch_01/level_order.json",
+      "sha256": "15993a6278e0901968232517a3cc4d9c8e5d8df266a36e932a7dfca2bf91df08"
+    },
+    {
+      "path": "game/levels/mutsumi/spatial_chapter/level_order.json",
+      "sha256": "d8d2dfe54f5f2be6ef85befc559da17d25b6f54c4d872b18f5f17adfaa128a5f"
+    }
+  ],
+  "preview_levels": [
+    {
+      "id": "mutsumi_l01",
+      "title": "另一个世界"
+    },
+    {
+      "id": "mutsumi_l02",
+      "title": "两岸之间"
+    },
+    {
+      "id": "mutsumi_l03",
+      "title": "视线相接"
+    },
+    {
+      "id": "mutsumi_l04",
+      "title": "借来的道路"
+    },
+    {
+      "id": "mutsumi_l05",
+      "title": "归途的门"
+    },
+    {
+      "id": "spatial_world_shift_gate_lab",
+      "title": "世界转换点"
+    },
+    {
+      "id": "spatial_orientation_loop_lab",
+      "title": "六面回环"
+    },
+    {
+      "id": "spatial_face_lock_lab",
+      "title": "接触之面"
+    },
+    {
+      "id": "spatial_perspective_fork_lab",
+      "title": "视角岔路"
+    },
+    {
+      "id": "spatial_rubik_spatial_puzzle_01",
+      "title": "六面归位"
+    }
+  ],
+  "javascript_syntax_result": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "tracked_changed_files": [],
+  "outside_allowlist": [],
+  "limitations": {
+    "browser_render_and_interaction": "Not performed by this static audit; parent evidence separate",
+    "godot_graphical_qa": "NOT_RUN",
+    "gameplay_regression": "NOT_RUN",
+    "human_qa": "NOT_RUN",
+    "design_approval": "PENDING",
+    "new_game_build": "NOT_CREATED"
+  },
+  "reviewed_preview_files": [
+    {
+      "path": "docs/beta-sprint/ui-motion-upgrade-03/design_preview/index.html",
+      "sha256": "42cdf57c6d556ea4a33be7b199ef482971d33b50782cbeedb27de5d7def0c1b7"
+    },
+    {
+      "path": "docs/beta-sprint/ui-motion-upgrade-03/design_preview/style.css",
+      "sha256": "b41896ddd56dc0494e42d8a99390e58b7b63f8a00d3721af2ca5f35ca58e4ad2"
+    },
+    {
+      "path": "docs/beta-sprint/ui-motion-upgrade-03/design_preview/preview.js",
+      "sha256": "f700810e57988fc72add374fb545de622d489fcc8713546e5eb4899b57fc6e17"
+    }
+  ]
+}

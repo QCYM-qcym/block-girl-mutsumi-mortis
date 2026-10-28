@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>方块少女 · 游玩界面设计 03</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<svg class="symbol-source" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<!-- Existing approved icon symbols, copied without changing their path data. -->
+<symbol id="i-arch" viewBox="0 0 32 32"><path d="M6 29V14A10 10 0 0 1 26 14V29M6 29H26M11 29V14A5 5 0 0 1 21 14V29M6 18H11M21 18H26M8 8L12 11M20 11L24 8M16 4V9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-steps" viewBox="0 0 32 32"><path d="M4 26H28M7 26V20H13V14H19V8H27M7 20H13M13 14H19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-pause" viewBox="0 0 32 32"><path d="M11 6V26M21 6V26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-return" viewBox="0 0 32 32"><path d="M13 7L5 15L13 23M5 15H21Q27 15 27 23" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-reset" viewBox="0 0 32 32"><path d="M7 10A11 11 0 1 1 5 20M7 4V10H13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-settings" viewBox="0 0 32 32"><path d="M4 8H28M4 16H28M4 24H28M11 5V11M22 13V19M14 21V27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-arrow" viewBox="0 0 32 32"><path d="M4 16H27M20 9L27 16L20 23" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-check" viewBox="0 0 32 32"><path d="M6 17L13 24L27 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-lock" viewBox="0 0 32 32"><path d="M8 14H24V28H8ZM11 14V9A5 5 0 0 1 21 9V14M16 20V23" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol><symbol id="i-quit" viewBox="0 0 32 32"><path d="M17 5H7V27H17M14 16H29M23 10L29 16L23 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter"/></symbol>
+
+<symbol id="icon-eye" viewBox="0 0 32 32"><path d="M3 16s5-8 13-8 13 8 13 8-5 8-13 8S3 16 3 16Z"/><circle cx="16" cy="16" r="4"/></symbol>
+<symbol id="icon-volume" viewBox="0 0 32 32"><path d="M4 12h6l8-6v20l-8-6H4Zm18-1c4 3 4 7 0 10m4-14c7 5 7 13 0 18"/></symbol>
+<symbol id="icon-sun" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6"/><path d="M16 2v4m0 20v4M2 16h4m20 0h4M6 6l3 3m14 14 3 3M6 26l3-3M23 9l3-3"/></symbol>
+<symbol id="icon-moon" viewBox="0 0 32 32"><path d="M24 22A12 12 0 0 1 10 5a12 12 0 1 0 18 14 12 12 0 0 1-4 3Z"/></symbol>
+<symbol id="icon-close" viewBox="0 0 32 32"><path d="m8 8 16 16M24 8 8 24"/></symbol>
+<symbol id="icon-access" viewBox="0 0 32 32"><circle cx="16" cy="6" r="3"/><path d="M4 12h24M16 10v11m0-5-8 13m8-13 8 13"/></symbol>
+</defs></svg>
+<main id="game" class="game" data-world="surface" data-panel="" aria-label="方块少女界面设计预览">
+<div class="world-scene" aria-hidden="true"><img class="scene surface" src="../../ui-motion-upgrade-02/design_preview/assets/hero_surface_camera0.png" alt=""><img class="scene inner" src="../../ui-motion-upgrade-02/design_preview/assets/hero_inner_camera0.png" alt=""></div>
+<div class="edge-shade" aria-hidden="true"></div>
+<header class="level-heading hud"><span class="level-code">L01</span><h1>另一个世界</h1><p><span class="world-name">表世界</span><i></i>寻找通往出口的道路</p></header>
+
+<aside id="drawer" class="drawer" aria-label="界面面板" aria-hidden="true" inert>
+<header class="drawer-head"><h2 id="drawer-title">旅程</h2><div><button class="small-circle" id="collapse-panel" aria-label="收起面板"><svg><use href="#icon-eye"/></svg></button><button class="small-circle" id="close-panel" aria-label="关闭面板"><svg><use href="#icon-close"/></svg></button></div></header>
+<section id="panel-journey" class="drawer-page" hidden>
+<div class="chapter-tabs" role="tablist" aria-label="章节分组"><button role="tab" data-chapter="first" aria-selected="true">第一章</button><button role="tab" data-chapter="spatial" aria-selected="false">空间篇</button></div>
+<div class="section-label">选择关卡<span>示例状态</span></div><div id="level-list" class="level-list" role="listbox" aria-label="关卡列表"></div>
+<footer class="panel-footnote">按正式目录展示。未接入游戏进度。</footer>
+</section>
+<section id="panel-settings" class="drawer-page settings-page" hidden>
+<div class="setting-tabs" role="tablist" aria-label="设置分类"><button class="round tab-round active" data-settings="audio" role="tab" aria-selected="true" aria-label="音频"><svg><use href="#icon-volume"/></svg></button><button class="round tab-round" data-settings="display" role="tab" aria-selected="false" aria-label="画面"><svg><use href="#icon-eye"/></svg></button><button class="round tab-round" data-settings="accessibility" role="tab" aria-selected="false" aria-label="辅助选项"><svg><use href="#icon-access"/></svg></button><span id="settings-category">音频</span></div>
+<div id="settings-fields" class="settings-fields"></div>
+<div class="settings-footer"><span id="settings-status" role="status">示例设置</span><div><button id="settings-cancel" class="text-button">取消</button><button id="settings-apply" class="outline-button">应用</button></div></div>
+</section>
+<section id="panel-hint" class="drawer-page" hidden><div class="section-label">当前目标</div><p class="goal-text">寻找通往出口的道路</p><div class="section-label">情境提示</div><p class="hint-copy">提示内容由正式关卡提供。</p><p class="panel-footnote">此稿只展示信息层级，不提供作者解法。</p><button class="outline-button full-width" data-close>返回观察</button></section>
+<section id="panel-pause" class="drawer-page pause-page" hidden><p class="pause-level">L01 · 另一个世界</p><p class="pause-world"><span class="world-name">表世界</span><span id="pause-camera">北视角</span></p><button class="resume-button" data-close>继续游戏 <span>→</span></button><button class="pause-row" data-open="settings"><svg><use href="#i-settings"/></svg>设置<span>›</span></button><button class="pause-row" id="restart-preview"><svg><use href="#i-reset"/></svg>重新开始本关<span>›</span></button><button class="pause-row" data-open="journey"><svg><use href="#i-steps"/></svg>选择关卡<span>›</span></button><button class="pause-row" id="menu-preview"><svg><use href="#i-return"/></svg>返回主菜单<span>›</span></button><div class="pause-note"><kbd>Esc</kbd>继续游戏</div></section>
+</aside>
+
+<div class="compass hud" aria-label="视角预览">
+<svg class="compass-rings" viewBox="0 0 200 200" aria-hidden="true"><circle class="ring-track" cx="100" cy="100" r="92"/><circle class="ring-inner" cx="100" cy="100" r="83"/><circle class="ring-active" id="camera-arc" cx="100" cy="100" r="92"/><path class="compass-ticks" d="M100 14v7m86 79h-7m-79 86v-7m-86-79h7"/></svg>
+<div class="compass-center"><span>视角</span><strong id="camera-name">北</strong><span class="world-name">表世界</span></div><button data-camera="0" class="camera-n selected" aria-label="北视角" aria-pressed="true">N</button><button data-camera="1" class="camera-e" aria-label="东视角" aria-pressed="false">E</button><button data-camera="2" class="camera-s" aria-label="南视角" aria-pressed="false">S</button><button data-camera="3" class="camera-w" aria-label="西视角" aria-pressed="false">W</button>
+</div>
+<nav class="tool-rail hud" aria-label="游戏工具"><button class="round" data-open="journey" aria-label="旅程" aria-expanded="false"><svg><use href="#i-steps"/></svg><span class="tool-tip">旅程</span></button><button class="round" data-open="hint" aria-label="提示" aria-expanded="false"><span class="hint-glyph">?</span><span class="tool-tip">提示</span></button><button class="round" id="reset-tool" aria-label="重置本关"><svg><use href="#i-reset"/></svg><span class="tool-tip">重置</span></button><button class="round" data-open="pause" aria-label="暂停" aria-expanded="false"><svg><use href="#i-pause"/></svg><span class="tool-tip">暂停</span></button><button class="round" data-open="settings" aria-label="设置" aria-expanded="false"><svg><use href="#i-settings"/></svg><span class="tool-tip">设置</span></button></nav>
+
+<div class="bottom-dock hud"><div class="world-controls" role="group" aria-label="世界配色预览"><button class="round active" data-world="surface" aria-label="表世界配色" aria-pressed="true"><svg><use href="#icon-sun"/></svg></button><button class="round" data-world="inner" aria-label="里世界配色" aria-pressed="false"><svg><use href="#icon-moon"/></svg></button><div class="world-info"><strong class="world-name">表世界</strong><span>世界配色预览</span></div></div><div id="input-guide" class="input-guide"><span><kbd>WASD</kbd>翻滚</span><span><kbd>Q / E</kbd>视角</span><span><kbd>Space</kbd>世界转换</span><span><kbd>R</kbd>重置</span></div><button class="round volume-tool" id="audio-tool" aria-label="打开音频设置"><svg><use href="#icon-volume"/></svg></button></div>
+<button class="round hide-tool" id="hide-interface" aria-label="隐藏界面" aria-pressed="false"><svg><use href="#icon-eye"/></svg></button>
+<p class="preview-mark">界面设计预览 · 静态美术 · 不操作游戏</p><div class="notice" id="notice" role="status" hidden></div>
+<div class="confirmation" id="confirmation" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" hidden><div><h2 id="confirmation-title">重新开始本关？</h2><p>设计演示不会重置游戏或更改存档。</p><div><button class="text-button" id="confirmation-cancel">返回</button><button class="outline-button" id="confirmation-ok">确认预览</button></div></div></div>
+</main><script src="preview.js"></script>
+</body>
+</html>
