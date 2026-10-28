@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "scope": "Isolated character menu design preview only; not wired into production.",
+  "packages": [
+    {
+      "package": "three",
+      "license": "MIT",
+      "sourceVersion": "0.186.1",
+      "source": {
+        "registryMetadata": "https://registry.npmjs.org/three/0.186.1",
+        "repository": "https://github.com/mrdoob/three.js",
+        "tarball": "https://registry.npmjs.org/three/-/three-0.186.1.tgz"
+      },
+      "tarballIntegrity": "sha512-blFeqb49wRCSGUGj7gtpfnSGHy2lwDk94RhUmS1c/hTby70kvChbWpkJ4Pm1390LqzzvTmzgXKHPEafJwCb8jA==",
+      "tarballIntegrityAlgorithm": "SHA512",
+      "tarballIntegrityVerified": true,
+      "tarballSha256": "8cd068708ea44f2c73c944b1cead2ba2f0d5c15c8fc194e5700f4e4f4a033fe7",
+      "tarballBytes": 4648523,
+      "vendorRoot": "design_preview/vendor/three",
+      "licenseFile": "design_preview/vendor/three/LICENSE",
+      "modifications": "None. Every vendored file is byte-for-byte identical to the corresponding npm tarball member.",
+      "selection": "Minimal static dependency closure for WebGLRenderer and GLTFLoader, plus LICENSE. No installation or package scripts were run.",
+      "packagingNote": "The official three@0.186.1 npm tarball has no three.module.min.js or three.core.min.js; exact official unminified module files are used.",
+      "staticImports": {
+        "build/three.module.js": [
+          "./three.core.js"
+        ],
+        "build/three.core.js": [],
+        "examples/jsm/loaders/GLTFLoader.js": [
+          "../utils/BufferGeometryUtils.js",
+          "../utils/SkeletonUtils.js",
+          "three"
+        ],
+        "examples/jsm/utils/BufferGeometryUtils.js": [
+          "three"
+        ],
+        "examples/jsm/utils/SkeletonUtils.js": [
+          "three"
+        ]
+      },
+      "perFileSHA256": {
+        "design_preview/vendor/three/build/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+        "design_preview/vendor/three/build/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+        "design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+        "design_preview/vendor/three/examples/jsm/utils/BufferGeometryUtils.js": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+        "design_preview/vendor/three/examples/jsm/utils/SkeletonUtils.js": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+        "design_preview/vendor/three/LICENSE": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      }
+    }
+  ],
+  "importMap": {
+    "imports": {
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/examples/jsm/"
+    }
+  }
+}

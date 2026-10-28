@@ -1,0 +1,239 @@
+{
+  "scope": "Isolated browser character menu prototype only",
+  "review_date": "2026-10-28",
+  "checks": [
+    {
+      "name": "approved_models_rendered",
+      "passed": true
+    },
+    {
+      "name": "turn_starts_and_completes",
+      "passed": true
+    },
+    {
+      "name": "settings_does_not_cancel_active_turn",
+      "passed": true
+    },
+    {
+      "name": "lean_sample_has_actual_motion_and_contact_lift",
+      "passed": true
+    },
+    {
+      "name": "lean_returns_to_idle",
+      "passed": true
+    },
+    {
+      "name": "reduced_motion_stops_pose_over_observed_frames",
+      "passed": true
+    },
+    {
+      "name": "reduced_cancel_restores_motion_controls",
+      "passed": true
+    },
+    {
+      "name": "world_model_ui_identity_agree",
+      "passed": true
+    },
+    {
+      "name": "settings_cancel_rolls_back_live_property",
+      "passed": true
+    },
+    {
+      "name": "settings_apply_keeps_page_memory",
+      "passed": true
+    },
+    {
+      "name": "hide_show_keeps_menu_inert_behind_drawer",
+      "passed": true
+    },
+    {
+      "name": "narrow_document_has_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "back_navigation_reinitializes_renderer",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "frame": "8",
+      "models": "surface,inner",
+      "name": "idle_initial",
+      "status": "ready",
+      "yaw": "0.00468"
+    },
+    {
+      "action": "turn",
+      "name": "turn_accepted",
+      "yaw": "0.03458"
+    },
+    {
+      "action": "turn",
+      "name": "turn_with_settings_open"
+    },
+    {
+      "action": "idle",
+      "frame": "152",
+      "name": "turn_completed"
+    },
+    {
+      "lean": "0.00000",
+      "name": "reduced_draft",
+      "reduced": "true",
+      "turnDisabled": true,
+      "yaw": "0.00000"
+    },
+    {
+      "name": "reduced_cancelled",
+      "reduced": "false",
+      "turnDisabled": false
+    },
+    {
+      "frame": "976",
+      "lean": "0.00000",
+      "name": "reduced_applied",
+      "reduced": "true",
+      "yaw": "0.00000"
+    },
+    {
+      "frame": "5016",
+      "lean": "0.00000",
+      "name": "reduced_stays_static",
+      "yaw": "0.00000"
+    },
+    {
+      "name": "lean_sample_0",
+      "action": "lean",
+      "contactLift": "0.00900",
+      "frame": "5096",
+      "lean": "0.01820"
+    },
+    {
+      "name": "lean_sample_1",
+      "action": "lean",
+      "contactLift": "0.01441",
+      "frame": "5104",
+      "lean": "0.02915"
+    },
+    {
+      "name": "lean_sample_2",
+      "action": "lean",
+      "contactLift": "0.02074",
+      "frame": "5112",
+      "lean": "0.04195"
+    },
+    {
+      "name": "lean_sample_3",
+      "action": "lean",
+      "contactLift": "0.02699",
+      "frame": "5120",
+      "lean": "0.05460"
+    },
+    {
+      "name": "lean_sample_4",
+      "action": "lean",
+      "contactLift": "0.02699",
+      "frame": "5120",
+      "lean": "0.05460"
+    },
+    {
+      "name": "lean_sample_5",
+      "action": "lean",
+      "contactLift": "0.03219",
+      "frame": "5128",
+      "lean": "0.06514"
+    },
+    {
+      "name": "lean_sample_6",
+      "action": "lean",
+      "contactLift": "0.03553",
+      "frame": "5136",
+      "lean": "0.07192"
+    },
+    {
+      "name": "lean_sample_7",
+      "action": "lean",
+      "contactLift": "0.03553",
+      "frame": "5136",
+      "lean": "0.07192"
+    },
+    {
+      "action": "idle",
+      "lean": "0.00880",
+      "name": "lean_completed"
+    },
+    {
+      "name": "inner_selected",
+      "renderWorld": "inner",
+      "status": "ready",
+      "uiWorld": "inner"
+    },
+    {
+      "checked": false,
+      "name": "mute_cancelled"
+    },
+    {
+      "checked": true,
+      "name": "mute_retained_in_memory"
+    },
+    {
+      "drawerInert": false,
+      "menuInert": true,
+      "name": "hide_show_preserves_drawer_scope",
+      "panel": "settings"
+    },
+    {
+      "checked": false,
+      "name": "mute_cancelled_live_property"
+    },
+    {
+      "menu": {
+        "bottom": 548,
+        "height": 418.3999938964844,
+        "left": 48,
+        "right": 276,
+        "top": 129.60000610351562,
+        "width": 228,
+        "x": 48,
+        "y": 129.60000610351562
+      },
+      "name": "narrow_layout",
+      "page": [
+        960,
+        720
+      ],
+      "viewport": [
+        960,
+        720
+      ]
+    },
+    {
+      "frame": "8",
+      "name": "back_navigation",
+      "persisted": "false",
+      "status": "ready",
+      "world": "surface"
+    }
+  ],
+  "console_log_history": [
+    {
+      "level": "warn",
+      "message": "THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap instead.",
+      "timestamp": "2026-10-28T06:33:12.545Z",
+      "url": "http://127.0.0.1:8766/docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.core.js"
+    }
+  ],
+  "notes": [
+    "Historical PCFSoftShadowMap warning occurred before replacement with PCFShadowMap; retained as history",
+    "Native resize capture initially preceded a new rendered frame; repeated after observed render-frame advance",
+    "960x720 final silhouette visually rechecked after responsive camera adjustment",
+    "Back navigation reloaded the page; persisted=false so BFCache path was not exercised"
+  ],
+  "bfcache": "NOT_EXERCISED",
+  "tab_hidden_runtime": "NOT_RUN",
+  "godot_product_qa": "NOT_RUN",
+  "runtime_save_qa": "NOT_RUN",
+  "human_qa": "NOT_RUN",
+  "new_formal_build": "NOT_CREATED"
+}

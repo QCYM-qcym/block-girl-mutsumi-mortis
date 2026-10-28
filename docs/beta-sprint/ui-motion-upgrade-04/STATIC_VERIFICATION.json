@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "verifiedAtUTC": "2026-10-28T06:48:12.342314+00:00",
+  "status": "STATIC_PASS_RUNTIME_AND_HUMAN_QA_NOT_RUN",
+  "scope": "Read-only static artifact verification of the isolated V4 character-menu preview and V4 design. Only this report was written by this reviewer.",
+  "repository": {
+    "worktree": "E:\\godot\\worktrees\\bg-formal01",
+    "branch": "feat/spatial-formal-chapter-01",
+    "head": "4eca7de9d5fc1f7b65d5a58b6479c1305b849cea",
+    "baseline": "4eca7de9d5fc1f7b65d5a58b6479c1305b849cea",
+    "trackedChangedPathsFromBaseline": [],
+    "untrackedPathsAtVerification": [
+      "docs/beta-sprint/ui-motion-upgrade-04/OPEN_SOURCE.json",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/character.js",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/index.html",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/preview.js",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_lean_0.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_lean_3.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_lean_7.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_lean_surface.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_menu_surface.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_settings_surface.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/review_turn_surface.jpg",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/style.css",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/LICENSE",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.core.js",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/SkeletonUtils.js",
+      "docs/superpowers/specs/2026-10-28-ui-motion-character-showcase-v4-design.md"
+    ],
+    "changesOutsideV4Docs": [],
+    "productAndFormalAssetDiffStatus": "PASS_NO_DIFF_FOUND"
+  },
+  "toolVersions": {
+    "node": "v24.18.0",
+    "python": "Python 3.14.0"
+  },
+  "checks": {
+    "javascriptSyntax": {
+      "status": "PASS",
+      "method": "node --input-type=<module|commonjs> --check reading each current JS file from stdin; no application execution",
+      "files": [
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/character.js",
+          "parseMode": "module",
+          "exitCode": 0,
+          "stderr": ""
+        },
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/preview.js",
+          "parseMode": "commonjs",
+          "exitCode": 0,
+          "stderr": ""
+        },
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.core.js",
+          "parseMode": "module",
+          "exitCode": 0,
+          "stderr": ""
+        },
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+          "parseMode": "module",
+          "exitCode": 0,
+          "stderr": ""
+        },
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+          "parseMode": "module",
+          "exitCode": 0,
+          "stderr": ""
+        },
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+          "parseMode": "module",
+          "exitCode": 0,
+          "stderr": ""
+        },
+        {
+          "file": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/SkeletonUtils.js",
+          "parseMode": "module",
+          "exitCode": 0,
+          "stderr": ""
+        }
+      ]
+    },
+    "domIdsAndBindings": {
+      "status": "PASS_STATIC",
+      "htmlIdCount": 41,
+      "duplicateIds": [],
+      "literalLookups": {
+        "character.js": {
+          "literalLookups": 6,
+          "missing": []
+        },
+        "preview.js": {
+          "literalLookups": 22,
+          "missing": []
+        }
+      },
+      "review": "All literal ID targets exist. data-open, data-settings, data-chapter, data-world and data-action controls have matching handlers; settings-field and level-row handlers are attached as those nodes are created. Custom event names and detail keys match across preview.js and character.js. This does not establish native keyboard or accessibility behavior."
+    },
+    "localReferences": {
+      "status": "PASS",
+      "references": [
+        {
+          "source": "index.html",
+          "value": "style.css",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#i-arrow",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#i-steps",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#i-settings",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#i-quit",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-sun",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-eye",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-close",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-volume",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-eye",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-access",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-sun",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-moon",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-volume",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "#icon-eye",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "preview.js",
+          "exists": true
+        },
+        {
+          "source": "index.html",
+          "value": "character.js",
+          "exists": true
+        },
+        {
+          "source": "style.css",
+          "value": "../../../../production/ui/beta_shell_01/fonts/NotoSansSC.ttf",
+          "exists": true
+        }
+      ]
+    },
+    "importMapAndTransitiveStaticImports": {
+      "status": "PASS",
+      "imports": {
+        "three": "./vendor/three/build/three.module.js",
+        "three/addons/": "./vendor/three/examples/jsm/"
+      },
+      "edges": [
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/character.js",
+          "specifier": "three",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/character.js",
+          "specifier": "three/addons/loaders/GLTFLoader.js",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+          "specifier": "./three.core.js",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.core.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+          "specifier": "../utils/BufferGeometryUtils.js",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+          "specifier": "../utils/SkeletonUtils.js",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/SkeletonUtils.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+          "specifier": "three",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+          "specifier": "three",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+          "exists": true
+        },
+        {
+          "from": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/examples/jsm/utils/SkeletonUtils.js",
+          "specifier": "three",
+          "resolved": "docs/beta-sprint/ui-motion-upgrade-04/design_preview/vendor/three/build/three.module.js",
+          "exists": true
+        }
+      ],
+      "method": "Module declarations scanned from line-start import/export statements; documented example imports were excluded. Every resolved file exists. Actual GLBs declare no required decoder extensions."
+    },
+    "approvedGLBs": {
+      "status": "PASS",
+      "assets": [
+        {
+          "world": "surface",
+          "assetId": "BG_CH_WAKABA_CUBE_001",
+          "resolvedReadOnlyPath": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb",
+          "bytes": 2672756,
+          "validGLB2Header": true,
+          "sha256": "275bb9a495fc3725896bc473c2aac455abcc6d515b29eb450853ea1d3be765ac",
+          "approvedSha256": "275bb9a495fc3725896bc473c2aac455abcc6d515b29eb450853ea1d3be765ac",
+          "manifestSha256": "275bb9a495fc3725896bc473c2aac455abcc6d515b29eb450853ea1d3be765ac",
+          "matchesApprovedAndManifest": true,
+          "animationClips": 0,
+          "skins": 0,
+          "morphTargetSets": 0,
+          "externalGLTFResourceURIs": [],
+          "extensionsRequired": [],
+          "existingAcceptance": {
+            "art": "PASS",
+            "production": "PASS",
+            "gameplay": "PARTIAL_PASS"
+          }
+        },
+        {
+          "world": "inner",
+          "assetId": "BG_CH_MORTIS_CUBE_001",
+          "resolvedReadOnlyPath": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001.glb",
+          "bytes": 3280556,
+          "validGLB2Header": true,
+          "sha256": "67eebcf4697fd59797d1f5948685ef1b4b59e6f8531d035357b18c33c5d7583f",
+          "approvedSha256": "67eebcf4697fd59797d1f5948685ef1b4b59e6f8531d035357b18c33c5d7583f",
+          "manifestSha256": "67eebcf4697fd59797d1f5948685ef1b4b59e6f8531d035357b18c33c5d7583f",
+          "matchesApprovedAndManifest": true,
+          "animationClips": 0,
+          "skins": 0,
+          "morphTargetSets": 0,
+          "externalGLTFResourceURIs": [],
+          "extensionsRequired": [],
+          "existingAcceptance": {
+            "art": "PASS",
+            "production": "PASS",
+            "gameplay": "PARTIAL_PASS"
+          }
+        }
+      ]
+    },
+    "vendorManifestIntegrity": {
+      "status": "PASS_LOCAL_MANIFEST_MATCH",
+      "sourceVersionRecorded": "0.186.1",
+      "files": [
+        {
+          "file": "design_preview/vendor/three/build/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+          "matchesLocalSourceManifest": true
+        },
+        {
+          "file": "design_preview/vendor/three/build/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+          "matchesLocalSourceManifest": true
+        },
+        {
+          "file": "design_preview/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+          "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+          "matchesLocalSourceManifest": true
+        },
+        {
+          "file": "design_preview/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+          "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+          "matchesLocalSourceManifest": true
+        },
+        {
+          "file": "design_preview/vendor/three/examples/jsm/utils/SkeletonUtils.js",
+          "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+          "matchesLocalSourceManifest": true
+        },
+        {
+          "file": "design_preview/vendor/three/LICENSE",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+          "matchesLocalSourceManifest": true
+        }
+      ],
+      "limit": "This reviewer compared local vendored bytes to OPEN_SOURCE.json and inspected the local MIT license; did not independently redownload the official npm tarball."
+    },
+    "worldSynchronization": {
+      "status": "PASS_STATIC",
+      "review": "The UI writes root.dataset.world before dispatching showcase-world; renderer initializes from that dataset and reconciles model visibility after both models load. Both worlds define background, ink, muted text, accent, secondary, drawer, button, line and dock palette values; focus follows the accent. Renderer changes model visibility and background/floor/light palettes. No gameplay World Shift calls are present."
+    },
+    "reducedMotion": {
+      "status": "PASS_STATIC",
+      "review": "Initial page class and OS preference are honored. When reduced motion is active, changes clear active action, reset action diagnostics to idle, disable action buttons and set yaw/lean to zero on rendering frames. Settings changes while reduced motion remains false preserve active actions and their diagnostics. CSS disables nonessential animations and shortens transitions. Render scheduling may continue while visible; no claim of stopped rendering or measured motion is made."
+    },
+    "visibilityAndLifecycle": {
+      "status": "PASS_STATIC",
+      "review": "visibilitychange cancels and clears scheduled frames while hidden and clears timing before resumption; tick also stops if hidden. pagehide now clears its frame id and timing, allowing pageshow to resume scheduling. activeSeconds uses visible-frame deltas capped at 0.05 seconds, so hidden wall time is not added. Real navigation/BFCache behavior was not exercised by this reviewer."
+    },
+    "memoryOnlyAndIsolation": {
+      "status": "PASS_STATIC",
+      "review": "Page options remain in saved/draft objects. No storage APIs, product writes, Godot/Runtime input calls, or real level loading were found in application scripts. GLB assets and the approved font are referenced read-only. Tracked baseline diff is empty and all observed untracked files are confined to V4 documentation."
+    }
+  },
+  "resolvedFindings": [
+    {
+      "id": "V4-STATIC-01",
+      "status": "FIXED_AND_STATICALLY_RECHECKED",
+      "file": "design_preview/character.js",
+      "line": 55,
+      "finding": "pagehide cancelled the scheduled animation without clearing its id, which could prevent pageshow from scheduling a frame.",
+      "resolution": "pagehide now clears raf and lastTime; pageshow schedules only while visible and unscheduled. Actual BFCache behavior remains NOT_RUN in this report."
+    },
+    {
+      "id": "V4-STATIC-02",
+      "status": "FIXED_AND_STATICALLY_RECHECKED",
+      "file": "design_preview/character.js",
+      "line": 23,
+      "finding": "Reduced-motion changes made before module initialization could be lost because the renderer initialized reduced to false.",
+      "resolution": "Renderer now initializes reduced from the root reduced class, retains OS preference support and listens for subsequent option changes."
+    },
+    {
+      "id": "V4-STATIC-03",
+      "status": "FIXED_AND_STATICALLY_RECHECKED",
+      "file": "design_preview/style.css",
+      "line": 26,
+      "finding": "The inherited focus outline used the same fixed color in both worlds despite the V4 focus-palette requirement.",
+      "resolution": "Final scoped focus rule uses var(--accent), which has distinct Surface and Inner values."
+    },
+    {
+      "id": "V4-STATIC-04",
+      "status": "FIXED_AND_STATICALLY_RECHECKED",
+      "file": "design_preview/character.js",
+      "line": 34,
+      "finding": "updateReduced unconditionally cleared an active action on every options event, including unrelated settings changes while reduced motion was false, and could leave data-action stale. This was reported by native testing outside this reviewer scope.",
+      "resolution": "The current callback clears action and sets state.dataset.action to idle only when the effective reduced-motion value is true. When it remains false, the active action is preserved and tick can complete it normally. Character syntax and source wiring were rechecked; native action completion was not run by this reviewer."
+    }
+  ],
+  "openFindings": [],
+  "notRun": [
+    "Browser rendering / native UI interaction",
+    "Native keyboard navigation and accessibility",
+    "Narrow-window composition and face/text readability",
+    "Measured reduced-motion behavior",
+    "Actual visibility-change pause/resume",
+    "Actual navigation and BFCache restore",
+    "Human visual approval",
+    "Godot integration / Runtime / Save regression",
+    "Formal game Build and game Human QA"
+  ],
+  "limits": [
+    "Static artifact checks validate syntax, paths, source wiring and exact asset identity; they do not validate pixels, frame timing, GPU compatibility, contact-shadow appearance or final menu composition.",
+    "Existing screenshots were not used as evidence by this reviewer.",
+    "Original manifest Gameplay PARTIAL_PASS is preserved; this preview does not expand asset or gameplay approval.",
+    "No commit, push, product-file change or formal-asset edit was performed by this reviewer."
+  ],
+  "reviewedSourceSHA256": {
+    "docs/beta-sprint/ui-motion-upgrade-04/design_preview/index.html": "5197c80c5fa3fd9eba54b205d53def6e943f9866c6fc7dd9b101823089d6e2cd",
+    "docs/beta-sprint/ui-motion-upgrade-04/design_preview/style.css": "227dc7dde8ff4a1b138f5b035bc803e993d959af1e827187de6fb5ba7bf91bee",
+    "docs/beta-sprint/ui-motion-upgrade-04/design_preview/preview.js": "365dda890d98cbb874c606c25b7251a733e42b6664d6ca54fe44ddbb5dba3b1d",
+    "docs/beta-sprint/ui-motion-upgrade-04/design_preview/character.js": "e87eac42f3d6945d7fc51b94c56905797d86e8e284d29871847c9e5bcca72372",
+    "docs/superpowers/specs/2026-10-28-ui-motion-character-showcase-v4-design.md": "a26a8e970064a8f945100c8d8c0b6a7d3b6006507e2bc471745341298d89a88c"
+  },
+  "latestSourceAdjustment": {
+    "file": "design_preview/character.js",
+    "line": 24,
+    "status": "SYNTAX_AND_SOURCE_CONDITION_RECHECKED",
+    "change": "Camera span is now 2.1 in portrait, 1.95 for other windows at or below 1050 CSS pixels wide, and 1.70 otherwise.",
+    "reasonReportedByParent": "Native narrow-window review found right rear hair silhouette clipping.",
+    "limit": "This reviewer checked the condition and syntax only; no rendered narrow-window or silhouette verification is claimed."
+  }
+}
