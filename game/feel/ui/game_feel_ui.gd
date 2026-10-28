@@ -6,7 +6,8 @@ signal settings_cancel()
 signal accessibility_changed(options: Dictionary)
 
 const Tokens = preload("res://game/shell/visual_01/tokens.gd")
-const Row = preload("res://game/feel/ui/motion_row.gd")
+const Row = preload("res://game/shell/visual_02/menu_row.gd")
+const Palette = preload("res://game/shell/visual_02/palette.gd")
 const StoneSlider = preload("res://game/shell/visual_01/stone_slider.gd")
 const Check = preload("res://game/shell/visual_01/stone_check.gd")
 const SETTINGS_KEYS := ["master", "music", "sfx", "fullscreen", "muted"]
@@ -22,6 +23,8 @@ var detail_label: Label
 var input_label: Label
 var settings_panel: PanelContainer
 var settings_scroll: ScrollContainer
+var _presentation_world := 0
+var _presentation_contrast := false
 var _root: Control
 var _draft: Dictionary = DEFAULTS.duplicate()
 var _saved: Dictionary = DEFAULTS.duplicate()
@@ -60,20 +63,22 @@ func _ready() -> void:
 	for label in [status_label, detail_label, input_label]: feedback.add_child(label)
 	feedback_panel.hide()
 	_build_settings()
+	settings_panel.minimum_size_changed.connect(_layout,CONNECT_DEFERRED)
 	get_viewport().size_changed.connect(_layout)
 	_layout()
+	set_presentation(_presentation_world,_presentation_contrast)
 
 func _build_settings() -> void:
 	settings_panel = PanelContainer.new()
 	settings_panel.add_theme_stylebox_override("panel", Tokens.flat(Tokens.COLORS.face,true))
 	_root.add_child(settings_panel)
 	var margin := MarginContainer.new()
-	for side in ["left","top","right","bottom"]: margin.add_theme_constant_override("margin_"+side,24)
+	for side in ["left","top","right","bottom"]: margin.add_theme_constant_override("margin_"+side,20)
 	settings_panel.add_child(margin)
 	var column := VBoxContainer.new()
 	column.add_theme_constant_override("separation",12)
 	margin.add_child(column)
-	var title := Tokens.label("设置",32,true)
+	var title := Tokens.label("设置",22)
 	title.autowrap_mode = TextServer.AUTOWRAP_OFF
 	column.add_child(title)
 	settings_scroll = ScrollContainer.new()
@@ -89,7 +94,7 @@ func _build_settings() -> void:
 		var group := VBoxContainer.new()
 		fields.add_child(group)
 		var caption := Tokens.label(pair[1],20)
-		caption.autowrap_mode = TextServer.AUTOWRAP_OFF
+		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		group.add_child(caption)
 		var slider := StoneSlider.new()
 		slider.min_value = 0
@@ -109,17 +114,27 @@ func _build_settings() -> void:
 		buttons[pair[0]] = control
 		focus_order.append(control)
 		control.toggled.connect(_controls_changed)
-	error_label = Tokens.label("",18)
-	column.add_child(error_label)
+	var error_scroll := ScrollContainer.new()
+	error_scroll.custom_minimum_size.y = 56
+	error_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	column.add_child(error_scroll)
+	error_label = Tokens.label("",16)
+	error_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	error_scroll.add_child(error_label)
 	var input_help := Tokens.label("Tab 切换 · ← → 调整 · Enter 确认 · Esc 取消\n鼠标拖动滑块；加强提示仅显示已有提示。",16)
-	input_help.autowrap_mode = TextServer.AUTOWRAP_OFF
+	input_help.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	column.add_child(input_help)
+	var footer := HBoxContainer.new()
+	footer.add_theme_constant_override("separation",12)
+	column.add_child(footer)
 	for pair in [["apply","应用"],["cancel","取消"]]:
 		var row := Row.new()
 		row.display_text = pair[1]
+		row.glyph = Tokens.icon("check" if pair[0] == "apply" else "return")
 		row.custom_minimum_size = Vector2(0,44)
 		row.configure(0.7)
-		column.add_child(row)
+		row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		footer.add_child(row)
 		buttons[pair[0]] = row
 		focus_order.append(row)
 	buttons.apply.pressed.connect(_request_apply)
@@ -136,11 +151,29 @@ func _build_settings() -> void:
 
 func _layout() -> void:
 	var area := get_viewport().get_visible_rect().size
-	var width := minf(620,area.x-48)
-	settings_panel.position = Vector2((area.x-width)/2,24)
-	settings_panel.size = Vector2(width,area.y-48)
+	var width := clampf(area.x * 0.30,330,440)
+	settings_panel.position = Vector2(24,24)
+	settings_panel.size = Vector2(width,area.y-88)
 	feedback_panel.position = Vector2(24,24)
 	feedback_panel.size = Vector2(minf(440,area.x-48),0)
+
+func set_presentation(world_layer: int, contrast: bool = false) -> void:
+	_presentation_world = world_layer
+	_presentation_contrast = contrast
+	if not is_instance_valid(settings_panel): return
+	var colors: Dictionary = Palette.colors(world_layer,contrast)
+	settings_panel.add_theme_stylebox_override("panel",Palette.panel(colors))
+	_style_settings(settings_panel,colors)
+
+func _style_settings(node: Node, colors: Dictionary) -> void:
+	if node is Control:
+		node.add_theme_font_override("font",Tokens.font())
+		for role in ["font_color","font_hover_color","font_focus_color","font_pressed_color"]:
+			node.add_theme_color_override(role,colors.ink)
+		node.add_theme_color_override("font_disabled_color",colors.disabled)
+		if node is Label: node.add_theme_font_size_override("font_size",clampi(node.get_theme_font_size("font_size"),16,22))
+		if node.has_method("set_palette"): node.set_palette(colors)
+	for child in node.get_children(): _style_settings(child,colors)
 
 func _values(values: Dictionary) -> Dictionary:
 	var result: Dictionary = DEFAULTS.duplicate()

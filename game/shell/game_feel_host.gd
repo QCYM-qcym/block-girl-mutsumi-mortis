@@ -6,7 +6,8 @@ const Settings = preload("res://game/shell/settings.gd")
 const Shell = preload("res://game/shell/game_shell.gd")
 const Tokens = preload("res://game/shell/visual_01/tokens.gd")
 const Check = preload("res://game/shell/visual_01/stone_check.gd")
-const Row = preload("res://game/shell/visual_01/stone_row.gd")
+const Row = preload("res://game/shell/visual_02/menu_row.gd")
+const Palette = preload("res://game/shell/visual_02/palette.gd")
 const Goal = preload("res://foundation/rules/goal_evaluator.gd")
 const OPTIONS = {"version":1,"reduced_motion":false,"hint_strength":1,"contrast":false,"input_hints":true}
 var shell: Node
@@ -32,6 +33,52 @@ var _legacy_reset_callback: Callable
 var _goal_scope: Dictionary={}
 var _audio_identities: Dictionary={}
 var _last_audio_identity: Dictionary={}
+var _menu_world := 0
+var _presentation_world_last := -1
+var _presentation_contrast_last := false
+var _presentation_options: Dictionary = {}
+var _presentation_settings_last := false
+
+func _read_presentation_world() -> int:
+	if not is_instance_valid(shell): return _menu_world
+	var level: Node = shell.adapter.level
+	var value := -1
+	if is_instance_valid(level) and level.has_method("get_presentation_world"):
+		value = int(level.get_presentation_world())
+	elif is_instance_valid(runtime):
+		value = int(runtime.get_state().player.location.layer)
+	if value in [0,1]: _menu_world = value
+	return _menu_world
+
+func _sync_presentation(force: bool = false) -> void:
+	if not is_instance_valid(shell) or not is_instance_valid(ui): return
+	var layer := _read_presentation_world()
+	var contrast: bool = bool(options.get("contrast",false))
+	if force or layer != _presentation_world_last or contrast != _presentation_contrast_last:
+		_presentation_world_last = layer
+		_presentation_contrast_last = contrast
+		shell.view.set_world_layer(layer)
+		ui.set_presentation(layer,contrast)
+		if is_instance_valid(lab_entry): lab_entry.set_palette(Palette.colors(layer,contrast))
+	if force or options != _presentation_options:
+		_presentation_options = options.duplicate(true)
+		shell.view.set_accessibility(options)
+		if is_instance_valid(lab_entry): lab_entry.set_reduced_motion(bool(options.get("reduced_motion",false)))
+	if force or shell.settings_open != _presentation_settings_last:
+		_presentation_settings_last = shell.settings_open
+		shell.view.set_settings_overlay(shell.settings_open)
+
+func _select_presentation_world(value: int) -> void:
+	# Showcase choice never requests a gameplay action or changes a saved state.
+	if shell.adapter.level == null and shell.state in [Shell.State.MAIN_MENU,Shell.State.LEVEL_SELECT]:
+		_menu_world = clampi(value,0,1)
+	_sync_presentation(true)
+
+func _restore_settings_focus() -> void:
+	if is_instance_valid(shell) and shell.view.buttons.has("settings"):
+		var button: Control = shell.view.buttons.settings
+		if button.is_visible_in_tree(): button.grab_focus()
+
 
 func bind_shell(host: Node) -> void:
 	shell=host
@@ -43,6 +90,7 @@ func bind_shell(host: Node) -> void:
 	ui.settings_cancel.connect(_cancel)
 	ui.accessibility_changed.connect(_accessibility)
 	shell.ui_cue_requested.connect(_ui_cue)
+	shell.view.presentation_world_selected.connect(_select_presentation_world)
 	_build_extra_controls()
 	options=_saved_options();_draft_options=options.duplicate(true)
 	_updating=true;ui.set_accessibility(options);_updating=false
@@ -117,6 +165,7 @@ func open_settings() -> void:
 	ui.open_settings(shell.progress.settings)
 	ui._root.mouse_filter=Control.MOUSE_FILTER_STOP
 	lab_entry.hide();ui.feedback_panel.hide()
+	_sync_presentation(true)
 	_fit_ui.call_deferred()
 
 func _preview(values: Dictionary) -> void:
@@ -155,6 +204,7 @@ func _save(values: Dictionary) -> void:
 	shell.settings_open=false
 	ui._root.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	shell._render_state();shell_state_changed()
+	_restore_settings_focus.call_deferred()
 
 func _cancel() -> void:
 	if _closing: return
@@ -162,6 +212,7 @@ func _cancel() -> void:
 	shell.settings_open=false
 	ui._root.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	shell._render_state();shell_state_changed()
+	_restore_settings_focus.call_deferred()
 
 func _route_options(value: Dictionary) -> void:
 	options=value.duplicate(true)
@@ -170,12 +221,7 @@ func _route_options(value: Dictionary) -> void:
 		level.apply_accessibility(options)
 	if level!=null and level.has_method("get_game_feel_runtime"):
 		level.presenter.set_reduced_motion(options.reduced_motion)
-	for label in ui.find_children("*","Label",true,false):
-		if options.contrast:
-			label.add_theme_color_override("font_color",Color.BLACK)
-			label.add_theme_constant_override("outline_size",0)
-		else:
-			label.remove_theme_color_override("font_color");label.remove_theme_color_override("font_outline_color");label.remove_theme_constant_override("outline_size")
+	_sync_presentation(true)
 	ui.input_label.visible=options.input_hints and options.hint_strength>0 and not ui.input_label.text.is_empty()
 
 func launch_lab(letter: String) -> void:
@@ -215,6 +261,7 @@ func shell_state_changed() -> void:
 	else: audio.set_music("none")
 	lab_entry.visible=shell.state==Shell.State.MAIN_MENU and not shell.settings_open
 	ui.feedback_panel.visible=not paused and not shell.settings_open and not ui.status_label.text.is_empty()
+	_sync_presentation(true)
 
 func _bind_legacy(level: Node) -> void:
 	if level==_legacy_level: return
@@ -332,6 +379,7 @@ func _ui_cue(cue: String) -> void:
 	_cue_sequence+=1;audio.play_ui(cue,"shell:%d:%d"%[epoch,_cue_sequence])
 
 func _process(_delta: float) -> void:
+	_sync_presentation()
 	if runtime!=null:
 		_sync_scope()
 		_sync_goal()

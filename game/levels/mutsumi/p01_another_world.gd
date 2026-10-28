@@ -105,3 +105,7 @@ func reset_level() -> void:
 	board.reset()
 	polish.reset()
 	refresh()
+
+# Read-only UI facade; the existing mover remains the world authority.
+func get_presentation_world() -> int:
+	return int(mover.world) if is_instance_valid(mover) else -1

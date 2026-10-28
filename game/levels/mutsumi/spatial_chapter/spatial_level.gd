@@ -150,3 +150,8 @@ func _exit_tree() -> void:
 		host.set_process_unhandled_key_input(false)
 		if host.runtime.committed.is_connected(_on_committed): host.runtime.committed.disconnect(_on_committed)
 		host._close("UNLOAD")
+
+# Read-only UI facade, separate from the game-feel Runtime/Presenter contract.
+func get_presentation_world() -> int:
+	if _closed or not is_instance_valid(host) or not host.runtime.is_loaded(): return -1
+	return int(host.runtime.get_state().player.location.layer)

@@ -5,11 +5,12 @@ import hashlib, io, json, os, re, subprocess, sys, tarfile, tempfile, zipfile
 
 root=Path(__file__).resolve().parents[3]
 target=Path(sys.argv[1]).resolve()
-formal = len(sys.argv)>2 and sys.argv[2]=='--formal-chapter'
+native_menu = len(sys.argv)>2 and sys.argv[2]=='--native-character-menu'
+formal = native_menu or (len(sys.argv)>2 and sys.argv[2]=='--formal-chapter')
 polish = len(sys.argv)>2 and sys.argv[2]=='--polish-03'
 acceptance = (len(sys.argv)>2 and sys.argv[2]=='--acceptance-01') or polish
 if len(sys.argv)>2 and not (acceptance or formal): raise SystemExit('Unknown package mode')
-task = 'SPATIAL_FORMAL_CHAPTER_01' if formal else 'SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03' if polish else 'SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01' if acceptance else 'SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT'
+task = 'NATIVE_CHARACTER_MENU_01' if native_menu else 'SPATIAL_FORMAL_CHAPTER_01' if formal else 'SPATIAL_PUZZLE_BATCH_01_POLISH_AND_ACCEPTANCE_03' if polish else 'SPATIAL_PUZZLE_BATCH_01_ACCEPTANCE_01' if acceptance else 'SPATIAL_PUZZLE_BATCH_01_FULL_DEVELOPMENT'
 receipt_folder = 'polish_03' if polish else 'acceptance_01' if acceptance else 'full-development'
 archive=target.with_suffix('.zip')
 if target.exists() or archive.exists(): raise SystemExit('Refusing to overwrite any QA package')
@@ -25,6 +26,7 @@ if f'config/name="{expected_name}"' not in config:
     raise SystemExit('Build requires isolated F5 project identity')
 roots=['tools/foundation','docs/beta-sprint/game-feel/CORE_PLAYABLE_QUALITY_BINDINGS.json','docs/beta-sprint/spatial-puzzle-batch-01','foundation','game','production','prototype','experiments/game_feel_01','experiments/spatial_puzzle_batch_01','tests/beta_sprint/spatial_integration','tests/beta_sprint/spatial_owner_01','tests/beta_sprint/spatial_owner_09','tests/beta_sprint/spatial_owner_07','tests/beta_sprint/spatial_quality','tests/beta_sprint/spatial_runtime','tests/foundation','tests/shell','tests/playtest','tests/gameplay','tests/beta_sprint/shell_batch_02','tests/beta_sprint/game_feel_owner_01','tests/beta_sprint/game_feel_owner_10a','tests/beta_sprint/game_feel_owner_10b','tests/beta_sprint/ui_host_integration','tests/beta_sprint/pfall_integration','tests/beta_sprint/pfall_v2_integration','tests/beta_sprint/game_feel_full_slice','tests/beta_sprint/graphical_bridge_02','tests/beta_sprint/yellow_target_01','tests/beta_sprint/forward_drop_01','tests/beta_sprint/game_feel_owner_03','project.godot','default_bus_layout.tres','icon.svg','icon.svg.import']
 if formal: roots += ['tests/beta_sprint/spatial_formal','docs/beta-sprint/spatial-formal-chapter-01']
+if native_menu: roots += ['tests/beta_sprint/ui_motion_native','docs/beta-sprint/ui-motion-native-01']
 selected=git('ls-tree','-r','-z','--name-only',head,'--',*roots).decode('utf-8').split('\0')
 selected=[p for p in selected if p and not any(s in p.split('/') for s in ['evidence','receipts','profile','__pycache__']) and not p.endswith(('.log','.zip','.tmp'))]
 files=[]
@@ -117,10 +119,15 @@ identity={'task':task,'kind':'SOURCE_PLAYABLE_REQUIRES_GODOT','integration_commi
 if formal:
     identity['source_handoff']='project/docs/beta-sprint/spatial-formal-chapter-01/QA_HANDOFF.md'
     identity['art']='Existing spatial greybox presentation; frozen approved sources unchanged; no pending candidate assets consumed'
+if native_menu:
+    identity['source_handoff']='project/docs/beta-sprint/ui-motion-native-01/QA_HANDOFF.md'
+    identity['art']='Existing approved Wakaba/Mortis GLB character backdrop; original assets unchanged; A2 candidate not consumed'
 (target/'BUILD_IDENTITY.json').write_bytes((json.dumps(identity,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
 (target/'README.md').write_bytes(('Spatial Puzzle Batch 01 experimental playable package. Requires Godot 4.7.2.\nExact source: '+head+'\nPowerShell: ./play.ps1\nOpen project/project.godot and press F5 for the five-entry experiment menu. Gate, Orientation Loop, Face Lock, Perspective Fork and Six Faces Combined are separate experiments, not L06-L08. WASD/arrows roll, Q/E camera, Space explicit World Shift, F same formal U_NEG edge movement, R Reset, Esc Pause, H optional hints. Only the formal Runtime grants moves and goals. Continue uses existing SaveStore and restores the selected lab start.\nThe original five-level Game Shell remains accessible. All user data for this launch is isolated under qa-profile. Old QA packages and saves are not overwritten. Human QA is NOT_RUN until actual 08 acceptance. Visuals are isolated experimental primitives and existing approved assets; frozen Art source is unchanged. See project/docs/beta-sprint/spatial-puzzle-batch-01/full-development/QA_HANDOFF.md and TEST_REPORT.md for measured evidence and limitations. Detailed raw evidence remains preserved in the source delivery worktree; this package includes their reports and source identities.\n').encode('utf-8'))
 if formal:
     (target/'README.md').write_text('Mutsumi Veilshift - ten-level formal menu integration candidate. Requires Godot 4.7.2.\nSource: '+head+'\nLaunch play.ps1. It uses an isolated qa-profile. Original L01-L05 are preserved; S01-S05 follow L05 through normal completion/unlock, using the five verified spatial maps without rule or map edits. L06 design is reserved and unregistered. Continue restores the recent level start. New formal-shell Human QA remains NOT_RUN; previous experiment playthrough reports do not apply automatically to this new build. Floating-cube visual changes remain proposal-only; external Art incident files are not included.\n',encoding='utf-8')
+if native_menu:
+    (target/'README.md').write_text('Mutsumi Veilshift - native character menu candidate. Requires Godot 4.7.2.\nExact Git source: '+head+'\nLaunch play.ps1 from this new package; it uses an isolated qa-profile. The menu uses approved Wakaba/Mortis models with small idle/turn/lean motion and Surface/Inner palettes. Reduced Motion stops optional menu movement. Gameplay, progression and SaveStore remain the existing ten-level formal chapter. Menu display-world buttons do not change gameplay world. Runtime world controls gameplay/pause/settings colours. No pending A2 assets are consumed. Human QA NOT_RUN. See project/docs/beta-sprint/ui-motion-native-01/QA_HANDOFF.md for measured checks and limits. Old QA packages and user saves are preserved.\n',encoding='utf-8')
 if acceptance:
     readme=target/'README.md'
     readme.write_text(readme.read_text(encoding='utf-8').replace('Open project/project.godot and press F5 for the five-entry experiment menu.', 'For acceptance use play.ps1 only; it isolates this package profile from old editor and QA data.')+'\nAcceptance revision: SPATIAL-CARDINAL-01 keyboard input repair. Read project/docs/beta-sprint/spatial-puzzle-batch-01/acceptance_01/QA_HANDOFF.md for the current scope. Old QA records remain historical; fresh Human QA and graphical confirmation are pending.\n',encoding='utf-8')

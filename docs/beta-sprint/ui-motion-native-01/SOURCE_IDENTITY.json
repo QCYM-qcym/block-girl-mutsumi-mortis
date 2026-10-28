@@ -1,0 +1,109 @@
+{
+  "task": "NATIVE_CHARACTER_MENU_01",
+  "base": "8f849a4b2eb8cdfc43ba89c4fcd84e9d9a63f8a0",
+  "branch": "feat/spatial-formal-chapter-01",
+  "engine": "Godot 4.7.2.stable.steam.ed1daf0bf",
+  "engine_sha256": "12310c74bdda7dcd43f28e971f33047dcecadd436b68169d61ce41009006df38",
+  "models": [
+    {
+      "path": "production/art_3d/BG_CH_WAKABA_CUBE_001/export/BG_CH_WAKABA_CUBE_001.glb",
+      "sha256": "275bb9a495fc3725896bc473c2aac455abcc6d515b29eb450853ea1d3be765ac",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "production/art_3d/BG_CH_MORTIS_CUBE_001/export/BG_CH_MORTIS_CUBE_001.glb",
+      "sha256": "67eebcf4697fd59797d1f5948685ef1b4b59e6f8531d035357b18c33c5d7583f",
+      "unchanged_from_base": true
+    }
+  ],
+  "source_files": [
+    {
+      "path": "docs/superpowers/plans/2026-10-28-native-character-menu.md",
+      "sha256": "38d6eba6cbb4bb34c235280573c9dd84fb5fe56bf5181c5a668782a41090419f"
+    },
+    {
+      "path": "game/feel/ui/game_feel_ui.gd",
+      "sha256": "401a607f201cf9ac90f59a140dc75d329b37c1474c67132623fad8b49bf608c2"
+    },
+    {
+      "path": "game/levels/mutsumi/p01_another_world.gd",
+      "sha256": "55940382473108d3d662bb6eaf37dc8da3da3f8c2ebcf8633fb63006bff74513"
+    },
+    {
+      "path": "game/levels/mutsumi/spatial_chapter/spatial_level.gd",
+      "sha256": "065e013fad36a8ad89b9847893cb91048f682237d4a780286b98700d647757e5"
+    },
+    {
+      "path": "game/shell/game_feel_host.gd",
+      "sha256": "a433088eea797ce0883736f5980e3d649910a394e764ab4297a3e9deca251780"
+    },
+    {
+      "path": "game/shell/game_shell.gd",
+      "sha256": "1ca18157946616a4c157296401790f84f80fbe7c7a106ff4fe8dba737caa66eb"
+    },
+    {
+      "path": "game/shell/visual_01/stone_check.gd",
+      "sha256": "8b6017cd7a134eb564e1a33429a3408cbeee14bd06b730225adf2e77ba8373ea"
+    },
+    {
+      "path": "game/shell/visual_01/stone_slider.gd",
+      "sha256": "43a0f0bc365631c76156d34f23fd671380e88d347fa6b782900ac0216241c1df"
+    },
+    {
+      "path": "game/shell/visual_02/character_backdrop.gd",
+      "sha256": "eccc42e43bf2136ebc2b5ab9a91c294034f42e6c037985bab5df92e254533a95"
+    },
+    {
+      "path": "game/shell/visual_02/menu_row.gd",
+      "sha256": "220a67b55fb2b2f46913d842522c11bf17bf1ea3455003422c6ae64a75fa6af5"
+    },
+    {
+      "path": "game/shell/visual_02/menu_view.gd",
+      "sha256": "74b0397286678aa87af670bf0798182385f4ea44e8d12494bced69841ec8dee2"
+    },
+    {
+      "path": "game/shell/visual_02/palette.gd",
+      "sha256": "c88aa8e6a56bcfe51bc5f817dcbc4abadedc6700ce26f7b4b0dd284a83d3e640"
+    },
+    {
+      "path": "tests/beta_sprint/spatial_integration/package.py",
+      "sha256": "7a7d1738c99149a075bae8faa9ecd67b0ec8ba0b7ed848c9c3aa4c6bdb7e8d7d"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/persistence.py",
+      "sha256": "9da31b4a86541ea012459ab73c99fd2f113fe48212aa593fb30851336edd7c11"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/run.py",
+      "sha256": "1c6b4b85384d96ac7e6974b6d651dfacdf51f813070b1820741f374cebe5a4ae"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_backdrop.gd",
+      "sha256": "0791ffec4e7d15105fa1c9c89328792bce52c079116181694ea6b68262d46768"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_graphical.gd",
+      "sha256": "e84d6de53cbc60c5b74fc3c79a9747800c87086d54102e7ba0ec168f229e30e9"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_integration.gd",
+      "sha256": "5df57b8b5e557adf658f68c52297558f5249ae2ea7e8c2eee0e963a9f76095e5"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_palette.gd",
+      "sha256": "f3617a44bfeb1ea1c0d685c2776fd60d8c8f7dd254507728e40acc12561b7207"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_persistence.gd",
+      "sha256": "0c91a9f2f94ed86dfa4ade66eb94ea5fd902a1ee60d10ee9719eb43a9fb8acdf"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_settings.gd",
+      "sha256": "7f521ab59a66428dd19ad8f35f6dae9519b52bab2b9c24654171c6e3d0a74876"
+    },
+    {
+      "path": "tests/beta_sprint/ui_motion_native/test_view.gd",
+      "sha256": "6505389163b8ba1c5a320a152799338d662774ede2e1d3cd5ec142a2a7ff7c64"
+    }
+  ]
+}
